@@ -1,0 +1,298 @@
+/* CSS Document */
+html>body radio { background-color:#FF0000;}  
+
+
+form {margin: 0; padding: 0;}
+form fieldset{ }
+form fieldset legend {}
+#wrapper select{border:1px solid #cbd0d3; font-size:13px; padding: 1px 5px;}
+#wrapper select .selsmall{border:1px solid #cbd0d3; font-size:13px; width:50px; height:20px;}
+#wrapper_popup   select{border:1px solid #cbd0d3; font-size:12px; width:152px;}
+#wrapper_popup #physic  select{border:1px solid #cbd0d3; font-size:12px; width:50px;}
+#wrapper_popup   select .sel-small{border:1px solid #cbd0d3; font-size:12px; width:50px;}
+.num{border:1px solid #a3bfe3;font-family:Arial, Helvetica, sans-serif; margin:0px; padding:0px; width:50px;}
+#wrapper span{ margin:0px; padding:0px}
+#wrapper input, select, textarea{border:1px solid #a3bfe3;font-family:Arial, Helvetica, sans-serif; margin:0px; padding: 1px 4px;border-radius: 4px;min-height: 20px;}
+#wrapper_popup input, select, textarea{border:1px solid #a3bfe3;font-family:Arial, Helvetica, sans-serif; margin:0px; padding:0px;}
+.radio{ border:0; margin-top:5px;}
+h1{border-bottom:3px solid #35488e; color:#2a5eba; font-size:13px; font-weight:bold; padding:0 0 5px 0; margin:0px 0px 4px 0px;}
+h1.ncitizen{ text-align:center; font-size:16px;}
+h2{color:#35488e; font-size:11px; font-weight:bold; margin:0px; padding:0px;}
+
+h4{ margin:0px 10px 5px 0px ; padding:0px; border-bottom:#35488e 2px solid; color:#35488e;}
+.separator{font-size:13px; font-weight:normal; color: #000099;}
+h3{ color:#35488e; font-size:12px; padding:10px 0 0  0; margin:0px;}
+legend{color:#35488e; font-size:15px; font-weight:bold; margin:0px; padding:0px  3px;}
+fieldset{margin:2px 8px 8px 2px; padding:2px 3px;; border:1px #9ac5dc solid; }
+:focus { outline:none;}
+.sm{ font-size:10px;}
+/* Form Table */
+.label{font-weight:normal;font-size:13px; background-color:#E0E6FF; color:#000000; margin:0px; padding:0 20px 0 0;border-radius: 3px;}
+#wrapper_popup .label{font-family: Verdana, Arial, Helvetica, sans-serif; color:#000000; font-size:10px;}
+#wrapper_popup .frmtable{font-family: Verdana, Arial, Helvetica, sans-serif; color:#000000; font-size:10px;}
+ 
+.dummy{display:none}
+
+.frmtable{margin:3px 0 10px 0;  border-color:#C5D3DC; border-width: 0px 0px 0px 0px;  border-style: solid;}
+.frmtable td{border-color: #ffffff; border-width: 1px 0px 0 0; border-style: solid; vertical-align:top}
+.frmtable td{height:15px; padding: 5px 10px 0px 10px;}
+.frmtable td a{ color:#0066FF;text-decoration:none; border:none;}
+.frmtable td a:hover{color:#CC0000;text-decoration:none;}
+.frmtable{font-family: Verdana, Arial, Helvetica, sans-serif; color:#000000; font-size:12px; padding: 5px 10px;}
+.frmtable td select {width: 100%;}
+
+.brdzero{ margin:0px; padding:0px; border:0px}
+
+
+#wrapper_popup  .wdth_sel{width:50px;}
+.mrgt{ margin:5px 0 0 0}
+
+
+/*for pagesubmssion div in table*/
+.btn{text-align:right; margin:0px 0px; height:19px}
+#wrapper .btn input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; padding:0px; margin:0px 10px 0px 0px; color:#13376c; font-weight:bold; font-size:12px; height:20px; }
+.pagesubmissiontable{text-align:right; margin:5px 0px; height:19px}
+#wrapper_popup .btn input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; padding:0px; color:#13376c; font-weight:bold; font-size:12px; height:20px; }
+.pagesubmission_f{text-align:right;height:23px; bottom:20px; padding-right:20px; padding-top:0px;}
+.pagesubmission{height:23px; padding:7px 0px 0px 512px;}
+.btncentre{ text-align:center;}
+.pagesubmission_f input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; padding:0px 10px 0px 10px;
+ color:#13376c; font-weight:bold;font-size:11px; height:23px;}
+#wrapper .pagesubmission input{color: #fff;padding: 5px 15px;font-size: 14px;background-color: #255ca9;border: none;cursor: pointer; }
+
+#wrapper_popup  .pagesubmission input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x;
+padding:0px; color:#13376c; font-weight:bold; font-size:12px; height:23px; }
+
+
+#wrapper_popup  .btnsubmit input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; padding:0px; color:#13376c; font-weight:bold; font-size:12px; height:23px;  }
+
+#wrapper .btnadd{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; padding:0px 5px 0px 5px; color:#13376c; font-weight:bold; font-size:12px; height:19px;}
+
+#wrapper_popup  .btnadd{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; padding:0px 5px 0px 5px; color:#13376c; font-weight:bold; font-size:12px; height:19px;}
+
+
+/*for pagesubmssion div in table*/
+#wrapper .pagesubmissiontable input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; text-align:center; padding:0px 4px; color:#13376c; font-weight:bold; font-size:12px; height:20px;}
+/*for pagesubmssion div in table*/
+
+#wrapper_popup .pagesubmissiontable input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; text-align:center; padding:0px 4px; color:#13376c; font-weight:bold; font-size:12px; height:20px;}
+
+.pagesubmissionleft{text-align:left; margin:5px 0 12px 0px; height:18px}
+#wrapper .pagesubmissionleft input{border:1px solid #008dda; background:url(../img/bg_button.gif) repeat-x; padding:0px 10px 0px 10px; color:#157dcc; font-weight:bold; font-size:12px; height:23px;}
+#wrapper_popup .pagesubmissionleft input{border:1px solid #008dda; background:url(../img/bg_button.gif) repeat-x; padding:0px 10px 0px 10px; color:#157dcc; font-weight:bold; font-size:12px; height:23px;}
+
+.sectionsubmission{text-align:right; margin:5px 0 0px 0px; height:18px}
+#wrapper .sectionsubmission input{border:1px solid #008dda; background:url(../img/bg_button.gif) repeat-x; padding:0px 10px 0px 10px; color:#157dcc; font-weight:bold; font-size:12px; height:23px;}
+#wrapper .btnsecsub{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; padding:0px 10px 0px 10px; color:#13376c; font-weight:bold; font-size:12px; height:23px; float:right; margin:0 10px 0 0;}
+#wrapper_popup .btnsecsub{border:1px solid #008dda; background:url(../img/bg_button.gif) repeat-x; padding:0px 10px 0px 10px; color:#157dcc; font-weight:bold; font-size:12px; height:23px; float:right; margin:0 1px 0 0;}
+.date input{ width:120px;}
+/* Add Butten start here */
+#wrapper  .addbutten{border:1px solid #008dda; background:url(../img/bg_button.gif) repeat-x; padding:0px 10px 0px 10px; color:#157dcc; font-weight:bold; font-size:12px; height:23px; float:left; margin:0 1px 0 0;}
+/*Add Butten End here */
+.upload{text-align:left;  }
+.upload input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; color:#157dcc; font-weight:bold; font-size:12px; height:23px;}
+.m1{padding:5px 0 0 0px;}
+
+/*  Buttons */
+.btnsmall{}
+.btnmedium{}
+.btnbig{}
+.btnlarge{}
+.del { background:url(../img/delete.gif) no-repeat; background-position:center;}
+
+/* Validation Messages */
+.sectionmand{text-align:right; font-size:11px; padding:0px; margin:-4px; height:10px;color:#ff0000;}
+.mand{font-weight:bold; font-size:12px;color:#ff0000; }
+
+.successmsg{color:#fff; height:22px; padding:8px 0 0 35px; background:#9ec141 url(../img/msg_success.gif) 1% 50% no-repeat}
+.errormsg{color:#fff; height:22px; padding:8px 0 0 35px; background:#c14144 url(../img/msg_error.gif) 1% 50% no-repeat}
+.warningmsg{color:#fff; height:22px; padding:8px 0 0 35px; background:#ffa23d url(../img/msg_warning.gif) 1% 50% no-repeat}
+.successmsgprint{color:#fff; height:22px; padding:8px 0 0 10px; background:#9ec141 1% 50% no-repeat}
+
+
+/* Pagination */
+.headpagingtable{}
+.headpagingtable select{}
+.headpagingtable input{
+	height:22px; 
+	font-size:11px; 
+	margin-bottom:0px; 
+	text-align:center
+}
+.pagination{
+	font-size:11px; 
+	font-weight:normal; 
+	width:100%;
+	text-align: center;
+	word-spacing:4px;
+}
+.pagination a{
+	font-size:11px; 
+	font-weight:normal; 
+	color: #06F;
+	text-decoration:underline;
+}
+.pagination .current{
+	font-weight:bold
+}
+.pagination select{
+	font-size:10px; 
+	margin-bottom:-2px;
+}
+.pagination input{
+	width:20px; 
+	height:10px; 
+	font-size:10px;
+}
+.pagination .buttons input{
+	width:18px; 
+	height:18px; 
+	font-size:10px; 
+	background-color:#858484; 
+	border:1px solid #858484; 
+	color:#fff;
+}
+
+/* Data Tbale Alternate Colors */
+.datatable{margin:10px 0 10px 0; border-collapse:collapse;}
+.datatable td{padding:2px;  border:1px solid #a3bfe3;}
+.datatable td a{ color:#0066FF}
+.datatable td a:hover{color:#CC0000}
+
+
+.reportgrid{margin:10px 0 10px 0; border-collapse:collapse;}
+.reportgrid td{padding:2px;  border:1px solid #a3bfe3;}
+.reportgrid td a{ color:#0066FF}
+.reportgrid td a:hover{color:#CC0000}
+.reportgrid .headrow{background-color:#2b6ac1; height:22px; font-weight:bold; color:#FFFFFF; text-transform: uppercase;}
+.reportgrid .headrow td{padding:0px 5px 0px 5px; border:1px solid #a3bfe3;}
+.reportgrid .lightrow td{padding:0px 5px 0px 5px;background-color:#fff;  border:1px solid #a3bfe3; text-transform: uppercase;}
+.reportgrid .darkrow td{padding:0px 5px 0px 5px;background-color:#E3E7EA; text-transform: uppercase;}
+
+/*data table without margin*/
+.datatable1{margin:0px 0 0px 0; border-collapse:collapse;}
+.datatable1 td{padding:5px;  border:1px solid #a3bfe3;}
+.datatable1 td a{ color:#0066FF}
+.datatable1 td a:hover{color:#CC0000}
+
+/*data table without margin*/
+.headrow{background-color:#2b6ac1; height:22px; font-size:13px; font-weight:bold;color:#fff; }
+.headrow td{padding:0px 5px 0px 5px; border:1px solid #a3bfe3;text-align: center;}
+
+.lightrow{ height:18px;font-size:13px;}
+.lightrow td{padding:0px 5px 0px 5px;background-color:#fff;  border:1px solid #a3bfe3;}
+.lightrow td a{color:#008dda; text-decoration:none;}
+
+.darkrow{height:18px;  font-size:13px;}
+.darkrow td{padding:0px 5px 0px 5px;background-color:#E3E7EA;}
+.darkrow td a{color:#008dda; text-decoration:none;}
+.water{ color: #999; padding-left:0px;font-style:italic; width:auto;}
+
+/* Font Format */
+.bold{}
+.italic{}
+
+/* Text Align */
+.left{}
+.right{}
+.center{}
+
+/*	Hide and show div using dropdown */
+.hiddenDiv {display:none;}
+.visibleDiv {display: block;}
+.hiddenDiv1 {display:none;}
+.visibleDiv1 {display: block;}
+.hiddenDiv2{display:none;}
+.visibleDiv2 {display: block;}
+
+/*	Standard textbox */
+.age  { width:15%; color:#999999;}
+.small  { width:15%;} /*	for 1 to 4 characters */
+.medium { width:25%;} /*	for 5 to 7 characters */
+.large  { width:40%;} /*	for 8 to 10 characters*/
+.elarge  { width:44%;}
+ 
+
+/* for validations */
+.valid
+{
+display:block;
+color:#F00;
+font-size:12px;
+}
+.disabled
+{
+background-color: #CCCCCC;
+border:#666666 solid 1px;
+}
+.red
+{
+    color:#FF0000;
+    font-weight:bold;
+    font-size:10px;
+}
+.black
+{
+	color:#000;
+	font-weight:bold;
+	font-size:10px;
+}
+.white
+{
+	color:#fff;
+	font-weight:bold;
+	font-size:10px;
+}
+.blue
+{
+    color:#283A90;
+    font-weight:bold;
+    font-size:10px;
+    background:#9ec141
+}
+.bluered
+{
+    color:#FF0000;
+    font-weight:bold;
+    font-size:10px;
+    background:#9ec141
+}
+.emsg{color:#993300;font-size:12px;text-align:center;}
+.block{text-align:right; left:0px;}
+
+
+
+.scroll_reports{height:330px;width:100%; overflow:auto;}
+
+.btreport{
+width:120px;
+}
+
+.mastertable h2{ font-size:11px; font:Arial, Helvetica, sans-serif; font-weight:100}
+.mastertable h2 a{color:#35488e; cursor:pointer; }
+.mastertable  td{ height:18px;padding:0px 0px 0px 10px;}
+
+.welcomeheaderValue
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#fff;
+	font-size:11px;
+        white-space: nowrap;
+}
+.welcomeheaderBeta
+{
+	font-weight: bold;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color: red;
+	white-space: nowrap;
+}
+
+.pswalrt{font-weight:normal;font-size:12px; background-color:#E0E6FF; color:#F00000 ; margin:0px; padding:0 20 0 0;}
+/*.pagesubmissionRegister{position: absolute; right: 80px;top:500px ;border:1px solid #13376c; background-image:url(../img/bg_button.gif) ; padding:0px 15px 0px 0px;; font-weight:bold; font-size:12px; height:23px;}
+.foot{height:100px}*/
+
+
+.pagesubmissionReport{position: absolute;right: 20px;bottom: 20px; right: 80px; top:450px }
+.pagesubmissionReport input{border:1px solid #13376c; background:url(../img/bg_button.gif) repeat-x; padding:0px; color:#13376c; font-weight:bold; font-size:12px; height:23px; }
+

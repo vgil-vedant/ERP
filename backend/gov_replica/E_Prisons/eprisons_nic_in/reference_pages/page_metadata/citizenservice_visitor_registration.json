@@ -1,0 +1,1706 @@
+{
+  "url": "https://eprisons.nic.in/CitiZenService/Visitor/Registration",
+  "finalUrl": "https://eprisons.nic.in/CitiZenService/Visitor/Registration",
+  "redirected": false,
+  "slug": "citizenservice_visitor_registration",
+  "depth": 2,
+  "via": "https://eprisons.nic.in/citizenservice",
+  "httpStatus": 200,
+  "crawlStatus": "captured",
+  "title": "CitizenServices - Registration",
+  "lang": null,
+  "charset": "UTF-8",
+  "description": "",
+  "keywords": "",
+  "headings": [],
+  "headingTree": [],
+  "breadcrumbs": [
+    "Login",
+    "Visitor Registration"
+  ],
+  "navLabels": [
+    "Login"
+  ],
+  "text": "Login Visitor Registration Visitor Registration Visitor Name* Father Name* Address* Gender* Select Female Transgender Male Age* Relation* Select Aunt Brother in Law Brother Co Brother Daughter Daughter in Law Father Grand Father Grand Mother Husband / Wife Lawyer Mother NGO Others Self Sister Son Uncle COUSIN Friend Email Id Mobile Number* Password Submit Site Maintained by :",
+  "textLength": 379,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 4,
+  "iframeCount": 0,
+  "htmlLength": 19905,
+  "forms": [
+    {
+      "index": 0,
+      "name": null,
+      "id": "form0",
+      "selector": "#form0",
+      "action": "https://eprisons.nic.in/CitiZenService/Visitor/SaveVisitor",
+      "actionRaw": "/CitiZenService/Visitor/SaveVisitor",
+      "method": "post",
+      "enctype": null,
+      "target": null,
+      "heading": null,
+      "fieldCount": 9,
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "VisitorProfile.Vis_Name",
+          "id": "VisitorProfile_Vis_Name",
+          "selector": "#VisitorProfile_Vis_Name",
+          "label": "Visitor Name*",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 36,
+            "y": 205,
+            "w": 471,
+            "h": 38
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "VisitorProfile.VisFather_Name",
+          "id": "VisitorProfile_VisFather_Name",
+          "selector": "#VisitorProfile_VisFather_Name",
+          "label": "Father Name*",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 517,
+            "y": 205,
+            "w": 471,
+            "h": 38
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control"
+        },
+        {
+          "tag": "textarea",
+          "type": "textarea",
+          "name": "VisitorProfile.Vis_Address",
+          "id": "VisitorProfile_Vis_Address",
+          "selector": "#VisitorProfile_Vis_Address",
+          "label": "Address*",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 36,
+            "y": 288,
+            "w": 953,
+            "h": 62
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control",
+          "rows": 2,
+          "cols": 20
+        },
+        {
+          "tag": "select",
+          "type": "select",
+          "name": "VisitorProfile.Vis_Sex",
+          "id": "ddlStatecode",
+          "selector": "#ddlStatecode",
+          "label": "Gender*",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": "",
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 36,
+            "y": 395,
+            "w": 231,
+            "h": 38
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control",
+          "multiple": false,
+          "options": [
+            {
+              "value": "",
+              "text": "Select",
+              "selected": false
+            },
+            {
+              "value": "F",
+              "text": "Female",
+              "selected": false
+            },
+            {
+              "value": "H",
+              "text": "Transgender",
+              "selected": false
+            },
+            {
+              "value": "M",
+              "text": "Male",
+              "selected": false
+            }
+          ],
+          "optionCount": 4,
+          "looksDependent": false
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "VisitorProfile.Vis_Age",
+          "id": "VisitorProfile_Vis_Age",
+          "selector": "#VisitorProfile_Vis_Age",
+          "label": "Age*",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 277,
+            "y": 395,
+            "w": 231,
+            "h": 38
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control"
+        },
+        {
+          "tag": "select",
+          "type": "select",
+          "name": "VisitorProfile.Vis_Relation",
+          "id": "ddlStatecode",
+          "selector": "#ddlStatecode",
+          "label": "Relation*",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": "",
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 517,
+            "y": 395,
+            "w": 471,
+            "h": 38
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control",
+          "multiple": false,
+          "options": [
+            {
+              "value": "",
+              "text": "Select",
+              "selected": false
+            },
+            {
+              "value": "AU",
+              "text": "Aunt",
+              "selected": false
+            },
+            {
+              "value": "BL",
+              "text": "Brother in Law",
+              "selected": false
+            },
+            {
+              "value": "BR",
+              "text": "Brother",
+              "selected": false
+            },
+            {
+              "value": "CB",
+              "text": "Co Brother",
+              "selected": false
+            },
+            {
+              "value": "DA",
+              "text": "Daughter",
+              "selected": false
+            },
+            {
+              "value": "DL",
+              "text": "Daughter in Law",
+              "selected": false
+            },
+            {
+              "value": "FA",
+              "text": "Father",
+              "selected": false
+            },
+            {
+              "value": "GF",
+              "text": "Grand Father",
+              "selected": false
+            },
+            {
+              "value": "GM",
+              "text": "Grand Mother",
+              "selected": false
+            },
+            {
+              "value": "HW",
+              "text": "Husband / Wife",
+              "selected": false
+            },
+            {
+              "value": "LA",
+              "text": "Lawyer",
+              "selected": false
+            },
+            {
+              "value": "MO",
+              "text": "Mother",
+              "selected": false
+            },
+            {
+              "value": "NG",
+              "text": "NGO",
+              "selected": false
+            },
+            {
+              "value": "OT",
+              "text": "Others",
+              "selected": false
+            },
+            {
+              "value": "SF",
+              "text": "Self",
+              "selected": false
+            },
+            {
+              "value": "SI",
+              "text": "Sister",
+              "selected": false
+            },
+            {
+              "value": "SO",
+              "text": "Son",
+              "selected": false
+            },
+            {
+              "value": "UN",
+              "text": "Uncle",
+              "selected": false
+            },
+            {
+              "value": "CO",
+              "text": "COUSIN",
+              "selected": false
+            },
+            {
+              "value": "FR",
+              "text": "Friend",
+              "selected": false
+            }
+          ],
+          "optionCount": 21,
+          "looksDependent": false
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "VisitorProfile.Vis_Email",
+          "id": "VisitorProfile_Vis_Email",
+          "selector": "#VisitorProfile_Vis_Email",
+          "label": "Email Id",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 36,
+            "y": 478,
+            "w": 471,
+            "h": 38
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "VisitorProfile.Vis_MobileNumber",
+          "id": "VisitorProfile_Vis_MobileNumber",
+          "selector": "#VisitorProfile_Vis_MobileNumber",
+          "label": "Mobile Number*",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 517,
+            "y": 478,
+            "w": 471,
+            "h": 38
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "VisitorProfile.Vis_Password",
+          "id": "VisitorProfile_Vis_Password",
+          "selector": "#VisitorProfile_Vis_Password",
+          "label": "Password",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 36,
+            "y": 561,
+            "w": 471,
+            "h": 38
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "form-control"
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": null,
+          "id": null,
+          "text": "Submit",
+          "selector": "#form0 > button.btn.btn-primary",
+          "box": {
+            "x": 36,
+            "y": 615,
+            "w": 85,
+            "h": 38
+          },
+          "hasOnClick": false
+        }
+      ],
+      "hiddenMachinery": [],
+      "hasCaptcha": false,
+      "hasFileInput": false,
+      "visibleText": "Visitor Name* Father Name* Address* Gender* Select Female Transgender Male Age* Relation* Select Aunt Brother in Law Brother Co Brother Daughter Daughter in Law Father Grand Father Grand Mother Husband / Wife Lawyer Mother NGO Others Self Sister Son Uncle COUSIN Friend Email Id Mobile Number* Password Submit",
+      "box": {
+        "x": 36,
+        "y": 176,
+        "w": 953,
+        "h": 477
+      }
+    }
+  ],
+  "orphanControls": [],
+  "tables": [],
+  "components": [
+    {
+      "type": "header",
+      "selector": "div.container-fluid > div.main-content > div.row:nth-of-type(2) > div.card.w-75 > div.card-header.cardHeadercustomise:nth-of-type(1)",
+      "tag": "div",
+      "classes": "card-header cardHeadercustomise",
+      "id": null,
+      "box": {
+        "x": 1,
+        "y": 80,
+        "w": 1023,
+        "h": 52
+      },
+      "text": "Visitor Registration",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(87, 142, 190)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "18px",
+        "fontWeight": "700",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "12px 20px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "3px 3px 0px 0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "html.h-100.js > body.d-flex.flex-column > footer.footer.mt-auto",
+      "tag": "footer",
+      "classes": "footer mt-auto py-3 bg-white",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 838,
+        "w": 1366,
+        "h": 62
+      },
+      "text": "Site Maintained by :",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "16px 0px",
+        "margin": "164px 0px 0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "html.h-100.js > body.d-flex.flex-column > header > div.container-fluid > nav.navbar.navbar-expand-md",
+      "tag": "nav",
+      "classes": "navbar navbar-expand-md fixed-top bg-white d-flex justify-content-between align-items-center border-bottom p-0",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 58
+      },
+      "text": "",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "fixed",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "1030"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "div.container-fluid > div.main-content > div.row.mt-1:nth-of-type(1) > div.col-md-12 > nav",
+      "tag": "nav",
+      "classes": null,
+      "id": null,
+      "box": {
+        "x": 15,
+        "y": 4,
+        "w": 1336,
+        "h": 48
+      },
+      "text": "Login Visitor Registration",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "form",
+      "selector": "#form0",
+      "tag": "form",
+      "classes": null,
+      "id": "form0",
+      "box": {
+        "x": 36,
+        "y": 176,
+        "w": 953,
+        "h": 477
+      },
+      "text": "Visitor Name* Father Name* Address* Gender* Select Female Transgender Male Age* Relation* Select Aunt Brother in Law Brother Co Brother Daughter Daughter in Law Father Grand Father",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "html.h-100.js",
+      "tag": "html",
+      "classes": "h-100 js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow op",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 900
+      },
+      "text": "CitizenServices - Registration /* Success messages (green) */ #toast-container > .toast-success { background-color: #ffffff !important; border-left: 5px solid green !important; } #",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "main.flex-shrink-0 > div.container-fluid > div.main-content > div.row:nth-of-type(2) > div.card.w-75",
+      "tag": "div",
+      "classes": "card w-75",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 79,
+        "w": 1025,
+        "h": 595
+      },
+      "text": "Visitor Registration Visitor Name* Father Name* Address* Gender* Select Female Transgender Male Age* Relation* Select Aunt Brother in Law Brother Co Brother Daughter Daughter in La",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0.125)",
+        "borderRadius": "20px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "relative",
+        "flexDirection": "column",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.container-fluid > div.main-content > div.row:nth-of-type(2) > div.card.w-75 > div.card-header.cardHeadercustomise:nth-of-type(1)",
+      "tag": "div",
+      "classes": "card-header cardHeadercustomise",
+      "id": null,
+      "box": {
+        "x": 1,
+        "y": 80,
+        "w": 1023,
+        "h": 52
+      },
+      "text": "Visitor Registration",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(87, 142, 190)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "18px",
+        "fontWeight": "700",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "12px 20px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "3px 3px 0px 0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.container-fluid > div.main-content > div.row:nth-of-type(2) > div.card.w-75 > div.card-body:nth-of-type(2)",
+      "tag": "div",
+      "classes": "card-body",
+      "id": null,
+      "box": {
+        "x": 1,
+        "y": 132,
+        "w": 1023,
+        "h": 541
+      },
+      "text": "Visitor Name* Father Name* Address* Gender* Select Female Transgender Male Age* Relation* Select Aunt Brother in Law Brother Co Brother Daughter Daughter in Law Father Grand Father",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "20px",
+        "margin": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "tabs",
+      "selector": "html.h-100.js",
+      "tag": "html",
+      "classes": "h-100 js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow op",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 900
+      },
+      "text": "CitizenServices - Registration /* Success messages (green) */ #toast-container > .toast-success { background-color: #ffffff !important; border-left: 5px solid green !important; } #",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "breadcrumb",
+      "selector": "div.main-content > div.row.mt-1:nth-of-type(1) > div.col-md-12 > nav > ol.breadcrumb.breadcrumb-ext",
+      "tag": "ol",
+      "classes": "breadcrumb breadcrumb-ext mdl-shadow--2dp",
+      "id": null,
+      "box": {
+        "x": 15,
+        "y": 4,
+        "w": 1336,
+        "h": 48
+      },
+      "text": "Login Visitor Registration",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(87, 142, 190)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "12px 16px",
+        "margin": "0px 0px 16px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "breadcrumb",
+      "selector": "div.row.mt-1:nth-of-type(1) > div.col-md-12 > nav > ol.breadcrumb.breadcrumb-ext > li.breadcrumb-item:nth-of-type(1)",
+      "tag": "li",
+      "classes": "breadcrumb-item",
+      "id": null,
+      "box": {
+        "x": 31,
+        "y": 16,
+        "w": 59,
+        "h": 24
+      },
+      "text": "Login",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "breadcrumb",
+      "selector": "div.row.mt-1:nth-of-type(1) > div.col-md-12 > nav > ol.breadcrumb.breadcrumb-ext > li.breadcrumb-item.active:nth-of-type(2)",
+      "tag": "li",
+      "classes": "breadcrumb-item active",
+      "id": null,
+      "box": {
+        "x": 90,
+        "y": 16,
+        "w": 157,
+        "h": 24
+      },
+      "text": "Visitor Registration",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(108, 117, 125)",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "0px 0px 0px 8px",
+        "margin": "0px",
+        "border": "0px none rgb(108, 117, 125)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.main-content > div.row.mt-1:nth-of-type(1) > div.col-md-12 > nav > ol.breadcrumb.breadcrumb-ext",
+      "tag": "ol",
+      "classes": "breadcrumb breadcrumb-ext mdl-shadow--2dp",
+      "id": null,
+      "box": {
+        "x": 15,
+        "y": 4,
+        "w": 1336,
+        "h": 48
+      },
+      "text": "Login Visitor Registration",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(87, 142, 190)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "12px 16px",
+        "margin": "0px 0px 16px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#form0 > button.btn.btn-primary",
+      "tag": "button",
+      "classes": "btn btn-primary",
+      "id": null,
+      "box": {
+        "x": 36,
+        "y": 615,
+        "w": 85,
+        "h": 38
+      },
+      "text": "Submit",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgb(87, 142, 190)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgb(0, 123, 255)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/Images/eprisons.png",
+      "category": "images",
+      "alt": "logo",
+      "natural": {
+        "w": 217,
+        "h": 51
+      },
+      "rendered": {
+        "x": 8,
+        "y": 13,
+        "w": 130,
+        "h": 31
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/Images/nalsa-logo.png",
+      "category": "images",
+      "alt": "logo",
+      "natural": {
+        "w": 209,
+        "h": 205
+      },
+      "rendered": {
+        "x": 146,
+        "y": 8,
+        "w": 42,
+        "h": 41
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/Images/icjs-new-logo.png",
+      "category": "images",
+      "alt": "logo",
+      "natural": {
+        "w": 618,
+        "h": 158
+      },
+      "rendered": {
+        "x": 1226,
+        "y": 11,
+        "w": 140,
+        "h": 36
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/Images/nic.png",
+      "category": "images",
+      "alt": "",
+      "natural": {
+        "w": 226,
+        "h": 51
+      },
+      "rendered": {
+        "x": 1218,
+        "y": 854,
+        "w": 133,
+        "h": 30
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/css?v=tyJahhW-cLTTlMvK4EBMQ6dn3VveO5D9qy-LwRfwKvY1",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/bootstrap-datepicker.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/login.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/toastr.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/bootstrap.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/bundles/jquery?v=J46ViXFMANC8By_GzybfZLyPpQ8ldlujdWbzGE0jfMo1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/bundles/jqueryval?v=ewwbEwxCzNIunbw9c2Y5X5_ldbOkIBIkUo-LvchX7I81",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/bundles/bootstrap?v=vG-xeH_TdwoI9T3YOXQXOK8DzzehPKKnhvCcvmy2OrE1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Scripts/bootstrap-datepicker.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Scripts/toastr.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    }
+  ],
+  "links": [
+    {
+      "href": "https://eprisons.nic.in/CitiZenService/",
+      "raw": "/CitiZenService/",
+      "text": "Login",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "count": 47
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(33, 37, 41)",
+        "count": 41
+      },
+      {
+        "value": "rgb(51, 51, 51)",
+        "count": 9
+      },
+      {
+        "value": "rgb(73, 80, 87)",
+        "count": 9
+      },
+      {
+        "value": "rgb(220, 53, 69)",
+        "count": 7
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 6
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 1
+      },
+      {
+        "value": "rgb(108, 117, 125)",
+        "count": 1
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 12
+      },
+      {
+        "value": "rgb(87, 142, 190)",
+        "count": 3
+      },
+      {
+        "value": "rgb(242, 242, 249)",
+        "count": 1
+      }
+    ]
+  },
+  "bodyStyle": {
+    "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "fontSize": "16px",
+    "lineHeight": "24px",
+    "color": "rgb(33, 37, 41)",
+    "backgroundColor": "rgb(242, 242, 249)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": [
+      "jQuery",
+      "$",
+      "bootstrap"
+    ]
+  },
+  "responseHeaders": {
+    "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+    "cache-control": "private",
+    "content-length": "13690",
+    "content-security-policy": "object-src 'none'",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 26 Oct 2026 11:46:14 GMT",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN, DENY",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Visitor/Registration",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "cache-control": "private",
+        "content-length": "13690",
+        "content-security-policy": "object-src 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 11:46:14 GMT",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN, DENY",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/css?v=tyJahhW-cLTTlMvK4EBMQ6dn3VveO5D9qy-LwRfwKvY1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 11:43:59 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "230760",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "vary": "User-Agent",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/bootstrap-datepicker.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"7ef9304453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "15737",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "text/css",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/login.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"a51fc75563add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "6969",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "text/css",
+        "last-modified": "Tue, 01 Sep 2026 11:37:57 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/toastr.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"1fb1324453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "7078",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "text/css",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/bootstrap.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"1fb1324453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "160409",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "text/css",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 11:43:59 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "11095",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "vary": "User-Agent",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/Images/eprisons.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"60282e4453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "3808",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "image/png",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/Images/nalsa-logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"e7c92f4453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "48572",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "image/png",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/Images/icjs-new-logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"e7c92f4453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "46531",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:58 GMT",
+        "content-type": "image/png",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Content/Images/nic.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"3f18304453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "5398",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "content-type": "image/png",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/bundles/jquery?v=J46ViXFMANC8By_GzybfZLyPpQ8ldlujdWbzGE0jfMo1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 11:43:59 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "92577",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "vary": "User-Agent",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/bundles/jqueryval?v=ewwbEwxCzNIunbw9c2Y5X5_ldbOkIBIkUo-LvchX7I81",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 11:43:59 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "28672",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "vary": "User-Agent",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/bundles/bootstrap?v=vG-xeH_TdwoI9T3YOXQXOK8DzzehPKKnhvCcvmy2OrE1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 11:44:00 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "182875",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 11:44:00 GMT",
+        "vary": "User-Agent",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Scripts/bootstrap-datepicker.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"e7b7354453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "33536",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Scripts/toastr.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"a7864d4453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "15734",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Tue, 01 Sep 2026 11:30:18 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/fonts/fontawesome-webfont.woff2?v=4.4.0",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "application/font-woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"dc33a54453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "64464",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:46:09 GMT",
+        "content-type": "application/font-woff2",
+        "last-modified": "Tue, 01 Sep 2026 11:30:19 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/fonts/roboto.woff",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/x-woff",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"d298a74453add1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "20332",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:59 GMT",
+        "content-type": "font/x-woff",
+        "last-modified": "Tue, 01 Sep 2026 11:30:19 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService/Visitor/ApplyRegistration",
+      "method": "POST",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "private",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "6290",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:46:15 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/citizenservice_visitor_registration.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/citizenservice_visitor_registration.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/citizenservice_visitor_registration.tablet.png",
+    "mobile": "reference_pages/screenshots/citizenservice_visitor_registration.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1215
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-26T11:46:19.776Z",
+  "pageType": "registration"
+}

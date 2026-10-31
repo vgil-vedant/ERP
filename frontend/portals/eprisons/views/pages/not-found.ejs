@@ -1,0 +1,11 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section">
+  <h1 class="section__title">404 &mdash; Not found</h1>
+  <div class="prose">
+    <p>No page in this local demonstration matches that address.</p>
+    <% if (note) { %><div class="panel"><p style="margin:0"><%= note %></p></div><% } %>
+    <p><a href="/">Return to the home page</a>.</p>
+  </div>
+</section></div></main>
+<%- include('../partials/footer') %>

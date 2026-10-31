@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-10-27T09:26:02.108Z",
+  "verified": {
+    "databaseProduct": null,
+    "version": null,
+    "schema": null,
+    "note": "Nothing verified. A website frontend does not expose its database, and no served header, markup comment, script or error page named a database product."
+  },
+  "inferred": [
+    {
+      "claim": "The application is backed by a relational database.",
+      "basis": "The portal is an ASP.NET application serving record lookups, status enquiries and aggregate statistics, which is the normal shape of a relational-backed line-of-business system.",
+      "confidence": "low",
+      "status": "inferred",
+      "caution": "This is a reasonable expectation, not an observation. Do not build against it."
+    },
+    {
+      "claim": "Microsoft SQL Server is the most likely product.",
+      "basis": "Co-occurrence with the confirmed ASP.NET/IIS stack. No direct evidence was found.",
+      "confidence": "low",
+      "status": "inferred",
+      "caution": "Never present this as fact. Ask the system owner."
+    }
+  ],
+  "unknown": [
+    {
+      "item": "database product and schema",
+      "why": "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner."
+    }
+  ],
+  "localReplicaDatabase": {
+    "purpose": "Independent local database for the demonstration only.",
+    "product": "SQLite (file-based, zero-install)",
+    "connectsToOriginal": false,
+    "dataPolicy": "Synthetic demonstration data only. No real record from the original system is copied into the replica, and the replica never connects to a production government database.",
+    "note": "This schema is the replica's own design, inferred from the public field inventory. It is not, and does not claim to be, the original schema."
+  }
+}

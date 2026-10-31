@@ -1,0 +1,4080 @@
+{
+  "generatedAt": "2026-10-27T05:54:15.488Z",
+  "counts": {
+    "endpointsObserved": 124
+  },
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/assets/logo/logoWithTitle.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/footerbackground.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/arrow_right.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/dashboard/stats_banner_bg.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/screen-reader.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-06/Icon.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/build_with_us.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/Frame.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/Vector.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/Icon.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/documents_0.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/download_aadhaar.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/Vector_1.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-05/media.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/help.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/ArrowLeftBlue.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/RoundArrow.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/biometrics.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/check_update_status.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/phone.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/security.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/code.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/security_0.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "POST",
+      "path": "/g/collect",
+      "origin": "https://www.google-analytics.com",
+      "sameHost": false,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        204
+      ],
+      "contentTypes": [
+        "text/plain"
+      ],
+      "queryParameters": [
+        "v",
+        "tid",
+        "gtm",
+        "_p",
+        "gcd",
+        "npa",
+        "dma",
+        "are",
+        "cid",
+        "frm",
+        "ngs",
+        "pscdl",
+        "rcb",
+        "sr",
+        "uaa",
+        "uab",
+        "uafvl",
+        "uam",
+        "uamb",
+        "uap",
+        "uapv",
+        "uaw",
+        "ul",
+        "_s",
+        "tag_exp",
+        "sid",
+        "sct",
+        "seg",
+        "dl",
+        "dt",
+        "en",
+        "_fv",
+        "_nsi",
+        "_ss",
+        "tfd",
+        "_eu",
+        "ae",
+        "epn.percent_scrolled",
+        "_et",
+        "tt",
+        "ep.auth_state",
+        "ep.browser_family",
+        "ep.browser_version",
+        "ep.build_version",
+        "ep.device_tier",
+        "ep.device_type",
+        "ep.journey_id",
+        "ep.navigation_id",
+        "ep.network_class",
+        "ep.os_family",
+        "ep.page_id",
+        "ep.route_id",
+        "ep.screen_size_bucket",
+        "ep.traffic_phase",
+        "ep.ui_version",
+        "cn",
+        "dp",
+        "ep.event_parameter",
+        "ep.event_source",
+        "ep.page_section",
+        "dr"
+      ],
+      "resourceType": "fetch",
+      "carriesRequestBody": true,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/PlayButton.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/hamburgerMenu.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/images/thumb_shadow_profile_card.svg",
+      "origin": "https://myaadhaarbeta.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/configservice/v1/sections",
+      "origin": "https://tathya.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/configservice/v1/personas",
+      "origin": "https://tathya.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/configservice/v1/searches/en",
+      "origin": "https://tathya.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "POST",
+      "path": "/myaadhaarmonitoringservice/api/v1/record-real-user-monitoring",
+      "origin": "https://tathya.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        202
+      ],
+      "contentTypes": [],
+      "queryParameters": [],
+      "resourceType": "fetch",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/configservice/v1/services",
+      "origin": "https://tathya.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/unifiedAppAuthService/api/generic/generateCaptcha",
+      "origin": "https://tathya.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+        "https://myaadhaarbeta.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/logoWithTitle.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/facebook_0.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/footer.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/link.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/youtube.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/instagram.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/linkedin.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-05/Vector-email.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/twitter_0.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-05/Vector-tele.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200,
+        304
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/Info.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/ArrowBullet.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/website-help"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/authenticationDoneIcon.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/aadhaar-dashboard"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/ekyc.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/aadhaar-dashboard"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/aadhaarGeneratedIcon.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/aadhaar-dashboard"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/aadhaarUpdate.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/aadhaar-dashboard"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/AccordionArrow.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/pdf.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/download.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/quick_access.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-06/Annual_Reports.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-06/Aadhaar_Handbook.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-06/Certifications.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-06/Enrolment_Updates.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-06/Certifications_0.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-06/Announcements.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-05/documents_6.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/build_with_us_0.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-05/documents_3.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-05/documents_2.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-05/Vector%20%281%29_0.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-05/documents_4.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/documents"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/Vector.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/logo/logoWithTitle.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/opportunities.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/screen-reader.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/home.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/Help.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/footerbackground.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/JobCardBackground.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/footer.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/auth/public-key",
+      "origin": "https://careerbackend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "fetch",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/vacancies",
+      "origin": "https://careerbackend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [
+        "limit"
+      ],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/vacancies/type-summary",
+      "origin": "https://careerbackend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "POST",
+      "path": "/v1/translate-text",
+      "origin": "https://translation-plugin.bhashini.co.in",
+      "sameHost": false,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json"
+      ],
+      "queryParameters": [],
+      "resourceType": "fetch",
+      "carriesRequestBody": true,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/_next/static/media/locationPin.0577f120.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "POST",
+      "path": "/collect",
+      "origin": "https://a.clarity.ms",
+      "sameHost": false,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        204
+      ],
+      "contentTypes": [],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": true,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/icons/hamburgerMenu.svg",
+      "origin": "https://career.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://career.uidai.gov.in/hi"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/BlueArrowRight.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/ovse"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/document/2026-05/generate-virtual-id.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/ovse"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/document/2026-05/Service-icons-ovse.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/ovse"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/document/2026-05/Service-icons-clock.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/ovse"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/document/2026-05/Service-icons-cards.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/ovse"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/document/2026-05/Service-icons-finger-print.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/ovse"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/document/2026-05/Service-icons-cardboard.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/ovse"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/td",
+      "origin": "https://www.googletagmanager.com",
+      "sameHost": false,
+      "observedOnPages": [
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents"
+      ],
+      "statuses": [
+        204
+      ],
+      "contentTypes": [
+        "text/plain"
+      ],
+      "queryParameters": [
+        "id",
+        "v",
+        "t",
+        "pid",
+        "gtm",
+        "seq",
+        "exp",
+        "dl",
+        "tdp",
+        "frm",
+        "rtg",
+        "slo",
+        "hlo",
+        "lst",
+        "pcid",
+        "bt",
+        "ct",
+        "jsp",
+        "z"
+      ],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/assets/svgs/more-icon.svg",
+      "origin": "https://uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/address-update.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/Photo.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/download-aadhaar.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/order-aadhaar-pvc-card.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/aadhaar.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/generate-virtual-id_0.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/download-masked-aadhaar.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/lock-and-unlock-biometrics.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/lock-and-unlock-aadhaar.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/book_an_appointment.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/check_enrolment_status.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/aadhaar-enrolment-mobile.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/get/files/media/2026-04/keep-aadhaar-secure-mobile.svg",
+      "origin": "https://backend.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://uidai.gov.in/en/my-aadhaar"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/LanguageSelector.dd14b8054218a45a518df6f26aaff418.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/dashboard.21335c2c89af71912adf700d228cbecd.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/aadhaar_english_logo.9a2d63795a7f7bdd7acb2148585336be.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/uidai_english_logo.37b7e790fc0b23da21bc9df098a66467.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/arrowDownWhite.5705d32d953c9b17742e53145d6d5ae2.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/DownloadAadhaar.a2d1e98fb6b4bea18da11eb69d7ee5e6.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/arrowRight.36a2fb68edf604ae8a0b73169525cdb3.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/Death-icon.727b9fb544db4c5f6912fc85fbf44012.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/RetrieveUid.71a1dc8b0f3ae94e8c910d348bf5459c.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/VerifyMobile.9f06273a26fced1586176233a824a873.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/BankLinking.2f5998ed8452667406cb93aa5298209b.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/GenerateVirtualId.99091915b8c8ab9d474e40098f4ce04f.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/AadhaarLockUnlock.1829e87a7682bc7753b7c8c8c8727d28.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/DocumentUpdate.367e861345889bdb4d30906dad6b698a.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/BookAppointmentIcon.145e2775384d73cbf7b196c6f6cf7a6d.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/LecIcon.ec816ce5df2591d29d04ba14530d9fb7.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/OrderPVCStatusIcon.48dbab5dff41be6c2f3af8b8ede434f2.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/EnrolmentStatusIcon.1da8598aa6207b1ccf948943bf7327fb.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/CheckComplaintStatusIcon.225aeb96c98e142087f3de95ab62793a.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/FileAComplaintIcon.4450c8d4e888ca35dd739d7831e79cce.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/static/media/CheckAadhaarValidityIcon.7c3acc020544ff1e71ef10d982263eed.svg",
+      "origin": "https://myaadhaar.uidai.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://myaadhaar.uidai.gov.in/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    }
+  ],
+  "publicApiAvailable": false,
+  "publicApiEvidence": "124 data request(s) were observed, all internal to the application. None is a documented public API.",
+  "integrationRestrictions": [
+    "No public, self-service API is published for this portal.",
+    "Public forms are CAPTCHA-protected; automated submission is not available.",
+    "Authenticated functionality sits behind a server-side session and is out of scope."
+  ],
+  "safetyPolicy": "Endpoints here were observed passively while loading public pages. No endpoint was enumerated, fuzzed or probed. No credential, session token, cookie or authorization header was recorded: those header names are stripped before anything is written to disk. No request body was captured."
+}

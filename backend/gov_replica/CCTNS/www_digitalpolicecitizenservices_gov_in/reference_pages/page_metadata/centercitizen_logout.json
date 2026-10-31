@@ -1,0 +1,843 @@
+{
+  "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+  "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+  "redirected": false,
+  "slug": "centercitizen_logout",
+  "depth": 2,
+  "via": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+  "httpStatus": 404,
+  "crawlStatus": "captured",
+  "title": "",
+  "lang": null,
+  "charset": "UTF-8",
+  "description": "",
+  "keywords": "",
+  "headings": [
+    "Unable to process your request. Click Here to login"
+  ],
+  "headingTree": [
+    {
+      "level": 2,
+      "text": "Unable to process your request. Click Here to login"
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "Unable to process your request. Click Here to login This website belongs to National Crime Records Bureau, Ministry of Home Affairs, Government of India",
+  "textLength": 158,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 0,
+  "iframeCount": 0,
+  "htmlLength": 2995,
+  "forms": [],
+  "orphanControls": [],
+  "tables": [],
+  "components": [
+    {
+      "type": "header",
+      "selector": "#header",
+      "tag": "div",
+      "classes": null,
+      "id": "header",
+      "box": {
+        "x": 102,
+        "y": 0,
+        "w": 1585,
+        "h": 80
+      },
+      "text": "",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgb(0, 98, 204)",
+        "color": "rgb(0, 0, 0)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "5px 109.266px",
+        "margin": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "fixed",
+        "textAlign": "start",
+        "zIndex": "99"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#footer",
+      "tag": "div",
+      "classes": null,
+      "id": "footer",
+      "box": {
+        "x": 14,
+        "y": 883,
+        "w": 1347,
+        "h": 17
+      },
+      "text": "This website belongs to National Crime Records Bureau, Ministry of Home Affairs, Government of India function backtoHome(){ changeLocationHref(\"login.htm\") }",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "1px 5px 0px 3px",
+        "margin": "0px -130.922px 0px 0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "fixed",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/multistyles.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/common/common.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/common/security-util.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/sublogo.gif",
+      "category": "images",
+      "fromCss": true,
+      "selector": "#header > div.sublogo:nth-of-type(3)"
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/bg_menu1.jpg",
+      "category": "images",
+      "fromCss": true,
+      "selector": "#menu"
+    }
+  ],
+  "links": [
+    {
+      "href": null,
+      "raw": "#",
+      "text": "Click Here",
+      "kind": "non-navigational",
+      "target": null
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "Tahoma, Geneva, sans-serif",
+      "count": 13
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 12
+      },
+      {
+        "value": "rgb(255, 0, 128)",
+        "count": 1
+      },
+      {
+        "value": "rgb(0, 0, 205)",
+        "count": 1
+      },
+      {
+        "value": "rgb(51, 51, 51)",
+        "count": 1
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(0, 98, 204)",
+        "count": 1
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 1
+      }
+    ],
+    "backgroundByArea": [
+      {
+        "value": "rgb(0, 98, 204)",
+        "area": 126800
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "area": 22899
+      }
+    ],
+    "gradientsByArea": []
+  },
+  "bodyStyle": {
+    "fontFamily": "Tahoma, Geneva, sans-serif",
+    "fontSize": "14px",
+    "lineHeight": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": []
+  },
+  "responseHeaders": {
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "connection": "Keep-Alive",
+    "content-type": "text/html;charset=UTF-8",
+    "date": "Tue, 27 Oct 2026 07:05:22 GMT",
+    "expires": "0",
+    "keep-alive": "timeout=5, max=100",
+    "pragma": "no-cache",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "''",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+      "method": "GET",
+      "status": 404,
+      "resourceType": "document",
+      "contentType": "text/html;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "connection": "Keep-Alive",
+        "content-type": "text/html;charset=UTF-8",
+        "date": "Tue, 27 Oct 2026 07:05:22 GMT",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=100",
+        "pragma": "no-cache",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "''",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/common/common.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"4986-1790182310811\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=99",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/javascript;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "4986",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/multistyles.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"426-1790182310739\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=98",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "426",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/common/security-util.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"2691-1790182310816\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=97",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/javascript;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "2691",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/formlevel.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"12213-1790182310736\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=96",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "12213",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/layout.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"5639-1790182310737\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=95",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "5639",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/tab_control.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"6150-1790182310740\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=94",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "6150",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/modal_window.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"694-1790182310739\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=93",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "694",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/cal_control.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"5049-1790182310735\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=92",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "5049",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/menu.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"3735-1790182310737\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=91",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "3735",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/error_message.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"482-1790182310735\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=90",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "482",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/help_dropdown.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"1878-1790182310736\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=89",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "1878",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/additional.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"1001-1790182310735\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=88",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "1001",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/home_page.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"4343-1790182310736\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=87",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "4343",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/popupmenu.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"939-1790182310740\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=86",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "939",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/dropdwonmenu-v.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"1291-1790182310735\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=85",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "1291",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/leftmenucss.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"3282-1790182310737\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=84",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "text/css;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "3282",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/sublogo.gif",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/gif;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"5839-1790182310777\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=83",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "image/gif;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "5839",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/bg_menu1.jpg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/jpeg;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "etag": "W/\"813-1790182310754\"",
+        "x-internal-ip": "",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "keep-alive": "timeout=5, max=82",
+        "date": "Tue, 27 Oct 2026 07:05:23 GMT",
+        "last-modified": "Wed, 23 Sep 2026 16:51:50 GMT",
+        "content-type": "image/jpeg;charset=UTF-8",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline'; object-src 'none'",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "pragma": "no-cache",
+        "connection": "Keep-Alive",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "accept-ranges": "bytes",
+        "content-length": "813",
+        "x-xss-protection": "1; mode=block",
+        "server": "''"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "pageerror",
+      "text": "jQuery is not defined"
+    },
+    {
+      "type": "pageerror",
+      "text": "qm_create is not defined"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/centercitizen_logout.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/centercitizen_logout.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/centercitizen_logout.tablet.png",
+    "mobile": "reference_pages/screenshots/centercitizen_logout.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "throttleWaits": [],
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1217
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-27T07:05:28.874Z",
+  "pageType": "error"
+}

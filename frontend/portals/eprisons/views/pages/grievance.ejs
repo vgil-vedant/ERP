@@ -1,0 +1,153 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section section--flush">
+
+  <% if (submitted) { %>
+    <div class="notice notice--ok" role="status">
+      <strong>Grievance recorded in the local demonstration.</strong>
+      Reference number <span class="ref-no"><%= submitted.referenceNo %></span>.
+      Track it on the <a href="/public/grievancelogin">Grievance Status</a> page.
+      Nothing was sent to any prison or government system.
+    </div>
+  <% } %>
+
+  <% const ek = Object.keys(errors); if (ek.length) { %>
+    <div class="notice notice--error" role="alert">
+      <strong>Please correct <%= ek.length %> field<%= ek.length === 1 ? '' : 's' %>.</strong>
+      <ul><% ek.forEach(function (k) { %><li><%= errors[k] %></li><% }); %></ul>
+    </div>
+  <% } %>
+
+  <form method="post" action="/public/grievance" novalidate>
+    <input type="hidden" name="challenge_expected" value="<%= challenge.expected %>">
+
+    <div class="card-row">
+      <!-- ------------------------------------------- complainant ---- -->
+      <div class="card">
+        <h2 class="card__head">Complainant Details</h2>
+        <div class="card__body">
+          <div class="field">
+            <label for="complainant_name">Name <span class="req">*</span></label>
+            <input type="text" id="complainant_name" name="complainant_name" maxlength="30" required
+                   placeholder="Enter Your Name" value="<%= form.complainant_name || '' %>"
+                   <%= errors.complainant_name ? 'aria-invalid="true"' : '' %>>
+            <% if (errors.complainant_name) { %><span class="field__error"><%= errors.complainant_name %></span><% } %>
+          </div>
+          <div class="field">
+            <label for="complainant_mobile">Mobile No <span class="req">*</span></label>
+            <input type="tel" id="complainant_mobile" name="complainant_mobile" inputmode="numeric" required
+                   pattern="[6-9][0-9]{9}" placeholder="Enter Your Mobile Number"
+                   value="<%= form.complainant_mobile || '' %>"
+                   <%= errors.complainant_mobile ? 'aria-invalid="true"' : '' %>>
+            <% if (errors.complainant_mobile) { %><span class="field__error"><%= errors.complainant_mobile %></span><% } %>
+          </div>
+          <div class="field">
+            <label for="complainant_email">Email ID</label>
+            <input type="email" id="complainant_email" name="complainant_email" maxlength="50"
+                   placeholder="Enter Your Email Id" value="<%= form.complainant_email || '' %>"
+                   <%= errors.complainant_email ? 'aria-invalid="true"' : '' %>>
+            <% if (errors.complainant_email) { %><span class="field__error"><%= errors.complainant_email %></span><% } %>
+          </div>
+          <div class="field">
+            <label for="complainant_address">Address</label>
+            <input type="text" id="complainant_address" name="complainant_address" maxlength="150"
+                   placeholder="Enter Your Address" value="<%= form.complainant_address || '' %>">
+          </div>
+          <div class="field">
+            <label for="relationship_id">Relation with Inmate</label>
+            <select id="relationship_id" name="relationship_id">
+              <option value="">SELECT</option>
+              <% ref.relationships.forEach(function (r) { %>
+                <option value="<%= r.id %>" <%= String(form.relationship_id) === String(r.id) ? 'selected' : '' %>><%= r.name %></option>
+              <% }); %>
+            </select>
+            <span class="field__hint"><%= ref.relationships.length %> values, as captured from the live form.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------------------------------------------- grievance ---- -->
+      <div class="card">
+        <h2 class="card__head">Grievance Details</h2>
+        <div class="card__body">
+          <div class="field-grid">
+            <div class="field">
+              <label for="state_id">State <span class="req">*</span></label>
+              <select id="state_id" name="state_id" required data-cascade-source data-cascade-target="jail_id"
+                      <%= errors.state_id ? 'aria-invalid="true"' : '' %>>
+                <option value="">SELECT</option>
+                <% ref.states.forEach(function (s) { %>
+                  <option value="<%= s.id %>" <%= String(form.state_id) === String(s.id) ? 'selected' : '' %>><%= s.name %></option>
+                <% }); %>
+              </select>
+              <% if (errors.state_id) { %><span class="field__error"><%= errors.state_id %></span><% } %>
+            </div>
+            <div class="field">
+              <label for="jail_id">Jail <span class="req">*</span></label>
+              <select id="jail_id" name="jail_id" required disabled data-selected="<%= form.jail_id || '' %>"
+                      <%= errors.jail_id ? 'aria-invalid="true"' : '' %>>
+                <option value="">SELECT</option>
+              </select>
+              <% if (errors.jail_id) { %><span class="field__error"><%= errors.jail_id %></span><% } %>
+            </div>
+            <div class="field">
+              <label for="inmate_name">Prisoner Name <span class="req">*</span></label>
+              <input type="text" id="inmate_name" name="inmate_name" maxlength="30" required
+                     placeholder="Enter Prisoner name" value="<%= form.inmate_name || '' %>"
+                     <%= errors.inmate_name ? 'aria-invalid="true"' : '' %>>
+              <% if (errors.inmate_name) { %><span class="field__error"><%= errors.inmate_name %></span><% } %>
+            </div>
+            <div class="field">
+              <label for="inmate_father_name">Prisoner Father Name</label>
+              <input type="text" id="inmate_father_name" name="inmate_father_name" maxlength="100"
+                     placeholder="Enter Father name" value="<%= form.inmate_father_name || '' %>">
+            </div>
+            <div class="field">
+              <label for="category">Grievance Category</label>
+              <select id="category" name="category">
+                <option value="">SELECT</option>
+                <% ['Medical attention','Legal aid','Food and diet','Family contact',
+                    'Property and belongings','Transfer request','Other'].forEach(function (c) { %>
+                  <option value="<%= c %>" <%= form.category === c ? 'selected' : '' %>><%= c %></option>
+                <% }); %>
+              </select>
+              <span class="field__hint">[REC] the original's category list is not public.</span>
+            </div>
+            <div class="field">
+              <label for="subject">Subject <span class="req">*</span></label>
+              <input type="text" id="subject" name="subject" maxlength="150" required data-counter
+                     placeholder="Short summary" value="<%= form.subject || '' %>"
+                     <%= errors.subject ? 'aria-invalid="true"' : '' %>>
+              <span class="field__hint" id="subject_count"></span>
+              <% if (errors.subject) { %><span class="field__error"><%= errors.subject %></span><% } %>
+            </div>
+            <div class="field field--wide">
+              <label for="description">Message <span class="req">*</span></label>
+              <textarea id="description" name="description" maxlength="2000" required data-counter
+                        placeholder="Enter issue description"
+                        <%= errors.description ? 'aria-invalid="true"' : '' %>><%= form.description || '' %></textarea>
+              <span class="field__hint" id="description_count"></span>
+              <% if (errors.description) { %><span class="field__error"><%= errors.description %></span><% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="challenge">
+      <span class="challenge__q"><%= challenge.question %></span>
+      <div class="field">
+        <label for="challenge_answer" class="sr-only">Answer to the verification question</label>
+        <input type="text" id="challenge_answer" name="challenge_answer" maxlength="6" required autocomplete="off"
+               placeholder="Type the answer" <%= errors.challenge_answer ? 'aria-invalid="true"' : '' %>>
+        <% if (errors.challenge_answer) { %><span class="field__error"><%= errors.challenge_answer %></span><% } %>
+      </div>
+      <button type="submit" class="btn btn--primary">Send</button>
+    </div>
+    <p class="field__hint" style="margin-top:8px">
+      The original shows a CAPTCHA image here. This demonstration asks an arithmetic question
+      instead: no CAPTCHA was reproduced, solved or bypassed anywhere in this project.
+    </p>
+  </form>
+</section></div></main>
+<%- include('../partials/footer') %>

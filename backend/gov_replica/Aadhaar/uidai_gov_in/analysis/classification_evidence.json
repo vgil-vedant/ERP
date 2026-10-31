@@ -1,0 +1,238 @@
+{
+  "generatedAt": "2026-10-27T06:55:28.249Z",
+  "category": "Aadhaar",
+  "confidence": "high",
+  "status": "confirmed",
+  "decidedBy": "page content, strongest in meta description/keywords",
+  "wouldHoldWithoutHostname": true,
+  "governmentHost": true,
+  "method": "Terms are scored by the zone they appear in, not by raw frequency: page title x30, headings x12, navigation labels x10, meta description/keywords x8, body text x1. Repetition is damped so breadth of evidence beats one repeated phrase, and a category must have at least one defining term outside body text to win -- a footer address must not decide what a site is for.",
+  "thresholds": {
+    "CONFIDENT_SCORE": 40,
+    "CONFIDENT_MARGIN": 1.35,
+    "STRONG": 1,
+    "WEAK": 0.18,
+    "HOST_WEIGHT": 10
+  },
+  "zoneWeights": {
+    "title": 30,
+    "headings": 12,
+    "navLabels": 10,
+    "meta": 8,
+    "body": 1
+  },
+  "ranking": [
+    {
+      "dir": "Aadhaar",
+      "label": "Aadhaar/UIDAI identity services, enrolment, updates and related official services",
+      "contentScore": 107.57,
+      "hostScore": 10,
+      "score": 117.57,
+      "hasProminentStrongTerm": true,
+      "hits": {
+        "strong": [
+          {
+            "term": "uidai",
+            "weight": 17.3,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 10,
+                "weight": 16
+              },
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 1.3
+              }
+            ]
+          },
+          {
+            "term": "unique identification authority",
+            "weight": 58.47,
+            "where": [
+              {
+                "zone": "title",
+                "occurrences": 4,
+                "weight": 48.06
+              },
+              {
+                "zone": "meta",
+                "occurrences": 2,
+                "weight": 10.41
+              }
+            ]
+          },
+          {
+            "term": "aadhaar",
+            "weight": 22.75,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 48,
+                "weight": 21.45
+              },
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 1.3
+              }
+            ]
+          }
+        ],
+        "weak": [
+          {
+            "term": "identity",
+            "weight": 2.31,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 4,
+                "weight": 2.31
+              }
+            ]
+          },
+          {
+            "term": "enrolment",
+            "weight": 2.56,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 6,
+                "weight": 2.56
+              }
+            ]
+          },
+          {
+            "term": "biometric",
+            "weight": 1.87,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 2,
+                "weight": 1.87
+              }
+            ]
+          },
+          {
+            "term": "resident",
+            "weight": 2.31,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 4,
+                "weight": 2.31
+              }
+            ]
+          }
+        ],
+        "host": [
+          {
+            "hint": "uidai",
+            "weight": 10
+          }
+        ]
+      }
+    },
+    {
+      "dir": "E_Courts",
+      "label": "eCourts, case status, court listings, cause lists, orders, judgments and court services",
+      "contentScore": 1.87,
+      "hostScore": 0,
+      "score": 1.87,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [
+          {
+            "term": "court",
+            "weight": 1.87,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 2,
+                "weight": 1.87
+              }
+            ]
+          }
+        ],
+        "host": []
+      }
+    },
+    {
+      "dir": "CCTNS",
+      "label": "Crime and Criminal Tracking Network & Systems, police crime-record workflows and related portals",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Forensics",
+      "label": "Government forensic services, forensic laboratories, forensic case management and evidence workflows",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Prisons",
+      "label": "ePrisons, prison/jail administration, inmate management, visitor services and related portals",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    }
+  ],
+  "pagesConsidered": 4,
+  "samplesUsed": [
+    {
+      "url": "https://uidai.gov.in/hi",
+      "title": "Home - Unique Identification Authority of India | Government of India - Unique Identification Authority of India | Government of India",
+      "headingCount": 24,
+      "navLabelCount": 1,
+      "textLength": 4818,
+      "error": null
+    },
+    {
+      "url": "https://uidai.gov.in/hi#main-content",
+      "title": "Home - Unique Identification Authority of India | Government of India - Unique Identification Authority of India | Government of India",
+      "headingCount": 24,
+      "navLabelCount": 1,
+      "textLength": 4818,
+      "error": null
+    },
+    {
+      "url": "https://myaadhaarbeta.uidai.gov.in/genricDownloadAadhaar/en",
+      "title": "",
+      "headingCount": 0,
+      "navLabelCount": 0,
+      "textLength": 0,
+      "error": "page.goto: net::ERR_EMPTY_RESPONSE at https://myaadhaarbeta.uidai.gov.in/genricDownloadAadhaar/en"
+    },
+    {
+      "url": "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+      "title": "",
+      "headingCount": 0,
+      "navLabelCount": 0,
+      "textLength": 0,
+      "error": "page.goto: Navigation to \"https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en\" is interrupted by another navigation to \"chrome-error://chromewebdata/\""
+    }
+  ],
+  "note": "Classification is driven by page content. `wouldHoldWithoutHostname` records whether the same verdict is reached from content alone, with the hostname bonus removed."
+}

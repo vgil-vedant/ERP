@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link href="css/layout.css" type="text/css" rel="stylesheet">
+
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Government of India, Ministry of Home Affairs</title>
+
+    </head>
+
+    <body onbeforeunload="doUnload()" onmousedown="somefunction()" onload="init();" style="padding:0px;">
+        
+
+
+
+
+
+
+
+
+    
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>:::Digital Police Citizen Services:::</title>
+
+	<!-- Bootstrap Core CSS -->
+    <link href="asset/style/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="asset/style/cyberPolice.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" sizes="16x16">
+    <!-- Custom Fonts -->
+    <link href="asset/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+
+    <style>
+         .modal-container {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .modal-content-new {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #fff;
+                padding: 10px;
+                width: 25%;
+
+/*                border: 2px solid #ffcc00;  Warning color: yellow */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                text-align: center;
+                z-index: 99;
+            }
+
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 20px;
+                color: #d3ccae; /* Warning color: yellow */
+                cursor: pointer;
+            }
+
+            .modal-message {
+                color: #ffcc00; /* Warning color: yellow */
+                font-weight: bold;
+            }
+            p:hover{
+                cursor: pointer;
+            }
+
+    </style>	
+
+
+        
+
+
+
+
+    
+        <meta name="_csrf" content="75b2cfca-689d-45be-a334-7bf752b4d3c8">
+        <meta name="_csrf_header" content="X-CSRF-TOKEN">
+        <script type="text/javascript" src="js/common/common.js"></script>
+        <script type="text/javascript" src="js/common/security-util.js"></script>
+        <!--<script type="text/javascript" src="js/common/jquery.min.js"></script>-->
+        <!--<script src="/cascenter/JavaScriptServlet"></script>-->
+        <script>
+            parentWindow = window.parent.location;
+            /* function to append token to the url provided */
+            function appendToken(url) {
+                var tokenValue = '79I1-A5L2-30P5-O8SA-CYOK-QTHN-LT2G-QNVI';
+                if (tokenValue != null && tokenValue != "") {
+                    return appendTokenWithUrl(url, "stov", tokenValue);
+                } else {
+                    return url;
+                }
+            }
+            var token = jQuery("meta[name='_csrf']").attr("content");
+            var header = jQuery("meta[name='_csrf_header']").attr("content");
+            $.ajaxSetup({
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader(header, token);
+                    // xhr.setRequestHeader('x-my-custom-header', '79I1-A5L2-30P5-O8SA-CYOK-QTHN-LT2G-QNVI');
+                },
+                error: function (xhr) {
+                    if (xhr.status == 500) {
+                        if (parentWindow != location.href) {
+                            window.parent.fancyWarningSessionExpired(document.getElementById("alrtSessionExpired").value);
+                        } else {
+                            fancyWarningSessionExpired(document.getElementById("alrtSessionExpired").value);
+                        }
+                    }
+
+                }
+            });
+
+            function fancyWarningSessionExpired(msg) {
+
+
+                var Content = "<div class='warningh' style='display: block; height:140px; width: 400px; left: 420.5px; top: 130px;'><div  class='warning' style='border:1px solid #957C17;height:135px;text-align:center;font-family:Arial, Helvetica, sans-serif;color: #CC6600; font-size:12px; font-weight:bold;'><br/>" + msg + "</div><div style='color:#fff; padding:0px!important; width:50px; margin-top:-30px;'><input type='button' style='margin-left:180px'  class='warningbutton' onclick=\"jQuery.fancybox.close();\" value=\"" + document.getElementById("alrtbuttOk").value + "\" value='" + document.getElementById("alrtbtnClose").value + "'>" + "</div></div>";
+
+                jQuery.fancybox({
+
+                    'modal': true,
+
+                    'content': Content,
+
+                    onClosed: function () {
+
+                        var contextPath = '/centercitizen';
+                        window.location.href = contextPath + "/logout.htm"
+                    }
+
+                });
+
+            }
+
+            function fnLogout() {
+                document.getElementById('logout').submit()
+            }
+        </script>        
+    
+    
+    
+    <form id="logout" action="/centercitizen/logout" method="post">
+        <input type="hidden" name="_csrf" value="75b2cfca-689d-45be-a334-7bf752b4d3c8">
+    </form>
+
+
+
+        <script type="text/javascript">
+            window.history.forward();
+            function disableBackButton() {
+                window.history.forward();
+             
+            }
+            $(document).ready(function(){
+                //Start - For Session timeout timer
+           //     var sessionTimeOutVal = "900"; // will get in seconds;
+           //     checkSessionTimeout(sessionTimeOutVal);
+                //End               
+                
+            });
+            function addTitleAttributes(id)
+            {
+                var numOptions = document.getElementById(id).options.length;
+                for (i = 0; i < numOptions; i++)
+                    document.getElementById(id).options[i].title =
+                    document.getElementById(id).options[i].text.toString();
+             
+            
+            }
+            $(document).ready(function() {
+     
+    var iframeElemets = document.getElementsByTagName('a');
+   
+                var len = iframeElemets.length;    
+                for(var i=0; i<len; i++) {
+                    var element = iframeElemets[i];
+                    element.href = appendToken(element.href);                 
+                                        
+                }   
+    }); 
+        </script>
+        <script type="text/javascript">
+           $(document).ready(function(){
+               console.log('inside the header sessiontimeout');
+                setTimeout(function(){
+                     $('.header').css('display', 'none');
+                     $('#modalContainer2').fadeIn();
+                  $('#overlay').fadeIn();
+                  setTimeout(function(){
+                          $('#modalContainer').fadeOut();
+                       fnLogout(); 
+                    },4000);
+                },900000);
+            });
+        </script>
+           
+        <script language="javascript" type="text/javascript">
+            var isClose = false;
+            document.onkeydown = checkKeycode;
+            function checkKeycode(e) {
+                var keycode;
+                if (window.event)
+                    keycode = window.event.keyCode;
+                else if (e)
+                    keycode = e.which;
+                if(keycode === 116)
+                {
+                    isClose = true;
+                }
+            }
+            function somefunction()
+            {
+                isClose = true;
+            }
+            function doUnload()
+            {
+               
+                if(!isClose)
+                {
+                  
+                }
+            }
+        </script>
+        <script type="text/javascript">
+ 
+            var myclose = false;
+ 
+            function ConfirmClose()
+            {
+                if((navigator.platform === "Win32")/*("Windows 95 and above)*/ ||(navigator.platform === "Win64")/*(for Windows NT 5.1.2600)*/ ||(navigator.platform === "Win16" )/*(For Windows 3.1)*/||(navigator.platform === "Mac" )/*(For Mac)*/)
+                {
+                              
+                    if (navigator.appName === 'Microsoft Internet Explorer')
+                    {
+                  
+                        if (document.createEventObject){
+                           
+                            var evt = document.createEventObject();
+                 
+                            evt.returnValue = 'Your Session Will Expire';
+                            setTimeout('myclose=false',1);
+                            myclose=true;
+                                         
+                        }
+            
+                    } else {
+                        window.location="logout.htm";
+               
+                        if (document.createEvent){
+                          
+                            var evt = document.createEvent("HTMLEvents");
+                         
+                            evt.returnValue = 'Your Session Will Expire';
+                            setTimeout('myclose=false',1);
+                            myclose=true;
+                         
+                
+                            if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ //test for Firefox/x.x or Firefox x.x (ignoring remaining digits);
+                                var ffversion=new Number(RegExp.$1); // capture x.x portion and store as a number
+                                if (ffversion>=1)
+                                window.location="logout";
+  
+                        }
+                
+                           
+                
+                    }
+                }
+            }
+               
+        }
+ 
+        function HandleOnClose()
+        {
+                
+            if (myclose==true) 
+            {
+                 
+            }
+        }
+        
+        </script>
+        <script type="text/javascript" src="js/common/xssfilter.js"></script>
+    
+
+
+
+
+    
+        
+
+        <div class="header">            
+<!--            <div class="logo">&nbsp;</div>		-->
+
+            <div class="container">
+		<div class="col-md-5 fl">  
+                    <img class="logo" src="asset/images/cctnsLogoNew.png" alt="" style="width: 10%;">
+                    <div style="float: right;margin-top: 8px;color: #fff;" class="headName">
+                        <h2 style="margin:0;">CCTNS</h2>Crime and Criminal Tracking Network &amp; Systems
+                    </div>
+                    <a class="resLogout" style="color: white;" href="logout"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
+                </div>
+		<div class="col-md-7 fl">
+		<section class="user_notify_section fr headName">
+                    
+			<ul class="nav navbar-nav">
+					<li class="dropdown">
+                                            <!--cc-->
+					  <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span> <i class="fas fa-user-circle "></i></span>  Welcome: <b></b> <i class="fas fa-angle-down arrow"></i></a>
+					  <ul class="dropdown-menu">
+					   <li class="dropdown-item"> <div>Date: <b class="name">dd/mm/yyyy</b> <br>Time: <b>hh:mm</b></div></li>
+						<li class="dropdown-item"><a href="#" onclick="fnLogout()"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+						
+					  </ul>
+					</li>
+                         </ul>
+                        
+		</section>
+		</div>
+	</div>
+        </div>
+        <input type="hidden" id="alrtSessionExpired" value="Your session has been expired">
+        <input type="hidden" id="alrtbtnYes" value="Yes">
+        <input type="hidden" id="alrtbtnNo" value="No">
+     <!-- jQuery -->
+    <script src="asset/js/jquery-updated_latest.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="asset/js/bootstrap.min.js"></script>
+    <div id="modalContainer2" class="modal-container">
+                <div class="modal-content-new">
+                      <div style="border:2px solid #A9EFFF;">
+                    <span class="close"></span>
+                    <p class="modal-message" style="color:#1864ab;padding:30px;">Your Session is Timeout!</p>
+                    <div style="display:flex;justify-content: center;align-items: center;gap:30px;"> 
+                        <p style="font-size:15px;color: #3498db;border: 2px solid #3498db;padding: 3px; background-color: #A9EFFF;" id="clearmissingpersonpopYes">Ok</p>
+                        <!--<p style="font-size: 15px;color:black;border: 2px solid #ca79339c;padding: 3px; background-color: #caba339c;" id="clearmissingpersonpopNo">No</p>-->
+                    </div>
+                    </div>
+                </div>
+         </div>
+    
+    
+
+
+
+
+
+    
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>:::CCTNS:::</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="asset/style/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" sizes="16x16">
+        <!-- Custom CSS -->
+        <link href="asset/style/cyberPolice.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="asset/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      
+
+        <!--Old Code-->
+
+<!--        <script type="text/javascript" src="fancybox/jquery.fancybox-lib.pack.js"></script>-->
+<!--        <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-lib.css" media="screen" />-->
+<!--        <link href="css/multistyles.css" type="text/css" rel="stylesheet" />-->
+<!--        <script type="text/javascript" src="js/common/fancyalert.js"></script>-->
+<!--        <script type="text/javascript" src="fancybox/jquery.mousewheel-lib.pack.js"></script> -->
+        <link type="text/css" rel="stylesheet" href="css/jquery.modaldialog.css">
+        <script type="text/javascript" src="js/jquery.modaldialog.js"></script>
+        <div id="popupModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <br>
+                <div class="alert alert-danger" style="display: none;" id="dangerAlert" role="alert">
+                    
+                </div>
+                <div class="alert alert-success" style="display: none;" id="successAlert" role="alert">
+                    
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <!--//CC start-->
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <!--cc end-->
+            </div>
+        </div>
+
+    </div>
+</div>
+ <!--cc start-->
+<a href="" data-bs-toggle="modal" data-bs-target="#popupModal" id="modalTrigger"></a>
+<!--//cc end-->
+<script>
+    function popupModalErrorMessage(msg,id) {
+        console.log('in popupmodal.jsp')
+        document.getElementById("dangerAlert").style="display:block;";
+        document.getElementById("dangerAlert").innerHTML=msg+"!";
+        document.getElementById("modalTrigger").click();
+//        document.getElementById(id).value="";
+//        document.getElementById(id).focus();
+        
+    }
+    
+    function popupModalSuccessMessage(msg,id) {
+        document.getElementById("successAlert").style="display:block;";
+        document.getElementById("successAlert").innerHTML=msg+"!";
+        document.getElementById("modalTrigger").click();
+    }
+</script>
+    
+    
+        <div class="header">
+            <div class="container">
+                <div class="col-md-5 fl">  
+                    <img class="logo" src="asset/images/cctnsLogoNew.png" alt="" style="width: 10%;">
+                    <div style="float: right;margin-top: 8px;color: #fff;">
+                        <h2 style="margin:0;font-size: 30px;color: #fff;">CCTNS</h2>Crime and Criminal Tracking Network &amp; Systems
+                    </div>
+                </div>
+                <div class="col-md-7 fl">
+                </div>
+            </div>
+        </div>
+        <div class="container mrt30">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 bodyWrapper" style="padding: 2% 3%;margin: 7% 0;">
+                    <h2>Feedback Form</h2><br>
+                    <form id="feedbackForm" action="feedback.htm" method="POST">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                                <input id="firstName" name="firstName" tabindex="1" placeholder="First Name" type="text" class="form-control" onchange="nameValidate(this.value,this.id);" value="" maxlength="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                                <input id="lastName" name="lastName" tabindex="2" placeholder="Last Name" type="text" class="form-control" onchange="nameValidate(this.value,this.id);" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile1">Mobile Number</label>
+                            <div class="row">
+                                <div class="col-md-1" style="font-size:18px;padding-right: 0;padding-top: 5px;">
+                                    &nbsp;&nbsp;+
+                                </div>
+                                <div class="col-md-3" style="padding-left: 0;">
+                                    <input id="mobile1" name="mobileNum1" tabindex="3" type="text" class="form-control" value="91" readonly="readonly" maxlength="3">
+                                </div>
+                                <div class="col-md-8">
+                                    <input id="mobile2" name="mobileNum2" tabindex="4" placeholder="Mobile Number" type="text" class="form-control" onchange="CommentsMinLength(this.value,10,this.id);" value="" maxlength="10">
+                                </div>
+                            </div>
+                             
+                             
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone1">Landline Number</label>
+                            <div class="row">
+                                <div class="col-md-1" style="font-size:18px;padding-right: 0;padding-top: 5px;">
+                                    &nbsp;&nbsp;+
+                                </div>
+                                <div class="col-md-2" style="padding-left: 0;">
+                                    <input id="txtLandLine1" name="telephone1" tabindex="6" onkeypress="return isNumberKeyphone(event,'txtLandLine1')" placeholder="Country Code" type="text" class="form-control" onblur="return pinPhoneLength(this,1,'txtLandLine1')" value="" size="2" maxlength="3">
+                                </div>
+                                <div class="col-md-3" style="padding-left: 0;">
+                                    <input id="txtLandLine2" name="telephone2" tabindex="7" onkeypress="return isNumberKeyphone(event,'txtLandLine2')" placeholder="District Code" type="text" class="form-control" onblur="return pinPhoneLength(this,2,'txtLandLine2')" value="" size="2" maxlength="5">
+                                </div>
+                                <div class="col-md-6" style="padding-left: 0;">
+                                    <input id="txtLandLine3" name="telephone3" tabindex="8" onkeypress="return isNumberKeyphone(event,'txtLandLine3')" placeholder="Landline Number" type="text" class="form-control" onblur="return pinPhoneLength(this,6,'txtLandLine3')" value="" size="8" maxlength="8">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Id</label>
+                                <input id="email" name="emailId" tabindex="5" placeholder="Email Id" type="text" class="form-control" onchange="checkEmailEnteredCorrect(this.value,this.id);" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Feedback Comments</label>
+                                <textarea id="feedback" name="feedbackComment" tabindex="10" class="form-control" onchange="commentValidate(this.value,this.id);" rows="7" cols="50"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">Enter the characters in the textbox below. Characters are case sensitive.</div>
+                                <div class="col-md-12"></div>
+                                <div class="col-md-5">
+                                    <img id="captchaFeedback" src="retrieveImageCaptcha.htm" width="200" alt="Please Enter Correct Captcha.">
+                                    <script>
+                                        $("#captchaFeedback").attr("src","retrieveImageCaptcha.htm");
+                                    </script>
+                                </div>
+                                    <div class="col-md-7" style="padding: 10px 0;">
+                                        <img src="img/Refresh.ico" width="30" height="30" border="0" value="Refresh" class="captcheButton" style="cursor: pointer;" onclick="refreshCaptcha('captchaFeedback')" title="Refresh Captcha">
+                                    </div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12">
+                                        <input type="text" style="width:200px;height:22px;margin-top: 5px;" class="form-control" tabindex="11" id="answerFeedback" value="">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <span style="color:red; font-style: normal;font-size: 11px;" id="captchaErrorFeedback" value="">
+                                    </span></div>
+                                        
+                            </div>
+                        </div>
+                                    <input type="button" value="Submit" style="height: 35px;padding: 0 10px;" class="btn btn-primary" onclick="displayMsg()">
+                                <!--    <button type="" style="height: 35px;" class="btn btn-primary">Submit</button>   -->
+                        <br><br><br>
+                    <div>
+<input type="hidden" name="_csrf" value="75b2cfca-689d-45be-a334-7bf752b4d3c8">
+</div></form>
+                </div>
+                <div class="col-md-3"></div>
+                    
+            </div>
+                
+        </div>
+        
+        
+        <input type="hidden" id="alrtcaptchawrong" value="Please Enter Correct Captcha.">  
+        <input type="hidden" id="alertnumeric" value="Please enter numbers only  ">
+        <input type="hidden" id="alrtvalidemail" value="Please enter valid Email ID">
+        <input type="hidden" id="alrtemail1" value="Please enter a valid email id">
+        <input type="hidden" id="alrtname" value="Please enter data in a proper format, Only alphabets a-z, numbers 0-9 and special characters (') are allowed.">
+        <input type="hidden" id="alrtbuttOk" value="OK">
+        <input type="hidden" id="alrtbtnClose" value="Close">
+        <input type="hidden" id="alrtbtnYes" value="Yes">
+        <input type="hidden" id="alrtbtnNo" value="No">
+        <input type="hidden" id="alrtmin" value="Please enter Minimum of">
+        <input type="hidden" id="alrtminchar" value="characters">
+
+        <!-- jQuery -->
+        <script src="asset/js/jquery-lib.min.js"></script> 
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="asset/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                var success='';
+                var message='';
+                if(success=='true'){
+                    popupModalSuccessMessage(message,"firstName");
+                }
+            
+            });
+            function close_window() {
+                close();
+            }
+            function displayMsg() {
+                var firstName= document.getElementById("firstName").value;
+                var lastName= document.getElementById("lastName").value;
+                var mobile2= document.getElementById("mobile2").value;
+                var email= document.getElementById("email").value;
+                var feedback= document.getElementById("feedback").value;
+                if (firstName==''){
+                    popupModalErrorMessage("Please Enter FirstName",'firstName');
+                    return false;
+                }
+                if(lastName==''){
+                    popupModalErrorMessage("Please Enter lastName",'lastName');
+                    return false;
+                }if(feedback==''){
+                    popupModalErrorMessage("Please Enter feedback",'feedback');
+                    return false;
+                }if(mobile2==''){
+                    popupModalErrorMessage("Please Enter mobile no",'mobile2');
+                    return false;
+                } if(email==''){
+                    popupModalErrorMessage("Please Enter email",'email');
+                    return false;
+                } 
+                if (document.getElementById("answerFeedback").value=="" || document.getElementById("answerFeedback").value==null) {
+                    $("#captchaErrorFeedback").html(document.getElementById("alrtcaptchawrong").value);
+                    return false;
+                }
+                var answers=document.getElementById("answerFeedback").value; 
+                var errorId="#captchaErrorFeedback";
+                $.post("checkCaptcha.htm" ,{"answer":answers},        
+                function(data){
+                    var items=data.userCaptchCorrect;
+                    if(!items) {
+                        $(errorId).html($("#alrtcaptchawrong").val());
+                        return false;
+                    } else {
+                        $("#feedbackForm").submit();
+                    }
+                
+                });
+            }
+            function refreshCaptcha(captcha){
+                var d = new Date();
+                $("#captchaFeedback").attr("src","retrieveImageCaptcha.htm?"+d.getTime());
+                                
+            } 
+            function onlynumberValidation(data,id){
+                var exp = /^[0-9]{1,40}$/;
+                if(!exp.test(data)){
+                    popupModalErrorMessage(document.getElementById('alertnumeric').value,id)
+                    document.getElementById(id).value="";
+                }else{
+                    document.getElementById(id).focus();
+                }
+            }
+            
+            function checkEmailEnteredCorrect(data,id){
+                var check=true;
+                if(data!="")
+                {
+                    var x=data
+                    var atpos=x.indexOf("@");
+                    var dotpos=x.lastIndexOf(".");
+                    if (atpos<1 || dotpos<atpos+2 ||dotpos+2>=x.length)
+                    {               
+                        popupModalErrorMessage(document.getElementById("alrtvalidemail").value,id);                     
+                        check = false;
+                    }
+                }
+                if(!check){
+                    document.getElementById(id).value="";
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+            function emailValidation(data,id){
+                var exp = /^[a-zA-Z1-9][a-zA-Z0-9@''_'\.]{1,400}$/;
+                if(!exp.test(data)){
+                    popupModalErrorMessage(document.getElementById("alrtemail1").value,id);
+                    document.getElementById(id).value="";           
+                }
+            }
+            function isNumberKeyphone(evt,id)
+            {
+                
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57)&& charCode!=43)
+                {            
+                    popupModalErrorMessage("Please Enter Numbers Only",'txtLandLine1')
+                    return false;
+                }
+                return true;
+            }
+            
+            function pinPhoneLength(a,MINLENGTH,id)
+            {
+                var length=a.value.length;
+                if(length!=0){
+                    if (length<MINLENGTH)
+                    {
+                        a.value=a.value.substring(0,MINLENGTH);
+                        popupModalErrorMessage('Minimum of' +" "+MINLENGTH+" "+  'characters',id);
+                        document.getElementById(id).value='';
+                        return false;
+                    }
+                    else return true;
+                }
+                else return true;
+                
+            }
+            function nameValidate(data,id){
+                var exp = /^[0-9a-zA-Z'''\_]+$/;
+                if(!exp.test(data)){
+                    popupModalErrorMessage(document.getElementById("alrtname").value,id);
+                    document.getElementById(id).value="";  
+                    return false;
+                }
+            }
+            
+            function commentValidate(data,id){
+                var exp = /^[0-9a-zA-Z'''\_]+$/;
+                if(!exp.test(data)){
+                    popupModalErrorMessage("Enter valid comment in Feedback",id);
+                    document.getElementById(id).value="";  
+                    return false;
+                }
+            }
+            
+     function CommentsMinLength(a,MINLENGTH,id)
+    {
+        var length=a.length;
+        if (length<MINLENGTH)
+        {       
+            popupModalErrorMessage(document.getElementById("alrtmin").value+" "+MINLENGTH+" "+document.getElementById("alrtminchar").value,id);
+            document.getElementById(id).value='';
+            return false;
+        }
+        else {
+            onlynumberValidation(a,id);
+        };
+    }
+        </script>
+    
+
+
+    
+    <script>
+        $(document).ready( function(){
+            var heightwindow = $(window).height();
+
+            $('#midcontainerid').css('height', (heightwindow-180)+'px');
+        });
+    </script>
+</body></html>

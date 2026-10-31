@@ -1,0 +1,1136 @@
+{
+  "url": "https://tathya.uidai.gov.in/access/login?role=resident",
+  "finalUrl": "https://tathya.uidai.gov.in/access/login?role=resident",
+  "redirected": false,
+  "slug": "access_login__6f006319",
+  "depth": 2,
+  "via": "https://uidai.gov.in/hi/site-map",
+  "httpStatus": 200,
+  "crawlStatus": "captured",
+  "title": "Aadhaar - Login",
+  "lang": "en",
+  "charset": "UTF-8",
+  "description": "",
+  "keywords": "",
+  "headings": [],
+  "headingTree": [],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "Login to Aadhaar via OTP Session Expired! Please try again later. Enter Aadhaar Number Enter Captcha Login With OTP Copyright © 2024 Unique Identification Authority of India All Rights Reserved",
+  "textLength": 194,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 6,
+  "iframeCount": 0,
+  "htmlLength": 12781,
+  "forms": [
+    {
+      "index": 0,
+      "name": null,
+      "id": null,
+      "selector": "#root > div.login-section > div.login-section__card:nth-of-type(2) > form",
+      "action": null,
+      "actionRaw": null,
+      "method": "get",
+      "enctype": null,
+      "target": null,
+      "heading": null,
+      "fieldCount": 2,
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "uid",
+          "id": null,
+          "selector": "div.form-section__text-field:nth-of-type(1) > div.sc-bYEvPH.hTJwDE > div.sc-kLgntA.dmJLCS > div.sc-iktFzd.gaGeRK > input.sc-hiSbYr.blJzaP",
+          "label": "Enter Aadhaar Number",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 499,
+            "y": 197,
+            "w": 368,
+            "h": 27
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "sc-hiSbYr blJzaP"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "captcha",
+          "id": null,
+          "selector": "div.form-section__captcha-field:nth-of-type(1) > div.sc-bYEvPH.hTJwDE > div.sc-kLgntA.dmJLCS > div.sc-iktFzd.gaGeRK > input.sc-hiSbYr.blJzaP",
+          "label": "Enter Captcha",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": true,
+          "replacedByWidget": false,
+          "functionalField": true,
+          "box": {
+            "x": 499,
+            "y": 262,
+            "w": 184,
+            "h": 27
+          },
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "sc-hiSbYr blJzaP"
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Login with OTP",
+          "selector": "form > div.form-section > div.form-section__button-container:nth-of-type(3) > div.form-section__button > button.button_btn__A84dV",
+          "box": {
+            "x": 499,
+            "y": 311,
+            "w": 368,
+            "h": 42
+          },
+          "hasOnClick": false
+        }
+      ],
+      "hiddenMachinery": [],
+      "hasCaptcha": true,
+      "hasFileInput": false,
+      "visibleText": "Enter Aadhaar NumberEnter CaptchaLogin with OTP",
+      "box": {
+        "x": 499,
+        "y": 166,
+        "w": 368,
+        "h": 192
+      }
+    }
+  ],
+  "orphanControls": [
+    {
+      "tag": "input",
+      "type": "radio",
+      "name": "authMode",
+      "id": null,
+      "selector": "div.login-section__card:nth-of-type(2) > div.authmode:nth-of-type(2) > div.authmode-button:nth-of-type(1) > label.authmode-button__container > input",
+      "label": "Face Authentication",
+      "placeholder": null,
+      "required": false,
+      "disabled": true,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null,
+      "value": "FACEAUTH",
+      "checkedByDefault": false
+    },
+    {
+      "tag": "input",
+      "type": "radio",
+      "name": "authMode",
+      "id": null,
+      "selector": "div.login-section__card:nth-of-type(2) > div.authmode:nth-of-type(2) > div.authmode-button:nth-of-type(2) > label.authmode-button__container > input",
+      "label": "OTP Authentication",
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null,
+      "value": "OTP",
+      "checkedByDefault": true
+    }
+  ],
+  "tables": [],
+  "components": [
+    {
+      "type": "header",
+      "selector": "#root > header.header",
+      "tag": "header",
+      "classes": "header",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 70
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "fixed",
+        "textAlign": "start",
+        "zIndex": "5"
+      }
+    },
+    {
+      "type": "header",
+      "selector": "#root > header.header > div.header__container",
+      "tag": "div",
+      "classes": "header__container",
+      "id": null,
+      "box": {
+        "x": 98,
+        "y": 0,
+        "w": 1170,
+        "h": 65
+      },
+      "text": "",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "6px 16px",
+        "margin": "0px 98px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "header",
+      "selector": "#root > header.header > div.header__container > div.header__logo-left:nth-of-type(1)",
+      "tag": "div",
+      "classes": "header__logo-left",
+      "id": null,
+      "box": {
+        "x": 114,
+        "y": 6,
+        "w": 275,
+        "h": 53
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "header",
+      "selector": "#root > header.header > div.header__container > div.header__logo-right:nth-of-type(2)",
+      "tag": "div",
+      "classes": "header__logo-right",
+      "id": null,
+      "box": {
+        "x": 1176,
+        "y": 6,
+        "w": 76,
+        "h": 53
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#root > footer.footer",
+      "tag": "footer",
+      "classes": "footer",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 837,
+        "w": 1366,
+        "h": 63
+      },
+      "text": "Copyright © 2024 Unique Identification Authority of India All Rights Reserved",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(2, 3, 72)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "14.4px 0px",
+        "margin": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "fixed",
+        "textAlign": "start",
+        "zIndex": "5"
+      }
+    },
+    {
+      "type": "form",
+      "selector": "#root > div.login-section > div.login-section__card:nth-of-type(2) > form",
+      "tag": "form",
+      "classes": null,
+      "id": null,
+      "box": {
+        "x": 499,
+        "y": 166,
+        "w": 368,
+        "h": 192
+      },
+      "text": "Enter Aadhaar NumberEnter CaptchaLogin with OTP",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "#root > div.login-section > div.login-section__card:nth-of-type(2)",
+      "tag": "div",
+      "classes": "login-section__card",
+      "id": null,
+      "box": {
+        "x": 483,
+        "y": 118,
+        "w": 400,
+        "h": 260
+      },
+      "text": "Session Expired! Please try again later.Face AuthenticationOTP AuthenticationEnter Aadhaar NumberEnter CaptchaLogin with OTP",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "20px 16px",
+        "margin": "0px 473px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "6px",
+        "boxShadow": "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
+        "display": "block",
+        "position": "relative",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.login-section__card:nth-of-type(2) > form > div.form-section > div.form-section__captcha-field-container:nth-of-type(2) > div.form-section__captcha-box:nth-of-type(2)",
+      "tag": "div",
+      "classes": "form-section__captcha-box",
+      "id": null,
+      "box": {
+        "x": 693,
+        "y": 253,
+        "w": 174,
+        "h": 40
+      },
+      "text": "",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "4px 6px",
+        "margin": "12px 0px 0px",
+        "border": "2px solid rgba(112, 112, 112, 0.57)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "form > div.form-section > div.form-section__button-container:nth-of-type(3) > div.form-section__button > button.button_btn__A84dV",
+      "tag": "button",
+      "classes": "button_btn__A84dV",
+      "id": null,
+      "box": {
+        "x": 499,
+        "y": 311,
+        "w": 368,
+        "h": 42
+      },
+      "text": "Login with OTP",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgb(181, 177, 177)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "fontFamily": "sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/uidai_english_logo.dd2d2a1cdbf8dcd226664631cb383029.svg",
+      "category": "images",
+      "alt": "uidai-logo",
+      "natural": {
+        "w": 275,
+        "h": 50
+      },
+      "rendered": {
+        "x": 114,
+        "y": 8,
+        "w": 275,
+        "h": 50
+      },
+      "loading": null
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/aadhaar_english_logo.9a2d63795a7f7bdd7acb2148585336be.svg",
+      "category": "images",
+      "alt": "aadhaar-logo",
+      "natural": {
+        "w": 76,
+        "h": 49
+      },
+      "rendered": {
+        "x": 1176,
+        "y": 8,
+        "w": 76,
+        "h": 49
+      },
+      "loading": null
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/Fingerprint.86c1faed5789386944a3a100f29cf1c7.svg",
+      "category": "images",
+      "alt": "icon",
+      "natural": {
+        "w": 48,
+        "h": 48
+      },
+      "rendered": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "loading": null
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/OtpIcon.15fc3c85378f24c82eb9158f9df731e2.svg",
+      "category": "images",
+      "alt": "icon",
+      "natural": {
+        "w": 48,
+        "h": 48
+      },
+      "rendered": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "loading": null
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/RefreshIcon.874efff6da316d5687c409d5d2763bbe.svg",
+      "category": "images",
+      "alt": "",
+      "natural": {
+        "w": 21,
+        "h": 24
+      },
+      "rendered": {
+        "x": 844,
+        "y": 262,
+        "w": 15,
+        "h": 18
+      },
+      "loading": null
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/favicon.ico",
+      "category": "icons",
+      "rel": "icon",
+      "sizes": null
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/manifest.json",
+      "category": "documents",
+      "rel": "manifest"
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/css/main.621417a5.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/css/285.6ac9e1e8.chunk.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-MT2PNHW4&gtm_auth=&gtm_preview=&gtm_cookies_win=x",
+      "category": "scripts",
+      "async": true,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=GTM-MT2PNHW4",
+      "category": "scripts",
+      "async": true,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/js/bundle.js",
+      "category": "scripts",
+      "async": false,
+      "defer": true,
+      "type": null
+    }
+  ],
+  "links": [],
+  "fontFamilies": [
+    {
+      "value": "Roboto, sans-serif",
+      "count": 28
+    },
+    {
+      "value": "sans-serif",
+      "count": 1
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 33
+      },
+      {
+        "value": "rgb(92, 89, 88)",
+        "count": 2
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 2
+      },
+      {
+        "value": "rgb(2, 11, 80)",
+        "count": 1
+      },
+      {
+        "value": "rgb(255, 0, 0)",
+        "count": 1
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 3
+      },
+      {
+        "value": "rgb(181, 177, 177)",
+        "count": 1
+      },
+      {
+        "value": "rgb(2, 3, 72)",
+        "count": 1
+      }
+    ]
+  },
+  "bodyStyle": {
+    "fontFamily": "Roboto, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": true,
+    "frameworkGlobals": []
+  },
+  "responseHeaders": {
+    "content-length": "765",
+    "strict-transport-security": "max-age=15768000; includeSubDomains\nmax-age=16070400; includeSubDomains",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-language": "en-IN",
+    "content-type": "text/html;charset=UTF-8",
+    "date": "Tue, 27 Oct 2026 07:08:23 GMT",
+    "expires": "0",
+    "pragma": "no-cache",
+    "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-service-time": "9",
+    "x-frame-options": "DENY",
+    "x-serving-dc": "mndc-prod-kube-01",
+    "x-xss-protection": "1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://tathya.uidai.gov.in/access/login?role=resident",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html;charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "765",
+        "strict-transport-security": "max-age=15768000; includeSubDomains\nmax-age=16070400; includeSubDomains",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-language": "en-IN",
+        "content-type": "text/html;charset=UTF-8",
+        "date": "Tue, 27 Oct 2026 07:08:23 GMT",
+        "expires": "0",
+        "pragma": "no-cache",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "x-content-type-options": "nosniff",
+        "x-envoy-upstream-service-time": "9",
+        "x-frame-options": "DENY",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/js/bundle.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "transfer-encoding": "chunked",
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "content-encoding": "gzip",
+        "x-envoy-upstream-service-time": "40",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:23 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,origin,access-control-request-method,access-control-request-headers,accept-encoding",
+        "content-type": "application/javascript",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/css/main.621417a5.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "x-envoy-upstream-service-time": "22",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "content-length": "5577",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:23 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "content-type": "text/css",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=GTM-MT2PNHW4",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "zstd",
+        "expires": "Tue, 27 Oct 2026 07:08:23 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Tue, 27 Oct 2026 07:08:23 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding",
+        "last-modified": "Tue, 27 Oct 2026 06:00:00 GMT",
+        "access-control-allow-headers": "Cache-Control",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "cache-control": "private, max-age=900",
+        "cross-origin-resource-policy": "cross-origin",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-origin": "*",
+        "content-length": "119290",
+        "x-xss-protection": "0",
+        "server": "Google Tag Manager"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/css/285.6ac9e1e8.chunk.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "x-envoy-upstream-service-time": "10",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "content-length": "5192",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "content-type": "text/css",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-MT2PNHW4&gtm_auth=&gtm_preview=&gtm_cookies_win=x",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "zstd",
+        "expires": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding",
+        "last-modified": "Tue, 27 Oct 2026 06:00:00 GMT",
+        "access-control-allow-headers": "Cache-Control",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "cache-control": "private, max-age=900",
+        "cross-origin-resource-policy": "cross-origin",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-origin": "*",
+        "content-length": "119278",
+        "x-xss-protection": "0",
+        "server": "Google Tag Manager"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/js/206.ed83d196.chunk.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "transfer-encoding": "chunked",
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "content-encoding": "gzip",
+        "x-envoy-upstream-service-time": "11",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,origin,access-control-request-method,access-control-request-headers,accept-encoding",
+        "content-type": "application/javascript",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/aadhaar_english_logo.9a2d63795a7f7bdd7acb2148585336be.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "x-envoy-upstream-service-time": "12",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "content-length": "14380",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/uidai_english_logo.dd2d2a1cdbf8dcd226664631cb383029.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "x-envoy-upstream-service-time": "13",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "content-length": "91554",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:23 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/telemetryservice/log",
+      "method": "POST",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "x-envoy-upstream-service-time": "21",
+        "access-control-allow-origin": "https://tathya.uidai.gov.in",
+        "content-length": "62",
+        "date": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers"
+      },
+      "isXhr": true,
+      "postDataPresent": true
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/js/285.32430756.chunk.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "transfer-encoding": "chunked",
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "content-encoding": "gzip",
+        "x-envoy-upstream-service-time": "15",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,origin,access-control-request-method,access-control-request-headers,accept-encoding",
+        "content-type": "application/javascript",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/js/833.8a58e679.chunk.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "transfer-encoding": "chunked",
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "content-encoding": "gzip",
+        "x-envoy-upstream-service-time": "172",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:23 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,origin,access-control-request-method,access-control-request-headers,accept-encoding",
+        "content-type": "application/javascript",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/Fingerprint.86c1faed5789386944a3a100f29cf1c7.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "x-envoy-upstream-service-time": "11",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "content-length": "2787",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/generateCaptcha",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json",
+      "fromServiceWorker": false,
+      "headers": {
+        "transfer-encoding": "chunked",
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-encoding": "gzip",
+        "pragma": "no-cache",
+        "x-envoy-upstream-service-time": "11",
+        "x-content-type-options": "nosniff",
+        "expires": "0",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:25 GMT",
+        "content-type": "application/json",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,accept-encoding",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/OtpIcon.15fc3c85378f24c82eb9158f9df731e2.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "x-envoy-upstream-service-time": "9",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "content-length": "2593",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:24 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/static/media/RefreshIcon.874efff6da316d5687c409d5d2763bbe.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "cache-control": "max-age=86400, must-revalidate, private",
+        "x-envoy-upstream-service-time": "8",
+        "x-content-type-options": "nosniff",
+        "accept-ranges": "bytes",
+        "content-length": "3211",
+        "x-xss-protection": "1; mode=block",
+        "date": "Tue, 27 Oct 2026 07:08:25 GMT",
+        "last-modified": "Thu, 17 Sep 2026 14:26:54 GMT",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "DENY"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/telemetryservice/log",
+      "method": "POST",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=15768000; includeSubDomains, max-age=16070400; includeSubDomains",
+        "x-serving-dc": "mndc-prod-kube-01",
+        "x-envoy-upstream-service-time": "23",
+        "access-control-allow-origin": "https://tathya.uidai.gov.in",
+        "content-length": "62",
+        "date": "Tue, 27 Oct 2026 07:08:25 GMT",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers"
+      },
+      "isXhr": true,
+      "postDataPresent": true
+    }
+  ],
+  "consoleIssues": [],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/access_login__6f006319.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/access_login__6f006319.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/access_login__6f006319.tablet.png",
+    "mobile": "reference_pages/screenshots/access_login__6f006319.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "throttleWaits": [],
+  "spaLateSettleApplied": true,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1212
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-27T07:08:32.485Z",
+  "pageType": "login"
+}

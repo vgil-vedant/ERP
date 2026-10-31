@@ -1,0 +1,18 @@
+{
+  "name": "4_erp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ERP for Maharashtra Prisons and local demonstration replicas of the government portals it exchanges data with.",
+  "workspaces": [
+    "backend/platform-api",
+    "backend/erp-api",
+    "backend/tools"
+  ],
+  "scripts": {
+    "seed:erp": "npm --workspace backend/erp-api run seed",
+    "seed:platform": "npm --workspace backend/platform-api run seed",
+    "start:erp": "npm --workspace backend/erp-api run start",
+    "start:platform": "npm --workspace backend/platform-api run start",
+    "test:e2e": "node tests/e2e/run-e2e-tests.js"
+  }
+}

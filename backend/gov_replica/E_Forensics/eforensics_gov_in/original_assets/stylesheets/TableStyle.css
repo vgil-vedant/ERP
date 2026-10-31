@@ -1,0 +1,225 @@
+﻿
+.table thead th {
+    vertical-align: middle;
+    border-bottom: 2px solid #e9ecef;
+    background-color: #ebe9e9;
+    color: #000;
+}
+
+.table-bordered thead td, .table-bordered thead th {
+    border-bottom-width: 3px;
+    border-bottom: 2px solid #280c12;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #fff;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
+    background-color: #ebe9e9;
+}
+/*
+.table-bordered td, .table-bordered th {
+    border: 1px solid #280c12;
+}
+*/
+a:hover {
+    color: #000000;
+}
+
+.table > thead > tr > th {
+    border-bottom-color: #e2e6e9;
+    font-weight: bold !important;
+}
+
+/*.table > thead {
+    border: 2px solid #000000 !important;
+    font-weight: bold !important;
+}*/
+
+
+.note {
+    padding: 10px;
+    border-left: 6px solid;
+    border-radius: 5px
+}
+
+    .note strong {
+        font-weight: 600
+    }
+
+    .note p {
+        font-weight: 500
+    }
+
+.note-primary {
+    background-color: #e1ecfd;
+    border-color: #1266f1
+}
+
+.note-secondary {
+    background-color: #f4e3ff;
+    border-color: #b23cfd
+}
+
+.note-success {
+    background-color: #c6ffdd;
+    border-color: #00b74a
+}
+
+.note-danger {
+    background-color: #fee3e8;
+    border-color: #f93154
+}
+
+.note-warning {
+    background-color: #fff1d6;
+    border-color: #ffa900
+}
+
+.note-info {
+    background-color: #dacff3;
+    border-color: #703fe8;
+}
+
+.note-light {
+    background-color: #fbfbfb;
+    border-color: #262626
+}
+
+.swal-modal {
+    width: 520px !important;
+}
+
+table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+    background-color: #ffffff !important;
+}
+
+table.dataTable.display tbody tr.even > .sorting_1, table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+    background-color: #ebe9e9 !important;
+}
+
+.nom-img {
+    position: relative;
+}
+
+    .nom-img img {
+        width: 469px;
+        margin-top: -50px;
+    }
+
+section.pdms {
+    background: #891e1e;
+    padding: 20px 0;
+}
+
+.pdms-img h5 {
+    color: #fff;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.pdms-img a {
+    background: #fff;
+    color: #222;
+    padding: 15px;
+    display: block;
+    width: 260px;
+    font-size: 15px;
+    margin: 0 auto 15px;
+}
+
+.pdms-img img {
+    margin: 0 7px;
+}
+
+.first-date {
+    position: absolute;
+    top: 24%;
+    left: 20%;
+    text-align: center;
+}
+
+.second-date {
+    position: absolute;
+    top: 24%;
+    left: 52%;
+    text-align: center;
+}
+
+.third-date {
+    position: absolute;
+    top: 54%;
+    left: 37%;
+    text-align: center;
+}
+
+.four-date {
+    position: absolute;
+    top: 54%;
+    left: 69%;
+    text-align: center;
+    /* width: 92px;*/
+}
+
+    .first-date h2, .second-date h2, .third-date h2, .four-date h2 {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .first-date span, .second-date span, .third-date span, .four-date span {
+        font-size: 11px;
+        color: #cc2b2b;
+        font-weight: bold;
+    }
+
+@media (max-width: 767px) {
+    .nom-img img {
+        width: 100% !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+.accordion {
+    background-color: #2196f37a;
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.table > :not(caption) > * > * {
+    padding: 0.3rem .3rem !important;
+}

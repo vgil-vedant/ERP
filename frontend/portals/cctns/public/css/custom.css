@@ -1,0 +1,60 @@
+/* Hand-written styles for the CCTNS centercitizen pages.
+   Geometry measured from reference_pages/screenshots/.
+
+   The original's banner is dominated by the NCRB crest and the National Emblem
+   of India. Neither is reproduced: the National Emblem is protected by the
+   State Emblem of India (Prohibition of Improper Use) Act, 2005, and the crest
+   is NCRB's. Neutral placeholder plates stand in, and the real postal and
+   telephone details printed on the original are not copied. */
+
+.cc-banner {
+  background: linear-gradient(118deg, #1a5fb4 0%, #2f86d8 26%, #cfe6fa 47%, #2f86d8 70%, #1a4f96 100%);
+  padding: 44px 16px 30px; text-align: center; color: #fff;
+}
+.cc-crest {
+  width: 230px; height: 230px; margin: 0 auto 18px; border-radius: 50%;
+  border: 3px dashed rgba(255,255,255,.55); background: rgba(255,255,255,.12);
+  display: grid; place-items: center; text-align: center;
+}
+.cc-crest span { font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  opacity: .85; max-width: 150px; line-height: 16px; }
+.cc-banner__title { font-size: 21px; font-weight: 700; margin: 0 0 6px; }
+.cc-banner__sub { font-size: 12px; font-style: italic; margin: 0 0 24px; opacity: .92; }
+.cc-banner__welcome { font-size: 19px; font-weight: 700; margin: 0; }
+
+.cc-infobar { background: #0b1f45; color: #cdd8ea; padding: 18px 16px; }
+.cc-infobar__inner { max-width: 1366px; margin: 0 auto; display: grid;
+  grid-template-columns: 300px 1fr 400px; gap: 24px; align-items: start; }
+.cc-infobar__plates { display: flex; gap: 18px; }
+.cc-plate { width: 120px; height: 120px; border: 2px dashed rgba(255,255,255,.4);
+  border-radius: 6px; display: grid; place-items: center; font-size: 10px;
+  text-align: center; color: #9fb3d0; padding: 6px; line-height: 14px; }
+.cc-infobar__links { font-size: 13px; }
+.cc-infobar__links a { color: #cdd8ea; margin-right: 18px; }
+.cc-infobar__links p { font-size: 11px; line-height: 17px; margin: 10px 0 0; }
+.cc-infobar__addr { font-size: 11px; line-height: 18px; }
+
+.cc-loginstrip { background: #f4f7fb; padding: 10px 16px 26px; position: relative; }
+.cc-loginstrip__inner { max-width: 1366px; margin: 0 auto; }
+.cc-loginstrip__hint { text-align: center; font-size: 12px; color: #33415c; margin: 0 0 4px; }
+.cc-actions { display: flex; gap: 14px; align-items: center; justify-content: center; margin: 16px 0 0; flex-wrap: wrap; }
+.cc-btn { border: 0; border-radius: 16px; padding: 7px 20px; font-size: 13px; font-weight: 700;
+  font-family: var(--font); color: #fff; background: #1769cc; cursor: pointer; text-decoration: none; }
+.cc-btn--wide { border-radius: 20px; padding: 10px 26px; font-size: 15px; }
+.cc-form { max-width: 520px; margin: 0 auto; background: #fff; border: 1px solid #d7e0ec;
+  border-radius: 6px; padding: 20px 22px 24px; }
+.cc-form .field { margin-bottom: 14px; }
+
+.cc-contact { background: linear-gradient(118deg, #1a5fb4 0%, #2f86d8 30%, #cfe6fa 50%, #2f86d8 72%, #1a4f96 100%);
+  padding: 30px 16px; }
+.cc-contact h2 { max-width: 1366px; margin: 0 auto; font-size: 22px; font-weight: 700; color: #0b1f45; }
+.cc-contact-body { background: #eceef0; padding: 26px 16px 34px; }
+.cc-contact-body__inner { max-width: 1366px; margin: 0 auto; font-size: 15px; line-height: 26px; font-weight: 700; color: #222; }
+.cc-notice { background: #fff; padding: 22px 16px 30px; text-align: center; }
+.cc-notice h3 { color: #c0392b; font-size: 17px; margin: 0 0 12px; }
+.cc-notice p { font-size: 12px; line-height: 19px; color: #444; max-width: 1340px; margin: 0 auto 10px; }
+
+@media (max-width: 980px) {
+  .cc-infobar__inner { grid-template-columns: 1fr; }
+  .cc-crest { width: 170px; height: 170px; }
+}

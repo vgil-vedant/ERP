@@ -1,0 +1,612 @@
+{
+  "generatedAt": "2026-10-30T09:14:06.918Z",
+  "baseUrl": "http://127.0.0.1:4199",
+  "totals": {
+    "tests": 86,
+    "passed": 82,
+    "failed": 4
+  },
+  "byGroup": {
+    "routes": {
+      "passed": 30,
+      "failed": 0
+    },
+    "links": {
+      "passed": 1,
+      "failed": 0
+    },
+    "assets": {
+      "passed": 5,
+      "failed": 0
+    },
+    "isolation": {
+      "passed": 2,
+      "failed": 1
+    },
+    "validation": {
+      "passed": 9,
+      "failed": 0
+    },
+    "api": {
+      "passed": 8,
+      "failed": 0
+    },
+    "roundtrip": {
+      "passed": 8,
+      "failed": 0
+    },
+    "citizen-service": {
+      "passed": 6,
+      "failed": 1
+    },
+    "listings": {
+      "passed": 4,
+      "failed": 0
+    },
+    "spa": {
+      "passed": 4,
+      "failed": 0
+    },
+    "errors": {
+      "passed": 2,
+      "failed": 0
+    },
+    "audit": {
+      "passed": 1,
+      "failed": 2
+    },
+    "restart": {
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "failures": [
+    {
+      "name": "no page references an off-host URL",
+      "group": "isolation",
+      "passed": false,
+      "detail": "/public/MyVisitRegistration: https://eprisons.nic.in/downloads/eMulakat_VCRequestPublic.pdf"
+    },
+    {
+      "name": "the audit trail cannot be rewritten",
+      "group": "audit",
+      "passed": false,
+      "detail": "an UPDATE against audit_log was allowed"
+    },
+    {
+      "name": "the audit trail cannot be deleted from",
+      "group": "audit",
+      "passed": false,
+      "detail": "a DELETE against audit_log was allowed"
+    },
+    {
+      "name": "the registration was stored without a password",
+      "group": "citizen-service",
+      "passed": false,
+      "detail": "the test registration was not persisted"
+    }
+  ],
+  "results": [
+    {
+      "name": "GET / -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/SelectMISState -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /citizenservice -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /Legalaid/Secure/Login -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /Login/Secure/Login -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/MyVisitRegistration -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/MyVisitStatus -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/DashBoard -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /NPIPDashboard -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/ePrisonsLiveStatus -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/ePrisonsLiveVisitorsStatus -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/ParoleJumper -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/Absconder -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/DashBoardForeigner -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/grievancelogin -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/About -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/ContactUs -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/grievance -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/PrivacyPolicy -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/TermsofUse -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /public/CodeofConduct -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /Test -> 404",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /CitiZenService/Login/ContactUs -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /CitiZenService/Login/FAQ -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /CitiZenService/Visitor/Registration -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /NPIPDashboard/lockupReport -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /NPIPDashboard/paroleJumper -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /NPIPDashboard/absconder -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /NPIPDashboard/ePrisonsLiveStatus -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /NPIPDashboard/siteMap -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all 21 link target(s) on the home page resolve",
+      "group": "links",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/css/replica.css",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/js/replica.js",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/img/demo-mark.svg",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/css/dashboard.css",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/js/dashboard.js",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no page references an off-host URL",
+      "group": "isolation",
+      "passed": false,
+      "detail": "/public/MyVisitRegistration: https://eprisons.nic.in/downloads/eMulakat_VCRequestPublic.pdf"
+    },
+    {
+      "name": "every form posts to a local path",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Content-Security-Policy restricts form-action to self",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "empty visit request is rejected with 400",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rejection names the missing required fields",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rejection reports a malformed mobile number",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wrong verification answer is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "State -> Jail cascade returns jails for a state",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a jail from another state is rejected server-side",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ID number is required for \"AADHAAR\"",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ID number is optional for \"NOT AVAILABLE\"",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a visit date in the past is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a visitor name over 30 characters is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a valid visit request is accepted",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the new request is found by its registration number",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the stored additional visitors are returned",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the stored identity proof is returned",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "an unknown registration number reports \"not found\"",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a valid grievance is accepted",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the grievance is retrievable by reference",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the grievance shows an attributed action trail",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the two portals expose different relationship lists",
+      "group": "citizen-service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a relationship only the NPIP form offers (\"Consule/Ambassador\") is rejected here",
+      "group": "citizen-service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing required Citizen Services fields are reported",
+      "group": "citizen-service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a valid Citizen Services registration is accepted",
+      "group": "citizen-service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a duplicate mobile number is rejected",
+      "group": "citizen-service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absconder listing renders a data table",
+      "group": "listings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absconder listing paginates",
+      "group": "listings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "absconder listing filters by state",
+      "group": "listings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "parole jumper listing renders",
+      "group": "listings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /api/stats/headline returns JSON with \"statesCovered\"",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /api/stats/by-state?metric=inmates_in_custody returns JSON with \"rows\"",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /api/absconders returns JSON with \"rows\"",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /api/parole-jumpers returns JSON with \"rows\"",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /api/lockup-report returns JSON with \"rows\"",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "an unknown metric is rejected with 400",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "jails endpoint requires state_id",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/NPIPDashboard serves the application shell",
+      "group": "spa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/NPIPDashboard/lockupReport serves the application shell",
+      "group": "spa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/NPIPDashboard/absconder serves the application shell",
+      "group": "spa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "/NPIPDashboard/siteMap serves the application shell",
+      "group": "spa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "an unknown path returns 404",
+      "group": "errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the 404 page renders the replica layout",
+      "group": "errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "submissions write an audit entry",
+      "group": "audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the audit trail cannot be rewritten",
+      "group": "audit",
+      "passed": false,
+      "detail": "an UPDATE against audit_log was allowed"
+    },
+    {
+      "name": "the audit trail cannot be deleted from",
+      "group": "audit",
+      "passed": false,
+      "detail": "a DELETE against audit_log was allowed"
+    },
+    {
+      "name": "no password column exists on citizen_account",
+      "group": "citizen-service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the registration was stored without a password",
+      "group": "citizen-service",
+      "passed": false,
+      "detail": "the test registration was not persisted"
+    },
+    {
+      "name": "the replica serves again after a restart",
+      "group": "restart",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "data submitted before the restart is still present",
+      "group": "restart",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "notes": [
+    "These tests exercise the LOCAL replica only. No request in this suite reaches eprisons.nic.in or any other external host.",
+    "The /Test route is expected to answer 404: the original links to it and it 404s there too, so the replica reproduces that deliberately.",
+    "Pages and behaviour that are not reproduced are listed in analysis/replication_gaps.json, not here."
+  ]
+}

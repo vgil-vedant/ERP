@@ -1,0 +1,17 @@
+{
+  "name": "eforensics_gov_in-replica",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Unofficial local demonstration replica of eforensics.gov.in",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "test": "node ../../tests/run-tests.js"
+  },
+  "dependencies": {
+    "express": "4.21.2",
+    "ejs": "3.1.10",
+    "better-sqlite3": "11.7.0"
+  }
+}

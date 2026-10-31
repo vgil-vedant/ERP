@@ -1,0 +1,4078 @@
+{
+  "url": "https://eprisons.nic.in/NPIP/public/ContactUs.aspx",
+  "finalUrl": "https://eprisons.nic.in/NPIP/public/ContactUs",
+  "redirected": true,
+  "slug": "npip_public_contactus.aspx",
+  "depth": 1,
+  "via": "https://eprisons.nic.in/NPIP/public/Home",
+  "httpStatus": 200,
+  "crawlStatus": "captured",
+  "title": "Welcome to National Prison Portal",
+  "lang": "en",
+  "charset": "UTF-8",
+  "description": "",
+  "keywords": "",
+  "headings": [
+    "FAQs",
+    "Q1. My visit is not approved or my pass status shows under process.",
+    "Q2. My Pass is approved but VC details not received.",
+    "Q3. Instructions for connecting VC",
+    "Q4. I am not able to connect to VC",
+    "Q5. Site not functional or error in website",
+    "Information",
+    "Contact Us"
+  ],
+  "headingTree": [
+    {
+      "level": 3,
+      "text": "FAQs"
+    },
+    {
+      "level": 3,
+      "text": "Q1. My visit is not approved or my pass status shows under process."
+    },
+    {
+      "level": 3,
+      "text": "Q2. My Pass is approved but VC details not received."
+    },
+    {
+      "level": 3,
+      "text": "Q3. Instructions for connecting VC"
+    },
+    {
+      "level": 3,
+      "text": "Q4. I am not able to connect to VC"
+    },
+    {
+      "level": 3,
+      "text": "Q5. Site not functional or error in website"
+    },
+    {
+      "level": 4,
+      "text": "Information"
+    },
+    {
+      "level": 4,
+      "text": "Contact Us"
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [
+    "ePrisons MIS",
+    "Citizen Service",
+    "Legal Aid",
+    "Other Stakeholders",
+    "eMulakat",
+    "eMulakat Status",
+    "DashBoard",
+    "Prisons Map",
+    "Reports",
+    "ePrisons Live",
+    "eMulakat Statistics",
+    "Parole Jumper",
+    "Absconder",
+    "Foreigner Prisoners",
+    "Grievance",
+    "About Us",
+    "Contact Us",
+    "Privacy Policy",
+    "Terms of Use",
+    "Code of Conduct"
+  ],
+  "text": "ePrisons MIS Citizen Service Legal Aid Other Stakeholders eMulakat eMulakat Status DashBoard Prisons Map Reports Grievance About Us Contact Us Contact Us FAQs Q1. My visit is not approved or my pass status shows under process. Ans. Pass is yet to be approved by the State Prison Department. Wait for the approval or contact the prison department directly. Select prison to get contact details State SELECT Prison SELECT NOTE: Pass approval / Status and VC date time are alloted by the State Prison Department / Prison for which visit is applied for. Please contact the respective department directly in case of such issue. Q2. My Pass is approved but VC details not received. Ans: Please check if the email entered in the visit request is correct. Check the registered email for approval mail. Verify Spam if mail is not found in Inbox. Q3. Instructions for connecting VC Ans: VC link along with approved time and steps to join the VC and pin is sent through approval email. Please check the same for details. Q4. I am not able to connect to VC Ans: Ensure good internet connection is available for video stream. Switch to audio only mode in case of slow response. Q5. Site not functional or error in website Ans: Please Contact: Please Contact ePrisons Support 011-24305000 Extension 63004/63005 or mail at 'support-eprisons[at]nic[dot]in' and register complaint. INFORMATION DashBoard eMulakat Grievance About us CONTACT US National Informatics Centre A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India Served From : NQ34EP2P-ePApp4 A Digital India Initiative by Government of India. Privacy Policy Terms of Use Code of Conduct Copyright © 2015 by NIC .All rights reserved.",
+  "textLength": 1691,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 1139
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 3,
+  "iframeCount": 0,
+  "htmlLength": 48344,
+  "forms": [
+    {
+      "index": 0,
+      "name": null,
+      "id": "frmMaster",
+      "selector": "#frmMaster",
+      "action": "https://eprisons.nic.in/NPIP/public/ContactUs",
+      "actionRaw": "./ContactUs",
+      "method": "post",
+      "enctype": null,
+      "target": null,
+      "heading": "FAQs",
+      "fieldCount": 12,
+      "fields": [
+        {
+          "tag": "select",
+          "type": "select",
+          "name": "ctl00$ContentPlaceHolder1$ddlState",
+          "id": "ContentPlaceHolder1_ddlState",
+          "selector": "#ContentPlaceHolder1_ddlState",
+          "label": "State",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": "SELECT",
+          "visible": false,
+          "replacedByWidget": true,
+          "functionalField": true,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": true,
+          "cssClasses": "chosen-select",
+          "multiple": false,
+          "options": [
+            {
+              "value": "SELECT",
+              "text": "SELECT",
+              "selected": true
+            },
+            {
+              "value": "26",
+              "text": "ANDAMAN & NICOBAR",
+              "selected": false
+            },
+            {
+              "value": "1",
+              "text": "ANDHRA PRADESH",
+              "selected": false
+            },
+            {
+              "value": "2",
+              "text": "ARUNACHAL PRADESH",
+              "selected": false
+            },
+            {
+              "value": "3",
+              "text": "ASSAM",
+              "selected": false
+            },
+            {
+              "value": "4",
+              "text": "BIHAR",
+              "selected": false
+            },
+            {
+              "value": "27",
+              "text": "CHANDIGARH",
+              "selected": false
+            },
+            {
+              "value": "33",
+              "text": "CHHATTISGARH",
+              "selected": false
+            },
+            {
+              "value": "28",
+              "text": "DADRA & NAGAR HAVELI AND DAMAN & DIU",
+              "selected": false
+            },
+            {
+              "value": "30",
+              "text": "DELHI",
+              "selected": false
+            },
+            {
+              "value": "5",
+              "text": "GOA",
+              "selected": false
+            },
+            {
+              "value": "6",
+              "text": "GUJARAT",
+              "selected": false
+            },
+            {
+              "value": "7",
+              "text": "HARYANA",
+              "selected": false
+            },
+            {
+              "value": "8",
+              "text": "HIMACHAL PRADESH",
+              "selected": false
+            },
+            {
+              "value": "9",
+              "text": "JAMMU & KASHMIR",
+              "selected": false
+            },
+            {
+              "value": "34",
+              "text": "JHARKHAND",
+              "selected": false
+            },
+            {
+              "value": "10",
+              "text": "KARNATAKA",
+              "selected": false
+            },
+            {
+              "value": "11",
+              "text": "KERALA",
+              "selected": false
+            },
+            {
+              "value": "37",
+              "text": "LADAKH",
+              "selected": false
+            },
+            {
+              "value": "31",
+              "text": "LAKSHADWEEP",
+              "selected": false
+            },
+            {
+              "value": "12",
+              "text": "MADHYA PRADESH",
+              "selected": false
+            },
+            {
+              "value": "13",
+              "text": "MAHARASHTRA",
+              "selected": false
+            },
+            {
+              "value": "14",
+              "text": "MANIPUR",
+              "selected": false
+            },
+            {
+              "value": "15",
+              "text": "MEGHALAYA",
+              "selected": false
+            },
+            {
+              "value": "16",
+              "text": "MIZORAM",
+              "selected": false
+            },
+            {
+              "value": "17",
+              "text": "NAGALAND",
+              "selected": false
+            },
+            {
+              "value": "18",
+              "text": "ORISSA",
+              "selected": false
+            },
+            {
+              "value": "32",
+              "text": "PUDUCHERRY",
+              "selected": false
+            },
+            {
+              "value": "19",
+              "text": "PUNJAB",
+              "selected": false
+            },
+            {
+              "value": "20",
+              "text": "RAJASTHAN",
+              "selected": false
+            },
+            {
+              "value": "21",
+              "text": "SIKKIM",
+              "selected": false
+            },
+            {
+              "value": "22",
+              "text": "TAMIL NADU",
+              "selected": false
+            },
+            {
+              "value": "36",
+              "text": "TELANGANA",
+              "selected": false
+            },
+            {
+              "value": "23",
+              "text": "TRIPURA",
+              "selected": false
+            },
+            {
+              "value": "24",
+              "text": "UTTAR PRADESH",
+              "selected": false
+            },
+            {
+              "value": "35",
+              "text": "UTTARAKHAND",
+              "selected": false
+            },
+            {
+              "value": "25",
+              "text": "WEST BENGAL",
+              "selected": false
+            }
+          ],
+          "optionCount": 37,
+          "looksDependent": false
+        },
+        {
+          "tag": "select",
+          "type": "select",
+          "name": "ctl00$ContentPlaceHolder1$ddlJail",
+          "id": "ContentPlaceHolder1_ddlJail",
+          "selector": "#ContentPlaceHolder1_ddlJail",
+          "label": "Prison",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": true,
+          "functionalField": true,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": true,
+          "cssClasses": "chosen-select",
+          "multiple": false,
+          "options": [],
+          "optionCount": 0,
+          "looksDependent": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "ctl00$ContentPlaceHolder1$txtVisitorName",
+          "id": "ContentPlaceHolder1_txtVisitorName",
+          "selector": "#ContentPlaceHolder1_txtVisitorName",
+          "label": "Name",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": 100,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "watermarked"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender2_ClientState",
+          "id": "ContentPlaceHolder1_TextBoxWatermarkExtender2_ClientState",
+          "selector": "#ContentPlaceHolder1_TextBoxWatermarkExtender2_ClientState",
+          "label": null,
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": null
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "ctl00$ContentPlaceHolder1$txtPhoneNo",
+          "id": "ContentPlaceHolder1_txtPhoneNo",
+          "selector": "#ContentPlaceHolder1_txtPhoneNo",
+          "label": "Mobile No",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": 24,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "watermarked"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender7_ClientState",
+          "id": "ContentPlaceHolder1_TextBoxWatermarkExtender7_ClientState",
+          "selector": "#ContentPlaceHolder1_TextBoxWatermarkExtender7_ClientState",
+          "label": null,
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": null
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "ctl00$ContentPlaceHolder1$txteMail",
+          "id": "ContentPlaceHolder1_txteMail",
+          "selector": "#ContentPlaceHolder1_txteMail",
+          "label": "Email ID",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": 50,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "watermarked"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender6_ClientState",
+          "id": "ContentPlaceHolder1_TextBoxWatermarkExtender6_ClientState",
+          "selector": "#ContentPlaceHolder1_TextBoxWatermarkExtender6_ClientState",
+          "label": null,
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": null
+        },
+        {
+          "tag": "select",
+          "type": "select",
+          "name": "ctl00$ContentPlaceHolder1$ddlIssue",
+          "id": "ContentPlaceHolder1_ddlIssue",
+          "selector": "#ContentPlaceHolder1_ddlIssue",
+          "label": "Issue Related To",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": "SELECT",
+          "visible": false,
+          "replacedByWidget": true,
+          "functionalField": true,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "chosen-select",
+          "multiple": false,
+          "options": [
+            {
+              "value": "SELECT",
+              "text": "SELECT",
+              "selected": false
+            },
+            {
+              "value": "1",
+              "text": "Ill treated by the prison authorities.",
+              "selected": false
+            },
+            {
+              "value": "2",
+              "text": "Basic facilities not provided inside prison.",
+              "selected": false
+            },
+            {
+              "value": "3",
+              "text": "Manhandling by co prisoners",
+              "selected": false
+            },
+            {
+              "value": "99",
+              "text": "Others",
+              "selected": false
+            }
+          ],
+          "optionCount": 5,
+          "looksDependent": false
+        },
+        {
+          "tag": "textarea",
+          "type": "textarea",
+          "name": "ctl00$ContentPlaceHolder1$txtMessage",
+          "id": "ContentPlaceHolder1_txtMessage",
+          "selector": "#ContentPlaceHolder1_txtMessage",
+          "label": "Message",
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": 250,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "watermarked",
+          "rows": 2,
+          "cols": 20
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender4_ClientState",
+          "id": "ContentPlaceHolder1_TextBoxWatermarkExtender4_ClientState",
+          "selector": "#ContentPlaceHolder1_TextBoxWatermarkExtender4_ClientState",
+          "label": null,
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": null
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "ctl00$ContentPlaceHolder1$txtCaptchaEntered",
+          "id": "ContentPlaceHolder1_txtCaptchaEntered",
+          "selector": "#ContentPlaceHolder1_txtCaptchaEntered",
+          "label": null,
+          "placeholder": null,
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": 6,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": null,
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": null
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": null,
+          "selector": "#frmMaster > header.header_bg > div.container > nav.navbar.navbar-expand-lg > button.navbar-toggler",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": null,
+          "name": null,
+          "id": "ContentPlaceHolder1_Button1",
+          "text": "Q1. My visit is not approved or my pass status shows under process.",
+          "selector": "#ContentPlaceHolder1_Button1",
+          "box": {
+            "x": 101,
+            "y": 246,
+            "w": 1163,
+            "h": 38
+          },
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": null,
+          "name": null,
+          "id": null,
+          "text": "Q2. My Pass is approved but VC details not received.",
+          "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(2) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+          "box": {
+            "x": 101,
+            "y": 600,
+            "w": 1163,
+            "h": 38
+          },
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": null,
+          "name": null,
+          "id": null,
+          "text": "Q3. Instructions for connecting VC",
+          "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(3) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+          "box": {
+            "x": 101,
+            "y": 662,
+            "w": 1163,
+            "h": 38
+          },
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": null,
+          "name": null,
+          "id": null,
+          "text": "Q4. I am not able to connect to VC",
+          "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(4) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+          "box": {
+            "x": 101,
+            "y": 724,
+            "w": 1163,
+            "h": 38
+          },
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": null,
+          "name": null,
+          "id": null,
+          "text": "Q5. Site not functional or error in website",
+          "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(5) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+          "box": {
+            "x": 101,
+            "y": 786,
+            "w": 1163,
+            "h": 38
+          },
+          "hasOnClick": false
+        },
+        {
+          "tag": "input",
+          "type": "submit",
+          "name": "ctl00$ContentPlaceHolder1$btnSubmit",
+          "id": "ContentPlaceHolder1_btnSubmit",
+          "text": "Send",
+          "selector": "#ContentPlaceHolder1_btnSubmit",
+          "box": null,
+          "hasOnClick": true
+        }
+      ],
+      "hiddenMachinery": [
+        "__EVENTTARGET",
+        "__EVENTARGUMENT",
+        "__LASTFOCUS",
+        "__VIEWSTATE",
+        "__VIEWSTATEGENERATOR",
+        "__EVENTVALIDATION",
+        "ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender2_ClientState",
+        "ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender7_ClientState",
+        "ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender6_ClientState",
+        "ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender4_ClientState"
+      ],
+      "hasCaptcha": true,
+      "hasFileInput": false,
+      "visibleText": "//<![CDATA[ var theForm = document.forms['frmMaster']; if (!theForm) { theForm = document.frmMaster; } function __doPostBack(eventTarget, eventArgument) { if (!theForm.onsubmit || (theForm.onsubmit() != false)) { theForm.__EVENTTARGET.value = eventTarget; theForm.__EVENTARGUMENT.value = eventArgument; theForm.submit(); } } //]]> //<![CDATA[ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.'); //]]> //<![CDATA[ function WebForm_OnSubmit() { null;if (typeof(ValidatorOnSubmit) == \"function\" && ValidatorOnSubmit() == false) return false; return tr",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 1139
+      }
+    }
+  ],
+  "orphanControls": [],
+  "tables": [],
+  "components": [
+    {
+      "type": "header",
+      "selector": "#frmMaster > header.header_bg",
+      "tag": "header",
+      "classes": "header_bg",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 40,
+        "w": 1366,
+        "h": 76
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "15px 0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "header",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(1) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 246,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q1. My visit is not approved or my pass status shows under process.",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "header",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(2) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 600,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q2. My Pass is approved but VC details not received.",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "header",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(3) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 662,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q3. Instructions for connecting VC",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "header",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(4) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 724,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q4. I am not able to connect to VC",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "header",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(5) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 786,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q5. Site not functional or error in website",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#frmMaster > footer.footer.mt-auto",
+      "tag": "footer",
+      "classes": "footer mt-auto footer_bg",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 941,
+        "w": 1366,
+        "h": 198
+      },
+      "text": "Information DashBoard eMulakat Grievance About us Contact Us National Informatics Centre A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India . Served From : NQ34EP2P-ePApp4 ",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(59, 67, 72)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "15px 0px 0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "footer.footer.mt-auto > div.container:nth-of-type(1) > div.row > div.col-xs-12.col-md-5:nth-of-type(1) > div.footer-middle.border_right",
+      "tag": "div",
+      "classes": "footer-middle border_right pb-4",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 956,
+        "w": 488,
+        "h": 125
+      },
+      "text": "Information DashBoard eMulakat Grievance About us",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 24px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "footer.footer.mt-auto > div.container:nth-of-type(1) > div.row > div.col-xs-12.col-md-5:nth-of-type(2) > div.footer-middle.border_right",
+      "tag": "div",
+      "classes": "footer-middle border_right",
+      "id": null,
+      "box": {
+        "x": 593,
+        "y": 956,
+        "w": 488,
+        "h": 111
+      },
+      "text": "Contact Us National Informatics Centre A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 15px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#frmMaster > footer.footer.mt-auto > div.footer-bottom:nth-of-type(2)",
+      "tag": "div",
+      "classes": "footer-bottom",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 1081,
+        "w": 1366,
+        "h": 58
+      },
+      "text": "A Digital India Initiative by Government of India. Privacy Policy Terms of Use Code of Conduct Copyright © 2015 by NIC .All rights reserved.",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "10px 0px 0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "div.footer-bottom:nth-of-type(2) > div.container > div.row > div.col-xs-12.col-sm-3:nth-of-type(1) > div.footer_text",
+      "tag": "div",
+      "classes": "footer_text",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 1092,
+        "w": 283,
+        "h": 23
+      },
+      "text": "A Digital India Initiative by Government of India.",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "5px 0px 0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "div.footer-bottom:nth-of-type(2) > div.container > div.row > div.col-xs-12.col-sm-3:nth-of-type(2) > div.footer_text",
+      "tag": "div",
+      "classes": "footer_text",
+      "id": null,
+      "box": {
+        "x": 388,
+        "y": 1092,
+        "w": 591,
+        "h": 28
+      },
+      "text": "Privacy Policy Terms of Use Code of Conduct",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "div.container > div.row > div.col-xs-12.col-sm-3:nth-of-type(2) > div.footer_text > ul.footer_nav",
+      "tag": "ul",
+      "classes": "footer_nav",
+      "id": null,
+      "box": {
+        "x": 388,
+        "y": 1092,
+        "w": 591,
+        "h": 28
+      },
+      "text": "Privacy Policy Terms of Use Code of Conduct",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "div.footer-bottom:nth-of-type(2) > div.container > div.row > div.col-xs-12.col-sm-3:nth-of-type(3) > div.footer_text.powered_by",
+      "tag": "div",
+      "classes": "footer_text powered_by float-end",
+      "id": null,
+      "box": {
+        "x": 1002,
+        "y": 1092,
+        "w": 283,
+        "h": 47
+      },
+      "text": "Copyright © 2015 by NIC .All rights reserved.",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#frmMaster > header.header_bg > div.container > nav.navbar.navbar-expand-lg",
+      "tag": "nav",
+      "classes": "navbar navbar-expand-lg",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 55,
+        "w": 1205,
+        "h": 46
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 1px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#frmMaster > header.header_bg > div.container > nav.navbar.navbar-expand-lg > a.navbar-brand",
+      "tag": "a",
+      "classes": "navbar-brand",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 55,
+        "w": 276,
+        "h": 45
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "5px 0px",
+        "margin": "0px 16px 0px 0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#navbarSupportedContent",
+      "tag": "div",
+      "classes": "collapse navbar-collapse",
+      "id": "navbarSupportedContent",
+      "box": {
+        "x": 372,
+        "y": 59,
+        "w": 913,
+        "h": 37
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#navbarSupportedContent > ul.navbar-nav.ms-auto",
+      "tag": "ul",
+      "classes": "navbar-nav ms-auto",
+      "id": null,
+      "box": {
+        "x": 443,
+        "y": 59,
+        "w": 843,
+        "h": 37
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 8,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px 0px 70.4062px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "form",
+      "selector": "#frmMaster",
+      "tag": "form",
+      "classes": null,
+      "id": "frmMaster",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 1139
+      },
+      "text": "//<![CDATA[ var theForm = document.forms['frmMaster']; if (!theForm) { theForm = document.frmMaster; } function __doPostBack(eventTarget, eventArgument) { if (!theForm.onsubmit || ",
+      "childCount": 21,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.container:nth-of-type(2) > div.row > div.col > div.panel-default > div.panel-heading:nth-of-type(1)",
+      "tag": "div",
+      "classes": "panel-heading",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 182,
+        "w": 1205,
+        "h": 43
+      },
+      "text": "FAQs",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(245, 245, 245)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.row > div.col > div.panel-default > div.panel-heading:nth-of-type(1) > h3.panel-title.text-center",
+      "tag": "h3",
+      "classes": "panel-title text-center signup_titel",
+      "id": null,
+      "box": {
+        "x": 81,
+        "y": 183,
+        "w": 1203,
+        "h": 42
+      },
+      "text": "FAQs",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "18px",
+        "fontWeight": "700",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "10px 15px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 246,
+        "w": 1163,
+        "h": 354
+      },
+      "text": "Q1. My visit is not approved or my pass status shows under process. Ans. Pass is yet to be approved by the State Prison Department. Wait for the approval or contact the prison depa",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(1) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 246,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q1. My visit is not approved or my pass status shows under process.",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "#ContentPlaceHolder1_Button1",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": "ContentPlaceHolder1_Button1",
+      "box": {
+        "x": 101,
+        "y": 246,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q1. My visit is not approved or my pass status shows under process.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "#ContentPlaceHolder1_Button1 > h3.box-title.pull-left",
+      "tag": "h3",
+      "classes": "box-title pull-left",
+      "id": null,
+      "box": {
+        "x": 114,
+        "y": 254,
+        "w": 1137,
+        "h": 20
+      },
+      "text": "Q1. My visit is not approved or my pass status shows under process.",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "17px",
+        "fontWeight": "500",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(1) > div.box-body:nth-of-type(2)",
+      "tag": "div",
+      "classes": "box-body",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 284,
+        "w": 1163,
+        "h": 316
+      },
+      "text": "Ans. Pass is yet to be approved by the State Prison Department. Wait for the approval or contact the prison department directly. Select prison to get contact details State SELECT A",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "#ContentPlaceHolder1_LocationUpdatePanel > div.row:nth-of-type(1) > h6.panel-title.text-left",
+      "tag": "h6",
+      "classes": "panel-title text-left signup_titel",
+      "id": null,
+      "box": {
+        "x": 127,
+        "y": 308,
+        "w": 754,
+        "h": 39
+      },
+      "text": "Select prison to get contact details",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "10px 15px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(2)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 600,
+        "w": 1163,
+        "h": 62
+      },
+      "text": "Q2. My Pass is approved but VC details not received. Ans: Please check if the email entered in the visit request is correct. Check the registered email for approval mail. Verify Sp",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(2) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 600,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q2. My Pass is approved but VC details not received.",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(2) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 600,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q2. My Pass is approved but VC details not received.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div:nth-of-type(1) > div.box.box-default:nth-of-type(2) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool > h3.box-title.pull-left",
+      "tag": "h3",
+      "classes": "box-title pull-left",
+      "id": null,
+      "box": {
+        "x": 114,
+        "y": 609,
+        "w": 1137,
+        "h": 20
+      },
+      "text": "Q2. My Pass is approved but VC details not received.",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "17px",
+        "fontWeight": "500",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(2) > div.box-body:nth-of-type(2)",
+      "tag": "div",
+      "classes": "box-body",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 638,
+        "w": 1163,
+        "h": 24
+      },
+      "text": "Ans: Please check if the email entered in the visit request is correct. Check the registered email for approval mail. Verify Spam if mail is not found in Inbox.",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(3)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 662,
+        "w": 1163,
+        "h": 62
+      },
+      "text": "Q3. Instructions for connecting VC Ans: VC link along with approved time and steps to join the VC and pin is sent through approval email. Please check the same for details.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(3) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 662,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q3. Instructions for connecting VC",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(3) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 662,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q3. Instructions for connecting VC",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div:nth-of-type(1) > div.box.box-default:nth-of-type(3) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool > h3.box-title.pull-left",
+      "tag": "h3",
+      "classes": "box-title pull-left",
+      "id": null,
+      "box": {
+        "x": 114,
+        "y": 671,
+        "w": 1137,
+        "h": 20
+      },
+      "text": "Q3. Instructions for connecting VC",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "17px",
+        "fontWeight": "500",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(3) > div.box-body:nth-of-type(2)",
+      "tag": "div",
+      "classes": "box-body",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 700,
+        "w": 1163,
+        "h": 24
+      },
+      "text": "Ans: VC link along with approved time and steps to join the VC and pin is sent through approval email. Please check the same for details.",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(4)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 724,
+        "w": 1163,
+        "h": 62
+      },
+      "text": "Q4. I am not able to connect to VC Ans: Ensure good internet connection is available for video stream. Switch to audio only mode in case of slow response.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(4) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 724,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q4. I am not able to connect to VC",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(4) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 724,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q4. I am not able to connect to VC",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div:nth-of-type(1) > div.box.box-default:nth-of-type(4) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool > h3.box-title.pull-left",
+      "tag": "h3",
+      "classes": "box-title pull-left",
+      "id": null,
+      "box": {
+        "x": 114,
+        "y": 733,
+        "w": 1137,
+        "h": 20
+      },
+      "text": "Q4. I am not able to connect to VC",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "17px",
+        "fontWeight": "500",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(4) > div.box-body:nth-of-type(2)",
+      "tag": "div",
+      "classes": "box-body",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 762,
+        "w": 1163,
+        "h": 24
+      },
+      "text": "Ans: Ensure good internet connection is available for video stream. Switch to audio only mode in case of slow response.",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(5)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 786,
+        "w": 1163,
+        "h": 89
+      },
+      "text": "Q5. Site not functional or error in website Ans: Please Contact: Please Contact ePrisons Support 011-24305000 Extension 63004/63005 or mail at 'support-eprisons[at]nic[dot]in' and ",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(5) > div.box-header.with-border:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box-header with-border",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 786,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q5. Site not functional or error in website",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(5) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 786,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q5. Site not functional or error in website",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div:nth-of-type(1) > div.box.box-default:nth-of-type(5) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool > h3.box-title.pull-left",
+      "tag": "h3",
+      "classes": "box-title pull-left",
+      "id": null,
+      "box": {
+        "x": 114,
+        "y": 795,
+        "w": 1137,
+        "h": 20
+      },
+      "text": "Q5. Site not functional or error in website",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "17px",
+        "fontWeight": "500",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(5) > div.box-body:nth-of-type(2)",
+      "tag": "div",
+      "classes": "box-body",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 824,
+        "w": 1163,
+        "h": 51
+      },
+      "text": "Ans: Please Contact: Please Contact ePrisons Support 011-24305000 Extension 63004/63005 or mail at 'support-eprisons[at]nic[dot]in' and register complaint.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "#navbarSupportedContent",
+      "tag": "div",
+      "classes": "collapse navbar-collapse",
+      "id": "navbarSupportedContent",
+      "box": {
+        "x": 372,
+        "y": 59,
+        "w": 913,
+        "h": 37
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(1)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 246,
+        "w": 1163,
+        "h": 354
+      },
+      "text": "Q1. My visit is not approved or my pass status shows under process. Ans. Pass is yet to be approved by the State Prison Department. Wait for the approval or contact the prison depa",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(2)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 600,
+        "w": 1163,
+        "h": 62
+      },
+      "text": "Q2. My Pass is approved but VC details not received. Ans: Please check if the email entered in the visit request is correct. Check the registered email for approval mail. Verify Sp",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(3)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 662,
+        "w": 1163,
+        "h": 62
+      },
+      "text": "Q3. Instructions for connecting VC Ans: VC link along with approved time and steps to join the VC and pin is sent through approval email. Please check the same for details.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(4)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 724,
+        "w": 1163,
+        "h": 62
+      },
+      "text": "Q4. I am not able to connect to VC Ans: Ensure good internet connection is available for video stream. Switch to audio only mode in case of slow response.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "div.col > div.panel-default > div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(5)",
+      "tag": "div",
+      "classes": "box box-default collapsed-box box-solid",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 786,
+        "w": 1163,
+        "h": 89
+      },
+      "text": "Q5. Site not functional or error in website Ans: Please Contact: Please Contact ePrisons Support 011-24305000 Extension 63004/63005 or mail at 'support-eprisons[at]nic[dot]in' and ",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "map",
+      "selector": "#lieprisonsmap",
+      "tag": "li",
+      "classes": "nav-item",
+      "id": "lieprisonsmap",
+      "box": {
+        "x": 783,
+        "y": 59,
+        "w": 116,
+        "h": 37
+      },
+      "text": "Prisons Map",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "list-item",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(1) > div.row > div.col-xs-12.col-md-5:nth-of-type(1) > div.footer-middle.border_right > ul.links",
+      "tag": "ul",
+      "classes": "links",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 983,
+        "w": 487,
+        "h": 74
+      },
+      "text": "DashBoard eMulakat Grievance About us",
+      "childCount": 4,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(1) > div.row > div.col-xs-12.col-md-5:nth-of-type(2) > div.footer-middle.border_right > ul.contacts-info",
+      "tag": "ul",
+      "classes": "contacts-info",
+      "id": null,
+      "box": {
+        "x": 593,
+        "y": 983,
+        "w": 487,
+        "h": 69
+      },
+      "text": "National Informatics Centre A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#lireports > a.nav-link.dropdown-toggle",
+      "tag": "a",
+      "classes": "nav-link dropdown-toggle",
+      "id": null,
+      "box": {
+        "x": 899,
+        "y": 59,
+        "w": 94,
+        "h": 37
+      },
+      "text": "Reports",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "18px",
+        "fontWeight": "500",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#ContentPlaceHolder1_Button1",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": "ContentPlaceHolder1_Button1",
+      "box": {
+        "x": 101,
+        "y": 246,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q1. My visit is not approved or my pass status shows under process.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(2) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 600,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q2. My Pass is approved but VC details not received.",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(3) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 662,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q3. Instructions for connecting VC",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(4) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 724,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q4. I am not able to connect to VC",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.boder:nth-of-type(2) > div:nth-of-type(1) > div.box.box-default:nth-of-type(5) > div.box-header.with-border:nth-of-type(1) > button.btn.btn-box-tool",
+      "tag": "button",
+      "classes": "btn btn-box-tool",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 786,
+        "w": 1163,
+        "h": 38
+      },
+      "text": "Q5. Site not functional or error in website",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "6px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "4px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/logo.png",
+      "category": "images",
+      "alt": "",
+      "natural": {
+        "w": 276,
+        "h": 35
+      },
+      "rendered": {
+        "x": 80,
+        "y": 60,
+        "w": 276,
+        "h": 35
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/captcha.aspx",
+      "category": "images",
+      "alt": "",
+      "natural": {
+        "w": 120,
+        "h": 40
+      },
+      "rendered": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/nic_logo.png",
+      "category": "images",
+      "alt": "",
+      "natural": {
+        "w": 147,
+        "h": 29
+      },
+      "rendered": {
+        "x": 1002,
+        "y": 1110,
+        "w": 147,
+        "h": 29
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/favicon-16x16.png",
+      "category": "icons",
+      "rel": "icon",
+      "sizes": "16x16"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/bootstrap.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/custom_style.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/hover.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/ionicons.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/bootstrap-icons.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/jquery-min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/popper.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/bootstrap.bundle.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/chosen.jquery.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&t=639191031332169432",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhi5Ro_kZNYS25EW_-qnjE5td612Pg4yCmsppNjMlNOHA4TSyGjtSLiyLTXkCyrtWwy-ujq0l5_KQ4GDLT3w0kibGJju8sT5LgicObPHlBdtGGZfZ8yq_yskXKhwPJrvIrA2&t=ffffffffa5405632",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG0OUrYMiDnAtHQCFUaz0W--4WPMIG0lL9lnbwIsliZ0&t=3a1336b1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5VxFYOE_qs64fwvKe7dRnAlwJ4-ZR1AkMZ6VKiLePy3DznNeeSqdI8JPLK7hW1Eg2&t=3a1336b1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=HOXFl7MMm1dB63GFuHwdy7hKT295ZpJfY9C8S6dS-Awoi6zMOOUCNPhLhy0dv8hUF3q68d2fADyG_yOdXeyKDeEq8G7GfjmHPb4qDlAHlGX56Ws-FEAPMKn8uM3c7v530&t=3a1336b1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=OAE9ClUEcsgee1-mWvA7NsrSW-wmHfDngocZs0t4qi8zIgUemaHOgwlSk6xj_4vlGE0yPUf_Fnc1kxAdGg4E9SIzC3NQIVUeSDUbO7gEAtbKLiJVVsLCgLShEIj_MeVGWi_26-89KoocGgiDwG_Hiw2&t=3a1336b1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=5VssjZ0dMt582Pyf4GR9qUd-dxPDaDivdJ6kl9OIrkFtYvcj0Wdc4jHD5n0L8TX_ik5tL8EN4cu_bQ7dTZ233ESg-TYMVgPow7OGpCch8dVgoYpsf4iFntjWh2gRmoW1UtqbcrQ6YSkyRqybpjJRvQ2&t=3a1336b1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=IC8faVwqHcU587-O5lvWFOEQ_WcmUUDPm8PWSWmuUZKfAxr7t5m8s1sl7bAQiVbEr8Yqkq2FbTznMtN3qhCX5282SpmOZteJRoWvxEMrn-vormdvIJuIHOZIxfTkIRwUFSpCpfpTwAn0kgzxolAW3Epg6wxP_trFrk-3aysHwao1&t=3a1336b1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/crypto.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/dist/js/app.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen-sprite.png",
+      "category": "images",
+      "fromCss": true,
+      "selector": "#ContentPlaceHolder1_ddlState_chosen > a.chosen-single.chosen-default > div > b"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen-sprite.png",
+      "category": "images",
+      "fromCss": true,
+      "selector": "#ContentPlaceHolder1_ddlState_chosen > div.chosen-drop > div.chosen-search > input"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen-sprite.png",
+      "category": "images",
+      "fromCss": true,
+      "selector": "#ContentPlaceHolder1_ddlJail_chosen > a.chosen-single.chosen-default > div > b"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen-sprite.png",
+      "category": "images",
+      "fromCss": true,
+      "selector": "#ContentPlaceHolder1_ddlJail_chosen > div.chosen-drop > div.chosen-search > input"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen-sprite.png",
+      "category": "images",
+      "fromCss": true,
+      "selector": "#ContentPlaceHolder1_ddlIssue_chosen > a.chosen-single.chosen-default > div > b"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen-sprite.png",
+      "category": "images",
+      "fromCss": true,
+      "selector": "#ContentPlaceHolder1_ddlIssue_chosen > div.chosen-drop > div.chosen-search > input"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/SelectMISState.aspx",
+      "raw": "SelectMISState.aspx",
+      "text": "ePrisons MIS",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/citizenservice/",
+      "raw": "https://eprisons.nic.in/citizenservice/",
+      "text": "Citizen Service",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "raw": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "text": "Legal Aid",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://eprisons.nic.in/Login",
+      "raw": "https://eprisons.nic.in/Login",
+      "text": "Other Stakeholders",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/Home.aspx",
+      "raw": "Home.aspx",
+      "text": "",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/MyVisitRegistration.aspx",
+      "raw": "MyVisitRegistration.aspx",
+      "text": "eMulakat",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/MyVisitStatus.aspx",
+      "raw": "MyVisitStatus.aspx",
+      "text": "eMulakat Status",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/DashBoard.aspx",
+      "raw": "DashBoard.aspx",
+      "text": "DashBoard",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard",
+      "raw": "https://eprisons.nic.in/NPIPDashboard",
+      "text": "Prisons Map",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "Reports",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus.aspx",
+      "raw": "ePrisonsLiveStatus.aspx",
+      "text": "ePrisons Live",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus.aspx",
+      "raw": "ePrisonsLiveVisitorsStatus.aspx",
+      "text": "eMulakat Statistics",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ParoleJumper.aspx",
+      "raw": "ParoleJumper.aspx",
+      "text": "Parole Jumper",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/Absconder.aspx",
+      "raw": "Absconder.aspx",
+      "text": "Absconder",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/DashBoardForeigner.aspx",
+      "raw": "DashBoardForeigner.aspx",
+      "text": "Foreigner Prisoners",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/grievancelogin.aspx",
+      "raw": "grievancelogin.aspx",
+      "text": "Grievance",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/About.aspx",
+      "raw": "About.aspx",
+      "text": "About Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ContactUs.aspx",
+      "raw": "ContactUs.aspx",
+      "text": "Contact Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/DashBoard.aspx",
+      "raw": "DashBoard.aspx",
+      "text": "DashBoard",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/MyVisitRegistration.aspx",
+      "raw": "MyVisitRegistration.aspx",
+      "text": "eMulakat",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/grievance.aspx",
+      "raw": "grievance.aspx",
+      "text": "Grievance",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/About.aspx",
+      "raw": "About.aspx",
+      "text": "About us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ContactUs.aspx",
+      "raw": "ContactUs.aspx",
+      "text": "Contact Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/PrivacyPolicy.aspx",
+      "raw": "PrivacyPolicy.aspx",
+      "text": "Privacy Policy",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/TermsofUse.aspx",
+      "raw": "TermsofUse.aspx",
+      "text": "Terms of Use",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/CodeofConduct.aspx",
+      "raw": "CodeofConduct.aspx",
+      "text": "Code of Conduct",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "",
+      "kind": "non-navigational",
+      "target": null
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "Arial, Helvetica, sans-serif",
+      "count": 123
+    },
+    {
+      "value": "sans-serif",
+      "count": 2
+    },
+    {
+      "value": "Arial",
+      "count": 1
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(51, 51, 51)",
+        "count": 112
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 16
+      },
+      {
+        "value": "rgb(33, 37, 41)",
+        "count": 15
+      },
+      {
+        "value": "rgb(170, 170, 170)",
+        "count": 10
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 9
+      },
+      {
+        "value": "rgb(153, 153, 153)",
+        "count": 8
+      },
+      {
+        "value": "rgb(204, 204, 204)",
+        "count": 3
+      },
+      {
+        "value": "rgb(120, 159, 191)",
+        "count": 3
+      },
+      {
+        "value": "rgb(68, 68, 68)",
+        "count": 2
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 8
+      },
+      {
+        "value": "rgb(250, 250, 250)",
+        "count": 4
+      },
+      {
+        "value": "rgb(61, 69, 72)",
+        "count": 1
+      },
+      {
+        "value": "rgb(87, 142, 190)",
+        "count": 1
+      },
+      {
+        "value": "rgb(245, 245, 245)",
+        "count": 1
+      },
+      {
+        "value": "rgb(59, 67, 72)",
+        "count": 1
+      }
+    ]
+  },
+  "bodyStyle": {
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "18px",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgb(255, 255, 255)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": [
+      "jQuery",
+      "$",
+      "bootstrap",
+      "WebForm_DoPostBackWithOptions",
+      "Sys",
+      "__doPostBack"
+    ]
+  },
+  "responseHeaders": {
+    "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+    "cache-control": "private",
+    "content-length": "47984",
+    "content-security-policy": "object-src 'none'",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 26 Oct 2026 11:45:31 GMT",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN, DENY",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/ContactUs.aspx",
+      "method": "GET",
+      "status": 301,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "139",
+        "content-security-policy": "object-src 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 11:45:30 GMT",
+        "location": "/NPIP/public/ContactUs",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN, DENY",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/ContactUs",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "cache-control": "private",
+        "content-length": "47984",
+        "content-security-policy": "object-src 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 11:45:31 GMT",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN, DENY",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/bootstrap.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"d4e01268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "317840",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/custom_style.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"e1a3347ddb57dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "34031",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Fri, 09 Oct 2026 10:46:50 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/hover.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"2cb20268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "134107",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/ionicons.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"97a221268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "51295",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/bootstrap-icons.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"177eff258a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "62144",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/jquery-min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"1fe59278a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "95067",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:38 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/popper.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"cc8214278a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "20101",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:38 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/bootstrap.bundle.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"1ce6ec268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "92422",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/chosen.jquery.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"40cbee268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "53089",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"dbf1a268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "10486",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&t=639191031332169432",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/x-javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/x-javascript",
+        "last-modified": "Wed, 08 Jul 2026 04:55:33 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhi5Ro_kZNYS25EW_-qnjE5td612Pg4yCmsppNjMlNOHA4TSyGjtSLiyLTXkCyrtWwy-ujq0l5_KQ4GDLT3w0kibGJju8sT5LgicObPHlBdtGGZfZ8yq_yskXKhwPJrvIrA2&t=ffffffffa5405632",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/x-javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:44:18 GMT",
+        "content-type": "application/x-javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG0OUrYMiDnAtHQCFUaz0W--4WPMIG0lL9lnbwIsliZ0&t=3a1336b1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/x-javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/x-javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5VxFYOE_qs64fwvKe7dRnAlwJ4-ZR1AkMZ6VKiLePy3DznNeeSqdI8JPLK7hW1Eg2&t=3a1336b1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/x-javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/x-javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=HOXFl7MMm1dB63GFuHwdy7hKT295ZpJfY9C8S6dS-Awoi6zMOOUCNPhLhy0dv8hUF3q68d2fADyG_yOdXeyKDeEq8G7GfjmHPb4qDlAHlGX56Ws-FEAPMKn8uM3c7v530&t=3a1336b1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:44:18 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=OAE9ClUEcsgee1-mWvA7NsrSW-wmHfDngocZs0t4qi8zIgUemaHOgwlSk6xj_4vlGE0yPUf_Fnc1kxAdGg4E9SIzC3NQIVUeSDUbO7gEAtbKLiJVVsLCgLShEIj_MeVGWi_26-89KoocGgiDwG_Hiw2&t=3a1336b1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:44:18 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=5VssjZ0dMt582Pyf4GR9qUd-dxPDaDivdJ6kl9OIrkFtYvcj0Wdc4jHD5n0L8TX_ik5tL8EN4cu_bQ7dTZ233ESg-TYMVgPow7OGpCch8dVgoYpsf4iFntjWh2gRmoW1UtqbcrQ6YSkyRqybpjJRvQ2&t=3a1336b1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:44:18 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=IC8faVwqHcU587-O5lvWFOEQ_WcmUUDPm8PWSWmuUZKfAxr7t5m8s1sl7bAQiVbEr8Yqkq2FbTznMtN3qhCX5282SpmOZteJRoWvxEMrn-vormdvIJuIHOZIxfTkIRwUFSpCpfpTwAn0kgzxolAW3Epg6wxP_trFrk-3aysHwao1&t=3a1336b1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:44:18 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"4c989268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "2459",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "image/png",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/nic_logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"bec099268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "4826",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "image/png",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/login-icon-b.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"24c786268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "16664",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "image/png",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/crypto.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"18af6268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "13395",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:38 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/dist/js/app.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"a6a332268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "6231",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/captcha.aspx",
+      "method": "GET",
+      "status": 301,
+      "resourceType": "image",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "location": "/NPIP/public/captcha",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "137",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:45:31 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen-sprite.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"4e656268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "538",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:53 GMT",
+        "content-type": "image/png",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/fonts/bootstrap-icons.woff?4601c71fb26c9277391ec80789bfde9c",
+      "method": "GET",
+      "status": 404,
+      "resourceType": "font",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "103",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:45:31 GMT",
+        "content-type": "text/html",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/captcha",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/GIF; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "private",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "2297",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:45:31 GMT",
+        "content-type": "image/GIF; charset=utf-8",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/fonts/bootstrap-icons.woff2?4601c71fb26c9277391ec80789bfde9c",
+      "method": "GET",
+      "status": 404,
+      "resourceType": "font",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "103",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:45:31 GMT",
+        "content-type": "text/html",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/npip_public_contactus.aspx.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/npip_public_contactus.aspx.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/npip_public_contactus.aspx.tablet.png",
+    "mobile": "reference_pages/screenshots/npip_public_contactus.aspx.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1212
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-26T11:45:36.563Z",
+  "pageType": "contact"
+}

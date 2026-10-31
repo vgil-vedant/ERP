@@ -1,0 +1,384 @@
+{
+  "port": 4175,
+  "site": {
+    "name": ":::CCTNS:::",
+    "hostname": "www.digitalpolicecitizenservices.gov.in",
+    "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+    "category": "CCTNS",
+    "categoryStatus": "confirmed",
+    "categoryConfidence": "medium",
+    "analysedOn": "2026-10-27",
+    "pagesCaptured": 3,
+    "formCount": 5,
+    "fieldCount": 14,
+    "assetCount": 41
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Government of India, Minis",
+      "href": "/feedback.htm"
+    },
+    {
+      "label": ":::CCTNS:::",
+      "href": "/login.htm"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "title": ":::CCTNS:::",
+      "pageTitle": null,
+      "heading": ":::CCTNS:::",
+      "pageType": "home",
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "forms": [],
+      "tables": [],
+      "outline": [],
+      "structureNote": null,
+      "noContentNote": "The original's landing page redirected elsewhere; this index lists the routes that were captured."
+    },
+    {
+      "route": "/login.htm",
+      "title": ":::CCTNS:::",
+      "pageTitle": ":::CCTNS:::",
+      "heading": ":::CCTNS:::",
+      "pageType": "login",
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "forms": [
+        {
+          "id": "centercitizen_login.htm_form0",
+          "heading": ":::CCTNS:::",
+          "submitLabel": "ओटीपी भेजें / Send OTP",
+          "referencePrefix": "DEMO",
+          "fields": [
+            {
+              "name": "username",
+              "originalName": "username",
+              "label": "username",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 10,
+              "pattern": null,
+              "options": null,
+              "wide": false,
+              "maybeCascadeParent": true
+            },
+            {
+              "name": "password",
+              "originalName": "password",
+              "label": "password",
+              "type": "password",
+              "inputType": "password",
+              "required": false,
+              "maxLength": 6,
+              "pattern": null,
+              "options": null,
+              "wide": false,
+              "maybeCascadeParent": true
+            },
+            {
+              "name": "firstname",
+              "originalName": "firstName",
+              "label": "first Name",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 100,
+              "pattern": null,
+              "options": null,
+              "wide": false,
+              "maybeCascadeParent": true
+            },
+            {
+              "name": "answercentercitizen",
+              "originalName": "answerCenterCitizen",
+              "label": "answer Center Citizen",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": null,
+              "pattern": null,
+              "options": null,
+              "wide": null
+            }
+          ],
+          "captchaNote": "The original protects this form with a CAPTCHA. This demonstration asks a simple arithmetic question instead: no CAPTCHA was reproduced, solved or bypassed."
+        }
+      ],
+      "tables": [],
+      "outline": [
+        {
+          "level": 3,
+          "text": "सीसीटीएनएस / CCTNS"
+        },
+        {
+          "level": 3,
+          "text": "स्वागतम / Welcome"
+        },
+        {
+          "level": 3,
+          "text": "नागरिक लॉगिन / Citizen Login"
+        },
+        {
+          "level": 2,
+          "text": "CONTACT US"
+        },
+        {
+          "level": 3,
+          "text": "National Crime Records Bureau National Highway - 8, Mahipalpur,New Delhi - 110037 Telephone:(011)26735450 Fax:(011)26782257Email:dct[at]ncrb[dot]nic[dot]in"
+        },
+        {
+          "level": 2,
+          "text": "सूचना"
+        },
+        {
+          "level": 2,
+          "text": "NOTICE"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "CONTACT US",
+          "cards": [
+            {
+              "title": "National Crime Records Bureau National Highway - 8, Mahipalpur,New Delhi - 110037 Telephone:(011)26735450 Fax:(011)26782257Email:dct[at]ncrb[dot]nic[dot]in"
+            }
+          ]
+        },
+        {
+          "heading": "सूचना",
+          "cards": []
+        },
+        {
+          "heading": "NOTICE",
+          "cards": []
+        }
+      ],
+      "visual": {
+        "pageBg": "#efebeb",
+        "pageBgShare": 0.517,
+        "onDark": false,
+        "headerBg": "#032a9a",
+        "heroBg": "#efebeb",
+        "heroHeight": 520,
+        "measuredBy": "in-page area survey (gradients included)"
+      },
+      "centred": true,
+      "structureNote": "The field names, lengths and option lists below are transcribed from the live form's markup, so this demonstration collects the same data in the same shape. It is never submitted anywhere but this local server.",
+      "noContentNote": null
+    },
+    {
+      "route": "/feedback.htm",
+      "title": "Government of India, Ministry of Home Affairs",
+      "pageTitle": "Government of India, Ministry of Home Affairs",
+      "heading": "Government of India, Ministry of Home Affairs",
+      "pageType": "contact",
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "forms": [
+        {
+          "id": "centercitizen_feedback.htm_form0",
+          "heading": "Government of India, Ministry of Home Affairs",
+          "submitLabel": "Submit",
+          "referencePrefix": "DEMO",
+          "fields": [
+            {
+              "name": "firstname",
+              "originalName": "firstName",
+              "label": "First Name",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 30,
+              "pattern": null,
+              "options": null,
+              "wide": false,
+              "maybeCascadeParent": true
+            },
+            {
+              "name": "lastname",
+              "originalName": "lastName",
+              "label": "Last Name",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": null,
+              "pattern": null,
+              "options": null,
+              "wide": null,
+              "maybeCascadeParent": true
+            },
+            {
+              "name": "mobilenum1",
+              "originalName": "mobileNum1",
+              "label": "Mobile Number",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 3,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            },
+            {
+              "name": "mobilenum2",
+              "originalName": "mobileNum2",
+              "label": "mobile Num2",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 10,
+              "pattern": null,
+              "options": null,
+              "wide": false,
+              "maybeCascadeParent": true
+            },
+            {
+              "name": "telephone1",
+              "originalName": "telephone1",
+              "label": "telephone1",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 3,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            },
+            {
+              "name": "telephone2",
+              "originalName": "telephone2",
+              "label": "telephone2",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 5,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            },
+            {
+              "name": "telephone3",
+              "originalName": "telephone3",
+              "label": "telephone3",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 8,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            },
+            {
+              "name": "emailid",
+              "originalName": "emailId",
+              "label": "Email Id",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": null,
+              "pattern": null,
+              "options": null,
+              "wide": null,
+              "maybeCascadeParent": true
+            },
+            {
+              "name": "feedbackcomment",
+              "originalName": "feedbackComment",
+              "label": "Feedback Comments",
+              "type": "textarea",
+              "inputType": "textarea",
+              "required": false,
+              "maxLength": null,
+              "pattern": null,
+              "options": null,
+              "wide": true,
+              "maybeCascadeParent": true
+            },
+            {
+              "name": "answerfeedback",
+              "originalName": "answerFeedback",
+              "label": "answer Feedback",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": null,
+              "pattern": null,
+              "options": null,
+              "wide": null
+            }
+          ],
+          "captchaNote": "The original protects this form with a CAPTCHA. This demonstration asks a simple arithmetic question instead: no CAPTCHA was reproduced, solved or bypassed."
+        }
+      ],
+      "tables": [],
+      "outline": [
+        {
+          "level": 2,
+          "text": "CCTNS"
+        },
+        {
+          "level": 2,
+          "text": "CCTNS"
+        },
+        {
+          "level": 2,
+          "text": "Feedback Form"
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "cards": [
+            {
+              "title": "CCTNS"
+            },
+            {
+              "title": "CCTNS"
+            },
+            {
+              "title": "Feedback Form"
+            }
+          ]
+        }
+      ],
+      "visual": {
+        "pageBg": null,
+        "pageBgShare": 0.894,
+        "onDark": false,
+        "headerBg": "#0062cc",
+        "heroBg": null,
+        "heroHeight": 0,
+        "measuredBy": "in-page area survey (gradients included)"
+      },
+      "centred": false,
+      "structureNote": "The field names, lengths and option lists below are transcribed from the live form's markup, so this demonstration collects the same data in the same shape. It is never submitted anywhere but this local server.",
+      "noContentNote": null
+    }
+  ],
+  "tables": [],
+  "referenceLists": {},
+  "cascadeLists": {},
+  "errorRoutes": [
+    {
+      "route": "/logout",
+      "status": 404,
+      "title": "404 - Not found",
+      "note": "The original answers 404 at this path too. This is reproduced deliberately so the route inventory and the replica agree."
+    }
+  ],
+  "gapMeanings": {
+    "incomplete-interaction": "A form on the original was never submitted, so its real success and error states were never observed.",
+    "uncertain-technology": "Detected by inference rather than direct evidence.",
+    "missing-asset": "A referenced asset could not be downloaded.",
+    "platform-internal-asset": "Framework plumbing the replica does not use.",
+    "external-dependency": "Hosted on another domain; recorded rather than downloaded.",
+    "inaccessible-page": "The page could not be captured.",
+    "skipped-url": "Not crawled as a page (a document, or beyond the configured depth).",
+    "dynamic-navigation": "The menu is built in the browser and can differ between loads."
+  }
+}

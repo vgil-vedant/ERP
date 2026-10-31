@@ -1,0 +1,43 @@
+<%- include('_head', { title: title, site: { name: 'Portal platform', hostname: 'shared backend' } }) %>
+<div class="wrap wide">
+  <div class="panel">
+    <h1>One backend, one database, <%= sites.length %> portals</h1>
+    <p class="lede">
+      Every portal below is served by this process (pid <%= pid %>) out of a single
+      SQLite file. A citizen registers once and the account is accepted by all of them.
+      Each submission is written here and mirrored to the ERP's own database.
+    </p>
+
+    <dl>
+      <dt>Shared database</dt><dd><code><%= dbPath %></code></dd>
+      <dt>ERP backend</dt><dd><code><%= erpTarget %></code> &mdash; reached over HTTP only</dd>
+      <dt>Registrations</dt><dd><%= summary.people %></dd>
+      <dt>Submissions</dt>
+      <dd><%= summary.submissions %> &mdash; <%= summary.synced %> mirrored to the ERP</dd>
+    </dl>
+
+    <table>
+      <tr><th>Portal</th><th>Host</th><th>Submissions</th><th>In the ERP</th><th>Open</th></tr>
+      <% summary.bySite.forEach(function (b) {
+           var s = sites.find(function (x) { return x.code === b.code; }) || {}; %>
+        <tr>
+          <td><strong><%= b.name %></strong><br><code><%= b.code %></code></td>
+          <td><%= s.hostname || '' %></td>
+          <td><%= b.n %></td>
+          <td><%= b.synced || 0 %></td>
+          <td><a href="http://127.0.0.1:<%= s.port %>/">:<%= s.port %></a></td>
+        </tr>
+      <% }); %>
+    </table>
+
+    <p class="hint" style="margin-top:20px">
+      JSON: <a href="/api/summary">/api/summary</a> &middot;
+      <a href="/api/people">/api/people</a> &middot;
+      <a href="/api/submissions">/api/submissions</a> &middot;
+      <a href="/api/sync">/api/sync</a> &middot;
+      <a href="/api/audit">/api/audit</a>
+    </p>
+  </div>
+</div>
+</body>
+</html>

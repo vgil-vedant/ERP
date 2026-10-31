@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+<!--          <meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' 'unsafe-inline';  style-src 'self' 'unsafe-inline';
+    ">-->
+        <title>:::CCTNS:::</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="asset/style/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="asset/style/cyberPolice.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <!--<link href="asset/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+       
+         <link rel="icon" type="image/x-icon" href="img/favicon.ico" sizes="16x16" />
+        <!--Old Code-->
+        <script type="text/javascript" src="js/tab_control.js"></script>
+        <script type="text/javascript" src="js/cal_control.js"></script>
+        <script type="text/javascript" src="js/loginvalidation.js"></script>
+        <script type='text/javascript' src='js/error-message.js' language="javascript"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <!--<script type="text/javascript" src="js/jquery-ui-new.custom.min.js"></script>-->
+        <script type="text/javascript" src="fancybox/jquery.fancybox-lib.pack.js"></script>
+        <!--<script type="text/javascript" src="fancybox/jquery-ui-new.custom.css.pack.js"></script>-->
+        <script type="text/javascript" src="js/common/fancyalert.js"></script>
+        <link rel="stylesheet" type="text/css" href="#" media="screen" />
+        <link type="text/css" rel="stylesheet" href="css/jquery.modaldialog.css" />
+        <script type="text/javascript" language="JavaScript" src="js/jquery.modaldialog.js"> </script>
+        <script type="text/javascript" src="js/aesCrypto.js"></script>
+        <div id="popupModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <br/>
+                <div class="alert alert-danger" style="display: none;" id="dangerAlert" role="alert">
+                    
+                </div>
+                <div class="alert alert-success" style="display: none;" id="successAlert" role="alert">
+                    
+                </div>
+                <br/>
+            </div>
+            <div class="modal-footer">
+                <!--//CC start-->
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <!--cc end-->
+            </div>
+        </div>
+
+    </div>
+</div>
+ <!--cc start-->
+<a href="" data-bs-toggle="modal" data-bs-target="#popupModal" id="modalTrigger"></a>
+<!--//cc end-->
+<script>
+    function popupModalErrorMessage(msg,id) {
+        console.log('in popupmodal.jsp')
+        document.getElementById("dangerAlert").style="display:block;";
+        document.getElementById("dangerAlert").innerHTML=msg+"!";
+        document.getElementById("modalTrigger").click();
+//        document.getElementById(id).value="";
+//        document.getElementById(id).focus();
+        
+    }
+    
+    function popupModalSuccessMessage(msg,id) {
+        document.getElementById("successAlert").style="display:block;";
+        document.getElementById("successAlert").innerHTML=msg+"!";
+        document.getElementById("modalTrigger").click();
+    }
+</script>
+  <style>
+      .tooltip {  max-width: 800px;  padding: 3px 8px;  color: #000;  text-align: center;  background-color: #fff;  border-radius: 4px; border: 1px solid #8d8d8d; font-size: 14px; font-weight: bold; text-align: justify;}
+  
+  @media(max-width:767px)
+  {
+      .loginForm{
+          display: flex;
+          flex-direction: column;
+      }
+      .btnloginnew{
+          height:39px;
+      }
+      .rm--proclaimed{
+          display: none;
+      }
+  }
+  
+  @media(min-width:767px){
+      .loginForm{
+          display: flex;
+          gap:30px;
+      }
+      .loginsendbtn{
+          display:flex;
+          gap:20px;
+      }
+      .view--proclaimed{
+          font-size: 14px;
+      }
+  }
+  @media(max-width:767px) {
+    .loginForm{
+        display: flex;
+        flex-direction: column;
+    }
+    .btnloginnew{
+        height:39px; 
+    }
+    .rm--proclaimed{
+        display: none;
+    }
+
+    /* --- Add these styles for Mobile View --- */
+    .loginsendbtn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .loginsendbtn .col-md-8,
+    .loginsendbtn .col-md-4 {
+        width: 100%;
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .loginsendbtn #sendOtpID {
+        width: 100%;       /* Full width button on mobile */
+        height: 42px;      /* Comfortable touch target */
+        margin-top: 5px;
+    }
+    #timerDisplay {
+        white-space: normal !important; /* Prevents text overflow on small screens */
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    /* --- Login Button wrapper fix --- */
+    .f1 {
+        width: 100%; /* Forces the parent div to stretch fully */
+    }
+    
+    #submitCitizen{
+        width: 100%;       /* Full width button on mobile */
+        height: 42px;      /* Comfortable touch target */
+        margin-top: 5px;
+    }
+}
+  
+  </style>
+    </head>
+
+    <body class="loginBodyBG" >
+
+        <div class="container-fluid" style="padding: 0;">
+
+            <div class=" login">
+                <div class="row">
+                    <div class="col-md-5 login-left">
+                        <img class="logo" src="asset/images/cctnsLogoNew.png" alt="" style="margin-bottom: 10px;width: 25%;height:38%"/>
+                        <h3 id="head1" style="color:#fff;margin: 0;">सीसीटीएनएस / CCTNS</h3>
+                        <h6 id="head2" style="color:#fff;margin: 0;font-style: italic">अपराध एवं अपराधी ट्रैकिंग नेटवर्क एवं सिस्टम / Crime and Criminal Tracking Network &amp; Systems</h6>
+                        <br/>
+                        <h3 id="head3" style="color:#fff">स्वागतम / Welcome</h3>
+                        <p id="head4">अपराध एवं अपराधी ट्रैकिंग नेटवर्क एवं  सिस्टम (सीसीटीएनएस) के अंतर्गत डिजिटल पुलिस नागरिक सेवाएँ</p>
+                        <p id="head5">Digital Police Citizen Services  Under Crime and Criminal Tracking Network & Systems (CCTNS)</p>
+                    </div>
+                    <div class="col-md-1 lbreak"></div>
+                    <div class="col-md-6 login-right">
+                        
+                        <div >
+                            <div>
+                             
+                            
+                                   <h3 class="login-heading">नागरिक लॉगिन / Citizen Login</h3>
+<!--                                <label for="lang">Choose Language:</label>
+                                <select path="lang"  name="lang" id="lang" onchange="">
+                                    <option value="99">English</option>
+                                     <option value="6">Hindi</option>
+                                </select>-->
+                               
+                     <div class="row login-form" >
+
+                                    <div class="col-md-12">
+                                         <form action="login" id="loginForm"   method="post" >
+<!--                                        <div class="loginsendbtn">
+                                           
+                                                <div class="col-md-8 fl">
+                                                    <div class="mb-3">
+                                                        <input type="text" class="form-control" placeholder="मोबाईल नं / Mobile Number *" name="username" AUTOCOMPLETE="OFF" id="mobile_num" maxlength="10" onchange="CommentsMinLength(this.value,10,this.id);" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 fl ">
+
+                                                    <input type="button" class="btnlogin" value="ओटीपी भेजें / Send OTP"  id="sendOtpID" onclick="return callOTPGeneration()"/>
+                                                  
+                                                   
+                                                </div>
+                                                
+                                        </div>-->
+                                         <div class="loginsendbtn">
+                                            <div class="col-md-8 fl">
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control" placeholder="मोबाईल नं / Mobile Number *" name="username" AUTOCOMPLETE="OFF" id="mobile_num" maxlength="10" onchange="CommentsMinLength(this.value,10,this.id);" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 fl ">
+                                                <input type="button" class="btnlogin" value="ओटीपी भेजें / Send OTP"  id="sendOtpID" onclick="return callOTPGeneration()"/>
+
+                                                <!-- Timer placed exactly below the Send OTP button -->
+                                                <div id="timerDisplay" style="color: #d9534f; font-weight: bold; font-size: 13px; margin-top: 5px; display: none; white-space: nowrap; text-align: center;"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-8 fl">
+                                                <div class="mb-3">
+                                                    <input type="password" name="password" id="otpfield" class="form-control" placeholder="ओटीपी / OTP *" AUTOCOMPLETE="OFF" maxlength="6" onchange="numberValidation(this.value,this.id)" />
+                                                    
+                                                    
+                                                    
+                                                     <!--<div style="color:red;display:none" id='smstext1' >  If OTP Not Receive in 60 seconds! Please Try With OTP 1234  </div>-->
+                                                    <!--                                                    <input type="text" name="firstName" id="firstName" class="form-control" AUTOCOMPLETE="OFF" maxlength="100"  />-->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 fl">
+                                                <div id="messagehide" class="pswalrt">
+                                                    
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-8 fl">
+                                                <div class="mb-3">
+                                                    <input type="text" name="firstName" id="firstName" class="form-control" placeholder="नाम / Name *" AUTOCOMPLETE="OFF" maxlength="100"  onchange="alphaNumericValidation(this.id)"/>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 fl">
+
+                                            </div>
+                                        </div>
+
+                                        <!--   For Captcha - Starts    -->
+                                        <div>
+                                            <div>
+                                                <div class="col-md-8 fl" >
+                                                    <div >
+                                                        <img id="captchaCenterCitizen" src="#" width="200" alt="Please Enter Correct Captcha." />
+                                                        <img src="img/Refresh.gif" width="23" height="20" border="0" value="Refresh"  class="captcheButton" onclick="refreshCaptcha('captchaCenterCitizen')"/>
+                                                        <script>
+                                                            $("#captchaCenterCitizen").attr("src","retrieveImageCaptcha.htm");
+                                                        </script><br/>
+                                                        <span style ="color:#030326; font-style: normal;font-size: 11px" >नीचे दिए गए टेक्स्टबॉक्स में यह कैरेक्टर  दर्ज करें / Enter the characters in the textbox below</span><br/>
+                                                        <span  style="color:#030326; font-style: normal;font-size: 11px">कैरेक्टर केस सेंसिटिव हैं / Characters are case sensitive</span><br/>
+
+                                                    </div>
+                                                </div>
+                                                <!--                                                <div class="col-md-4 fl">
+                                                                                                    <span style ="color:#030326; font-style: normal;font-size: 11px" > Enter the characters in the textbox below</span><br/>
+                                                                                                    <span  style="color:#030326; font-style: normal;font-size: 11px">Characters are case sensitive</span><br/>
+                                                                                                </div>-->
+                                            </div>
+
+                                            <div class="col-md-8 fl">
+                                                <div class="mb-3">  
+                                                    <input  class="form-control" type="text" id="answerCenterCitizen" value="" class="captcheButton" />
+                                                    <span style ="color:red; font-style: normal;font-size: 11px" id="captchaErrorCenterCitizen" value="" style="border: none;color:red"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 fl">
+                                                
+                                                </script>
+                                            </div>
+
+                                        </div>
+
+                                        <!--   For Captcha - Ends    -->
+
+
+                                       
+                                        <div class="cls"></div>
+                                     
+                                    </div>
+                                      <div style="display:flex;margin-bottom: 10px;">
+                                            <div class="col-md-4 f1">
+                                                 <input type="hidden" name="_csrf" value="f83c999f-9b28-42e1-b908-0a132274f08e"/>
+                                                <input type="button"  class="btnlogin btnloginnew" style="padding: 2%;"  value="लॉगिन / Login" id="submitCitizen" onclick="return validateForm()"/>
+                                            </div>
+                                                <div class="col-md-4 f1 rm--proclaimed" style="margin-bottom: 10px">
+                                                    <input type="button" class="btnlogin view--proclaimed" id="proclaimedbtn" value="घोषित अपराधियों को देखें / View Proclaimed Offenders"   onclick="showproclaimedoffenderdetails()">
+                                                </div>
+                                       </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="alrtbuttOk" value="OK" />
+                            <input type="hidden" id="alrtbtnClose"value="Close" /> 
+                            <input type="hidden" id="alrtbuttClose"value="Close" /> 
+                            <input type="hidden" id="alrtbtnYes" value="Yes" />
+                            <input type="hidden" id="alrtbtnNo" value="No" /> 
+                            <input type="hidden" id="alrtPleaseEnterNumber" value="Please Enter Only Number " /> 
+                            <input type="hidden" id="lblselect" value="Select" />
+                            <input type="hidden" id="alrtState" value="Please select State" />
+                            <input type="hidden" id="alrtUserName" value="Please enter user name" />
+                            <input type="hidden" id="smsEnabled"  /> 
+                            <input type="hidden" id="userFlag" value="0" name="userFlag" /> 
+                            <input type="hidden" id="alrtmin" value="Please enter Minimum of" />
+                            <input type="hidden" id="alrtminchar" value="characters" /> 
+                            <input type="hidden" id="alreadyExistMessage" value="You are already logged in. Please use the existing session or wait for twenty minutes to login again" />
+                            <input type="hidden" id="lbllogout" value="Logout  " />
+                            <input type ="hidden" id="alrtAlphaNumeric" value="Please enter only alphanumeric values"/>
+                            <input type="hidden" id="alrtcaptchawrong" value="Please Enter Correct Captcha." /> 
+                            <input type="hidden" id="dataloginforcirtizenone" value="u/Gu5posvwDsXUnV5Zaq4g==" /> 
+                            <input type="hidden" id="dataloginforcitizentwo" value="5D9r9ZVzEYYgha93/aUK2w==" /> 
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            <br/>-->
+        </div>
+                
+                <div class="col-md-12">
+                                <marquee scrollamount="20" onMouseOver="this.stop()" onMouseOut="this.start()"> <h6 style="margin: 5px;text-align: center;"> 
+                                        <span style="color:red;text-align: center;">यह सूचित किया जाता है कि डिजिटल पुलिस पोर्टल (digitalpolice.gov.in) में दिए गए लिंक एवं digitalpolicecitizenservices.gov.in के माध्यम से एनसीआरबी द्वारा शुरू की गई ‘वाहन एनओसी जनरेट करें’ सहित चार केंद्रीय नागरिक सेवाओं का लाभ बिना किसी शुल्क के उठाया जा सकता है। अतः, जनसामान्य को यह सूचित किया जाता है कि वे पोस्टल ऑर्डर या किसी अन्य पेमेंट इंस्ट्रूमेंट  के साथ ईमेल या डाक के माध्यम से कोई अनुरोध न भेजें। डाक या ईमेल के माध्यम से प्राप्त अनुरोधों पर ब्यूरो द्वारा कोई कार्रवाई नहीं की जाएगी और धन वापसी भी नहीं होगी।<span>/It is informed that citizens may avail four Central Citizen Services
+                 including Generate Vehicle NOC launched by NCRB through
+                 digitalpolicecitizenservices.gov.in and through links provided in
+                 Digital Police Portal (digitalpolice.gov.in) without any
+                 charges. Therefore, it is informed that the citizens should not send
+                 any request through email or through post with postal order or any
+                 other payment instrument. The requests received through post or
+                 emails would not be processed by the Bureau and no refund will be
+                 made.</span> </span></h6></marquee>
+                    <!--<p style="margin: auto;text-align: center">सूचना</p>-->
+<!--                    <p class="scrollbar-primary thin">यह सूचचत चिया जाता है चि चिचजटल पुचलस पोटटल (digitalpolice.gov.in) मेंचिए गए चलिंि
+                  एविं digitalpolicecitizenservices.gov.in िे माध्यम सेएनसीआरबी द्वारा शुरू िी गई ‘वाहन
+                  एनओसी जनरेट िरें’ सचहत चार िें द्रीय नागररि सेवाओिं िा लाभ चबना चिसी शुल्क िे उठाया
+                  जा सिता है। अतः, जनसामान्य िो यह सूचचत चिया जाता है चि वे पोस्टल ऑिटर या चिसी
+                  अन्य पेमेंट इिंस्टूमेंट िे साथ ईमेल या िाि िे माध्यम से िोई अनुरोध न भेजें। िाि या ईमेल
+                  िे माध्यम से प्राप्त अनुरोधोिं पर ब्यूरो द्वारा िोई िारटवाई नहीिंिी जाएगी और धन वापसी भी
+                  नहीिं होगी।
+                 </p> -->
+<!--                  <p style="margin: auto;text-align: center">NOTICE</p>
+                 /It is informed that citizens may avail four Central Citizen Services
+                 including Generate Vehicle NOC launched by NCRB through
+                 digitalpolicecitizenservices.gov.in and through links provided in
+                 Digital Police Portal (digitalpolice.gov.in) without any
+                 charges. Therefore, it is informed that the citizens should not send
+                 any request through email or through post with postal order or any
+                 other payment instrument. The requests received through post or
+                 emails would not be processed by the Bureau and no refund will be
+                 made.-->
+                </div>
+                            
+        <div id="theDiv" class="offenderDiv scrollbar-primary thin">       
+<!--             <div>
+                    <marquee scrollamount="20" onMouseOver="this.stop()" onMouseOut="this.start()"> <h2 style="margin: 5px;text-align: center;"><span style="color:red;text-align: center;">Portal will be under Maintenance from today 6PM TO Tomorrow 9AM </span></h2></marquee> 
+                </div>-->
+                <h5 style="margin: 5px;font-weight: 600; display: none" id="protext1"><span style="font-size:15px;color:red;">Proclaimed Offenders</span> : Point cursor on the photo for details. Login as above for generating various reports. <span style="font-size:18px;color:blue;"> सूचना दें, कर्तव्य निभाएं !</span></h5>
+                <!--
+                <div>
+                    <marquee scrollamount="20" onMouseOver="this.stop()" onMouseOut="this.start()"> <h2 style="margin: 5px;text-align: center;"><span style="color:red;text-align: center;">Vehicle NOC , Property & Person matching and Proclaimed Offender Services are  Temporally not available.</span></h2></marquee> 
+                </div>
+                -->
+               
+              
+                 
+                <div id="mqdiv" >
+                    <ul id="theList" class="list-inline" style="display:flex;">
+			
+                    </ul>
+                </div>
+        </div>
+       
+        
+        <div class="col-md-12 footerWrapper" style="width: 100%;">
+            <div class="container column-gap-3" >
+                <div class="col-md-12">
+                    <div class="col-md-2 fl pad0">
+                        <img src="asset/images/NCRBLogo.png" style="width: 40%;" alt=""/>
+                        <img src="asset/images/NationalEmblemTransparent.gif" style="width: 35%;" alt=""/>
+                    </div>
+                    <div class="col-md-10 fl pad0">
+                        <div class="col-md-6 fl">
+                            <div>
+                                <!--                                    <ul class="footerLink">
+                                                                        <li><a href="feedback.htm" id="feedbackBtn"  class="padl0">Feedback</a></li>
+                                                                        <li><a href="contactus.htm" id="contactBtn">Contact Us</a></li>
+                                                                    </ul>-->
+                                <ul class="footerLink">
+                                    <li><a href="feedback.htm"  class="padl0" target="_blank">•	फीडबैक / Feedback</a></li>
+                                    <!--// cc start-->
+                                    <li><a style="padding-left: 10px;" href="" data-bs-toggle="modal" data-bs-target="#contactModal">•	संपर्क करें / Contact Us</a></li>
+                                   <!--//cc end-->
+                                </ul>
+
+                            </div>
+                            <div class="cls"></div>
+                            <p class="footText">वेबसाइट सामग्री का प्रबंधन राष्ट्रीय अपराध रिकॉर्ड ब्यूरो, गृह मंत्रालय, भारत सरकार द्वारा किया जाता है<br>Website Content Managed By National Crime Records Bureau, Ministry of Home Affairs,<br> Government of India.</p>
+                        </div>
+                        <div class="col-md-6 fl footerAddress" id="footAddr">
+                            <p>राष्ट्रीय अपराध रिकॉर्ड ब्यूरो<br>राष्ट्रीय राजमार्ग - 8,सर्विस रोड, महिपालपुर, नई दिल्ली – 110037</p>
+                            <p>National Crime Records Bureau<br>National Highway - 8, Service Road, Mahipalpur, New Delhi - 110037</p>
+                            <p>Best Viewed at : 1366x768, Chrome, Firefox</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+
+                </div>
+
+            </div>
+        </div>
+ 
+<!--         cc   start                 -->
+        <div id="contactModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header login" style="margin-top:0;">
+                        <!--                        <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                        <h2> CONTACT US</h2>
+                    </div>
+                    <div class="modal-body">
+                        <br/>
+                        <h3 style="line-height:1.3;"><span style="font-weight: bold;">National Crime Records Bureau </span><br/><br/> National Highway - 8, Mahipalpur,<br/>New Delhi - 110037 <br/>Telephone:(011)26735450 <br/>Fax:(011)26782257<br/>Email:dct[at]ncrb[dot]nic[dot]in</h3>
+                        <br/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- //cc end                          -->
+
+ <div id="StaticDataModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header login" style="margin-bottom:1rem;">
+                        <!--                        <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                        <!--<h2 style="color:red;margin: auto;">सूचना/NOTICE</h2>-->
+                    </div>
+                    <div class="modal-body"> 
+                        <h2 style="color:red;text-align: center;margin-top: 0.5rem;">सूचना</h2>
+                        <h6 style="line-height: 1.3; text-align: justify;">
+  <span style="font-weight: bold;">
+    यह सूचित किया जाता है कि डिजिटल पुलिस पोर्टल (digitalpolice.gov.in) में दिए गए लिंक एवं digitalpolicecitizenservices.gov.in के माध्यम से एनसीआरबी द्वारा शुरू की गई ‘वाहन एनओसी जनरेट करें’ सहित चार केंद्रीय नागरिक सेवाओं का लाभ बिना किसी शुल्क के उठाया जा सकता है। अतः, जनसामान्य को यह सूचित किया जाता है कि वे पोस्टल ऑर्डर या किसी अन्य पेमेंट इंस्ट्रूमेंट  के साथ ईमेल या डाक के माध्यम से कोई अनुरोध न भेजें। डाक या ईमेल के माध्यम से प्राप्त अनुरोधों पर ब्यूरो द्वारा कोई कार्रवाई नहीं की जाएगी और धन वापसी भी नहीं होगी।
+    <br><h2 style="color:red;text-align: center;margin-top: 1rem">NOTICE</h2>
+    It is informed that citizens may avail four Central Citizen Services including Generate Vehicle NOC launched by NCRB through digitalpolicecitizenservices.gov.in and through links provided in Digital Police Portal (digitalpolice.gov.in) without any charges. Therefore, it is informed that the citizens should not send any request through email or through post with postal order or any other payment instrument. The requests received through post or emails would not be processed by the Bureau and no refund will be made.
+  </span>
+</h6>
+
+                        <!--<h6 style="line-height:1.3;"><span style="font-weight: bold;text-align: justify;">यह सूचित किया जाता है कि डिजिटल पुलिस पोर्टल (digitalpolice.gov.in) में दिए गए लिंक एवं digitalpolicecitizenservices.gov.in के माध्यम से एनसीआरबी द्वारा शुरू की गई ‘वाहन एनओसी जनरेट करें’ सहित चार केंद्रीय नागरिक सेवाओं का लाभ बिना किसी शुल्क के उठाया जा सकता है। अतः, जनसामान्य को यह सूचित किया जाता है कि वे पोस्टल ऑर्डर या किसी अन्य पेमेंट इंस्ट्रूमेंट  के साथ ईमेल या डाक के माध्यम से कोई अनुरोध न भेजें। डाक या ईमेल के माध्यम से प्राप्त अनुरोधों पर ब्यूरो द्वारा कोई कार्रवाई नहीं की जाएगी और धन वापसी भी नहीं होगी।/<br><br>It is informed that citizens may avail four Central Citizen Services including Generate Vehicle NOC launched by NCRB through digitalpolicecitizenservices.gov.in and through links provided in Digital Police Portal (digitalpolice.gov.in) without any charges.  Therefore, it is informed that the citizens should not send any request through email or through post with postal order or any other payment instrument. The requests received through post or emails would not be processed by the Bureau and no refund will be made.</span></h6>-->
+                         <!--<h6 style="line-height:1.3;"><span style="font-weight: bold;">डिजिटल पुलिस पोर्टल (digitalpolice.gov.in) व digitalpolicecitizenservices.gov.in के माध्यम से एनसीआरबी द्वारा शुरू की गई ‘वाहन एनओसी जनरेट करें’ सहित चार केंद्रीय नागरिक सेवाएँ निःशुल्क उपलब्ध हैं, इसलिए पोस्टल ऑर्डर या अन्य पेमेंट इंस्ट्रूमेंट के साथ ईमेल या डाक से कोई अनुरोध न भेजें, क्योंकि ऐसे अनुरोधों पर कोई कार्रवाई नहीं होगी और धन वापसी भी नहीं की जाएगी।/<br><br>It is informed that citizens may avail four Central Citizen Services including Generate Vehicle NOC launched by NCRB through digitalpolicecitizenservices.gov.in and through links provided in Digital Police Portal (digitalpolice.gov.in) without any charges.  Therefore, it is informed that the citizens should not send any request through email or through post with postal order or any other payment instrument. The requests received through post or emails would not be processed by the Bureau and no refund will be made.</span></h6>-->
+                        <br/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- jQuery -->
+        <script src="asset/js/jquery-updated_latest.min.js"></script> 
+        
+        <!-- Bootstrap Core JavaScript -->
+        <script src="asset/js/bootstrap.min.js"></script>
+
+        <script src="asset/js/jquery.marquee.min.js"></script>
+    </body>
+
+    <script type="text/javascript">
+
+                                                        var rkEncKey = '';
+                                                        var rkEncIv = '';                   
+        $(document).ready(function() {
+        $("#StaticDataModal").modal("show");
+         rkEncKey=$("#dataloginforcirtizenone").val();
+         rkEncIv=$("#dataloginforcitizentwo").val();
+           const firstNameInput = document.getElementById("firstName");
+         firstNameInput.addEventListener("input", function (e) {
+    let value = e.target.value;
+
+     // Remove multiple spaces
+    value = value.replace(/\s{2,}/g, ' ');
+
+    // Remove leading space
+    value = value.replace(/^\s/, '');
+    e.target.value = value;
+});
+
+ firstNameInput.addEventListener("blur", function (e) {
+        // Remove trailing space → "John " → "John"
+        e.target.value = e.target.value.trim();
+    });
+
+     });
+                                                          
+        $(window).load(function() {    
+            $(function(){
+            $('.marquee').marquee({
+                behavior: 'scroll',
+                //speed in milliseconds of the marquee
+                duration: 1000,
+                //gap in pixels between the tickers
+                gap: 50,
+                //time in milliseconds before the marquee will start animating
+                delayBeforeStart: 0,
+                //'left' or 'right'
+                direction: 'left',
+                //true or false - should the marquee be duplicated to show an effect of continues flow
+                duplicated: true
+            });   
+        });
+            if(''=='1' )
+            {
+                if('' == 'Invalid UserName or Password'){    
+                    //                TabView.switchTab(0,2);
+                    $('#UserPwdAlrt').show();
+                    $('#WebSerAlrt').hide();                   
+                }else if('' == 'Webservice is Down'){      
+                    //                TabView.switchTab(0,2);
+                    $('#WebSerAlrt').show();
+                    $('#UserPwdAlrt').hide();          
+                }
+            }else
+                if(''=='2' )
+            {
+                if(''!=null){    
+                    //                TabView.switchTab(0,1);
+                    $('#UserPwdAlrtMha').show();
+
+                }
+            }else  
+                if(''=='3' )
+            {
+                if(''!=null){    
+                    //                TabView.switchTab(0,4);
+                    $('#UserPwdAlrtDlsa').show();
+
+                }
+            }
+        });
+
+        $(document).ready(function() {
+            $(function () {
+                                $('li[data-toggle="tooltip"]').tooltip()
+            })
+       
+            //        $("a#feedbackBtn").fancybox({
+            //            'width'			: 800,
+            //            'height'		: 500,
+            //            'autoScale'		: false,
+            //            'transitionIn'		: 'none',
+            //            'transitionOut'		: 'none',
+            //            'type'			: 'iframe',
+            //            'onClosed'              : function() {
+            //            }
+            //        });
+            //        $("a#contactBtn").fancybox({
+            //            'width'			: 600,
+            //            'height'		: 250,
+            //            'autoScale'		: false,
+            //            'transitionIn'		: 'none',
+            //            'transitionOut'		: 'none',
+            //            'type'			: 'iframe',
+            //            'onClosed'              : function() {
+            //            }
+            //        });
+
+            var tsTimeStamp = new Date().getTime();
+            $.post("getSmsEnabledStatus.htm",
+            {"time" : tsTimeStamp},
+            function(data) {
+
+                document.getElementById("smsEnabled").value = data.smsEnabled;
+            });
+            
+//            $.get("getOffenderDetails.htm",
+//            {"time" : tsTimeStamp},
+//            function(data) {
+//                var items = data.rows;
+//                var ind = 0;
+//                $.each(items, function(key, val) {
+//                    ind++;                
+//                      var li = $('<li class="offenderDivItem" title="Police Station Details:\n----------------------\nPS Name: '+val[10]+"\nPS Email: "+val[8]+"\nPS Contact No: "+val[9]+'" ><div class="row" ><div class="col-md-3" id="liItem'+ ind +'"></div><div class="col-md-9 text-wrap" style="padding: 10px 5px 0px 30px"><b>'+ val[2]+'</b><br/>'+val[3]+'<br/>'+val[4]+'</div></div></li>');
+//                    li.appendTo('#theList');
+//                    var img = $('<img id="img'+ ind +'" alt="offender" >');
+//                    img.attr('src', 'data:image/jpg;base64,' + val[1]);
+//                    img.appendTo('#liItem'+ ind);
+//                    
+//                });	
+//                $( "#mqdiv" ).addClass( "marquee" );
+//                var widths = $('.marquee').width()
+//                var duration = widths * 7;
+//                $('.marquee').marquee({
+//                        //speed in milliseconds of the marquee
+//                        duration: 35000,
+//                        //gap in pixels between the tickers
+//                        gap: $('.marquee').width(),
+//                        //time in milliseconds before the marquee will start animating
+//                        delayBeforeStart: 0,
+//                        //'left' or 'right'
+//                        direction: 'left',
+//                        //true or false - should the marquee be duplicated to show an effect of continues flow
+//                        duplicated: true,
+//                        pauseOnHover: true
+//                    });
+//            });
+            
+            
+//            $( "#test" ).hover(function() {
+//                $('#proclaimedModal').modal({
+//                    show: true
+//                });
+//            });  
+        });
+//        <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+
+
+      function showproclaimedoffenderdetails()
+      {
+          
+          $(function(){
+            $('.marquee').marquee({
+                behavior: 'scroll',
+                //speed in milliseconds of the marquee
+                duration: 1000,
+                //gap in pixels between the tickers
+                gap: 50,
+                //time in milliseconds before the marquee will start animating
+                delayBeforeStart: 0,
+                //'left' or 'right'
+                direction: 'left',
+                //true or false - should the marquee be duplicated to show an effect of continues flow
+                duplicated: true
+            });   
+        });
+          
+//          $("#proclaimedbtn").hide();
+            $("#proclaimedbtn").attr("disabled","disabled");
+          const myElement=document.getElementById("protext1");
+          myElement.style.display="block";
+           var tsTimeStamp = new Date().getTime();
+          $.get("getOffenderDetails.htm",
+            {"time" : tsTimeStamp},
+            function(data) {
+                
+                  items=data.rows;
+                 // console.log("Length of the list "+data.rows.length)
+                var ind = 0;
+                $.each(items, function(key, val) {
+                    ind++;                
+                      var li = $('<li class="offenderDivItem" title="Police Station Details:\n----------------------\nPS Name: '+val[10]+"\nPS Email: "+val[8]+"\nPS Contact No: "+val[9]+'" ><div class="row" ><div class="col-md-3" id="liItem'+ ind +'"></div><div class="col-md-9 text-wrap" style="padding: 10px 5px 0px 30px"><b>'+ val[2]+'</b><br/>'+val[3]+'<br/>'+val[4]+'</div></div></li>');
+                    li.appendTo('#theList');
+                    var img = $('<img id="img'+ ind +'" alt="offender" >');
+                    img.attr('src', 'data:image/jpg;base64,' + val[1]);
+                    img.appendTo('#liItem'+ ind);
+                    
+                });	
+                $( "#mqdiv" ).addClass( "marquee" );
+                var widths = $('.marquee').width()
+                var duration = widths * 7;
+                $('.marquee').marquee({
+                        //speed in milliseconds of the marquee
+                        duration: 35000,
+                        //gap in pixels between the tickers
+                        gap: $('.marquee').width(),
+                        //time in milliseconds before the marquee will start animating
+                       delayBeforeStart: 0,
+                        //'left' or 'right'
+                        direction: 'left',
+                        //true or false - should the marquee be duplicated to show an effect of continues flow
+                       duplicated: true,
+                        pauseOnHover: true
+                    });
+            });
+            
+            
+            $( "#test" ).hover(function() {
+                $('#proclaimedModal').modal({
+                    show: true
+                });
+            });  
+          
+          
+          
+          
+      }
+     
+
+        function showOffenderModal() {
+            $('#proclaimedModal').modal({
+                    toggle: true
+                });
+        }
+        
+        function closeOffenderModal() {
+            $('#proclaimedModal').modal({
+                    show: false
+            });
+        }
+
+        function validateForm() {
+            /* validation For Captcha - starts*/    
+            var captchaAnswer=document.getElementById("answerCenterCitizen").value;
+            if(captchaAnswer==null || captchaAnswer==""){
+                $("#captchaErrorCenterCitizen").html($("#alrtcaptchawrong").val());
+                fancyWarning('Please enter correct captcha', 'answerCenterCitizen');   
+                return false;  
+            }else{
+                $.post("checkCaptcha.htm" ,{"answer":captchaAnswer},        
+                function(data){
+                    
+                    var items=data.userCaptchCorrect;
+                    
+                    if(!items) {
+                        $("#captchaErrorCenterCitizen").html($("#alrtcaptchawrong").val());
+                        fancyWarning('Please enter correct captcha', 'answerCenterCitizen');   
+                        return false;
+                    }else{
+                        /* Validation for captcha - ends  */
+                        const nameRegex = /^[A-Za-z][A-Za-z\s\-]{1,48}[A-Za-z]$/;
+                        if (document.getElementById("mobile_num").value.replace(/^\s+|\s+$/g, '') == ""  || document.getElementById("mobile_num").value == "") {
+
+                            popupModalErrorMessage("Please Enter Mobile No.","mobile_num");
+
+                            return false;
+                        } else if (document.getElementById("otpfield").value.replace(/^\s+|\s+$/g, '') == "" || document.getElementById("otpfield").value == "") {
+                            $("#messagehide").hide();
+                            popupModalErrorMessage("Please Enter OTP Generated", "otpfield");
+
+                            return false;
+                        }
+                        else if (document.getElementById("firstName").value.replace(/^\s+|\s+$/g, '') == "" || document.getElementById("firstName").value == "") {
+
+                            popupModalErrorMessage("Please Enter First Name", "firstName");
+
+                            return false;
+                        }
+//               document.getElementById('loginForm').addEventListener('submit',function (){
+//                   console.log('entered into the citizen app ::: ');
+//               document.getElementById('submitCitizen').disabled=true;
+//               setTimeout(()=>{
+//                   document.getElementById('submitCitizen').disabled=false;
+//               },60000);
+//           });
+                        $("#loginForm").submit();
+                        $("#loginForm").on('submit',function (){
+                    $('#submitCitizen').prop('disabled',true);
+                  setTimeout(()=>{
+                     $('#submitCitizen').prop('disabled',false);
+                   },300000);
+                        });
+                    }
+                }); 
+            }    
+
+        }
+                
+        //var fewSeconds=10;
+        function callOTPGeneration() { 
+             var csrfInput=$("input[name='_csrf']");
+             var csrfName=csrfInput.attr("name");
+             var csrfToken=csrfInput.val();
+            // document.getElementById("smstext1").style.display="block";
+            if (document.getElementById("mobile_num").value === "") {
+                popupModalErrorMessage("Please Enter Mobile No.","mobile_num");
+                return false;
+            } 
+//            else if(checkUserMobBlcoked())
+//            {
+//                 popupModalErrorMessage("User is Blocked for 5 Minutes.","mobile_num");
+//                return false;
+//            }  
+            else {
+                var postData={
+                     "mobileNo" : document.getElementById("mobile_num").value
+                };
+                postData[csrfName]=csrfToken;
+                 $.post("checkUserMobBlocked.htm",postData , function(data) {
+                     userMobileBlockFlag=data.userMobileBlockFlag;
+                      if(!userMobileBlockFlag)
+                {
+                    popupModalErrorMessage("User is Blocked for 15 Minutes Try again later..","mobile_num");
+                return false;
+                }
+                
+                else{
+                    
+                     /* Password Encryption - starts*/
+        var mobNo=document.getElementById("mobile_num").value;
+        var rkEncryptionKey = CryptoJS.enc.Base64.parse(rkEncKey.toString());
+        var rkEncryptionIv = CryptoJS.enc.Base64.parse(rkEncIv.toString());
+        var utf8Stringified = CryptoJS.enc.Utf8.parse(mobNo);
+        var encrypted = CryptoJS.AES.encrypt(utf8Stringified.toString(), rkEncryptionKey, 
+        {mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7, iv: rkEncryptionIv});
+       var  EncmobNo=encrypted.ciphertext.toString(CryptoJS.enc.Base64);
+       
+        /* Password Encryption - Ends*/
+                    
+                var tsTimeStamp = new Date().getTime();
+                
+                            
+//                document.getElementById("sendOtpID").disabled=true;
+//                document.getElementById("sendOtpID").value= "भेजा जा रहा है /Sending...";
+//                setTimeout(function(){                  
+//                    document.getElementById("sendOtpID").disabled=false; 
+//                    document.getElementById("sendOtpID").value= "ओटीपी फिर से भेजें /Resend OTP";
+//                }, 300000);      
+    var btn = document.getElementById("sendOtpID");
+var timerDisplay = document.getElementById("timerDisplay");
+
+btn.disabled = true;
+btn.value = "भेजा जा रहा है /Sending...";
+btn.style.backgroundColor = "lightgray"; // Change background to light gray
+btn.style.color = "#666666"; // Make text a bit darker for readability
+btn.style.cursor = "not-allowed";
+timerDisplay.style.display = "block"; // Make the timer visible in the UI
+
+var timeLeft = 300; // 5 minutes in seconds
+
+// Create a timer that runs every 1000ms (1 second)
+var timerId = setInterval(function() {
+    if (timeLeft <= 0) {
+        // Timer reached 0, stop the interval and reset the button/UI
+        clearInterval(timerId);
+        btn.style.backgroundColor = ""; 
+        btn.style.color = "";
+        btn.style.cursor = "pointer";
+        btn.disabled = false;
+        btn.value = "ओटीपी फिर से भेजें / Resend OTP";
+        timerDisplay.style.display = "none"; // Hide the timer text
+        timerDisplay.innerHTML = "";
+    } else {
+        // Calculate minutes and seconds
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
+        
+        // Add a leading zero if the number is less than 10
+        var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+        var formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+        
+        // Update the UI text below the button
+        timerDisplay.innerHTML = "ओटीपी फिर से भेजें / Resend OTP in : " + formattedMinutes + ":" + formattedSeconds;
+        
+        timeLeft--; // Decrease time by 1 second
+    }
+}, 1000);
+            
+                $.post("sendOtp.htm", {
+                    "time" : tsTimeStamp,
+                    "mobileNo" : EncmobNo
+                }, function(data) {
+                    if(data.cooldown){
+                        // ADD THIS: Reset the UI if the backend says they are in cooldown
+                    clearInterval(timerId); // Stop the timer
+                    btn.style.backgroundColor = ""; 
+                    btn.style.color = "";
+                    btn.style.cursor = "pointer";
+                    btn.disabled = false;
+                    btn.value = "ओटीपी भेजें / Send OTP"; // Reset to default text
+                    timerDisplay.style.display = "none";
+                    timerDisplay.innerHTML = "";
+                     popupModalErrorMessage(data.error);
+                 }
+                    if(document.getElementById("smsEnabled").value=="N")
+                    {
+                        document.getElementById("otpfield").value = data.otpToSend;
+                        document.getElementById("firstName").value = data.firstName;
+                    }
+                });
+                
+            }
+            
+        })   ;
+            }
+        }
+        
+        function numberValidation(data, id) {
+            var exp = /^[0-9]{1,12}$/;
+            if (!exp.test(data)) {
+                popupModalErrorMessage(document.getElementById("alrtPleaseEnterNumber").value, id);
+                document.getElementById(id).value = "";
+            }else {
+                return true;
+            }
+        }
+
+        function setMhaUserLoginUrl(){
+            if(document.getElementById("mhaUserName").value == ""){
+                fancyWarning(document.getElementById("alrtUserName").value, 'mhaUserName');    
+                return false;
+            }else if(document.getElementById("mhaUserPassword").value == ""){
+                fancyWarning('Please enter password', 'mhaUserPassword');        
+                return false;
+            }
+            document.getElementById("userFlag").value=2;        
+
+            $("#loginForm").submit();
+        }
+
+        function CommentsMinLength(a,MINLENGTH,id)
+        {
+            var length=a.length;
+            if (length<MINLENGTH)
+            {       
+                popupModalErrorMessage(document.getElementById("alrtmin").value+" "+MINLENGTH+" "+document.getElementById("alrtminchar").value,id);
+                document.getElementById(id).value='';
+                document.getElementById("sendOtpID").value= "Send OTP"  
+                return false;
+            }
+            else {
+                numberValidation(a,id);
+                document.getElementById("sendOtpID").value= "Send OTP"  
+            };
+         
+            
+        }
+        
+        
+        function alphaNumericValidation(id)  
+        {  
+            var letterNumber = /^[0-9a-zA-Z _]+$/;
+            var inputTxt=document.getElementById(id).value;
+            if(inputTxt.match(letterNumber)){
+                return true;
+            }                 
+            else  
+            {   
+                popupModalErrorMessage(document.getElementById("alrtAlphaNumeric").value, id);
+                document.getElementById(id).value="";
+                return false;   
+            }  
+        }
+            
+        function refreshCaptcha(captcha){
+            var d = new Date();
+        
+            document.getElementById(captcha).value="";
+            //$("#captchaCenter").attr("src","retrieveImageCaptcha.htm?"+d.getTime());
+            $("#captchaCenterCitizen").attr("src","retrieveImageCaptcha.htm?"+d.getTime());
+        
+        } 
+    </script>
+
+</html>

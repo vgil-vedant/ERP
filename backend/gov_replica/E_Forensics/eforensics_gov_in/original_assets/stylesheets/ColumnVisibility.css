@@ -1,0 +1,141 @@
+﻿.table thead th {
+    vertical-align: top !important;
+    border-bottom: 2px solid #e9ecef !important;
+    background-color: #c6d9ec !important;
+    font-weight: 700 !important;
+}
+
+.table td, .table th {
+    /*padding: .75rem !important;*/
+    /*vertical-align: middle !important;*/
+    border: 1px solid #0099D5 !important;
+    border-bottom-color: rgb(0, 153, 213) !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    white-space: normal !important;
+}
+
+.table.dataTable thead th, table.dataTable thead td {
+    /*padding: 0px 15px !important;*/
+    border-bottom: 0px solid #111 !important;
+}
+
+div.dt-button-collection button.dt-button.active:not(.disabled) {
+    background-image: linear-gradient(to bottom, #22dcef 0%, #8edbc6 100%);
+}
+
+.clearfix {
+    margin-top: 10px;
+}
+
+
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px;
+    border-bottom: 0;
+    font-weight: normal;
+}
+
+.active {
+    display: block !important;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 0px solid #111 !important;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 18px;
+    border-bottom: 0px solid #111 !important;
+}
+
+
+.dataTables_wrapper {
+    /*max-height: 500px;*/
+    overflow-x: hidden;
+    margin-top: 15px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+#WebGrid input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#WebGrid2 input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#WebGrid3 input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#WebGrid4 input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btntab {
+    background-color: #404e67;
+    color: white;
+    font-size: 15px;
+}
+
+.btn-wrap > button.Active {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-wrap-sub > button.Active {
+    background-color: #fff;
+    color: #000;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+div#c > div > div {
+    border: 1px solid #bdbdbd;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #e8e8e8;
+}
+
+.ellipsis {
+    display: none;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #fff;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
+    background-color: #ebe9e9;
+}
+
+[type="search"] {
+    outline-offset: -2px;
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-right: 5px !important;
+}

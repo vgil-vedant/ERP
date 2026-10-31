@@ -1,0 +1,151 @@
+{
+  "generatedAt": "2026-10-27T07:01:32.751Z",
+  "startUrl": "https://eforensics.gov.in",
+  "counts": {
+    "captured": 4,
+    "failed": 0,
+    "partial": 0,
+    "skipped": 1
+  },
+  "byPageType": {
+    "home": 1,
+    "contact": 1,
+    "login": 1,
+    "content": 1
+  },
+  "routes": [
+    {
+      "url": "https://eforensics.gov.in/",
+      "finalUrl": "https://eforensics.gov.in/",
+      "redirected": false,
+      "httpStatus": 200,
+      "title": "Home",
+      "pageType": "home",
+      "depth": 0,
+      "discoveredVia": "start URL",
+      "crawlStatus": "captured",
+      "error": null,
+      "localReplicaRoute": "/",
+      "slug": "index",
+      "formCount": 0,
+      "visibleFieldCount": 0,
+      "functionalFieldCount": 0,
+      "tableCount": 0,
+      "aliasUrls": [],
+      "screenshots": {
+        "desktop": "reference_pages/screenshots/index.desktop.png",
+        "desktop_viewport": "reference_pages/screenshots/index.desktop.viewport.png",
+        "tablet": "reference_pages/screenshots/index.tablet.png",
+        "mobile": "reference_pages/screenshots/index.mobile.png"
+      },
+      "documentHeight": 1935
+    },
+    {
+      "url": "https://eforensics.gov.in/Home/ContactUs",
+      "finalUrl": "https://eforensics.gov.in/Home/ContactUs",
+      "redirected": false,
+      "httpStatus": 200,
+      "title": "List of Districts",
+      "pageType": "contact",
+      "depth": 1,
+      "discoveredVia": "https://eforensics.gov.in/",
+      "crawlStatus": "captured",
+      "error": null,
+      "localReplicaRoute": "/Home/ContactUs",
+      "slug": "home_contactus",
+      "formCount": 0,
+      "visibleFieldCount": 0,
+      "functionalFieldCount": 0,
+      "tableCount": 0,
+      "aliasUrls": [],
+      "screenshots": {
+        "desktop": "reference_pages/screenshots/home_contactus.desktop.png",
+        "desktop_viewport": "reference_pages/screenshots/home_contactus.desktop.viewport.png",
+        "tablet": "reference_pages/screenshots/home_contactus.tablet.png",
+        "mobile": "reference_pages/screenshots/home_contactus.mobile.png"
+      },
+      "documentHeight": 935
+    },
+    {
+      "url": "https://eforensics.gov.in/Login",
+      "finalUrl": "https://eforensics.gov.in/Login",
+      "redirected": false,
+      "httpStatus": 200,
+      "title": "Login",
+      "pageType": "login",
+      "depth": 1,
+      "discoveredVia": "https://eforensics.gov.in/",
+      "crawlStatus": "captured",
+      "error": null,
+      "localReplicaRoute": "/Login",
+      "slug": "login",
+      "formCount": 1,
+      "visibleFieldCount": 3,
+      "functionalFieldCount": 3,
+      "tableCount": 0,
+      "aliasUrls": [],
+      "screenshots": {
+        "desktop": "reference_pages/screenshots/login.desktop.png",
+        "desktop_viewport": "reference_pages/screenshots/login.desktop.viewport.png",
+        "tablet": "reference_pages/screenshots/login.tablet.png",
+        "mobile": "reference_pages/screenshots/login.mobile.png"
+      },
+      "documentHeight": 1161
+    },
+    {
+      "url": "https://eforensics.gov.in/Authorize/RedirectToAuthorization",
+      "finalUrl": null,
+      "redirected": false,
+      "httpStatus": 200,
+      "title": null,
+      "pageType": null,
+      "depth": 1,
+      "discoveredVia": "https://eforensics.gov.in/",
+      "crawlStatus": "off-scope-redirect",
+      "error": "redirected to janparichay.meripehchaan.gov.in, which is outside the authorized scope",
+      "localReplicaRoute": null,
+      "slug": "authorize_redirecttoauthorization",
+      "formCount": 0,
+      "visibleFieldCount": 0,
+      "functionalFieldCount": 0,
+      "tableCount": 0,
+      "aliasUrls": [],
+      "screenshots": {},
+      "documentHeight": null
+    },
+    {
+      "url": "https://eforensics.gov.in/Forget/ForgetPassword",
+      "finalUrl": "https://eforensics.gov.in/Forget/ForgetPassword",
+      "redirected": false,
+      "httpStatus": 200,
+      "title": "Forgot Password",
+      "pageType": "content",
+      "depth": 2,
+      "discoveredVia": "https://eforensics.gov.in/Login",
+      "crawlStatus": "captured",
+      "error": null,
+      "localReplicaRoute": "/Forget/ForgetPassword",
+      "slug": "forget_forgetpassword",
+      "formCount": 1,
+      "visibleFieldCount": 2,
+      "functionalFieldCount": 2,
+      "tableCount": 0,
+      "aliasUrls": [],
+      "screenshots": {
+        "desktop": "reference_pages/screenshots/forget_forgetpassword.desktop.png",
+        "desktop_viewport": "reference_pages/screenshots/forget_forgetpassword.desktop.viewport.png",
+        "tablet": "reference_pages/screenshots/forget_forgetpassword.tablet.png",
+        "mobile": "reference_pages/screenshots/forget_forgetpassword.mobile.png"
+      },
+      "documentHeight": 1161
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://eforensics.gov.in/Authorize/RedirectToAuthorization",
+      "reason": "redirected off-scope to janparichay.meripehchaan.gov.in; not captured",
+      "landedOn": "https://janparichay.meripehchaan.gov.in/v1/pehchaan/login.html?service=passive&active=true&rm_5=false&continue=https%3A%2F%2Fjan_com%2Fmail%2F&pp=1&scc=1&lmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&sid=eforensicsstagingfrrjc8nyqw-prod&v=2.0&lang=en&urlid=058a202a-0d46-46d0-9738-a8f7f0d3f214",
+      "via": "https://eforensics.gov.in/"
+    }
+  ]
+}

@@ -1,0 +1,5031 @@
+{
+  "generatedAt": "2026-10-27T05:24:17.301Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "method": "Each replica route was rendered in Chromium at the same three viewports used for the reference capture, screenshotted full-page, and compared pixel by pixel with pixelmatch (threshold 0.18, anti-aliasing ignored). Images of differing height are padded to a common canvas, so a longer or shorter page counts as a difference rather than being cropped away. Comparison height is capped at 6000px.",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1366,
+      "height": 900
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "tolerance": 0.12,
+  "counts": {
+    "routesCompared": 30,
+    "comparable": 30,
+    "withinTolerance": 5,
+    "outsideTolerance": 25,
+    "replicaRoutesWithConsoleErrors": 1,
+    "replicaRoutesWithFailedRequests": 1
+  },
+  "rawDesktopDifferenceRatio": {
+    "mean": 0.2829,
+    "note": "Measured with the replica's demonstration banner left in place, so every row below it is displaced relative to the original. Reported for completeness; the banner-aligned figure below is the better measure of layout fidelity."
+  },
+  "desktopDifferenceRatio": {
+    "mean": 0.2365,
+    "median": 0.2488,
+    "best": 0.0744,
+    "worst": 0.4305
+  },
+  "expectedDifferences": [
+    "A demonstration banner runs across the top of every replica page. The original has no such banner, so every page differs by that strip and everything below it is displaced downwards.",
+    "The official NPIP wordmark, the National Emblem and the NIC logo are replaced by a neutral placeholder mark, deliberately, so the replica cannot be mistaken for the official service.",
+    "The home page hero on the original is a photographic carousel. The replica uses a flat gradient: the photograph is government material that is not ours to redistribute.",
+    "Figures differ because the replica reports its own synthetic database, not the original's live statistics.",
+    "The original renders its select controls through the Chosen jQuery widget. The replica uses native selects, which the browser paints differently."
+  ],
+  "honesty": "These are measured pixel ratios from the images in reference_pages/screenshots/ and replica_screenshots/, with the diffs in comparison/. No similarity figure in this project is asserted without one of these measurements behind it, and no page is claimed to match the original exactly.",
+  "routes": [
+    {
+      "slug": "npip_public_home",
+      "demoBannerHeightPx": 36,
+      "route": "/",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/Home",
+      "pageType": "home",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 405,
+          "w": 1366,
+          "h": 686
+        },
+        "footer": {
+          "x": 0,
+          "y": 1137,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 1352
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1352,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1250
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1352
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 102,
+          "heightDeltaExcludingBanner": 66,
+          "raw": {
+            "differingPixels": 611498,
+            "totalPixels": 1846832,
+            "differenceRatio": 0.3311,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_home.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 403635,
+            "totalPixels": 1797656,
+            "differenceRatio": 0.2245,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_home.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2245,
+          "similarity": 0.7755,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_home.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_home.desktop.png",
+          "diffImage": "comparison/npip_public_home.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1856,
+          "referenceSize": {
+            "w": 768,
+            "h": 1394
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1856
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 462,
+          "heightDeltaExcludingBanner": 426,
+          "raw": {
+            "differingPixels": 881859,
+            "totalPixels": 1585024,
+            "differenceRatio": 0.5564,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_home.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 830502,
+            "totalPixels": 1554280,
+            "differenceRatio": 0.5343,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_home.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.5343,
+          "similarity": 0.4657,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_home.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_home.tablet.png",
+          "diffImage": "comparison/npip_public_home.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2563,
+          "referenceSize": {
+            "w": 390,
+            "h": 2232
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2563
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 331,
+          "heightDeltaExcludingBanner": 295,
+          "raw": {
+            "differingPixels": 563243,
+            "totalPixels": 999570,
+            "differenceRatio": 0.5635,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_home.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 519722,
+            "totalPixels": 985530,
+            "differenceRatio": 0.5274,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_home.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.5274,
+          "similarity": 0.4726,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_home.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_home.mobile.png",
+          "diffImage": "comparison/npip_public_home.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2245,
+      "desktopRawDifferenceRatio": 0.3311
+    },
+    {
+      "slug": "npip_public_selectmisstate.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/SelectMISState",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/SelectMISState",
+      "pageType": "statistics",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 1453
+        },
+        "footer": {
+          "x": 0,
+          "y": 1690,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 320,
+          "w": 1174,
+          "h": 1296
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1905
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1905,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1905
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1005,
+          "heightDeltaExcludingBanner": 969,
+          "raw": {
+            "differingPixels": 853080,
+            "totalPixels": 2602230,
+            "differenceRatio": 0.3278,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_selectmisstate.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 732389,
+            "totalPixels": 2553054,
+            "differenceRatio": 0.2869,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_selectmisstate.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2869,
+          "similarity": 0.7131,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_selectmisstate.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_selectmisstate.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_selectmisstate.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 2727,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 2727
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1703,
+          "heightDeltaExcludingBanner": 1667,
+          "raw": {
+            "differingPixels": 607760,
+            "totalPixels": 2328858,
+            "differenceRatio": 0.261,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_selectmisstate.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 565938,
+            "totalPixels": 2298114,
+            "differenceRatio": 0.2463,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_selectmisstate.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2463,
+          "similarity": 0.7537,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_selectmisstate.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_selectmisstate.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_selectmisstate.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 3603,
+          "referenceSize": {
+            "w": 390,
+            "h": 1129
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 3603
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 2474,
+          "heightDeltaExcludingBanner": 2438,
+          "raw": {
+            "differingPixels": 501177,
+            "totalPixels": 1405170,
+            "differenceRatio": 0.3567,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_selectmisstate.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 473769,
+            "totalPixels": 1391130,
+            "differenceRatio": 0.3406,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_selectmisstate.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.3406,
+          "similarity": 0.6594,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_selectmisstate.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_selectmisstate.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_selectmisstate.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2869,
+      "desktopRawDifferenceRatio": 0.3278
+    },
+    {
+      "slug": "citizenservice",
+      "demoBannerHeightPx": 36,
+      "route": "/citizenservice",
+      "originalUrl": "https://eprisons.nic.in/citizenservice",
+      "pageType": "content",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": null,
+        "nav": null,
+        "main": {
+          "x": 0,
+          "y": 133,
+          "w": 1366,
+          "h": 630
+        },
+        "footer": null,
+        "firstForm": {
+          "x": 403,
+          "y": 241,
+          "w": 440,
+          "h": 249
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 908,
+          "referenceSize": {
+            "w": 1366,
+            "h": 908
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -8,
+          "heightDeltaExcludingBanner": -44,
+          "raw": {
+            "differingPixels": 249822,
+            "totalPixels": 1240328,
+            "differenceRatio": 0.2014,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 211260,
+            "totalPixels": 1240328,
+            "differenceRatio": 0.1703,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1703,
+          "similarity": 0.8297,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice.desktop.png",
+          "replicaImage": "replica_screenshots/citizenservice.desktop.png",
+          "diffImage": "comparison/citizenservice.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1025,
+          "referenceSize": {
+            "w": 768,
+            "h": 1025
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -1,
+          "heightDeltaExcludingBanner": -37,
+          "raw": {
+            "differingPixels": 169438,
+            "totalPixels": 787200,
+            "differenceRatio": 0.2152,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 149528,
+            "totalPixels": 787200,
+            "differenceRatio": 0.1899,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.1899,
+          "similarity": 0.8101,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice.tablet.png",
+          "replicaImage": "replica_screenshots/citizenservice.tablet.png",
+          "diffImage": "comparison/citizenservice.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 855,
+          "referenceSize": {
+            "w": 390,
+            "h": 855
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 844
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -11,
+          "heightDeltaExcludingBanner": -47,
+          "raw": {
+            "differingPixels": 83297,
+            "totalPixels": 333450,
+            "differenceRatio": 0.2498,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 78693,
+            "totalPixels": 333450,
+            "differenceRatio": 0.236,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.236,
+          "similarity": 0.764,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice.mobile.png",
+          "replicaImage": "replica_screenshots/citizenservice.mobile.png",
+          "diffImage": "comparison/citizenservice.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1703,
+      "desktopRawDifferenceRatio": 0.2014
+    },
+    {
+      "slug": "legalaid_secure_login.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/Legalaid/Secure/Login",
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "pageType": "login",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 484
+        },
+        "footer": {
+          "x": 0,
+          "y": 721,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 96,
+          "y": 371,
+          "w": 460,
+          "h": 272
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 936
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 936,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 936
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 36,
+          "heightDeltaExcludingBanner": 0,
+          "raw": {
+            "differingPixels": 395995,
+            "totalPixels": 1278576,
+            "differenceRatio": 0.3097,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/legalaid_secure_login.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 386024,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.314,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/legalaid_secure_login.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.314,
+          "similarity": 0.686,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/legalaid_secure_login.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/legalaid_secure_login.aspx.desktop.png",
+          "diffImage": "comparison/legalaid_secure_login.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1129,
+          "referenceSize": {
+            "w": 770,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1129
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 105,
+          "heightDeltaExcludingBanner": 69,
+          "raw": {
+            "differingPixels": 311809,
+            "totalPixels": 964166,
+            "differenceRatio": 0.3234,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/legalaid_secure_login.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 306975,
+            "totalPixels": 933422,
+            "differenceRatio": 0.3289,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/legalaid_secure_login.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.3289,
+          "similarity": 0.6711,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/legalaid_secure_login.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/legalaid_secure_login.aspx.tablet.png",
+          "diffImage": "comparison/legalaid_secure_login.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 716,
+          "height": 1304,
+          "referenceSize": {
+            "w": 716,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1304
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 460,
+          "heightDeltaExcludingBanner": 424,
+          "raw": {
+            "differingPixels": 243296,
+            "totalPixels": 933664,
+            "differenceRatio": 0.2606,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/legalaid_secure_login.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 240050,
+            "totalPixels": 907888,
+            "differenceRatio": 0.2644,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/legalaid_secure_login.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.2644,
+          "similarity": 0.7356,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/legalaid_secure_login.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/legalaid_secure_login.aspx.mobile.png",
+          "diffImage": "comparison/legalaid_secure_login.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.314,
+      "desktopRawDifferenceRatio": 0.3097
+    },
+    {
+      "slug": "login",
+      "demoBannerHeightPx": 36,
+      "route": "/Login/Secure/Login",
+      "originalUrl": "https://eprisons.nic.in/Login/Secure/Login.aspx",
+      "pageType": "login",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 484
+        },
+        "footer": {
+          "x": 0,
+          "y": 721,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 96,
+          "y": 371,
+          "w": 460,
+          "h": 272
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 936
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 936,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 936
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 36,
+          "heightDeltaExcludingBanner": 0,
+          "raw": {
+            "differingPixels": 394308,
+            "totalPixels": 1278576,
+            "differenceRatio": 0.3084,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/login.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 384770,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.313,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/login.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.313,
+          "similarity": 0.687,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/login.desktop.png",
+          "replicaImage": "replica_screenshots/login.desktop.png",
+          "diffImage": "comparison/login.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1129,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1129
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 105,
+          "heightDeltaExcludingBanner": 69,
+          "raw": {
+            "differingPixels": 311194,
+            "totalPixels": 964166,
+            "differenceRatio": 0.3228,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/login.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 306848,
+            "totalPixels": 933422,
+            "differenceRatio": 0.3287,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/login.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.3287,
+          "similarity": 0.6713,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/login.tablet.png",
+          "replicaImage": "replica_screenshots/login.tablet.png",
+          "diffImage": "comparison/login.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 562,
+          "height": 1304,
+          "referenceSize": {
+            "w": 562,
+            "h": 889
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1304
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 415,
+          "heightDeltaExcludingBanner": 379,
+          "raw": {
+            "differingPixels": 286796,
+            "totalPixels": 732848,
+            "differenceRatio": 0.3913,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/login.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 278938,
+            "totalPixels": 712616,
+            "differenceRatio": 0.3914,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/login.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.3914,
+          "similarity": 0.6086,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/login.mobile.png",
+          "replicaImage": "replica_screenshots/login.mobile.png",
+          "diffImage": "comparison/login.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.313,
+      "desktopRawDifferenceRatio": 0.3084
+    },
+    {
+      "slug": "npip_public_myvisitregistration.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/MyVisitRegistration",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+      "pageType": "visit-service",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 1798
+        },
+        "footer": {
+          "x": 0,
+          "y": 2035,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 96,
+          "y": 314,
+          "w": 1174,
+          "h": 1665
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 2250
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 2250,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1144
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 2250
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1106,
+          "heightDeltaExcludingBanner": 1070,
+          "raw": {
+            "differingPixels": 800950,
+            "totalPixels": 3073500,
+            "differenceRatio": 0.2606,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitregistration.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 659653,
+            "totalPixels": 3024324,
+            "differenceRatio": 0.2181,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitregistration.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2181,
+          "similarity": 0.7819,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_myvisitregistration.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_myvisitregistration.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_myvisitregistration.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 2460,
+          "referenceSize": {
+            "w": 768,
+            "h": 1251
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 2460
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1209,
+          "heightDeltaExcludingBanner": 1173,
+          "raw": {
+            "differingPixels": 565218,
+            "totalPixels": 2100840,
+            "differenceRatio": 0.269,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitregistration.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 552670,
+            "totalPixels": 2070096,
+            "differenceRatio": 0.267,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitregistration.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.267,
+          "similarity": 0.733,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_myvisitregistration.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_myvisitregistration.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_myvisitregistration.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 3454,
+          "referenceSize": {
+            "w": 390,
+            "h": 2791
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 3454
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 663,
+          "heightDeltaExcludingBanner": 627,
+          "raw": {
+            "differingPixels": 486446,
+            "totalPixels": 1347060,
+            "differenceRatio": 0.3611,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitregistration.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 459033,
+            "totalPixels": 1333020,
+            "differenceRatio": 0.3444,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitregistration.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.3444,
+          "similarity": 0.6556,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_myvisitregistration.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_myvisitregistration.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_myvisitregistration.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2181,
+      "desktopRawDifferenceRatio": 0.2606
+    },
+    {
+      "slug": "npip_public_myvisitstatus.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/MyVisitStatus",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+      "pageType": "status-enquiry",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 429
+        },
+        "footer": {
+          "x": 0,
+          "y": 666,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 388,
+          "y": 217,
+          "w": 590,
+          "h": 393
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 346298,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.2817,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitstatus.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 113434,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.0923,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitstatus.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.0923,
+          "similarity": 0.9077,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_myvisitstatus.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_myvisitstatus.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_myvisitstatus.aspx.desktop.diff.png",
+          "withinTolerance": true
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1055,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1055
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 31,
+          "heightDeltaExcludingBanner": -5,
+          "raw": {
+            "differingPixels": 209397,
+            "totalPixels": 900970,
+            "differenceRatio": 0.2324,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitstatus.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 200232,
+            "totalPixels": 874496,
+            "differenceRatio": 0.229,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitstatus.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.229,
+          "similarity": 0.771,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_myvisitstatus.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_myvisitstatus.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_myvisitstatus.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1227,
+          "referenceSize": {
+            "w": 390,
+            "h": 1129
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1227
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 98,
+          "heightDeltaExcludingBanner": 62,
+          "raw": {
+            "differingPixels": 167267,
+            "totalPixels": 478530,
+            "differenceRatio": 0.3495,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitstatus.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 118962,
+            "totalPixels": 464490,
+            "differenceRatio": 0.2561,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_myvisitstatus.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.2561,
+          "similarity": 0.7439,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_myvisitstatus.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_myvisitstatus.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_myvisitstatus.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.0923,
+      "desktopRawDifferenceRatio": 0.2817
+    },
+    {
+      "slug": "npip_public_dashboard.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/DashBoard",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/DashBoard",
+      "pageType": "statistics",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 2388
+        },
+        "footer": {
+          "x": 0,
+          "y": 2625,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 593,
+          "w": 1174,
+          "h": 241
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 2840
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 2840,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1077
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 2840
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1763,
+          "heightDeltaExcludingBanner": 1727,
+          "raw": {
+            "differingPixels": 1092134,
+            "totalPixels": 3879440,
+            "differenceRatio": 0.2815,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboard.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 952999,
+            "totalPixels": 3830264,
+            "differenceRatio": 0.2488,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboard.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2488,
+          "similarity": 0.7512,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_dashboard.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_dashboard.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_dashboard.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 3208,
+          "referenceSize": {
+            "w": 768,
+            "h": 1925
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 3208
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1283,
+          "heightDeltaExcludingBanner": 1247,
+          "raw": {
+            "differingPixels": 908945,
+            "totalPixels": 2739632,
+            "differenceRatio": 0.3318,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboard.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 893136,
+            "totalPixels": 2708888,
+            "differenceRatio": 0.3297,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboard.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.3297,
+          "similarity": 0.6703,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_dashboard.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_dashboard.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_dashboard.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 3594,
+          "referenceSize": {
+            "w": 390,
+            "h": 2736
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 3594
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 858,
+          "heightDeltaExcludingBanner": 822,
+          "raw": {
+            "differingPixels": 718726,
+            "totalPixels": 1401660,
+            "differenceRatio": 0.5128,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboard.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 705783,
+            "totalPixels": 1387620,
+            "differenceRatio": 0.5086,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboard.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.5086,
+          "similarity": 0.4914,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_dashboard.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_dashboard.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_dashboard.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2488,
+      "desktopRawDifferenceRatio": 0.2815
+    },
+    {
+      "slug": "npipdashboard",
+      "demoBannerHeightPx": 36,
+      "route": "/NPIPDashboard",
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/",
+      "pageType": "statistics",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 60
+        },
+        "nav": {
+          "x": 617,
+          "y": 50,
+          "w": 653,
+          "h": 32
+        },
+        "main": {
+          "x": 80,
+          "y": 96,
+          "w": 1206,
+          "h": 1666
+        },
+        "footer": {
+          "x": 0,
+          "y": 1762,
+          "w": 1366,
+          "h": 51
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 382,
+          "w": 1174,
+          "h": 1322
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 1813
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1813,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1813
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 913,
+          "heightDeltaExcludingBanner": 877,
+          "raw": {
+            "differingPixels": 463091,
+            "totalPixels": 2476558,
+            "differenceRatio": 0.187,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 465337,
+            "totalPixels": 2427382,
+            "differenceRatio": 0.1917,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1917,
+          "similarity": 0.8083,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard.desktop.png",
+          "replicaImage": "replica_screenshots/npipdashboard.desktop.png",
+          "diffImage": "comparison/npipdashboard.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 2065,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 2065
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1041,
+          "heightDeltaExcludingBanner": 1005,
+          "raw": {
+            "differingPixels": 386777,
+            "totalPixels": 1585920,
+            "differenceRatio": 0.2439,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 384435,
+            "totalPixels": 1558272,
+            "differenceRatio": 0.2467,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2467,
+          "similarity": 0.7533,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard.tablet.png",
+          "replicaImage": "replica_screenshots/npipdashboard.tablet.png",
+          "diffImage": "comparison/npipdashboard.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2347,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2347
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1503,
+          "heightDeltaExcludingBanner": 1467,
+          "raw": {
+            "differingPixels": 249408,
+            "totalPixels": 915330,
+            "differenceRatio": 0.2725,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 251445,
+            "totalPixels": 901290,
+            "differenceRatio": 0.279,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.279,
+          "similarity": 0.721,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard.mobile.png",
+          "replicaImage": "replica_screenshots/npipdashboard.mobile.png",
+          "diffImage": "comparison/npipdashboard.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1917,
+      "desktopRawDifferenceRatio": 0.187
+    },
+    {
+      "slug": "npip_public_eprisonslivestatus.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/ePrisonsLiveStatus",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+      "pageType": "statistics",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 1412
+        },
+        "footer": {
+          "x": 0,
+          "y": 1649,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 253,
+          "w": 1174,
+          "h": 1322
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1864
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1864,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1822
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1864
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 42,
+          "heightDeltaExcludingBanner": 6,
+          "raw": {
+            "differingPixels": 486088,
+            "totalPixels": 2546224,
+            "differenceRatio": 0.1909,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivestatus.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 266315,
+            "totalPixels": 2497048,
+            "differenceRatio": 0.1067,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivestatus.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1067,
+          "similarity": 0.8933,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_eprisonslivestatus.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_eprisonslivestatus.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_eprisonslivestatus.aspx.desktop.diff.png",
+          "withinTolerance": true
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 2038,
+          "referenceSize": {
+            "w": 768,
+            "h": 1977
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 2038
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 61,
+          "heightDeltaExcludingBanner": 25,
+          "raw": {
+            "differingPixels": 339499,
+            "totalPixels": 1740452,
+            "differenceRatio": 0.1951,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivestatus.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 348547,
+            "totalPixels": 1709708,
+            "differenceRatio": 0.2039,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivestatus.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2039,
+          "similarity": 0.7961,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_eprisonslivestatus.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_eprisonslivestatus.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_eprisonslivestatus.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 700,
+          "height": 2328,
+          "referenceSize": {
+            "w": 700,
+            "h": 2328
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2254
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -74,
+          "heightDeltaExcludingBanner": -110,
+          "raw": {
+            "differingPixels": 277558,
+            "totalPixels": 1629600,
+            "differenceRatio": 0.1703,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivestatus.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 257640,
+            "totalPixels": 1629600,
+            "differenceRatio": 0.1581,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivestatus.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.1581,
+          "similarity": 0.8419,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_eprisonslivestatus.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_eprisonslivestatus.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_eprisonslivestatus.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1067,
+      "desktopRawDifferenceRatio": 0.1909
+    },
+    {
+      "slug": "npip_public_eprisonslivevisitorsstatus.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/ePrisonsLiveVisitorsStatus",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+      "pageType": "statistics",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 1412
+        },
+        "footer": {
+          "x": 0,
+          "y": 1649,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 253,
+          "w": 1174,
+          "h": 1322
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1864
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1864
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -36,
+          "heightDeltaExcludingBanner": -72,
+          "raw": {
+            "differingPixels": 474936,
+            "totalPixels": 2595400,
+            "differenceRatio": 0.183,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivevisitorsstatus.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 418757,
+            "totalPixels": 2595400,
+            "differenceRatio": 0.1613,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivevisitorsstatus.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1613,
+          "similarity": 0.8387,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_eprisonslivevisitorsstatus.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_eprisonslivevisitorsstatus.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_eprisonslivevisitorsstatus.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 2077,
+          "referenceSize": {
+            "w": 768,
+            "h": 2077
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 2038
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -39,
+          "heightDeltaExcludingBanner": -75,
+          "raw": {
+            "differingPixels": 371571,
+            "totalPixels": 1773758,
+            "differenceRatio": 0.2095,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivevisitorsstatus.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 426711,
+            "totalPixels": 1773758,
+            "differenceRatio": 0.2406,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivevisitorsstatus.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2406,
+          "similarity": 0.7594,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_eprisonslivevisitorsstatus.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_eprisonslivevisitorsstatus.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_eprisonslivevisitorsstatus.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 525,
+          "height": 2654,
+          "referenceSize": {
+            "w": 525,
+            "h": 2654
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2290
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -364,
+          "heightDeltaExcludingBanner": -400,
+          "raw": {
+            "differingPixels": 485515,
+            "totalPixels": 1393350,
+            "differenceRatio": 0.3485,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivevisitorsstatus.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 483511,
+            "totalPixels": 1393350,
+            "differenceRatio": 0.347,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_eprisonslivevisitorsstatus.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.347,
+          "similarity": 0.653,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_eprisonslivevisitorsstatus.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_eprisonslivevisitorsstatus.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_eprisonslivevisitorsstatus.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1613,
+      "desktopRawDifferenceRatio": 0.183
+    },
+    {
+      "slug": "npip_public_parolejumper.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/ParoleJumper",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+      "pageType": "listing",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 978
+        },
+        "footer": {
+          "x": 0,
+          "y": 1215,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 96,
+          "y": 253,
+          "w": 1174,
+          "h": 56
+        },
+        "firstTable": {
+          "x": 96,
+          "y": 325,
+          "w": 1174,
+          "h": 762
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1430
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1430,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1430
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 530,
+          "heightDeltaExcludingBanner": 494,
+          "raw": {
+            "differingPixels": 800761,
+            "totalPixels": 1953380,
+            "differenceRatio": 0.4099,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_parolejumper.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 658752,
+            "totalPixels": 1904204,
+            "differenceRatio": 0.3459,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_parolejumper.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.3459,
+          "similarity": 0.6541,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_parolejumper.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_parolejumper.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_parolejumper.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 2378,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 2378
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1354,
+          "heightDeltaExcludingBanner": 1318,
+          "raw": {
+            "differingPixels": 601370,
+            "totalPixels": 2030812,
+            "differenceRatio": 0.2961,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_parolejumper.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 590871,
+            "totalPixels": 2000068,
+            "differenceRatio": 0.2954,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_parolejumper.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2954,
+          "similarity": 0.7046,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_parolejumper.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_parolejumper.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_parolejumper.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2952,
+          "referenceSize": {
+            "w": 390,
+            "h": 1179
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2952
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1773,
+          "heightDeltaExcludingBanner": 1737,
+          "raw": {
+            "differingPixels": 476614,
+            "totalPixels": 1151280,
+            "differenceRatio": 0.414,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_parolejumper.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 447511,
+            "totalPixels": 1137240,
+            "differenceRatio": 0.3935,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_parolejumper.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.3935,
+          "similarity": 0.6065,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_parolejumper.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_parolejumper.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_parolejumper.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.3459,
+      "desktopRawDifferenceRatio": 0.4099
+    },
+    {
+      "slug": "npip_public_absconder.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/Absconder",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/Absconder",
+      "pageType": "listing",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 978
+        },
+        "footer": {
+          "x": 0,
+          "y": 1215,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 96,
+          "y": 253,
+          "w": 1174,
+          "h": 56
+        },
+        "firstTable": {
+          "x": 96,
+          "y": 325,
+          "w": 1174,
+          "h": 762
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1430
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1430,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1430
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 530,
+          "heightDeltaExcludingBanner": 494,
+          "raw": {
+            "differingPixels": 799235,
+            "totalPixels": 1953380,
+            "differenceRatio": 0.4092,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_absconder.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 657192,
+            "totalPixels": 1904204,
+            "differenceRatio": 0.3451,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_absconder.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.3451,
+          "similarity": 0.6549,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_absconder.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_absconder.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_absconder.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 2342,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 2342
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1318,
+          "heightDeltaExcludingBanner": 1282,
+          "raw": {
+            "differingPixels": 585701,
+            "totalPixels": 2000068,
+            "differenceRatio": 0.2928,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_absconder.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 575136,
+            "totalPixels": 1969324,
+            "differenceRatio": 0.292,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_absconder.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.292,
+          "similarity": 0.708,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_absconder.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_absconder.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_absconder.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2934,
+          "referenceSize": {
+            "w": 390,
+            "h": 1179
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2934
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1755,
+          "heightDeltaExcludingBanner": 1719,
+          "raw": {
+            "differingPixels": 471918,
+            "totalPixels": 1144260,
+            "differenceRatio": 0.4124,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_absconder.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 442122,
+            "totalPixels": 1130220,
+            "differenceRatio": 0.3912,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_absconder.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.3912,
+          "similarity": 0.6088,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_absconder.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_absconder.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_absconder.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.3451,
+      "desktopRawDifferenceRatio": 0.4092
+    },
+    {
+      "slug": "npip_public_dashboardforeigner.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/DashBoardForeigner",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+      "pageType": "statistics",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 1412
+        },
+        "footer": {
+          "x": 0,
+          "y": 1649,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 253,
+          "w": 1174,
+          "h": 1322
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1864
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1864,
+          "referenceSize": {
+            "w": 1366,
+            "h": 960
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1864
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 904,
+          "heightDeltaExcludingBanner": 868,
+          "raw": {
+            "differingPixels": 839507,
+            "totalPixels": 2546224,
+            "differenceRatio": 0.3297,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboardforeigner.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 698008,
+            "totalPixels": 2497048,
+            "differenceRatio": 0.2795,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboardforeigner.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2795,
+          "similarity": 0.7205,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_dashboardforeigner.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_dashboardforeigner.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_dashboardforeigner.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 2038,
+          "referenceSize": {
+            "w": 768,
+            "h": 1083
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 2038
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 955,
+          "heightDeltaExcludingBanner": 919,
+          "raw": {
+            "differingPixels": 608931,
+            "totalPixels": 1740452,
+            "differenceRatio": 0.3499,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboardforeigner.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 599108,
+            "totalPixels": 1709708,
+            "differenceRatio": 0.3504,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboardforeigner.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.3504,
+          "similarity": 0.6496,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_dashboardforeigner.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_dashboardforeigner.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_dashboardforeigner.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2254,
+          "referenceSize": {
+            "w": 390,
+            "h": 1838
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2254
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 416,
+          "heightDeltaExcludingBanner": 380,
+          "raw": {
+            "differingPixels": 453901,
+            "totalPixels": 879060,
+            "differenceRatio": 0.5163,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboardforeigner.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 401365,
+            "totalPixels": 865020,
+            "differenceRatio": 0.464,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_dashboardforeigner.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.464,
+          "similarity": 0.536,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_dashboardforeigner.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_dashboardforeigner.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_dashboardforeigner.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2795,
+      "desktopRawDifferenceRatio": 0.3297
+    },
+    {
+      "slug": "npip_public_grievancelogin.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/grievancelogin",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/grievancelogin",
+      "pageType": "login",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 339
+        },
+        "footer": {
+          "x": 0,
+          "y": 576,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 96,
+          "y": 320,
+          "w": 520,
+          "h": 178
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 399573,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.325,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievancelogin.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 395557,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.3217,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievancelogin.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.3217,
+          "similarity": 0.6783,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_grievancelogin.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_grievancelogin.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_grievancelogin.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1024,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 314831,
+            "totalPixels": 874496,
+            "differenceRatio": 0.36,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievancelogin.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 315337,
+            "totalPixels": 874496,
+            "differenceRatio": 0.3606,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievancelogin.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.3606,
+          "similarity": 0.6394,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_grievancelogin.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_grievancelogin.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_grievancelogin.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1157,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1157
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 313,
+          "heightDeltaExcludingBanner": 277,
+          "raw": {
+            "differingPixels": 226755,
+            "totalPixels": 451230,
+            "differenceRatio": 0.5025,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievancelogin.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 223596,
+            "totalPixels": 437190,
+            "differenceRatio": 0.5114,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievancelogin.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.5114,
+          "similarity": 0.4886,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_grievancelogin.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_grievancelogin.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_grievancelogin.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.3217,
+      "desktopRawDifferenceRatio": 0.325
+    },
+    {
+      "slug": "npip_public_about.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/About",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/About",
+      "pageType": "about",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 409
+        },
+        "footer": {
+          "x": 0,
+          "y": 646,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 2338,
+          "referenceSize": {
+            "w": 1366,
+            "h": 2338
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -1438,
+          "heightDeltaExcludingBanner": -1474,
+          "raw": {
+            "differingPixels": 811054,
+            "totalPixels": 3193708,
+            "differenceRatio": 0.254,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_about.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 667916,
+            "totalPixels": 3193708,
+            "differenceRatio": 0.2091,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_about.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2091,
+          "similarity": 0.7909,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_about.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_about.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_about.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 3191,
+          "referenceSize": {
+            "w": 768,
+            "h": 3191
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1075
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -2116,
+          "heightDeltaExcludingBanner": -2152,
+          "raw": {
+            "differingPixels": 574102,
+            "totalPixels": 2725114,
+            "differenceRatio": 0.2107,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_about.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 569885,
+            "totalPixels": 2725114,
+            "differenceRatio": 0.2091,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_about.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2091,
+          "similarity": 0.7909,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_about.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_about.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_about.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 5147,
+          "referenceSize": {
+            "w": 390,
+            "h": 5147
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1392
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -3755,
+          "heightDeltaExcludingBanner": -3791,
+          "raw": {
+            "differingPixels": 511444,
+            "totalPixels": 2007330,
+            "differenceRatio": 0.2548,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_about.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 483747,
+            "totalPixels": 2007330,
+            "differenceRatio": 0.241,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_about.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.241,
+          "similarity": 0.759,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_about.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_about.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_about.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2091,
+      "desktopRawDifferenceRatio": 0.254
+    },
+    {
+      "slug": "npip_public_contactus.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/ContactUs",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/ContactUs",
+      "pageType": "contact",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 316
+        },
+        "footer": {
+          "x": 0,
+          "y": 553,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1139,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1139
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -239,
+          "heightDeltaExcludingBanner": -275,
+          "raw": {
+            "differingPixels": 728859,
+            "totalPixels": 1555874,
+            "differenceRatio": 0.4685,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_contactus.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 582465,
+            "totalPixels": 1555874,
+            "differenceRatio": 0.3744,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_contactus.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.3744,
+          "similarity": 0.6256,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_contactus.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_contactus.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_contactus.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1297,
+          "referenceSize": {
+            "w": 768,
+            "h": 1297
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -273,
+          "heightDeltaExcludingBanner": -309,
+          "raw": {
+            "differingPixels": 497847,
+            "totalPixels": 1107638,
+            "differenceRatio": 0.4495,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_contactus.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 485537,
+            "totalPixels": 1107638,
+            "differenceRatio": 0.4384,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_contactus.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.4384,
+          "similarity": 0.5616,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_contactus.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_contactus.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_contactus.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1983,
+          "referenceSize": {
+            "w": 390,
+            "h": 1983
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1218
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -765,
+          "heightDeltaExcludingBanner": -801,
+          "raw": {
+            "differingPixels": 427734,
+            "totalPixels": 773370,
+            "differenceRatio": 0.5531,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_contactus.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 398496,
+            "totalPixels": 773370,
+            "differenceRatio": 0.5153,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_contactus.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.5153,
+          "similarity": 0.4847,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_contactus.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_contactus.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_contactus.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.3744,
+      "desktopRawDifferenceRatio": 0.4685
+    },
+    {
+      "slug": "npip_public_grievance.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/grievance",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/grievance",
+      "pageType": "grievance",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 627
+        },
+        "footer": {
+          "x": 0,
+          "y": 864,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 96,
+          "y": 217,
+          "w": 1174,
+          "h": 580
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1079
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1079,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1079
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 179,
+          "heightDeltaExcludingBanner": 143,
+          "raw": {
+            "differingPixels": 680267,
+            "totalPixels": 1473914,
+            "differenceRatio": 0.4615,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievance.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 449259,
+            "totalPixels": 1424738,
+            "differenceRatio": 0.3153,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievance.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.3153,
+          "similarity": 0.6847,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_grievance.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_grievance.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_grievance.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1783,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1783
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 759,
+          "heightDeltaExcludingBanner": 723,
+          "raw": {
+            "differingPixels": 529780,
+            "totalPixels": 1522682,
+            "differenceRatio": 0.3479,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievance.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 523452,
+            "totalPixels": 1491938,
+            "differenceRatio": 0.3509,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievance.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.3509,
+          "similarity": 0.6491,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_grievance.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_grievance.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_grievance.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2253,
+          "referenceSize": {
+            "w": 390,
+            "h": 1933
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2253
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 320,
+          "heightDeltaExcludingBanner": 284,
+          "raw": {
+            "differingPixels": 343032,
+            "totalPixels": 878670,
+            "differenceRatio": 0.3904,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievance.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 290257,
+            "totalPixels": 864630,
+            "differenceRatio": 0.3357,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_grievance.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.3357,
+          "similarity": 0.6643,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_grievance.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_grievance.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_grievance.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.3153,
+      "desktopRawDifferenceRatio": 0.4615
+    },
+    {
+      "slug": "npip_public_privacypolicy.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/PrivacyPolicy",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+      "pageType": "policy",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 450
+        },
+        "footer": {
+          "x": 0,
+          "y": 687,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 902
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 902,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 902
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 2,
+          "heightDeltaExcludingBanner": -34,
+          "raw": {
+            "differingPixels": 415714,
+            "totalPixels": 1232132,
+            "differenceRatio": 0.3374,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_privacypolicy.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 179416,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.1459,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_privacypolicy.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1459,
+          "similarity": 0.8541,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_privacypolicy.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_privacypolicy.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_privacypolicy.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1076,
+          "referenceSize": {
+            "w": 768,
+            "h": 1064
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1076
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 12,
+          "heightDeltaExcludingBanner": -24,
+          "raw": {
+            "differingPixels": 218526,
+            "totalPixels": 918904,
+            "differenceRatio": 0.2378,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_privacypolicy.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 243300,
+            "totalPixels": 908656,
+            "differenceRatio": 0.2678,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_privacypolicy.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2678,
+          "similarity": 0.7322,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_privacypolicy.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_privacypolicy.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_privacypolicy.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1977,
+          "referenceSize": {
+            "w": 390,
+            "h": 1977
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1372
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -605,
+          "heightDeltaExcludingBanner": -641,
+          "raw": {
+            "differingPixels": 436438,
+            "totalPixels": 771030,
+            "differenceRatio": 0.566,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_privacypolicy.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 409336,
+            "totalPixels": 771030,
+            "differenceRatio": 0.5309,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_privacypolicy.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.5309,
+          "similarity": 0.4691,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_privacypolicy.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_privacypolicy.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_privacypolicy.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1459,
+      "desktopRawDifferenceRatio": 0.3374
+    },
+    {
+      "slug": "npip_public_termsofuse.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/TermsofUse",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/TermsofUse",
+      "pageType": "policy",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 393
+        },
+        "footer": {
+          "x": 0,
+          "y": 630,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1158,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1158
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -258,
+          "heightDeltaExcludingBanner": -294,
+          "raw": {
+            "differingPixels": 741385,
+            "totalPixels": 1581828,
+            "differenceRatio": 0.4687,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_termsofuse.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 588303,
+            "totalPixels": 1581828,
+            "differenceRatio": 0.3719,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_termsofuse.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.3719,
+          "similarity": 0.6281,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_termsofuse.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_termsofuse.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_termsofuse.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1491,
+          "referenceSize": {
+            "w": 768,
+            "h": 1491
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -467,
+          "heightDeltaExcludingBanner": -503,
+          "raw": {
+            "differingPixels": 515858,
+            "totalPixels": 1273314,
+            "differenceRatio": 0.4051,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_termsofuse.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 504274,
+            "totalPixels": 1273314,
+            "differenceRatio": 0.396,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_termsofuse.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.396,
+          "similarity": 0.604,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_termsofuse.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_termsofuse.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_termsofuse.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2584,
+          "referenceSize": {
+            "w": 390,
+            "h": 2584
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1315
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -1269,
+          "heightDeltaExcludingBanner": -1305,
+          "raw": {
+            "differingPixels": 450643,
+            "totalPixels": 1007760,
+            "differenceRatio": 0.4472,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_termsofuse.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 423869,
+            "totalPixels": 1007760,
+            "differenceRatio": 0.4206,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_termsofuse.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.4206,
+          "similarity": 0.5794,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_termsofuse.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_termsofuse.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_termsofuse.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.3719,
+      "desktopRawDifferenceRatio": 0.4687
+    },
+    {
+      "slug": "npip_public_codeofconduct.aspx",
+      "demoBannerHeightPx": 36,
+      "route": "/public/CodeofConduct",
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/CodeofConduct",
+      "pageType": "policy",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 369
+        },
+        "footer": {
+          "x": 0,
+          "y": 606,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 236747,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.1926,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_codeofconduct.aspx.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 176232,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.1433,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_codeofconduct.aspx.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1433,
+          "similarity": 0.8567,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_codeofconduct.aspx.desktop.png",
+          "replicaImage": "replica_screenshots/npip_public_codeofconduct.aspx.desktop.png",
+          "diffImage": "comparison/npip_public_codeofconduct.aspx.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1024,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 215521,
+            "totalPixels": 874496,
+            "differenceRatio": 0.2465,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_codeofconduct.aspx.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 201455,
+            "totalPixels": 874496,
+            "differenceRatio": 0.2304,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_codeofconduct.aspx.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2304,
+          "similarity": 0.7696,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_codeofconduct.aspx.tablet.png",
+          "replicaImage": "replica_screenshots/npip_public_codeofconduct.aspx.tablet.png",
+          "diffImage": "comparison/npip_public_codeofconduct.aspx.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1649,
+          "referenceSize": {
+            "w": 390,
+            "h": 1649
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1271
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -378,
+          "heightDeltaExcludingBanner": -414,
+          "raw": {
+            "differingPixels": 354709,
+            "totalPixels": 643110,
+            "differenceRatio": 0.5516,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_codeofconduct.aspx.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 351645,
+            "totalPixels": 643110,
+            "differenceRatio": 0.5468,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npip_public_codeofconduct.aspx.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.5468,
+          "similarity": 0.4532,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npip_public_codeofconduct.aspx.mobile.png",
+          "replicaImage": "replica_screenshots/npip_public_codeofconduct.aspx.mobile.png",
+          "diffImage": "comparison/npip_public_codeofconduct.aspx.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1433,
+      "desktopRawDifferenceRatio": 0.1926
+    },
+    {
+      "slug": "test",
+      "demoBannerHeightPx": 36,
+      "route": "/Test",
+      "originalUrl": "https://eprisons.nic.in/Test",
+      "pageType": "error",
+      "replicaStatus": 404,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 247
+        },
+        "footer": {
+          "x": 0,
+          "y": 450,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "failedRequests": [
+        {
+          "url": "http://127.0.0.1:4173/Test",
+          "failure": "HTTP 404"
+        }
+      ],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 373907,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.3041,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/test.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 315361,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.2565,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/test.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2565,
+          "similarity": 0.7435,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/test.desktop.png",
+          "replicaImage": "replica_screenshots/test.desktop.png",
+          "diffImage": "comparison/test.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1024,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 310134,
+            "totalPixels": 874496,
+            "differenceRatio": 0.3546,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/test.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 289377,
+            "totalPixels": 874496,
+            "differenceRatio": 0.3309,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/test.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.3309,
+          "similarity": 0.6691,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/test.tablet.png",
+          "replicaImage": "replica_screenshots/test.tablet.png",
+          "diffImage": "comparison/test.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 395,
+          "height": 1015,
+          "referenceSize": {
+            "w": 395,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1015
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 171,
+          "heightDeltaExcludingBanner": 135,
+          "raw": {
+            "differingPixels": 222850,
+            "totalPixels": 400925,
+            "differenceRatio": 0.5558,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/test.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 219861,
+            "totalPixels": 386705,
+            "differenceRatio": 0.5685,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/test.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.5685,
+          "similarity": 0.4315,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/test.mobile.png",
+          "replicaImage": "replica_screenshots/test.mobile.png",
+          "diffImage": "comparison/test.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2565,
+      "desktopRawDifferenceRatio": 0.3041
+    },
+    {
+      "slug": "citizenservice_login_contactus",
+      "demoBannerHeightPx": 36,
+      "route": "/CitiZenService/Login/ContactUs",
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+      "pageType": "contact",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 316
+        },
+        "footer": {
+          "x": 0,
+          "y": 553,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 537988,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.4376,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_contactus.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 529283,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.4305,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_contactus.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.4305,
+          "similarity": 0.5695,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_login_contactus.desktop.png",
+          "replicaImage": "replica_screenshots/citizenservice_login_contactus.desktop.png",
+          "diffImage": "comparison/citizenservice_login_contactus.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1024,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 381758,
+            "totalPixels": 874496,
+            "differenceRatio": 0.4365,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_contactus.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 401214,
+            "totalPixels": 874496,
+            "differenceRatio": 0.4588,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_contactus.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.4588,
+          "similarity": 0.5412,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_login_contactus.tablet.png",
+          "replicaImage": "replica_screenshots/citizenservice_login_contactus.tablet.png",
+          "diffImage": "comparison/citizenservice_login_contactus.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1218,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1218
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 374,
+          "heightDeltaExcludingBanner": 338,
+          "raw": {
+            "differingPixels": 273116,
+            "totalPixels": 475020,
+            "differenceRatio": 0.575,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_contactus.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 284035,
+            "totalPixels": 460980,
+            "differenceRatio": 0.6162,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_contactus.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.6162,
+          "similarity": 0.3838,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_login_contactus.mobile.png",
+          "replicaImage": "replica_screenshots/citizenservice_login_contactus.mobile.png",
+          "diffImage": "comparison/citizenservice_login_contactus.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.4305,
+      "desktopRawDifferenceRatio": 0.4376
+    },
+    {
+      "slug": "citizenservice_login_faq",
+      "demoBannerHeightPx": 36,
+      "route": "/CitiZenService/Login/FAQ",
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+      "pageType": "help",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 448
+        },
+        "footer": {
+          "x": 0,
+          "y": 685,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 415860,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.3383,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_faq.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 408033,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.3319,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_faq.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.3319,
+          "similarity": 0.6681,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_login_faq.desktop.png",
+          "replicaImage": "replica_screenshots/citizenservice_login_faq.desktop.png",
+          "diffImage": "comparison/citizenservice_login_faq.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1074,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1074
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 50,
+          "heightDeltaExcludingBanner": 14,
+          "raw": {
+            "differingPixels": 335041,
+            "totalPixels": 917196,
+            "differenceRatio": 0.3653,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_faq.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 321802,
+            "totalPixels": 886452,
+            "differenceRatio": 0.363,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_faq.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.363,
+          "similarity": 0.637,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_login_faq.tablet.png",
+          "replicaImage": "replica_screenshots/citizenservice_login_faq.tablet.png",
+          "diffImage": "comparison/citizenservice_login_faq.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1390,
+          "referenceSize": {
+            "w": 390,
+            "h": 1011
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1390
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 379,
+          "heightDeltaExcludingBanner": 343,
+          "raw": {
+            "differingPixels": 245904,
+            "totalPixels": 542100,
+            "differenceRatio": 0.4536,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_faq.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 241755,
+            "totalPixels": 528060,
+            "differenceRatio": 0.4578,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_login_faq.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.4578,
+          "similarity": 0.5422,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_login_faq.mobile.png",
+          "replicaImage": "replica_screenshots/citizenservice_login_faq.mobile.png",
+          "diffImage": "comparison/citizenservice_login_faq.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.3319,
+      "desktopRawDifferenceRatio": 0.3383
+    },
+    {
+      "slug": "citizenservice_visitor_registration",
+      "demoBannerHeightPx": 36,
+      "route": "/CitiZenService/Visitor/Registration",
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Visitor/Registration",
+      "pageType": "registration",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 78,
+          "w": 1366,
+          "h": 79
+        },
+        "nav": {
+          "x": 517,
+          "y": 101,
+          "w": 753,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 191,
+          "w": 1366,
+          "h": 789
+        },
+        "footer": {
+          "x": 0,
+          "y": 1026,
+          "w": 1366,
+          "h": 215
+        },
+        "firstForm": {
+          "x": 323,
+          "y": 217,
+          "w": 720,
+          "h": 753
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 157,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1241
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1241,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1241
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 341,
+          "heightDeltaExcludingBanner": 305,
+          "raw": {
+            "differingPixels": 463535,
+            "totalPixels": 1695206,
+            "differenceRatio": 0.2734,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_visitor_registration.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 435520,
+            "totalPixels": 1646030,
+            "differenceRatio": 0.2646,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_visitor_registration.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2646,
+          "similarity": 0.7354,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_visitor_registration.desktop.png",
+          "replicaImage": "replica_screenshots/citizenservice_visitor_registration.desktop.png",
+          "diffImage": "comparison/citizenservice_visitor_registration.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 854,
+          "height": 1415,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 854,
+            "h": 1415
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 391,
+          "heightDeltaExcludingBanner": 355,
+          "raw": {
+            "differingPixels": 356170,
+            "totalPixels": 1208410,
+            "differenceRatio": 0.2947,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_visitor_registration.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 349221,
+            "totalPixels": 1177666,
+            "differenceRatio": 0.2965,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_visitor_registration.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2965,
+          "similarity": 0.7035,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_visitor_registration.tablet.png",
+          "replicaImage": "replica_screenshots/citizenservice_visitor_registration.tablet.png",
+          "diffImage": "comparison/citizenservice_visitor_registration.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1904,
+          "referenceSize": {
+            "w": 390,
+            "h": 1068
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1904
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 836,
+          "heightDeltaExcludingBanner": 800,
+          "raw": {
+            "differingPixels": 255396,
+            "totalPixels": 742560,
+            "differenceRatio": 0.3439,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_visitor_registration.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 252630,
+            "totalPixels": 728520,
+            "differenceRatio": 0.3468,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/citizenservice_visitor_registration.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.3468,
+          "similarity": 0.6532,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/citizenservice_visitor_registration.mobile.png",
+          "replicaImage": "replica_screenshots/citizenservice_visitor_registration.mobile.png",
+          "diffImage": "comparison/citizenservice_visitor_registration.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2646,
+      "desktopRawDifferenceRatio": 0.2734
+    },
+    {
+      "slug": "npipdashboard_lockupreport",
+      "demoBannerHeightPx": 36,
+      "route": "/NPIPDashboard/lockupReport",
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+      "pageType": "statistics",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 60
+        },
+        "nav": {
+          "x": 617,
+          "y": 50,
+          "w": 653,
+          "h": 32
+        },
+        "main": {
+          "x": 80,
+          "y": 96,
+          "w": 1206,
+          "h": 4410
+        },
+        "footer": {
+          "x": 0,
+          "y": 4506,
+          "w": 1366,
+          "h": 51
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 186,
+          "w": 1174,
+          "h": 4262
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 4557
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 4557,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 4557
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 3657,
+          "heightDeltaExcludingBanner": 3621,
+          "raw": {
+            "differingPixels": 453790,
+            "totalPixels": 6224862,
+            "differenceRatio": 0.0729,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_lockupreport.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 459501,
+            "totalPixels": 6175686,
+            "differenceRatio": 0.0744,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_lockupreport.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.0744,
+          "similarity": 0.9256,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_lockupreport.desktop.png",
+          "replicaImage": "replica_screenshots/npipdashboard_lockupreport.desktop.png",
+          "diffImage": "comparison/npipdashboard_lockupreport.desktop.diff.png",
+          "withinTolerance": true
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 6000,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 6775
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 5751,
+          "heightDeltaExcludingBanner": 5715,
+          "raw": {
+            "differingPixels": 394580,
+            "totalPixels": 4608000,
+            "differenceRatio": 0.0856,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_lockupreport.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 394290,
+            "totalPixels": 4608000,
+            "differenceRatio": 0.0856,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_lockupreport.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.0856,
+          "similarity": 0.9144,
+          "heightCapped": true,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_lockupreport.tablet.png",
+          "replicaImage": "replica_screenshots/npipdashboard_lockupreport.tablet.png",
+          "diffImage": "comparison/npipdashboard_lockupreport.tablet.diff.png",
+          "withinTolerance": true
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 6000,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 11165
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 10321,
+          "heightDeltaExcludingBanner": 10285,
+          "raw": {
+            "differingPixels": 228972,
+            "totalPixels": 2340000,
+            "differenceRatio": 0.0979,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_lockupreport.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 226546,
+            "totalPixels": 2340000,
+            "differenceRatio": 0.0968,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_lockupreport.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.0968,
+          "similarity": 0.9032,
+          "heightCapped": true,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_lockupreport.mobile.png",
+          "replicaImage": "replica_screenshots/npipdashboard_lockupreport.mobile.png",
+          "diffImage": "comparison/npipdashboard_lockupreport.mobile.diff.png",
+          "withinTolerance": true
+        }
+      },
+      "desktopDifferenceRatio": 0.0744,
+      "desktopRawDifferenceRatio": 0.0729
+    },
+    {
+      "slug": "npipdashboard_parolejumper",
+      "demoBannerHeightPx": 36,
+      "route": "/NPIPDashboard/paroleJumper",
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+      "pageType": "listing",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 60
+        },
+        "nav": {
+          "x": 617,
+          "y": 50,
+          "w": 653,
+          "h": 32
+        },
+        "main": {
+          "x": 80,
+          "y": 96,
+          "w": 1206,
+          "h": 910
+        },
+        "footer": {
+          "x": 0,
+          "y": 1006,
+          "w": 1366,
+          "h": 51
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 186,
+          "w": 1174,
+          "h": 762
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 1057
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1057,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1057
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 157,
+          "heightDeltaExcludingBanner": 121,
+          "raw": {
+            "differingPixels": 234822,
+            "totalPixels": 1443862,
+            "differenceRatio": 0.1626,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_parolejumper.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 239830,
+            "totalPixels": 1394686,
+            "differenceRatio": 0.172,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_parolejumper.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.172,
+          "similarity": 0.828,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_parolejumper.desktop.png",
+          "replicaImage": "replica_screenshots/npipdashboard_parolejumper.desktop.png",
+          "diffImage": "comparison/npipdashboard_parolejumper.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1493,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1493
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 469,
+          "heightDeltaExcludingBanner": 433,
+          "raw": {
+            "differingPixels": 244154,
+            "totalPixels": 1146624,
+            "differenceRatio": 0.2129,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_parolejumper.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 239337,
+            "totalPixels": 1118976,
+            "differenceRatio": 0.2139,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_parolejumper.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2139,
+          "similarity": 0.7861,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_parolejumper.tablet.png",
+          "replicaImage": "replica_screenshots/npipdashboard_parolejumper.tablet.png",
+          "diffImage": "comparison/npipdashboard_parolejumper.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2301,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2301
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1457,
+          "heightDeltaExcludingBanner": 1421,
+          "raw": {
+            "differingPixels": 146672,
+            "totalPixels": 897390,
+            "differenceRatio": 0.1634,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_parolejumper.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 145795,
+            "totalPixels": 883350,
+            "differenceRatio": 0.165,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_parolejumper.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.165,
+          "similarity": 0.835,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_parolejumper.mobile.png",
+          "replicaImage": "replica_screenshots/npipdashboard_parolejumper.mobile.png",
+          "diffImage": "comparison/npipdashboard_parolejumper.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.172,
+      "desktopRawDifferenceRatio": 0.1626
+    },
+    {
+      "slug": "npipdashboard_absconder",
+      "demoBannerHeightPx": 36,
+      "route": "/NPIPDashboard/absconder",
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/absconder",
+      "pageType": "listing",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 60
+        },
+        "nav": {
+          "x": 617,
+          "y": 50,
+          "w": 653,
+          "h": 32
+        },
+        "main": {
+          "x": 80,
+          "y": 96,
+          "w": 1206,
+          "h": 910
+        },
+        "footer": {
+          "x": 0,
+          "y": 1006,
+          "w": 1366,
+          "h": 51
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 186,
+          "w": 1174,
+          "h": 762
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 1057
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1057,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1057
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 157,
+          "heightDeltaExcludingBanner": 121,
+          "raw": {
+            "differingPixels": 228485,
+            "totalPixels": 1443862,
+            "differenceRatio": 0.1582,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_absconder.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 232616,
+            "totalPixels": 1394686,
+            "differenceRatio": 0.1668,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_absconder.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1668,
+          "similarity": 0.8332,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_absconder.desktop.png",
+          "replicaImage": "replica_screenshots/npipdashboard_absconder.desktop.png",
+          "diffImage": "comparison/npipdashboard_absconder.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1493,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1493
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 469,
+          "heightDeltaExcludingBanner": 433,
+          "raw": {
+            "differingPixels": 240037,
+            "totalPixels": 1146624,
+            "differenceRatio": 0.2093,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_absconder.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 237048,
+            "totalPixels": 1118976,
+            "differenceRatio": 0.2118,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_absconder.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.2118,
+          "similarity": 0.7882,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_absconder.tablet.png",
+          "replicaImage": "replica_screenshots/npipdashboard_absconder.tablet.png",
+          "diffImage": "comparison/npipdashboard_absconder.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2283,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2283
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1439,
+          "heightDeltaExcludingBanner": 1403,
+          "raw": {
+            "differingPixels": 142035,
+            "totalPixels": 890370,
+            "differenceRatio": 0.1595,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_absconder.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 140981,
+            "totalPixels": 876330,
+            "differenceRatio": 0.1609,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_absconder.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.1609,
+          "similarity": 0.8391,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_absconder.mobile.png",
+          "replicaImage": "replica_screenshots/npipdashboard_absconder.mobile.png",
+          "diffImage": "comparison/npipdashboard_absconder.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1668,
+      "desktopRawDifferenceRatio": 0.1582
+    },
+    {
+      "slug": "npipdashboard_eprisonslivestatus",
+      "demoBannerHeightPx": 36,
+      "route": "/NPIPDashboard/ePrisonsLiveStatus",
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+      "pageType": "statistics",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 60
+        },
+        "nav": {
+          "x": 617,
+          "y": 50,
+          "w": 653,
+          "h": 32
+        },
+        "main": {
+          "x": 80,
+          "y": 96,
+          "w": 1206,
+          "h": 1470
+        },
+        "footer": {
+          "x": 0,
+          "y": 1566,
+          "w": 1366,
+          "h": 51
+        },
+        "firstForm": null,
+        "firstTable": {
+          "x": 96,
+          "y": 186,
+          "w": 1174,
+          "h": 1322
+        },
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 1617
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1617,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1617
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 717,
+          "heightDeltaExcludingBanner": 681,
+          "raw": {
+            "differingPixels": 248979,
+            "totalPixels": 2208822,
+            "differenceRatio": 0.1127,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_eprisonslivestatus.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 241168,
+            "totalPixels": 2159646,
+            "differenceRatio": 0.1117,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_eprisonslivestatus.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1117,
+          "similarity": 0.8883,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_eprisonslivestatus.desktop.png",
+          "replicaImage": "replica_screenshots/npipdashboard_eprisonslivestatus.desktop.png",
+          "diffImage": "comparison/npipdashboard_eprisonslivestatus.desktop.diff.png",
+          "withinTolerance": true
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1675,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1675
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 651,
+          "heightDeltaExcludingBanner": 615,
+          "raw": {
+            "differingPixels": 222263,
+            "totalPixels": 1286400,
+            "differenceRatio": 0.1728,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_eprisonslivestatus.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 220386,
+            "totalPixels": 1258752,
+            "differenceRatio": 0.1751,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_eprisonslivestatus.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.1751,
+          "similarity": 0.8249,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_eprisonslivestatus.tablet.png",
+          "replicaImage": "replica_screenshots/npipdashboard_eprisonslivestatus.tablet.png",
+          "diffImage": "comparison/npipdashboard_eprisonslivestatus.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1943,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1943
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1099,
+          "heightDeltaExcludingBanner": 1063,
+          "raw": {
+            "differingPixels": 139127,
+            "totalPixels": 757770,
+            "differenceRatio": 0.1836,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_eprisonslivestatus.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 133900,
+            "totalPixels": 743730,
+            "differenceRatio": 0.18,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_eprisonslivestatus.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.18,
+          "similarity": 0.82,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_eprisonslivestatus.mobile.png",
+          "replicaImage": "replica_screenshots/npipdashboard_eprisonslivestatus.mobile.png",
+          "diffImage": "comparison/npipdashboard_eprisonslivestatus.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1117,
+      "desktopRawDifferenceRatio": 0.1127
+    },
+    {
+      "slug": "npipdashboard_sitemap",
+      "demoBannerHeightPx": 36,
+      "route": "/NPIPDashboard/siteMap",
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/siteMap",
+      "pageType": "sitemap",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 60
+        },
+        "nav": {
+          "x": 617,
+          "y": 50,
+          "w": 653,
+          "h": 32
+        },
+        "main": {
+          "x": 80,
+          "y": 96,
+          "w": 1206,
+          "h": 446
+        },
+        "footer": {
+          "x": 0,
+          "y": 542,
+          "w": 1366,
+          "h": 51
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 133360,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.1085,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_sitemap.desktop.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 130214,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.1059,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_sitemap.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1059,
+          "similarity": 0.8941,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_sitemap.desktop.png",
+          "replicaImage": "replica_screenshots/npipdashboard_sitemap.desktop.png",
+          "diffImage": "comparison/npipdashboard_sitemap.desktop.diff.png",
+          "withinTolerance": true
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1024,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 147434,
+            "totalPixels": 786432,
+            "differenceRatio": 0.1875,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_sitemap.tablet.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 147638,
+            "totalPixels": 786432,
+            "differenceRatio": 0.1877,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_sitemap.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.1877,
+          "similarity": 0.8123,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_sitemap.tablet.png",
+          "replicaImage": "replica_screenshots/npipdashboard_sitemap.tablet.png",
+          "diffImage": "comparison/npipdashboard_sitemap.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 844,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 844
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 93777,
+            "totalPixels": 329160,
+            "differenceRatio": 0.2849,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_sitemap.mobile.diff.png"
+          },
+          "bannerAligned": {
+            "differingPixels": 90609,
+            "totalPixels": 329160,
+            "differenceRatio": 0.2753,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Prisons/eprisons_nic_in/comparison/npipdashboard_sitemap.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.2753,
+          "similarity": 0.7247,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/npipdashboard_sitemap.mobile.png",
+          "replicaImage": "replica_screenshots/npipdashboard_sitemap.mobile.png",
+          "diffImage": "comparison/npipdashboard_sitemap.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1059,
+      "desktopRawDifferenceRatio": 0.1085
+    }
+  ]
+}

@@ -1,0 +1,434 @@
+.header-bg {
+    width: 100%;
+    background: hsl(174.67deg 50.56% 82.55% / 58%);
+    box-shadow: 0 1px 1px #0000001a;
+}
+
+.login-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    overflow: auto !important;
+    background-image: linear-gradient( rgba(237, 255, 255, 0.8), rgba(237, 255, 255, 0.8) ), url(../Images/login_bg.jpg);
+}
+
+/* =========================
+   NAV TABS
+========================= */
+
+.nav-tabs {
+    border: none;
+    justify-content: space-between;
+}
+
+    .nav-tabs .nav-item {
+    }
+
+        .nav-tabs .nav-item .nav-link {
+            font-weight: 700;
+            font-family: 'Nunito', sans-serif;
+            color: #2c78db;
+            background: #ffffff;
+            border-radius: 0;
+            border: none;
+            min-width: 155px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+
+            .nav-tabs .nav-item .nav-link.active {
+                color: #ffffff;
+                background: #2c78db;
+                border: none;
+                border-radius: 0;
+            }
+
+.tab-content {
+    padding: 40px 0;
+    min-height: 200px;
+}
+
+/* =========================
+   LOGIN WRAPPER
+========================= */
+
+.login-wrap {
+    display: table;
+    /* position: absolute;*/
+    inset: 0;
+    margin: auto;
+    width: 550px;
+    height: auto;
+    overflow: hidden;
+    padding: 5px;
+}
+
+/* =========================
+   LOGIN CARD DESIGN
+========================= */
+
+.login-bgg {
+    width: 100%;
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 30px;
+    border-bottom: solid 10px #07449f;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 4px rgb(19 35 47 / 30%);
+    overflow: hidden;
+}
+
+.login-topbg1 {
+    width: 100%;
+    height: 350px;
+    background: #05696c;
+    position: absolute;
+    inset: 0;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.login-topbg2 {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(314deg, #228083, #05696c);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-topbg3 {
+    width: 70px;
+    height: 70px;
+    background: #07449f;
+    position: absolute;
+    bottom: -35px;
+    right: -35px;
+    border-radius: 50%;
+}
+
+.captchtext {
+    width: 255px;
+    margin-left: -30px !important;
+}
+/* =========================
+   USER SECTION
+========================= */
+
+.user-text-wrap {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.user-icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+    .user-icon i {
+        color: #07449f;
+        font-size: 35px;
+    }
+
+    .user-icon img {
+        width: 100%;
+    }
+
+.brand {
+    width: 100%;
+    float: left;
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.content {
+    padding: 15px;
+    text-align: center;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+label {
+    display: block;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.login-wrap .form-control {
+    line-height: 35px;
+    border-radius: 40px;
+    font-weight: 500;
+    margin-left: 20px;
+    padding-left: 35px;
+}
+
+.form-control:focus {
+    color: #000000;
+    background: #eafaf1;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: none;
+}
+
+input:focus {
+    border-color: #07449f;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .input-box .icon-bg {
+        font-size: 27px;
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: var(--bs-body-color);
+        background-color: var(--bs-body-bg);
+        background-clip: padding-box;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+    }
+
+.toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 25px;
+    color: #000000;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.login-wrap .btnLogin {
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 40px;
+    background: #07449f;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+    .login-wrap .btnLogin:hover {
+        background: #000000;
+        color: #ffffff;
+    }
+
+input[type="submit" i]:focus-visible {
+    outline: none;
+    background: #edb33e;
+    color: #ffffff;
+}
+
+.btncancel {
+    height: 44px;
+    width: 130px;
+    border-radius: 40px;
+    background: #666666;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+    .btncancel:hover {
+        background: #000000;
+        color: #ffffff;
+    }
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.forgot-pass {
+    text-align: center;
+}
+
+    .forgot-pass a {
+        color: #666;
+        text-decoration: none;
+        font-style: italic;
+        font-weight: 500;
+    }
+
+        .forgot-pass a:hover {
+            color: #000000;
+            text-decoration: none;
+        }
+
+/* =========================
+   OR LINE
+========================= */
+
+.or-line {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 0 15px 0;
+    border-bottom: solid 1px #ccc;
+}
+
+    .or-line span {
+        font-size: 18px;
+        font-weight: 600;
+        position: absolute;
+        top: -13px;
+        background: #ffffff;
+        padding: 0 10px;
+        color: #666;
+    }
+
+/* =========================
+   LOGO BUTTONS
+========================= */
+
+.logo-button {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+    .logo-button li {
+        list-style: none;
+        float: left;
+        width: 33.333%;
+    }
+
+        .logo-button li a img {
+            width: 100px;
+            transition: transform 0.5s;
+        }
+
+            .logo-button li a img:hover {
+                transform: scale(1.3) !important;
+                cursor: pointer;
+            }
+
+/* =========================
+   RADIO OPTIONS
+========================= */
+
+.radio-option {
+    margin-bottom: 15px;
+}
+
+    .radio-option tbody tr td {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        padding: 7px 0;
+    }
+
+        .radio-option tbody tr td label {
+            margin: 0;
+            font-weight: 500;
+        }
+
+/* =========================
+   FOOTER
+========================= */
+
+#footer {
+    clear: both;
+    padding: 0 !important;
+    background: #fff;
+}
+
+.servicedesk {
+    background: #f7e5b7;
+    color: #442002;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.disclaimer {
+    background: #40362e;
+    text-align: center;
+    font-size: 12px;
+    color: #ada7a2;
+    padding: 2px 0;
+}
+
+.footer {
+    background: #ffffff;
+}
+
+.copyright {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.labelText {
+    font-size: 15px;
+    font-weight: 700;
+    color: #5d3812;
+}
+
+.footerLink {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+    .footerLink li {
+        float: left;
+        padding: 0 15px;
+        line-height: 12px;
+        font-size: 14px;
+        font-weight: 600;
+        border-right: 1px solid #666;
+        list-style: none;
+    }
+
+        .footerLink li a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .footerLink li:last-child {
+            padding: 0 0 0 15px;
+            border-right: 0 none;
+        }

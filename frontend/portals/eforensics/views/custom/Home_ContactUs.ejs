@@ -1,0 +1,39 @@
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/static/css/custom.css">
+<%- include('../partials/header') %>
+<main id="main">
+  <section class="ef-contact-stage">
+    <div class="ef-contact-card">
+      <p class="ef-contact-card__bar">Contact Details</p>
+      <div class="ef-contact-card__box">
+        <h1 class="ef-contact-card__head">Placeholder Organisation</h1>
+        <div class="ef-contact-card__body">
+          <p style="margin:0 0 12px"><strong>Address:</strong> Not reproduced.</p>
+          <p style="margin:0">
+            The original prints a real postal address in this card. This replica does not
+            republish it: it is not a contact channel for anyone, and sending mail to an
+            address copied from a demonstration helps no one.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ef-contact">
+    <div class="ef-contact__inner">
+      <h2 class="ef-contact__title">Contact Us</h2>
+      <div class="ef-contact__row">
+        <% [['Phone Number','phone'],['E-Mail Address','email'],['Headquarters','location'],['Other Address','location']].forEach(function (c) { %>
+          <div class="ef-contact__item">
+            <%- include('../partials/img/' + c[1], { cls: 'ef-contact__img' }) %>
+            <div>
+              <p class="ef-contact__label"><%= c[0] %></p>
+              <p class="ef-contact__value">Placeholder only — not copied from the original.</p>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('../partials/footer') %>

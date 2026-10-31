@@ -1,0 +1,213 @@
+{
+  "generatedAt": "2026-10-27T07:03:55.966Z",
+  "category": "CCTNS",
+  "confidence": "medium",
+  "status": "confirmed",
+  "decidedBy": "page content, strongest in page title",
+  "wouldHoldWithoutHostname": true,
+  "governmentHost": true,
+  "method": "Terms are scored by the zone they appear in, not by raw frequency: page title x30, headings x12, navigation labels x10, meta description/keywords x8, body text x1. Repetition is damped so breadth of evidence beats one repeated phrase, and a category must have at least one defining term outside body text to win -- a footer address must not decide what a site is for.",
+  "thresholds": {
+    "CONFIDENT_SCORE": 40,
+    "CONFIDENT_MARGIN": 1.35,
+    "STRONG": 1,
+    "WEAK": 0.18,
+    "HOST_WEIGHT": 10
+  },
+  "zoneWeights": {
+    "title": 30,
+    "headings": 12,
+    "navLabels": 10,
+    "meta": 8,
+    "body": 1
+  },
+  "ranking": [
+    {
+      "dir": "CCTNS",
+      "label": "Crime and Criminal Tracking Network & Systems, police crime-record workflows and related portals",
+      "contentScore": 55.75,
+      "hostScore": 10,
+      "score": 65.75,
+      "hasProminentStrongTerm": true,
+      "hits": {
+        "strong": [
+          {
+            "term": "cctns",
+            "weight": 49.33,
+            "where": [
+              {
+                "zone": "title",
+                "occurrences": 1,
+                "weight": 30
+              },
+              {
+                "zone": "headings",
+                "occurrences": 3,
+                "weight": 17.73
+              },
+              {
+                "zone": "body",
+                "occurrences": 4,
+                "weight": 1.6
+              }
+            ]
+          },
+          {
+            "term": "crime and criminal tracking",
+            "weight": 1.6,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 4,
+                "weight": 1.6
+              }
+            ]
+          },
+          {
+            "term": "national crime records bureau",
+            "weight": 1.48,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          },
+          {
+            "term": "ncrb",
+            "weight": 1.3,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 1.3
+              }
+            ]
+          },
+          {
+            "term": "digital police",
+            "weight": 1.48,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          }
+        ],
+        "weak": [
+          {
+            "term": "crime",
+            "weight": 0.33,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 7,
+                "weight": 0.33
+              }
+            ]
+          },
+          {
+            "term": "fir",
+            "weight": 0.23,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 0.23
+              }
+            ]
+          }
+        ],
+        "host": [
+          {
+            "hint": "digitalpolice",
+            "weight": 10
+          }
+        ]
+      }
+    },
+    {
+      "dir": "Aadhaar",
+      "label": "Aadhaar/UIDAI identity services, enrolment, updates and related official services",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Courts",
+      "label": "eCourts, case status, court listings, cause lists, orders, judgments and court services",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Forensics",
+      "label": "Government forensic services, forensic laboratories, forensic case management and evidence workflows",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Prisons",
+      "label": "ePrisons, prison/jail administration, inmate management, visitor services and related portals",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    }
+  ],
+  "pagesConsidered": 3,
+  "samplesUsed": [
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "title": ":::CCTNS:::",
+      "headingCount": 5,
+      "navLabelCount": 0,
+      "textLength": 3090,
+      "error": null
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "title": "Government of India, Ministry of Home Affairs",
+      "headingCount": 3,
+      "navLabelCount": 2,
+      "textLength": 282,
+      "error": null
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+      "title": "",
+      "headingCount": 1,
+      "navLabelCount": 0,
+      "textLength": 152,
+      "error": null
+    }
+  ],
+  "note": "Classification is driven by page content. `wouldHoldWithoutHostname` records whether the same verdict is reached from content alone, with the hostname bonus removed."
+}

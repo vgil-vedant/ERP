@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-10-27T09:30:04.779Z",
+  "startUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+  "counts": {
+    "captured": 3,
+    "failed": 0,
+    "partial": 0,
+    "skipped": 0
+  },
+  "byPageType": {
+    "login": 1,
+    "contact": 1,
+    "error": 1
+  },
+  "routes": [
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "redirected": false,
+      "httpStatus": 200,
+      "title": ":::CCTNS:::",
+      "pageType": "login",
+      "depth": 0,
+      "discoveredVia": "start URL",
+      "crawlStatus": "captured",
+      "error": null,
+      "localReplicaRoute": "/login.htm",
+      "slug": "centercitizen_login.htm",
+      "formCount": 1,
+      "visibleFieldCount": 4,
+      "functionalFieldCount": 4,
+      "tableCount": 0,
+      "aliasUrls": [],
+      "screenshots": {
+        "desktop": "reference_pages/screenshots/centercitizen_login.htm.desktop.png",
+        "desktop_viewport": "reference_pages/screenshots/centercitizen_login.htm.desktop.viewport.png",
+        "tablet": "reference_pages/screenshots/centercitizen_login.htm.tablet.png",
+        "mobile": "reference_pages/screenshots/centercitizen_login.htm.mobile.png"
+      },
+      "documentHeight": 1865
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "redirected": false,
+      "httpStatus": 200,
+      "title": "Government of India, Ministry of Home Affairs",
+      "pageType": "contact",
+      "depth": 1,
+      "discoveredVia": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "crawlStatus": "captured",
+      "error": null,
+      "localReplicaRoute": "/feedback.htm",
+      "slug": "centercitizen_feedback.htm",
+      "formCount": 2,
+      "visibleFieldCount": 10,
+      "functionalFieldCount": 10,
+      "tableCount": 0,
+      "aliasUrls": [],
+      "screenshots": {
+        "desktop": "reference_pages/screenshots/centercitizen_feedback.htm.desktop.png",
+        "desktop_viewport": "reference_pages/screenshots/centercitizen_feedback.htm.desktop.viewport.png",
+        "tablet": "reference_pages/screenshots/centercitizen_feedback.htm.tablet.png",
+        "mobile": "reference_pages/screenshots/centercitizen_feedback.htm.mobile.png"
+      },
+      "documentHeight": 1065
+    },
+    {
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+      "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+      "redirected": false,
+      "httpStatus": 404,
+      "title": null,
+      "pageType": "error",
+      "depth": 2,
+      "discoveredVia": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "crawlStatus": "captured",
+      "error": null,
+      "localReplicaRoute": "/logout",
+      "slug": "centercitizen_logout",
+      "formCount": 0,
+      "visibleFieldCount": 0,
+      "functionalFieldCount": 0,
+      "tableCount": 0,
+      "aliasUrls": [],
+      "screenshots": {
+        "desktop": "reference_pages/screenshots/centercitizen_logout.desktop.png",
+        "desktop_viewport": "reference_pages/screenshots/centercitizen_logout.desktop.viewport.png",
+        "tablet": "reference_pages/screenshots/centercitizen_logout.tablet.png",
+        "mobile": "reference_pages/screenshots/centercitizen_logout.mobile.png"
+      },
+      "documentHeight": 900
+    }
+  ],
+  "skipped": []
+}

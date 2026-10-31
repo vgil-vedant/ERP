@@ -1,0 +1,117 @@
+/* CSS Document */
+.TabView{
+	width:auto;
+	height:auto;
+	border:1px #cccccc solid;
+	margin:38px 0px 0px 0px;
+	padding:0px;
+	}
+#wrapper_popup .TabView{
+	width:auto;
+	height:auto;
+	border:1px #cccccc solid;
+	margin:35px 0px 0px 0px;
+	padding:0px;
+}
+.TabView  .TabView{
+	width:auto;
+	height:auto;	
+	margin:40px 0px 0px 0px;
+	padding:0px;
+	border:none;
+	
+}
+.TabView .Tabs{
+	height:14px;
+	display:block;
+	background:#fff; 
+	margin:-37px 0px 0px 0px;
+	padding:0px;
+	}
+.TabView .Tabs a {
+    display:block;
+	float:left;
+	width:auto;
+	height:35px;	
+	color:#ffffff;
+	line-height:35px;
+	padding:0px 15px ;
+	text-align:center;
+	text-decoration:none;
+	font-size:11px;
+	font-weight: normal;	
+	margin:0px 0px 0px 1px; 
+	background:url(../img/bg_tab.png) repeat-x;
+	background-position:right;
+}
+.TabView .Tabs a.ActiveTab{
+	background:url(../img/bg_tab1.png) repeat-x;
+	background-position:right;
+	color:#000;	
+	height:35px;
+	line-height:35px;	
+	padding:0px 15px ;
+}
+.TabView .Tabs a.InactiveTab{}
+.TabView .Pages{
+	padding:0px  0 5px 0;
+	margin-top:30px;
+    	}
+.TabView .Pages .Page{
+	clear:both;
+	width:auto;
+	padding:6px 5px;
+	margin:0px;
+    }
+@-moz-document url-prefix(){.TabView .Pages .Page{
+	clear:both;
+	width:auto;
+	padding:2px 5px 2px 5px;
+	margin:0px;
+    }
+}
+
+[lang|=scroll_235]{height:235px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_240]{height:240px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_150]{height:150px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_105]{height:105px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_90]{height:90px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_205]{height:205px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_159]{height:159px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_175]{height:175px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_200]{height:200px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_220]{height:200px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_250]{height:250px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_280]{height:280px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_300]{height:300px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_295]{height:295px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_290]{height:290px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_350]{height:350px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_330]{height:330px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_400]{height:400px;margin-top:10px!important;position:relative!important;overflow-x:hidden; overflow-y:scroll;}
+
+[lang|=scroll_50]{height:50px;margin-top:5px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_70]{height:70px;margin-top:5px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_80]{height:80px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_100]{height:100px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_120]{height:120px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_140]{height:140px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_185]{height:185px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_150]{height:150px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_175]{height:175px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_190]{height:190px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_200]{height:200px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_205]{height:205px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_210]{height:205px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_220]{height:220px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_235]{height:235px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_250]{height:250px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_270]{height:270px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_280]{height:280px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_300]{height:300px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_350]{height:350px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+[lang|=scroll_400]{height:400px;margin-top:10px!important;position:relative!important; overflow-x:hidden; overflow-y:scroll;}
+
+
+
+

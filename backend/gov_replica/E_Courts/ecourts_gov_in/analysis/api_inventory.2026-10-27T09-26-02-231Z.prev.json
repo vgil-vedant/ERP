@@ -1,0 +1,1679 @@
+{
+  "generatedAt": "2026-10-27T07:43:23.799Z",
+  "counts": {
+    "endpointsObserved": 59
+  },
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/images/emblem.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/images/flag.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/images/Google_Play_Store_badge_EN.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/images/download-on-the-app-store.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/img/digital-Indiawhite.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/img/department-of-justice.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/img/ecommittee.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/img/india-code.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/img/nic.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/emblem.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/arrow-right.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/flag.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/india_gov.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/department-of-justice.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/india-code.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/nic.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/digital-Indiawhite.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/justiceClock/images/ecommittee.svg",
+      "origin": "https://justiceclock.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://justiceclock.ecourts.gov.in/justiceClock/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0/images/court_icon.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/flag.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/emblem.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/court_house_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/alarm_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/pending_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/trash_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/report.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/digital-Indiawhite.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/india_gov.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/department-of-justice.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/ecommittee.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/india-code.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/hcnjdg_v2/images/nic.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//images/flag.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//images/emblem.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//img/digital-Indiawhite.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//img/department-of-justice.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//img/ecommittee.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//img/india-code.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//img/nic.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//images/file_2.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/pagead/id",
+      "origin": "https://googleads.g.doubleclick.net",
+      "sameHost": false,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos"
+      ],
+      "statuses": [
+        302,
+        200
+      ],
+      "contentTypes": [
+        "text/html; charset=UTF-8",
+        "application/json; charset=UTF-8"
+      ],
+      "queryParameters": [
+        "slf_rd"
+      ],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "POST",
+      "path": "/youtubei/v1/log_event",
+      "origin": "https://www.youtube.com",
+      "sameHost": false,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=UTF-8"
+      ],
+      "queryParameters": [
+        "alt"
+      ],
+      "resourceType": "xhr",
+      "carriesRequestBody": true,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg",
+      "origin": "https://www.gstatic.com",
+      "sameHost": false,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "fetch",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//images/Google_Play_Store_badge_EN.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p="
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/ecourts2.0//images/download-on-the-app-store.svg",
+      "origin": "https://ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p="
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/flag.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/emblem.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/court_house_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/alarm_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/pending_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/trash_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/due_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/info_32.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/digital-Indiawhite.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/india_gov.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/department-of-justice.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/ecommittee.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/india-code.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/njdg_v3//images/nic.svg",
+      "origin": "https://njdg.ecourts.gov.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "image/svg+xml"
+      ],
+      "queryParameters": [],
+      "resourceType": "image",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    }
+  ],
+  "publicApiAvailable": false,
+  "publicApiEvidence": "59 data request(s) were observed, all internal to the application. None is a documented public API.",
+  "integrationRestrictions": [
+    "No public, self-service API is published for this portal.",
+    "Public forms are CAPTCHA-protected; automated submission is not available.",
+    "Authenticated functionality sits behind a server-side session and is out of scope."
+  ],
+  "safetyPolicy": "Endpoints here were observed passively while loading public pages. No endpoint was enumerated, fuzzed or probed. No credential, session token, cookie or authorization header was recorded: those header names are stripped before anything is written to disk. No request body was captured."
+}

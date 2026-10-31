@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section">
+  <h1 class="section__title"><%= portal %> Login</h1>
+  <% if (notice) { %>
+    <div class="notice notice--<%= notice.kind %>" role="status"><%= notice.text %></div>
+  <% } %>
+  <div class="notice notice--info">
+    <strong>Nothing behind this screen is reproduced.</strong>
+    The original's authenticated area was never accessed. This page exists only so the
+    route inventory and the replica agree on what the public can see.
+  </div>
+  <form method="post" action="<%= currentPath %>" class="panel" style="max-width:460px" novalidate>
+    <div class="field">
+      <label for="user_id">User ID</label>
+      <input type="text" id="user_id" name="user_id" maxlength="40" autocomplete="off">
+    </div>
+    <div class="field" style="margin-top:14px">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" maxlength="40" autocomplete="off">
+    </div>
+    <div class="actions">
+      <button type="submit" class="btn btn--primary">Sign in</button>
+    </div>
+    <p class="field__hint" style="margin-top:12px">
+      This form authenticates nobody. Whatever you type is discarded, never stored and
+      never transmitted.
+    </p>
+  </form>
+</section></div></main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <link href="/Content/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Content/DataTables/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="/Content/DataTables/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" href="/Content/DataTables/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="/Content/DataTables/css/jquery.dataTables.min.css" />
+    <link href="/Content/lib/search-panes/css/searchPanes.bootstrap4.min.css" rel="stylesheet" />
+    <link href="/Content/lib/search-panes/css/select.bootstrap4.min.css" rel="stylesheet" />
+    <link href="/Content/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Content/OwlCarousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/Content/OwlCarousel2/assets/owl.theme.default.min.css">
+    <link href="/Content/css/Fonts.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-3.7.1.js"></script>
+    <script src="/Content/js/JavaScript.js"></script>
+    <script src="/Scripts/DataTables/dataTables.buttons.min.js"></script>
+    <script src="/Scripts/DataTables/buttons.colVis.min.js"></script>
+    <script src="/Scripts/DataTables/buttons.html5.min.js"></script>
+    <script src="/Scripts/DataTables/jszip.min.js"></script>
+    <script src="/Scripts/DataTables/jquery.dataTables.min.js"></script>
+
+    <link href="/Content/css/Homestyle.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light ef_head">
+            <div class="container-fluid wrapper">
+                <a class="navbar-brand" href='/'>
+                    <img src="/Content/images/Home/logo.png" alt="logo" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item py-4">
+                            <a class="nav-link" href='/'>Home</a>
+                        </li>
+                        
+                        <li class="nav-item py-4">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2" href='/Home/ContactUs'>Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2" href='/Login'>Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2" href='/Authorize/RedirectToAuthorization'>Login with JanParichay</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 py-2" href='https://eforensics-v1.nic.in/'>e-Forensic 1.0</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <main role="main" class=""> 
+<link href="/Content/css/TableStyle.css" rel="stylesheet" />
+<div class="page-content text-page">
+    <div class="box-3d mb-4 mt-1">
+        <div class="page-content">
+            <div class="col-md-12 note note-success box-2d">
+                <div class="row">
+                    <div class="col-md-12">
+                        <strong>Error</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 mb-5">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <b>Some Error Occurred !!!!.</b>
+                    </p>
+                </div>
+                <div class="col-md-12 mt-3 mb-3 text-center">
+                    <a href='/Login' class="btn btn-info mr-2 pb-0 pt-0">Click Here Go to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ </main>
+        
+        
+
+    </div>
+    <!-- Footer section start -->
+    <footer>
+        <div class="container-fluid p-5 bg-white">
+            <div class="row">
+                <div class="col-12 col-md-12 col-xxl-3">
+                    <h2 class="fs-3 fw-normal any_que mb-3 mb-xxl-0 text-black">
+                        <strong>Contact Us</strong>
+                    </h2>
+                </div>
+                <div class="col-12 col-md-12 col-xxl-9 rg_foot">
+                    <div class="row">
+                        <div class="col-12 col-md-5 col-lg-3">
+                            <div class="d-flex">
+                                <div class="p-2 flex-shrink-1">
+                                    <img src="/Content/images/Home/phone.png" alt="logo">
+                                </div>
+                                <div class="p-2 w-100">
+                                    <h5 class="fs-6 fw-normal m-0">
+                                        Phone
+                                        Number
+                                    </h5>
+                                    <p class="fs-6 fw-normal m-0">
+                                        24x7 NIC Service
+                                        Desk
+                                    </p>
+                                    <h4 class="fs-5 fw-bold m-0">1800 111 555</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-3">
+                            <div class="d-flex">
+                                <div class="p-2 flex-shrink-1">
+                                    <img src="/Content/images/Home/email.png" alt="logo">
+                                </div>
+                                <div class="p-2 w-100">
+                                    <h5 class="fs-6 fw-normal m-0">
+                                        E-Mail
+                                        Address
+                                    </h5>
+                                    <p class="fs-6 fw-normal m-0">servicedesk.nic.in</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-3">
+                            <div class="d-flex">
+                                <div class="p-2 flex-shrink-1">
+                                    <img src="/Content/images/Home/location.png" alt="logo">
+                                </div>
+                                <div class="p-2 w-100">
+                                    <h5 class="fs-6 fw-normal m-0">Headquarters</h5>
+                                    <p class="fs-6 fw-normal m-0">
+                                        Ministry of Home
+                                        Affairs, North Block, Central Secretariat New Delhi - 110001
+                                    </p>
+                                    <h4 class="fs-6 fw-normal text-dark-purple m-0">
+                                        <a href="#" class="text-dark-purple"><strong>Get Direction</strong></a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-3">
+                            <div class="d-flex">
+                                <div class="p-2 flex-shrink-1">
+                                    <img src="/Content/images/Home/location.png" alt="logo">
+                                </div>
+                                <div class="p-2 w-100">
+                                    <h5 class="fs-6 fw-normal m-0">
+                                        Other
+                                        Address
+                                    </h5>
+                                    <p class="fs-6 fw-normal m-0">
+                                        <strong>
+                                            National Crime
+                                            Records Bureau
+                                        </strong> National Highway - 8, Near SSB, Mahipalpur -
+                                        110037
+                                    </p>
+                                    <h4 class="fs-6 fw-bold m-0">
+                                        E-Mail :
+                                        dct[at]ncrb[dot]nic[dot]in
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 py-3 text-center last_footer">
+            <p class="text-white m-0">
+                <img src="/Content/images/Home/nic_logo.png">
+                <span id="showtime"></span> © Content Owned by Ministry of Home Affairs, Government of India | Site Maintained by <span class="text_highlight">(NIC) National Informatics Center</span>
+                <br /><span>Version: 2.0.0.1, Released Date: 17/06/2026 11:30AM</span>
+            </p>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+    <script src="/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Content/lib/font-awesome/js/all.min.js"></script> 
+</body>
+</html>

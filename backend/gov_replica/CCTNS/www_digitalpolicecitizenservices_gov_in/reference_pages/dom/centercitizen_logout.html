@@ -1,0 +1,91 @@
+<!DOCTYPE html><html><head>
+        <script type="text/javascript" src="js/common/common.js"></script>
+        <script type="text/javascript" src="js/common/security-util.js"></script>
+      
+        
+        <script>
+            /* function to append token to the url provided */
+            function appendToken(url) {
+                var tokenValue = getTokenValue();
+                if(tokenValue != null && tokenValue != "") {
+                    url = appendTokenWithUrl(url, getTokenName(), tokenValue);
+                }
+                return url;
+            }
+            
+            function getTokenName() {
+                return "stov";
+            }
+            
+            function getTokenValue() {
+                return '79I1-A5L2-30P5-O8SA-CYOK-QTHN-LT2G-QNVI';
+            }
+            
+            
+            /*
+            $.ajaxSetup({
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader(getTokenName(), getTokenValue());
+                },
+                complete: function(xhr, status) {
+                    //alert('completed' + data.toSource());
+                }
+            });
+            */
+        </script>        
+    </head>
+    <body>
+    
+
+
+    
+
+        <link href="css/multistyles.css" type="text/css" rel="stylesheet">
+    
+
+    <div id="wrapper">
+        <!--Header -->
+        <div id="header">
+            <div class="logo">&nbsp;</div>
+            <div class="welcome">
+
+            </div>
+            <div class="sublogo">&nbsp;</div>
+        </div>
+        <div id="menu">
+
+        </div>
+        <!-- Create Menu Settings: (Menu ID, Is Vertical, Show Timer, Hide Timer, On Click (options: 'all' * 'all-always-open' * 'main' * 'lev2'), Right to Left, Horizontal Subs, Flush Left, Flush Top) -->
+        <script type="text/javascript">qm_create(0,false,0,500,false,false,false,false,false);</script>
+        <!-- Navigation Details -->
+
+
+        <!--Main Content -->
+        <div id="content">
+            <div>
+                <h2 style="color: #FF0080; font-size: 12px; padding-left: 200px; padding-top: 60px; padding-bottom: 140px;">
+                    Unable to process your request. <a href="#" onclick="backtoHome()" style="color: #0000cd;"> Click Here </a> to login
+                </h2>
+
+            </div>
+            <br>
+            <!-- <div class="pagesubmission"><input name="button" type="button" value="Back to Home" onclick="SECURITY.changeLocationHref('indexcitizen.htm')"/></div>-->
+            <!--<div id="spinner"><img src="img/spinner.gif" width="33" height="33" /></div>--><!--First Tab-->
+
+            <!-- End Main Content -->
+        </div>
+
+        <!-- Document End -->
+    </div>
+    <div id="footer">
+        <div class="copyright">This website belongs to National Crime Records Bureau, Ministry of Home Affairs, Government of India</div>
+        <script>
+           function backtoHome(){
+               changeLocationHref("login.htm")
+           }
+        </script>
+
+
+
+
+</div></body></html>

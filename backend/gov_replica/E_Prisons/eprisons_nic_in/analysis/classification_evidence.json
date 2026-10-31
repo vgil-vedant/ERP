@@ -1,0 +1,155 @@
+{
+  "generatedAt": "2026-10-26T11:43:47.513Z",
+  "category": "E_Prisons",
+  "confidence": "high",
+  "status": "confirmed",
+  "decidedBy": "page content (hostname only reinforced it)",
+  "wouldHoldWithoutHostname": true,
+  "governmentHost": true,
+  "thresholds": {
+    "CONFIDENT_SCORE": 20,
+    "CONFIDENT_MARGIN": 1.6,
+    "STRONG_WEIGHT": 10,
+    "WEAK_WEIGHT": 2,
+    "HOST_WEIGHT": 4
+  },
+  "ranking": [
+    {
+      "dir": "E_Prisons",
+      "label": "ePrisons, prison/jail administration, inmate management, visitor services and related portals",
+      "contentScore": 97,
+      "hostScore": 8,
+      "score": 105,
+      "hits": {
+        "strong": [
+          {
+            "term": "eprisons",
+            "occurrences": 14,
+            "weight": 21.46
+          },
+          {
+            "term": "national prison",
+            "occurrences": 6,
+            "weight": 17.78
+          },
+          {
+            "term": "emulakat",
+            "occurrences": 18,
+            "weight": 22.55
+          },
+          {
+            "term": "inmate",
+            "occurrences": 2,
+            "weight": 13.01
+          },
+          {
+            "term": "prisoner",
+            "occurrences": 5,
+            "weight": 16.99
+          }
+        ],
+        "weak": [
+          {
+            "term": "prison",
+            "occurrences": 40,
+            "weight": 5.2
+          }
+        ],
+        "host": [
+          {
+            "hint": "eprisons",
+            "weight": 4
+          },
+          {
+            "hint": "prison",
+            "weight": 4
+          }
+        ]
+      }
+    },
+    {
+      "dir": "Aadhaar",
+      "label": "Aadhaar/UIDAI identity services, enrolment, updates and related official services",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "CCTNS",
+      "label": "Crime and Criminal Tracking Network & Systems, police crime-record workflows and related portals",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Courts",
+      "label": "eCourts, case status, court listings, cause lists, orders, judgments and court services",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Forensics",
+      "label": "Government forensic services, forensic laboratories, forensic case management and evidence workflows",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    }
+  ],
+  "pagesConsidered": 4,
+  "samplesUsed": [
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/Home",
+      "title": "Welcome to National Prison Portal",
+      "headingCount": 10,
+      "navLabelCount": 20,
+      "textLength": 982,
+      "error": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/SelectMISState",
+      "title": "Welcome to National Prison Portal",
+      "headingCount": 4,
+      "navLabelCount": 20,
+      "textLength": 590,
+      "error": null
+    },
+    {
+      "url": "https://eprisons.nic.in/citizenservice/",
+      "title": "CitizenServices - Index",
+      "headingCount": 1,
+      "navLabelCount": 2,
+      "textLength": 90,
+      "error": null
+    },
+    {
+      "url": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "title": "LegalAid - NQ34EP2P-ePApp4",
+      "headingCount": 1,
+      "navLabelCount": 0,
+      "textLength": 639,
+      "error": null
+    }
+  ],
+  "note": "Classification is driven by page content. `wouldHoldWithoutHostname` records whether the same verdict is reached from content alone, with the hostname bonus removed."
+}

@@ -1,0 +1,4306 @@
+{
+  "generatedAt": "2026-10-27T06:42:22.410Z",
+  "input": "ecourts.gov.in",
+  "initialUrl": "https://ecourts.gov.in",
+  "finalUrl": "https://ecourts.gov.in/ecourts2.0/",
+  "redirectChain": [
+    "https://ecourts.gov.in/ecourts2.0/"
+  ],
+  "redirectProblems": [],
+  "recoveredFromBrokenRedirect": false,
+  "hostname": "ecourts.gov.in",
+  "normalizedHostname": "ecourts_gov_in",
+  "scheme": "https",
+  "httpStatus": 200,
+  "category": {
+    "selected": "E_Courts",
+    "confidence": "high",
+    "status": "confirmed",
+    "decidedBy": "page content, strongest in page title",
+    "wouldHoldWithoutHostname": true,
+    "governmentHost": true,
+    "evidence": [
+      {
+        "category": "E_Courts",
+        "score": 181.31,
+        "contentScore": 171.31,
+        "hostScore": 10,
+        "topStrongTerms": [
+          {
+            "term": "ecourts",
+            "weight": 79.85,
+            "where": [
+              {
+                "zone": "title",
+                "occurrences": 3,
+                "weight": 44.31
+              },
+              {
+                "zone": "headings",
+                "occurrences": 3,
+                "weight": 17.73
+              },
+              {
+                "zone": "meta",
+                "occurrences": 9,
+                "weight": 15.63
+              },
+              {
+                "zone": "body",
+                "occurrences": 15,
+                "weight": 2.18
+              }
+            ]
+          },
+          {
+            "term": "e-courts",
+            "weight": 13.3,
+            "where": [
+              {
+                "zone": "headings",
+                "occurrences": 1,
+                "weight": 12
+              },
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 1.3
+              }
+            ]
+          },
+          {
+            "term": "cause list",
+            "weight": 15.23,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 6,
+                "weight": 14.23
+              },
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          },
+          {
+            "term": "case status",
+            "weight": 15.23,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 6,
+                "weight": 14.23
+              },
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          },
+          {
+            "term": "cnr number",
+            "weight": 1.3,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 1.3
+              }
+            ]
+          },
+          {
+            "term": "e-committee",
+            "weight": 20.3,
+            "where": [
+              {
+                "zone": "navLabels",
+                "occurrences": 7,
+                "weight": 18.45
+              },
+              {
+                "zone": "body",
+                "occurrences": 7,
+                "weight": 1.85
+              }
+            ]
+          },
+          {
+            "term": "district and taluka court",
+            "weight": 1.6,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 4,
+                "weight": 1.6
+              }
+            ]
+          },
+          {
+            "term": "judgment",
+            "weight": 1.7,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 5,
+                "weight": 1.7
+              }
+            ]
+          }
+        ],
+        "topWeakTerms": [
+          {
+            "term": "court",
+            "weight": 19.46,
+            "where": [
+              {
+                "zone": "title",
+                "occurrences": 3,
+                "weight": 7.98
+              },
+              {
+                "zone": "headings",
+                "occurrences": 4,
+                "weight": 3.46
+              },
+              {
+                "zone": "navLabels",
+                "occurrences": 15,
+                "weight": 3.92
+              },
+              {
+                "zone": "meta",
+                "occurrences": 30,
+                "weight": 3.57
+              },
+              {
+                "zone": "body",
+                "occurrences": 93,
+                "weight": 0.53
+              }
+            ]
+          },
+          {
+            "term": "judiciary",
+            "weight": 2.83,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 6,
+                "weight": 2.56
+              },
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 0.27
+              }
+            ]
+          },
+          {
+            "term": "litigant",
+            "weight": 0.27,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 0.27
+              }
+            ]
+          },
+          {
+            "term": "advocate",
+            "weight": 0.27,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 0.27
+              }
+            ]
+          }
+        ],
+        "hostHints": [
+          {
+            "hint": "ecourts",
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "category": "E_Prisons",
+        "score": 2.18,
+        "contentScore": 2.18,
+        "hostScore": 0,
+        "topStrongTerms": [
+          {
+            "term": "jail",
+            "weight": 1,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          },
+          {
+            "term": "prisoner",
+            "weight": 1,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          }
+        ],
+        "topWeakTerms": [
+          {
+            "term": "prison",
+            "weight": 0.18,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 0.18
+              }
+            ]
+          }
+        ],
+        "hostHints": []
+      },
+      {
+        "category": "E_Forensics",
+        "score": 0.18,
+        "contentScore": 0.18,
+        "hostScore": 0,
+        "topStrongTerms": [],
+        "topWeakTerms": [
+          {
+            "term": "evidence",
+            "weight": 0.18,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 0.18
+              }
+            ]
+          }
+        ],
+        "hostHints": []
+      }
+    ],
+    "pagesConsidered": 4
+  },
+  "siteTitle": "Homepage | eCourts Single Sign-On",
+  "languages": [
+    "en"
+  ],
+  "crawlScope": {
+    "rootHost": "ecourts.gov.in",
+    "limits": {
+      "maxPages": 60,
+      "maxDepth": 4,
+      "navTimeoutMs": 45000,
+      "settleTimeoutMs": 3500,
+      "perRequestDelayMs": 1500,
+      "concurrency": 1,
+      "maxAssetBytes": 12582912,
+      "maxTotalRuntimeMs": 1500000,
+      "assetTimeoutMs": 30000,
+      "retriesPerUrl": 2,
+      "throttleBackoffMs": 4000
+    },
+    "robotsTxt": "absent (HTTP 404) - no crawl directives were published",
+    "sitemapXml": "absent (HTTP 404)",
+    "scopeRule": "same registrable host and its subdomains only; external hosts recorded as links, never crawled"
+  },
+  "counts": {
+    "pagesCaptured": 60,
+    "pagesFailed": 0,
+    "pagesPartial": 0,
+    "pagesSkipped": 176,
+    "pagesStillPending": 120,
+    "urlAliasesMerged": 14,
+    "formsFound": 82,
+    "visibleFormFields": 24,
+    "dataTables": 5,
+    "assetsReferenced": 617,
+    "assetsDownloaded": 554,
+    "externalLinks": 329,
+    "technologiesConfirmed": 19,
+    "technologiesInferred": 6
+  },
+  "coverage": {
+    "queueExhausted": false,
+    "limitThatStoppedTheCrawl": "maxPages=60",
+    "claim": "The crawl stopped at maxPages=60. The site is NOT fully explored: 120 in-scope URL(s) remained queued."
+  },
+  "urlAliases": {
+    "note": "This target runs on IIS/ASP.NET, which resolves paths case-insensitively and serves the same page with and without the `.aspx` extension. These URL spellings were reached during the crawl and proved to be the same page (identical title, text and form shape), so they are recorded as aliases instead of being counted as separate pages.",
+    "merged": [
+      {
+        "url": "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "sameAs": "https://hcservices.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://hcservices.ecourts.gov.in/"
+      },
+      {
+        "url": "https://ecourts.gov.in/ecourts2.0/index.php",
+        "sameAs": "https://ecourts.gov.in/ecourts2.0",
+        "basis": "alias key matched a captured page",
+        "via": "https://hcservices.ecourts.gov.in/"
+      },
+      {
+        "url": "https://services.ecourts.gov.in/ecourtindia_v6",
+        "sameAs": "https://services.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://services.ecourts.gov.in/"
+      },
+      {
+        "url": "https://pay.ecourts.gov.in/epay/index.php",
+        "sameAs": "https://pay.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://pay.ecourts.gov.in/"
+      },
+      {
+        "url": "https://njdg.ecourts.gov.in/njdg_v3",
+        "landedOn": "https://njdg.ecourts.gov.in/njdg_v3",
+        "sameAs": "http://njdg.ecourts.gov.in/",
+        "basis": "identical title, text and form shape after navigation",
+        "via": "https://ecourts.gov.in/ecourts2.0"
+      },
+      {
+        "url": "https://filing.ecourts.gov.in/pdedev",
+        "sameAs": "https://filing.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://filing.ecourts.gov.in/"
+      },
+      {
+        "url": "http://pay.ecourts.gov.in/",
+        "sameAs": "https://pay.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://filing.ecourts.gov.in/"
+      },
+      {
+        "url": "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "sameAs": "https://judgments.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://judgments.ecourts.gov.in/"
+      },
+      {
+        "url": "https://judgments.ecourts.gov.in/pdfsearch",
+        "sameAs": "https://judgments.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://judgments.ecourts.gov.in/"
+      },
+      {
+        "url": "https://njdg.ecourts.gov.in/",
+        "sameAs": "http://njdg.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://judgments.ecourts.gov.in/"
+      },
+      {
+        "url": "https://ecourts.gov.in/ecourts2.0//?p=about_us/highcourts",
+        "landedOn": "https://ecourts.gov.in/ecourts2.0//?p=about_us/highcourts",
+        "sameAs": "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "basis": "identical title, text and form shape after navigation",
+        "via": "https://ecourts.gov.in/ecourts2.0"
+      },
+      {
+        "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court",
+        "landedOn": "https://ecourts.gov.in/ecourts2.0//?p=dist_court",
+        "sameAs": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "basis": "identical title, text and form shape after navigation",
+        "via": "https://ecourts.gov.in/ecourts2.0"
+      },
+      {
+        "url": "https://justiceclock.ecourts.gov.in/justiceClock",
+        "sameAs": "https://justiceclock.ecourts.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://justiceclock.ecourts.gov.in/"
+      },
+      {
+        "url": "https://ecourts.gov.in/",
+        "landedOn": "https://ecourts.gov.in/ecourts2.0",
+        "sameAs": "https://ecourts.gov.in/ecourts2.0",
+        "basis": "identical title, text and form shape after navigation",
+        "via": "http://njdg.ecourts.gov.in/"
+      }
+    ]
+  },
+  "externalLinks": [
+    {
+      "url": "https://ecommitteesci.gov.in/",
+      "host": "ecommitteesci.gov.in",
+      "texts": [
+        "इ-कमिटी, उच्चतम न्यायालय, भारत",
+        "E-COMMITTEE, SUPREME COURT OF INDIA",
+        "e-Committee"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://services.ecourts.gov.in/ecourtindia_v6/",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+        "https://filing.ecourts.gov.in/pdedev/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "https://www.digitalindia.gov.in/",
+      "host": "www.digitalindia.gov.in",
+      "texts": [],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://services.ecourts.gov.in/ecourtindia_v6/",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://filing.ecourts.gov.in/pdedev/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "https://www.sci.gov.in/",
+      "host": "www.sci.gov.in",
+      "texts": [
+        "Supreme Court"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "https://vcourts.gov.in/",
+      "host": "vcourts.gov.in",
+      "texts": [
+        "Virtual Court Eliminating presence of litigant or lawyer in the court and adjudication of the case online"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p="
+      ]
+    },
+    {
+      "url": "http://www.nic.in/",
+      "host": "www.nic.in",
+      "texts": [
+        "National Informatics Centre (NIC)",
+        "National Informatics Centre (NIC) External website that opens a new window"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCPMHFB1lou-P_YtErFFYjgw",
+      "host": "www.youtube.com",
+      "texts": [],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://services.ecourts.gov.in/ecourtindia_v6/",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+        "https://filing.ecourts.gov.in/pdedev/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "http://www.digitalindia.gov.in/",
+      "host": "www.digitalindia.gov.in",
+      "texts": [],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+        "https://filing.ecourts.gov.in/pdedev/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "http://www.india.gov.in/",
+      "host": "www.india.gov.in",
+      "texts": [],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+        "https://filing.ecourts.gov.in/pdedev/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "https://doj.gov.in/",
+      "host": "doj.gov.in",
+      "texts": [],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://services.ecourts.gov.in/ecourtindia_v6/",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+        "https://filing.ecourts.gov.in/pdedev/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "http://indiacode.nic.in/",
+      "host": "indiacode.nic.in",
+      "texts": [],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+        "https://filing.ecourts.gov.in/pdedev/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "https://www.nic.in/",
+      "host": "www.nic.in",
+      "texts": [
+        "National Informatics Centre (NIC)"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+        "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+        "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+        "https://hcservices.ecourts.gov.in/hcservices/main.php",
+        "https://services.ecourts.gov.in/ecourtindia_v6/",
+        "https://pay.ecourts.gov.in/epay/",
+        "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+        "https://filing.ecourts.gov.in/pdedev/",
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+        "https://justiceclock.ecourts.gov.in/justiceClock/",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+        "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+        "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    },
+    {
+      "url": "https://scdg.sci.gov.in/",
+      "host": "scdg.sci.gov.in",
+      "texts": [
+        "SC NJDG"
+      ],
+      "onPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3/",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di"
+      ]
+    },
+    {
+      "url": "http://ecommitteesci.gov.in/",
+      "host": "ecommitteesci.gov.in",
+      "texts": [
+        "e-Committee"
+      ],
+      "onPages": [
+        "https://hcservices.ecourts.gov.in/hcservices/main.php"
+      ]
+    },
+    {
+      "url": "http://supremecourtofindia.nic.in/",
+      "host": "supremecourtofindia.nic.in",
+      "texts": [
+        "Supreme Court"
+      ],
+      "onPages": [
+        "https://hcservices.ecourts.gov.in/hcservices/main.php"
+      ]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=in.gov.ecourts.eCourtsServices",
+      "host": "play.google.com",
+      "texts": [],
+      "onPages": [
+        "https://hcservices.ecourts.gov.in/hcservices/main.php"
+      ]
+    },
+    {
+      "url": "https://apps.apple.com/in/app/ecourts-services/id1260905816",
+      "host": "apps.apple.com",
+      "texts": [],
+      "onPages": [
+        "https://hcservices.ecourts.gov.in/hcservices/main.php"
+      ]
+    },
+    {
+      "url": "https://supremecourtofindia.nic.in/",
+      "host": "supremecourtofindia.nic.in",
+      "texts": [
+        "Supreme Court"
+      ],
+      "onPages": [
+        "https://services.ecourts.gov.in/ecourtindia_v6/"
+      ]
+    },
+    {
+      "url": "https://www.india.gov.in/",
+      "host": "www.india.gov.in",
+      "texts": [],
+      "onPages": [
+        "https://services.ecourts.gov.in/ecourtindia_v6/"
+      ]
+    },
+    {
+      "url": "https://www.indiacode.nic.in/",
+      "host": "www.indiacode.nic.in",
+      "texts": [],
+      "onPages": [
+        "https://services.ecourts.gov.in/ecourtindia_v6/"
+      ]
+    },
+    {
+      "url": "http://vcourts.gov.in/virtualcourt/",
+      "host": "vcourts.gov.in",
+      "texts": [],
+      "onPages": [
+        "https://filing.ecourts.gov.in/pdedev/"
+      ]
+    },
+    {
+      "url": "https://sci.gov.in/",
+      "host": "sci.gov.in",
+      "texts": [
+        "Supreme Court"
+      ],
+      "onPages": [
+        "https://judgments.ecourts.gov.in/pdfsearch/index.php"
+      ]
+    },
+    {
+      "url": "https://www.nvaccess.org/download/",
+      "host": "www.nvaccess.org",
+      "texts": [
+        "https://www.nvaccess.org/download/"
+      ],
+      "onPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr"
+      ]
+    },
+    {
+      "url": "http://www.satogo.com/",
+      "host": "www.satogo.com",
+      "texts": [
+        "http://www.satogo.com/"
+      ],
+      "onPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr"
+      ]
+    },
+    {
+      "url": "http://www.yourdolphin.co.uk/productdetail.asp?id=5",
+      "host": "www.yourdolphin.co.uk",
+      "texts": [
+        "http://www.yourdolphin.co.uk/productdetail.asp?id=5"
+      ],
+      "onPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr"
+      ]
+    },
+    {
+      "url": "http://www.freedomscientific.com/products/software/jaws/",
+      "host": "www.freedomscientific.com",
+      "texts": [
+        "http://www.freedomscientific.com/products/software/jaws/"
+      ],
+      "onPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr"
+      ]
+    },
+    {
+      "url": "http://www.yourdolphin.co.uk/productdetail.asp?id=1",
+      "host": "www.yourdolphin.co.uk",
+      "texts": [
+        "http://www.yourdolphin.co.uk/productdetail.asp?id=1"
+      ],
+      "onPages": [
+        "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr"
+      ]
+    },
+    {
+      "url": "https://southandaman.dcourts.gov.in/",
+      "host": "southandaman.dcourts.gov.in",
+      "texts": [
+        "South Andaman"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman"
+      ]
+    },
+    {
+      "url": "https://anantapur.dcourts.gov.in/",
+      "host": "anantapur.dcourts.gov.in",
+      "texts": [
+        "Anantpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://chittoor.dcourts.gov.in/",
+      "host": "chittoor.dcourts.gov.in",
+      "texts": [
+        "Chittoor"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://kadapa.dcourts.gov.in/",
+      "host": "kadapa.dcourts.gov.in",
+      "texts": [
+        "Kadapa"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://eastgodavari.dcourts.gov.in/",
+      "host": "eastgodavari.dcourts.gov.in",
+      "texts": [
+        "East Godavari"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://guntur.dcourts.gov.in/",
+      "host": "guntur.dcourts.gov.in",
+      "texts": [
+        "Guntur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://westgodavari.dcourts.gov.in/",
+      "host": "westgodavari.dcourts.gov.in",
+      "texts": [
+        "West Godavari"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://kurnool.dcourts.gov.in/",
+      "host": "kurnool.dcourts.gov.in",
+      "texts": [
+        "Kurnool"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://krishna.dcourts.gov.in/",
+      "host": "krishna.dcourts.gov.in",
+      "texts": [
+        "Krishna"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://spsrnellore.dcourts.gov.in/",
+      "host": "spsrnellore.dcourts.gov.in",
+      "texts": [
+        "Nellore"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://prakasam.dcourts.gov.in/",
+      "host": "prakasam.dcourts.gov.in",
+      "texts": [
+        "Prakasam"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://srikakulam.dcourts.gov.in/",
+      "host": "srikakulam.dcourts.gov.in",
+      "texts": [
+        "Srikakulam"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://visakhapatnam.dcourts.gov.in/",
+      "host": "visakhapatnam.dcourts.gov.in",
+      "texts": [
+        "Vishakhapatnam"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://vizianagaram.dcourts.gov.in/",
+      "host": "vizianagaram.dcourts.gov.in",
+      "texts": [
+        "Vizianagaram"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap"
+      ]
+    },
+    {
+      "url": "https://hawai.dcourts.gov.in/",
+      "host": "hawai.dcourts.gov.in",
+      "texts": [
+        "Anjaw"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://changlang.dcourts.gov.in/",
+      "host": "changlang.dcourts.gov.in",
+      "texts": [
+        "Changlang"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://anini.dcourts.gov.in/",
+      "host": "anini.dcourts.gov.in",
+      "texts": [
+        "Dibang Valley"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://seppa.dcourts.gov.in/",
+      "host": "seppa.dcourts.gov.in",
+      "texts": [
+        "East Kameng"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://pasighat.dcourts.gov.in/",
+      "host": "pasighat.dcourts.gov.in",
+      "texts": [
+        "East Siang"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://koloriang.dcourts.gov.in/",
+      "host": "koloriang.dcourts.gov.in",
+      "texts": [
+        "Kurung Kumey"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://roing.dcourts.gov.in/",
+      "host": "roing.dcourts.gov.in",
+      "texts": [
+        "Lower Dibang Valley"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://ziro.dcourts.gov.in/",
+      "host": "ziro.dcourts.gov.in",
+      "texts": [
+        "Lower Subansiri"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://yupia.dcourts.gov.in/",
+      "host": "yupia.dcourts.gov.in",
+      "texts": [
+        "Papum Pare",
+        "District and Sessions Court, Yupia"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://tawang.dcourts.gov.in/",
+      "host": "tawang.dcourts.gov.in",
+      "texts": [
+        "Tawang"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://khonsa.dcourts.gov.in/",
+      "host": "khonsa.dcourts.gov.in",
+      "texts": [
+        "Tirap"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://yingkiong.dcourts.gov.in/",
+      "host": "yingkiong.dcourts.gov.in",
+      "texts": [
+        "Upper Siang"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://daporijo.dcourts.gov.in/",
+      "host": "daporijo.dcourts.gov.in",
+      "texts": [
+        "Upper Subansiri"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://bomdila.dcourts.gov.in/",
+      "host": "bomdila.dcourts.gov.in",
+      "texts": [
+        "West Kameng"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://aalo.dcourts.gov.in/",
+      "host": "aalo.dcourts.gov.in",
+      "texts": [
+        "West Siang"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://tezu.dcourts.gov.in/",
+      "host": "tezu.dcourts.gov.in",
+      "texts": [
+        "Lohit"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://palin.dcourts.gov.in/",
+      "host": "palin.dcourts.gov.in",
+      "texts": [
+        "Kra Daddi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://basar.dcourts.gov.in/",
+      "host": "basar.dcourts.gov.in",
+      "texts": [
+        "LepaRada"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://pangin.dcourts.gov.in/",
+      "host": "pangin.dcourts.gov.in",
+      "texts": [
+        "Siang"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://namsai.dcourts.gov.in/",
+      "host": "namsai.dcourts.gov.in",
+      "texts": [
+        "Namsai"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://longding.dcourts.gov.in/",
+      "host": "longding.dcourts.gov.in",
+      "texts": [
+        "Longding"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal"
+      ]
+    },
+    {
+      "url": "https://bongaigaon.dcourts.gov.in/",
+      "host": "bongaigaon.dcourts.gov.in",
+      "texts": [
+        "Bongaigaon"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://darrang.dcourts.gov.in/",
+      "host": "darrang.dcourts.gov.in",
+      "texts": [
+        "Darrang"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://dibrugarh.dcourts.gov.in/",
+      "host": "dibrugarh.dcourts.gov.in",
+      "texts": [
+        "Dibrugarh"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://karimganj.dcourts.gov.in/",
+      "host": "karimganj.dcourts.gov.in",
+      "texts": [
+        "Karimganj"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://udalguri.dcourts.gov.in/",
+      "host": "udalguri.dcourts.gov.in",
+      "texts": [
+        "Udalguri"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://tinsukia.dcourts.gov.in/",
+      "host": "tinsukia.dcourts.gov.in",
+      "texts": [
+        "Tinsukia"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://baksa.dcourts.gov.in/",
+      "host": "baksa.dcourts.gov.in",
+      "texts": [
+        "Baksa"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://barpeta.dcourts.gov.in/",
+      "host": "barpeta.dcourts.gov.in",
+      "texts": [
+        "Barpeta"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://cachar.dcourts.gov.in/",
+      "host": "cachar.dcourts.gov.in",
+      "texts": [
+        "Cachar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://chirang.dcourts.gov.in/",
+      "host": "chirang.dcourts.gov.in",
+      "texts": [
+        "Chirang"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://dhemaji.dcourts.gov.in/",
+      "host": "dhemaji.dcourts.gov.in",
+      "texts": [
+        "Dhemaji"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://dhubri.dcourts.gov.in/",
+      "host": "dhubri.dcourts.gov.in",
+      "texts": [
+        "Dhubri"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://goalpara.dcourts.gov.in/",
+      "host": "goalpara.dcourts.gov.in",
+      "texts": [
+        "Goalpara"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://golaghat.dcourts.gov.in/",
+      "host": "golaghat.dcourts.gov.in",
+      "texts": [
+        "Golaghat"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://hailakandi.dcourts.gov.in/",
+      "host": "hailakandi.dcourts.gov.in",
+      "texts": [
+        "Hailakandi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://jorhat.dcourts.gov.in/",
+      "host": "jorhat.dcourts.gov.in",
+      "texts": [
+        "Jorhat"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://kamrup.dcourts.gov.in/",
+      "host": "kamrup.dcourts.gov.in",
+      "texts": [
+        "Kamrup"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://kamrupmetro.dcourts.gov.in/",
+      "host": "kamrupmetro.dcourts.gov.in",
+      "texts": [
+        "Kamrup Metropolitan"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://karbianglong.dcourts.gov.in/",
+      "host": "karbianglong.dcourts.gov.in",
+      "texts": [
+        "Karbi Anglong"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://kokrajhar.dcourts.gov.in/",
+      "host": "kokrajhar.dcourts.gov.in",
+      "texts": [
+        "Kokrajhar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://lakhimpur.dcourts.gov.in/",
+      "host": "lakhimpur.dcourts.gov.in",
+      "texts": [
+        "Lakhimpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://morigaon.dcourts.gov.in/",
+      "host": "morigaon.dcourts.gov.in",
+      "texts": [
+        "Morigaon"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://nagaon.dcourts.gov.in/",
+      "host": "nagaon.dcourts.gov.in",
+      "texts": [
+        "Nagaon"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://nalbari.dcourts.gov.in/",
+      "host": "nalbari.dcourts.gov.in",
+      "texts": [
+        "Nalbari"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://dimahasao.dcourts.gov.in/",
+      "host": "dimahasao.dcourts.gov.in",
+      "texts": [
+        "Dima Hasao"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://sivasagar.dcourts.gov.in/",
+      "host": "sivasagar.dcourts.gov.in",
+      "texts": [
+        "Sivasagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://sonitpur.dcourts.gov.in/",
+      "host": "sonitpur.dcourts.gov.in",
+      "texts": [
+        "Sonitpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://charaideo.dcourts.gov.in/",
+      "host": "charaideo.dcourts.gov.in",
+      "texts": [
+        "Charaideo"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://hojai.dcourts.gov.in/",
+      "host": "hojai.dcourts.gov.in",
+      "texts": [
+        "Hojai"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://westkarbianglong.dcourts.gov.in/",
+      "host": "westkarbianglong.dcourts.gov.in",
+      "texts": [
+        "West Karbi Anglong"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://southsalmara.dcourts.gov.in/",
+      "host": "southsalmara.dcourts.gov.in",
+      "texts": [
+        "South Salmara-Mankachar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://bajali.dcourts.gov.in/",
+      "host": "bajali.dcourts.gov.in",
+      "texts": [
+        "Bajali"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://biswanath.dcourts.gov.in/",
+      "host": "biswanath.dcourts.gov.in",
+      "texts": [
+        "Biswanath"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://majuli.dcourts.gov.in/",
+      "host": "majuli.dcourts.gov.in",
+      "texts": [
+        "Majuli"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam"
+      ]
+    },
+    {
+      "url": "https://araria.dcourts.gov.in/",
+      "host": "araria.dcourts.gov.in",
+      "texts": [
+        "Araria"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://aurangabad.bih.dcourts.gov.in/",
+      "host": "aurangabad.bih.dcourts.gov.in",
+      "texts": [
+        "Aurangabad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://banka.dcourts.gov.in/",
+      "host": "banka.dcourts.gov.in",
+      "texts": [
+        "Banka"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://begusarai.dcourts.gov.in/",
+      "host": "begusarai.dcourts.gov.in",
+      "texts": [
+        "Begusarai"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://bhagalpur.dcourts.gov.in/",
+      "host": "bhagalpur.dcourts.gov.in",
+      "texts": [
+        "Bhagalpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://bhojpur.dcourts.gov.in/",
+      "host": "bhojpur.dcourts.gov.in",
+      "texts": [
+        "Bhojpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://buxar.dcourts.gov.in/",
+      "host": "buxar.dcourts.gov.in",
+      "texts": [
+        "Buxar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://darbhanga.dcourts.gov.in/",
+      "host": "darbhanga.dcourts.gov.in",
+      "texts": [
+        "Darbhanga"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://motihari.dcourts.gov.in/",
+      "host": "motihari.dcourts.gov.in",
+      "texts": [
+        "East Champaran"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://gaya.dcourts.gov.in/",
+      "host": "gaya.dcourts.gov.in",
+      "texts": [
+        "Gaya"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://gopalganj.dcourts.gov.in/",
+      "host": "gopalganj.dcourts.gov.in",
+      "texts": [
+        "Gopalganj"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://jamui.dcourts.gov.in/",
+      "host": "jamui.dcourts.gov.in",
+      "texts": [
+        "Jamui"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://jehanabad.dcourts.gov.in/",
+      "host": "jehanabad.dcourts.gov.in",
+      "texts": [
+        "Jehanabad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://bhabua.dcourts.gov.in/",
+      "host": "bhabua.dcourts.gov.in",
+      "texts": [
+        "Kaimur (Bhabua)"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://katihar.dcourts.gov.in/",
+      "host": "katihar.dcourts.gov.in",
+      "texts": [
+        "Katihar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://khagaria.dcourts.gov.in/",
+      "host": "khagaria.dcourts.gov.in",
+      "texts": [
+        "Khagaria"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://kishanganj.dcourts.gov.in/",
+      "host": "kishanganj.dcourts.gov.in",
+      "texts": [
+        "Kishanganj"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://lakhisarai.dcourts.gov.in/",
+      "host": "lakhisarai.dcourts.gov.in",
+      "texts": [
+        "Lakhisarai"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://madhepura.dcourts.gov.in/",
+      "host": "madhepura.dcourts.gov.in",
+      "texts": [
+        "Madhepura"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://madhubani.dcourts.gov.in/",
+      "host": "madhubani.dcourts.gov.in",
+      "texts": [
+        "Madhubani"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://munger.dcourts.gov.in/",
+      "host": "munger.dcourts.gov.in",
+      "texts": [
+        "Munger"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://muzaffarpur.dcourts.gov.in/",
+      "host": "muzaffarpur.dcourts.gov.in",
+      "texts": [
+        "Muzaffarpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://nalanda.dcourts.gov.in/",
+      "host": "nalanda.dcourts.gov.in",
+      "texts": [
+        "Nalanda"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://nawada.dcourts.gov.in/",
+      "host": "nawada.dcourts.gov.in",
+      "texts": [
+        "Nawada"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://patna.dcourts.gov.in/",
+      "host": "patna.dcourts.gov.in",
+      "texts": [
+        "Patna"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://purnea.dcourts.gov.in/",
+      "host": "purnea.dcourts.gov.in",
+      "texts": [
+        "Purnea"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://rohtas.dcourts.gov.in/",
+      "host": "rohtas.dcourts.gov.in",
+      "texts": [
+        "Rohtas"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://saharsa.dcourts.gov.in/",
+      "host": "saharsa.dcourts.gov.in",
+      "texts": [
+        "Saharsa"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://samastipur.dcourts.gov.in/",
+      "host": "samastipur.dcourts.gov.in",
+      "texts": [
+        "Samastipur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://saran.dcourts.gov.in/",
+      "host": "saran.dcourts.gov.in",
+      "texts": [
+        "Saran"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://sheikhpura.dcourts.gov.in/",
+      "host": "sheikhpura.dcourts.gov.in",
+      "texts": [
+        "Sheikhpura"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://sheohar.dcourts.gov.in/",
+      "host": "sheohar.dcourts.gov.in",
+      "texts": [
+        "Sheohar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://sitamarhi.dcourts.gov.in/",
+      "host": "sitamarhi.dcourts.gov.in",
+      "texts": [
+        "Sitamarhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://siwan.dcourts.gov.in/",
+      "host": "siwan.dcourts.gov.in",
+      "texts": [
+        "Siwan"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://supaul.dcourts.gov.in/",
+      "host": "supaul.dcourts.gov.in",
+      "texts": [
+        "Supaul"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://vaishali.dcourts.gov.in/",
+      "host": "vaishali.dcourts.gov.in",
+      "texts": [
+        "Vaishali"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://bettiah.dcourts.gov.in/",
+      "host": "bettiah.dcourts.gov.in",
+      "texts": [
+        "West Champaran"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar"
+      ]
+    },
+    {
+      "url": "https://chandigarh.dcourts.gov.in/",
+      "host": "chandigarh.dcourts.gov.in",
+      "texts": [
+        "Chandigarh District Court"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court"
+      ]
+    },
+    {
+      "url": "https://bilaspur.dcourts.gov.in/",
+      "host": "bilaspur.dcourts.gov.in",
+      "texts": [
+        "Bilaspur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://bastar.dcourts.gov.in/",
+      "host": "bastar.dcourts.gov.in",
+      "texts": [
+        "Bastar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://dhamtari.dcourts.gov.in/",
+      "host": "dhamtari.dcourts.gov.in",
+      "texts": [
+        "Dhamtari"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://durg.dcourts.gov.in/",
+      "host": "durg.dcourts.gov.in",
+      "texts": [
+        "Durg"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://janjgir.dcourts.gov.in/",
+      "host": "janjgir.dcourts.gov.in",
+      "texts": [
+        "Janjgir-Champa"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://jashpur.dcourts.gov.in/",
+      "host": "jashpur.dcourts.gov.in",
+      "texts": [
+        "Jashpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://kabirdham.dcourts.gov.in/",
+      "host": "kabirdham.dcourts.gov.in",
+      "texts": [
+        "Kabirdham-Kawardha"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://korba.dcourts.gov.in/",
+      "host": "korba.dcourts.gov.in",
+      "texts": [
+        "Korba"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://korea.dcourts.gov.in/",
+      "host": "korea.dcourts.gov.in",
+      "texts": [
+        "Korea"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://mahasamund.dcourts.gov.in/",
+      "host": "mahasamund.dcourts.gov.in",
+      "texts": [
+        "Mahasamund"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://kanker.dcourts.gov.in/",
+      "host": "kanker.dcourts.gov.in",
+      "texts": [
+        "Norh Bastar-Kanker"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://raigarh.dcourts.gov.in/",
+      "host": "raigarh.dcourts.gov.in",
+      "texts": [
+        "Raigarh"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://raipur.dcourts.gov.in/",
+      "host": "raipur.dcourts.gov.in",
+      "texts": [
+        "Raipur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://rajnandgaon.dcourts.gov.in/",
+      "host": "rajnandgaon.dcourts.gov.in",
+      "texts": [
+        "Rajnandgaon"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://dantewada.dcourts.gov.in/",
+      "host": "dantewada.dcourts.gov.in",
+      "texts": [
+        "South Bastar-Dantewada"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://surguja.dcourts.gov.in/",
+      "host": "surguja.dcourts.gov.in",
+      "texts": [
+        "Surguja"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://surajpur.dcourts.gov.in/",
+      "host": "surajpur.dcourts.gov.in",
+      "texts": [
+        "Surajpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://bemetara.dcourts.gov.in/",
+      "host": "bemetara.dcourts.gov.in",
+      "texts": [
+        "Bemetara"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://balod.dcourts.gov.in/",
+      "host": "balod.dcourts.gov.in",
+      "texts": [
+        "Balod"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://balodabazar.dcourts.gov.in/",
+      "host": "balodabazar.dcourts.gov.in",
+      "texts": [
+        "Balodabazar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://mungeli.dcourts.gov.in/",
+      "host": "mungeli.dcourts.gov.in",
+      "texts": [
+        "Mungeli"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://balrampur.dcourts.gov.in/",
+      "host": "balrampur.dcourts.gov.in",
+      "texts": [
+        "Balrampur_CHG"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh"
+      ]
+    },
+    {
+      "url": "https://silvassa.dcourts.gov.in/",
+      "host": "silvassa.dcourts.gov.in",
+      "texts": [
+        "Dadra and Nagar Haveli"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra"
+      ]
+    },
+    {
+      "url": "https://daman.dcourts.gov.in/",
+      "host": "daman.dcourts.gov.in",
+      "texts": [
+        "Daman"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu"
+      ]
+    },
+    {
+      "url": "https://diu.dcourts.gov.in/",
+      "host": "diu.dcourts.gov.in",
+      "texts": [
+        "Diu"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu"
+      ]
+    },
+    {
+      "url": "https://centraldelhi.dcourts.gov.in/",
+      "host": "centraldelhi.dcourts.gov.in",
+      "texts": [
+        "Central Delhi",
+        "Delhi Family Court"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://eastdelhi.dcourts.gov.in/",
+      "host": "eastdelhi.dcourts.gov.in",
+      "texts": [
+        "East Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://newdelhi.dcourts.gov.in/",
+      "host": "newdelhi.dcourts.gov.in",
+      "texts": [
+        "New Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://northeast.dcourts.gov.in/",
+      "host": "northeast.dcourts.gov.in",
+      "texts": [
+        "North East Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://rohini.dcourts.gov.in/",
+      "host": "rohini.dcourts.gov.in",
+      "texts": [
+        "North West Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://southdelhi.dcourts.gov.in/",
+      "host": "southdelhi.dcourts.gov.in",
+      "texts": [
+        "South Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://southwestdelhi.dcourts.gov.in/",
+      "host": "southwestdelhi.dcourts.gov.in",
+      "texts": [
+        "South West Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://westdelhi.dcourts.gov.in/",
+      "host": "westdelhi.dcourts.gov.in",
+      "texts": [
+        "West Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://northdelhi.dcourts.gov.in/",
+      "host": "northdelhi.dcourts.gov.in",
+      "texts": [
+        "North Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://southeastdelhi.dcourts.gov.in/",
+      "host": "southeastdelhi.dcourts.gov.in",
+      "texts": [
+        "South East Delhi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://shahdara.dcourts.gov.in/",
+      "host": "shahdara.dcourts.gov.in",
+      "texts": [
+        "Shahdara"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi"
+      ]
+    },
+    {
+      "url": "https://dcsgoa.dcourts.gov.in/",
+      "host": "dcsgoa.dcourts.gov.in",
+      "texts": [
+        "South Goa"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa"
+      ]
+    },
+    {
+      "url": "https://dcngoa.dcourts.gov.in/",
+      "host": "dcngoa.dcourts.gov.in",
+      "texts": [
+        "North Goa"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa"
+      ]
+    },
+    {
+      "url": "https://junagadh.dcourts.gov.in/",
+      "host": "junagadh.dcourts.gov.in",
+      "texts": [
+        "Junagadh"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://amreli.dcourts.gov.in/",
+      "host": "amreli.dcourts.gov.in",
+      "texts": [
+        "Amreli"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://anand.dcourts.gov.in/",
+      "host": "anand.dcourts.gov.in",
+      "texts": [
+        "Anand"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://banaskantha.dcourts.gov.in/",
+      "host": "banaskantha.dcourts.gov.in",
+      "texts": [
+        "Banaskantha"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://bharuch.dcourts.gov.in/",
+      "host": "bharuch.dcourts.gov.in",
+      "texts": [
+        "Bharuch"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://bhavnagar.dcourts.gov.in/",
+      "host": "bhavnagar.dcourts.gov.in",
+      "texts": [
+        "Bhavnagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://dahod.dcourts.gov.in/",
+      "host": "dahod.dcourts.gov.in",
+      "texts": [
+        "Dahod"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://gandhinagar.dcourts.gov.in/",
+      "host": "gandhinagar.dcourts.gov.in",
+      "texts": [
+        "Gandhinagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://jamnagar.dcourts.gov.in/",
+      "host": "jamnagar.dcourts.gov.in",
+      "texts": [
+        "Jamnagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://kheda.dcourts.gov.in/",
+      "host": "kheda.dcourts.gov.in",
+      "texts": [
+        "Kheda"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://kachchh.dcourts.gov.in/",
+      "host": "kachchh.dcourts.gov.in",
+      "texts": [
+        "Kutch"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://mahesana.dcourts.gov.in/",
+      "host": "mahesana.dcourts.gov.in",
+      "texts": [
+        "Mehsana"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://narmada.dcourts.gov.in/",
+      "host": "narmada.dcourts.gov.in",
+      "texts": [
+        "Narmada"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://navsari.dcourts.gov.in/",
+      "host": "navsari.dcourts.gov.in",
+      "texts": [
+        "Navsari"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://panchmahals.dcourts.gov.in/",
+      "host": "panchmahals.dcourts.gov.in",
+      "texts": [
+        "Panchmahals"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://patan.dcourts.gov.in/",
+      "host": "patan.dcourts.gov.in",
+      "texts": [
+        "Patan"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://porbandar.dcourts.gov.in/",
+      "host": "porbandar.dcourts.gov.in",
+      "texts": [
+        "Porbandar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://rajkot.dcourts.gov.in/",
+      "host": "rajkot.dcourts.gov.in",
+      "texts": [
+        "Rajkot"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://sabarkantha.dcourts.gov.in/",
+      "host": "sabarkantha.dcourts.gov.in",
+      "texts": [
+        "Sabarkantha"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://surat.dcourts.gov.in/",
+      "host": "surat.dcourts.gov.in",
+      "texts": [
+        "Surat"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://surendranagar.dcourts.gov.in/",
+      "host": "surendranagar.dcourts.gov.in",
+      "texts": [
+        "Surendranagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://vadodara.dcourts.gov.in/",
+      "host": "vadodara.dcourts.gov.in",
+      "texts": [
+        "Vadodara"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://valsad.dcourts.gov.in/",
+      "host": "valsad.dcourts.gov.in",
+      "texts": [
+        "Valsad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://ahmedabad-rural.dcourts.gov.in/",
+      "host": "ahmedabad-rural.dcourts.gov.in",
+      "texts": [
+        "Ahmedabad (Rural)"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://tapi.dcourts.gov.in/",
+      "host": "tapi.dcourts.gov.in",
+      "texts": [
+        "Tapi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://girsomnath.dcourts.gov.in/",
+      "host": "girsomnath.dcourts.gov.in",
+      "texts": [
+        "Gir Somnath"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://aravalli.dcourts.gov.in/",
+      "host": "aravalli.dcourts.gov.in",
+      "texts": [
+        "Aravalli"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://morbi.dcourts.gov.in/",
+      "host": "morbi.dcourts.gov.in",
+      "texts": [
+        "Morbi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://devbhumidwarka.dcourts.gov.in/",
+      "host": "devbhumidwarka.dcourts.gov.in",
+      "texts": [
+        "Devbhumi Dwarka"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://chhotaudepur.dcourts.gov.in/",
+      "host": "chhotaudepur.dcourts.gov.in",
+      "texts": [
+        "Chhota Udepur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://mahisagar.dcourts.gov.in/",
+      "host": "mahisagar.dcourts.gov.in",
+      "texts": [
+        "Mahisagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://botad.dcourts.gov.in/",
+      "host": "botad.dcourts.gov.in",
+      "texts": [
+        "Botad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://ahmedabad-ccc.dcourts.gov.in/",
+      "host": "ahmedabad-ccc.dcourts.gov.in",
+      "texts": [
+        "City Civil & Sessions Court, Ahmedabad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://ahmedabad-mmc.dcourts.gov.in/",
+      "host": "ahmedabad-mmc.dcourts.gov.in",
+      "texts": [
+        "Metropolitan Magistrates Court, Ahmedabad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://indcourtguj.dcourts.gov.in/",
+      "host": "indcourtguj.dcourts.gov.in",
+      "texts": [
+        "Industrial/Labour Courts of Gujarat"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat"
+      ]
+    },
+    {
+      "url": "https://ambala.dcourts.gov.in/",
+      "host": "ambala.dcourts.gov.in",
+      "texts": [
+        "Ambala"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://bhiwani.dcourts.gov.in/",
+      "host": "bhiwani.dcourts.gov.in",
+      "texts": [
+        "Bhiwani"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://faridabad.dcourts.gov.in/",
+      "host": "faridabad.dcourts.gov.in",
+      "texts": [
+        "Faridabad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://fatehabad.dcourts.gov.in/",
+      "host": "fatehabad.dcourts.gov.in",
+      "texts": [
+        "Fatehabad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://gurugram.dcourts.gov.in/",
+      "host": "gurugram.dcourts.gov.in",
+      "texts": [
+        "Gurgaon"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://hisar.dcourts.gov.in/",
+      "host": "hisar.dcourts.gov.in",
+      "texts": [
+        "Hisar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://jhajjar.dcourts.gov.in/",
+      "host": "jhajjar.dcourts.gov.in",
+      "texts": [
+        "Jhajjar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://jind.dcourts.gov.in/",
+      "host": "jind.dcourts.gov.in",
+      "texts": [
+        "Jind"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://kaithal.dcourts.gov.in/",
+      "host": "kaithal.dcourts.gov.in",
+      "texts": [
+        "Kaithal"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://karnal.dcourts.gov.in/",
+      "host": "karnal.dcourts.gov.in",
+      "texts": [
+        "Karnal"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://kurukshetra.dcourts.gov.in/",
+      "host": "kurukshetra.dcourts.gov.in",
+      "texts": [
+        "Kurukshetra"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://narnaul.dcourts.gov.in/",
+      "host": "narnaul.dcourts.gov.in",
+      "texts": [
+        "Mahendragarh"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://nuh.dcourts.gov.in/",
+      "host": "nuh.dcourts.gov.in",
+      "texts": [
+        "Mewat"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://palwal.dcourts.gov.in/",
+      "host": "palwal.dcourts.gov.in",
+      "texts": [
+        "Palwal"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://panchkula.dcourts.gov.in/",
+      "host": "panchkula.dcourts.gov.in",
+      "texts": [
+        "Panchkula"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://panipat.dcourts.gov.in/",
+      "host": "panipat.dcourts.gov.in",
+      "texts": [
+        "Panipat"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://rewari.dcourts.gov.in/",
+      "host": "rewari.dcourts.gov.in",
+      "texts": [
+        "Rewari"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://rohtak.dcourts.gov.in/",
+      "host": "rohtak.dcourts.gov.in",
+      "texts": [
+        "Rohtak"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://sirsa.dcourts.gov.in/",
+      "host": "sirsa.dcourts.gov.in",
+      "texts": [
+        "Sirsa"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://sonepat.dcourts.gov.in/",
+      "host": "sonepat.dcourts.gov.in",
+      "texts": [
+        "Sonipat"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://yamunanagar.dcourts.gov.in/",
+      "host": "yamunanagar.dcourts.gov.in",
+      "texts": [
+        "Yamunanagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://charkhidadri.dcourts.gov.in/",
+      "host": "charkhidadri.dcourts.gov.in",
+      "texts": [
+        "Charkhi Dadri"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana"
+      ]
+    },
+    {
+      "url": "https://shimla.dcourts.gov.in/",
+      "host": "shimla.dcourts.gov.in",
+      "texts": [
+        "Shimla"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://chamba.dcourts.gov.in/",
+      "host": "chamba.dcourts.gov.in",
+      "texts": [
+        "Chamba"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://una.dcourts.gov.in/",
+      "host": "una.dcourts.gov.in",
+      "texts": [
+        "Una"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://solan.dcourts.gov.in/",
+      "host": "solan.dcourts.gov.in",
+      "texts": [
+        "Solan"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://mandi.dcourts.gov.in/",
+      "host": "mandi.dcourts.gov.in",
+      "texts": [
+        "Mandi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://bilaspurhp.dcourts.gov.in/",
+      "host": "bilaspurhp.dcourts.gov.in",
+      "texts": [
+        "Bilaspur HP"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://hamirpur.dcourts.gov.in/",
+      "host": "hamirpur.dcourts.gov.in",
+      "texts": [
+        "Hamirpur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://sirmaur.dcourts.gov.in/",
+      "host": "sirmaur.dcourts.gov.in",
+      "texts": [
+        "Sirmaur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://kinnaur.dcourts.gov.in/",
+      "host": "kinnaur.dcourts.gov.in",
+      "texts": [
+        "Kinnaur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://kullu.dcourts.gov.in/",
+      "host": "kullu.dcourts.gov.in",
+      "texts": [
+        "Kullu"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://kangra.dcourts.gov.in/",
+      "host": "kangra.dcourts.gov.in",
+      "texts": [
+        "Kangra"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp"
+      ]
+    },
+    {
+      "url": "https://srinagar.dcourts.gov.in/",
+      "host": "srinagar.dcourts.gov.in",
+      "texts": [
+        "Srinagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://poonch.dcourts.gov.in/",
+      "host": "poonch.dcourts.gov.in",
+      "texts": [
+        "Poonch"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://jammu.dcourts.gov.in/",
+      "host": "jammu.dcourts.gov.in",
+      "texts": [
+        "Jammu"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://kathua.dcourts.gov.in/",
+      "host": "kathua.dcourts.gov.in",
+      "texts": [
+        "Kathua"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://udhampur.dcourts.gov.in/",
+      "host": "udhampur.dcourts.gov.in",
+      "texts": [
+        "Udhampur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://anantnag.dcourts.gov.in/",
+      "host": "anantnag.dcourts.gov.in",
+      "texts": [
+        "Anantnag"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://rajouri.dcourts.gov.in/",
+      "host": "rajouri.dcourts.gov.in",
+      "texts": [
+        "Rajouri"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://baramulla.dcourts.gov.in/",
+      "host": "baramulla.dcourts.gov.in",
+      "texts": [
+        "Baramula"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://budgam.dcourts.gov.in/",
+      "host": "budgam.dcourts.gov.in",
+      "texts": [
+        "Badgam"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://bhaderwah.dcourts.gov.in/",
+      "host": "bhaderwah.dcourts.gov.in",
+      "texts": [
+        "Doda"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://kupwara.dcourts.gov.in/",
+      "host": "kupwara.dcourts.gov.in",
+      "texts": [
+        "Kupwara"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://pulwama.dcourts.gov.in/",
+      "host": "pulwama.dcourts.gov.in",
+      "texts": [
+        "Pulwama"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://samba.dcourts.gov.in/",
+      "host": "samba.dcourts.gov.in",
+      "texts": [
+        "Samba"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://bandipora.dcourts.gov.in/",
+      "host": "bandipora.dcourts.gov.in",
+      "texts": [
+        "Bandipora"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://kulgam.dcourts.gov.in/",
+      "host": "kulgam.dcourts.gov.in",
+      "texts": [
+        "Kulgam"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://reasi.dcourts.gov.in/",
+      "host": "reasi.dcourts.gov.in",
+      "texts": [
+        "Reasi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://ganderbal.dcourts.gov.in/",
+      "host": "ganderbal.dcourts.gov.in",
+      "texts": [
+        "Ganderbal"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://ramban.dcourts.gov.in/",
+      "host": "ramban.dcourts.gov.in",
+      "texts": [
+        "Ramban"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://shopian.dcourts.gov.in/",
+      "host": "shopian.dcourts.gov.in",
+      "texts": [
+        "Shopian"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://kishtwar.dcourts.gov.in/",
+      "host": "kishtwar.dcourts.gov.in",
+      "texts": [
+        "Kishtwar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk"
+      ]
+    },
+    {
+      "url": "https://bokaro.dcourts.gov.in/",
+      "host": "bokaro.dcourts.gov.in",
+      "texts": [
+        "Bokaro"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://chatra.dcourts.gov.in/",
+      "host": "chatra.dcourts.gov.in",
+      "texts": [
+        "Chatra"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://deoghar.dcourts.gov.in/",
+      "host": "deoghar.dcourts.gov.in",
+      "texts": [
+        "Deoghar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://dhanbad.dcourts.gov.in/",
+      "host": "dhanbad.dcourts.gov.in",
+      "texts": [
+        "Dhanbad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://dumka.dcourts.gov.in/",
+      "host": "dumka.dcourts.gov.in",
+      "texts": [
+        "Dumka"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://jamshedpur.dcourts.gov.in/",
+      "host": "jamshedpur.dcourts.gov.in",
+      "texts": [
+        "East Singhbhum"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://garhwa.dcourts.gov.in/",
+      "host": "garhwa.dcourts.gov.in",
+      "texts": [
+        "Garhwa"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://giridih.dcourts.gov.in/",
+      "host": "giridih.dcourts.gov.in",
+      "texts": [
+        "Giridih"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://godda.dcourts.gov.in/",
+      "host": "godda.dcourts.gov.in",
+      "texts": [
+        "Godda"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://gumla.dcourts.gov.in/",
+      "host": "gumla.dcourts.gov.in",
+      "texts": [
+        "Gumla"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://hazaribag.dcourts.gov.in/",
+      "host": "hazaribag.dcourts.gov.in",
+      "texts": [
+        "Hazaribag"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://jamtara.dcourts.gov.in/",
+      "host": "jamtara.dcourts.gov.in",
+      "texts": [
+        "Jamtara"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://khunti.dcourts.gov.in/",
+      "host": "khunti.dcourts.gov.in",
+      "texts": [
+        "Khunti"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://koderma.dcourts.gov.in/",
+      "host": "koderma.dcourts.gov.in",
+      "texts": [
+        "Koderma"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://latehar.dcourts.gov.in/",
+      "host": "latehar.dcourts.gov.in",
+      "texts": [
+        "Latehar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://lohardaga.dcourts.gov.in/",
+      "host": "lohardaga.dcourts.gov.in",
+      "texts": [
+        "Lohardaga"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://pakur.dcourts.gov.in/",
+      "host": "pakur.dcourts.gov.in",
+      "texts": [
+        "Pakur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://palamu.dcourts.gov.in/",
+      "host": "palamu.dcourts.gov.in",
+      "texts": [
+        "Palamu"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://ramgarh.dcourts.gov.in/",
+      "host": "ramgarh.dcourts.gov.in",
+      "texts": [
+        "Ramgarh"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://ranchi.dcourts.gov.in/",
+      "host": "ranchi.dcourts.gov.in",
+      "texts": [
+        "Ranchi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://sahibganj.dcourts.gov.in/",
+      "host": "sahibganj.dcourts.gov.in",
+      "texts": [
+        "Sahibganj"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://seraikella.dcourts.gov.in/",
+      "host": "seraikella.dcourts.gov.in",
+      "texts": [
+        "Seraikela-Kharsawan"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://simdega.dcourts.gov.in/",
+      "host": "simdega.dcourts.gov.in",
+      "texts": [
+        "Simdega"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://chaibasa.dcourts.gov.in/",
+      "host": "chaibasa.dcourts.gov.in",
+      "texts": [
+        "West Singhbhum"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand"
+      ]
+    },
+    {
+      "url": "https://bagalkot.dcourts.gov.in/",
+      "host": "bagalkot.dcourts.gov.in",
+      "texts": [
+        "Bagalkot"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://bengaluru.dcourts.gov.in/",
+      "host": "bengaluru.dcourts.gov.in",
+      "texts": [
+        "Bengaluru"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://bengalururural.dcourts.gov.in/",
+      "host": "bengalururural.dcourts.gov.in",
+      "texts": [
+        "Bengaluru Rural"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://belagavi.dcourts.gov.in/",
+      "host": "belagavi.dcourts.gov.in",
+      "texts": [
+        "Belagavi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://ballari.dcourts.gov.in/",
+      "host": "ballari.dcourts.gov.in",
+      "texts": [
+        "Ballari"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://bidar.dcourts.gov.in/",
+      "host": "bidar.dcourts.gov.in",
+      "texts": [
+        "Bidar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://vijayapura.dcourts.gov.in/",
+      "host": "vijayapura.dcourts.gov.in",
+      "texts": [
+        "Vijayapura"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://chamarajanagara.dcourts.gov.in/",
+      "host": "chamarajanagara.dcourts.gov.in",
+      "texts": [
+        "Chamrajanagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://chikkamagaluru.dcourts.gov.in/",
+      "host": "chikkamagaluru.dcourts.gov.in",
+      "texts": [
+        "Chikkamagaluru"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://chikkaballapur.dcourts.gov.in/",
+      "host": "chikkaballapur.dcourts.gov.in",
+      "texts": [
+        "Chikballapur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://chitradurga.dcourts.gov.in/",
+      "host": "chitradurga.dcourts.gov.in",
+      "texts": [
+        "Chitradurga"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://dk.dcourts.gov.in/",
+      "host": "dk.dcourts.gov.in",
+      "texts": [
+        "Dakshina Kannada"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://davanagere.dcourts.gov.in/",
+      "host": "davanagere.dcourts.gov.in",
+      "texts": [
+        "Davangere"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://dharwad.dcourts.gov.in/",
+      "host": "dharwad.dcourts.gov.in",
+      "texts": [
+        "Dharwad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://gadag.dcourts.gov.in/",
+      "host": "gadag.dcourts.gov.in",
+      "texts": [
+        "Gadag"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://kalaburagi.dcourts.gov.in/",
+      "host": "kalaburagi.dcourts.gov.in",
+      "texts": [
+        "Kalaburagi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://hassan.dcourts.gov.in/",
+      "host": "hassan.dcourts.gov.in",
+      "texts": [
+        "Hassan"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://haveri.dcourts.gov.in/",
+      "host": "haveri.dcourts.gov.in",
+      "texts": [
+        "Haveri"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://kodagu.dcourts.gov.in/",
+      "host": "kodagu.dcourts.gov.in",
+      "texts": [
+        "Kodagu"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://kolar.dcourts.gov.in/",
+      "host": "kolar.dcourts.gov.in",
+      "texts": [
+        "Kolar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://koppal.dcourts.gov.in/",
+      "host": "koppal.dcourts.gov.in",
+      "texts": [
+        "Koppal"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://mandya.dcourts.gov.in/",
+      "host": "mandya.dcourts.gov.in",
+      "texts": [
+        "Mandya"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://mysuru.dcourts.gov.in/",
+      "host": "mysuru.dcourts.gov.in",
+      "texts": [
+        "Mysuru"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://raichur.dcourts.gov.in/",
+      "host": "raichur.dcourts.gov.in",
+      "texts": [
+        "Raichur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://shivamogga.dcourts.gov.in/",
+      "host": "shivamogga.dcourts.gov.in",
+      "texts": [
+        "Shivamogga"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://tumakuru.dcourts.gov.in/",
+      "host": "tumakuru.dcourts.gov.in",
+      "texts": [
+        "Tumakuru"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://udupi.dcourts.gov.in/",
+      "host": "udupi.dcourts.gov.in",
+      "texts": [
+        "Udupi"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://uttarakannada.dcourts.gov.in/",
+      "host": "uttarakannada.dcourts.gov.in",
+      "texts": [
+        "Uttara Kannada"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://yadgir.dcourts.gov.in/",
+      "host": "yadgir.dcourts.gov.in",
+      "texts": [
+        "Yadgir"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://ramanagara.dcourts.gov.in/",
+      "host": "ramanagara.dcourts.gov.in",
+      "texts": [
+        "Ramnagar"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "http://vijayanagar.dcourts.gov.in/",
+      "host": "vijayanagar.dcourts.gov.in",
+      "texts": [
+        "Vijayanagara"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka"
+      ]
+    },
+    {
+      "url": "https://alappuzha.dcourts.gov.in/",
+      "host": "alappuzha.dcourts.gov.in",
+      "texts": [
+        "Alappuzha"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://ernakulam.dcourts.gov.in/",
+      "host": "ernakulam.dcourts.gov.in",
+      "texts": [
+        "Ernakulam"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://idukki.dcourts.gov.in/",
+      "host": "idukki.dcourts.gov.in",
+      "texts": [
+        "Idukki"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://kannur.dcourts.gov.in/",
+      "host": "kannur.dcourts.gov.in",
+      "texts": [
+        "Kannur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://kasaragod.dcourts.gov.in/",
+      "host": "kasaragod.dcourts.gov.in",
+      "texts": [
+        "Kasargod"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://kollam.dcourts.gov.in/",
+      "host": "kollam.dcourts.gov.in",
+      "texts": [
+        "Kollam"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://kottayam.dcourts.gov.in/",
+      "host": "kottayam.dcourts.gov.in",
+      "texts": [
+        "Kottayam"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://malappuram.dcourts.gov.in/",
+      "host": "malappuram.dcourts.gov.in",
+      "texts": [
+        "Malappuram"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://palakkad.dcourts.gov.in/",
+      "host": "palakkad.dcourts.gov.in",
+      "texts": [
+        "Palakkad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://pathanamthitta.dcourts.gov.in/",
+      "host": "pathanamthitta.dcourts.gov.in",
+      "texts": [
+        "Pathanamthitta"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://thiruvananthapuram.dcourts.gov.in/",
+      "host": "thiruvananthapuram.dcourts.gov.in",
+      "texts": [
+        "Thiruvananthapuram"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://thrissur.dcourts.gov.in/",
+      "host": "thrissur.dcourts.gov.in",
+      "texts": [
+        "Thrissur"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://wayanad.dcourts.gov.in/",
+      "host": "wayanad.dcourts.gov.in",
+      "texts": [
+        "Wayanad"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://kozhikode.dcourts.gov.in/",
+      "host": "kozhikode.dcourts.gov.in",
+      "texts": [
+        "Kozhikode"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala"
+      ]
+    },
+    {
+      "url": "https://kavaratti.dcourts.gov.in/",
+      "host": "kavaratti.dcourts.gov.in",
+      "texts": [
+        "District Court Kavaratti"
+      ],
+      "onPages": [
+        "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep"
+      ]
+    }
+  ],
+  "externalRedirects": {
+    "note": "In-scope URLs whose redirect led to another host. These were NOT captured: the crawl is authorized for this host only, so a third-party page is recorded as a reference and left alone.",
+    "hosts": []
+  },
+  "durationMs": 481425,
+  "workspaceBefore": {
+    "replicaRootExists": true,
+    "categories": {
+      "Aadhaar": {
+        "projects": [
+          "uidai_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "CCTNS": {
+        "projects": [
+          "www_digitalpolicecitizenservices_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Courts": {
+        "projects": [
+          "ecourts_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Forensics": {
+        "projects": [
+          "eforensics_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Prisons": {
+        "projects": [
+          "eprisons_nic_in"
+        ],
+        "strayFiles": []
+      }
+    }
+  },
+  "disclaimer": "This analysis supports an unofficial local demonstration replica for authorized development, testing and educational use. It is not affiliated with, endorsed by or operated by any government body."
+}

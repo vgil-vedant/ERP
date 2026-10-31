@@ -1,0 +1,1357 @@
+{
+  "url": "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+  "finalUrl": "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+  "redirected": false,
+  "slug": "npipdashboard_eprisonslivestatus",
+  "depth": 2,
+  "via": "https://eprisons.nic.in/NPIPDashboard",
+  "httpStatus": 403,
+  "crawlStatus": "captured",
+  "title": "| Dashboard",
+  "lang": "en",
+  "charset": "UTF-8",
+  "description": "Web site created using create-react-app",
+  "keywords": "",
+  "headings": [
+    "ePrisons Live"
+  ],
+  "headingTree": [
+    {
+      "level": 1,
+      "text": "ePrisons Live"
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "Jail Location Lockup Report Parole Jumper Absconder ePrisons Live ePrisons Live View real-time prison status across India # Total Records : 36 S.No. State Name Central Jail District Jail Sub Jail Womens Jail Borstal Jail Others Total Jails On-Boarded Jails View Jail List 1 ANDAMAN & NICOBAR 0 2 3 0 0 0 5 4 View 2 ANDHRA PRADESH 4 8 92 2 0 1 107 81 View 3 ARUNACHAL PRADESH 0 2 17 0 0 0 19 9 View 4 ASSAM 6 24 1 0 0 3 34 34 View 5 BIHAR 8 31 18 2 0 1 60 60 View 6 CHANDIGARH 1 0 0 0 0 0 1 1 View 1 2 3 ... 6 A Digital India Initiative by Government of India. Site Map | Last Update on: 26/10/2026, 4:00:01 pm Copyright © 2015 by NIC. All rights reserved.",
+  "textLength": 703,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 2,
+  "iframeCount": 0,
+  "htmlLength": 57922,
+  "forms": [],
+  "orphanControls": [],
+  "tables": [
+    {
+      "selector": "div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.max-h-[85vh].overflow-auto:nth-of-type(3) > table.w-full.min-w-[1100px]",
+      "id": null,
+      "caption": null,
+      "headers": [
+        "S.No.",
+        "State Name",
+        "Central Jail",
+        "District Jail",
+        "Sub Jail",
+        "Womens Jail",
+        "Borstal Jail",
+        "Others",
+        "Total Jails",
+        "On-Boarded Jails",
+        "View Jail List"
+      ],
+      "columnCount": 11,
+      "rowCount": 7,
+      "sampleRows": [
+        [
+          "S.No.",
+          "State Name",
+          "Central Jail",
+          "District Jail",
+          "Sub Jail",
+          "Womens Jail",
+          "Borstal Jail",
+          "Others",
+          "Total Jails",
+          "On-Boarded Jails",
+          "View Jail List"
+        ],
+        [
+          "1",
+          "ANDAMAN & NICOBAR",
+          "0",
+          "2",
+          "3",
+          "0",
+          "0",
+          "0",
+          "5",
+          "4",
+          "View"
+        ],
+        [
+          "2",
+          "ANDHRA PRADESH",
+          "4",
+          "8",
+          "92",
+          "2",
+          "0",
+          "1",
+          "107",
+          "81",
+          "View"
+        ],
+        [
+          "3",
+          "ARUNACHAL PRADESH",
+          "0",
+          "2",
+          "17",
+          "0",
+          "0",
+          "0",
+          "19",
+          "9",
+          "View"
+        ],
+        [
+          "4",
+          "ASSAM",
+          "6",
+          "24",
+          "1",
+          "0",
+          "0",
+          "3",
+          "34",
+          "34",
+          "View"
+        ]
+      ],
+      "box": {
+        "x": 101,
+        "y": 240,
+        "w": 1449,
+        "h": 530
+      },
+      "isLayoutTable": false
+    }
+  ],
+  "components": [
+    {
+      "type": "header",
+      "selector": "#root > div.flex.h-screen:nth-of-type(2) > header.h-[65px].shrink-0",
+      "tag": "header",
+      "classes": "h-[65px] shrink-0 bg-white border-b border-gray-200 flex items-center justify-between px-5",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 65
+      },
+      "text": "Click here to expand menu items",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 20px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#root > div.flex.h-screen:nth-of-type(2) > footer.relative.z-40",
+      "tag": "footer",
+      "classes": "relative z-40 ml-[5rem] shrink-0\r block lg:flex lg:items-center lg:justify-between\r gap-2 px-3 py-[1px]\r border-t border-sky-300/40\r bg-gradient-to-r from-[#1b83b7] to-[#2b3a5d]\r text-xs text-white\r shadow-lg shadow-sky-500/10\r backdrop-blu",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 869,
+        "w": 1286,
+        "h": 31
+      },
+      "text": "A Digital India Initiative by Government of India.Site Map|Last Update on: 26/10/2026, 4:00:01 pmCopyright © 2015 by NIC. All rights reserved.",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "1px 12px",
+        "margin": "0px 0px 0px 80px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(14, 165, 233, 0.1) 0px 10px 15px -3px, rgba(14, 165, 233, 0.1) 0px 4px 6px -4px",
+        "display": "flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "40"
+      }
+    },
+    {
+      "type": "table",
+      "selector": "div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.max-h-[85vh].overflow-auto:nth-of-type(3) > table.w-full.min-w-[1100px]",
+      "tag": "table",
+      "classes": "w-full min-w-[1100px] border-separate border-spacing-y-1.5 whitespace-nowrap",
+      "id": null,
+      "box": {
+        "x": 101,
+        "y": 240,
+        "w": 1449,
+        "h": 530
+      },
+      "text": "S.No.State NameCentral JailDistrict JailSub JailWomens JailBorstal JailOthersTotal JailsOn-Boarded JailsView Jail List1ANDAMAN & NICOBAR 02300054View2ANDHRA PRADESH489220110781View",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px solid rgb(229, 231, 235)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "table",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "#root > div.flex.h-screen:nth-of-type(2) > div.flex.min-h-0 > div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2",
+      "tag": "div",
+      "classes": "card-wrapper ml-2 pr-5",
+      "id": null,
+      "box": {
+        "x": 88,
+        "y": 77,
+        "w": 1286,
+        "h": 766
+      },
+      "text": "ePrisons LiveView real-time prison status across India#Total Records : 36S.No.State NameCentral JailDistrict JailSub JailWomens JailBorstal JailOthersTotal JailsOn-Boarded JailsVie",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 20px 0px 0px",
+        "margin": "0px 0px 0px 8px",
+        "border": "0px solid rgb(229, 231, 235)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "relative",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.flex.h-screen:nth-of-type(2) > div.flex.min-h-0 > div.fixed.left-0:nth-of-type(1) > div.flex-1.overflow-y-visible > ul.space-y-1.5.sm:space-y-2",
+      "tag": "ul",
+      "classes": "space-y-1.5 sm:space-y-2",
+      "id": null,
+      "box": {
+        "x": 8,
+        "y": 89,
+        "w": 62,
+        "h": 342
+      },
+      "text": "Jail LocationLockup ReportParole JumperAbsconderePrisons Live",
+      "childCount": 5,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px solid rgb(229, 231, 235)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#root > div.flex.h-screen:nth-of-type(2) > header.h-[65px].shrink-0 > div.flex.items-center:nth-of-type(1) > button.group.ml-6",
+      "tag": "button",
+      "classes": "group ml-6 flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-[#0997ca] shadow-lg transition-all duration-300 hover:border-white hover:bg-[#0997ca] hover:text-white hover:shadow-xl active:scale-90",
+      "id": null,
+      "box": {
+        "x": 264,
+        "y": 12,
+        "w": 40,
+        "h": 40
+      },
+      "text": "Click here to expand menu items",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(9, 151, 202)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px 0px 24px",
+        "border": "1px solid rgb(226, 232, 240)",
+        "borderRadius": "9999px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.w-full.min-w-[1100px] > tbody > tr.text-left.text-xs:nth-of-type(1) > td.rounded-r-2xl.border-y:nth-of-type(11) > button.group.relative",
+      "tag": "button",
+      "classes": "group relative inline-flex h-11 items-center justify-center gap-1 overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-[#86efac] via-[#4ade80] to-[#22c55e] px-3 text-xs font-semibold text-white shadow-[inset_0_1px_0_rgb",
+      "id": null,
+      "box": {
+        "x": 1447,
+        "y": 327,
+        "w": 81,
+        "h": 44
+      },
+      "text": "View",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.8)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.6) 0px 1px 0px 0px inset, rgba(22, 163, 74, 0.25) 0px 8px 20px 0px",
+        "display": "inline-flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.w-full.min-w-[1100px] > tbody > tr.text-left.text-xs:nth-of-type(2) > td.rounded-r-2xl.border-y:nth-of-type(11) > button.group.relative",
+      "tag": "button",
+      "classes": "group relative inline-flex h-11 items-center justify-center gap-1 overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-[#86efac] via-[#4ade80] to-[#22c55e] px-3 text-xs font-semibold text-white shadow-[inset_0_1px_0_rgb",
+      "id": null,
+      "box": {
+        "x": 1447,
+        "y": 403,
+        "w": 81,
+        "h": 44
+      },
+      "text": "View",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.8)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.6) 0px 1px 0px 0px inset, rgba(22, 163, 74, 0.25) 0px 8px 20px 0px",
+        "display": "inline-flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.w-full.min-w-[1100px] > tbody > tr.text-left.text-xs:nth-of-type(3) > td.rounded-r-2xl.border-y:nth-of-type(11) > button.group.relative",
+      "tag": "button",
+      "classes": "group relative inline-flex h-11 items-center justify-center gap-1 overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-[#86efac] via-[#4ade80] to-[#22c55e] px-3 text-xs font-semibold text-white shadow-[inset_0_1px_0_rgb",
+      "id": null,
+      "box": {
+        "x": 1447,
+        "y": 479,
+        "w": 81,
+        "h": 44
+      },
+      "text": "View",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.8)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.6) 0px 1px 0px 0px inset, rgba(22, 163, 74, 0.25) 0px 8px 20px 0px",
+        "display": "inline-flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.w-full.min-w-[1100px] > tbody > tr.text-left.text-xs:nth-of-type(4) > td.rounded-r-2xl.border-y:nth-of-type(11) > button.group.relative",
+      "tag": "button",
+      "classes": "group relative inline-flex h-11 items-center justify-center gap-1 overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-[#86efac] via-[#4ade80] to-[#22c55e] px-3 text-xs font-semibold text-white shadow-[inset_0_1px_0_rgb",
+      "id": null,
+      "box": {
+        "x": 1447,
+        "y": 555,
+        "w": 81,
+        "h": 44
+      },
+      "text": "View",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.8)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.6) 0px 1px 0px 0px inset, rgba(22, 163, 74, 0.25) 0px 8px 20px 0px",
+        "display": "inline-flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.w-full.min-w-[1100px] > tbody > tr.text-left.text-xs:nth-of-type(5) > td.rounded-r-2xl.border-y:nth-of-type(11) > button.group.relative",
+      "tag": "button",
+      "classes": "group relative inline-flex h-11 items-center justify-center gap-1 overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-[#86efac] via-[#4ade80] to-[#22c55e] px-3 text-xs font-semibold text-white shadow-[inset_0_1px_0_rgb",
+      "id": null,
+      "box": {
+        "x": 1447,
+        "y": 631,
+        "w": 81,
+        "h": 44
+      },
+      "text": "View",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.8)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.6) 0px 1px 0px 0px inset, rgba(22, 163, 74, 0.25) 0px 8px 20px 0px",
+        "display": "inline-flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.w-full.min-w-[1100px] > tbody > tr.text-left.text-xs:nth-of-type(6) > td.rounded-r-2xl.border-y:nth-of-type(11) > button.group.relative",
+      "tag": "button",
+      "classes": "group relative inline-flex h-11 items-center justify-center gap-1 overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-[#86efac] via-[#4ade80] to-[#22c55e] px-3 text-xs font-semibold text-white shadow-[inset_0_1px_0_rgb",
+      "id": null,
+      "box": {
+        "x": 1447,
+        "y": 707,
+        "w": 81,
+        "h": 44
+      },
+      "text": "View",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 12px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.8)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.6) 0px 1px 0px 0px inset, rgba(22, 163, 74, 0.25) 0px 8px 20px 0px",
+        "display": "inline-flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.flex.flex-wrap:nth-of-type(4) > button.flex.h-9:nth-of-type(1)",
+      "tag": "button",
+      "classes": "flex\r h-9\r w-9\r shrink-0\r items-center\r justify-center\r rounded-full\r bg-white/30\r backdrop-blur-xl\r border\r border-white/40\r shadow-[0_8px_20px_rgba(120,120,255,.18)]\r text-violet-500\r transition-all\r duration-300\r hover:scale-105\r hover:b",
+      "id": null,
+      "box": {
+        "x": 528,
+        "y": 786,
+        "w": 36,
+        "h": 36
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.3)",
+        "color": "rgb(139, 92, 246)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(120, 120, 255, 0.18) 0px 8px 20px 0px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.flex.flex-wrap:nth-of-type(4) > button.flex.h-9:nth-of-type(2)",
+      "tag": "button",
+      "classes": "flex\r h-9\r w-9\r shrink-0\r items-center\r justify-center\r rounded-full\r bg-white/30\r backdrop-blur-xl\r border\r border-white/40\r shadow-[0_8px_20px_rgba(120,120,255,.18)]\r text-blue-500\r transition-all\r duration-300\r hover:scale-105\r hover:bg-",
+      "id": null,
+      "box": {
+        "x": 572,
+        "y": 786,
+        "w": 36,
+        "h": 36
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.3)",
+        "color": "rgb(59, 130, 246)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(120, 120, 255, 0.18) 0px 8px 20px 0px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.flex.flex-wrap:nth-of-type(4) > div.flex.items-center > button.h-9.w-9:nth-of-type(1)",
+      "tag": "button",
+      "classes": "h-9\n                  w-9\n                  shrink-0\n                  rounded-full\n                  text-sm\n                  font-semibold\n\n                  transition-all\n                  duration-300\n\n                  \n             ",
+      "id": null,
+      "box": {
+        "x": 614,
+        "y": 784,
+        "w": 40,
+        "h": 40
+      },
+      "text": "1",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px solid rgb(229, 231, 235)",
+        "borderRadius": "9999px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(59, 130, 246, 0.45) 0px 10px 30px 0px",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.flex.flex-wrap:nth-of-type(4) > div.flex.items-center > button.h-9.w-9:nth-of-type(2)",
+      "tag": "button",
+      "classes": "h-9\n                  w-9\n                  shrink-0\n                  rounded-full\n                  text-sm\n                  font-semibold\n\n                  transition-all\n                  duration-300\n\n                  \n             ",
+      "id": null,
+      "box": {
+        "x": 660,
+        "y": 786,
+        "w": 36,
+        "h": 36
+      },
+      "text": "2",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.3)",
+        "color": "rgb(51, 65, 85)",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.flex.flex-wrap:nth-of-type(4) > div.flex.items-center > button.h-9.w-9:nth-of-type(3)",
+      "tag": "button",
+      "classes": "h-9\n                  w-9\n                  shrink-0\n                  rounded-full\n                  text-sm\n                  font-semibold\n\n                  transition-all\n                  duration-300\n\n                  \n             ",
+      "id": null,
+      "box": {
+        "x": 704,
+        "y": 786,
+        "w": 36,
+        "h": 36
+      },
+      "text": "3",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.3)",
+        "color": "rgb(51, 65, 85)",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.flex.flex-wrap:nth-of-type(4) > div.flex.items-center > button.h-9.w-9:nth-of-type(4)",
+      "tag": "button",
+      "classes": "h-9\n                  w-9\n                  shrink-0\n                  rounded-full\n                  text-sm\n                  font-semibold\n\n                  transition-all\n                  duration-300\n\n                  \n             ",
+      "id": null,
+      "box": {
+        "x": 779,
+        "y": 786,
+        "w": 36,
+        "h": 36
+      },
+      "text": "6",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.3)",
+        "color": "rgb(51, 65, 85)",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.flex.flex-wrap:nth-of-type(4) > button.flex.h-9:nth-of-type(3)",
+      "tag": "button",
+      "classes": "flex h-9 w-9 shrink-0 items-center justify-center rounded-full\r bg-white/30 backdrop-blur border\r border-white/40\r shadow-[0_8px_20px_rgba(120,120,255,.18)]\r text-blue-500\r transition-all duration-300\r hover:scale-105  hover:bg-blue-500  ho",
+      "id": null,
+      "box": {
+        "x": 823,
+        "y": 786,
+        "w": 36,
+        "h": 36
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.3)",
+        "color": "rgb(59, 130, 246)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(120, 120, 255, 0.18) 0px 8px 20px 0px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2 > div.relative.overflow-hidden:nth-of-type(2) > div.flex.flex-wrap:nth-of-type(4) > button.flex.h-9:nth-of-type(4)",
+      "tag": "button",
+      "classes": "flex\r h-9\r w-9\r shrink-0\r items-center\r justify-center\r rounded-full\r bg-white/30\r backdrop-blur-xl\r border\r border-white/40\r shadow-[0_8px_20px_rgba(120,120,255,.18)]\r text-violet-500\r transition-all\r duration-300\r hover:scale-105\r hover:b",
+      "id": null,
+      "box": {
+        "x": 867,
+        "y": 786,
+        "w": 36,
+        "h": 36
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.3)",
+        "color": "rgb(139, 92, 246)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(120, 120, 255, 0.18) 0px 8px 20px 0px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/nic_logo.png",
+      "category": "images",
+      "alt": "NIC Logo",
+      "natural": {
+        "w": 147,
+        "h": 29
+      },
+      "rendered": {
+        "x": 1253,
+        "y": 875,
+        "w": 101,
+        "h": 20
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/npipTab-logo.png",
+      "category": "icons",
+      "rel": "icon",
+      "sizes": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/manifest.json",
+      "category": "documents",
+      "rel": "manifest"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/static/css/main.722187b3.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/static/js/main.811484a3.js",
+      "category": "scripts",
+      "async": false,
+      "defer": true,
+      "type": null
+    }
+  ],
+  "links": [
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/Home",
+      "raw": "https://eprisons.nic.in/NPIP/public/Home",
+      "text": "",
+      "title": "Click here for NPIP Home Page",
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard",
+      "raw": "/NPIPDashboard",
+      "text": "Jail Location",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+      "raw": "/NPIPDashboard/lockupReport",
+      "text": "Lockup Report",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+      "raw": "/NPIPDashboard/paroleJumper",
+      "text": "Parole Jumper",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/absconder",
+      "raw": "/NPIPDashboard/absconder",
+      "text": "Absconder",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+      "raw": "/NPIPDashboard/ePrisonsLiveStatus",
+      "text": "ePrisons Live",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/siteMap",
+      "raw": "/NPIPDashboard/siteMap",
+      "text": "Site Map",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "Roboto, sans-serif",
+      "count": 225
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(38, 67, 122)",
+        "count": 72
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 68
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 43
+      },
+      {
+        "value": "rgb(38, 61, 120)",
+        "count": 42
+      },
+      {
+        "value": "rgb(143, 160, 184)",
+        "count": 27
+      },
+      {
+        "value": "rgb(16, 185, 129)",
+        "count": 24
+      },
+      {
+        "value": "rgb(2, 132, 199)",
+        "count": 22
+      },
+      {
+        "value": "rgb(5, 150, 105)",
+        "count": 18
+      },
+      {
+        "value": "rgb(51, 65, 85)",
+        "count": 7
+      },
+      {
+        "value": "rgb(139, 92, 246)",
+        "count": 6
+      },
+      {
+        "value": "rgb(59, 130, 246)",
+        "count": 6
+      },
+      {
+        "value": "rgb(9, 151, 202)",
+        "count": 4
+      }
+    ],
+    "background": [
+      {
+        "value": "rgba(255, 255, 255, 0.4)",
+        "count": 66
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.45)",
+        "count": 15
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.3)",
+        "count": 8
+      },
+      {
+        "value": "rgba(209, 250, 229, 0.8)",
+        "count": 6
+      },
+      {
+        "value": "rgb(14, 165, 233)",
+        "count": 5
+      },
+      {
+        "value": "rgba(224, 242, 254, 0.7)",
+        "count": 4
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 2
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.2)",
+        "count": 2
+      },
+      {
+        "value": "rgb(237, 244, 255)",
+        "count": 1
+      },
+      {
+        "value": "rgb(243, 244, 246)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.6)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.1)",
+        "count": 1
+      }
+    ]
+  },
+  "bodyStyle": {
+    "fontFamily": "Roboto, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "24px",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgb(237, 244, 255)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": true,
+    "frameworkGlobals": []
+  },
+  "responseHeaders": {
+    "content-length": "1233",
+    "content-type": "text/html",
+    "date": "Mon, 26 Oct 2026 11:47:17 GMT",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "network": [
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+      "method": "GET",
+      "status": 403,
+      "resourceType": "document",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "1233",
+        "content-type": "text/html",
+        "date": "Mon, 26 Oct 2026 11:47:17 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "657",
+        "content-type": "text/html",
+        "date": "Mon, 26 Oct 2026 11:44:35 GMT",
+        "etag": "\"cc78290c62dd1:0\"",
+        "last-modified": "Thu, 22 Oct 2026 10:03:18 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/static/js/main.811484a3.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "2666994",
+        "etag": "\"cc78290c62dd1:0\"",
+        "date": "Mon, 26 Oct 2026 11:44:35 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 22 Oct 2026 10:03:18 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/static/css/main.722187b3.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "153893",
+        "etag": "\"cc78290c62dd1:0\"",
+        "date": "Mon, 26 Oct 2026 11:44:35 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 22 Oct 2026 10:03:18 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "x-content-type-options": "nosniff",
+        "expires": "Mon, 26 Oct 2026 11:44:36 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Mon, 26 Oct 2026 11:44:36 GMT",
+        "content-type": "text/css; charset=utf-8",
+        "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+        "last-modified": "Mon, 26 Oct 2026 09:51:36 GMT",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000",
+        "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+        "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+        "timing-allow-origin": "*",
+        "cross-origin-opener-policy": "same-origin-allow-popups",
+        "cross-origin-resource-policy": "cross-origin",
+        "access-control-allow-origin": "*",
+        "x-xss-protection": "0",
+        "server": "ESF"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnka.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "age": "424245",
+        "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+        "x-content-type-options": "nosniff",
+        "expires": "Thu, 21 Oct 2027 13:53:52 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Wed, 21 Oct 2026 13:53:52 GMT",
+        "last-modified": "Wed, 18 Feb 2026 19:52:51 GMT",
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000",
+        "timing-allow-origin": "*",
+        "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+        "cross-origin-resource-policy": "cross-origin",
+        "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "47208",
+        "x-xss-protection": "0",
+        "server": "sffe"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "age": "424247",
+        "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+        "x-content-type-options": "nosniff",
+        "expires": "Thu, 21 Oct 2027 13:53:50 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Wed, 21 Oct 2026 13:53:50 GMT",
+        "last-modified": "Wed, 18 Feb 2026 19:51:43 GMT",
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000",
+        "timing-allow-origin": "*",
+        "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+        "cross-origin-resource-policy": "cross-origin",
+        "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "20556",
+        "x-xss-protection": "0",
+        "server": "sffe"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "age": "424247",
+        "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+        "x-content-type-options": "nosniff",
+        "expires": "Thu, 21 Oct 2027 13:53:50 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Wed, 21 Oct 2026 13:53:50 GMT",
+        "last-modified": "Wed, 18 Feb 2026 19:51:37 GMT",
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000",
+        "timing-allow-origin": "*",
+        "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+        "cross-origin-resource-policy": "cross-origin",
+        "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "43136",
+        "x-xss-protection": "0",
+        "server": "sffe"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/prisonsMapImage.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "186347",
+        "etag": "\"e5e794ada23dd1:0\"",
+        "date": "Mon, 26 Oct 2026 11:44:36 GMT",
+        "content-type": "image/png",
+        "last-modified": "Tue, 04 Aug 2026 06:27:14 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/nic_logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "4826",
+        "etag": "\"5b87a8ad05bdd1:0\"",
+        "date": "Mon, 26 Oct 2026 11:44:36 GMT",
+        "content-type": "image/png",
+        "last-modified": "Wed, 14 Oct 2026 11:38:32 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/jailList",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-length": "156033",
+        "date": "Mon, 26 Oct 2026 11:47:18 GMT",
+        "etag": "W/\"26181-BMq+QVFGJxhpmlK+dZKASu0bQHg\"",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/jailLocation",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-length": "569314",
+        "date": "Mon, 26 Oct 2026 11:47:18 GMT",
+        "etag": "W/\"8afe2-6iDrXsdmMupervyay8EY9zvIrrI\"",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/epCounts",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-length": "5368",
+        "date": "Mon, 26 Oct 2026 11:47:18 GMT",
+        "etag": "W/\"14f8-Bq6sIBB40T0zvi13OpQCzeQvnKg\"",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/eprisonsStateLiveStatus",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "keep-alive": "timeout=5",
+        "content-length": "6055",
+        "etag": "W/\"17a7-iwUrBjy8Us5PIKQUi15qBtCOeCI\"",
+        "date": "Mon, 26 Oct 2026 11:47:20 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/eprisonsJailLiveStatus",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-length": "395561",
+        "keep-alive": "timeout=5",
+        "etag": "W/\"60929-jQyxdMgS0qeME+r8pWdLa7E2wgY\"",
+        "date": "Mon, 26 Oct 2026 11:47:20 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/npipdashboard_eprisonslivestatus.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/npipdashboard_eprisonslivestatus.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/npipdashboard_eprisonslivestatus.tablet.png",
+    "mobile": "reference_pages/screenshots/npipdashboard_eprisonslivestatus.mobile.png"
+  },
+  "reachedViaSpa": {
+    "mount": "https://eprisons.nic.in/NPIPDashboard/",
+    "directStatus": 403,
+    "method": "in-app link click from the application mount"
+  },
+  "spaLateSettleApplied": true,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1217
+  },
+  "accessMethod": "client-side route via in-app navigation",
+  "capturedAt": "2026-10-26T11:47:29.879Z",
+  "pageType": "statistics",
+  "directRequestStatus": 403
+}

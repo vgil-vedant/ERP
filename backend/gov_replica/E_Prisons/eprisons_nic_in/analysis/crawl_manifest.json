@@ -1,0 +1,391 @@
+{
+  "runId": "2026-10-26T11-43-23-390Z",
+  "generatedAt": "2026-10-26T11:48:33.325Z",
+  "startUrl": "https://ePrisons.nic.in/NPIP/public/Home",
+  "rootHost": "eprisons.nic.in",
+  "limits": {
+    "maxPages": 60,
+    "maxDepth": 4,
+    "navTimeoutMs": 45000,
+    "settleTimeoutMs": 3500,
+    "perRequestDelayMs": 900,
+    "concurrency": 1,
+    "maxAssetBytes": 12582912,
+    "maxTotalRuntimeMs": 1500000,
+    "assetTimeoutMs": 30000,
+    "retriesPerUrl": 2
+  },
+  "visited": {
+    "https://eprisons.nic.in/NPIP/public/Home": {
+      "slug": "npip_public_home",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/Home",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "home",
+      "depth": 0,
+      "via": "start URL",
+      "capturedAt": "2026-10-26T11:43:53.182Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/SelectMISState.aspx": {
+      "slug": "npip_public_selectmisstate.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/SelectMISState",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:43:58.657Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/citizenservice": {
+      "slug": "citizenservice",
+      "finalUrl": "https://eprisons.nic.in/citizenservice",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:44:04.391Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/Legalaid/Secure/Login.aspx": {
+      "slug": "legalaid_secure_login.aspx",
+      "finalUrl": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "login",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:44:10.095Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/Login": {
+      "slug": "login",
+      "finalUrl": "https://eprisons.nic.in/Login/Secure/Login.aspx",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "login",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:44:17.009Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/MyVisitRegistration.aspx": {
+      "slug": "npip_public_myvisitregistration.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "visit-service",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:44:23.385Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/MyVisitStatus.aspx": {
+      "slug": "npip_public_myvisitstatus.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "status-enquiry",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:44:28.881Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/DashBoard.aspx": {
+      "slug": "npip_public_dashboard.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/DashBoard",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:44:35.064Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIPDashboard": {
+      "slug": "npipdashboard",
+      "finalUrl": "https://eprisons.nic.in/NPIPDashboard/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:44:50.791Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus.aspx": {
+      "slug": "npip_public_eprisonslivestatus.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:44:57.070Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus.aspx": {
+      "slug": "npip_public_eprisonslivevisitorsstatus.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:03.339Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/ParoleJumper.aspx": {
+      "slug": "npip_public_parolejumper.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:08.768Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/Absconder.aspx": {
+      "slug": "npip_public_absconder.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/Absconder",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:14.196Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/DashBoardForeigner.aspx": {
+      "slug": "npip_public_dashboardforeigner.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:19.721Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/grievancelogin.aspx": {
+      "slug": "npip_public_grievancelogin.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/grievancelogin",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "login",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:24.872Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/About.aspx": {
+      "slug": "npip_public_about.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/About",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "about",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:30.970Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/ContactUs.aspx": {
+      "slug": "npip_public_contactus.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/ContactUs",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "contact",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:36.563Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/grievance.aspx": {
+      "slug": "npip_public_grievance.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/grievance",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "grievance",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:42.139Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/PrivacyPolicy.aspx": {
+      "slug": "npip_public_privacypolicy.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "policy",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:47.608Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/TermsofUse.aspx": {
+      "slug": "npip_public_termsofuse.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/TermsofUse",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "policy",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:53.164Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIP/public/CodeofConduct.aspx": {
+      "slug": "npip_public_codeofconduct.aspx",
+      "finalUrl": "https://eprisons.nic.in/NPIP/public/CodeofConduct",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "policy",
+      "depth": 1,
+      "via": "https://eprisons.nic.in/NPIP/public/Home",
+      "capturedAt": "2026-10-26T11:45:58.597Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/Test": {
+      "slug": "test",
+      "finalUrl": "https://eprisons.nic.in/Test",
+      "httpStatus": 404,
+      "crawlStatus": "captured",
+      "pageType": "error",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/NPIP/public/SelectMISState.aspx",
+      "capturedAt": "2026-10-26T11:46:03.706Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/CitiZenService/Login/ContactUs": {
+      "slug": "citizenservice_login_contactus",
+      "finalUrl": "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "contact",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/citizenservice",
+      "capturedAt": "2026-10-26T11:46:09.008Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/CitiZenService/Login/FAQ": {
+      "slug": "citizenservice_login_faq",
+      "finalUrl": "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "help",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/citizenservice",
+      "capturedAt": "2026-10-26T11:46:14.406Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/CitiZenService/Visitor/Registration": {
+      "slug": "citizenservice_visitor_registration",
+      "finalUrl": "https://eprisons.nic.in/CitiZenService/Visitor/Registration",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "registration",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/citizenservice",
+      "capturedAt": "2026-10-26T11:46:19.776Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIPDashboard/lockupReport": {
+      "slug": "npipdashboard_lockupreport",
+      "finalUrl": "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+      "httpStatus": 403,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/NPIPDashboard",
+      "capturedAt": "2026-10-26T11:46:39.321Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIPDashboard/paroleJumper": {
+      "slug": "npipdashboard_parolejumper",
+      "finalUrl": "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+      "httpStatus": 403,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/NPIPDashboard",
+      "capturedAt": "2026-10-26T11:47:01.143Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIPDashboard/absconder": {
+      "slug": "npipdashboard_absconder",
+      "finalUrl": "https://eprisons.nic.in/NPIPDashboard/absconder",
+      "httpStatus": 403,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/NPIPDashboard",
+      "capturedAt": "2026-10-26T11:47:17.256Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus": {
+      "slug": "npipdashboard_eprisonslivestatus",
+      "finalUrl": "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+      "httpStatus": 403,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/NPIPDashboard",
+      "capturedAt": "2026-10-26T11:47:29.879Z",
+      "error": null
+    },
+    "https://eprisons.nic.in/NPIPDashboard/siteMap": {
+      "slug": "npipdashboard_sitemap",
+      "finalUrl": "https://eprisons.nic.in/NPIPDashboard/siteMap",
+      "httpStatus": 403,
+      "crawlStatus": "captured",
+      "pageType": "sitemap",
+      "depth": 2,
+      "via": "https://eprisons.nic.in/NPIPDashboard",
+      "capturedAt": "2026-10-26T11:47:41.651Z",
+      "error": null
+    }
+  },
+  "pending": [],
+  "aliases": [
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/Home.aspx",
+      "sameAs": "https://eprisons.nic.in/NPIP/public/Home",
+      "basis": "alias key matched a captured page",
+      "via": "https://eprisons.nic.in/NPIP/public/Home"
+    },
+    {
+      "url": "https://eprisons.nic.in/CitiZenService",
+      "sameAs": "https://eprisons.nic.in/citizenservice",
+      "basis": "alias key matched a captured page",
+      "via": "https://eprisons.nic.in/CitiZenService/Login/ContactUs"
+    },
+    {
+      "url": "https://eprisons.nic.in/Legalaid/Secure/Default.aspx",
+      "landedOn": "https://eprisons.nic.in/LegalAid/secure/login.aspx",
+      "sameAs": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "basis": "identical title, text and form shape after navigation",
+      "via": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+    },
+    {
+      "url": "https://eprisons.nic.in/LegalAid/secure/Default.aspx",
+      "landedOn": "https://eprisons.nic.in/LegalAid/secure/login.aspx",
+      "sameAs": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "basis": "identical title, text and form shape after navigation",
+      "via": "https://eprisons.nic.in/Legalaid/Secure/Default.aspx"
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://eprisons.nic.in/downloads/eMulakat_VCRequestPublic.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://eprisons.nic.in/NPIP/public/MyVisitRegistration.aspx"
+    }
+  ],
+  "errors": [],
+  "limitHit": null,
+  "exhaustedQueue": true,
+  "durationMs": 238569,
+  "resumeHint": "Re-running the pipeline on the same domain reuses every page in `visited` whose metadata file still exists under reference_pages/page_metadata/, and re-queues everything in `pending`. Delete this file to force a full re-crawl."
+}

@@ -1,0 +1,2425 @@
+{
+  "url": "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+  "finalUrl": "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+  "redirected": false,
+  "slug": "npipdashboard_lockupreport",
+  "depth": 2,
+  "via": "https://eprisons.nic.in/NPIPDashboard",
+  "httpStatus": 403,
+  "crawlStatus": "captured",
+  "title": "| Dashboard",
+  "lang": "en",
+  "charset": "UTF-8",
+  "description": "Web site created using create-react-app",
+  "keywords": "",
+  "headings": [
+    "Lockup Report"
+  ],
+  "headingTree": [
+    {
+      "level": 1,
+      "text": "Lockup Report"
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "Jail Location Lockup Report Parole Jumper Absconder ePrisons Live Lockup Report Insights into Lockup reports across India Showing data of date 19/10/26 — 26/10/26 last 7 days Select State All State ANDAMAN & NICOBAR ANDHRA PRADESH ARUNACHAL PRADESH ASSAM BIHAR CHANDIGARH CHHATTISGARH DADRA & NAGAR HAVELI AND DAMAN & DIU DAMAN & DIU DELHI GOA GUJARAT HARYANA HIMACHAL PRADESH JAMMU & KASHMIR JHARKHAND KARNATAKA KERALA LADAKH LAKSHADWEEP MADHYA PRADESH MAHARASHTRA MANIPUR MEGHALAYA MIZORAM NAGALAND ORISSA PUDUCHERRY PUNJAB RAJASTHAN SIKKIM TAMIL NADU TELANGANA TRIPURA UTTAR PRADESH UTTARAKHAND WEST BENGAL Select Lockup All Open Close Select Date Search Reset Download as Excel # Total Records : 1238 S.No. Date State Name State Code Jail Name Jail Code Lockup Status Total Inmates Inside Today Admission Today Release Today Visitors View Breakups 1 26/10/2026 ANDHRA PRADESH 1 DJ-Kurnool 114 Open (Morning) 84 0 0 0 2 26/10/2026 ANDHRA PRADESH 1 DJ-Vijayawada 9 Open (Morning) 159 0 0 2 3 26/10/2026 ANDHRA PRADESH 1 SJ-Gannavaram 18 Open (Morning) 15 0 0 0 4 26/10/2026 ANDHRA PRADESH 1 SJ-Hindupur 91 Open (Morning) 29 0 0 0 5 26/10/2026 ANDHRA PRADESH 1 SJ-Tadipatri 61 Open (Morning) 17 0 0 0 6 26/10/2026 ANDHRA PRADESH 1 SJ-Vizianagaram 12 Open (Morning) 17 0 0 0 7 26/10/2026 ANDHRA PRADESH 1 SSJ-Adoni 78 Open (Morning) 27 0 0 0 1 2 3 ... 177 A Digital India Initiative by Government of India. Site Map | Last Update on: 26/10/2026, 4:00:01 pm Copyright © 2015 by NIC. All rights reserved.",
+  "textLength": 1519,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 2,
+  "iframeCount": 0,
+  "htmlLength": 62356,
+  "forms": [],
+  "orphanControls": [
+    {
+      "tag": "select",
+      "type": "select",
+      "name": null,
+      "id": "select-state",
+      "selector": "#select-state",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "0",
+      "visible": true,
+      "replacedByWidget": false,
+      "functionalField": true,
+      "box": {
+        "x": 174,
+        "y": 169,
+        "w": 220,
+        "h": 43
+      },
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": "w-full appearance-none rounded-2xl border-0 bg-transparent px-3 py-[.6rem] text-md font-medium text-slate-700 outline-none focus:ring-0",
+      "multiple": false,
+      "options": [
+        {
+          "value": "0",
+          "text": "All State",
+          "selected": false
+        },
+        {
+          "value": "26",
+          "text": "ANDAMAN & NICOBAR",
+          "selected": false
+        },
+        {
+          "value": "1",
+          "text": "ANDHRA PRADESH",
+          "selected": false
+        },
+        {
+          "value": "2",
+          "text": "ARUNACHAL PRADESH",
+          "selected": false
+        },
+        {
+          "value": "3",
+          "text": "ASSAM",
+          "selected": false
+        },
+        {
+          "value": "4",
+          "text": "BIHAR",
+          "selected": false
+        },
+        {
+          "value": "27",
+          "text": "CHANDIGARH",
+          "selected": false
+        },
+        {
+          "value": "33",
+          "text": "CHHATTISGARH",
+          "selected": false
+        },
+        {
+          "value": "28",
+          "text": "DADRA & NAGAR HAVELI AND DAMAN & DIU",
+          "selected": false
+        },
+        {
+          "value": "29",
+          "text": "DAMAN & DIU",
+          "selected": false
+        },
+        {
+          "value": "30",
+          "text": "DELHI",
+          "selected": false
+        },
+        {
+          "value": "5",
+          "text": "GOA",
+          "selected": false
+        },
+        {
+          "value": "6",
+          "text": "GUJARAT",
+          "selected": false
+        },
+        {
+          "value": "7",
+          "text": "HARYANA",
+          "selected": false
+        },
+        {
+          "value": "8",
+          "text": "HIMACHAL PRADESH",
+          "selected": false
+        },
+        {
+          "value": "9",
+          "text": "JAMMU & KASHMIR",
+          "selected": false
+        },
+        {
+          "value": "34",
+          "text": "JHARKHAND",
+          "selected": false
+        },
+        {
+          "value": "10",
+          "text": "KARNATAKA",
+          "selected": false
+        },
+        {
+          "value": "11",
+          "text": "KERALA",
+          "selected": false
+        },
+        {
+          "value": "37",
+          "text": "LADAKH",
+          "selected": false
+        },
+        {
+          "value": "31",
+          "text": "LAKSHADWEEP",
+          "selected": false
+        },
+        {
+          "value": "12",
+          "text": "MADHYA PRADESH",
+          "selected": false
+        },
+        {
+          "value": "13",
+          "text": "MAHARASHTRA",
+          "selected": false
+        },
+        {
+          "value": "14",
+          "text": "MANIPUR",
+          "selected": false
+        },
+        {
+          "value": "15",
+          "text": "MEGHALAYA",
+          "selected": false
+        },
+        {
+          "value": "16",
+          "text": "MIZORAM",
+          "selected": false
+        },
+        {
+          "value": "17",
+          "text": "NAGALAND",
+          "selected": false
+        },
+        {
+          "value": "18",
+          "text": "ORISSA",
+          "selected": false
+        },
+        {
+          "value": "32",
+          "text": "PUDUCHERRY",
+          "selected": false
+        },
+        {
+          "value": "19",
+          "text": "PUNJAB",
+          "selected": false
+        },
+        {
+          "value": "20",
+          "text": "RAJASTHAN",
+          "selected": false
+        },
+        {
+          "value": "21",
+          "text": "SIKKIM",
+          "selected": false
+        },
+        {
+          "value": "22",
+          "text": "TAMIL NADU",
+          "selected": false
+        },
+        {
+          "value": "36",
+          "text": "TELANGANA",
+          "selected": false
+        },
+        {
+          "value": "23",
+          "text": "TRIPURA",
+          "selected": false
+        },
+        {
+          "value": "24",
+          "text": "UTTAR PRADESH",
+          "selected": false
+        },
+        {
+          "value": "35",
+          "text": "UTTARAKHAND",
+          "selected": false
+        },
+        {
+          "value": "25",
+          "text": "WEST BENGAL",
+          "selected": false
+        }
+      ],
+      "optionCount": 38,
+      "looksDependent": false
+    },
+    {
+      "tag": "select",
+      "type": "select",
+      "name": null,
+      "id": "select-data",
+      "selector": "#select-data",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "0",
+      "visible": true,
+      "replacedByWidget": false,
+      "functionalField": true,
+      "box": {
+        "x": 408,
+        "y": 169,
+        "w": 220,
+        "h": 43
+      },
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": "w-full\r appearance-none\r rounded-2xl\r border-0\r bg-transparent\r px-3\r py-[.6rem]\r text-md\r font-medium\r text-slate-700\r outline-none\r focus:ring-0",
+      "multiple": false,
+      "options": [
+        {
+          "value": "0",
+          "text": "All",
+          "selected": false
+        },
+        {
+          "value": "o",
+          "text": "Open",
+          "selected": false
+        },
+        {
+          "value": "c",
+          "text": "Close",
+          "selected": false
+        }
+      ],
+      "optionCount": 3,
+      "looksDependent": false
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "name": null,
+      "id": null,
+      "selector": "div.flex.flex-col:nth-of-type(3) > div.flex.items-center > div.react-datepicker-wrapper > div.react-datepicker__input-container > input.w-full.bg-transparent",
+      "label": null,
+      "placeholder": "DD/MM/YY",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": true,
+      "replacedByWidget": false,
+      "functionalField": true,
+      "box": {
+        "x": 651,
+        "y": 179,
+        "w": 160,
+        "h": 22
+      },
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": "w-full\r bg-transparent\r py-[1px]\r text-sm\r text-slate-700\r outline-none\r focus:ring-0\r z-50"
+    }
+  ],
+  "tables": [
+    {
+      "selector": "div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2 > div.md:w-3/1.ml-0:nth-of-type(3) > div.w-full.overflow-y-auto > table.min-w-full.p-2",
+      "id": null,
+      "caption": null,
+      "headers": [
+        "S.No.",
+        "Date",
+        "State Name",
+        "State Code",
+        "Jail Name",
+        "Jail Code",
+        "Lockup Status",
+        "Total Inmates Inside",
+        "Today Admission",
+        "Today Release",
+        "Today Visitors",
+        "View Breakups"
+      ],
+      "columnCount": 12,
+      "rowCount": 8,
+      "sampleRows": [
+        [
+          "S.No.",
+          "Date",
+          "State Name",
+          "State Code",
+          "Jail Name",
+          "Jail Code",
+          "Lockup Status",
+          "Total Inmates Inside",
+          "Today Admission",
+          "Today Release",
+          "Today Visitors",
+          "View Breakups"
+        ],
+        [
+          "1",
+          "26/10/2026",
+          "ANDHRA PRADESH",
+          "1",
+          "DJ-Kurnool",
+          "114",
+          "Open (Morning)",
+          "84",
+          "0",
+          "0",
+          "0",
+          ""
+        ],
+        [
+          "2",
+          "26/10/2026",
+          "ANDHRA PRADESH",
+          "1",
+          "DJ-Vijayawada",
+          "9",
+          "Open (Morning)",
+          "159",
+          "0",
+          "0",
+          "2",
+          ""
+        ],
+        [
+          "3",
+          "26/10/2026",
+          "ANDHRA PRADESH",
+          "1",
+          "SJ-Gannavaram",
+          "18",
+          "Open (Morning)",
+          "15",
+          "0",
+          "0",
+          "0",
+          ""
+        ],
+        [
+          "4",
+          "26/10/2026",
+          "ANDHRA PRADESH",
+          "1",
+          "SJ-Hindupur",
+          "91",
+          "Open (Morning)",
+          "29",
+          "0",
+          "0",
+          "0",
+          ""
+        ]
+      ],
+      "box": {
+        "x": 88,
+        "y": 319,
+        "w": 1486,
+        "h": 547
+      },
+      "isLayoutTable": false
+    }
+  ],
+  "components": [
+    {
+      "type": "header",
+      "selector": "#root > div.flex.h-screen:nth-of-type(2) > header.h-[65px].shrink-0",
+      "tag": "header",
+      "classes": "h-[65px] shrink-0 bg-white border-b border-gray-200 flex items-center justify-between px-5",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 65
+      },
+      "text": "Click here to expand menu items",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 20px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#root > div.flex.h-screen:nth-of-type(2) > footer.relative.z-40",
+      "tag": "footer",
+      "classes": "relative z-40 ml-[5rem] shrink-0\r block lg:flex lg:items-center lg:justify-between\r gap-2 px-3 py-[1px]\r border-t border-sky-300/40\r bg-gradient-to-r from-[#1b83b7] to-[#2b3a5d]\r text-xs text-white\r shadow-lg shadow-sky-500/10\r backdrop-blu",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 869,
+        "w": 1286,
+        "h": 31
+      },
+      "text": "A Digital India Initiative by Government of India.Site Map|Last Update on: 26/10/2026, 4:00:01 pmCopyright © 2015 by NIC. All rights reserved.",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "1px 12px",
+        "margin": "0px 0px 0px 80px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(14, 165, 233, 0.1) 0px 10px 15px -3px, rgba(14, 165, 233, 0.1) 0px 4px 6px -4px",
+        "display": "flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "40"
+      }
+    },
+    {
+      "type": "table",
+      "selector": "div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2 > div.md:w-3/1.ml-0:nth-of-type(3) > div.w-full.overflow-y-auto > table.min-w-full.p-2",
+      "tag": "table",
+      "classes": "min-w-full p-2 text-sm text-left text-[#29457f] border-separate border-spacing-x-0 border-spacing-y-[5px]",
+      "id": null,
+      "box": {
+        "x": 88,
+        "y": 319,
+        "w": 1486,
+        "h": 547
+      },
+      "text": "S.No.DateState NameState CodeJail NameJail CodeLockup StatusTotal Inmates InsideToday AdmissionToday ReleaseToday VisitorsView Breakups126/10/2026ANDHRA PRADESH1DJ-Kurnool114Open (",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "0px solid rgb(229, 231, 235)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "table",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "card",
+      "selector": "#root > div.flex.h-screen:nth-of-type(2) > div.flex.min-h-0 > div.min-w-0.min-h-0:nth-of-type(2) > div.card-wrapper.ml-2",
+      "tag": "div",
+      "classes": "card-wrapper ml-2 pr-5",
+      "id": null,
+      "box": {
+        "x": 88,
+        "y": 77,
+        "w": 1286,
+        "h": 849
+      },
+      "text": "Lockup ReportInsights into Lockup reports across IndiaShowing data of date19/10/26 — 26/10/26last 7 daysSelect StateAll StateANDAMAN & NICOBARANDHRA PRADESHARUNACHAL PRADESHASSAMBI",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 20px 0px 0px",
+        "margin": "0px 0px 0px 8px",
+        "border": "0px solid rgb(229, 231, 235)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "relative",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.flex.h-screen:nth-of-type(2) > div.flex.min-h-0 > div.fixed.left-0:nth-of-type(1) > div.flex-1.overflow-y-visible > ul.space-y-1.5.sm:space-y-2",
+      "tag": "ul",
+      "classes": "space-y-1.5 sm:space-y-2",
+      "id": null,
+      "box": {
+        "x": 8,
+        "y": 89,
+        "w": 62,
+        "h": 342
+      },
+      "text": "Jail LocationLockup ReportParole JumperAbsconderePrisons Live",
+      "childCount": 5,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px solid rgb(229, 231, 235)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#root > div.flex.h-screen:nth-of-type(2) > header.h-[65px].shrink-0 > div.flex.items-center:nth-of-type(1) > button.group.ml-6",
+      "tag": "button",
+      "classes": "group ml-6 flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-[#0997ca] shadow-lg transition-all duration-300 hover:border-white hover:bg-[#0997ca] hover:text-white hover:shadow-xl active:scale-90",
+      "id": null,
+      "box": {
+        "x": 264,
+        "y": 12,
+        "w": 40,
+        "h": 40
+      },
+      "text": "Click here to expand menu items",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(9, 151, 202)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px 0px 24px",
+        "border": "1px solid rgb(226, 232, 240)",
+        "borderRadius": "9999px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.card-wrapper.ml-2 > div.relative.w-full:nth-of-type(2) > div.relative.z-10:nth-of-type(4) > div.mt-[22px].flex:nth-of-type(4) > button.group.flex:nth-of-type(1)",
+      "tag": "button",
+      "classes": "group\r flex\r h-[2.8rem]\r w-full\r items-center\r justify-center\r rounded-2xl\r border\r border-white\r bg-gradient-to-br\r from-violet-500/90\r to-violet-500/80\r px-4\r py-0\r text-sm\r font-normal\r text-white\r backdrop-blur-xl\r shadow-[inset_0_1px_0",
+      "id": null,
+      "box": {
+        "x": 875,
+        "y": 166,
+        "w": 99,
+        "h": 45
+      },
+      "text": "Search",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 16px",
+        "margin": "0px",
+        "border": "1px solid rgb(255, 255, 255)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.35) 0px 1px 0px 0px inset, rgba(124, 58, 237, 0.45) 0px 8px 25px 0px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.card-wrapper.ml-2 > div.relative.w-full:nth-of-type(2) > div.relative.z-10:nth-of-type(4) > div.mt-[22px].flex:nth-of-type(4) > button.group.flex:nth-of-type(2)",
+      "tag": "button",
+      "classes": "group\r flex\r h-[2.8rem]\r w-full\r items-center\r justify-center\r rounded-2xl\r border\r border-white\r bg-gradient-to-br\r from-red-500/95\r to-rose-600/90\r px-4\r py-0\r text-sm\r font-normal\r text-white\r backdrop-blur-xl\r shadow-[inset_0_1px_0_rgba",
+      "id": null,
+      "box": {
+        "x": 982,
+        "y": 166,
+        "w": 91,
+        "h": 45
+      },
+      "text": "Reset",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px 16px",
+        "margin": "0px",
+        "border": "1px solid rgb(255, 255, 255)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.35) 0px 1px 0px 0px inset, rgba(239, 68, 68, 0.45) 0px 8px 25px 0px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.relative.w-full:nth-of-type(2) > div.relative.z-10:nth-of-type(4) > div.mt-[22px].flex:nth-of-type(4) > div.w-full.sm:w-auto > button.group.flex",
+      "tag": "button",
+      "classes": "group\r flex\r w-full\r items-center\r justify-center\r gap-2\r rounded-2xl\r border\r border-white\r bg-gradient-to-r\r from-indigo-500/75\r via-violet-500/70\r to-purple-500/75\r px-4\r py-2\r text-sm\r font-medium\r text-white\r backdrop-blur-2xl\r shadow-",
+      "id": null,
+      "box": {
+        "x": 1081,
+        "y": 166,
+        "w": 188,
+        "h": 46
+      },
+      "text": "Download as Excel",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px 16px",
+        "margin": "0px",
+        "border": "1px solid rgb(255, 255, 255)",
+        "borderRadius": "16px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.35) 0px 1px 0px 0px inset, rgba(99, 102, 241, 0.45) 0px 8px 25px 0px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(1) > td.px-4.py-3:nth-of-type(8) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    hover:text-[#5b4bd8]",
+      "id": null,
+      "box": {
+        "x": 904,
+        "y": 409,
+        "w": 16,
+        "h": 22
+      },
+      "text": "84",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(1) > td.px-4.py-3:nth-of-type(9) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1066,
+        "y": 409,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(1) > td.px-4.py-3:nth-of-type(10) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1207,
+        "y": 409,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(1) > td.px-4.py-3:nth-of-type(11) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1333,
+        "y": 409,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(1) > td.px-4.py-3:nth-of-type(12) > button.mb-0.p-2",
+      "tag": "button",
+      "classes": "mb-0\r p-2\r rounded-full\r bg-white/20\r backdrop-blur-md\r border\r border-white/40\r transition-all\r duration-200\r hover:bg-white/50\r hover:scale-105\r hover:shadow-[0_4px_12px_rgba(80,80,180,0.20)]",
+      "id": null,
+      "box": {
+        "x": 1456,
+        "y": 401,
+        "w": 38,
+        "h": 38
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.2)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(2) > td.px-4.py-3:nth-of-type(8) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    hover:text-[#5b4bd8]",
+      "id": null,
+      "box": {
+        "x": 904,
+        "y": 476,
+        "w": 24,
+        "h": 22
+      },
+      "text": "159",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(2) > td.px-4.py-3:nth-of-type(9) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1066,
+        "y": 476,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(2) > td.px-4.py-3:nth-of-type(10) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1207,
+        "y": 476,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(2) > td.px-4.py-3:nth-of-type(11) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    hover:text-[#5b4bd8]",
+      "id": null,
+      "box": {
+        "x": 1333,
+        "y": 476,
+        "w": 8,
+        "h": 22
+      },
+      "text": "2",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(2) > td.px-4.py-3:nth-of-type(12) > button.mb-0.p-2",
+      "tag": "button",
+      "classes": "mb-0\r p-2\r rounded-full\r bg-white/20\r backdrop-blur-md\r border\r border-white/40\r transition-all\r duration-200\r hover:bg-white/50\r hover:scale-105\r hover:shadow-[0_4px_12px_rgba(80,80,180,0.20)]",
+      "id": null,
+      "box": {
+        "x": 1456,
+        "y": 468,
+        "w": 38,
+        "h": 38
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.2)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(3) > td.px-4.py-3:nth-of-type(8) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    hover:text-[#5b4bd8]",
+      "id": null,
+      "box": {
+        "x": 904,
+        "y": 543,
+        "w": 16,
+        "h": 22
+      },
+      "text": "15",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(3) > td.px-4.py-3:nth-of-type(9) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1066,
+        "y": 543,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(3) > td.px-4.py-3:nth-of-type(10) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1207,
+        "y": 543,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(3) > td.px-4.py-3:nth-of-type(11) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1333,
+        "y": 543,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(3) > td.px-4.py-3:nth-of-type(12) > button.mb-0.p-2",
+      "tag": "button",
+      "classes": "mb-0\r p-2\r rounded-full\r bg-white/20\r backdrop-blur-md\r border\r border-white/40\r transition-all\r duration-200\r hover:bg-white/50\r hover:scale-105\r hover:shadow-[0_4px_12px_rgba(80,80,180,0.20)]",
+      "id": null,
+      "box": {
+        "x": 1456,
+        "y": 535,
+        "w": 38,
+        "h": 38
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.2)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(4) > td.px-4.py-3:nth-of-type(8) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    hover:text-[#5b4bd8]",
+      "id": null,
+      "box": {
+        "x": 904,
+        "y": 610,
+        "w": 16,
+        "h": 22
+      },
+      "text": "29",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(4) > td.px-4.py-3:nth-of-type(9) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1066,
+        "y": 610,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(4) > td.px-4.py-3:nth-of-type(10) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1207,
+        "y": 610,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(4) > td.px-4.py-3:nth-of-type(11) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1333,
+        "y": 610,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(4) > td.px-4.py-3:nth-of-type(12) > button.mb-0.p-2",
+      "tag": "button",
+      "classes": "mb-0\r p-2\r rounded-full\r bg-white/20\r backdrop-blur-md\r border\r border-white/40\r transition-all\r duration-200\r hover:bg-white/50\r hover:scale-105\r hover:shadow-[0_4px_12px_rgba(80,80,180,0.20)]",
+      "id": null,
+      "box": {
+        "x": 1456,
+        "y": 602,
+        "w": 38,
+        "h": 38
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.2)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(5) > td.px-4.py-3:nth-of-type(8) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    hover:text-[#5b4bd8]",
+      "id": null,
+      "box": {
+        "x": 904,
+        "y": 677,
+        "w": 16,
+        "h": 22
+      },
+      "text": "17",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(5) > td.px-4.py-3:nth-of-type(9) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1066,
+        "y": 677,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(5) > td.px-4.py-3:nth-of-type(10) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1207,
+        "y": 677,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(5) > td.px-4.py-3:nth-of-type(11) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1333,
+        "y": 677,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(5) > td.px-4.py-3:nth-of-type(12) > button.mb-0.p-2",
+      "tag": "button",
+      "classes": "mb-0\r p-2\r rounded-full\r bg-white/20\r backdrop-blur-md\r border\r border-white/40\r transition-all\r duration-200\r hover:bg-white/50\r hover:scale-105\r hover:shadow-[0_4px_12px_rgba(80,80,180,0.20)]",
+      "id": null,
+      "box": {
+        "x": 1456,
+        "y": 669,
+        "w": 38,
+        "h": 38
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.2)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(6) > td.px-4.py-3:nth-of-type(8) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    hover:text-[#5b4bd8]",
+      "id": null,
+      "box": {
+        "x": 904,
+        "y": 744,
+        "w": 16,
+        "h": 22
+      },
+      "text": "17",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(6) > td.px-4.py-3:nth-of-type(9) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1066,
+        "y": 744,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(6) > td.px-4.py-3:nth-of-type(10) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1207,
+        "y": 744,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(6) > td.px-4.py-3:nth-of-type(11) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1333,
+        "y": 744,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(6) > td.px-4.py-3:nth-of-type(12) > button.mb-0.p-2",
+      "tag": "button",
+      "classes": "mb-0\r p-2\r rounded-full\r bg-white/20\r backdrop-blur-md\r border\r border-white/40\r transition-all\r duration-200\r hover:bg-white/50\r hover:scale-105\r hover:shadow-[0_4px_12px_rgba(80,80,180,0.20)]",
+      "id": null,
+      "box": {
+        "x": 1456,
+        "y": 736,
+        "w": 38,
+        "h": 38
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.2)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(7) > td.px-4.py-3:nth-of-type(8) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    hover:text-[#5b4bd8]",
+      "id": null,
+      "box": {
+        "x": 904,
+        "y": 811,
+        "w": 16,
+        "h": 22
+      },
+      "text": "27",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(7) > td.px-4.py-3:nth-of-type(9) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1066,
+        "y": 811,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(7) > td.px-4.py-3:nth-of-type(10) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1207,
+        "y": 811,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(7) > td.px-4.py-3:nth-of-type(11) > button.border-b-2.border-[#4968d8]",
+      "tag": "button",
+      "classes": "border-b-2\n                    border-[#4968d8]\n                    font-medium\n                    transition-all\n\n                    cursor-not-allowed opacity-40",
+      "id": null,
+      "box": {
+        "x": 1333,
+        "y": 811,
+        "w": 8,
+        "h": 22
+      },
+      "text": "0",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "table.min-w-full.p-2 > tbody > tr.text-nowrap.transition-all:nth-of-type(7) > td.px-4.py-3:nth-of-type(12) > button.mb-0.p-2",
+      "tag": "button",
+      "classes": "mb-0\r p-2\r rounded-full\r bg-white/20\r backdrop-blur-md\r border\r border-white/40\r transition-all\r duration-200\r hover:bg-white/50\r hover:scale-105\r hover:shadow-[0_4px_12px_rgba(80,80,180,0.20)]",
+      "id": null,
+      "box": {
+        "x": 1456,
+        "y": 803,
+        "w": 38,
+        "h": 38
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.2)",
+        "color": "rgb(41, 69, 127)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.card-wrapper.ml-2 > div.md:w-3/1.ml-0:nth-of-type(3) > div.w-full.overflow-y-auto > div.flex.flex-wrap:nth-of-type(2) > button.flex.h-9:nth-of-type(1)",
+      "tag": "button",
+      "classes": "flex\r h-9\r w-9\r shrink-0\r items-center\r justify-center\r rounded-full\r bg-white/30\r backdrop-blur-xl\r border\r border-white/40\r shadow-[0_8px_20px_rgba(120,120,255,.18)]\r text-violet-500\r transition-all\r duration-300\r hover:scale-105\r hover:b",
+      "id": null,
+      "box": {
+        "x": 528,
+        "y": 870,
+        "w": 36,
+        "h": 36
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(255, 255, 255, 0.3)",
+        "color": "rgb(139, 92, 246)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Roboto, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "1px solid rgba(255, 255, 255, 0.4)",
+        "borderRadius": "9999px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(120, 120, 255, 0.18) 0px 8px 20px 0px",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/nic_logo.png",
+      "category": "images",
+      "alt": "NIC Logo",
+      "natural": {
+        "w": 147,
+        "h": 29
+      },
+      "rendered": {
+        "x": 1253,
+        "y": 875,
+        "w": 101,
+        "h": 20
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/npipTab-logo.png",
+      "category": "icons",
+      "rel": "icon",
+      "sizes": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/manifest.json",
+      "category": "documents",
+      "rel": "manifest"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/static/css/main.722187b3.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/static/js/main.811484a3.js",
+      "category": "scripts",
+      "async": false,
+      "defer": true,
+      "type": null
+    }
+  ],
+  "links": [
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/Home",
+      "raw": "https://eprisons.nic.in/NPIP/public/Home",
+      "text": "",
+      "title": "Click here for NPIP Home Page",
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard",
+      "raw": "/NPIPDashboard",
+      "text": "Jail Location",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+      "raw": "/NPIPDashboard/lockupReport",
+      "text": "Lockup Report",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+      "raw": "/NPIPDashboard/paroleJumper",
+      "text": "Parole Jumper",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/absconder",
+      "raw": "/NPIPDashboard/absconder",
+      "text": "Absconder",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+      "raw": "/NPIPDashboard/ePrisonsLiveStatus",
+      "text": "ePrisons Live",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard/siteMap",
+      "raw": "/NPIPDashboard/siteMap",
+      "text": "Site Map",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "Roboto, sans-serif",
+      "count": 229
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(41, 69, 127)",
+        "count": 145
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 53
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 46
+      },
+      {
+        "value": "rgb(2, 132, 199)",
+        "count": 22
+      },
+      {
+        "value": "rgb(79, 70, 229)",
+        "count": 14
+      },
+      {
+        "value": "rgb(51, 65, 85)",
+        "count": 13
+      },
+      {
+        "value": "rgb(219, 39, 119)",
+        "count": 9
+      },
+      {
+        "value": "rgb(139, 92, 246)",
+        "count": 6
+      },
+      {
+        "value": "rgb(59, 130, 246)",
+        "count": 6
+      },
+      {
+        "value": "rgb(9, 151, 202)",
+        "count": 4
+      },
+      {
+        "value": "rgb(107, 114, 128)",
+        "count": 2
+      },
+      {
+        "value": "rgb(100, 116, 139)",
+        "count": 2
+      }
+    ],
+    "background": [
+      {
+        "value": "rgba(255, 255, 255, 0.35)",
+        "count": 85
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.4)",
+        "count": 12
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.3)",
+        "count": 11
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.2)",
+        "count": 8
+      },
+      {
+        "value": "rgb(14, 165, 233)",
+        "count": 5
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.45)",
+        "count": 4
+      },
+      {
+        "value": "rgba(224, 242, 254, 0.7)",
+        "count": 4
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 2
+      },
+      {
+        "value": "rgb(237, 244, 255)",
+        "count": 1
+      },
+      {
+        "value": "rgb(243, 244, 246)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.6)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.1)",
+        "count": 1
+      }
+    ]
+  },
+  "bodyStyle": {
+    "fontFamily": "Roboto, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "24px",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgb(237, 244, 255)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": true,
+    "frameworkGlobals": []
+  },
+  "responseHeaders": {
+    "content-length": "1233",
+    "content-type": "text/html",
+    "date": "Mon, 26 Oct 2026 11:46:23 GMT",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "network": [
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+      "method": "GET",
+      "status": 403,
+      "resourceType": "document",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "1233",
+        "content-type": "text/html",
+        "date": "Mon, 26 Oct 2026 11:46:23 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "657",
+        "content-type": "text/html",
+        "date": "Mon, 26 Oct 2026 11:44:35 GMT",
+        "etag": "\"cc78290c62dd1:0\"",
+        "last-modified": "Thu, 22 Oct 2026 10:03:18 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/static/js/main.811484a3.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "2666994",
+        "etag": "\"cc78290c62dd1:0\"",
+        "date": "Mon, 26 Oct 2026 11:44:35 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 22 Oct 2026 10:03:18 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/static/css/main.722187b3.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "153893",
+        "etag": "\"cc78290c62dd1:0\"",
+        "date": "Mon, 26 Oct 2026 11:44:35 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 22 Oct 2026 10:03:18 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "x-content-type-options": "nosniff",
+        "expires": "Mon, 26 Oct 2026 11:44:36 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Mon, 26 Oct 2026 11:44:36 GMT",
+        "content-type": "text/css; charset=utf-8",
+        "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+        "last-modified": "Mon, 26 Oct 2026 09:51:36 GMT",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000",
+        "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+        "cache-control": "private, max-age=86400, stale-while-revalidate=604800",
+        "timing-allow-origin": "*",
+        "cross-origin-opener-policy": "same-origin-allow-popups",
+        "cross-origin-resource-policy": "cross-origin",
+        "access-control-allow-origin": "*",
+        "x-xss-protection": "0",
+        "server": "ESF"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnka.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "age": "424245",
+        "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+        "x-content-type-options": "nosniff",
+        "expires": "Thu, 21 Oct 2027 13:53:52 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Wed, 21 Oct 2026 13:53:52 GMT",
+        "last-modified": "Wed, 18 Feb 2026 19:52:51 GMT",
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000",
+        "timing-allow-origin": "*",
+        "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+        "cross-origin-resource-policy": "cross-origin",
+        "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "47208",
+        "x-xss-protection": "0",
+        "server": "sffe"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "age": "424247",
+        "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+        "x-content-type-options": "nosniff",
+        "expires": "Thu, 21 Oct 2027 13:53:50 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Wed, 21 Oct 2026 13:53:50 GMT",
+        "last-modified": "Wed, 18 Feb 2026 19:51:43 GMT",
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000",
+        "timing-allow-origin": "*",
+        "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+        "cross-origin-resource-policy": "cross-origin",
+        "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "20556",
+        "x-xss-protection": "0",
+        "server": "sffe"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "age": "424247",
+        "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+        "x-content-type-options": "nosniff",
+        "expires": "Thu, 21 Oct 2027 13:53:50 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Wed, 21 Oct 2026 13:53:50 GMT",
+        "last-modified": "Wed, 18 Feb 2026 19:51:37 GMT",
+        "content-type": "font/woff2",
+        "cache-control": "public, max-age=31536000",
+        "timing-allow-origin": "*",
+        "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+        "cross-origin-resource-policy": "cross-origin",
+        "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "43136",
+        "x-xss-protection": "0",
+        "server": "sffe"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/prisonsMapImage.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "186347",
+        "etag": "\"e5e794ada23dd1:0\"",
+        "date": "Mon, 26 Oct 2026 11:44:36 GMT",
+        "content-type": "image/png",
+        "last-modified": "Tue, 04 Aug 2026 06:27:14 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPDashboard/nic_logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "4826",
+        "etag": "\"5b87a8ad05bdd1:0\"",
+        "date": "Mon, 26 Oct 2026 11:44:36 GMT",
+        "content-type": "image/png",
+        "last-modified": "Wed, 14 Oct 2026 11:38:32 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/epCounts",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-length": "5368",
+        "date": "Mon, 26 Oct 2026 11:46:24 GMT",
+        "etag": "W/\"14f8-Bq6sIBB40T0zvi13OpQCzeQvnKg\"",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/jailList",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-length": "156033",
+        "date": "Mon, 26 Oct 2026 11:46:24 GMT",
+        "etag": "W/\"26181-BMq+QVFGJxhpmlK+dZKASu0bQHg\"",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/jailLocation",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-length": "569314",
+        "date": "Mon, 26 Oct 2026 11:46:24 GMT",
+        "etag": "W/\"8afe2-6iDrXsdmMupervyay8EY9zvIrrI\"",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIPNode/api/lockupReport",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "application/json; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-length": "6753969",
+        "keep-alive": "timeout=5",
+        "etag": "W/\"670eb1-EfnrgNyG3NLIMQknpuo2P2jLRXk\"",
+        "date": "Mon, 26 Oct 2026 11:46:26 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/npipdashboard_lockupreport.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/npipdashboard_lockupreport.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/npipdashboard_lockupreport.tablet.png",
+    "mobile": "reference_pages/screenshots/npipdashboard_lockupreport.mobile.png"
+  },
+  "reachedViaSpa": {
+    "mount": "https://eprisons.nic.in/NPIPDashboard/",
+    "directStatus": 403,
+    "method": "in-app link click from the application mount"
+  },
+  "spaLateSettleApplied": true,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": true,
+    "waitedMs": 4239
+  },
+  "accessMethod": "client-side route via in-app navigation",
+  "capturedAt": "2026-10-26T11:46:39.321Z",
+  "pageType": "statistics",
+  "directRequestStatus": 403
+}

@@ -1,0 +1,297 @@
+{
+  "generatedAt": "2026-10-26T11:48:33.326Z",
+  "counts": {
+    "skipped-url": 1,
+    "missing-asset": 7,
+    "external-dependency": 4,
+    "uncertain-technology": 8,
+    "incomplete-interaction": 25,
+    "dynamic-navigation": 1
+  },
+  "visualTolerance": 0.12,
+  "singlePageApplicationMounts": [
+    {
+      "mountPath": "/NPIPDashboard",
+      "mountUrl": "https://eprisons.nic.in/NPIPDashboard/"
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "skipped-url",
+      "item": "https://eprisons.nic.in/downloads/eMulakat_VCRequestPublic.pdf",
+      "detail": "non-HTML resource (collected as an asset instead)",
+      "impact": "Collected as an asset instead of a page."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://eprisons.nic.in/Login/Content/js/jquery.js",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://eprisons.nic.in/NPIP/public/CaptchaImage.axd?guid=b5d78505-9b02-4bd2-acb7-247ac8b7fda3",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://eprisons.nic.in/NPIP/public/CaptchaImage.axd?guid=cf161372-4146-4a62-90f8-207546e2057a",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnka.woff2",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://eprisons.nic.in/NPIP/Content/css/grd_head.png",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://eprisons.nic.in/CitiZenService/images/image/phone-icon.png",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://eprisons.nic.in/CitiZenService/images/image/mail-icon.png",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://eprisons.nic.in/CitiZenService/images/image/location-icon.png",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "database product and schema",
+      "detail": "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "application source code",
+      "detail": "Only the publicly served HTML, CSS and JavaScript were retrieved. No source map, repository or build artifact was requested, and none should be. The replica is an independent reimplementation, not recovered source.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "server-side language version and build tooling",
+      "detail": "The server does not advertise a version header beyond what is listed above. Nothing further is publicly observable.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "hosting provider and data-centre location",
+      "detail": "Not publicly identifiable from the served responses. `.nic.in` is operated by the National Informatics Centre, but that is organisational, not a verified hosting fact.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "Form-based login (server-side session) (authentication pattern)",
+      "detail": "Status: inferred, confidence medium. Evidence: 3 login page(s) captured, e.g. https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "ASP.NET (.aspx handler) (backend framework)",
+      "detail": "Status: inferred, confidence medium. Evidence: 18 captured URL(s) end in `.aspx`",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "ESF (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: ESF` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "sffe (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: sffe` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/Home",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/SelectMISState",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://eprisons.nic.in/citizenservice",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form1 on https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form1 on https://eprisons.nic.in/Login/Secure/Login.aspx",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+      "detail": "Form is CAPTCHA-protected. Solving or bypassing a CAPTCHA is out of scope.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+      "detail": "Form is CAPTCHA-protected. Solving or bypassing a CAPTCHA is out of scope.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/DashBoard",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://eprisons.nic.in/NPIPDashboard/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/ParoleJumper",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/Absconder",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form1 on https://eprisons.nic.in/NPIP/public/grievancelogin",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/About",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/ContactUs",
+      "detail": "Form is CAPTCHA-protected. Solving or bypassing a CAPTCHA is out of scope.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/grievance",
+      "detail": "Form is CAPTCHA-protected. Solving or bypassing a CAPTCHA is out of scope.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/TermsofUse",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "frmMaster on https://eprisons.nic.in/NPIP/public/CodeofConduct",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form0 on https://eprisons.nic.in/CitiZenService/Visitor/Registration",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://eprisons.nic.in/NPIPDashboard/lockupReport",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://eprisons.nic.in/NPIPDashboard/absconder",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "dynamic-navigation",
+      "item": "https://eprisons.nic.in/NPIPDashboard/",
+      "detail": "This target mounts a single-page application whose navigation is built after hydration and can change between loads. A route present in the menu during one crawl may be absent in the next, so the captured route list is a snapshot of the navigation as it stood at the capture time recorded in each page metadata file.",
+      "impact": "The route inventory for this mount may be incomplete or may list a route the navigation no longer offers. Re-run the pipeline to refresh it."
+    }
+  ],
+  "honesty": "This file is the deliberate record of what the replica does NOT reproduce. Nothing here is papered over elsewhere in the project."
+}

@@ -1,0 +1,1780 @@
+{
+  "runId": "2026-10-27T06-31-04-083Z",
+  "generatedAt": "2026-10-27T06:42:22.411Z",
+  "startUrl": "https://ecourts.gov.in/ecourts2.0/",
+  "rootHost": "ecourts.gov.in",
+  "limits": {
+    "maxPages": 60,
+    "maxDepth": 4,
+    "navTimeoutMs": 45000,
+    "settleTimeoutMs": 3500,
+    "perRequestDelayMs": 1500,
+    "concurrency": 1,
+    "maxAssetBytes": 12582912,
+    "maxTotalRuntimeMs": 1500000,
+    "assetTimeoutMs": 30000,
+    "retriesPerUrl": 2,
+    "throttleBackoffMs": 4000
+  },
+  "visited": {
+    "https://ecourts.gov.in/ecourts2.0": {
+      "slug": "ecourts2.0",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 0,
+      "via": "start URL",
+      "capturedAt": "2026-10-27T06:31:44.337Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0/?p=about_us/": {
+      "slug": "ecourts2.0__1863efe0",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:31:52.271Z",
+      "error": null
+    },
+    "http://njdg.ecourts.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:32:01.827Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts": {
+      "slug": "ecourts2.0__29602f3f",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:32:08.697Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0/?p=dist_court": {
+      "slug": "ecourts2.0__5dc51c15",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:32:15.702Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus": {
+      "slug": "ecourts2.0__8bc9a27b",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:32:22.930Z",
+      "error": null
+    },
+    "https://hcservices.ecourts.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://hcservices.ecourts.gov.in/hcservices/main.php",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:32:31.576Z",
+      "error": null
+    },
+    "https://services.ecourts.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://services.ecourts.gov.in/ecourtindia_v6/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:32:40.658Z",
+      "error": null
+    },
+    "https://pay.ecourts.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://pay.ecourts.gov.in/epay/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "form",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:32:51.876Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/hcnjdg_v2": {
+      "slug": "hcnjdg_v2",
+      "finalUrl": "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:33:02.599Z",
+      "error": null
+    },
+    "https://filing.ecourts.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://filing.ecourts.gov.in/pdedev/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "form",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:33:20.332Z",
+      "error": null
+    },
+    "https://judgments.ecourts.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "home",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:33:32.185Z",
+      "error": null
+    },
+    "https://justiceclock.ecourts.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://justiceclock.ecourts.gov.in/justiceClock/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:33:50.642Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt": {
+      "slug": "ecourts2.0__54eaa175",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:33:57.525Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/view/sitemap.php": {
+      "slug": "view_sitemap.php",
+      "finalUrl": "https://ecourts.gov.in/view/sitemap.php",
+      "httpStatus": 404,
+      "crawlStatus": "captured",
+      "pageType": "error",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:34:03.264Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates": {
+      "slug": "ecourts2.0__8335d5cc",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:34:10.287Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos": {
+      "slug": "ecourts2.0__065e69d4",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:34:23.090Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals": {
+      "slug": "ecourts2.0__a65c0031",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:34:30.751Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer": {
+      "slug": "ecourts2.0__95c61fcc",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:34:37.920Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures": {
+      "slug": "ecourts2.0__5557d0a9",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:34:44.829Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo": {
+      "slug": "ecourts2.0__cefeaf3b",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:34:51.888Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter": {
+      "slug": "ecourts2.0__09b48739",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:34:59.069Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy": {
+      "slug": "ecourts2.0__5db138ff",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:35:06.348Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms": {
+      "slug": "ecourts2.0__e73cb9e4",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:35:13.549Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright": {
+      "slug": "ecourts2.0__60281e97",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:35:20.846Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink": {
+      "slug": "ecourts2.0__1b63d07b",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:35:28.508Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/access": {
+      "slug": "ecourts2.0__9a8b6c1c",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:35:36.080Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder": {
+      "slug": "ecourts2.0__9d8250cf",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 1,
+      "via": "https://ecourts.gov.in/ecourts2.0",
+      "capturedAt": "2026-10-27T06:35:43.198Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?lang=&p=": {
+      "slug": "ecourts2.0__5905e748",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+      "capturedAt": "2026-10-27T06:35:55.473Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home": {
+      "slug": "njdg_v3__5a58276b",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:36:04.443Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab": {
+      "slug": "njdg_v3__05b01f3d",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:36:19.053Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi": {
+      "slug": "njdg_v3__41fe41e8",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:36:25.282Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu": {
+      "slug": "njdg_v3__12746a74",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:36:31.790Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm": {
+      "slug": "njdg_v3__920e1289",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:36:38.041Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as": {
+      "slug": "njdg_v3__3a8dd64e",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:36:44.892Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr": {
+      "slug": "njdg_v3__67fea39a",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "listing",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:36:51.183Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc": {
+      "slug": "njdg_v3__6a5543f4",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:36:57.526Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp": {
+      "slug": "njdg_v3__1a6174f6",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:37:03.746Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl": {
+      "slug": "njdg_v3__ca06ceed",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:37:10.145Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp": {
+      "slug": "njdg_v3__42917be6",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:37:16.530Z",
+      "error": null
+    },
+    "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di": {
+      "slug": "njdg_v3__ee34b8af",
+      "finalUrl": "https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "http://njdg.ecourts.gov.in/",
+      "capturedAt": "2026-10-27T06:37:22.743Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman": {
+      "slug": "ecourts2.0__89ce888d",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:37:29.493Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap": {
+      "slug": "ecourts2.0__774e33d7",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:37:36.225Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal": {
+      "slug": "ecourts2.0__2d369776",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:37:42.912Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam": {
+      "slug": "ecourts2.0__4cebd46a",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:37:49.950Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar": {
+      "slug": "ecourts2.0__34ad4c80",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:37:56.857Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court": {
+      "slug": "ecourts2.0__feeedc49",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:03.766Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh": {
+      "slug": "ecourts2.0__81ca7014",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:10.591Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra": {
+      "slug": "ecourts2.0__737ccdd9",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:17.369Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu": {
+      "slug": "ecourts2.0__3d184e57",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:24.124Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi": {
+      "slug": "ecourts2.0__ad0a9bd8",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:30.967Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa": {
+      "slug": "ecourts2.0__d696f9cf",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:37.692Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat": {
+      "slug": "ecourts2.0__3d334331",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:44.556Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana": {
+      "slug": "ecourts2.0__e8d34609",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:51.369Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp": {
+      "slug": "ecourts2.0__1aac9131",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:38:58.382Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk": {
+      "slug": "ecourts2.0__fd988cb7",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:39:05.195Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand": {
+      "slug": "ecourts2.0__f4cd1973",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:39:12.016Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka": {
+      "slug": "ecourts2.0__6aa6ad02",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:39:18.890Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala": {
+      "slug": "ecourts2.0__34ca6947",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:39:25.804Z",
+      "error": null
+    },
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep": {
+      "slug": "ecourts2.0__b726ad05",
+      "finalUrl": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "capturedAt": "2026-10-27T06:39:32.576Z",
+      "error": null
+    }
+  },
+  "pending": [
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/mp",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/maharashtra",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/manipur",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/meghalaya",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/mizoram",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/nagaland",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/odisha",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/puducherry",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/punjab",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/rajasthan",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/sikkim",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/tn",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/tripura",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/up",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/uttarakhand",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/wb",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/telangana",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ladakh",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/highcourts.php",
+    "http://njdg.ecourts.gov.in/njdgnew",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/contactus.php",
+    "https://hcservices.ecourts.gov.in/hcservices/securimage/securimage_play.php?id=6ae04578a7e1d",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/about-us.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/newsletter.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/sitemap.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/webinfo.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/terms.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/copyright.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/hyperlink.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/privacy.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/access.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/screen-reader.php",
+    "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/disclaimer.php",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?code=english&lang=English&p=home/fillLangState",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?code=hindi&lang=%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80&p=home/fillLangState",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?code=marathi&lang=%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80&p=home/fillLangState",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?code=gujarati&lang=%E0%AA%97%E0%AB%81%E0%AA%9C%E0%AA%B0%E0%AA%BE%E0%AA%A4%E0%AB%80&p=home/fillLangState",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?code=kannada&lang=%E0%B2%95%E0%B2%A8%E0%B3%8D%E0%B2%A8%E0%B2%A1&p=home/fillLangState",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?code=tamil&lang=%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AF%8D&p=home/fillLangState",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=home",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=home/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=high_court/index",
+    "https://njdg.ecourts.gov.in/njdg_public",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=contact_us/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=courtorder/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=cause_list/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=caveat_search/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=processDetails/processData",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=location/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/vendor/securimage/securimage_play.php?id=6ae04583b6084",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?caseSearchType=CNRHelp&p=view_help_videos/show_help_videos",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=about_us/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=news_letter/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=forms_for_advocates/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=help_videos/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=site_map/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=web_info_manager/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=copy_right_policy/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=hyper_linking_policy/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=accessibility_statement/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=screen_reader_access/index",
+    "https://services.ecourts.gov.in/ecourtindia_v6/?p=disclaimer/index",
+    "https://pay.ecourts.gov.in/epay_dbim",
+    "https://pay.ecourts.gov.in/epay/static/about_us.php",
+    "https://pay.ecourts.gov.in/epay/static/web_info.php",
+    "https://pay.ecourts.gov.in/epay/static/contact_us.php",
+    "https://pay.ecourts.gov.in/epay/static/tandc.php",
+    "https://pay.ecourts.gov.in/epay/static/sr_aceess.php",
+    "https://pay.ecourts.gov.in/epay/static/sitemap.php",
+    "https://pay.ecourts.gov.in/epay/static/privacy_policy.php",
+    "https://pay.ecourts.gov.in/epay/static/hyperlinking_policy.php",
+    "https://pay.ecourts.gov.in/epay/static/disclaimer.php",
+    "https://pay.ecourts.gov.in/epay/static/copyright_policy.php",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/ab",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/wi",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/cu",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/sm",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/as",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/sr",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/tc",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/cp",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/hl",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/pp",
+    "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/di",
+    "https://filing.ecourts.gov.in/pdedev/?p=login",
+    "https://filing.ecourts.gov.in/pdedev/securimage/securimage_play.php?id=6ae045a7351b7",
+    "https://filing.ecourts.gov.in/pdedev/?p=registration",
+    "https://njdg.ecourts.gov.in/njdgnew/index.php",
+    "https://njdg.ecourts.gov.in/hcnjdgnew/?p=main/index",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/AboutUs",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/siteMap",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/contactUs",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/accessStmt",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/srAccess",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/webInformation",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/termsCondition",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/copyrightPolicy",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/hyperlinkingPolicy",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/privacyPolicy",
+    "https://filing.ecourts.gov.in/pdedev/?p=otherPages/disclaimer",
+    "https://filing.ecourts.gov.in/pdedev/securimage/securimage_play.php?id=6ae045a7351d6",
+    "https://filing.ecourts.gov.in/pdedev/securimage/securimage_play.php?id=6ae045a7351e4",
+    "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/index",
+    "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/ab",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/cu",
+    "https://judgments.ecourts.gov.in/pdfsearch/vendor/securimage/securimage_play.php?id=6ae045b222f15",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/sm",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/as",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/sr",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/we",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/tc",
+    "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/cp",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/hl",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/pp",
+    "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/di",
+    "https://justiceclock.ecourts.gov.in/justiceClock/?p=main",
+    "https://justiceclock.ecourts.gov.in/justiceClock/?p=home/index",
+    "https://ecourts.gov.in/ecourts2.0//?p=dist_court/index"
+  ],
+  "aliases": [
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/main.php",
+      "sameAs": "https://hcservices.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0/index.php",
+      "sameAs": "https://ecourts.gov.in/ecourts2.0",
+      "basis": "alias key matched a captured page",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6",
+      "sameAs": "https://services.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/index.php",
+      "sameAs": "https://pay.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/njdg_v3",
+      "landedOn": "https://njdg.ecourts.gov.in/njdg_v3",
+      "sameAs": "http://njdg.ecourts.gov.in/",
+      "basis": "identical title, text and form shape after navigation",
+      "via": "https://ecourts.gov.in/ecourts2.0"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev",
+      "sameAs": "https://filing.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "http://pay.ecourts.gov.in/",
+      "sameAs": "https://pay.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/index.php",
+      "sameAs": "https://judgments.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch",
+      "sameAs": "https://judgments.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/",
+      "sameAs": "http://njdg.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=about_us/highcourts",
+      "landedOn": "https://ecourts.gov.in/ecourts2.0//?p=about_us/highcourts",
+      "sameAs": "https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+      "basis": "identical title, text and form shape after navigation",
+      "via": "https://ecourts.gov.in/ecourts2.0"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court",
+      "landedOn": "https://ecourts.gov.in/ecourts2.0//?p=dist_court",
+      "sameAs": "https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "basis": "identical title, text and form shape after navigation",
+      "via": "https://ecourts.gov.in/ecourts2.0"
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock",
+      "sameAs": "https://justiceclock.ecourts.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://justiceclock.ecourts.gov.in/"
+    },
+    {
+      "url": "https://ecourts.gov.in/",
+      "landedOn": "https://ecourts.gov.in/ecourts2.0",
+      "sameAs": "https://ecourts.gov.in/ecourts2.0",
+      "basis": "identical title, text and form shape after navigation",
+      "via": "http://njdg.ecourts.gov.in/"
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0/static/docs/PolicyActionPlanDocument-PhaseII-approved-08012014-indexed_Sign.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0/static/docs/FINAL_INNOVATIONS_IN_PHASE_II.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0/static/docs/Objective_Accomplishment_Report-2019.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0/static/docs/Annexures_of_the_report.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Address%20Form.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Bail%20Bond.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/CA%20form%207.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Case%20Information%20Format.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Check%20List%20138%20NI%20Act%20Matters.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Check%20List.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Commercial%20Court%20Rules%20and%20Forms.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/E-Court%20Fee.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Filing%20Form.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Form%20for%20SMS%20and%20Mail%20Facility.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Form%20No%2045%20Bail%20Bond_0.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Index%20form.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Inspection%20form.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/List%20of%20documents.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Litigant%20Form.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Memo%20of%20Appearance.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Memorandum%20of%20Appearance%20form_6.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Notice%20to%20produce%20documents.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Personal%20bail%20bond%20form.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Process%20fee%20form.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Process%20fee.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Suriety%20bond.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Vakalatnama%20form.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//forms/Vakalatnama.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/efiling-User-manual.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/NSTEP-User%20manual.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/ePay-Final-USer-manual.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/Case%20Management%20through%20CIS%203.0.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/Filing%20User%20Manual.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/Registration%20User%20Manual.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/Allocation%20User%20Manual.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/Court%20User%20Manual.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/Super%20User%20Manual.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/epay_brochure.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/NSTEP_brochure.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//manuals/epay_brochure.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//manuals/NSTEP_brochure.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/manuals/eCourts_brochure.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//manuals/eCourts_brochure.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/eCommitteeNewsletter_December2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/eCommitteeNewsletterNovember2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/eCommitteeNewsletterOctober2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/eCommitteeNewsletterAug_Sep2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/eCommitteeNewsletterJuly2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/eCommitteeNewsletterJune2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/eCommittee_Newsletter_May_2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/ecommittee_newsletter_april_2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "http://services.ecourts.gov.in/ecourtindia_v6/newsletter/newsletter_ecommittee_march_2016.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/docs/PolicyActionPlanDocument-PhaseII-approved-08012014-indexed_Sign.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?lang=&p="
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/docs/FINAL_INNOVATIONS_IN_PHASE_II.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?lang=&p="
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/docs/Objective_Accomplishment_Report-2019.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?lang=&p="
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//static/docs/Annexures_of_the_report.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?lang=&p="
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/mp",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/maharashtra",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/manipur",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/meghalaya",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/mizoram",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/nagaland",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/odisha",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/puducherry",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/punjab",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/rajasthan",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/sikkim",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/tn",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/tripura",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/up",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/uttarakhand",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/wb",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/telangana",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/ladakh",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0/?p=dist_court"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/highcourts.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "http://njdg.ecourts.gov.in/njdgnew",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/contactus.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/securimage/securimage_play.php?id=6ae04578a7e1d",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/about-us.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/newsletter.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/sitemap.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/webinfo.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/terms.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/copyright.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/hyperlink.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/privacy.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/access.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/screen-reader.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/disclaimer.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://hcservices.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?code=english&lang=English&p=home/fillLangState",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?code=hindi&lang=%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80&p=home/fillLangState",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?code=marathi&lang=%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80&p=home/fillLangState",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?code=gujarati&lang=%E0%AA%97%E0%AB%81%E0%AA%9C%E0%AA%B0%E0%AA%BE%E0%AA%A4%E0%AB%80&p=home/fillLangState",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?code=kannada&lang=%E0%B2%95%E0%B2%A8%E0%B3%8D%E0%B2%A8%E0%B2%A1&p=home/fillLangState",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?code=tamil&lang=%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AF%8D&p=home/fillLangState",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=home",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=home/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=high_court/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/njdg_public",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=contact_us/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=courtorder/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=cause_list/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=caveat_search/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=processDetails/processData",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=location/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/vendor/securimage/securimage_play.php?id=6ae04583b6084",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?caseSearchType=CNRHelp&p=view_help_videos/show_help_videos",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=about_us/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=news_letter/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=forms_for_advocates/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=help_videos/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=site_map/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=web_info_manager/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=copy_right_policy/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=hyper_linking_policy/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=accessibility_statement/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=screen_reader_access/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://services.ecourts.gov.in/ecourtindia_v6/?p=disclaimer/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://services.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay_dbim",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/about_us.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/web_info.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/contact_us.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/tandc.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/sr_aceess.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/sitemap.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/privacy_policy.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/hyperlinking_policy.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/disclaimer.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/copyright_policy.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://pay.ecourts.gov.in/"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/ab",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/wi",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/cu",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/sm",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/as",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/sr",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/tc",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/cp",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/hl",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/pp",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdg_v2/?p=home/footerlinks/di",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://njdg.ecourts.gov.in/hcnjdg_v2"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=login",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/securimage/securimage_play.php?id=6ae045a7351b7",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=registration",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/njdgnew/index.php",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/hcnjdgnew/?p=main/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/AboutUs",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/siteMap",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/contactUs",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/accessStmt",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/srAccess",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/webInformation",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/termsCondition",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/copyrightPolicy",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/hyperlinkingPolicy",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/privacyPolicy",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/disclaimer",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/securimage/securimage_play.php?id=6ae045a7351d6",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/securimage/securimage_play.php?id=6ae045a7351e4",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://filing.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/ab",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/cu",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/securimage/securimage_play.php?id=6ae045b222f15",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/sm",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/as",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/sr",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/we",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/tc",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/cp",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/hl",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/pp",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/di",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://judgments.ecourts.gov.in/"
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/?p=main",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://justiceclock.ecourts.gov.in/"
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/?p=home/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://justiceclock.ecourts.gov.in/"
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/index",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman"
+    }
+  ],
+  "errors": [],
+  "limitHit": "maxPages=60",
+  "exhaustedQueue": false,
+  "durationMs": 481425,
+  "resumeHint": "Re-running the pipeline on the same domain reuses every page in `visited` whose metadata file still exists under reference_pages/page_metadata/, and re-queues everything in `pending`. Delete this file to force a full re-crawl."
+}

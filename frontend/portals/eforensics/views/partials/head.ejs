@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %> | Local Demo Replica</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Unofficial local demonstration replica. Not an official government service.">
+<link rel="icon" href="/static/img/demo-mark.svg">
+<link rel="stylesheet" href="/static/css/base.css">
+<link rel="stylesheet" href="/static/css/tokens.css">
+<% const _v = (typeof page !== 'undefined' && page && page.visual) ? page.visual : null; %>
+<% if (_v && _v.pageBg) { %>
+  <style>
+    /* Measured from this page on the original: the colour covering the most
+       area (<%= _v.pageBgShare %> of measured background area). */
+    :root { --page-bg: <%= _v.pageBg %>;
+            <% if (_v.onDark) { %>--body-text:#f2f5f7; --muted:#aebac1;
+            --rule:rgba(255,255,255,.22); --panel-bg:rgba(255,255,255,.08);
+            --surface:rgba(255,255,255,.10);<% } %>
+            <% if (_v.headerBg) { %>--header-bg: <%= _v.headerBg %>;<% } %> }
+  </style>
+<% } %>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="demo-banner" role="note">
+  <strong>Unofficial Local Demonstration &mdash; Not an Official Government Service.</strong>
+  <span>Synthetic data only. Nothing here is submitted to any government system.</span>
+</div>

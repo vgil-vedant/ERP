@@ -1,0 +1,1726 @@
+{
+  "generatedAt": "2026-10-27T05:54:15.491Z",
+  "counts": {
+    "inaccessible-page": 1,
+    "skipped-url": 168,
+    "external-dependency": 24,
+    "missing-asset": 19,
+    "uncertain-technology": 10,
+    "incomplete-interaction": 59,
+    "dynamic-navigation": 1
+  },
+  "visualTolerance": 0.12,
+  "singlePageApplicationMounts": [
+    {
+      "mountPath": "/CheckAadhaarStatus",
+      "mountUrl": "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en"
+    },
+    {
+      "mountPath": "/check-aadhaar-validity",
+      "mountUrl": "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en"
+    },
+    {
+      "mountPath": "/pvc",
+      "mountUrl": "https://myaadhaarbeta.uidai.gov.in/pvc/en"
+    },
+    {
+      "mountPath": "/retrieve-eid-uid",
+      "mountUrl": "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en"
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "inaccessible-page",
+      "item": "https://appointments.uidai.gov.in/easearch.aspx",
+      "detail": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://appointments.uidai.gov.in/easearch.aspx",
+      "impact": "Not represented in the replica."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://backend.uidai.gov.in/get/files/media/document/2026-05/Citizen_Charter_Jan24.pdf",
+      "detail": "non-HTML resource (collected as an asset instead)",
+      "impact": "Collected as an asset instead of a page."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://backend.uidai.gov.in/get/files/media/document/2026-05/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update.pdf",
+      "detail": "non-HTML resource (collected as an asset instead)",
+      "impact": "Collected as an asset instead of a page."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://backend.uidai.gov.in/get/files/media/document/2026-06/Regulation.pdf",
+      "detail": "non-HTML resource (collected as an asset instead)",
+      "impact": "Collected as an asset instead of a page."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/images/Aadhaar_Enrolment__and__Update__-__English.pdf",
+      "detail": "non-HTML resource (collected as an asset instead)",
+      "impact": "Collected as an asset instead of a page."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/images/commdoc/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update.pdf",
+      "detail": "non-HTML resource (collected as an asset instead)",
+      "impact": "Collected as an asset instead of a page."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/circulars?limit=10&page=0",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/circulars?limit=10&page=1",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/circulars?limit=10&page=2",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/circulars?limit=10&page=3",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/build-with-us",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/website-help?section=screen-reader",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://career.uidai.gov.in/hi/login",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://career.uidai.gov.in/hi/opportunities",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://career.uidai.gov.in/hi/opportunities?type=DEPUTATION",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://ovse.uidai.gov.in/",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/my-aadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://bookappointment.uidai.gov.in/",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://myaadhaar.uidai.gov.in/genricDownloadAadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://myaadhaarbeta.uidai.gov.in/checkStatus/en",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID/en",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://tathya.uidai.gov.in/access/login?role=resident",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://myaadhaarbeta.uidai.gov.in/lock-unlock-aadhaar/en",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/enrolment-and-updates",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/understand-your-aadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/about-aadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/features-of-aadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/usage-of-aadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-enrolment",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-generation",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/updating-data-on-aadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/who-we-are",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/people-at-uidai",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/our-offices",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/vision-and-mission",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/departments",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/composition-of-uidai-authority",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/officers-served-in-past",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/head-office",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/regional-offices",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/uidai-regional-office-bengaluru",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/uidai-regional-office-chandigarh",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/uidai-regional-office-guwahati",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/uidai-regional-office-hyderabad",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/uidai-regional-office-lucknow",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/uidai-regional-office-mumbai",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/uidai-regional-office-new-delhi",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/uidai-regional-office-ranchi",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/technology-centre",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/state-offices",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/transparency-accountability",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/circulars-notifications-official-memorandums",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/legal-framework",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/right-to-information",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/annual-reports",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/budget",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/parliament-questions",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/policies",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/circulars",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/notifications",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/official-memorandums",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/acts",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/regulations",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/gazetted-notifications",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/updated-regulations",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/rules",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/judgements",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/enrolment-partners",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/authentication-partners",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/authentication-devices",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/ovse",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/registrars",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/enrolment-agencies",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-seva-kendra",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/enrolment-documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/terms-of-engagement",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/training-testing-and-certification",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/training-testing-and-certification-documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/about-authentication",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/operational-model",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/authentication-requesting-agency",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/authentication-service-agencies",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/authentication-documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-paperless-offline-e-kyc",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/about-authentication-devices",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/biometric-devices",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/qr-code-reader",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/sitaa",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/developer-section",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/tenders",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/tutorial",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/data-and-download",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/discussion-forum",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/news-and-updates",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/gallery",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/brand-resources",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/press-releases",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-in-print",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-in-media",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-in-global-words",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/photos",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/videos",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/advertisements",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/iec",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-logo",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/handbooks",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/internship-policy",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/internal-policies",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/compendium",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/year-calendar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/announcements",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/archives",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/resources",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/faq",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/grievance-feedback",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/glossary",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-mythbusters",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/how-to-videos",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-app-faq",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/ovse-faq",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/your-aadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/authentication",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/direct-benefit-transfer",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/enrolment-and-update",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/crm-division",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/aadhaar-online-services",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://myaadhaar.uidai.gov.in/grievance-feedback/en",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://myaadhaar.uidai.gov.in/grievance-feedback-status/en",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/how-to-videos?limit=8&page=6",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/how-to-videos?limit=8&page=10",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/how-to-videos?limit=8&page=7",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/how-to-videos?limit=8&page=8",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/how-to-videos?limit=8&page=9",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/how-to-videos?limit=8&page=12",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/about-uidai",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/aadhaar-dashboard",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/vision-and-mission",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/annual-reports",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/updating-data-on-aadhaar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/enrolment-and-updates",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/handbooks",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/circulars",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/policies",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/developer-section",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/ovse",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/site-map",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/website-policies",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/hi/website-help",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/my-aadhaar/downloads/enrolment-and-update-forms.html",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/my-aadhaar/about-your-aadhaar/updating-data-on-aadhaar.html",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/announcements",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=3&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/notifications",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/internship-policy",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/compendium",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/year-calendar",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/tenders",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents",
+      "detail": "queued but not reached (maxPages=60)",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://translation-plugin.bhashini.co.in/bhashini_logo.png",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://translation-plugin.bhashini.co.in/website_translation_utility.css",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/gtag/js?id=G-3HXPQVCFM7&cx=c&gtm=4e6an1",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/gtag/js?id=G-0TGWE4YZ20&cx=c&gtm=4e6an1",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/gtm.js?id=GTM-PMPV4ZLJ",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://translation-plugin.bhashini.co.in/website_translation_utility.js",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/favicon.ico",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/gtm.942d3884ed9da0d9180f.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/0812901b7ac51c35fd20.png",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/gtag/js?id=G-WG95FV0Z2C&cx=c&gtm=4e6an1",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/gtm.js?id=GTM-TL9DR99X",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/71808.3f76ba99400a8ea39458.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/45145.ede43ae523e1ac6d37c6.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/17967.eb147f743d6ae4474ef0.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://backend.uidai.gov.in/get/files/media/2026-05/TiqSlUsjQBI_maxresdefault.webp",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/68590.4a032ec6201cae579243.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/17131.dd07cb9e708d8220a44d.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/b59325d5d0b4afc65a7f.png",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/62777.926ab9459d252c04f749.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/54681.682eb5cd2dfe8937d458.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/50532.222e6744a208b9baf596.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/90766.0512be2e7dd25f6d95c4.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaarbeta.uidai.gov.in/20246.31961ab730ca616377e0.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://scripts.clarity.ms/0.8.77-beta/clarity.js",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.clarity.ms/tag/x136a1wpwu?ref=gtm",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/gtag/js?id=G-3HXPQVCFM7&cx=c&gtm=4e6aq0h2",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/gtm.js?id=GTM-5FJ52DHC",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://c.clarity.ms/c.gif",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=02A89E49F1144788B82543260B2212E2&RedC=c.clarity.ms&MXFR=03CA0C1EF13F677003511BE1F53F69B1",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=02A89E49F1144788B82543260B2212E2&MUID=2B2FABD42AEA65520CE9BC2B2BAE64BF",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "base:get/files/media/document/2026-09/Aadhaar_Enrolment__and__Update__-__English.pdf",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "base:get/files/media/document/2026-06/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update_1.pdf",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "base:get/files/media/document/2026-05/Citizen_Charter_Jan24.pdf",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://get/files/media/document/2026-05/Content_Archival_PolicyCAP_UIDAI.pdf",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://backend.uidai.gov.in/get/files/media/2026-06/13_Access%2C_Assistance_FAQ%2C_Feedback_etc..webp",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/td?id=G-3HXPQVCFM7&v=3&t=t&pid=1037918262&gtm=45je6an1v9254280459za20gzb9254248741zd9254248741xf1&seq=1&exp=115616986~115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034~123620775&dl=uidai.gov.in%2Fhi%2Faadhaar-dashboard%2Fregistered-devices&tdp=G-3HXPQVCFM7;254280459;1;6;0&frm=0&rtg=254248741&slo=42&hlo=72&lst=2&pcid=254248741&bt=0&ct=3&jsp=1&z=0",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaar.uidai.gov.in/85493.70340bc81b1a55bcb4f6.js",
+      "detail": "HTTP null.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaar.uidai.gov.in/resources/css/style.css",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/gtm.js?id=GTM-55LB5CP4&gtm_auth=&gtm_preview=&gtm_cookies_win=x",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://myaadhaar.uidai.gov.in/resources/js/script.js",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.googletagmanager.com/td?id=G-3HXPQVCFM7&v=3&t=t&pid=257679714&gtm=45je6an1v9254280459za20gzb9254248741zd9254248741xf1&seq=1&exp=115938465~115938469~118897920~118897930~120213116~120385422~120420416~120469145~120469153~121246026~121246034&dl=uidai.gov.in%2Fen%2Finternship-policy&tdp=G-3HXPQVCFM7;254280459;1;6;0&frm=0&rtg=254248741&slo=47&hlo=79&lst=2&pcid=254248741&bt=0&ct=3&jsp=1&z=0",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "database product and schema",
+      "detail": "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "application source code",
+      "detail": "Only the publicly served HTML, CSS and JavaScript were retrieved. No source map, repository or build artifact was requested, and none should be. The replica is an independent reimplementation, not recovered source.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "server-side language version and build tooling",
+      "detail": "The server does not advertise a version header beyond what is listed above. Nothing further is publicly observable.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "hosting provider and data-centre location",
+      "detail": "Not publicly identifiable from the served responses. `.nic.in` is operated by the National Informatics Centre, but that is organisational, not a verified hosting fact.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "Bootstrap (CSS framework)",
+      "detail": "Status: inferred, confidence medium. Evidence: 16 Bootstrap-style class names observed in the rendered DOM (e.g. `container`, `row`, `col-md-*`, `navbar`)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "ESF (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: ESF` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "Golfe2 (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: Golfe2` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "Google Tag Manager (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: Google Tag Manager` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "istio-envoy (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: istio-envoy` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "sffe (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: sffe` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://myaadhaarbeta.uidai.gov.in/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://myaadhaarbeta.uidai.gov.in/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/how-to-videos",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/faq",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/about-uidai",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/vision-and-mission",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/aadhaar-dashboard",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/annual-reports",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/updating-data-on-aadhaar",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+      "detail": "Form is CAPTCHA-protected. Solving or bypassing a CAPTCHA is out of scope.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://myaadhaarbeta.uidai.gov.in/pvc/en",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/enrolment-and-updates",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/handbooks",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/circulars",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/policies",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/developer-section",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://career.uidai.gov.in/hi",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/ovse",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/site-map",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/website-policies",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/website-help",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/help",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/resources",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/who-we-are",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/transparency-accountability",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/my-aadhaar",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/understand-your-aadhaar",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://myaadhaarbeta.uidai.gov.in/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://uidai.gov.in/en/circulars-notifications-official-memorandums",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "dynamic-navigation",
+      "item": "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en, https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en, https://myaadhaarbeta.uidai.gov.in/pvc/en, https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+      "detail": "This target mounts a single-page application whose navigation is built after hydration and can change between loads. A route present in the menu during one crawl may be absent in the next, so the captured route list is a snapshot of the navigation as it stood at the capture time recorded in each page metadata file.",
+      "impact": "The route inventory for this mount may be incomplete or may list a route the navigation no longer offers. Re-run the pipeline to refresh it."
+    }
+  ],
+  "honesty": "This file is the deliberate record of what the replica does NOT reproduce. Nothing here is papered over elsewhere in the project."
+}

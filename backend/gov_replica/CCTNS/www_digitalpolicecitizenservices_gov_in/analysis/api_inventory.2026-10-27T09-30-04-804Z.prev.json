@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-10-27T07:06:46.451Z",
+  "counts": {
+    "endpointsObserved": 0
+  },
+  "endpoints": [],
+  "publicApiAvailable": false,
+  "publicApiEvidence": "No XHR/fetch data endpoint was observed on any captured page. The portal renders server-side and posts back through full page requests.",
+  "integrationRestrictions": [
+    "No public, self-service API is published for this portal.",
+    "Public forms are CAPTCHA-protected; automated submission is not available.",
+    "Authenticated functionality sits behind a server-side session and is out of scope."
+  ],
+  "safetyPolicy": "Endpoints here were observed passively while loading public pages. No endpoint was enumerated, fuzzed or probed. No credential, session token, cookie or authorization header was recorded: those header names are stripped before anything is written to disk. No request body was captured."
+}

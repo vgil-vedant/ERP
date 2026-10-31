@@ -1,0 +1,10 @@
+<p class="hint" style="margin-top:20px">
+  One account, <%= portals.length %> portals. These all run on the same backend and the
+  same database, so a session here is a session on all of them:
+</p>
+<div class="portals">
+  <% portals.forEach(function (p) { %>
+    <a href="http://127.0.0.1:<%= p.port %>/account"
+       class="<%= p.code === site.code ? 'here' : '' %>"><%= p.name %></a>
+  <% }); %>
+</div>

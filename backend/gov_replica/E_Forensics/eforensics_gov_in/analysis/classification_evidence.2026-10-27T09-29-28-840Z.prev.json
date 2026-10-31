@@ -1,0 +1,250 @@
+{
+  "generatedAt": "2026-10-27T07:01:03.529Z",
+  "category": "E_Forensics",
+  "confidence": "medium",
+  "status": "confirmed",
+  "decidedBy": "page content, strongest in navigation labels",
+  "wouldHoldWithoutHostname": true,
+  "governmentHost": true,
+  "method": "Terms are scored by the zone they appear in, not by raw frequency: page title x30, headings x12, navigation labels x10, meta description/keywords x8, body text x1. Repetition is damped so breadth of evidence beats one repeated phrase, and a category must have at least one defining term outside body text to win -- a footer address must not decide what a site is for.",
+  "thresholds": {
+    "CONFIDENT_SCORE": 40,
+    "CONFIDENT_MARGIN": 1.35,
+    "STRONG": 1,
+    "WEAK": 0.18,
+    "HOST_WEIGHT": 10
+  },
+  "zoneWeights": {
+    "title": 30,
+    "headings": 12,
+    "navLabels": 10,
+    "meta": 8,
+    "body": 1
+  },
+  "ranking": [
+    {
+      "dir": "E_Forensics",
+      "label": "Government forensic services, forensic laboratories, forensic case management and evidence workflows",
+      "contentScore": 22.41,
+      "hostScore": 20,
+      "score": 42.41,
+      "hasProminentStrongTerm": true,
+      "hits": {
+        "strong": [
+          {
+            "term": "e-forensic",
+            "weight": 16.25,
+            "where": [
+              {
+                "zone": "navLabels",
+                "occurrences": 3,
+                "weight": 14.77
+              },
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          },
+          {
+            "term": "forensic case",
+            "weight": 1,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          }
+        ],
+        "weak": [
+          {
+            "term": "forensic",
+            "weight": 5.16,
+            "where": [
+              {
+                "zone": "headings",
+                "occurrences": 1,
+                "weight": 2.16
+              },
+              {
+                "zone": "navLabels",
+                "occurrences": 3,
+                "weight": 2.66
+              },
+              {
+                "zone": "body",
+                "occurrences": 8,
+                "weight": 0.34
+              }
+            ]
+          }
+        ],
+        "host": [
+          {
+            "hint": "eforensic",
+            "weight": 10
+          },
+          {
+            "hint": "forensic",
+            "weight": 10
+          }
+        ]
+      }
+    },
+    {
+      "dir": "CCTNS",
+      "label": "Crime and Criminal Tracking Network & Systems, police crime-record workflows and related portals",
+      "contentScore": 20.95,
+      "hostScore": 0,
+      "score": 20.95,
+      "hasProminentStrongTerm": true,
+      "hits": {
+        "strong": [
+          {
+            "term": "national crime records bureau",
+            "weight": 1.48,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          },
+          {
+            "term": "ncrb",
+            "weight": 19.2,
+            "where": [
+              {
+                "zone": "headings",
+                "occurrences": 3,
+                "weight": 17.73
+              },
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          }
+        ],
+        "weak": [
+          {
+            "term": "crime",
+            "weight": 0.27,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 0.27
+              }
+            ]
+          }
+        ],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Courts",
+      "label": "eCourts, case status, court listings, cause lists, orders, judgments and court services",
+      "contentScore": 1.71,
+      "hostScore": 0,
+      "score": 1.71,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [
+          {
+            "term": "case status",
+            "weight": 1.48,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          }
+        ],
+        "weak": [
+          {
+            "term": "court",
+            "weight": 0.23,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 0.23
+              }
+            ]
+          }
+        ],
+        "host": []
+      }
+    },
+    {
+      "dir": "Aadhaar",
+      "label": "Aadhaar/UIDAI identity services, enrolment, updates and related official services",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Prisons",
+      "label": "ePrisons, prison/jail administration, inmate management, visitor services and related portals",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    }
+  ],
+  "pagesConsidered": 3,
+  "samplesUsed": [
+    {
+      "url": "https://eforensics.gov.in/",
+      "title": "Home",
+      "headingCount": 12,
+      "navLabelCount": 6,
+      "textLength": 2103,
+      "error": null
+    },
+    {
+      "url": "https://eforensics.gov.in/",
+      "title": "Home",
+      "headingCount": 12,
+      "navLabelCount": 6,
+      "textLength": 2103,
+      "error": null
+    },
+    {
+      "url": "https://eforensics.gov.in/Home/ContactUs",
+      "title": "List of Districts",
+      "headingCount": 4,
+      "navLabelCount": 6,
+      "textLength": 677,
+      "error": null
+    },
+    {
+      "url": "https://eforensics.gov.in/Login",
+      "title": "Login",
+      "headingCount": 5,
+      "navLabelCount": 6,
+      "textLength": 607,
+      "error": null
+    }
+  ],
+  "note": "Classification is driven by page content. `wouldHoldWithoutHostname` records whether the same verdict is reached from content alone, with the hostname bonus removed."
+}

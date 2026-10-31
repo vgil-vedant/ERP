@@ -1,0 +1,157 @@
+<%#
+  The DashBoard page, laid out as the original's: a filter panel on the left, a
+  "Dashboard" bar, five cards (each with its icon, a figure and "View more"), two
+  charts, then the state table. The icons are the images supplied in
+  info/images/dashboard*.png, embedded as base64 partials.
+
+  The charts are drawn here as inline SVG from the local database, so no chart
+  library is loaded and nothing leaves this machine.
+%>
+<%
+  const nf = function (n) { return Number(n).toLocaleString('en-IN'); };
+  const dayLabel = function (d) {
+    return new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day: '2-digit', month: 'short' });
+  };
+  const pad = function (n) { return String(n).padStart(2, '0'); };
+  const h12 = asOf.getHours() % 12 || 12;
+  const asOfText = pad(asOf.getDate()) + '/' + pad(asOf.getMonth() + 1) + '/' + asOf.getFullYear() +
+    ' ' + pad(h12) + ':' + pad(asOf.getMinutes()) + (asOf.getHours() < 12 ? 'AM' : 'PM');
+
+  const cards = [
+    ['Inmates inside', kpis.inside, 'kpi-inside', '#inside-prisoners'],
+    ['Admissions today', kpis.admissions, 'kpi-admissions', '#trend'],
+    ['Released today', kpis.released, 'kpi-released', '#trend'],
+    ['Visits registered today', kpis.visits, 'kpi-visits', '/public/MyVisitStatus'],
+    ['Court Hearing today', kpis.hearings, 'kpi-hearing', '/public/ePrisonsLiveStatus']
+  ];
+
+  const allStates = byState.slice().sort(function (a, b) { return a.state_name.localeCompare(b.state_name); });
+  const shown = chosen ? allStates.filter(function (r) { return r.state_name === chosen.name; }) : allStates;
+%>
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main">
+<div class="dash">
+  <aside class="dash__filter" id="dash-filter" aria-label="Filters">
+    <p class="dash__filter-bar">Find Your Option</p>
+    <form method="get" action="/public/DashBoard" class="dash__form">
+      <label for="dash_state">STATE</label>
+      <select id="dash_state" name="state">
+        <option value="">All States</option>
+        <% states.forEach(function (st) { %>
+          <option value="<%= st.id %>" <%= chosen && chosen.id === st.id ? 'selected' : '' %>><%= st.name.toUpperCase() %></option>
+        <% }); %>
+      </select>
+      <label for="dash_jail">JAILS</label>
+      <select id="dash_jail" disabled title="Jail-level figures are not held in the demonstration data">
+        <option>SELECT</option>
+      </select>
+      <button type="submit" class="btn dash__show">Show</button>
+    </form>
+  </aside>
+
+  <section class="dash__main">
+    <div class="dash__bar"><button type="button" class="dash__bar-mark" aria-controls="dash-filter" aria-expanded="true" aria-label="Hide filter panel" title="Hide filter panel"><span aria-hidden="true"></span></button><h1>Dashboard</h1></div>
+    <div class="dash__body">
+      <div class="dash__head">
+        <p class="dash__scope"><%= chosen ? chosen.name : 'All States' %></p>
+        <p class="dash__asof">As on : <%= asOfText %><br>Dashboard updates every hour.</p>
+      </div>
+
+      <div class="kpis">
+        <% cards.forEach(function (c) { %>
+          <article class="kpi">
+            <div class="kpi__top">
+              <h2 class="kpi__title"><%= c[0] %></h2>
+              <span class="kpi__icon" aria-hidden="true"><%- include('../partials/img/' + c[2]) %></span>
+            </div>
+            <p class="kpi__value"><%= nf(c[1]) %></p>
+            <a class="kpi__more" href="<%= c[3] %>">View more <span aria-hidden="true" class="kpi__go">&#8594;</span></a>
+          </article>
+        <% }); %>
+      </div>
+      <p class="dash__note">All figures are synthetic and come from the local demonstration database.
+      It holds no daily admissions or releases, so those two cards are synthetic figures scaled from the
+      custody population.</p>
+
+      <div class="dash__charts" id="trend">
+        <section class="dash-card">
+          <h2 class="dash-card__title">Nation wide prison population trend (last 7 days)</h2>
+          <div class="dash-card__body">
+            <div id="chart-trend" class="chart-host"></div>
+            <div id="legend-trend" class="legend" role="group" aria-label="Series shown in the trend chart"></div>
+            <noscript>
+              <table class="data data--small">
+                <caption>Last 7 days, newest first (the chart needs JavaScript)</caption>
+                <thead><tr><th scope="col">Day</th><th scope="col" class="num">Admission</th><th scope="col" class="num">Release</th><th scope="col" class="num">Visitors</th></tr></thead>
+                <tbody><% charts.trend.forEach(function (t) { %>
+                  <tr><th scope="row"><%= dayLabel(t.date) %></th><td class="num"><%= nf(t.admission) %></td><td class="num"><%= nf(t.release) %></td><td class="num"><%= nf(t.visitors) %></td></tr>
+                <% }); %></tbody>
+              </table>
+            </noscript>
+          </div>
+        </section>
+
+        <section class="dash-card">
+          <h2 class="dash-card__title">Nation wide current prison population (top 7 states)</h2>
+          <div class="dash-card__body">
+            <div id="chart-states" class="chart-host"></div>
+            <div id="legend-states" class="legend" role="group" aria-label="Series shown in the states chart"></div>
+            <noscript>
+              <table class="data data--small">
+                <caption>Top 7 states (the chart needs JavaScript)</caption>
+                <thead><tr><th scope="col">State</th><th scope="col" class="num">Inside</th><th scope="col" class="num">Release</th><th scope="col" class="num">Admission</th></tr></thead>
+                <tbody><% charts.states.forEach(function (r) { %>
+                  <tr><th scope="row"><%= r.state %></th><td class="num"><%= nf(r.inside) %></td><td class="num"><%= nf(r.release) %></td><td class="num"><%= nf(r.admission) %></td></tr>
+                <% }); %></tbody>
+              </table>
+            </noscript>
+          </div>
+        </section>
+      </div>
+      <p class="dash__note">Hover a point or a bar for its value. Click a legend entry to hide or show that series.
+      Release and Admission are synthetic, scaled from the custody figures; Inside is the snapshot figure.</p>
+      <script type="application/json" id="dash-data"><%- JSON.stringify(charts).replace(/</g, '\\u003c') %></script>
+      <script src="/static/js/dashboard-charts.js" defer></script>
+      <script src="/static/js/dashboard-panel.js" defer></script>
+
+      <section class="dash-card dash-card--table" id="inside-prisoners">
+        <h2 class="dash-card__title dash-card__title--plain">Details of inside prisoners.</h2>
+        <div class="table-wrap">
+          <table class="data data--dash">
+            <thead><tr><th scope="col">State_Name</th><th scope="col">Inside</th></tr></thead>
+            <tbody>
+              <% shown.forEach(function (r) { %>
+                <tr><td><%= r.state_name.toUpperCase() %></td><td><%= nf(r.value) %></td></tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <h2 class="section__title" style="font-size:20px;margin-top:34px">Also in this demonstration</h2>
+      <div class="table-wrap">
+        <table class="data">
+          <caption>Visit requests by status</caption>
+          <thead><tr><th scope="col">Status</th><th scope="col" class="num">Requests</th></tr></thead>
+          <tbody><% visitStatus.forEach(function (r) { %>
+            <tr><th scope="row"><span class="status-chip" data-status="<%= r.status %>"><%= r.status.replace(/_/g,' ') %></span></th>
+                <td class="num"><%= r.n %></td></tr>
+          <% }); %></tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table class="data">
+          <caption>Grievance pendency and timeliness. The ERP scope requires this to be visible to Regional Offices and HQ.</caption>
+          <thead><tr><th scope="col">Status</th><th scope="col" class="num">Count</th><th scope="col" class="num">Overdue</th></tr></thead>
+          <tbody><% grievance.forEach(function (r) { %>
+            <tr><th scope="row"><span class="status-chip" data-status="<%= r.status %>"><%= r.status.replace(/_/g,' ') %></span></th>
+                <td class="num"><%= r.n %></td><td class="num"><%= r.overdue %></td></tr>
+          <% }); %></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+<%- include('../partials/footer') %>

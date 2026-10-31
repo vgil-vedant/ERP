@@ -1,0 +1,57 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section section--flush">
+  <p class="section__intro"><%= intro %></p>
+
+  <form class="filter-bar" method="get" action="<%= basePath %>">
+    <div class="field">
+      <label for="state_id">Filter by state</label>
+      <select id="state_id" name="state_id">
+        <option value="">All states</option>
+        <% ref.states.forEach(function (s) { %>
+          <option value="<%= s.id %>" <%= String(stateId) === String(s.id) ? 'selected' : '' %>><%= s.name %></option>
+        <% }); %>
+      </select>
+    </div>
+    <button type="submit" class="btn btn--primary">Apply</button>
+    <a class="btn btn--secondary" href="<%= basePath %>">Clear</a>
+  </form>
+
+  <div class="table-wrap">
+    <table class="data">
+      <caption>Showing <%= data.rows.length %> of <%= data.total %> synthetic record(s),
+        page <%= data.page %> of <%= data.pages %>.</caption>
+      <thead><tr><% columns.forEach(function (c) { %><th scope="col"><%= c %></th><% }); %></tr></thead>
+      <tbody>
+        <% if (!data.rows.length) { %>
+          <tr><td colspan="<%= columns.length %>">No records match this filter.</td></tr>
+        <% } %>
+        <% data.rows.forEach(function (row) { %>
+          <tr><% rowFields.forEach(function (f) { %><td><%= row[f] == null ? '—' : row[f] %></td><% }); %></tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+  <% if (data.pages > 1) { const qs = stateId ? '&state_id=' + stateId : ''; %>
+    <nav class="pager" aria-label="Pagination">
+      <% if (data.page > 1) { %>
+        <a href="<%= basePath %>?page=<%= data.page - 1 %><%= qs %>" rel="prev">Previous</a>
+      <% } else { %><span class="is-disabled">Previous</span><% } %>
+      <%
+        let from = Math.max(1, data.page - 2), to = Math.min(data.pages, from + 4);
+        from = Math.max(1, to - 4);
+        for (let p = from; p <= to; p++) { %>
+        <% if (p === data.page) { %>
+          <span class="is-current" aria-current="page"><%= p %></span>
+        <% } else { %>
+          <a href="<%= basePath %>?page=<%= p %><%= qs %>"><%= p %></a>
+        <% } %>
+      <% } %>
+      <% if (data.page < data.pages) { %>
+        <a href="<%= basePath %>?page=<%= data.page + 1 %><%= qs %>" rel="next">Next</a>
+      <% } else { %><span class="is-disabled">Next</span><% } %>
+    </nav>
+  <% } %>
+</section></div></main>
+<%- include('../partials/footer') %>

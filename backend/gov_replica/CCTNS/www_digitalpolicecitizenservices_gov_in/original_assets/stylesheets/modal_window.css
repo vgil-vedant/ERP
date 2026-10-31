@@ -1,0 +1,40 @@
+/* screen */
+div#eScreen {
+    background-color: #000000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+/* dialog window */
+table.dialogWindow {
+	background-color: white;
+	border-collapse: collapse;
+	border: solid 1px  #0896e3;
+	color:#000
+}
+/* dialog window header */
+.dialogWindow th {
+	background-color: #008dda;
+	padding: 4px;
+	border-collapse: collapse;
+	border: 0;
+	color:#fff;
+	cursor: move;
+}
+/* dialog window header icon */
+.dialogWindow th img {
+	cursor: pointer;
+	margin: 3px 3px 0 0;
+}
+
+/* dialog window body */
+.dialogWindow td {
+	border-collapse: collapse;
+	border: 0;
+	padding: 0;
+}
+/* dialog window iframe */
+.dialogWindow iframe {
+	border: 0;
+	margin:0;
+	z-index:450;
+}		

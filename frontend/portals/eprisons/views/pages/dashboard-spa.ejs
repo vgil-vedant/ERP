@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>| Dashboard &mdash; Local Demo Replica</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/static/img/demo-mark.svg">
+<link rel="stylesheet" href="/static/css/replica.css">
+<link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body class="spa-body">
+<a class="skip-link" href="#root">Skip to main content</a>
+<div class="demo-banner" role="note">
+  <strong>Unofficial Local Demonstration &mdash; Not an Official Government Service.</strong>
+  <span>Synthetic data only.</span>
+</div>
+
+<!--
+  The original mounts a Create React App build here. Its inner routes exist only
+  in the browser: a direct request to one returns 403 from IIS, because there is
+  no file at that path. This replica reproduces that shape with a small vanilla
+  router -- one shell, routed client-side -- rather than pulling in React for a
+  demonstration page. The behaviour being replicated is the client routing, not
+  the framework.
+-->
+<div id="root" data-routes='<%- JSON.stringify(routes) %>'>
+  <noscript>
+    <div class="spa-noscript">
+      <p>This dashboard is routed in the browser, exactly as the original is, so it needs
+      JavaScript. The same figures are available without JavaScript on the
+      <a href="/public/DashBoard">server-rendered DashBoard</a>.</p>
+    </div>
+  </noscript>
+</div>
+
+<script src="/static/js/dashboard.js" defer></script>
+</body>
+</html>

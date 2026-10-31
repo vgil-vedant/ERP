@@ -1,0 +1,39 @@
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="brand" href="/">
+      <img src="/static/img/demo-mark.svg" alt="" width="124" height="34">
+      <span class="brand__text">
+        <%= site.name %>
+        <em class="brand__demo">local demo</em>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bar" aria-hidden="true"></span><span class="sr-only">Menu</span>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <ul class="primary-nav__list">
+        <% nav.forEach(function (item) { %>
+          <li><a class="primary-nav__link" href="<%= item.href %>"
+                 <%= currentPath === item.href ? 'aria-current="page"' : '' %>><%= item.label %></a></li>
+        <% }); %>
+      </ul>
+    </nav>
+  </div>
+</header>
+<% if (typeof pageTitle !== 'undefined' && pageTitle) { %>
+  <div class="page-title-bar"><div class="page-title-bar__inner"><%= pageTitle %></div></div>
+<% } %>
+
+<% const _hv = (typeof page !== 'undefined' && page && page.visual) ? page.visual : null; %>
+<% const _custom = (typeof isCustomView !== 'undefined') && isCustomView; %>
+<% if (!_custom && _hv && _hv.heroBg && _hv.heroHeight >= 140) { %>
+  <section class="hero-band <%= _hv.onDark ? 'hero-band--dark' : 'hero-band--light' %>"
+           style="background: <%= _hv.heroBg %>; min-height: <%= _hv.heroHeight %>px">
+    <div class="hero-band__inner">
+      <p class="hero-band__lede"><%= (page.outline && page.outline[0]) ? page.outline[0].text : page.heading %></p>
+      <p class="hero-band__sub">The original shows an illustrated hero here. Its artwork is
+      government material and is not redistributed, so the replica reproduces the band and its
+      measured height only.</p>
+    </div>
+  </section>
+<% } %>

@@ -1,0 +1,1744 @@
+{
+  "runId": "2026-10-27T05-36-13-803Z",
+  "generatedAt": "2026-10-27T05:54:15.489Z",
+  "startUrl": "https://uidai.gov.in/en",
+  "rootHost": "uidai.gov.in",
+  "limits": {
+    "maxPages": 60,
+    "maxDepth": 4,
+    "navTimeoutMs": 45000,
+    "settleTimeoutMs": 3500,
+    "perRequestDelayMs": 900,
+    "concurrency": 1,
+    "maxAssetBytes": 12582912,
+    "maxTotalRuntimeMs": 1500000,
+    "assetTimeoutMs": 30000,
+    "retriesPerUrl": 2
+  },
+  "visited": {
+    "https://uidai.gov.in/en": {
+      "slug": "en",
+      "finalUrl": "https://uidai.gov.in/en",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 0,
+      "via": "start URL",
+      "capturedAt": "2026-10-27T05:36:36.131Z",
+      "error": null
+    },
+    "https://myaadhaarbeta.uidai.gov.in/genricDownloadAadhaar/en": {
+      "slug": "genricdownloadaadhaar_en",
+      "finalUrl": "https://myaadhaarbeta.uidai.gov.in/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "home",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:36:58.746Z",
+      "error": null
+    },
+    "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en": {
+      "slug": "checkaadhaarstatus_en",
+      "finalUrl": "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "status-enquiry",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:37:08.995Z",
+      "error": null
+    },
+    "https://myaadhaarbeta.uidai.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://myaadhaarbeta.uidai.gov.in/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "home",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:37:19.727Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/how-to-videos": {
+      "slug": "en_how-to-videos",
+      "finalUrl": "https://uidai.gov.in/en/how-to-videos",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:37:28.365Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/faq": {
+      "slug": "en_faq",
+      "finalUrl": "https://uidai.gov.in/en/faq",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "help",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:37:36.061Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/about-uidai": {
+      "slug": "en_about-uidai",
+      "finalUrl": "https://uidai.gov.in/en/about-uidai",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "about",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:37:44.439Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/vision-and-mission": {
+      "slug": "en_vision-and-mission",
+      "finalUrl": "https://uidai.gov.in/en/vision-and-mission",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:37:52.007Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/aadhaar-dashboard": {
+      "slug": "en_aadhaar-dashboard",
+      "finalUrl": "https://uidai.gov.in/en/aadhaar-dashboard",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:37:59.441Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/annual-reports": {
+      "slug": "en_annual-reports",
+      "finalUrl": "https://uidai.gov.in/en/annual-reports",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:38:06.917Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/updating-data-on-aadhaar": {
+      "slug": "en_updating-data-on-aadhaar",
+      "finalUrl": "https://uidai.gov.in/en/updating-data-on-aadhaar",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:38:15.293Z",
+      "error": null
+    },
+    "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en": {
+      "slug": "check-aadhaar-validity_en",
+      "finalUrl": "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:39:44.109Z",
+      "error": null
+    },
+    "https://myaadhaarbeta.uidai.gov.in/pvc/en": {
+      "slug": "pvc_en",
+      "finalUrl": "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:39:54.714Z",
+      "error": null
+    },
+    "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID": {
+      "slug": "genericgenerateorretrievevid",
+      "finalUrl": "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:40:04.642Z",
+      "error": null
+    },
+    "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en": {
+      "slug": "retrieve-eid-uid_en",
+      "finalUrl": "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:40:14.633Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/documents": {
+      "slug": "en_documents",
+      "finalUrl": "https://uidai.gov.in/en/documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:40:22.806Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/enrolment-and-updates": {
+      "slug": "en_enrolment-and-updates",
+      "finalUrl": "https://uidai.gov.in/en/enrolment-and-updates",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "registration",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:40:30.933Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/handbooks": {
+      "slug": "en_handbooks",
+      "finalUrl": "https://uidai.gov.in/en/handbooks",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:40:38.993Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/circulars": {
+      "slug": "en_circulars",
+      "finalUrl": "https://uidai.gov.in/en/circulars",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:40:46.885Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/policies": {
+      "slug": "en_policies",
+      "finalUrl": "https://uidai.gov.in/en/policies",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:40:54.121Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/developer-section": {
+      "slug": "en_developer-section",
+      "finalUrl": "https://uidai.gov.in/en/developer-section",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:41:01.502Z",
+      "error": null
+    },
+    "https://career.uidai.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://career.uidai.gov.in/hi",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:41:11.949Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/ovse": {
+      "slug": "en_ovse",
+      "finalUrl": "https://uidai.gov.in/en/ovse",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:41:19.600Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/site-map": {
+      "slug": "en_site-map",
+      "finalUrl": "https://uidai.gov.in/en/site-map",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:41:28.040Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/website-policies": {
+      "slug": "en_website-policies",
+      "finalUrl": "https://uidai.gov.in/en/website-policies",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:41:36.519Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/website-help": {
+      "slug": "en_website-help",
+      "finalUrl": "https://uidai.gov.in/en/website-help",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "help",
+      "depth": 1,
+      "via": "https://uidai.gov.in/en",
+      "capturedAt": "2026-10-27T05:41:44.410Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/help": {
+      "slug": "en_help",
+      "finalUrl": "https://uidai.gov.in/en/help",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "help",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:41:57.476Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/resources": {
+      "slug": "en_resources",
+      "finalUrl": "https://uidai.gov.in/en/resources",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:42:04.884Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=0": {
+      "slug": "en_how-to-videos__67a007c8",
+      "finalUrl": "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:42:13.471Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=1": {
+      "slug": "en_how-to-videos__f60f5207",
+      "finalUrl": "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:42:21.668Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=2": {
+      "slug": "en_how-to-videos__3748c4b8",
+      "finalUrl": "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:42:29.851Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=3": {
+      "slug": "en_how-to-videos__51bbb222",
+      "finalUrl": "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:42:38.224Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=4": {
+      "slug": "en_how-to-videos__2c4f56fe",
+      "finalUrl": "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:42:46.328Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=5": {
+      "slug": "en_how-to-videos__8a568c8f",
+      "finalUrl": "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:42:54.731Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=11": {
+      "slug": "en_how-to-videos__c4ffbf55",
+      "finalUrl": "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/how-to-videos",
+      "capturedAt": "2026-10-27T05:43:02.058Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/who-we-are": {
+      "slug": "en_who-we-are",
+      "finalUrl": "https://uidai.gov.in/en/who-we-are",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/vision-and-mission",
+      "capturedAt": "2026-10-27T05:43:09.720Z",
+      "error": null
+    },
+    "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard": {
+      "slug": "aadhaar-dashboard_enrollment-dashboard",
+      "finalUrl": "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "registration",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/aadhaar-dashboard",
+      "capturedAt": "2026-10-27T05:43:18.062Z",
+      "error": null
+    },
+    "https://uidai.gov.in/aadhaar-dashboard/authentication-dashboard": {
+      "slug": "aadhaar-dashboard_authentication-dashboard",
+      "finalUrl": "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/aadhaar-dashboard",
+      "capturedAt": "2026-10-27T05:43:25.429Z",
+      "error": null
+    },
+    "https://uidai.gov.in/aadhaar-dashboard/updates-dashboard": {
+      "slug": "aadhaar-dashboard_updates-dashboard",
+      "finalUrl": "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/aadhaar-dashboard",
+      "capturedAt": "2026-10-27T05:43:32.810Z",
+      "error": null
+    },
+    "https://uidai.gov.in/aadhaar-dashboard/ekyc": {
+      "slug": "aadhaar-dashboard_ekyc",
+      "finalUrl": "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/aadhaar-dashboard",
+      "capturedAt": "2026-10-27T05:43:39.944Z",
+      "error": null
+    },
+    "https://uidai.gov.in/aadhaar-dashboard/registered-devices": {
+      "slug": "aadhaar-dashboard_registered-devices",
+      "finalUrl": "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "registration",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/aadhaar-dashboard",
+      "capturedAt": "2026-10-27T05:43:47.779Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/transparency-accountability": {
+      "slug": "en_transparency-accountability",
+      "finalUrl": "https://uidai.gov.in/en/transparency-accountability",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/annual-reports",
+      "capturedAt": "2026-10-27T05:43:55.794Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/my-aadhaar": {
+      "slug": "en_my-aadhaar",
+      "finalUrl": "https://uidai.gov.in/en/my-aadhaar",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/updating-data-on-aadhaar",
+      "capturedAt": "2026-10-27T05:44:04.059Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/understand-your-aadhaar": {
+      "slug": "en_understand-your-aadhaar",
+      "finalUrl": "https://uidai.gov.in/en/understand-your-aadhaar",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/updating-data-on-aadhaar",
+      "capturedAt": "2026-10-27T05:44:11.337Z",
+      "error": null
+    },
+    "https://myaadhaar.uidai.gov.in/verify-email-mobile/en": {
+      "slug": "verify-email-mobile_en",
+      "finalUrl": "https://myaadhaarbeta.uidai.gov.in/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "home",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/updating-data-on-aadhaar",
+      "capturedAt": "2026-10-27T05:44:54.222Z",
+      "error": null
+    },
+    "https://myaadhaar.uidai.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://myaadhaar.uidai.gov.in/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "home",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/updating-data-on-aadhaar",
+      "capturedAt": "2026-10-27T05:45:04.700Z",
+      "error": null
+    },
+    "https://appointments.uidai.gov.in/easearch.aspx": {
+      "slug": "easearch.aspx",
+      "finalUrl": null,
+      "httpStatus": null,
+      "crawlStatus": "failed",
+      "pageType": null,
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/updating-data-on-aadhaar",
+      "capturedAt": null,
+      "error": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://appointments.uidai.gov.in/easearch.aspx"
+    },
+    "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_annual-reports__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "statistics",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:47:27.668Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_handbooks__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:47:35.919Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_enrolment-and-updates__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "registration",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:47:43.807Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_legal__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:47:50.966Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_announcements__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:47:58.299Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_circulars__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:48:06.138Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_notifications__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:48:14.488Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_policies__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:48:22.167Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_internship-policy__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "policy",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:48:29.313Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_compendium__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:48:36.393Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_year-calendar__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:48:43.547Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents": {
+      "slug": "en_tenders__08cb8b19",
+      "finalUrl": "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/documents",
+      "capturedAt": "2026-10-27T05:48:51.709Z",
+      "error": null
+    },
+    "https://uidai.gov.in/en/circulars-notifications-official-memorandums": {
+      "slug": "en_circulars-notifications-official-memorandums",
+      "finalUrl": "https://uidai.gov.in/en/circulars-notifications-official-memorandums",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://uidai.gov.in/en/circulars",
+      "capturedAt": "2026-10-27T05:48:59.166Z",
+      "error": null
+    }
+  },
+  "pending": [
+    "https://uidai.gov.in/en/circulars?limit=10&page=0",
+    "https://uidai.gov.in/en/circulars?limit=10&page=1",
+    "https://uidai.gov.in/en/circulars?limit=10&page=2",
+    "https://uidai.gov.in/en/circulars?limit=10&page=3",
+    "https://uidai.gov.in/en/build-with-us",
+    "https://uidai.gov.in/hi/website-help?section=screen-reader",
+    "https://career.uidai.gov.in/hi/login",
+    "https://career.uidai.gov.in/hi/opportunities",
+    "https://career.uidai.gov.in/hi/opportunities?type=DEPUTATION",
+    "https://ovse.uidai.gov.in/",
+    "https://uidai.gov.in/my-aadhaar",
+    "https://bookappointment.uidai.gov.in/",
+    "https://myaadhaar.uidai.gov.in/genricDownloadAadhaar",
+    "https://myaadhaarbeta.uidai.gov.in/checkStatus/en",
+    "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID/en",
+    "https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en",
+    "https://tathya.uidai.gov.in/access/login?role=resident",
+    "https://myaadhaarbeta.uidai.gov.in/lock-unlock-aadhaar/en",
+    "https://uidai.gov.in/enrolment-and-updates",
+    "https://uidai.gov.in/understand-your-aadhaar",
+    "https://uidai.gov.in/about-aadhaar",
+    "https://uidai.gov.in/features-of-aadhaar",
+    "https://uidai.gov.in/usage-of-aadhaar",
+    "https://uidai.gov.in/aadhaar-enrolment",
+    "https://uidai.gov.in/aadhaar-generation",
+    "https://uidai.gov.in/updating-data-on-aadhaar",
+    "https://uidai.gov.in/who-we-are",
+    "https://uidai.gov.in/people-at-uidai",
+    "https://uidai.gov.in/our-offices",
+    "https://uidai.gov.in/vision-and-mission",
+    "https://uidai.gov.in/departments",
+    "https://uidai.gov.in/composition-of-uidai-authority",
+    "https://uidai.gov.in/officers-served-in-past",
+    "https://uidai.gov.in/head-office",
+    "https://uidai.gov.in/regional-offices",
+    "https://uidai.gov.in/uidai-regional-office-bengaluru",
+    "https://uidai.gov.in/uidai-regional-office-chandigarh",
+    "https://uidai.gov.in/uidai-regional-office-guwahati",
+    "https://uidai.gov.in/uidai-regional-office-hyderabad",
+    "https://uidai.gov.in/uidai-regional-office-lucknow",
+    "https://uidai.gov.in/uidai-regional-office-mumbai",
+    "https://uidai.gov.in/uidai-regional-office-new-delhi",
+    "https://uidai.gov.in/uidai-regional-office-ranchi",
+    "https://uidai.gov.in/technology-centre",
+    "https://uidai.gov.in/state-offices",
+    "https://uidai.gov.in/transparency-accountability",
+    "https://uidai.gov.in/circulars-notifications-official-memorandums",
+    "https://uidai.gov.in/legal-framework",
+    "https://uidai.gov.in/right-to-information",
+    "https://uidai.gov.in/annual-reports",
+    "https://uidai.gov.in/budget",
+    "https://uidai.gov.in/parliament-questions",
+    "https://uidai.gov.in/policies",
+    "https://uidai.gov.in/circulars",
+    "https://uidai.gov.in/notifications",
+    "https://uidai.gov.in/official-memorandums",
+    "https://uidai.gov.in/acts",
+    "https://uidai.gov.in/regulations",
+    "https://uidai.gov.in/gazetted-notifications",
+    "https://uidai.gov.in/updated-regulations",
+    "https://uidai.gov.in/rules",
+    "https://uidai.gov.in/judgements",
+    "https://uidai.gov.in/enrolment-partners",
+    "https://uidai.gov.in/authentication-partners",
+    "https://uidai.gov.in/authentication-devices",
+    "https://uidai.gov.in/ovse",
+    "https://uidai.gov.in/registrars",
+    "https://uidai.gov.in/enrolment-agencies",
+    "https://uidai.gov.in/aadhaar-seva-kendra",
+    "https://uidai.gov.in/enrolment-documents",
+    "https://uidai.gov.in/terms-of-engagement",
+    "https://uidai.gov.in/training-testing-and-certification",
+    "https://uidai.gov.in/training-testing-and-certification-documents",
+    "https://uidai.gov.in/about-authentication",
+    "https://uidai.gov.in/operational-model",
+    "https://uidai.gov.in/authentication-requesting-agency",
+    "https://uidai.gov.in/authentication-service-agencies",
+    "https://uidai.gov.in/authentication-documents",
+    "https://uidai.gov.in/aadhaar-paperless-offline-e-kyc",
+    "https://uidai.gov.in/about-authentication-devices",
+    "https://uidai.gov.in/biometric-devices",
+    "https://uidai.gov.in/qr-code-reader",
+    "https://uidai.gov.in/sitaa",
+    "https://uidai.gov.in/developer-section",
+    "https://uidai.gov.in/tenders",
+    "https://uidai.gov.in/tutorial",
+    "https://uidai.gov.in/data-and-download",
+    "https://uidai.gov.in/discussion-forum",
+    "https://uidai.gov.in/news-and-updates",
+    "https://uidai.gov.in/gallery",
+    "https://uidai.gov.in/brand-resources",
+    "https://uidai.gov.in/press-releases",
+    "https://uidai.gov.in/aadhaar-in-print",
+    "https://uidai.gov.in/aadhaar-in-media",
+    "https://uidai.gov.in/aadhaar-in-global-words",
+    "https://uidai.gov.in/photos",
+    "https://uidai.gov.in/videos",
+    "https://uidai.gov.in/advertisements",
+    "https://uidai.gov.in/iec",
+    "https://uidai.gov.in/aadhaar-logo",
+    "https://uidai.gov.in/handbooks",
+    "https://uidai.gov.in/internship-policy",
+    "https://uidai.gov.in/internal-policies",
+    "https://uidai.gov.in/compendium",
+    "https://uidai.gov.in/year-calendar",
+    "https://uidai.gov.in/announcements",
+    "https://uidai.gov.in/archives",
+    "https://uidai.gov.in/resources",
+    "https://uidai.gov.in/faq",
+    "https://uidai.gov.in/grievance-feedback",
+    "https://uidai.gov.in/glossary",
+    "https://uidai.gov.in/aadhaar-mythbusters",
+    "https://uidai.gov.in/how-to-videos",
+    "https://uidai.gov.in/aadhaar-app-faq",
+    "https://uidai.gov.in/ovse-faq",
+    "https://uidai.gov.in/your-aadhaar",
+    "https://uidai.gov.in/authentication",
+    "https://uidai.gov.in/direct-benefit-transfer",
+    "https://uidai.gov.in/enrolment-and-update",
+    "https://uidai.gov.in/crm-division",
+    "https://uidai.gov.in/aadhaar-online-services",
+    "https://myaadhaar.uidai.gov.in/grievance-feedback/en",
+    "https://myaadhaar.uidai.gov.in/grievance-feedback-status/en",
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=6",
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=10",
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=7",
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=8",
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=9",
+    "https://uidai.gov.in/en/how-to-videos?limit=8&page=12",
+    "https://uidai.gov.in/hi",
+    "https://uidai.gov.in/hi/about-uidai",
+    "https://uidai.gov.in/hi/aadhaar-dashboard",
+    "https://uidai.gov.in/hi/vision-and-mission",
+    "https://uidai.gov.in/hi/annual-reports",
+    "https://uidai.gov.in/hi/updating-data-on-aadhaar",
+    "https://uidai.gov.in/hi/documents",
+    "https://uidai.gov.in/hi/enrolment-and-updates",
+    "https://uidai.gov.in/hi/handbooks",
+    "https://uidai.gov.in/hi/circulars",
+    "https://uidai.gov.in/hi/policies",
+    "https://uidai.gov.in/hi/developer-section",
+    "https://uidai.gov.in/hi/ovse",
+    "https://uidai.gov.in/hi/site-map",
+    "https://uidai.gov.in/hi/website-policies",
+    "https://uidai.gov.in/hi/website-help",
+    "https://uidai.gov.in/en/my-aadhaar/downloads/enrolment-and-update-forms.html",
+    "https://uidai.gov.in/my-aadhaar/about-your-aadhaar/updating-data-on-aadhaar.html",
+    "https://uidai.gov.in/en/announcements",
+    "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=3&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/notifications",
+    "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/internship-policy",
+    "https://uidai.gov.in/en/compendium",
+    "https://uidai.gov.in/en/year-calendar",
+    "https://uidai.gov.in/en/tenders",
+    "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+    "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents"
+  ],
+  "aliases": [
+    {
+      "url": "https://career.uidai.gov.in/hi",
+      "sameAs": "https://career.uidai.gov.in/",
+      "basis": "alias key matched a captured page",
+      "via": "https://career.uidai.gov.in/"
+    },
+    {
+      "url": "https://uidai.gov.in/",
+      "landedOn": "https://uidai.gov.in/en",
+      "sameAs": "https://uidai.gov.in/en",
+      "basis": "identical title, text and form shape after navigation",
+      "via": "https://myaadhaarbeta.uidai.gov.in/genricDownloadAadhaar/en"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+      "sameAs": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard",
+      "basis": "alias key matched a captured page",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+      "sameAs": "https://uidai.gov.in/aadhaar-dashboard/authentication-dashboard",
+      "basis": "alias key matched a captured page",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/authentication-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+      "sameAs": "https://uidai.gov.in/aadhaar-dashboard/updates-dashboard",
+      "basis": "alias key matched a captured page",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/updates-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+      "sameAs": "https://uidai.gov.in/aadhaar-dashboard/ekyc",
+      "basis": "alias key matched a captured page",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/ekyc"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+      "sameAs": "https://uidai.gov.in/aadhaar-dashboard/registered-devices",
+      "basis": "alias key matched a captured page",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/registered-devices"
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://backend.uidai.gov.in/get/files/media/document/2026-05/Citizen_Charter_Jan24.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://uidai.gov.in/en"
+    },
+    {
+      "url": "https://backend.uidai.gov.in/get/files/media/document/2026-05/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://uidai.gov.in/en/updating-data-on-aadhaar"
+    },
+    {
+      "url": "https://backend.uidai.gov.in/get/files/media/document/2026-06/Regulation.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://uidai.gov.in/en/ovse"
+    },
+    {
+      "url": "https://uidai.gov.in/images/Aadhaar_Enrolment__and__Update__-__English.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://myaadhaar.uidai.gov.in/"
+    },
+    {
+      "url": "https://uidai.gov.in/images/commdoc/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update.pdf",
+      "reason": "non-HTML resource (collected as an asset instead)",
+      "via": "https://myaadhaar.uidai.gov.in/"
+    },
+    {
+      "url": "https://uidai.gov.in/en/circulars?limit=10&page=0",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/circulars"
+    },
+    {
+      "url": "https://uidai.gov.in/en/circulars?limit=10&page=1",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/circulars"
+    },
+    {
+      "url": "https://uidai.gov.in/en/circulars?limit=10&page=2",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/circulars"
+    },
+    {
+      "url": "https://uidai.gov.in/en/circulars?limit=10&page=3",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/circulars"
+    },
+    {
+      "url": "https://uidai.gov.in/en/build-with-us",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/developer-section"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/website-help?section=screen-reader",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://career.uidai.gov.in/"
+    },
+    {
+      "url": "https://career.uidai.gov.in/hi/login",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://career.uidai.gov.in/"
+    },
+    {
+      "url": "https://career.uidai.gov.in/hi/opportunities",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://career.uidai.gov.in/"
+    },
+    {
+      "url": "https://career.uidai.gov.in/hi/opportunities?type=DEPUTATION",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://career.uidai.gov.in/"
+    },
+    {
+      "url": "https://ovse.uidai.gov.in/",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/ovse"
+    },
+    {
+      "url": "https://uidai.gov.in/my-aadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://bookappointment.uidai.gov.in/",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://myaadhaar.uidai.gov.in/genricDownloadAadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://myaadhaarbeta.uidai.gov.in/checkStatus/en",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID/en",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://tathya.uidai.gov.in/access/login?role=resident",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://myaadhaarbeta.uidai.gov.in/lock-unlock-aadhaar/en",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/enrolment-and-updates",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/understand-your-aadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/about-aadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/features-of-aadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/usage-of-aadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-enrolment",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-generation",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/updating-data-on-aadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/who-we-are",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/people-at-uidai",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/our-offices",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/vision-and-mission",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/departments",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/composition-of-uidai-authority",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/officers-served-in-past",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/head-office",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/regional-offices",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/uidai-regional-office-bengaluru",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/uidai-regional-office-chandigarh",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/uidai-regional-office-guwahati",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/uidai-regional-office-hyderabad",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/uidai-regional-office-lucknow",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/uidai-regional-office-mumbai",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/uidai-regional-office-new-delhi",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/uidai-regional-office-ranchi",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/technology-centre",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/state-offices",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/transparency-accountability",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/circulars-notifications-official-memorandums",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/legal-framework",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/right-to-information",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/annual-reports",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/budget",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/parliament-questions",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/policies",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/circulars",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/notifications",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/official-memorandums",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/acts",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/regulations",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/gazetted-notifications",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/updated-regulations",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/rules",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/judgements",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/enrolment-partners",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/authentication-partners",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/authentication-devices",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/ovse",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/registrars",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/enrolment-agencies",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-seva-kendra",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/enrolment-documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/terms-of-engagement",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/training-testing-and-certification",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/training-testing-and-certification-documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/about-authentication",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/operational-model",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/authentication-requesting-agency",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/authentication-service-agencies",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/authentication-documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-paperless-offline-e-kyc",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/about-authentication-devices",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/biometric-devices",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/qr-code-reader",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/sitaa",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/developer-section",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/tenders",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/tutorial",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/data-and-download",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/discussion-forum",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/news-and-updates",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/gallery",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/brand-resources",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/press-releases",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-in-print",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-in-media",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-in-global-words",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/photos",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/videos",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/advertisements",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/iec",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-logo",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/handbooks",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/internship-policy",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/internal-policies",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/compendium",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/year-calendar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/announcements",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/archives",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/resources",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/faq",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/grievance-feedback",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/glossary",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-mythbusters",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/how-to-videos",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-app-faq",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/ovse-faq",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/your-aadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/authentication",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/direct-benefit-transfer",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/enrolment-and-update",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/crm-division",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/aadhaar-online-services",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://myaadhaar.uidai.gov.in/grievance-feedback/en",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://myaadhaar.uidai.gov.in/grievance-feedback-status/en",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/site-map"
+    },
+    {
+      "url": "https://uidai.gov.in/en/how-to-videos?limit=8&page=6",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/how-to-videos?limit=8&page=5"
+    },
+    {
+      "url": "https://uidai.gov.in/en/how-to-videos?limit=8&page=10",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/how-to-videos?limit=8&page=11"
+    },
+    {
+      "url": "https://uidai.gov.in/en/how-to-videos?limit=8&page=7",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/how-to-videos?limit=8&page=11"
+    },
+    {
+      "url": "https://uidai.gov.in/en/how-to-videos?limit=8&page=8",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/how-to-videos?limit=8&page=11"
+    },
+    {
+      "url": "https://uidai.gov.in/en/how-to-videos?limit=8&page=9",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/how-to-videos?limit=8&page=11"
+    },
+    {
+      "url": "https://uidai.gov.in/en/how-to-videos?limit=8&page=12",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/how-to-videos?limit=8&page=11"
+    },
+    {
+      "url": "https://uidai.gov.in/hi",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/about-uidai",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/aadhaar-dashboard",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/vision-and-mission",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/annual-reports",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/updating-data-on-aadhaar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/enrolment-and-updates",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/handbooks",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/circulars",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/policies",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/developer-section",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/ovse",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/site-map",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/website-policies",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/hi/website-help",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+    },
+    {
+      "url": "https://uidai.gov.in/en/my-aadhaar/downloads/enrolment-and-update-forms.html",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://myaadhaar.uidai.gov.in/"
+    },
+    {
+      "url": "https://uidai.gov.in/my-aadhaar/about-your-aadhaar/updating-data-on-aadhaar.html",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://myaadhaar.uidai.gov.in/"
+    },
+    {
+      "url": "https://uidai.gov.in/en/announcements",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/circulars?isFilter=false&limit=10&page=3&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/notifications",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/notifications?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/internship-policy",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/compendium",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/year-calendar",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/tenders",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=0&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=1&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents"
+    },
+    {
+      "url": "https://uidai.gov.in/en/tenders?isFilter=false&limit=10&page=2&source=documents&sourceTitle=Documents",
+      "reason": "queued but not reached (maxPages=60)",
+      "via": "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents"
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://appointments.uidai.gov.in/easearch.aspx",
+      "stage": "navigate",
+      "error": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://appointments.uidai.gov.in/easearch.aspx",
+      "attempts": 3
+    }
+  ],
+  "limitHit": "maxPages=60",
+  "exhaustedQueue": false,
+  "durationMs": 754661,
+  "resumeHint": "Re-running the pipeline on the same domain reuses every page in `visited` whose metadata file still exists under reference_pages/page_metadata/, and re-queues everything in `pending`. Delete this file to force a full re-crawl."
+}

@@ -1,0 +1,41 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section">
+  <h1 class="section__title">About this replica</h1>
+  <div class="prose">
+    <div class="panel"><p style="margin:0"><strong>Unofficial local demonstration.</strong>
+    This is an independent reimplementation of the public pages of
+    <code><%= site.hostname %></code>, for authorized development, testing and
+    educational use. It is not affiliated with, endorsed by, or operated by any
+    government body, and it holds no real data.</p></div>
+
+    <h3>What was analysed</h3>
+    <ul>
+      <li>Target: <code><%= site.finalUrl %></code></li>
+      <li>Category: <code><%= site.category %></code> (<%= site.categoryStatus %>, <%= site.categoryConfidence %> confidence)</li>
+      <li><%= site.pagesCaptured %> page(s) captured on <%= site.analysedOn %></li>
+      <li><%= site.formCount %> form(s), <%= site.fieldCount %> functional field(s)</li>
+      <li><%= site.assetCount %> asset(s) downloaded</li>
+    </ul>
+
+    <h3>How it was built</h3>
+    <ul>
+      <li>Only publicly accessible pages were retrieved, by following the site's own links.</li>
+      <li><strong>No form was submitted to the original.</strong> No account was created, no
+      CAPTCHA was solved or bypassed, no authentication was attempted.</li>
+      <li>No endpoint was enumerated, fuzzed or probed. No credential, session token or
+      cookie was recorded.</li>
+      <li>Requests were made one at a time with a delay, so the original was never loaded.</li>
+      <li>TLS certificate verification was enabled for every request.</li>
+    </ul>
+
+    <h3>What it does not reproduce</h3>
+    <p>See <a href="/__gaps">what is not reproduced</a> for the full, deliberate record.</p>
+
+    <h3>Data handling</h3>
+    <p>Anything typed into these forms is written to a local SQLite file and nowhere else.
+    There is no access control and no encryption at rest. <strong>Do not enter anyone's real
+    personal data.</strong></p>
+  </div>
+</section></div></main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,373 @@
+{
+  "generatedAt": "2026-10-27T06:22:44.819Z",
+  "category": "E_Courts",
+  "confidence": "high",
+  "status": "confirmed",
+  "decidedBy": "page content, strongest in page title",
+  "wouldHoldWithoutHostname": true,
+  "governmentHost": true,
+  "method": "Terms are scored by the zone they appear in, not by raw frequency: page title x30, headings x12, navigation labels x10, meta description/keywords x8, body text x1. Repetition is damped so breadth of evidence beats one repeated phrase, and a category must have at least one defining term outside body text to win -- a footer address must not decide what a site is for.",
+  "thresholds": {
+    "CONFIDENT_SCORE": 40,
+    "CONFIDENT_MARGIN": 1.35,
+    "STRONG": 1,
+    "WEAK": 0.18,
+    "HOST_WEIGHT": 10
+  },
+  "zoneWeights": {
+    "title": 30,
+    "headings": 12,
+    "navLabels": 10,
+    "meta": 8,
+    "body": 1
+  },
+  "ranking": [
+    {
+      "dir": "E_Courts",
+      "label": "eCourts, case status, court listings, cause lists, orders, judgments and court services",
+      "contentScore": 171.31,
+      "hostScore": 10,
+      "score": 181.31,
+      "hasProminentStrongTerm": true,
+      "hits": {
+        "strong": [
+          {
+            "term": "ecourts",
+            "weight": 79.85,
+            "where": [
+              {
+                "zone": "title",
+                "occurrences": 3,
+                "weight": 44.31
+              },
+              {
+                "zone": "headings",
+                "occurrences": 3,
+                "weight": 17.73
+              },
+              {
+                "zone": "meta",
+                "occurrences": 9,
+                "weight": 15.63
+              },
+              {
+                "zone": "body",
+                "occurrences": 15,
+                "weight": 2.18
+              }
+            ]
+          },
+          {
+            "term": "e-courts",
+            "weight": 13.3,
+            "where": [
+              {
+                "zone": "headings",
+                "occurrences": 1,
+                "weight": 12
+              },
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 1.3
+              }
+            ]
+          },
+          {
+            "term": "cause list",
+            "weight": 15.23,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 6,
+                "weight": 14.23
+              },
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          },
+          {
+            "term": "case status",
+            "weight": 15.23,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 6,
+                "weight": 14.23
+              },
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          },
+          {
+            "term": "cnr number",
+            "weight": 1.3,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 1.3
+              }
+            ]
+          },
+          {
+            "term": "e-committee",
+            "weight": 20.3,
+            "where": [
+              {
+                "zone": "navLabels",
+                "occurrences": 7,
+                "weight": 18.45
+              },
+              {
+                "zone": "body",
+                "occurrences": 7,
+                "weight": 1.85
+              }
+            ]
+          },
+          {
+            "term": "district and taluka court",
+            "weight": 1.6,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 4,
+                "weight": 1.6
+              }
+            ]
+          },
+          {
+            "term": "judgment",
+            "weight": 1.7,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 5,
+                "weight": 1.7
+              }
+            ]
+          }
+        ],
+        "weak": [
+          {
+            "term": "court",
+            "weight": 19.46,
+            "where": [
+              {
+                "zone": "title",
+                "occurrences": 3,
+                "weight": 7.98
+              },
+              {
+                "zone": "headings",
+                "occurrences": 4,
+                "weight": 3.46
+              },
+              {
+                "zone": "navLabels",
+                "occurrences": 15,
+                "weight": 3.92
+              },
+              {
+                "zone": "meta",
+                "occurrences": 30,
+                "weight": 3.57
+              },
+              {
+                "zone": "body",
+                "occurrences": 93,
+                "weight": 0.53
+              }
+            ]
+          },
+          {
+            "term": "judiciary",
+            "weight": 2.83,
+            "where": [
+              {
+                "zone": "meta",
+                "occurrences": 6,
+                "weight": 2.56
+              },
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 0.27
+              }
+            ]
+          },
+          {
+            "term": "litigant",
+            "weight": 0.27,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 0.27
+              }
+            ]
+          },
+          {
+            "term": "advocate",
+            "weight": 0.27,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 0.27
+              }
+            ]
+          }
+        ],
+        "host": [
+          {
+            "hint": "ecourts",
+            "weight": 10
+          }
+        ]
+      }
+    },
+    {
+      "dir": "E_Prisons",
+      "label": "ePrisons, prison/jail administration, inmate management, visitor services and related portals",
+      "contentScore": 2.18,
+      "hostScore": 0,
+      "score": 2.18,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [
+          {
+            "term": "jail",
+            "weight": 1,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          },
+          {
+            "term": "prisoner",
+            "weight": 1,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          }
+        ],
+        "weak": [
+          {
+            "term": "prison",
+            "weight": 0.18,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 0.18
+              }
+            ]
+          }
+        ],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Forensics",
+      "label": "Government forensic services, forensic laboratories, forensic case management and evidence workflows",
+      "contentScore": 0.18,
+      "hostScore": 0,
+      "score": 0.18,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [
+          {
+            "term": "evidence",
+            "weight": 0.18,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 0.18
+              }
+            ]
+          }
+        ],
+        "host": []
+      }
+    },
+    {
+      "dir": "Aadhaar",
+      "label": "Aadhaar/UIDAI identity services, enrolment, updates and related official services",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    },
+    {
+      "dir": "CCTNS",
+      "label": "Crime and Criminal Tracking Network & Systems, police crime-record workflows and related portals",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hasProminentStrongTerm": false,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    }
+  ],
+  "pagesConsidered": 4,
+  "samplesUsed": [
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0/",
+      "title": "Homepage | eCourts Single Sign-On",
+      "headingCount": 19,
+      "navLabelCount": 12,
+      "textLength": 1941,
+      "error": null
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0/#main-content",
+      "title": "Homepage | eCourts Single Sign-On",
+      "headingCount": 19,
+      "navLabelCount": 12,
+      "textLength": 1941,
+      "error": null
+    },
+    {
+      "url": "https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+      "title": "Homepage | eCourts Single Sign-On",
+      "headingCount": 7,
+      "navLabelCount": 16,
+      "textLength": 8195,
+      "error": null
+    },
+    {
+      "url": "https://njdg.ecourts.gov.in/njdg_v3/",
+      "title": "NJDG-National Judicial Data Grid",
+      "headingCount": 6,
+      "navLabelCount": 28,
+      "textLength": 2140,
+      "error": null
+    }
+  ],
+  "note": "Classification is driven by page content. `wouldHoldWithoutHostname` records whether the same verdict is reached from content alone, with the hostname bonus removed."
+}

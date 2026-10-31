@@ -1,0 +1,834 @@
+{
+  "generatedAt": "2026-10-27T07:01:32.749Z",
+  "referenced": 45,
+  "downloaded": 44,
+  "failed": 0,
+  "skippedExternal": 1,
+  "capturedFromPageRender": 44,
+  "unavailableByDesign": 0,
+  "byteIdenticalDuplicates": 0,
+  "totalBytes": 2634637,
+  "byCategory": {
+    "images": 15,
+    "icons": 0,
+    "fonts": 0,
+    "stylesheets": 16,
+    "scripts": 13,
+    "documents": 0
+  },
+  "licensingNote": "Asset reuse is limited. Government of India websites generally reserve copyright in their content and emblems; the National Emblem and official seals are additionally protected by the State Emblem of India (Prohibition of Improper Use) Act, 2005. Assets are retained here as analysis evidence for an internal, clearly-labelled demonstration. The replica substitutes a neutral placeholder mark for official emblems and logos so it cannot be mistaken for an official service.",
+  "method": "Only assets referenced by a captured page were collected, and no URL was guessed or enumerated. Where the browser already received a file while rendering the page, that copy is kept rather than asking the server for it again: it halves the requests made to the target, and some servers answer a standalone asset request with 405 while serving the same file to the page that needs it. Anything not seen during a render was requested separately, with certificate verification enabled.",
+  "assets": [
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/logo.png",
+      "localPath": "original_assets/images/logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 16360,
+      "sha256": "96314935ff15c84c07fc3ad112fbdd0ba707586b04eb606356c38a5f09f4f09a",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/Banner.png",
+      "localPath": "original_assets/images/Banner.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 111603,
+      "sha256": "0e4e7cd39a69a22ad856b83a09ea86181c33a4a92b2cf9761989b3e4b7047242",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/key-feature1.png",
+      "localPath": "original_assets/images/key-feature1.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 5749,
+      "sha256": "50785b46342e353631405383f820638580c25ae680f03b802120843077da26f6",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/key-feature2.png",
+      "localPath": "original_assets/images/key-feature2.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 4763,
+      "sha256": "62f0cd4f4f9dbdb51ff2769ef307ffa323fe9a9448e1573198663d7c676bf70f",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/key-feature3.png",
+      "localPath": "original_assets/images/key-feature3.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 2633,
+      "sha256": "3f7725ffedb9036f9d34de3c45a59a2f44b7bb36d924dc3fcb91941f33f6540f",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/Login.png",
+      "localPath": "original_assets/images/Login.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 6020,
+      "sha256": "2e0a48428a51a573fd6d0cf42b4819d67baaceba0c78e6b7b8f4f6729e9693b0",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/Registration.png",
+      "localPath": "original_assets/images/Registration.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 6846,
+      "sha256": "286dc6f5684fb66b44bcbd3119f4e972af2a792df230cb2cd22323f87d3bc460",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/Report-Submission.png",
+      "localPath": "original_assets/images/Report-Submission.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 3380,
+      "sha256": "eaa900e89477647cd36e23279bd5a7c6626ac39ea49d532ae8e8bd701a696752",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/Analyze-Track.png",
+      "localPath": "original_assets/images/Analyze-Track.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 4451,
+      "sha256": "6e02ae0bac518fc2579777e74ad9b8fbc0ac8280d6a50865117901c8c6d911e2",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/Monitor-via-Dashboard.png",
+      "localPath": "original_assets/images/Monitor-via-Dashboard.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 2676,
+      "sha256": "711d9e5a8ca4de4a81b0f58d5aec5d05d473ab0ac0886c9f12f7c93e6f8827a9",
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/phone.png",
+      "localPath": "original_assets/images/phone.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 548,
+      "sha256": "4796600bc819a7e0058633f1a2e56d7047604db574d172cfd13896b0ca5b0687",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/email.png",
+      "localPath": "original_assets/images/email.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 515,
+      "sha256": "c9b1d000aca145640c35f6e25e2257de9e6a5fcd4397a34976ed8c0b05f368b0",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/location.png",
+      "localPath": "original_assets/images/location.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 562,
+      "sha256": "d0ab50f58357ee7146de66bdda2ffa938ac1b18b19c13d7416d89e7e7d06f03b",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/images/Home/nic_logo.png",
+      "localPath": "original_assets/images/nic_logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 5690,
+      "sha256": "35693c61d3708868f1449b25a70bad1689c93e8573008deb91ddb1465ff7a9ad",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/lib/font-awesome/css/all.min.css",
+      "localPath": "original_assets/stylesheets/all.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 57182,
+      "sha256": "e3aaf4eb43762eb0a12cb6f9ce8c1743bdbf88a28d8b0fe5026ca098713193fa",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/bootstrap.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 232948,
+      "sha256": "3017df4a76db5f01c2b99b603d88b03106df13bcfe18e67b7c13c2341d3a67df",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/DataTables/css/dataTables.bootstrap4.min.css",
+      "localPath": "original_assets/stylesheets/dataTables.bootstrap4.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 11522,
+      "sha256": "5e212a4fa88528461b3a9057ec44bb085d3666192c85b63ab4903d0408e8d922",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/DataTables/css/buttons.dataTables.min.css",
+      "localPath": "original_assets/stylesheets/buttons.dataTables.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 9160,
+      "sha256": "d5086a5a45fefdad773ef7071aed5e7fa729cc1d9f4c2d4041228ed7f08d97ba",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/DataTables/css/jquery.dataTables.min.css",
+      "localPath": "original_assets/stylesheets/jquery.dataTables.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 22711,
+      "sha256": "77fd7ddf331cc99530aee0a5bab4e401737f839aea6b06b66fdf9ccdc245aa36",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/lib/search-panes/css/searchPanes.bootstrap4.min.css",
+      "localPath": "original_assets/stylesheets/searchPanes.bootstrap4.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 8417,
+      "sha256": "37e9ba791eb75f49bf0dc86c020bc00673d6f388fd270404f60857c4762ebd89",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/lib/search-panes/css/select.bootstrap4.min.css",
+      "localPath": "original_assets/stylesheets/select.bootstrap4.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 4895,
+      "sha256": "b51b89d87609f276172023930e66e669742522986c76ac3ee3f79aee5395cba3",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/css/responsive.css",
+      "localPath": "original_assets/stylesheets/responsive.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 116080,
+      "sha256": "9e07f681f0f2fb2c248561c9f6004d9187607648cd098110df57efd1af8ba73f",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/OwlCarousel2/assets/owl.carousel.min.css",
+      "localPath": "original_assets/stylesheets/owl.carousel.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 3351,
+      "sha256": "521410e1fc44780061e09adc980275fb5ea277fd5d9e538454214ec4379ff4bc",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/OwlCarousel2/assets/owl.theme.default.min.css",
+      "localPath": "original_assets/stylesheets/owl.theme.default.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 1013,
+      "sha256": "924b0dc630d1c5dff9fa31aead9509775b1d476bfe0a5ac2977b2f11205a26ac",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/css/Fonts.css",
+      "localPath": "original_assets/stylesheets/Fonts.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 16081,
+      "sha256": "48bba8c3554e67e59c1bd585c6f7996a7e508ea1f9a482c18021813491dca11d",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/css/Homestyle.css",
+      "localPath": "original_assets/stylesheets/Homestyle.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 9199,
+      "sha256": "71f2a594744761b5a528baffe62c1b0692d81d6481ee76db02ca565c3aaa2755",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/jquery-3.7.1.js",
+      "localPath": "original_assets/scripts/jquery-3.7.1.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 285314,
+      "sha256": "78a85aca2f0b110c29e0d2b137e09f0a1fb7a8e554b499f740d6744dc8962cfe",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/js/JavaScript.js",
+      "localPath": "original_assets/scripts/JavaScript.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 923,
+      "sha256": "306a9b6efe36a8c18da1a62acc4f0d057d634d712d1fd30244b82a95a4de6ce8",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/DataTables/dataTables.buttons.min.js",
+      "localPath": "original_assets/scripts/dataTables.buttons.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 25574,
+      "sha256": "a78080674bed087eeea2ecc95e9b8fc7b500ab54a5d50ef1c9878b81d7bb0b3f",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/DataTables/buttons.colVis.min.js",
+      "localPath": "original_assets/scripts/buttons.colVis.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 3340,
+      "sha256": "1b889dace9424dfd04fd949f32179ffba0762be459918514c3698a7663f82c11",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/DataTables/buttons.html5.min.js",
+      "localPath": "original_assets/scripts/buttons.html5.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 25207,
+      "sha256": "29df100ccf63a859a977447e2a43ec1885a5f8d06d1bb88a9523579954463ecb",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/DataTables/jszip.min.js",
+      "localPath": "original_assets/scripts/jszip.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 97630,
+      "sha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/DataTables/jquery.dataTables.min.js",
+      "localPath": "original_assets/scripts/jquery.dataTables.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 87276,
+      "sha256": "a59463219152c6bcf853b9f9592733616c84e618d8f84f5066e170458b252014",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/jquery-3.7.1.min.js",
+      "localPath": "original_assets/scripts/jquery-3.7.1.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 87533,
+      "sha256": "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/bootstrap.bundle.min.js",
+      "localPath": "original_assets/scripts/bootstrap.bundle.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 80663,
+      "sha256": "82f64f62bb03c1bc1824b0f9c9e05f70dba33e146818e63cdf5c306c8cf3dedd",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/lib/font-awesome/js/all.min.js",
+      "localPath": "original_assets/scripts/all.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 1144189,
+      "sha256": "f90ff3fea54e7b10725b55a9bfcd654cbbe7b67650558a6920bd6505d86d22ad",
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2",
+      "localPath": null,
+      "category": "fonts",
+      "mimeType": "font/woff2",
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": true,
+      "downloadStatus": "skipped",
+      "error": null,
+      "notes": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline."
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/css/ColumnVisibility.css",
+      "localPath": "original_assets/stylesheets/ColumnVisibility.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 3044,
+      "sha256": "a53bd62d1eefc5e039b7bbf4857fd59e34e0e9125ad0cb9fd2bfb42741567cc4",
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/css/sweetalert.css",
+      "localPath": "original_assets/stylesheets/sweetalert.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 22879,
+      "sha256": "93ae81483be2e9705db4cd911fa410bc2cf6c24f355dc5ac899de49fab854e63",
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/css/TableStyle.css",
+      "localPath": "original_assets/stylesheets/TableStyle.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 4138,
+      "sha256": "c4df55913730a8e4803dbd87a12d06be23281944d25d2f1d40b856a7248f23b9",
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/js/sweetalert.min.js",
+      "localPath": "original_assets/scripts/sweetalert.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 46299,
+      "sha256": "758b433d4d49968a46c9e8c5655701007f8afd22144a1f86914daf28d8edeac2",
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Login/GetCaptchaImage",
+      "localPath": "original_assets/images/GetCaptchaImage",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 815,
+      "sha256": "2e0644508d79f288dbcb5ac3d37b2c279b6cbae22ec5d8431ec1558abd0c1892",
+      "usedOnPages": [
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Content/css/style1.css",
+      "localPath": "original_assets/stylesheets/style1.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 44137,
+      "sha256": "1bc0ebb88fe9d68258d358d46a3dd841cf2a1032d0c3286ada1880af10326a58",
+      "usedOnPages": [
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/sha512.js",
+      "localPath": "original_assets/scripts/sha512.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 10201,
+      "sha256": "d716b1717864b34004f77c3d7e03c344815cb3fbdb095e24d7bf91765c39333b",
+      "usedOnPages": [
+        "https://eforensics.gov.in/Login"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    },
+    {
+      "originalUrl": "https://eforensics.gov.in/Scripts/enc-base64-min.js",
+      "localPath": "original_assets/scripts/enc-base64-min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 1120,
+      "sha256": "ed6fab753e228b28cb8c33c00eca310996a857d26adcad8d241183f84c115d06",
+      "usedOnPages": [
+        "https://eforensics.gov.in/Login"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "captured from the page render"
+    }
+  ]
+}

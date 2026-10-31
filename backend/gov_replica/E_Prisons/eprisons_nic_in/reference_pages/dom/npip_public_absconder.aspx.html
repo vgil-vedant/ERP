@@ -1,0 +1,443 @@
+<!DOCTYPE html><html lang="en" class="h-100" data-bs-theme="auto"><head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description"><meta name="author"><link rel="icon" type="image/png" sizes="16x16" href="../Content/images/favicon-16x16.png"><title>
+	Welcome to National Prison Portal 
+</title>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="../Content/css/custom_style.css" rel="stylesheet" type="text/css"><link href="../Content/css/hover.css" rel="stylesheet" type="text/css">
+    <!-- FontAwesome 4.3.0 -->
+    
+    <!-- Ionicons 2.0.0 -->
+    <link href="../Content/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <!-- Option 1: Include in HTML -->
+     
+    
+    <link href="../Content/css/bootstrap-icons.min.css" rel="stylesheet">   
+    <!-- Custom Fonts -->
+    
+
+    <script src="../Content/js/jquery-min.js"></script>
+    <script src="../Content/js/popper.min.js"></script>
+    <script src="../Content/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="../Content/js/chosen.jquery.js"></script>
+   
+    <link href="../Content/css/chosen.min.css" rel="stylesheet" type="text/css">
+    
+
+ <style>
+     
+
+
+        @media (width: 1024px) {
+               .header_bg .container {
+            position: relative;
+            max-width: 100% !important;
+        }
+            .navbar-brand img {
+                width: 220px
+            }
+
+            .navbar-nav > li > a {
+                font-size: 14px;
+                font-weight: 600;
+                color: #3d4548 !important;
+            }
+        }
+    </style>
+
+</head>
+
+
+  <body class="d-flex flex-column h-100">
+    <form method="post" action="./Absconder" id="frmMaster" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="e0lvIBh7Dv2JWMBK/iib5Y9j++u46xL9S0OInwd/j08K1Wimbm9tiUbBzHQf8ktkmE6TIHdFZIoprofkcKnasywU0U+dGA1rQKkQVObEWnZh26f6QwDT/jIxEgso6OypEBDFEeQLYpDcY3XMY+H84aClusoC6CUeO2DR/yvK1yqqgeqReadtkWIC15zsPN0iO/6OG7WvSSzVNchRtYQvxhMCvx35J/8LGefjSRDUYDj+biY+bBwjsZ4BjFjW0N7bVKzk+MeOpzJVXCW+Dt2sLdsq7NUVO50yHkOgCwFRCW1qTtADlxep/g4jayNt9T7KXoabLy9b5E0p18CwV+buWEtz/fjEUmTnVCwk1qIvjzbEGmZSR7AgGE1KJwygfhvFR/9DSUhqMuRW2HQu21arLtSU8cYeM3P7l2biPIXRXbp1sISmpkOAmpJd+nsW/ng+WaAHP96tYKIl5Pz3HRq83psLtE88T1HsU2/OqIcAUWMoWVi8YFWQUuHKRaWD3uxphXhdBdUH2q4sD2rcICvUJdT2FSnJjXltLLmZhlBSgFVu/SlVvf6zESaGPIev3nD9KTrJ3yXsljV/R46vCpoYVuaGM0sUVK6k3QVl8Lj1LetGdoLCjAHK8xxD0LTrfp/JADVwtAS83FlxEN5OTWpOSlo1751WhRCKk5YYJ4XolkojhbocQhIh+b38FSjdQuUKrgx6xFBz6PIEFnDDGomcBW7G6e+8jsFs/svPdmF3q8NVAB9+m/9AAJXWNkG8LIq5fR/Ho4HcOF9hanqcx9gAifyB+CwG/OR+ucLt1hslEHSk+xtlypeafL7WE7eDQ3BrLGE/EF3bptvnuIe2aOw3D64cJEMOeCqmaG5N/N1bduoakdFzHlVTBxh3F+bKxTF2rlQtgQpZix12atOQ7ewABrcl8DbstMw7b3TxZKDSXhlm1hBWjU/V32KdQKlRVy3ZA22I79fZ8kTJJmxn0Ae6oSuI7f5Hb+K6NhUhTIQDGzmiMcw0on41JAYzYRrASpqSWra9Vo9Hz2t2zmkyn42Yu4wr6cFIwI7gJWP3BISV9XI84nxJZp5gjFNmC+jlSUTIRRDPxN4BvLu3lqtQRE4/HRi9ttFQbdVqcvNRAJi7ZBcdD40c+xyYgdDqm7lEjIi1Bl+SyziyKQ6AbJpbcjz5S47JGfCyeZ/xFXFrBHI32lZtEwHyiOOlB5gM5e+W4DmUoBSi/zyG5iVPxXNw3LAxbUVUc2QYnud6Zes1A5zE8HdSe4RN4s6CSXiiDESsQQAlcnlpWsIhr+YJoAkmsh7yab6/QWFpzlbLwfRIqd7kjfsXQe5ffsthkVR7Z0vR3bdoRPwNP/DwFq2pxDLYEk4h27HyD7Wd7a2ZqOYI06CPu8IFUhzd/210uXNlhS83hK/nkfkR50RQPGoo5An3KR3oMB1ez4DGo2H3o7g2kaKqkN/3IFp/6pPhheKv301lL7AMTK0Qw6sCOiVhBJlwVY2DRyyKNRhxefOb2JUYTkzx0Kd4WGDusOg3C6cca1GealL+lXpWc24Of5Ti3XLfdZeERw7fbrRvJdFsTEKyYC+Rcs7RJUwCDhPmQLpL3taILMV7eQibXNf4p5q3ofdIXVr/UsBp2fVqN1qghYAqp2Eryd4KQveCTyjJP9mSDOfEKdO4gwLwq6lrSSt/hBPowkmymmitFnd1TMDmukOpUwzQiN3JkOiKmOt84MDQGkVMsLkd88Rzslq0xCwXTISwdfCcbF6Qhwg6IbXVfEuC+goO9FYmrqbDnb+aCHtlUnI+Buh6sY7SucMWursbgLXc/y+P6wprXurMkWcX+GzrVEb9ovp4qgtBsEzlSjx5lvJr+EfO9J7RFWfu5aIaYUCtiLz21LVT4BuMmEQ+RRP7zjI2lTySmJK3hpodQWQEDsc/3c5WmKQnlLt0UwWpvt02iRH8N5uwyQwP8EN78ROtvqwtgXFec5iYwavgUC3qRZtJrXsAqBsD8cSrw6Dp1IT26MM0vpDYqYA6AqBj3+4owHp/Oa3kK+tzYraITZ+qtEsRQSJpA7xx5Gkn1a8RFQ5jmcD7Jb+1w+i+YDviXp10sjkJKWQ+svYqqtM3qRqbBLnpsZm+bGkGs0DhiXnCHGuLNqU1LDvRVPGjA7mAPmN9w1hdOpPT6u7YMrIq6pHpkVjHfWiNCLg5PvKu5Ggd4uBSwU/wUbO8DScqTwjom/ih3BtXj6fWfHZmUOn1MbEHzp7Lu/PZeb7fkvx4/mP33dJh2ugRmst0U2GKY6yVEu8vHrRKLdq0q0FOZXrGueU4M+hfsDr2rek4uzVky+sAjF6XWGxchTLVzr+xDczpRMDeEzxvlzsTcborZX9nZ78boLf/ijaVWfjdK4o7CB3H9aO8sXrTmJrxt6AVijZHCJCMbC4SCkZ2C103xP/A/vJYMf9sNyFj">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmMaster'];
+if (!theForm) {
+    theForm = document.frmMaster;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&amp;t=639191031332169432" type="text/javascript"></script>
+
+
+<script src="/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG0OUrYMiDnAtHQCFUaz0W--4WPMIG0lL9lnbwIsliZ0&amp;t=3a1336b1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5VxFYOE_qs64fwvKe7dRnAlwJ4-ZR1AkMZ6VKiLePy3DznNeeSqdI8JPLK7hW1Eg2&amp;t=3a1336b1" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A3961AF2">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="665WDe8ParYamoIvpTGubRtRL10lZg4IqE9NCO3nu8qi0jzX92cjEsiHNxU5HC6xjfiSBFRNQ9cMdOQa0UwONa0wrbkLAoiAy4sAN6B21ZzzFh1rrhfxcozm8r1Tw7xcF6Tt5a5swLF9n7ZRwnFJcSVFNdHW42ustpMLg8WC3Sa+qPelVz23eiR/vK3yKqQJrTI2QLoAh6Kig7BuWK5IoaNDOpPhIzocQtS2ze7WO7spzosjX40v0MbLO/xkxV6V6kEAVQk9rjtMjzkDCt26nVDJos6vDN7yk2p90E5gvVtxblucg+1WvP25FZBBel1cFkTiUU/hdxL8ppEeZFOZC0hamhvXyxevdtKacwYrouEL8gFh1rtzo3VPKPf1iFZcI9gv1o9fuoW7kdLP5Q7uy24wKtxQ8rZJqLasT2q3awp36EBgMl1cR7ip6qYjghZp5fQdb/vHHj8Gqpq5L22DWsoiNchyoWdzAWqDkX5giLUsKJIaOQM+sCw9krG/jzKTaM1oYUc0PrxvElZKhtEvZ+9AsyfxEF8tcq4JocJBLcCNtblTQ1cOJ2/5FYsrxS1B5tpxD5amZYS2FQeFJV9se8RAbM3lIlUhDLxqYdoi/XMWBQlMfYwMrC0SVfeUseJuCYK5EXsI65iumb0vnv+feiIgMHwMkY98hfXpuBxdROmN7RdmYmQlWpFar5+t2T8Am94JnutcEk8jFk4LmF8ubB5wcRBXt9fHGnhy8rG6Q9q1N1LuxV9lxknDVfnoLbjfrk8DB1AjYOEy5Nz2F2Bfg8U+z7LGZ1FJJxWLHf8n5LxWc6X/3b9GZQgYdEzsEKIIGS4BYWF7dF98o7WQdq0PjfZ2HH3f+7WKEGkshKVBwbesHB+bgE2TS8UfxjLQKg9+j8jg9bwutnkoWpyaMmfsgw==">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'frmMaster', ['tctl00$ContentPlaceHolder1$MainUpdatePanel','ContentPlaceHolder1_MainUpdatePanel'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <div class="top_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="nav1">
+                            <li></li>
+                            <li></li>
+                            <li><a href="SelectMISState.aspx">ePrisons MIS</a></li>
+                            <li><a href="https://eprisons.nic.in/citizenservice/" id="lnkCitizen" target="_blank" rel="noopener noreferrer">Citizen Service</a></li>
+                            <li><a href="https://eprisons.nic.in/Legalaid/Secure/Login.aspx" id="lnkLegalaid" target="_blank" rel="noopener noreferrer">Legal Aid</a></li>
+                            <li><a href="https://eprisons.nic.in/Login" id="lnkSSOLogin" target="_blank" rel="noopener noreferrer">Other Stakeholders</a></li>
+
+                            
+
+
+
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header_bg">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="Home.aspx">
+                        <img src="../Content/images/logo.png">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item" style="font-weight: 700 !important; font-size: 15px;"><a class="nav-link" href="MyVisitRegistration.aspx">eMulakat</a></li>
+
+                            
+
+                            <li class="nav-item"><a class="nav-link" href="MyVisitStatus.aspx">eMulakat Status</a></li>
+                            <!--<li class="dropdown">
+                                            <a href="#" onclick="myFunction()" class="dropbtn dropdown-toggle">Dropdown<span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu toggle-drop dropdown-content" id="myDropdown">
+                                            <li><a href="ParoleJumper.aspx">Parole Jumper</a></li>
+                                            <li><a href="Absconder.aspx">Absconder</a></li>
+
+                                        </ul>
+                                    </li>-->
+                            <li class="nav-item"><a class="nav-link" href="DashBoard.aspx">DashBoard</a></li>
+                            <li id="lieprisonsmap" class="nav-item">
+                                <a href="https://eprisons.nic.in/NPIPDashboard" id="anch" class="nav-link" target="_blank" rel="noopener noreferrer">Prisons Map</a></li>
+                            <li id="lireports" class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reports</a>
+
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item" href="ePrisonsLiveStatus.aspx">ePrisons Live</a></li>
+
+                                    <li><a class="dropdown-item" href="ePrisonsLiveVisitorsStatus.aspx">eMulakat Statistics</a></li>
+
+                                    <li><a class="dropdown-item" href="ParoleJumper.aspx">Parole Jumper</a></li>
+                                    <li><a class="dropdown-item" href="Absconder.aspx">Absconder</a></li>
+                                     <li><a class="dropdown-item" href="DashBoardForeigner.aspx">Foreigner Prisoners</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="grievancelogin.aspx">Grievance</a></li>
+                            <li class="nav-item"><a class="nav-link" href="About.aspx">About Us </a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+        <!-- Begin page content -->
+<main class="flex-shrink-0">
+        <div class="page-content-wrapper">
+             <div class="registion_head"><div class="container"><div class="row"><div class="col-lg-12">Absconders List</div></div></div></div>
+            
+            
+            <div class="container">
+                
+    <div id="ContentPlaceHolder1_MainUpdatePanel">
+	
+            <div class="card" style="min-height: 400px;">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 ">
+                            <span id="ContentPlaceHolder1_lblstate" style="font-size:16px;font-weight:bold;">State</span>
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-sm-7 col-xs-12">
+                            <select name="ctl00$ContentPlaceHolder1$ddlstate" id="ddlstate">
+		<option value="SELECT">SELECT</option>
+		<option value="26">ANDAMAN &amp; NICOBAR             </option>
+		<option value="1">ANDHRA PRADESH</option>
+		<option value="2">ARUNACHAL  PRADESH            </option>
+		<option value="3">ASSAM                         </option>
+		<option value="4">BIHAR                         </option>
+		<option value="27">CHANDIGARH                    </option>
+		<option value="33">CHHATTISGARH                  </option>
+		<option value="28">DADRA &amp; NAGAR HAVELI AND DAMAN &amp; DIU</option>
+		<option value="30">DELHI                         </option>
+		<option value="5">GOA                           </option>
+		<option value="6">GUJARAT                       </option>
+		<option value="7">HARYANA                       </option>
+		<option value="8">HIMACHAL PRADESH              </option>
+		<option value="9">JAMMU &amp; KASHMIR               </option>
+		<option value="34">JHARKHAND                     </option>
+		<option value="10">KARNATAKA                     </option>
+		<option value="11">KERALA                        </option>
+		<option value="37">LADAKH</option>
+		<option value="31">LAKSHADWEEP                   </option>
+		<option value="12">MADHYA PRADESH                </option>
+		<option value="13">MAHARASHTRA                   </option>
+		<option value="14">MANIPUR                       </option>
+		<option value="15">MEGHALAYA                     </option>
+		<option value="16">MIZORAM                       </option>
+		<option value="17">NAGALAND                      </option>
+		<option value="18">ORISSA                        </option>
+		<option value="32">PUDUCHERRY                    </option>
+		<option value="19">PUNJAB                        </option>
+		<option value="20">RAJASTHAN                     </option>
+		<option value="21">SIKKIM                        </option>
+		<option value="22">TAMIL NADU                    </option>
+		<option value="36">TELANGANA</option>
+		<option value="23">TRIPURA                       </option>
+		<option value="24">UTTAR PRADESH                 </option>
+		<option value="35">UTTARAKHAND                   </option>
+		<option value="25">WEST BENGAL                   </option>
+
+	</select>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 text-center">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$ViewDetails" value="View Details" id="ViewDetails" class="btn btn-primary btn-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div id="ContentPlaceHolder1_pnl_ParoleGrid">
+		
+                        <span id="ContentPlaceHolder1_lbl_totalRecords" style="color:Red;"></span>
+                        <div class="table-responsive">
+                            <div>
+
+		</div>
+                        </div>
+                    
+	</div>
+                    <div>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        
+</div>
+
+            </div>
+            <!-- page-content-wrapper End-->
+        </div>
+    </main>
+
+
+    
+<footer class="footer mt-auto footer_bg">
+
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5">
+                            <div class="footer-middle border_right pb-4">
+                                <h4>Information</h4>
+                                <ul class="links">
+                                    <li><a href="DashBoard.aspx"><i class="bi bi-link"></i>DashBoard</a></li>
+                                    <li><a href="MyVisitRegistration.aspx"><i class="bi bi-link"></i>eMulakat</a></li>
+                                    <li><a href="grievance.aspx"><i class="bi bi-link"></i>Grievance</a></li>
+                                    <li><a href="About.aspx"><i class="bi bi-link"></i>About us </a></li>
+
+                                </ul>
+                                <!-- footer-middle border_right End-->
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5">
+                            <div class="footer-middle border_right ">
+                                <h4><a href="ContactUs.aspx" style="color: #fff">Contact Us </a></h4>
+                                <ul class="contacts-info ">
+
+                                    <li>
+                                        <div class="add_email_phone-icon">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                        </div>
+                                        National Informatics Centre<br>
+                                        A-Block, CGO Complex, Lodhi Road<br>
+                                        New Delhi - 110 003 India</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-2 col-sm-2 col-lg-2">
+                            <h4 style="visibility: hidden">.</h4>
+                            <span class="float-end text-white"><b>Served From :</b><br>
+                                <span id="lblServerDetails">NQ34EP2P-ePApp4</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- container -->
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="footer_text" style="padding-top: 5px">
+                                    A Digital India Initiative by Government of India.
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-6 col-lg-6">
+                                <div class="footer_text">
+                                    <ul class="footer_nav">
+                                        <li><a href="PrivacyPolicy.aspx">Privacy Policy</a></li>
+                                        <li><a href="TermsofUse.aspx">Terms of Use</a></li>
+                                        <li><a href="CodeofConduct.aspx">Code of Conduct</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="footer_text powered_by float-end">
+                                    Copyright © 2015 by NIC .All rights reserved.
+                                <img src="../Content/images/nic_logo.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+
+    </footer>
+
+         
+         
+    </form>
+
+         <a href="#" class="back-to-top" style="display: inline;"><i class="bi bi-arrow-up-short"></i></a>
+   <script src="../Content/js/crypto.js"></script>
+   <script>
+       jQuery(document).ready(function () {
+           var offset = 250;
+           var duration = 300;
+           jQuery(window).scroll(function () {
+               if (jQuery(this).scrollTop() > offset) {
+                   jQuery('.back-to-top').fadeIn(duration);
+               } else {
+                   jQuery('.back-to-top').fadeOut(duration);
+               }
+           });
+
+           jQuery('.back-to-top').click(function (event) {
+               event.preventDefault();
+               jQuery('html, body').animate({ scrollTop: 0 }, duration);
+               return false;
+           })
+       });
+   </script>
+
+
+    <!-- AdminLTE App -->
+    <script src="../Content/dist/js/app.min.js" type="text/javascript"></script>
+    <!-- Optionally, you can add Slimscroll and FastClick plugins. 
+          Both of these plugins are recommended to enhance the 
+          user experience -->
+    <!-- Bootstrap Core JavaScript -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Binding Code
+            var config = {
+                '.chosen-select': {},
+                '.chosen-select-deselect': { allow_single_deselect: true },
+                '.chosen-select-no-single': { disable_search_threshold: 10 },
+                '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+                '.chosen-select-width': { width: "95%" }
+            }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+
+            }
+            $('#multistates').on('change', function (evt, params) {
+
+
+                $('#hidTest').val($(this).val());
+            });
+            //
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+            function EndRequestHandler(sender, args) {
+                var config = {
+                    '.chosen-select': {},
+                    '.chosen-select-deselect': { allow_single_deselect: true },
+                    '.chosen-select-no-single': { disable_search_threshold: 10 },
+                    '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+                    '.chosen-select-width': { width: "95%" }
+                }
+                for (var selector in config) {
+                    $(selector).chosen(config[selector]);
+
+                }
+                $('#multistates').on('change', function (evt, params) {
+
+
+                    $('#hidTest').val($(this).val());
+                });
+            }
+        });
+
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+    </script>
+
+
+</body></html>

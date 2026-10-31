@@ -1,0 +1,43 @@
+<%- include('layout-head') %>
+<div class="cards">
+  <div class="card"><b><%= summary.citizens %></b><span>Citizens</span></div>
+  <div class="card"><b><%= summary.intake %></b><span>Records received</span></div>
+  <div class="card"><b><%= summary.fields %></b><span>Field values</span></div>
+  <div class="card"><b><%= systems.length %></b><span>Source portals</span></div>
+</div>
+
+<h2>By source portal</h2>
+<table>
+  <tr><th>Portal</th><th>Host</th><th>Category</th><th>Records</th></tr>
+  <% summary.bySystem.forEach(function (s) { %>
+    <tr>
+      <td><strong><%= s.name %></strong> <code><%= s.code %></code></td>
+      <td><%= (systems.find(function(x){return x.code===s.code}) || {}).hostname %></td>
+      <td><%= (systems.find(function(x){return x.code===s.code}) || {}).category %></td>
+      <td><%= s.n %></td>
+    </tr>
+  <% }); %>
+</table>
+
+<h2 style="margin-top:26px">Most recent records</h2>
+<% if (!recent.length) { %>
+  <div class="empty">
+    Nothing has arrived yet.<br>
+    Submit a form on any portal and it will appear here.
+  </div>
+<% } else { %>
+  <table>
+    <tr><th>ERP ref</th><th>From</th><th>Form</th><th>Portal ref</th><th>Citizen</th><th>Received</th></tr>
+    <% recent.forEach(function (r) { %>
+      <tr>
+        <td><code><%= r.intake_ref %></code></td>
+        <td><span class="chip"><%= r.source_system %></span></td>
+        <td><%= r.subject || r.source_form %><% if (r.source_route) { %><br><code><%= r.source_route %></code><% } %></td>
+        <td><code><%= r.source_reference %></code></td>
+        <td><%= r.full_name || '—' %></td>
+        <td><%= r.received_at %></td>
+      </tr>
+    <% }); %>
+  </table>
+<% } %>
+<%- include('layout-foot') %>

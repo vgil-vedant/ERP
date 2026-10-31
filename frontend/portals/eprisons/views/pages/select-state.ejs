@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section">
+  <h1 class="section__title">Select State</h1>
+  <p class="section__intro">The original uses this page to pick a state before showing its
+  MIS figures. Here it links into the local demonstration statistics.</p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th scope="col">State / UT</th><th scope="col">Live status</th><th scope="col">Lockup report</th></tr></thead>
+      <tbody><% ref.states.forEach(function (s) { %>
+        <tr><th scope="row"><%= s.name %></th>
+          <td><a href="/public/ePrisonsLiveStatus">Inmates in custody</a></td>
+          <td><a href="/public/Absconder?state_id=<%= s.id %>">Absconders in <%= s.name %></a></td></tr>
+      <% }); %></tbody>
+    </table>
+  </div>
+</section></div></main>
+<%- include('../partials/footer') %>

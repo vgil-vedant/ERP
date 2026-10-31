@@ -1,0 +1,140 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main" class="<%= page.centred ? 'centred-stage' : '' %>">
+  <div class="<%= page.centred ? '' : 'shell' %>"><section class="<%= page.centred ? '' : 'section' %>">
+
+  <% if (!pageTitle) { %><h1 class="section__title"><%= page.heading || title %></h1><% } %>
+
+  <% if (submitted) { %>
+    <div class="notice notice--ok" role="status">
+      <strong>Recorded in the local demonstration.</strong>
+      Your demonstration reference is <span class="ref-no"><%= submitted.reference %></span>.
+      Nothing was sent to <code><%= site.hostname %></code> or any government system.
+    </div>
+  <% } %>
+
+  <% const ek = Object.keys(errors || {}); if (ek.length) { %>
+    <div class="notice notice--error" role="alert">
+      <strong>Please correct <%= ek.length %> field<%= ek.length === 1 ? '' : 's' %>.</strong>
+      <ul><% ek.forEach(function (k) { %><li><%= errors[k] %></li><% }); %></ul>
+    </div>
+  <% } %>
+
+  <% if (page.structureNote) { %>
+    <div class="panel"><p style="margin:0"><%- page.structureNote %></p></div>
+  <% } %>
+
+  <%# ---- forms captured on this page ---- %>
+  <% (page.forms || []).forEach(function (f, fi) { %>
+    <form method="post" action="<%= page.route %>" novalidate class="card">
+      <input type="hidden" name="__form" value="<%= f.id %>">
+      <input type="hidden" name="challenge_expected" value="<%= challenge.expected %>">
+      <h2 class="card__head"><%= f.heading %></h2>
+      <div class="card__body">
+        <div class="field-grid">
+          <% f.fields.forEach(function (x) { %>
+            <div class="field <%= x.wide ? 'field--wide' : '' %> <%= x.type === 'checkbox' ? 'field--check' : '' %>">
+              <% if (x.type === 'checkbox') { %>
+                <input type="checkbox" id="<%= x.name %>" name="<%= x.name %>" value="1"
+                       <%= form[x.name] ? 'checked' : '' %>>
+                <label for="<%= x.name %>"><%= x.label %></label>
+              <% } else { %>
+                <label for="<%= x.name %>"><%= x.label %><% if (x.required) { %> <span class="req">*</span><% } %></label>
+                <% if (x.type === 'select') { %>
+                  <select id="<%= x.name %>" name="<%= x.name %>"
+                          <%= x.required ? 'required' : '' %>
+                          <%= x.cascadeTarget ? 'data-cascade-source data-cascade-target="' + x.cascadeTarget + '" data-cascade-endpoint="' + x.cascadeEndpoint + '"' : '' %>
+                          <%= x.cascadeChild ? 'data-selected="' + (form[x.name] || '') + '" disabled' : '' %>
+                          <%= errors[x.name] ? 'aria-invalid="true"' : '' %>>
+                    <option value="">SELECT</option>
+                    <% (x.options || []).forEach(function (o) { %>
+                      <option value="<%= o.value %>" <%= String(form[x.name]) === String(o.value) ? 'selected' : '' %>><%= o.label %></option>
+                    <% }); %>
+                  </select>
+                <% } else if (x.type === 'textarea') { %>
+                  <textarea id="<%= x.name %>" name="<%= x.name %>"
+                            <%= x.maxLength ? 'maxlength=' + x.maxLength + ' data-counter' : '' %>
+                            <%= x.required ? 'required' : '' %>
+                            <%= errors[x.name] ? 'aria-invalid="true"' : '' %>><%= form[x.name] || '' %></textarea>
+                <% } else { %>
+                  <input type="<%= x.inputType %>" id="<%= x.name %>" name="<%= x.name %>"
+                         <%= x.maxLength ? 'maxlength=' + x.maxLength + ' data-counter' : '' %>
+                         <%= x.pattern ? 'pattern="' + x.pattern + '"' : '' %>
+                         <%= x.required ? 'required' : '' %>
+                         value="<%= form[x.name] || '' %>"
+                         <%= errors[x.name] ? 'aria-invalid="true"' : '' %>>
+                <% } %>
+                <% if (x.maxLength) { %><span class="field__hint" id="<%= x.name %>_count"></span><% } %>
+                <% if (x.hint) { %><span class="field__hint"><%= x.hint %></span><% } %>
+              <% } %>
+              <% if (errors[x.name]) { %><span class="field__error"><%= errors[x.name] %></span><% } %>
+            </div>
+          <% }); %>
+
+          <div class="field">
+            <label for="challenge_answer_<%= fi %>"><%= challenge.question %> <span class="req">*</span></label>
+            <input type="text" id="challenge_answer_<%= fi %>" name="challenge_answer" maxlength="6"
+                   required autocomplete="off" <%= errors.challenge_answer ? 'aria-invalid="true"' : '' %>>
+            <% if (errors.challenge_answer) { %><span class="field__error"><%= errors.challenge_answer %></span><% } %>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn--primary"><%= f.submitLabel %> (local only)</button>
+          <a class="btn btn--secondary" href="<%= page.route %>">Reset</a>
+        </div>
+
+        <% if (f.captchaNote) { %>
+          <p class="field__hint" style="margin-top:10px"><%= f.captchaNote %></p>
+        <% } %>
+      </div>
+    </form>
+  <% }); %>
+
+  <%# ---- data tables captured on this page ---- %>
+  <% (tables || []).forEach(function (t) { %>
+    <h2 class="section__title" style="font-size:18px"><%= t.heading %></h2>
+    <div class="table-wrap">
+      <table class="data">
+        <caption><%= t.caption %></caption>
+        <thead><tr><% t.columns.forEach(function (c) { %><th scope="col"><%= c %></th><% }); %></tr></thead>
+        <tbody>
+          <% if (!t.rows.length) { %>
+            <tr><td colspan="<%= t.columns.length %>">No records.</td></tr>
+          <% } %>
+          <% t.rows.forEach(function (r) { %>
+            <tr><% r.forEach(function (c) { %><td><%= c %></td><% }); %></tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  <% }); %>
+
+  <%# ---- the page's own sections, as the original lays them out ---- %>
+  <% if (page.sections && page.sections.length) { %>
+    <p class="field__hint">The original's section and heading structure, reproduced so the
+    layout matches. Its body text is not copied: this replica does not republish
+    government prose.</p>
+    <% page.sections.forEach(function (sec) { %>
+      <section class="outline-section">
+        <% if (sec.heading) { %><h2 class="section__title"><%= sec.heading %></h2><% } %>
+        <% if (sec.cards.length) { %>
+          <div class="card-grid card-grid--<%= Math.min(sec.cards.length, 4) %>">
+            <% sec.cards.forEach(function (c) { %>
+              <div class="mini-card">
+                <span class="mini-card__mark" aria-hidden="true"></span>
+                <h3 class="mini-card__title"><%= c.title %></h3>
+                <% if (c.detail) { %><p class="mini-card__detail"><%= c.detail %></p><% } %>
+              </div>
+            <% }); %>
+          </div>
+        <% } %>
+      </section>
+    <% }); %>
+  <% } %>
+
+  <% if (page.noContentNote) { %>
+    <div class="panel"><p style="margin:0"><%- page.noContentNote %></p></div>
+  <% } %>
+</section></div></main>
+<%- include('../partials/footer') %>

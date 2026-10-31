@@ -1,0 +1,739 @@
+{
+  "generatedAt": "2026-10-27T09:30:04.771Z",
+  "referenced": 44,
+  "downloaded": 41,
+  "failed": 3,
+  "skippedExternal": 0,
+  "capturedFromPageRender": 0,
+  "unavailableByDesign": 0,
+  "byteIdenticalDuplicates": 0,
+  "totalBytes": 1309880,
+  "byCategory": {
+    "images": 7,
+    "icons": 1,
+    "fonts": 0,
+    "stylesheets": 18,
+    "scripts": 15,
+    "documents": 0
+  },
+  "licensingNote": "Asset reuse is limited. Government of India websites generally reserve copyright in their content and emblems; the National Emblem and official seals are additionally protected by the State Emblem of India (Prohibition of Improper Use) Act, 2005. Assets are retained here as analysis evidence for an internal, clearly-labelled demonstration. The replica substitutes a neutral placeholder mark for official emblems and logos so it cannot be mistaken for an official service.",
+  "method": "Only assets referenced by a captured page were collected, and no URL was guessed or enumerated. Where the browser already received a file while rendering the page, that copy is kept rather than asking the server for it again: it halves the requests made to the target, and some servers answer a standalone asset request with 405 while serving the same file to the page that needs it. Anything not seen during a render was requested separately, with certificate verification enabled.",
+  "assets": [
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/images/cctnsLogoNew.png",
+      "localPath": "original_assets/images/cctnsLogoNew.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 63625,
+      "sha256": "6bbf6eac911802ad4f7585bb90fce7931a67a4ad505d2688433332499f818aa3",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/retrieveImageCaptcha.htm",
+      "localPath": "original_assets/images/retrieveImageCaptcha.htm",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 2868,
+      "sha256": "d986f91c5ef65df34363c56e8c2ec706cd794a7bd05a36a70c9982afb8e126b1",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/Refresh.gif",
+      "localPath": "original_assets/images/Refresh.gif",
+      "category": "images",
+      "mimeType": "image/gif",
+      "bytes": 1552,
+      "sha256": "ea043e9fae751439de81339f618451557c3642669088564549539d3cd0410aa8",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/images/NCRBLogo.png",
+      "localPath": "original_assets/images/NCRBLogo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 81481,
+      "sha256": "d6453e2be40799d2d8f06cb8b664ca9e03cfd079375b4c6420389ed3a279e17f",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/images/NationalEmblemTransparent.gif",
+      "localPath": "original_assets/images/NationalEmblemTransparent.gif",
+      "category": "images",
+      "mimeType": "image/gif",
+      "bytes": 36538,
+      "sha256": "9c960ced4d51a0c7568d7204c87d5421b4e512897399459f36b88848a366b6f3",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/style/bootstrap.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 302971,
+      "sha256": "fb963766629dcb00185ef36908ff4370a1b02fb12b615d39163b1e79967102bf",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/style/cyberPolice.css",
+      "localPath": "original_assets/stylesheets/cyberPolice.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 7821,
+      "sha256": "8f08352fe4234990ff20ceb45b7c6e7ba2ef990f25d4921da2040982b05eedc7",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/favicon.ico",
+      "localPath": null,
+      "category": "icons",
+      "mimeType": null,
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm#",
+      "localPath": "original_assets/stylesheets/login.htm",
+      "category": "stylesheets",
+      "mimeType": "text/html",
+      "bytes": 56299,
+      "sha256": "6064bc0970bbc3c380662497c0adeb107c902a594fa1ff2c2c5277c07612c530",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/jquery.modaldialog.css",
+      "localPath": "original_assets/stylesheets/jquery.modaldialog.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 2165,
+      "sha256": "f6baff25e8fc6a0f9eb38199bd0269c0959c70fc34852c214f24ef44ebaef67c",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/tab_control.js",
+      "localPath": "original_assets/scripts/tab_control.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 2478,
+      "sha256": "1ec9c657108dfa09b7d46042d645361624938fd2115e89463005d7134c9a0100",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/cal_control.js",
+      "localPath": "original_assets/scripts/cal_control.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 25325,
+      "sha256": "0349384f4b17a75b4f4705337a77122a087ca190b7aa1fb47297fb87c8f5253f",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/loginvalidation.js",
+      "localPath": "original_assets/scripts/loginvalidation.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 27805,
+      "sha256": "7c4f93f0111bdd3e6303029753397d2ae685b35f5c5d4f0c851af154779261a1",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/error-message.js",
+      "localPath": "original_assets/scripts/error-message.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 1293,
+      "sha256": "a3c7db0ed73273c63d5bb4ed85d0654f382bfb80ba2a896e7e00a6a7b8f31ef2",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/jquery.js",
+      "localPath": "original_assets/scripts/jquery.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 87532,
+      "sha256": "3e7501d15c3630e791c8b20392eb9dee31a9f65ce3efdde76cef5c710141ab24",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/fancybox/jquery.fancybox-lib.pack.js",
+      "localPath": "original_assets/scripts/jquery.fancybox-lib.pack.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 83231,
+      "sha256": "66c01320ae84cc36912c081a0969bb085ce09ee323c4e4a3f691f3a7344c705c",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/common/fancyalert.js",
+      "localPath": "original_assets/scripts/fancyalert.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 14194,
+      "sha256": "a43ef9d172e887bb1c13129951adfe1c388a013b61bf3171bd9decb48bcb25b5",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/jquery.modaldialog.js",
+      "localPath": "original_assets/scripts/jquery.modaldialog.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 4575,
+      "sha256": "f2f065ba8e3894364d5e94b303227ef4ab88e1533e3f558a8811c0cb92db9feb",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/aesCrypto.js",
+      "localPath": "original_assets/scripts/aesCrypto.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 13223,
+      "sha256": "015bc7759cb669f197ce0efe116bf6257964cc0e122a9e032f25f47bb90ee11a",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/js/jquery-updated_latest.min.js",
+      "localPath": "original_assets/scripts/jquery-updated_latest.min.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 87533,
+      "sha256": "1216edd0549440a8aff598e1d9614e4aca4614981f7a3fadbfbf311605934435",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/js/bootstrap.min.js",
+      "localPath": "original_assets/scripts/bootstrap.min.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 140830,
+      "sha256": "5233add567dc33db6e18d910616759940da594258fc4a4be295638b342aa0da5",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/js/jquery.marquee.min.js",
+      "localPath": "original_assets/scripts/jquery.marquee.min.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 8877,
+      "sha256": "5a6a3ec2a5804689b80e93488dbcc1eb5f3dae6692400dc1df9435f5cb6c7d33",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/Refresh.ico",
+      "localPath": "original_assets/icons/Refresh.ico",
+      "category": "icons",
+      "mimeType": "image/x-icon",
+      "bytes": 195540,
+      "sha256": "c5182d1f037067a623869b7e146e98af001c09deadc9bce9e38769d2efed79ed",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/layout.css",
+      "localPath": "original_assets/stylesheets/layout.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 5639,
+      "sha256": "9c120d9bb3fc7a929efae5c439e0faa5eaa888872b4b7843e8620f3859f36b89",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/font-awesome/css/font-awesome.min.css",
+      "localPath": null,
+      "category": "stylesheets",
+      "mimeType": null,
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/common/common.js",
+      "localPath": "original_assets/scripts/common.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 4986,
+      "sha256": "ce2bcbf2e40f767f8803b818366ef5b8a3b02bd9932a1fe76ce1f9f88dd0e01e",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/common/security-util.js",
+      "localPath": "original_assets/scripts/security-util.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 2691,
+      "sha256": "8c791a955ac779a93c21f8f8d53b1ed676e338a70290915c9e5fd58902416b2b",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/js/common/xssfilter.js",
+      "localPath": "original_assets/scripts/xssfilter.js",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 673,
+      "sha256": "a7500ce0807183059eb5ffd1db7480a6f1ad531aa0073b4f2b50ae9dd5c26c2c",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/asset/js/jquery-lib.min.js",
+      "localPath": null,
+      "category": "scripts",
+      "mimeType": null,
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/multistyles.css",
+      "localPath": "original_assets/stylesheets/multistyles.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 426,
+      "sha256": "153b751a32b777b1b9e7d7053b7f7417ac05c6e26e9f5b3b1c08e3dd6326a55c",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/sublogo.gif",
+      "localPath": "original_assets/images/sublogo.gif",
+      "category": "images",
+      "mimeType": "image/gif",
+      "bytes": 5839,
+      "sha256": "8265ad78f3da48ff800454324866292e5756f547c10eb27e5e2cb1d66c530f87",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/img/bg_menu1.jpg",
+      "localPath": "original_assets/images/bg_menu1.jpg",
+      "category": "images",
+      "mimeType": "image/jpeg",
+      "bytes": 813,
+      "sha256": "c00fafe28605a3e85076dc87c97e2a0f9eec488a89cc33b85ecab59215dbe458",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/formlevel.css",
+      "localPath": "original_assets/stylesheets/formlevel.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 12213,
+      "sha256": "231998d7a26a6f08ecea43018671c7c1462bff3056a803a0eec7ec1ee6b5543d",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/tab_control.css",
+      "localPath": "original_assets/stylesheets/tab_control.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 6150,
+      "sha256": "aecad9fd78c1348440e0ba432bc1872cdfafb8c56ababa3d2457d1ea0ec7cb26",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/modal_window.css",
+      "localPath": "original_assets/stylesheets/modal_window.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 694,
+      "sha256": "5cf44422074f79cab7b0a354a0fbb2cbbf3825bee64405cb10357d0de4ad27de",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/cal_control.css",
+      "localPath": "original_assets/stylesheets/cal_control.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 5049,
+      "sha256": "e5f5b209e2213ec8410a4f4090d58d7728f306e71e0cadea48b1bf0df664923c",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/menu.css",
+      "localPath": "original_assets/stylesheets/menu.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 3735,
+      "sha256": "537753ce561925523c1eb851b7ebc72334a47902b7c438fc970c02886e5916a0",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/error_message.css",
+      "localPath": "original_assets/stylesheets/error_message.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 482,
+      "sha256": "556f0a30240832a81efae1583654c05e75f0e649502074fd703324b8dddd431d",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/help_dropdown.css",
+      "localPath": "original_assets/stylesheets/help_dropdown.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 1878,
+      "sha256": "4fce8fa8176c021ec4538626ca5f7279376c95850cb8371962a8040f1760f518",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/additional.css",
+      "localPath": "original_assets/stylesheets/additional.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 1001,
+      "sha256": "de051ba2462e1141f0a3b2301c321162a4a8e7a21e2ead549ce0fc9e42a687d7",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/home_page.css",
+      "localPath": "original_assets/stylesheets/home_page.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 4343,
+      "sha256": "aee8145fa31e4ef6e1c51f782c6c4edb1526a23c85c8194bb3bbe2e3ee184d04",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/popupmenu.css",
+      "localPath": "original_assets/stylesheets/popupmenu.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 939,
+      "sha256": "f4af83edfab3aa30b9704f8f1e71d22766fdd7721da6d56d7af371b39d532171",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/dropdwonmenu-v.css",
+      "localPath": "original_assets/stylesheets/dropdwonmenu-v.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 1291,
+      "sha256": "bcbfdfbb6201b5931f704bbc6f9fcef5c06dd43f0e4d880efc459e05000c7412",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    },
+    {
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/css/leftmenucss.css",
+      "localPath": "original_assets/stylesheets/leftmenucss.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 3282,
+      "sha256": "416f6a99d8bc5b99c2d1605abacff9d5237b0a74a6d2aaa3bf1bb1855095505f",
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null,
+      "source": "requested separately"
+    }
+  ]
+}

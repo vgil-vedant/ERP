@@ -1,0 +1,871 @@
+{
+  "generatedAt": "2026-10-27T05:54:15.489Z",
+  "input": "uidai.gov.in",
+  "initialUrl": "https://uidai.gov.in",
+  "finalUrl": "https://uidai.gov.in/en",
+  "redirectChain": [
+    "https://uidai.gov.in/en"
+  ],
+  "redirectProblems": [],
+  "recoveredFromBrokenRedirect": false,
+  "hostname": "uidai.gov.in",
+  "normalizedHostname": "uidai_gov_in",
+  "scheme": "https",
+  "httpStatus": 200,
+  "category": {
+    "selected": "Aadhaar",
+    "confidence": "high",
+    "status": "confirmed",
+    "decidedBy": "page content (hostname only reinforced it)",
+    "wouldHoldWithoutHostname": true,
+    "governmentHost": true,
+    "evidence": [
+      {
+        "category": "Aadhaar",
+        "score": 151.6,
+        "contentScore": 147.6,
+        "hostScore": 4,
+        "topStrongTerms": [
+          {
+            "term": "uidai",
+            "occurrences": 60,
+            "weight": 27.78
+          },
+          {
+            "term": "unique identification authority",
+            "occurrences": 30,
+            "weight": 24.77
+          },
+          {
+            "term": "aadhaar",
+            "occurrences": 219,
+            "weight": 33.4
+          },
+          {
+            "term": "myaadhaar",
+            "occurrences": 13,
+            "weight": 21.14
+          },
+          {
+            "term": "cidr",
+            "occurrences": 2,
+            "weight": 13.01
+          },
+          {
+            "term": "enrolment id",
+            "occurrences": 1,
+            "weight": 10
+          }
+        ],
+        "topWeakTerms": [
+          {
+            "term": "identity",
+            "occurrences": 12,
+            "weight": 4.16
+          },
+          {
+            "term": "enrolment",
+            "occurrences": 35,
+            "weight": 5.09
+          },
+          {
+            "term": "biometric",
+            "occurrences": 19,
+            "weight": 4.56
+          },
+          {
+            "term": "resident",
+            "occurrences": 7,
+            "weight": 3.69
+          }
+        ],
+        "hostHints": [
+          {
+            "hint": "uidai",
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "category": "CCTNS",
+        "score": 3.69,
+        "contentScore": 3.69,
+        "hostScore": 0,
+        "topStrongTerms": [],
+        "topWeakTerms": [
+          {
+            "term": "fir",
+            "occurrences": 7,
+            "weight": 3.69
+          }
+        ],
+        "hostHints": []
+      },
+      {
+        "category": "E_Courts",
+        "score": 3.2,
+        "contentScore": 3.2,
+        "hostScore": 0,
+        "topStrongTerms": [],
+        "topWeakTerms": [
+          {
+            "term": "court",
+            "occurrences": 4,
+            "weight": 3.2
+          }
+        ],
+        "hostHints": []
+      }
+    ],
+    "pagesConsidered": 4
+  },
+  "siteTitle": "Home - Unique Identification Authority of India | Government of India - Unique Identification Authority of India | Government of India",
+  "languages": [
+    "en",
+    "hi"
+  ],
+  "crawlScope": {
+    "rootHost": "uidai.gov.in",
+    "limits": {
+      "maxPages": 60,
+      "maxDepth": 4,
+      "navTimeoutMs": 45000,
+      "settleTimeoutMs": 3500,
+      "perRequestDelayMs": 900,
+      "concurrency": 1,
+      "maxAssetBytes": 12582912,
+      "maxTotalRuntimeMs": 1500000,
+      "assetTimeoutMs": 30000,
+      "retriesPerUrl": 2
+    },
+    "robotsTxt": "absent (HTTP 404) - no crawl directives were published",
+    "sitemapXml": "absent (HTTP 404)",
+    "scopeRule": "same registrable host and its subdomains only; external hosts recorded as links, never crawled"
+  },
+  "counts": {
+    "pagesCaptured": 59,
+    "pagesFailed": 1,
+    "pagesPartial": 0,
+    "pagesSkipped": 168,
+    "pagesStillPending": 163,
+    "urlAliasesMerged": 7,
+    "formsFound": 1,
+    "visibleFormFields": 2,
+    "dataTables": 2,
+    "assetsReferenced": 602,
+    "assetsDownloaded": 559,
+    "externalLinks": 27,
+    "technologiesConfirmed": 17,
+    "technologiesInferred": 6
+  },
+  "coverage": {
+    "queueExhausted": false,
+    "limitThatStoppedTheCrawl": "maxPages=60",
+    "claim": "The crawl stopped at maxPages=60. The site is NOT fully explored: 163 in-scope URL(s) remained queued."
+  },
+  "urlAliases": {
+    "note": "This target runs on IIS/ASP.NET, which resolves paths case-insensitively and serves the same page with and without the `.aspx` extension. These URL spellings were reached during the crawl and proved to be the same page (identical title, text and form shape), so they are recorded as aliases instead of being counted as separate pages.",
+    "merged": [
+      {
+        "url": "https://career.uidai.gov.in/hi",
+        "sameAs": "https://career.uidai.gov.in/",
+        "basis": "alias key matched a captured page",
+        "via": "https://career.uidai.gov.in/"
+      },
+      {
+        "url": "https://uidai.gov.in/",
+        "landedOn": "https://uidai.gov.in/en",
+        "sameAs": "https://uidai.gov.in/en",
+        "basis": "identical title, text and form shape after navigation",
+        "via": "https://myaadhaarbeta.uidai.gov.in/genricDownloadAadhaar/en"
+      },
+      {
+        "url": "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "sameAs": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard",
+        "basis": "alias key matched a captured page",
+        "via": "https://uidai.gov.in/aadhaar-dashboard/enrollment-dashboard"
+      },
+      {
+        "url": "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "sameAs": "https://uidai.gov.in/aadhaar-dashboard/authentication-dashboard",
+        "basis": "alias key matched a captured page",
+        "via": "https://uidai.gov.in/aadhaar-dashboard/authentication-dashboard"
+      },
+      {
+        "url": "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "sameAs": "https://uidai.gov.in/aadhaar-dashboard/updates-dashboard",
+        "basis": "alias key matched a captured page",
+        "via": "https://uidai.gov.in/aadhaar-dashboard/updates-dashboard"
+      },
+      {
+        "url": "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "sameAs": "https://uidai.gov.in/aadhaar-dashboard/ekyc",
+        "basis": "alias key matched a captured page",
+        "via": "https://uidai.gov.in/aadhaar-dashboard/ekyc"
+      },
+      {
+        "url": "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "sameAs": "https://uidai.gov.in/aadhaar-dashboard/registered-devices",
+        "basis": "alias key matched a captured page",
+        "via": "https://uidai.gov.in/aadhaar-dashboard/registered-devices"
+      }
+    ]
+  },
+  "externalLinks": [
+    {
+      "url": "https://apps.apple.com/in/app/aadhaar/id6744029871",
+      "host": "apps.apple.com",
+      "texts": [],
+      "onPages": [
+        "https://uidai.gov.in/en",
+        "https://myaadhaarbeta.uidai.gov.in/"
+      ]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=in.gov.uidai.pehchaan&hl=en",
+      "host": "play.google.com",
+      "texts": [
+        "Aadhaar App"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/AadhaarOfficial/",
+      "host": "www.facebook.com",
+      "texts": [],
+      "onPages": [
+        "https://uidai.gov.in/en",
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/user/AadhaarUID",
+      "host": "www.youtube.com",
+      "texts": [],
+      "onPages": [
+        "https://uidai.gov.in/en",
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/aadhaar_official/?hl=en",
+      "host": "www.instagram.com",
+      "texts": [],
+      "onPages": [
+        "https://uidai.gov.in/en",
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ]
+    },
+    {
+      "url": "https://www.linkedin.com/company/unique-identification-authority-of-india-uidai-",
+      "host": "www.linkedin.com",
+      "texts": [],
+      "onPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ]
+    },
+    {
+      "url": "https://x.com/UIDAI",
+      "host": "x.com",
+      "texts": [],
+      "onPages": [
+        "https://uidai.gov.in/en",
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://career.uidai.gov.in/hi",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ]
+    },
+    {
+      "url": "https://bhuvan-app3.nrsc.gov.in/aadhaar/",
+      "host": "bhuvan-app3.nrsc.gov.in",
+      "texts": [
+        "Seva Kendra Locator"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en",
+        "https://uidai.gov.in/en/how-to-videos",
+        "https://uidai.gov.in/en/faq",
+        "https://uidai.gov.in/en/about-uidai",
+        "https://uidai.gov.in/en/vision-and-mission",
+        "https://uidai.gov.in/en/aadhaar-dashboard",
+        "https://uidai.gov.in/en/annual-reports",
+        "https://uidai.gov.in/en/updating-data-on-aadhaar",
+        "https://uidai.gov.in/en/documents",
+        "https://uidai.gov.in/en/enrolment-and-updates",
+        "https://uidai.gov.in/en/handbooks",
+        "https://uidai.gov.in/en/circulars",
+        "https://uidai.gov.in/en/policies",
+        "https://uidai.gov.in/en/developer-section",
+        "https://uidai.gov.in/en/ovse",
+        "https://uidai.gov.in/en/site-map",
+        "https://uidai.gov.in/en/website-policies",
+        "https://uidai.gov.in/en/website-help",
+        "https://uidai.gov.in/en/help",
+        "https://uidai.gov.in/en/resources",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=0",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=1",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=2",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=3",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=4",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=5",
+        "https://uidai.gov.in/en/how-to-videos?limit=8&page=11",
+        "https://uidai.gov.in/en/who-we-are",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/enrollment-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/authentication-dashboard",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/updates-dashboard",
+        "https://uidai.gov.in/en/aadhaar-dashboard/ekyc",
+        "https://uidai.gov.in/hi/aadhaar-dashboard/registered-devices",
+        "https://uidai.gov.in/en/transparency-accountability",
+        "https://uidai.gov.in/en/my-aadhaar",
+        "https://uidai.gov.in/en/understand-your-aadhaar",
+        "https://uidai.gov.in/en/annual-reports?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/handbooks?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/enrolment-and-updates?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/legal?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/announcements?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/notifications?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/policies?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/internship-policy?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/compendium?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/year-calendar?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/tenders?isFilter=false&source=documents&sourceTitle=Documents",
+        "https://uidai.gov.in/en/circulars-notifications-official-memorandums"
+      ]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=in.gov.uidai.pehchaan&hl=en_IN",
+      "host": "play.google.com",
+      "texts": [],
+      "onPages": [
+        "https://myaadhaarbeta.uidai.gov.in/"
+      ]
+    },
+    {
+      "url": "https://www.linkedin.com/company/unique-identification-authority-of-india-uidai-/posts/?feedView=all",
+      "host": "www.linkedin.com",
+      "texts": [],
+      "onPages": [
+        "https://myaadhaarbeta.uidai.gov.in/",
+        "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+        "https://myaadhaarbeta.uidai.gov.in/check-aadhaar-validity/en",
+        "https://myaadhaarbeta.uidai.gov.in/pvc/en",
+        "https://myaadhaarbeta.uidai.gov.in/genericGenerateOrRetrieveVID",
+        "https://myaadhaarbeta.uidai.gov.in/retrieve-eid-uid/en"
+      ]
+    },
+    {
+      "url": "https://bhuvan.nrsc.gov.in/aadhaar/",
+      "host": "bhuvan.nrsc.gov.in",
+      "texts": [
+        "Permanent Enrolment Centre"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/updating-data-on-aadhaar"
+      ]
+    },
+    {
+      "url": "base:get/files/media/document/2026-09/Aadhaar_Enrolment__and__Update__-__English.pdf",
+      "host": "",
+      "texts": [
+        "Aadhaar enrolment and update charges"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/site-map"
+      ]
+    },
+    {
+      "url": "base:get/files/media/document/2026-06/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update_1.pdf",
+      "host": "",
+      "texts": [
+        "List of accepted documents"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/site-map"
+      ]
+    },
+    {
+      "url": "base:get/files/media/document/2026-05/Citizen_Charter_Jan24.pdf",
+      "host": "",
+      "texts": [
+        "Citizens Charter"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/site-map"
+      ]
+    },
+    {
+      "url": "base:aadhaar-act",
+      "host": "",
+      "texts": [
+        "Aadhaar Act"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/site-map"
+      ]
+    },
+    {
+      "url": "base:aadhaar-dashboard",
+      "host": "",
+      "texts": [
+        "Aadhaar Dashboard"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/site-map"
+      ]
+    },
+    {
+      "url": "https://aadhaar.vikaspedia.in/",
+      "host": "aadhaar.vikaspedia.in",
+      "texts": [
+        "Aadhaar on Vikaspedia"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/site-map"
+      ]
+    },
+    {
+      "url": "https://get/files/media/document/2026-05/Content_Archival_PolicyCAP_UIDAI.pdf",
+      "host": "get",
+      "texts": [
+        "Content Archival Policy (CAP) PDF, 0.7 MB"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-policies"
+      ]
+    },
+    {
+      "url": "http://www.nvda-project.org/",
+      "host": "www.nvda-project.org",
+      "texts": [
+        "http://www.nvda-project.org/ (External website that opens in a new window)"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    },
+    {
+      "url": "http://www.satogo.com/",
+      "host": "www.satogo.com",
+      "texts": [
+        "http://www.satogo.com/ (External website that opens in a new window)"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    },
+    {
+      "url": "http://www.yourdolphin.co.uk/productdetail.asp?id=5",
+      "host": "www.yourdolphin.co.uk",
+      "texts": [
+        "http://www.yourdolphin.co.uk/productdetail.asp?id=5 (External website that opens in a new window)"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    },
+    {
+      "url": "http://www.yourdolphin.co.uk/productdetail.asp?id=1",
+      "host": "www.yourdolphin.co.uk",
+      "texts": [
+        "http://www.yourdolphin.co.uk/productdetail.asp?id=1 (External website that opens in a new window)"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    },
+    {
+      "url": "http://www.gwmicro.com/Window-Eyes/",
+      "host": "www.gwmicro.com",
+      "texts": [
+        "http://www.gwmicro.com/Window-Eyes/ (External website that opens in a new window)"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    },
+    {
+      "url": "http://www.adobe.com/products/acrobat/readstep2.html#_blank",
+      "host": "www.adobe.com",
+      "texts": [
+        "Adobe Acrobat Reader"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    },
+    {
+      "url": "http://www.adobe.com/products/acrobat/access_onlinetools.html#_blank",
+      "host": "www.adobe.com",
+      "texts": [
+        "Convert a PDF file online into HTML or text format"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    },
+    {
+      "url": "https://www.microsoft.com/en-in/download/",
+      "host": "www.microsoft.com",
+      "texts": [
+        "Word Viewer (in any version till 2003)",
+        "Excel Viewer 2003 (in any version till 2003)"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    },
+    {
+      "url": "http://www.microsoft.com/downloads/details.aspx?FamilyId=428D5727-43AB-4F24-90B7-A94784AF71A4&displaylang=en#_blank",
+      "host": "www.microsoft.com",
+      "texts": [
+        "PowerPoint Viewer 2003 (in any version till 2003)"
+      ],
+      "onPages": [
+        "https://uidai.gov.in/en/website-help"
+      ]
+    }
+  ],
+  "durationMs": 754661,
+  "workspaceBefore": {
+    "replicaRootExists": true,
+    "categories": {
+      "Aadhaar": {
+        "projects": [],
+        "strayFiles": []
+      },
+      "CCTNS": {
+        "projects": [],
+        "strayFiles": []
+      },
+      "E_Courts": {
+        "projects": [],
+        "strayFiles": []
+      },
+      "E_Forensics": {
+        "projects": [],
+        "strayFiles": []
+      },
+      "E_Prisons": {
+        "projects": [
+          "eprisons_nic_in"
+        ],
+        "strayFiles": []
+      }
+    }
+  },
+  "disclaimer": "This analysis supports an unofficial local demonstration replica for authorized development, testing and educational use. It is not affiliated with, endorsed by or operated by any government body."
+}

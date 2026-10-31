@@ -1,0 +1,252 @@
+{
+  "url": "https://hcservices.ecourts.gov.in/hcservices/?p=home",
+  "finalUrl": "https://hcservices.ecourts.gov.in/hcservices/?p=home",
+  "redirected": false,
+  "slug": "hcservices__5a58276b",
+  "depth": 3,
+  "via": "https://hcservices.ecourts.gov.in/hcservices/static_pages_for_HC/static/highcourts.php",
+  "httpStatus": 403,
+  "crawlStatus": "captured",
+  "title": "",
+  "lang": null,
+  "charset": "windows-1252",
+  "description": "",
+  "keywords": "",
+  "headings": [],
+  "headingTree": [],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "",
+  "textLength": 0,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 0,
+  "iframeCount": 0,
+  "htmlLength": 39,
+  "forms": [],
+  "orphanControls": [],
+  "tables": [],
+  "components": [],
+  "assets": [],
+  "links": [],
+  "fontFamilies": [
+    {
+      "value": "\"Times New Roman\"",
+      "count": 1
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 2
+      }
+    ],
+    "background": [],
+    "backgroundByArea": [],
+    "gradientsByArea": []
+  },
+  "bodyStyle": {
+    "fontFamily": "\"Times New Roman\"",
+    "fontSize": "16px",
+    "lineHeight": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": []
+  },
+  "responseHeaders": {
+    "content-length": "0",
+    "content-type": "text/html; charset=iso-8859-1",
+    "date": "Tue, 27 Oct 2026 08:59:15 GMT",
+    "expect-ct": "max-age=3600, enforce",
+    "referrer-policy": "strict-origin",
+    "server": "",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/?p=home",
+      "method": "GET",
+      "status": 403,
+      "resourceType": "document",
+      "contentType": "text/html; charset=iso-8859-1",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "0",
+        "content-type": "text/html; charset=iso-8859-1",
+        "date": "Tue, 27 Oct 2026 08:58:17 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "referrer-policy": "strict-origin",
+        "server": "",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/?p=home",
+      "method": "GET",
+      "status": 403,
+      "resourceType": "document",
+      "contentType": "text/html; charset=iso-8859-1",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "0",
+        "content-type": "text/html; charset=iso-8859-1",
+        "date": "Tue, 27 Oct 2026 08:58:21 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "referrer-policy": "strict-origin",
+        "server": "",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/?p=home",
+      "method": "GET",
+      "status": 403,
+      "resourceType": "document",
+      "contentType": "text/html; charset=iso-8859-1",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "0",
+        "content-type": "text/html; charset=iso-8859-1",
+        "date": "Tue, 27 Oct 2026 08:58:29 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "referrer-policy": "strict-origin",
+        "server": "",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/?p=home",
+      "method": "GET",
+      "status": 403,
+      "resourceType": "document",
+      "contentType": "text/html; charset=iso-8859-1",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "0",
+        "content-type": "text/html; charset=iso-8859-1",
+        "date": "Tue, 27 Oct 2026 08:58:45 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "referrer-policy": "strict-origin",
+        "server": "",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://hcservices.ecourts.gov.in/hcservices/?p=home",
+      "method": "GET",
+      "status": 403,
+      "resourceType": "document",
+      "contentType": "text/html; charset=iso-8859-1",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "0",
+        "content-type": "text/html; charset=iso-8859-1",
+        "date": "Tue, 27 Oct 2026 08:59:15 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "referrer-policy": "strict-origin",
+        "server": "",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 ()"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/hcservices__5a58276b.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/hcservices__5a58276b.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/hcservices__5a58276b.tablet.png",
+    "mobile": "reference_pages/screenshots/hcservices__5a58276b.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "throttleWaits": [
+    {
+      "status": 403,
+      "waitedMs": 4000,
+      "attempt": 1
+    },
+    {
+      "status": 403,
+      "waitedMs": 8000,
+      "attempt": 2
+    },
+    {
+      "status": 403,
+      "waitedMs": 16000,
+      "attempt": 3
+    },
+    {
+      "status": 403,
+      "waitedMs": 30000,
+      "attempt": 4
+    }
+  ],
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1215
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-27T08:59:19.697Z",
+  "pageType": "error"
+}

@@ -1,0 +1,1155 @@
+{
+  "generatedAt": "2026-10-27T09:30:04.789Z",
+  "measurementViewport": {
+    "name": "desktop",
+    "width": 1366,
+    "height": 900
+  },
+  "counts": {
+    "distinctComponents": 27,
+    "sharedAcrossPages": 0,
+    "byType": {
+      "footer": 5,
+      "modal": 9,
+      "button": 5,
+      "header": 3,
+      "form": 2,
+      "alert": 1,
+      "list": 1,
+      "nav": 1
+    }
+  },
+  "components": [
+    {
+      "componentId": "footer-3a06bb1e176e",
+      "type": "footer",
+      "tag": "div",
+      "classes": "modal-footer",
+      "idPattern": null,
+      "instanceCount": 3,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 21,
+        "medianX": 0,
+        "medianY": 1561,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Close",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-0aee8ef9cc03",
+      "type": "modal",
+      "tag": "div",
+      "classes": "modal-dialog",
+      "idPattern": null,
+      "instanceCount": 3,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 284,
+        "medianX": 0,
+        "medianY": 1208,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Close",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-c364f6985fcf",
+      "type": "modal",
+      "tag": "div",
+      "classes": "modal-content",
+      "idPattern": null,
+      "instanceCount": 3,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 284,
+        "medianX": 0,
+        "medianY": 1208,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 3,
+      "sampleText": "Close",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-db5bfa67e73d",
+      "type": "modal",
+      "tag": "div",
+      "classes": "modal-body",
+      "idPattern": null,
+      "instanceCount": 3,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 206,
+        "medianX": 0,
+        "medianY": 1317,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 3,
+      "sampleText": "National Crime Records Bureau National Highway - 8, Mahipalpur,New Delhi - 110037 Telephone:(011)26735450 Fax:(011)26782257Email:dct[at]ncrb[dot]nic[dot]in",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-82aa1d80c247",
+      "type": "modal",
+      "tag": "div",
+      "classes": "modal-footer",
+      "idPattern": null,
+      "instanceCount": 3,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 21,
+        "medianX": 0,
+        "medianY": 1561,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Close",
+      "behaviour": null
+    },
+    {
+      "componentId": "button-0c9fa744b0fb",
+      "type": "button",
+      "tag": "button",
+      "classes": "btn btn-primary",
+      "idPattern": null,
+      "instanceCount": 3,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 50,
+        "medianHeight": 21,
+        "medianX": 0,
+        "medianY": 1561,
+        "widthRange": [
+          50,
+          50
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(239, 239, 239)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "13.3333px",
+        "fontWeight": "400",
+        "fontFamily": "Arial",
+        "padding": "1px 6px",
+        "border": "2px outset rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 0,
+      "sampleText": "Close",
+      "behaviour": null
+    },
+    {
+      "componentId": "header-b56ab7ed2e92",
+      "type": "header",
+      "tag": "div",
+      "classes": "modal-header login",
+      "idPattern": null,
+      "instanceCount": 2,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 109,
+        "medianX": 0,
+        "medianY": 1582,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "27.3125px 27.3125px 13.6562px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0.48) 0px 4px 8px 0px",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "CONTACT US",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-eebde2fd98c3",
+      "type": "modal",
+      "tag": "div",
+      "classes": "modal-header login",
+      "idPattern": null,
+      "instanceCount": 2,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 109,
+        "medianX": 0,
+        "medianY": 1582,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "27.3125px 27.3125px 13.6562px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0.48) 0px 4px 8px 0px",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "CONTACT US",
+      "behaviour": null
+    },
+    {
+      "componentId": "header-c8c91c7b15a9",
+      "type": "header",
+      "tag": "div",
+      "classes": "header",
+      "idPattern": null,
+      "instanceCount": 2,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 80,
+        "medianX": 0,
+        "medianY": 0,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(0, 98, 204)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "5px 0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "CCTNSCrime and Criminal Tracking Network & Systems Logout Welcome: Date: dd/mm/yyyy Time: hh:mm Logout",
+      "behaviour": null
+    },
+    {
+      "componentId": "footer-820d0f6e6efb",
+      "type": "footer",
+      "tag": "div",
+      "classes": "col-md-12 footerWrapper",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 247,
+        "medianX": 0,
+        "medianY": 653,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(5, 21, 58)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "6.82812px 0px 2.71875px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "• फीडबैक / Feedback • संपर्क करें / Contact Us वेबसाइट सामग्री का प्रबंधन राष्ट्रीय अपराध रिकॉर्ड ब्यूरो, गृह मंत्रालय, भारत सरकार द्वारा किया जाता हैWebsite Content Managed By Nat",
+      "behaviour": null
+    },
+    {
+      "componentId": "footer-72b55e5ab55c",
+      "type": "footer",
+      "tag": "ul",
+      "classes": "footerLink",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 468,
+        "medianHeight": 21,
+        "medianX": 526,
+        "medianY": 668,
+        "widthRange": [
+          468,
+          468
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 2,
+      "sampleText": "• फीडबैक / Feedback • संपर्क करें / Contact Us",
+      "behaviour": null
+    },
+    {
+      "componentId": "footer-b0676ed1f7c4",
+      "type": "footer",
+      "tag": "div",
+      "classes": "col-md-6 fl footerAddress",
+      "idPattern": "footAddr",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 366,
+        "medianHeight": 122,
+        "medianX": 995,
+        "medianY": 659,
+        "widthRange": [
+          366,
+          366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 3,
+      "sampleText": "राष्ट्रीय अपराध रिकॉर्ड ब्यूरोराष्ट्रीय राजमार्ग - 8,सर्विस रोड, महिपालपुर, नई दिल्ली – 110037 National Crime Records BureauNational Highway - 8, Service Road, Mahipalpur, New Delh",
+      "behaviour": null
+    },
+    {
+      "componentId": "form-7eee8d7540fd",
+      "type": "form",
+      "tag": "form",
+      "classes": null,
+      "idPattern": "loginForm",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 984,
+        "medianHeight": 115,
+        "medianX": 224,
+        "medianY": 821,
+        "widthRange": [
+          984,
+          984
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 5,
+      "sampleText": "$(\"#captchaCenterCitizen\").attr(\"src\",\"retrieveImageCaptcha.htm\"); नीचे दिए गए टेक्स्टबॉक्स में यह कैरेक्टर दर्ज करें / Enter the characters in the textbox below कैरेक्टर केस सेंसि",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-003f98ac011e",
+      "type": "modal",
+      "tag": "body",
+      "classes": "loginBodyBG modal-open",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 1865,
+        "medianX": 0,
+        "medianY": 0,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(239, 235, 235)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 15,
+      "sampleText": "Close function popupModalErrorMessage(msg,id) { console.log('in popupmodal.jsp') document.getElementById(\"dangerAlert\").style=\"display:block;\"; document.getElementById(\"dangerAlert",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-cf9efae57f8b",
+      "type": "modal",
+      "tag": "div",
+      "classes": "modal fade",
+      "idPattern": "popupModal",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 57,
+        "medianX": 0,
+        "medianY": 0,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Close",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-b36c6c001963",
+      "type": "modal",
+      "tag": "div",
+      "classes": "modal fade",
+      "idPattern": "contactModal",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 374,
+        "medianX": 0,
+        "medianY": 1208,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "CONTACT US National Crime Records Bureau National Highway - 8, Mahipalpur,New Delhi - 110037 Telephone:(011)26735450 Fax:(011)26782257Email:dct[at]ncrb[dot]nic[dot]in Close",
+      "behaviour": null
+    },
+    {
+      "componentId": "modal-eb62a455f8c2",
+      "type": "modal",
+      "tag": "div",
+      "classes": "modal fade show",
+      "idPattern": "StaticDataModal",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 284,
+        "medianX": 0,
+        "medianY": 1582,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "सूचना यह सूचित किया जाता है कि डिजिटल पुलिस पोर्टल (digitalpolice.gov.in) में दिए गए लिंक एवं digitalpolicecitizenservices.gov.in के माध्यम से एनसीआरबी द्वारा शुरू की गई ‘वाहन एनओस",
+      "behaviour": null
+    },
+    {
+      "componentId": "alert-351296204efa",
+      "type": "alert",
+      "tag": "marquee",
+      "classes": null,
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 24,
+        "medianX": 0,
+        "medianY": 1008,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "यह सूचित किया जाता है कि डिजिटल पुलिस पोर्टल (digitalpolice.gov.in) में दिए गए लिंक एवं digitalpolicecitizenservices.gov.in के माध्यम से एनसीआरबी द्वारा शुरू की गई ‘वाहन एनओसी जनरे",
+      "behaviour": null
+    },
+    {
+      "componentId": "list-d617739aebf8",
+      "type": "list",
+      "tag": "ul",
+      "classes": "footerLink",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 468,
+        "medianHeight": 21,
+        "medianX": 526,
+        "medianY": 668,
+        "widthRange": [
+          468,
+          468
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 2,
+      "sampleText": "• फीडबैक / Feedback • संपर्क करें / Contact Us",
+      "behaviour": null
+    },
+    {
+      "componentId": "button-6c8375b22d67",
+      "type": "button",
+      "tag": "input",
+      "classes": "btnlogin",
+      "idPattern": "sendOtpID",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 156,
+        "medianHeight": 25,
+        "medianX": 429,
+        "medianY": 821,
+        "widthRange": [
+          156,
+          156
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(0, 98, 204)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "13.3333px",
+        "fontWeight": "600",
+        "fontFamily": "Arial",
+        "padding": "3.96875px 11.9219px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "24px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 0,
+      "sampleText": null,
+      "behaviour": null
+    },
+    {
+      "componentId": "button-730cd8704063",
+      "type": "button",
+      "tag": "input",
+      "classes": "btnlogin btnloginnew",
+      "idPattern": "submitCitizen",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 100,
+        "medianHeight": 21,
+        "medianX": 224,
+        "medianY": 936,
+        "widthRange": [
+          100,
+          100
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(0, 98, 204)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "13.3333px",
+        "fontWeight": "600",
+        "fontFamily": "Arial",
+        "padding": "2px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "24px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 0,
+      "sampleText": null,
+      "behaviour": null
+    },
+    {
+      "componentId": "button-07c61abe9bcc",
+      "type": "button",
+      "tag": "input",
+      "classes": "btnlogin view--proclaimed",
+      "idPattern": "proclaimedbtn",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+      ],
+      "measurements": {
+        "medianWidth": 382,
+        "medianHeight": 38,
+        "medianX": 324,
+        "medianY": 936,
+        "widthRange": [
+          382,
+          382
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(0, 98, 204)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "fontFamily": "Arial",
+        "padding": "9.6875px 29.0938px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "24px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 0,
+      "sampleText": null,
+      "behaviour": null
+    },
+    {
+      "componentId": "nav-3d8f159dbd66",
+      "type": "nav",
+      "tag": "ul",
+      "classes": "nav navbar-nav",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "measurements": {
+        "medianWidth": 70,
+        "medianHeight": 34,
+        "medianX": 1171,
+        "medianY": 5,
+        "widthRange": [
+          70,
+          70
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Welcome: Date: dd/mm/yyyy Time: hh:mm Logout",
+      "behaviour": null
+    },
+    {
+      "componentId": "form-7b7241e0d32d",
+      "type": "form",
+      "tag": "form",
+      "classes": null,
+      "idPattern": "feedbackForm",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "measurements": {
+        "medianWidth": 502,
+        "medianHeight": 759,
+        "medianX": 432,
+        "medianY": 203,
+        "widthRange": [
+          502,
+          502
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 12,
+      "sampleText": "First Name Last Name Mobile Number + Landline Number + Email Id Feedback Comments Enter the characters in the textbox below. Characters are case sensitive. $(\"#captchaFeedback\").at",
+      "behaviour": null
+    },
+    {
+      "componentId": "button-68504f17c212",
+      "type": "button",
+      "tag": "input",
+      "classes": "btn btn-primary",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm"
+      ],
+      "measurements": {
+        "medianWidth": 72,
+        "medianHeight": 35,
+        "medianX": 432,
+        "medianY": 879,
+        "widthRange": [
+          72,
+          72
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(13, 110, 253)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "0px 10px",
+        "border": "1px solid rgb(13, 110, 253)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 0,
+      "sampleText": null,
+      "behaviour": null
+    },
+    {
+      "componentId": "header-7c7ce4aa28f4",
+      "type": "header",
+      "tag": "div",
+      "classes": null,
+      "idPattern": "header",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "measurements": {
+        "medianWidth": 1585,
+        "medianHeight": 80,
+        "medianX": 102,
+        "medianY": 0,
+        "widthRange": [
+          1585,
+          1585
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(0, 98, 204)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "5px 109.266px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 3,
+      "sampleText": null,
+      "behaviour": null
+    },
+    {
+      "componentId": "footer-1d104a18f957",
+      "type": "footer",
+      "tag": "div",
+      "classes": null,
+      "idPattern": "footer",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout"
+      ],
+      "measurements": {
+        "medianWidth": 1347,
+        "medianHeight": 17,
+        "medianX": 14,
+        "medianY": 883,
+        "widthRange": [
+          1347,
+          1347
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "fontFamily": "Tahoma, Geneva, sans-serif",
+        "padding": "1px 5px 0px 3px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 2,
+      "sampleText": "This website belongs to National Crime Records Bureau, Ministry of Home Affairs, Government of India function backtoHome(){ changeLocationHref(\"login.htm\") }",
+      "behaviour": null
+    }
+  ],
+  "pageToComponents": [
+    {
+      "page": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "slug": "centercitizen_login.htm",
+      "pageType": "login",
+      "componentIds": [
+        "header-b56ab7ed2e92",
+        "footer-3a06bb1e176e",
+        "footer-820d0f6e6efb",
+        "footer-72b55e5ab55c",
+        "footer-b0676ed1f7c4",
+        "form-7eee8d7540fd",
+        "modal-003f98ac011e",
+        "modal-cf9efae57f8b",
+        "modal-0aee8ef9cc03",
+        "modal-c364f6985fcf",
+        "modal-db5bfa67e73d",
+        "modal-82aa1d80c247",
+        "modal-b36c6c001963",
+        "modal-eebde2fd98c3",
+        "modal-eb62a455f8c2",
+        "alert-351296204efa",
+        "list-d617739aebf8",
+        "button-0c9fa744b0fb",
+        "button-6c8375b22d67",
+        "button-730cd8704063",
+        "button-07c61abe9bcc"
+      ]
+    },
+    {
+      "page": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "slug": "centercitizen_feedback.htm",
+      "pageType": "contact",
+      "componentIds": [
+        "header-c8c91c7b15a9",
+        "nav-3d8f159dbd66",
+        "form-7b7241e0d32d",
+        "button-68504f17c212"
+      ]
+    },
+    {
+      "page": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+      "slug": "centercitizen_logout",
+      "pageType": "error",
+      "componentIds": [
+        "header-7c7ce4aa28f4",
+        "footer-1d104a18f957"
+      ]
+    }
+  ],
+  "note": "Components are grouped by tag + class signature, so one entry can represent the same header or card repeated across pages. Geometry is the median across instances; the per-page exact values stay in reference_pages/page_metadata/."
+}

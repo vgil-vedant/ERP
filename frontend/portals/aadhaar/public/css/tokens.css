@@ -1,0 +1,72 @@
+/* ---------------------------------------------------------------------------
+   Design tokens for the uidai.gov.in local demonstration replica.
+
+   These values are MEASURED from the original's computed styles during the
+   crawl (see the colour and font tables in reference_pages/page_metadata/).
+   They are written here as tokens so the replica can be compared against the
+   reference screenshots, and so base.css stays site-agnostic.
+
+   The page background is the colour that covers the most AREA on the original,
+   not the one used by the most elements -- a full-bleed gradient is one element
+   and a nav bar may be thirty. Measured page background share here: 0.74.
+
+   The original's emblems and logos are NOT reproduced; a neutral placeholder
+   mark stands in.
+--------------------------------------------------------------------------- */
+
+:root {
+  --brand:      #2f2b69;
+  --accent:     #1c1b3a;
+  --title-bar:  #d6d6e8;
+  --link:       #2f2b69;
+  --footer-bg:  #020348;
+  --footer-text:#c7d0d4;
+  --mark-bg:    #2f2b69;
+
+  --tile-a:     #2f2b69;
+  --tile-b:     #1c1b3a;
+  --tile-c:     #111111;
+
+  --body-text:  #000000;
+  --muted:      #8d989d;
+  --rule:       #cccccc;
+  --page-bg:    #ffffff;
+  --header-bg:  #ffffff;
+  --header-fg:  #000000;
+  --panel-bg:   #f6f8fa;
+  --input-bg:   #ffffff;
+  --surface:    #ffffff;
+
+  --demo-amber:    #8a5a00;
+  --demo-amber-bg: #fff4d6;
+  --ok:            #1d6f42;
+  --ok-bg:         #e6f4ea;
+  --err:           #a3281f;
+  --err-bg:        #fdeceb;
+
+  --font:    "Noto Sans", "Noto Sans Fallback", "Noto Sans Devanagari", "Noto Sans Devanagari Fallback", "Noto Sans Gujarati", "Noto Sans Gujarati Fallback", "Noto Sans Bengali", "Noto Sans Bengali Fallback", "Noto Sans Tamil", "Noto Sans Tamil Fallback", "Noto Sans Telugu", "Noto Sans Telugu Fallback", "Noto Sans Kannada", "Noto Sans Kannada Fallback", "Noto Sans Malayalam", "Noto Sans Malayalam Fallback", "Noto Sans Gurmukhi", "Noto Sans Gurmukhi Fallback", "Noto Sans Oriya", "Noto Sans Oriya Fallback", notoNastaliqUrdu, "notoNastaliqUrdu Fallback", Arial, sans-serif;
+  --fs-base: 16px;
+  --lh-base: 19px;
+  --shell:   1206px;
+}
+
+/* The original has no dark theme. These keep the demo legible if the viewer's
+   OS is dark, without claiming to mirror anything upstream. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
+    --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
+    --link: #7fb6e4; --footer-text: #b4bfc4;
+    --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
+    --ok-bg: #14301f; --ok: #7fd8a0;
+    --err-bg: #3a1a17; --err: #f09a90;
+  }
+}
+:root[data-theme="dark"] {
+  --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
+  --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
+  --link: #7fb6e4; --footer-text: #b4bfc4;
+  --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
+  --ok-bg: #14301f; --ok: #7fd8a0;
+  --err-bg: #3a1a17; --err: #f09a90;
+}

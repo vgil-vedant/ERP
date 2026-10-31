@@ -1,0 +1,712 @@
+{
+  "generatedAt": "2026-10-27T09:38:44.957Z",
+  "baseUrl": "http://127.0.0.1:4176",
+  "method": "Each replica route was rendered in Chromium at the same three viewports used for the reference capture, screenshotted full-page, and compared pixel by pixel with pixelmatch (threshold 0.18, anti-aliasing ignored). Images of differing height are padded to a common canvas, so a longer or shorter page counts as a difference rather than being cropped away. Comparison height is capped at 6000px.",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1366,
+      "height": 900
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "tolerance": 0.12,
+  "counts": {
+    "routesCompared": 4,
+    "comparable": 4,
+    "withinTolerance": 0,
+    "outsideTolerance": 4,
+    "replicaRoutesWithConsoleErrors": 0,
+    "replicaRoutesWithFailedRequests": 0
+  },
+  "rawDesktopDifferenceRatio": {
+    "mean": 0.4024,
+    "note": "Measured with the replica's demonstration banner left in place, so every row below it is displaced relative to the original. Reported for completeness; the banner-aligned figure below is the better measure of layout fidelity."
+  },
+  "desktopDifferenceRatio": {
+    "mean": 0.393,
+    "median": 0.4391,
+    "best": 0.2236,
+    "worst": 0.6666
+  },
+  "expectedDifferences": [
+    "A demonstration banner runs across the top of every replica page. The original has no such banner, so every page differs by that strip and everything below it is displaced downwards.",
+    "The official NPIP wordmark, the National Emblem and the NIC logo are replaced by a neutral placeholder mark, deliberately, so the replica cannot be mistaken for the official service.",
+    "The home page hero on the original is a photographic carousel. The replica uses a flat gradient: the photograph is government material that is not ours to redistribute.",
+    "Figures differ because the replica reports its own synthetic database, not the original's live statistics.",
+    "The original renders its select controls through the Chosen jQuery widget. The replica uses native selects, which the browser paints differently."
+  ],
+  "honesty": "These are measured pixel ratios from the images in reference_pages/screenshots/ and replica_screenshots/, with the diffs in comparison/. No similarity figure in this project is asserted without one of these measurements behind it, and no page is claimed to match the original exactly.",
+  "routes": [
+    {
+      "slug": "index",
+      "demoBannerHeightPx": 36,
+      "route": "/",
+      "originalUrl": "https://eforensics.gov.in/",
+      "pageType": "home",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 73
+        },
+        "nav": {
+          "x": 942,
+          "y": 56,
+          "w": 328,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 109,
+          "w": 1366,
+          "h": 1439
+        },
+        "footer": {
+          "x": 0,
+          "y": 1588,
+          "w": 1366,
+          "h": 218
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 1806
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1935,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1935
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1806
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -129,
+          "heightDeltaExcludingBanner": -165,
+          "raw": {
+            "differingPixels": 1094848,
+            "totalPixels": 2643210,
+            "differenceRatio": 0.4142,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 1160533,
+            "totalPixels": 2643210,
+            "differenceRatio": 0.4391,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/index.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.4391,
+          "similarity": 0.5609,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/index.desktop.png",
+          "replicaImage": "replica_screenshots/index.desktop.png",
+          "diffImage": "comparison/index.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 3000,
+          "referenceSize": {
+            "w": 768,
+            "h": 3540
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 2882
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -658,
+          "heightDeltaExcludingBanner": -694,
+          "raw": {
+            "differingPixels": 1009986,
+            "totalPixels": 2304000,
+            "differenceRatio": 0.4384,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 1027207,
+            "totalPixels": 2304000,
+            "differenceRatio": 0.4458,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/index.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.4458,
+          "similarity": 0.5542,
+          "heightCapped": true,
+          "referenceImage": "reference_pages/screenshots/index.tablet.png",
+          "replicaImage": "replica_screenshots/index.tablet.png",
+          "diffImage": "comparison/index.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 3000,
+          "referenceSize": {
+            "w": 390,
+            "h": 3930
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 3689
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": -241,
+          "heightDeltaExcludingBanner": -277,
+          "raw": {
+            "differingPixels": 305853,
+            "totalPixels": 1170000,
+            "differenceRatio": 0.2614,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 336121,
+            "totalPixels": 1170000,
+            "differenceRatio": 0.2873,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/index.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.2873,
+          "similarity": 0.7127,
+          "heightCapped": true,
+          "referenceImage": "reference_pages/screenshots/index.mobile.png",
+          "replicaImage": "replica_screenshots/index.mobile.png",
+          "diffImage": "comparison/index.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.4391,
+      "desktopRawDifferenceRatio": 0.4142
+    },
+    {
+      "slug": "home_contactus",
+      "demoBannerHeightPx": 36,
+      "route": "/Home/ContactUs",
+      "originalUrl": "https://eforensics.gov.in/Home/ContactUs",
+      "pageType": "contact",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 73
+        },
+        "nav": {
+          "x": 942,
+          "y": 56,
+          "w": 328,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 563,
+          "w": 1366,
+          "h": 385
+        },
+        "footer": {
+          "x": 0,
+          "y": 988,
+          "w": 1366,
+          "h": 218
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 109,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1206
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1206,
+          "referenceSize": {
+            "w": 1366,
+            "h": 935
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1206
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 271,
+          "heightDeltaExcludingBanner": 235,
+          "raw": {
+            "differingPixels": 1124182,
+            "totalPixels": 1647396,
+            "differenceRatio": 0.6824,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 1065366,
+            "totalPixels": 1598220,
+            "differenceRatio": 0.6666,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/home_contactus.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.6666,
+          "similarity": 0.3334,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/home_contactus.desktop.png",
+          "replicaImage": "replica_screenshots/home_contactus.desktop.png",
+          "diffImage": "comparison/home_contactus.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1492,
+          "referenceSize": {
+            "w": 768,
+            "h": 1081
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1492
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 411,
+          "heightDeltaExcludingBanner": 375,
+          "raw": {
+            "differingPixels": 812546,
+            "totalPixels": 1145856,
+            "differenceRatio": 0.7091,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 769811,
+            "totalPixels": 1118208,
+            "differenceRatio": 0.6884,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/home_contactus.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.6884,
+          "similarity": 0.3116,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/home_contactus.tablet.png",
+          "replicaImage": "replica_screenshots/home_contactus.tablet.png",
+          "diffImage": "comparison/home_contactus.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 1866,
+          "referenceSize": {
+            "w": 390,
+            "h": 1280
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 1866
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 586,
+          "heightDeltaExcludingBanner": 550,
+          "raw": {
+            "differingPixels": 575138,
+            "totalPixels": 727740,
+            "differenceRatio": 0.7903,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 558440,
+            "totalPixels": 713700,
+            "differenceRatio": 0.7825,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/home_contactus.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.7825,
+          "similarity": 0.2175,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/home_contactus.mobile.png",
+          "replicaImage": "replica_screenshots/home_contactus.mobile.png",
+          "diffImage": "comparison/home_contactus.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.6666,
+      "desktopRawDifferenceRatio": 0.6824
+    },
+    {
+      "slug": "login",
+      "demoBannerHeightPx": 36,
+      "route": "/Login",
+      "originalUrl": "https://eforensics.gov.in/Login",
+      "pageType": "login",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 73
+        },
+        "nav": {
+          "x": 942,
+          "y": 56,
+          "w": 328,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 143,
+          "w": 1366,
+          "h": 864
+        },
+        "footer": {
+          "x": 0,
+          "y": 1047,
+          "w": 1366,
+          "h": 218
+        },
+        "firstForm": {
+          "x": 463,
+          "y": 199,
+          "w": 440,
+          "h": 504
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 109,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1265
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1265,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1161
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1265
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 104,
+          "heightDeltaExcludingBanner": 68,
+          "raw": {
+            "differingPixels": 438917,
+            "totalPixels": 1727990,
+            "differenceRatio": 0.254,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 375403,
+            "totalPixels": 1678814,
+            "differenceRatio": 0.2236,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/login.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2236,
+          "similarity": 0.7764,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/login.desktop.png",
+          "replicaImage": "replica_screenshots/login.desktop.png",
+          "diffImage": "comparison/login.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1445,
+          "referenceSize": {
+            "w": 768,
+            "h": 1286
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1445
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 159,
+          "heightDeltaExcludingBanner": 123,
+          "raw": {
+            "differingPixels": 419314,
+            "totalPixels": 1109760,
+            "differenceRatio": 0.3778,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 364433,
+            "totalPixels": 1082112,
+            "differenceRatio": 0.3368,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/login.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.3368,
+          "similarity": 0.6632,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/login.tablet.png",
+          "replicaImage": "replica_screenshots/login.tablet.png",
+          "diffImage": "comparison/login.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 422,
+          "height": 1668,
+          "referenceSize": {
+            "w": 390,
+            "h": 1546
+          },
+          "replicaSize": {
+            "w": 422,
+            "h": 1668
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 122,
+          "heightDeltaExcludingBanner": 86,
+          "raw": {
+            "differingPixels": 334967,
+            "totalPixels": 703896,
+            "differenceRatio": 0.4759,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 340515,
+            "totalPixels": 688704,
+            "differenceRatio": 0.4944,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/login.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.4944,
+          "similarity": 0.5056,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/login.mobile.png",
+          "replicaImage": "replica_screenshots/login.mobile.png",
+          "diffImage": "comparison/login.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2236,
+      "desktopRawDifferenceRatio": 0.254
+    },
+    {
+      "slug": "forget_forgetpassword",
+      "demoBannerHeightPx": 36,
+      "route": "/Forget/ForgetPassword",
+      "originalUrl": "https://eforensics.gov.in/Forget/ForgetPassword",
+      "pageType": "content",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 73
+        },
+        "nav": {
+          "x": 942,
+          "y": 56,
+          "w": 328,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 143,
+          "w": 1366,
+          "h": 864
+        },
+        "footer": {
+          "x": 0,
+          "y": 1047,
+          "w": 1366,
+          "h": 218
+        },
+        "firstForm": {
+          "x": 463,
+          "y": 199,
+          "w": 440,
+          "h": 448
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 109,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1265
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1265,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1161
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1265
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 104,
+          "heightDeltaExcludingBanner": 68,
+          "raw": {
+            "differingPixels": 447336,
+            "totalPixels": 1727990,
+            "differenceRatio": 0.2589,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 407601,
+            "totalPixels": 1678814,
+            "differenceRatio": 0.2428,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/forget_forgetpassword.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2428,
+          "similarity": 0.7572,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/forget_forgetpassword.desktop.png",
+          "replicaImage": "replica_screenshots/forget_forgetpassword.desktop.png",
+          "diffImage": "comparison/forget_forgetpassword.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1445,
+          "referenceSize": {
+            "w": 768,
+            "h": 1286
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1445
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 159,
+          "heightDeltaExcludingBanner": 123,
+          "raw": {
+            "differingPixels": 430227,
+            "totalPixels": 1109760,
+            "differenceRatio": 0.3877,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 376625,
+            "totalPixels": 1082112,
+            "differenceRatio": 0.348,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/forget_forgetpassword.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.348,
+          "similarity": 0.652,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/forget_forgetpassword.tablet.png",
+          "replicaImage": "replica_screenshots/forget_forgetpassword.tablet.png",
+          "diffImage": "comparison/forget_forgetpassword.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 422,
+          "height": 1612,
+          "referenceSize": {
+            "w": 390,
+            "h": 1546
+          },
+          "replicaSize": {
+            "w": 422,
+            "h": 1612
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 66,
+          "heightDeltaExcludingBanner": 30,
+          "raw": {
+            "differingPixels": 364952,
+            "totalPixels": 680264,
+            "differenceRatio": 0.5365,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 379656,
+            "totalPixels": 665072,
+            "differenceRatio": 0.5708,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/E_Forensics/eforensics_gov_in/comparison/forget_forgetpassword.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.5708,
+          "similarity": 0.4292,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/forget_forgetpassword.mobile.png",
+          "replicaImage": "replica_screenshots/forget_forgetpassword.mobile.png",
+          "diffImage": "comparison/forget_forgetpassword.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2428,
+      "desktopRawDifferenceRatio": 0.2589
+    }
+  ]
+}

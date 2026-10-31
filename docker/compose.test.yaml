@@ -1,0 +1,15 @@
+# Test override: keeps the two SQLite databases in docker/.test-data on the host
+# so tests/e2e can read them, and runs the containers as the calling user so
+# both sides can write them.
+#
+#   mkdir -p docker/.test-data/platform docker/.test-data/erp
+#   ERP_UID=$(id -u) ERP_GID=$(id -g) docker compose -f compose.yaml -f docker/compose.test.yaml up -d --build
+services:
+  erp_api:
+    user: "${ERP_UID:-1000}:${ERP_GID:-1000}"
+    volumes:
+      - ./docker/.test-data/erp:/data/erp
+  platform_api:
+    user: "${ERP_UID:-1000}:${ERP_GID:-1000}"
+    volumes:
+      - ./docker/.test-data/platform:/data/platform

@@ -1,0 +1,281 @@
+<%#
+  eMulakat, "New Visitor Registration". Laid out as the original's page: a help row, then two cards
+  side by side ("Visitor Details" and "To Meet", the prisoner's details sitting inside the second),
+  then one box holding the verification question, the Submit button and the mandatory-fields line.
+  The placeholders are the original's own watermark texts. Field names, lengths and option lists are
+  transcribed from the live form's markup.
+%>
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%
+  const modes = [].concat(form.visit_mode || []);
+  const physical = !form.visit_mode || modes.includes('PHYSICAL');
+  const err = function (k) { return errors[k] ? 'aria-invalid="true"' : ''; };
+%>
+
+<main id="main">
+  <div class="shell">
+    <section class="section section--flush">
+
+      <% if (submitted) { %>
+        <div class="notice notice--ok" role="status">
+          <strong>Visit request recorded in the local demonstration.</strong>
+          Your demonstration registration number is
+          <span class="ref-no"><%= submitted.registrationNo %></span>.
+          Keep it to check the status on the
+          <a href="/public/MyVisitStatus">eMulakat Status</a> page.
+          <br><br>
+          This request exists only in this local database. Nothing was sent to
+          eprisons.nic.in or to any prison.
+        </div>
+      <% } %>
+
+      <% const errorKeys = Object.keys(errors); %>
+      <% if (errorKeys.length) { %>
+        <div class="notice notice--error" role="alert">
+          <strong>Please correct <%= errorKeys.length %> field<%= errorKeys.length === 1 ? '' : 's' %>.</strong>
+          <ul>
+            <% errorKeys.forEach(function (k) { %><li><%= errors[k] %></li><% }); %>
+          </ul>
+        </div>
+      <% } %>
+
+      <div class="vr-help">
+        <a class="vr-help__link" href="/public/eMulakatHelp" title="Help" target="_blank" rel="noopener">Click here for help</a>
+        <p class="vr-help__chars">Valid Characters include A-z, 0-9 and space.</p>
+      </div>
+
+      <form method="post" action="/public/MyVisitRegistration" novalidate>
+        <input type="hidden" name="challenge_expected" id="challenge_expected" value="<%= challenge.expected %>">
+
+        <div class="vr-cols">
+
+          <!-- ------------------------------------------------ visitor ---- -->
+          <section class="vr-card" aria-labelledby="vr-visitor">
+            <h2 class="vr-card__head" id="vr-visitor">Visitor Details</h2>
+            <div class="vr-card__body vr-grid">
+
+              <div class="vr-f vr-f--3">
+                <label for="visitor_name">Visitor Name <span class="req">*</span></label>
+                <input type="text" id="visitor_name" name="visitor_name" maxlength="30" required
+                       placeholder="Enter your Name" value="<%= form.visitor_name || '' %>" <%- err('visitor_name') %>>
+                <% if (errors.visitor_name) { %><span class="field__error"><%= errors.visitor_name %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="visitor_father_name">Father / Husband Name <span class="req">*</span></label>
+                <input type="text" id="visitor_father_name" name="visitor_father_name" maxlength="30" required
+                       placeholder="Enter Your Father Name" value="<%= form.visitor_father_name || '' %>" <%- err('visitor_father_name') %>>
+                <% if (errors.visitor_father_name) { %><span class="field__error"><%= errors.visitor_father_name %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--6">
+                <label for="visitor_address">Address <span class="req">*</span></label>
+                <input type="text" id="visitor_address" name="visitor_address" maxlength="150" required
+                       placeholder="Enter Your Address" value="<%= form.visitor_address || '' %>" <%- err('visitor_address') %>>
+                <% if (errors.visitor_address) { %><span class="field__error"><%= errors.visitor_address %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--2">
+                <label for="visitor_gender_id">Gender <span class="req">*</span></label>
+                <select id="visitor_gender_id" name="visitor_gender_id" required <%- err('visitor_gender_id') %>>
+                  <option value="">SELECT</option>
+                  <% ref.genders.forEach(function (g) { %>
+                    <option value="<%= g.id %>" <%= String(form.visitor_gender_id) === String(g.id) ? 'selected' : '' %>><%= g.name %></option>
+                  <% }); %>
+                </select>
+                <% if (errors.visitor_gender_id) { %><span class="field__error"><%= errors.visitor_gender_id %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--2">
+                <label for="visitor_age">Age <span class="req">*</span></label>
+                <input type="number" id="visitor_age" name="visitor_age" min="1" max="120" required
+                       placeholder="Enter Your Age" value="<%= form.visitor_age || '' %>" <%- err('visitor_age') %>>
+                <% if (errors.visitor_age) { %><span class="field__error"><%= errors.visitor_age %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--2">
+                <label for="relationship_id">Relation</label>
+                <select id="relationship_id" name="relationship_id">
+                  <option value="">SELECT</option>
+                  <% ref.relationships.forEach(function (r) { %>
+                    <option value="<%= r.id %>" <%= String(form.relationship_id) === String(r.id) ? 'selected' : '' %>><%= r.name %></option>
+                  <% }); %>
+                </select>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="id_proof_type_id">Identity Proof <span class="req">*</span></label>
+                <select id="id_proof_type_id" name="id_proof_type_id" data-idproof required <%- err('id_proof_type_id') %>>
+                  <option value="">SELECT</option>
+                  <% ref.idProofs.forEach(function (p) { %>
+                    <option value="<%= p.id %>" data-requires-number="<%= p.requires_number %>"
+                      <%= String(form.id_proof_type_id) === String(p.id) ? 'selected' : '' %>><%= p.name %></option>
+                  <% }); %>
+                </select>
+                <% if (errors.id_proof_type_id) { %><span class="field__error"><%= errors.id_proof_type_id %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="id_number">ID Number</label>
+                <input type="text" id="id_number" name="id_number" maxlength="20" placeholder="NA"
+                       value="<%= form.id_number || '' %>" <%- err('id_number') %>>
+                <% if (errors.id_number) { %><span class="field__error"><%= errors.id_number %></span><% } %>
+              </div>
+
+              <p class="vr-note vr-f--6">**Note: Please carry a valid id and address proof at the time of visit in jail.</p>
+
+              <div class="vr-f vr-f--6 vr-f--check">
+                <label class="vr-check" for="is_international">
+                  <input type="checkbox" id="is_international" name="is_international" value="1"
+                         <%= form.is_international ? 'checked' : '' %>>
+                  <span>International Visitor</span>
+                </label>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" maxlength="50"
+                       placeholder="Enter Your Email Id" value="<%= form.email || '' %>" <%- err('email') %>>
+                <% if (errors.email) { %><span class="field__error"><%= errors.email %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="mobile_no">Mobile No <span class="req">*</span></label>
+                <input type="tel" id="mobile_no" name="mobile_no" inputmode="numeric" required pattern="[6-9][0-9]{9}"
+                       placeholder="Enter Your Mobile Number" value="<%= form.mobile_no || '' %>" <%- err('mobile_no') %>>
+                <% if (errors.mobile_no) { %><span class="field__error"><%= errors.mobile_no %></span><% } %>
+              </div>
+            </div>
+          </section>
+
+          <!-- ------------------------------------------------ to meet ---- -->
+          <section class="vr-card" aria-labelledby="vr-tomeet">
+            <h2 class="vr-card__head" id="vr-tomeet">To Meet</h2>
+            <div class="vr-card__body vr-grid">
+
+              <div class="vr-f vr-f--3">
+                <label for="state_id">State <span class="req">*</span></label>
+                <select id="state_id" name="state_id" required data-cascade-source data-cascade-target="jail_id" <%- err('state_id') %>>
+                  <option value="">SELECT</option>
+                  <% ref.states.forEach(function (s) { %>
+                    <option value="<%= s.id %>" <%= String(form.state_id) === String(s.id) ? 'selected' : '' %>><%= s.name %></option>
+                  <% }); %>
+                </select>
+                <% if (errors.state_id) { %><span class="field__error"><%= errors.state_id %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="jail_id">Jail <span class="req">*</span></label>
+                <select id="jail_id" name="jail_id" required disabled data-selected="<%= form.jail_id || '' %>" <%- err('jail_id') %>>
+                  <option value="">SELECT</option>
+                </select>
+                <% if (errors.jail_id) { %><span class="field__error"><%= errors.jail_id %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="visit_date">Visit Date</label>
+                <input type="date" id="visit_date" name="visit_date" required value="<%= form.visit_date || '' %>" <%- err('visit_date') %>>
+                <% if (errors.visit_date) { %><span class="field__error"><%= errors.visit_date %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="additional_visitor_count">Additional Visitors</label>
+                <input type="number" id="additional_visitor_count" name="additional_visitor_count" min="0" max="9"
+                       value="<%= form.additional_visitor_count || 0 %>" <%- err('additional_visitor_count') %>>
+                <% if (errors.additional_visitor_count) { %><span class="field__error"><%= errors.additional_visitor_count %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--6">
+                <label for="additional_visitor_names">Additional Visitors Name</label>
+                <input type="text" id="additional_visitor_names" name="additional_visitor_names" maxlength="150" disabled
+                       placeholder="Enter additional visitors name with comma(,) separated"
+                       value="<%= form.additional_visitor_names || '' %>" <%- err('additional_visitor_names') %>>
+                <% if (errors.additional_visitor_names) { %><span class="field__error"><%= errors.additional_visitor_names %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="prisoner_name">Prisoner Name <span class="req">*</span></label>
+                <input type="text" id="prisoner_name" name="prisoner_name" maxlength="30" required
+                       placeholder="Enter Prisoner Name" value="<%= form.prisoner_name || '' %>" <%- err('prisoner_name') %>>
+                <% if (errors.prisoner_name) { %><span class="field__error"><%= errors.prisoner_name %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="prisoner_father_name">Father Name <span class="req">*</span></label>
+                <input type="text" id="prisoner_father_name" name="prisoner_father_name" maxlength="100" required
+                       placeholder="Enter Prisoner Father Name" value="<%= form.prisoner_father_name || '' %>" <%- err('prisoner_father_name') %>>
+                <% if (errors.prisoner_father_name) { %><span class="field__error"><%= errors.prisoner_father_name %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="prisoner_age">Prisoner Age <span class="req">*</span></label>
+                <input type="number" id="prisoner_age" name="prisoner_age" min="1" max="120" required
+                       placeholder="Enter Prisoner Age" value="<%= form.prisoner_age || '' %>" <%- err('prisoner_age') %>>
+                <% if (errors.prisoner_age) { %><span class="field__error"><%= errors.prisoner_age %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--3">
+                <label for="prisoner_gender_id">Gender <span class="req">*</span></label>
+                <select id="prisoner_gender_id" name="prisoner_gender_id" required <%- err('prisoner_gender_id') %>>
+                  <option value="">SELECT</option>
+                  <% ref.genders.forEach(function (g) { %>
+                    <option value="<%= g.id %>" <%= String(form.prisoner_gender_id) === String(g.id) ? 'selected' : '' %>><%= g.name %></option>
+                  <% }); %>
+                </select>
+                <% if (errors.prisoner_gender_id) { %><span class="field__error"><%= errors.prisoner_gender_id %></span><% } %>
+              </div>
+
+              <div class="vr-f vr-f--6">
+                <span class="vr-label" id="visit_mode_label">Visit Mode <span class="req">*</span></span>
+                <label class="vr-check" for="visit_mode_physical">
+                  <input type="hidden" name="visit_mode" value="VIDEO">
+                  <input type="checkbox" id="visit_mode_physical" name="visit_mode" value="PHYSICAL"
+                         aria-labelledby="visit_mode_label" <%= physical ? 'checked' : '' %>>
+                  <span>Physical</span>
+                </label>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ------------------------------------------- verification ---- -->
+        <div class="vr-verify">
+          <div class="vr-verify__row">
+            <span class="vr-verify__q" id="challenge_q"><%= challenge.question %></span>
+            <button type="button" class="vr-verify__refresh" id="challenge_refresh" title="Refresh Question" aria-label="Refresh the question">&#8635;</button>
+            <input type="text" id="challenge_answer" name="challenge_answer" maxlength="6" required autocomplete="off"
+                   aria-describedby="challenge_q" <%- err('challenge_answer') %>>
+            <button type="submit" class="vr-submit">Submit</button>
+          </div>
+          <% if (errors.challenge_answer) { %><span class="field__error"><%= errors.challenge_answer %></span><% } %>
+          <p class="vr-verify__caption">Type the answer to the question shown</p>
+          <p class="vr-verify__mandatory"><strong>(All Fields marked * are mandatory)</strong></p>
+        </div>
+      </form>
+
+      <details class="vr-notes">
+        <summary>About this demonstration form</summary>
+        <p>The field names, lengths and option lists on this page are transcribed from the live form's markup,
+        so this demonstration collects the same data in the same shape. Rules the original enforces only on
+        its server are this replica's own reasonable choices &mdash; see <code>replica/backend/validation.js</code>,
+        where each rule is marked <code>[OBS]</code> (observed) or <code>[REC]</code> (recommended here).</p>
+        <ul>
+          <li><strong>Verification.</strong> The original protects this form with a CAPTCHA image. This demonstration asks
+          a simple arithmetic question instead (the refresh button gives a new one): no CAPTCHA was reproduced, solved
+          or bypassed anywhere in this project.</li>
+          <li><strong>Age.</strong> 1&ndash;120. [REC] no age range is published by the original.</li>
+          <li><strong>Mobile No.</strong> 10 digits starting 6&ndash;9. [REC] the original's field allows 24 characters.</li>
+          <li><strong>Additional Visitors.</strong> 0&ndash;9. [OBS] the original's field accepts one digit.</li>
+          <li><strong>Visit Date.</strong> Starts as today's date, as on the original; the date cannot be in the past. [REC]</li>
+          <li><strong>Visit Mode.</strong> The "Physical" box is ticked by default here. Unticked, the request is recorded as a video visit.</li>
+          <li><strong>Help.</strong> On the original, "Click here for help" opens a PDF on the original site. This replica links to its own
+          summary page instead, because no page here may point at another host.</li>
+        </ul>
+      </details>
+    </section>
+  </div>
+</main>
+
+<script src="/static/js/visit-form.js" defer></script>
+<%- include('../partials/footer') %>

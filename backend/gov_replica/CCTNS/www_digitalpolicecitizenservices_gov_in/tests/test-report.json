@@ -1,0 +1,236 @@
+{
+  "generatedAt": "2026-10-27T09:42:00.006Z",
+  "hostname": "www.digitalpolicecitizenservices.gov.in",
+  "baseUrl": "http://127.0.0.1:4275",
+  "totals": {
+    "tests": 30,
+    "passed": 30,
+    "failed": 0
+  },
+  "byGroup": {
+    "routes": {
+      "passed": 6,
+      "failed": 0
+    },
+    "assets": {
+      "passed": 4,
+      "failed": 0
+    },
+    "isolation": {
+      "passed": 4,
+      "failed": 0
+    },
+    "validation": {
+      "passed": 6,
+      "failed": 0
+    },
+    "roundtrip": {
+      "passed": 3,
+      "failed": 0
+    },
+    "api": {
+      "passed": 2,
+      "failed": 0
+    },
+    "errors": {
+      "passed": 1,
+      "failed": 0
+    },
+    "audit": {
+      "passed": 3,
+      "failed": 0
+    },
+    "restart": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "failures": [],
+  "results": [
+    {
+      "name": "GET / -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /login.htm -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /feedback.htm -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /logout -> 404 (as on the original)",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /__about -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /__gaps -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/css/base.css",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/css/tokens.css",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/js/replica.js",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/img/demo-mark.svg",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no page references an off-host URL",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every form posts to a local path",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CSP restricts form-action to 'self'",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the demonstration notice is on every page",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centercitizen_login.htm_form0: an empty submission is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centercitizen_login.htm_form0: a wrong verification answer is reported",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centercitizen_login.htm_form0: over 10 chars in \"username\" is refused",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centercitizen_feedback.htm_form0: an empty submission is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centercitizen_feedback.htm_form0: a wrong verification answer is reported",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centercitizen_feedback.htm_form0: over 30 chars in \"First Name\" is refused",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a complete submission is accepted",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the submission is retrievable from the local API",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nothing secret-shaped was stored",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /api/meta returns the site model",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "an unknown reference list returns 404",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "an unknown path returns 404",
+      "group": "errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "submissions write an audit entry",
+      "group": "audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the audit trail cannot be rewritten",
+      "group": "audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the audit trail cannot be deleted from",
+      "group": "audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the replica serves again after a restart",
+      "group": "restart",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "notes": [
+    "These tests exercise the LOCAL replica only. No request in this suite reaches www.digitalpolicecitizenservices.gov.in or any other external host.",
+    "Routes the original itself answers with an error are asserted to answer the same way here.",
+    "What is not reproduced is listed in analysis/replication_gaps.json, not here."
+  ]
+}

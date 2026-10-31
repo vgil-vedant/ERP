@@ -1,0 +1,33 @@
+<%- include('layout-head') %>
+<h2>
+  Received records<% if (system) { %> &mdash; <code><%= system %></code><% } %>
+  <span style="font-weight:400;color:var(--muted)">(<%= rows.length %>)</span>
+</h2>
+<p style="font-size:13px;color:var(--muted);margin-top:0">
+  Filter:
+  <a href="/intake">all</a>
+  <% systems.forEach(function (s) { %> &middot; <a href="/intake?system=<%= s.code %>"><%= s.code %></a><% }); %>
+</p>
+<% if (!rows.length) { %>
+  <div class="empty">No records from this portal yet.</div>
+<% } else { %>
+  <table>
+    <tr><th>ERP ref</th><th>From</th><th>Form</th><th>Portal ref</th><th>Citizen</th><th>Fields</th></tr>
+    <% rows.forEach(function (r) { %>
+      <tr>
+        <td><code><%= r.intake_ref %></code><br><span style="font-size:11.5px;color:var(--muted)"><%= r.received_at %></span></td>
+        <td><span class="chip"><%= r.source_system %></span></td>
+        <td><%= r.subject || r.source_form %><% if (r.source_route) { %><br><code><%= r.source_route %></code><% } %></td>
+        <td><code><%= r.source_reference %></code></td>
+        <td><%= r.full_name || '—' %><% if (r.email) { %><br><span style="font-size:11.5px;color:var(--muted)"><%= r.email %></span><% } %></td>
+        <td class="fields">
+          <% if (!r.fields.length) { %>&mdash;<% } %>
+          <% r.fields.forEach(function (f) { %>
+            <div><strong><%= f.label || f.name %>:</strong> <%= f.value == null ? '—' : f.value %></div>
+          <% }); %>
+        </td>
+      </tr>
+    <% }); %>
+  </table>
+<% } %>
+<%- include('layout-foot') %>

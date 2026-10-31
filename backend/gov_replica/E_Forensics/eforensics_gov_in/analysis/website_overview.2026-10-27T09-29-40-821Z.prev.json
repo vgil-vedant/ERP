@@ -1,0 +1,284 @@
+{
+  "generatedAt": "2026-10-27T07:01:32.757Z",
+  "input": "eforensics.gov.in",
+  "initialUrl": "https://eforensics.gov.in",
+  "finalUrl": "https://eforensics.gov.in",
+  "redirectChain": [],
+  "redirectProblems": [],
+  "recoveredFromBrokenRedirect": false,
+  "hostname": "eforensics.gov.in",
+  "normalizedHostname": "eforensics_gov_in",
+  "scheme": "https",
+  "httpStatus": 200,
+  "category": {
+    "selected": "E_Forensics",
+    "confidence": "medium",
+    "status": "confirmed",
+    "decidedBy": "page content, strongest in navigation labels",
+    "wouldHoldWithoutHostname": true,
+    "governmentHost": true,
+    "evidence": [
+      {
+        "category": "E_Forensics",
+        "score": 42.41,
+        "contentScore": 22.41,
+        "hostScore": 20,
+        "topStrongTerms": [
+          {
+            "term": "e-forensic",
+            "weight": 16.25,
+            "where": [
+              {
+                "zone": "navLabels",
+                "occurrences": 3,
+                "weight": 14.77
+              },
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          },
+          {
+            "term": "forensic case",
+            "weight": 1,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 1,
+                "weight": 1
+              }
+            ]
+          }
+        ],
+        "topWeakTerms": [
+          {
+            "term": "forensic",
+            "weight": 5.16,
+            "where": [
+              {
+                "zone": "headings",
+                "occurrences": 1,
+                "weight": 2.16
+              },
+              {
+                "zone": "navLabels",
+                "occurrences": 3,
+                "weight": 2.66
+              },
+              {
+                "zone": "body",
+                "occurrences": 8,
+                "weight": 0.34
+              }
+            ]
+          }
+        ],
+        "hostHints": [
+          {
+            "hint": "eforensic",
+            "weight": 10
+          },
+          {
+            "hint": "forensic",
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "category": "CCTNS",
+        "score": 20.95,
+        "contentScore": 20.95,
+        "hostScore": 0,
+        "topStrongTerms": [
+          {
+            "term": "national crime records bureau",
+            "weight": 1.48,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          },
+          {
+            "term": "ncrb",
+            "weight": 19.2,
+            "where": [
+              {
+                "zone": "headings",
+                "occurrences": 3,
+                "weight": 17.73
+              },
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          }
+        ],
+        "topWeakTerms": [
+          {
+            "term": "crime",
+            "weight": 0.27,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 0.27
+              }
+            ]
+          }
+        ],
+        "hostHints": []
+      },
+      {
+        "category": "E_Courts",
+        "score": 1.71,
+        "contentScore": 1.71,
+        "hostScore": 0,
+        "topStrongTerms": [
+          {
+            "term": "case status",
+            "weight": 1.48,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          }
+        ],
+        "topWeakTerms": [
+          {
+            "term": "court",
+            "weight": 0.23,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 0.23
+              }
+            ]
+          }
+        ],
+        "hostHints": []
+      }
+    ],
+    "pagesConsidered": 3
+  },
+  "siteTitle": "Home",
+  "languages": [],
+  "crawlScope": {
+    "rootHost": "eforensics.gov.in",
+    "limits": {
+      "maxPages": 60,
+      "maxDepth": 4,
+      "navTimeoutMs": 45000,
+      "settleTimeoutMs": 3500,
+      "perRequestDelayMs": 1500,
+      "concurrency": 1,
+      "maxAssetBytes": 12582912,
+      "maxTotalRuntimeMs": 1500000,
+      "assetTimeoutMs": 30000,
+      "retriesPerUrl": 2,
+      "throttleBackoffMs": 4000
+    },
+    "robotsTxt": "absent (HTTP 404) - no crawl directives were published",
+    "sitemapXml": "absent (HTTP 404)",
+    "scopeRule": "same registrable host and its subdomains only; external hosts recorded as links, never crawled"
+  },
+  "counts": {
+    "pagesCaptured": 4,
+    "pagesFailed": 0,
+    "pagesPartial": 0,
+    "pagesSkipped": 1,
+    "pagesStillPending": 0,
+    "urlAliasesMerged": 0,
+    "formsFound": 2,
+    "visibleFormFields": 5,
+    "dataTables": 0,
+    "assetsReferenced": 45,
+    "assetsDownloaded": 44,
+    "externalLinks": 1,
+    "technologiesConfirmed": 16,
+    "technologiesInferred": 2
+  },
+  "coverage": {
+    "queueExhausted": true,
+    "limitThatStoppedTheCrawl": null,
+    "claim": "Every in-scope page reachable by link-following from the start URL, within the configured depth, was captured."
+  },
+  "urlAliases": {
+    "note": "This target runs on IIS/ASP.NET, which resolves paths case-insensitively and serves the same page with and without the `.aspx` extension. These URL spellings were reached during the crawl and proved to be the same page (identical title, text and form shape), so they are recorded as aliases instead of being counted as separate pages.",
+    "merged": []
+  },
+  "externalLinks": [
+    {
+      "url": "https://eforensics-v1.nic.in/",
+      "host": "eforensics-v1.nic.in",
+      "texts": [
+        "e-Forensic 1.0"
+      ],
+      "onPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ]
+    }
+  ],
+  "externalRedirects": {
+    "note": "In-scope URLs whose redirect led to another host. These were NOT captured: the crawl is authorized for this host only, so a third-party page is recorded as a reference and left alone.",
+    "hosts": [
+      {
+        "host": "janparichay.meripehchaan.gov.in",
+        "fromUrls": [
+          "https://eforensics.gov.in/Authorize/RedirectToAuthorization"
+        ],
+        "landedOn": "https://janparichay.meripehchaan.gov.in/v1/pehchaan/login.html?service=passive&active=true&rm_5=false&continue=https%3A%2F%2Fjan_com%2Fmail%2F&pp=1&scc=1&lmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&sid=eforensicsstagingfrrjc8nyqw-prod&v=2.0&lang=en&urlid=058a202a-0d46-46d0-9738-a8f7f0d3f214"
+      }
+    ]
+  },
+  "durationMs": 29168,
+  "workspaceBefore": {
+    "replicaRootExists": true,
+    "categories": {
+      "Aadhaar": {
+        "projects": [
+          "uidai_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "CCTNS": {
+        "projects": [
+          "www_digitalpolicecitizenservices_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Courts": {
+        "projects": [
+          "ecourts_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Forensics": {
+        "projects": [
+          "eforensics_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Prisons": {
+        "projects": [
+          "eprisons_nic_in"
+        ],
+        "strayFiles": []
+      }
+    }
+  },
+  "disclaimer": "This analysis supports an unofficial local demonstration replica for authorized development, testing and educational use. It is not affiliated with, endorsed by or operated by any government body."
+}

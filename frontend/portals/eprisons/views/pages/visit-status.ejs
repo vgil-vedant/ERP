@@ -1,0 +1,76 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section section--flush">
+
+  <% if (Object.keys(errors).length) { %>
+    <div class="notice notice--error card-narrow" role="alert"><strong>Please correct the form.</strong>
+      <ul><% Object.keys(errors).forEach(function (k) { %><li><%= errors[k] %></li><% }); %></ul>
+    </div>
+  <% } %>
+
+  <form method="post" action="/public/MyVisitStatus" novalidate class="card card-narrow">
+    <h2 class="card__head">Enter Your Registration No</h2>
+    <div class="card__body">
+      <input type="hidden" name="challenge_expected" value="<%= challenge.expected %>">
+
+      <div class="field field--inline">
+        <label for="registration_no">Registration No :</label>
+        <input type="text" id="registration_no" name="registration_no" maxlength="30" required
+               placeholder="Enter your Registration Number" value="<%= query %>"
+               <%= errors.registration_no ? 'aria-invalid="true"' : '' %>>
+        <% if (errors.registration_no) { %><span class="field__error"><%= errors.registration_no %></span><% } %>
+        <span class="field__hint">[OBS] maxlength=30 on the original's txtregno.</span>
+      </div>
+
+      <div class="field field--inline" style="margin-top:20px">
+        <span class="challenge__q" id="challenge_q"><%= challenge.question %></span>
+        <input type="text" id="challenge_answer" name="challenge_answer" maxlength="6" required
+               autocomplete="off" aria-describedby="challenge_q" aria-label="Answer to the verification question"
+               placeholder="Type the answer" <%= errors.challenge_answer ? 'aria-invalid="true"' : '' %>>
+        <% if (errors.challenge_answer) { %><span class="field__error"><%= errors.challenge_answer %></span><% } %>
+        <span class="field__hint">The original shows a CAPTCHA image here. This demonstration asks
+        an arithmetic question instead: no CAPTCHA was reproduced, solved or bypassed.</span>
+      </div>
+
+      <div class="actions" style="justify-content:center">
+        <button type="submit" class="btn btn--primary">Search</button>
+        <a class="btn btn--secondary" href="/public/MyVisitStatus">Clear</a>
+      </div>
+    </div>
+  </form>
+
+  <% if (result && !result.found) { %>
+    <div class="notice notice--error card-narrow" role="status">
+      <strong>No request found.</strong>
+      Nothing in this local demonstration carries the registration number
+      <code><%= result.registrationNo %></code>. Submit a request on the
+      <a href="/public/MyVisitRegistration">eMulakat</a> page to generate one.
+    </div>
+  <% } %>
+
+  <% if (result && result.found) { const v = result.visit; %>
+    <div class="card">
+      <h2 class="card__head">Visit Request <%= v.registration_no %></h2>
+      <div class="card__body">
+        <p style="margin:0 0 16px">Current status:
+          <span class="status-chip" data-status="<%= v.status %>"><%= v.status.replace(/_/g,' ') %></span></p>
+        <dl class="kv">
+          <dt>Registration Number</dt><dd><span class="ref-no"><%= v.registration_no %></span></dd>
+          <dt>Visitor</dt><dd><%= v.visitor_name %> (<%= v.visitor_gender || 'n/a' %>, age <%= v.visitor_age %>)</dd>
+          <dt>Father / Husband</dt><dd><%= v.visitor_father_name %></dd>
+          <dt>Relationship to prisoner</dt><dd><%= v.relationship_name || 'Not stated' %></dd>
+          <dt>Identity proof</dt><dd><%= v.id_proof_name || 'Not stated' %><%= v.id_number ? ' — ' + v.id_number : '' %></dd>
+          <dt>Mobile</dt><dd><%= v.mobile_no %></dd>
+          <dt>State / Jail</dt><dd><%= v.state_name %> — <%= v.jail_name %></dd>
+          <dt>Visit date</dt><dd><%= v.visit_date %> (<%= v.visit_mode %>)</dd>
+          <dt>Additional visitors</dt><dd><%= result.additionalVisitors.length ? result.additionalVisitors.join(', ') : 'None' %></dd>
+          <dt>Prisoner</dt><dd><%= v.prisoner_name %> (<%= v.prisoner_gender || 'n/a' %>, age <%= v.prisoner_age %>)</dd>
+          <dt>Submitted at</dt><dd><%= v.created_at %></dd>
+        </dl>
+        <p class="field__hint">All values above are synthetic demonstration data held in a local
+        SQLite file. The original's status workflow is not published and is not reproduced.</p>
+      </div>
+    </div>
+  <% } %>
+</section></div></main>
+<%- include('../partials/footer') %>

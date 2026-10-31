@@ -1,0 +1,256 @@
+{
+  "generatedAt": "2026-10-27T07:06:46.452Z",
+  "input": "digitalpolicecitizenservices.gov.in",
+  "initialUrl": "https://digitalpolicecitizenservices.gov.in",
+  "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+  "redirectChain": [
+    "https://www.digitalpolicecitizenservices.gov.in/centercitizen",
+    "https://www.digitalpolicecitizenservices.gov.in/centercitizen/",
+    "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm"
+  ],
+  "redirectProblems": [
+    {
+      "hop": 1,
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen",
+      "location": "http://www.digitalpolicecitizenservices.gov.in/centercitizen/",
+      "error": "the server redirected from https to plain http on the same host",
+      "note": "Downgrade refused: the request continued over https (https://www.digitalpolicecitizenservices.gov.in/centercitizen/).",
+      "kind": "protocol-downgrade"
+    },
+    {
+      "hop": 2,
+      "url": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/",
+      "location": "http://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "error": "the server redirected from https to plain http on the same host",
+      "note": "Downgrade refused: the request continued over https (https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm).",
+      "kind": "protocol-downgrade"
+    }
+  ],
+  "recoveredFromBrokenRedirect": false,
+  "hostname": "www.digitalpolicecitizenservices.gov.in",
+  "normalizedHostname": "www_digitalpolicecitizenservices_gov_in",
+  "scheme": "https",
+  "httpStatus": 200,
+  "category": {
+    "selected": "CCTNS",
+    "confidence": "medium",
+    "status": "confirmed",
+    "decidedBy": "page content, strongest in page title",
+    "wouldHoldWithoutHostname": true,
+    "governmentHost": true,
+    "evidence": [
+      {
+        "category": "CCTNS",
+        "score": 65.75,
+        "contentScore": 55.75,
+        "hostScore": 10,
+        "topStrongTerms": [
+          {
+            "term": "cctns",
+            "weight": 49.33,
+            "where": [
+              {
+                "zone": "title",
+                "occurrences": 1,
+                "weight": 30
+              },
+              {
+                "zone": "headings",
+                "occurrences": 3,
+                "weight": 17.73
+              },
+              {
+                "zone": "body",
+                "occurrences": 4,
+                "weight": 1.6
+              }
+            ]
+          },
+          {
+            "term": "crime and criminal tracking",
+            "weight": 1.6,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 4,
+                "weight": 1.6
+              }
+            ]
+          },
+          {
+            "term": "national crime records bureau",
+            "weight": 1.48,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          },
+          {
+            "term": "ncrb",
+            "weight": 1.3,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 1.3
+              }
+            ]
+          },
+          {
+            "term": "digital police",
+            "weight": 1.48,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 3,
+                "weight": 1.48
+              }
+            ]
+          }
+        ],
+        "topWeakTerms": [
+          {
+            "term": "crime",
+            "weight": 0.33,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 7,
+                "weight": 0.33
+              }
+            ]
+          },
+          {
+            "term": "fir",
+            "weight": 0.23,
+            "where": [
+              {
+                "zone": "body",
+                "occurrences": 2,
+                "weight": 0.23
+              }
+            ]
+          }
+        ],
+        "hostHints": [
+          {
+            "hint": "digitalpolice",
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "category": "Aadhaar",
+        "score": 0,
+        "contentScore": 0,
+        "hostScore": 0,
+        "topStrongTerms": [],
+        "topWeakTerms": [],
+        "hostHints": []
+      },
+      {
+        "category": "E_Courts",
+        "score": 0,
+        "contentScore": 0,
+        "hostScore": 0,
+        "topStrongTerms": [],
+        "topWeakTerms": [],
+        "hostHints": []
+      }
+    ],
+    "pagesConsidered": 3
+  },
+  "siteTitle": ":::CCTNS:::",
+  "languages": [
+    "en"
+  ],
+  "crawlScope": {
+    "rootHost": "www.digitalpolicecitizenservices.gov.in",
+    "limits": {
+      "maxPages": 60,
+      "maxDepth": 4,
+      "navTimeoutMs": 45000,
+      "settleTimeoutMs": 3500,
+      "perRequestDelayMs": 1500,
+      "concurrency": 1,
+      "maxAssetBytes": 12582912,
+      "maxTotalRuntimeMs": 1500000,
+      "assetTimeoutMs": 30000,
+      "retriesPerUrl": 2,
+      "throttleBackoffMs": 4000
+    },
+    "robotsTxt": "absent (HTTP 404) - no crawl directives were published",
+    "sitemapXml": "absent (HTTP 404)",
+    "scopeRule": "same registrable host and its subdomains only; external hosts recorded as links, never crawled"
+  },
+  "counts": {
+    "pagesCaptured": 3,
+    "pagesFailed": 0,
+    "pagesPartial": 0,
+    "pagesSkipped": 0,
+    "pagesStillPending": 0,
+    "urlAliasesMerged": 0,
+    "formsFound": 3,
+    "visibleFormFields": 14,
+    "dataTables": 0,
+    "assetsReferenced": 44,
+    "assetsDownloaded": 40,
+    "externalLinks": 0,
+    "technologiesConfirmed": 7,
+    "technologiesInferred": 2
+  },
+  "coverage": {
+    "queueExhausted": true,
+    "limitThatStoppedTheCrawl": null,
+    "claim": "Every in-scope page reachable by link-following from the start URL, within the configured depth, was captured."
+  },
+  "urlAliases": {
+    "note": "This target runs on IIS/ASP.NET, which resolves paths case-insensitively and serves the same page with and without the `.aspx` extension. These URL spellings were reached during the crawl and proved to be the same page (identical title, text and form shape), so they are recorded as aliases instead of being counted as separate pages.",
+    "merged": []
+  },
+  "externalLinks": [],
+  "externalRedirects": {
+    "note": "In-scope URLs whose redirect led to another host. These were NOT captured: the crawl is authorized for this host only, so a third-party page is recorded as a reference and left alone.",
+    "hosts": []
+  },
+  "durationMs": 94449,
+  "workspaceBefore": {
+    "replicaRootExists": true,
+    "categories": {
+      "Aadhaar": {
+        "projects": [
+          "uidai_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "CCTNS": {
+        "projects": [
+          "www_digitalpolicecitizenservices_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Courts": {
+        "projects": [
+          "ecourts_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Forensics": {
+        "projects": [
+          "eforensics_gov_in"
+        ],
+        "strayFiles": []
+      },
+      "E_Prisons": {
+        "projects": [
+          "eprisons_nic_in"
+        ],
+        "strayFiles": []
+      }
+    }
+  },
+  "disclaimer": "This analysis supports an unofficial local demonstration replica for authorized development, testing and educational use. It is not affiliated with, endorsed by or operated by any government body."
+}

@@ -1,0 +1,26 @@
+<%- include('layout-head') %>
+<h2>Audit trail <span style="font-weight:400;color:var(--muted)">(<%= rows.length %>)</span></h2>
+<p style="font-size:13px;color:var(--muted);margin-top:0">
+  Append-only, enforced by database triggers: <code>audit_log</code> rejects every
+  UPDATE and DELETE, so no role can alter it. Required by
+  <code>erp-scope.pdf</code> section 4.
+</p>
+<% if (!rows.length) { %>
+  <div class="empty">The trail is empty.</div>
+<% } else { %>
+  <table>
+    <tr><th>#</th><th>When</th><th>Entity</th><th>Action</th><th>Maker</th><th>Approver</th><th>Details</th></tr>
+    <% rows.forEach(function (r) { %>
+      <tr>
+        <td><%= r.id %></td>
+        <td><%= r.occurred_at %></td>
+        <td><%= r.entity %> <code><%= r.entity_id %></code></td>
+        <td><span class="chip"><%= r.action %></span></td>
+        <td><%= r.maker %></td>
+        <td><%= r.approver || '—' %></td>
+        <td style="color:var(--muted)"><%= r.details || '—' %></td>
+      </tr>
+    <% }); %>
+  </table>
+<% } %>
+<%- include('layout-foot') %>

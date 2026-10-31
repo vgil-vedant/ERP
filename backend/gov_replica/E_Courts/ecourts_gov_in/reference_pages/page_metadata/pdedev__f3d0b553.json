@@ -1,0 +1,137 @@
+{
+  "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/privacyPolicy",
+  "finalUrl": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/privacyPolicy",
+  "redirected": false,
+  "slug": "pdedev__f3d0b553",
+  "depth": 2,
+  "via": "https://filing.ecourts.gov.in/",
+  "httpStatus": 500,
+  "crawlStatus": "captured",
+  "title": "",
+  "lang": null,
+  "charset": "UTF-8",
+  "description": "",
+  "keywords": "",
+  "headings": [],
+  "headingTree": [],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "",
+  "textLength": 0,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 0,
+  "iframeCount": 0,
+  "htmlLength": 39,
+  "forms": [],
+  "orphanControls": [],
+  "tables": [],
+  "components": [],
+  "assets": [],
+  "links": [],
+  "fontFamilies": [
+    {
+      "value": "\"Times New Roman\"",
+      "count": 1
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 2
+      }
+    ],
+    "background": [],
+    "backgroundByArea": [],
+    "gradientsByArea": []
+  },
+  "bodyStyle": {
+    "fontFamily": "\"Times New Roman\"",
+    "fontSize": "16px",
+    "lineHeight": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": []
+  },
+  "responseHeaders": {
+    "cache-control": "no-store, no-cache, must-revalidate",
+    "connection": "close",
+    "content-length": "0",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Tue, 27 Oct 2026 08:56:25 GMT",
+    "expect-ct": "max-age=3600, enforce",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "pragma": "no-cache",
+    "referrer-policy": "strict-origin",
+    "server": "",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "network": [
+    {
+      "url": "https://filing.ecourts.gov.in/pdedev/?p=otherPages/privacyPolicy",
+      "method": "GET",
+      "status": 500,
+      "resourceType": "document",
+      "contentType": "text/html; charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "cache-control": "no-store, no-cache, must-revalidate",
+        "connection": "close",
+        "content-length": "0",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Tue, 27 Oct 2026 08:56:25 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "pragma": "no-cache",
+        "referrer-policy": "strict-origin",
+        "server": "",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-xss-protection": "1; mode=block",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/pdedev__f3d0b553.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/pdedev__f3d0b553.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/pdedev__f3d0b553.tablet.png",
+    "mobile": "reference_pages/screenshots/pdedev__f3d0b553.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "throttleWaits": [],
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1212
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-27T08:56:29.793Z",
+  "pageType": "error"
+}

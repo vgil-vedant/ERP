@@ -1,0 +1,434 @@
+{
+  "port": 4176,
+  "site": {
+    "name": "Home",
+    "hostname": "eforensics.gov.in",
+    "finalUrl": "https://eforensics.gov.in",
+    "category": "E_Forensics",
+    "categoryStatus": "confirmed",
+    "categoryConfidence": "medium",
+    "analysedOn": "2026-10-27",
+    "pagesCaptured": 4,
+    "formCount": 2,
+    "fieldCount": 5,
+    "assetCount": 44
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "FAQ",
+      "href": "#"
+    },
+    {
+      "label": "Contact Us",
+      "href": "/Home/ContactUs"
+    },
+    {
+      "label": "Login",
+      "href": "/Login",
+      "variant": "solid"
+    },
+    {
+      "label": "Login with JanParichay",
+      "href": "/Authorize/RedirectToAuthorization",
+      "variant": "outline"
+    },
+    {
+      "label": "e-Forensic 1.0",
+      "href": "/Home/eForensic1",
+      "variant": "outline"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "title": "Home",
+      "pageTitle": null,
+      "heading": "Home",
+      "pageType": "home",
+      "originalUrl": "https://eforensics.gov.in/",
+      "forms": [],
+      "tables": [],
+      "outline": [
+        {
+          "level": 4,
+          "text": "Welcome"
+        },
+        {
+          "level": 1,
+          "text": "Digitizing Forensic Labs for"
+        },
+        {
+          "level": 2,
+          "text": "Efficiency and Accuracy"
+        },
+        {
+          "level": 2,
+          "text": "Key Features"
+        },
+        {
+          "level": 3,
+          "text": "Automated Workflows"
+        },
+        {
+          "level": 3,
+          "text": "Seamless Data Sharing"
+        },
+        {
+          "level": 3,
+          "text": "Real-Time Dashboard"
+        },
+        {
+          "level": 2,
+          "text": "How It Works"
+        },
+        {
+          "level": 2,
+          "text": "Contact Us"
+        },
+        {
+          "level": 4,
+          "text": "1800 111 555"
+        },
+        {
+          "level": 4,
+          "text": "Get Direction"
+        },
+        {
+          "level": 4,
+          "text": "E-Mail : dct[at]ncrb[dot]nic[dot]in"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Digitizing Forensic Labs for",
+          "cards": [
+            {
+              "title": "Efficiency and Accuracy"
+            },
+            {
+              "title": "Key Features",
+              "detail": "Automated Workflows · Seamless Data Sharing · Real-Time Dashboard"
+            },
+            {
+              "title": "How It Works"
+            },
+            {
+              "title": "Contact Us",
+              "detail": "1800 111 555 · Get Direction · E-Mail : dct[at]ncrb[dot]nic[dot]in"
+            }
+          ]
+        }
+      ],
+      "visual": {
+        "pageBg": "#7887f3",
+        "pageBgShare": 0.676,
+        "onDark": true,
+        "headerBg": "#00143c",
+        "heroBg": "#7887f3",
+        "heroHeight": 420,
+        "measuredBy": "in-page area survey (gradients included)"
+      },
+      "centred": false,
+      "structureNote": null,
+      "noContentNote": "This page carried text content on the original. Its prose is <strong>not copied here</strong>: this replica does not republish government material. The heading structure above shows what the page contained."
+    },
+    {
+      "route": "/Home/ContactUs",
+      "title": "List of Districts",
+      "pageTitle": "List of Districts",
+      "heading": "List of Districts",
+      "pageType": "contact",
+      "originalUrl": "https://eforensics.gov.in/Home/ContactUs",
+      "forms": [],
+      "tables": [],
+      "outline": [
+        {
+          "level": 2,
+          "text": "Contact Us"
+        },
+        {
+          "level": 4,
+          "text": "1800 111 555"
+        },
+        {
+          "level": 4,
+          "text": "Get Direction"
+        },
+        {
+          "level": 4,
+          "text": "E-Mail : dct[at]ncrb[dot]nic[dot]in"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Contact Us",
+          "cards": [
+            {
+              "title": "1800 111 555"
+            },
+            {
+              "title": "Get Direction"
+            },
+            {
+              "title": "E-Mail : dct[at]ncrb[dot]nic[dot]in"
+            }
+          ]
+        }
+      ],
+      "visual": {
+        "pageBg": "#7887f3",
+        "pageBgShare": 0.619,
+        "onDark": true,
+        "headerBg": "#00143c",
+        "heroBg": "#7887f3",
+        "heroHeight": 420,
+        "measuredBy": "in-page area survey (gradients included)"
+      },
+      "centred": false,
+      "structureNote": null,
+      "noContentNote": "This page carried text content on the original. Its prose is <strong>not copied here</strong>: this replica does not republish government material. The heading structure above shows what the page contained."
+    },
+    {
+      "route": "/Login",
+      "title": "Login",
+      "pageTitle": "Login",
+      "heading": "Login",
+      "pageType": "login",
+      "originalUrl": "https://eforensics.gov.in/Login",
+      "forms": [
+        {
+          "id": "login_form0",
+          "heading": "Log In to Portal",
+          "submitLabel": "Sign In",
+          "referencePrefix": "DEMO",
+          "fields": [
+            {
+              "name": "user_name",
+              "originalName": "user_name",
+              "label": "user_name",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 30,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            },
+            {
+              "name": "user_password",
+              "originalName": "user_password",
+              "label": "user_password",
+              "type": "password",
+              "inputType": "password",
+              "required": false,
+              "maxLength": 30,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            },
+            {
+              "name": "captcha",
+              "originalName": "Captcha",
+              "label": "Captcha",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 6,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            }
+          ],
+          "captchaNote": "The original protects this form with a CAPTCHA. This demonstration asks a simple arithmetic question instead: no CAPTCHA was reproduced, solved or bypassed."
+        }
+      ],
+      "tables": [],
+      "outline": [
+        {
+          "level": 3,
+          "text": "Log In to Portal"
+        },
+        {
+          "level": 2,
+          "text": "Contact Us"
+        },
+        {
+          "level": 4,
+          "text": "1800 111 555"
+        },
+        {
+          "level": 4,
+          "text": "Get Direction"
+        },
+        {
+          "level": 4,
+          "text": "E-Mail : dct[at]ncrb[dot]nic[dot]in"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Contact Us",
+          "cards": []
+        }
+      ],
+      "visual": {
+        "pageBg": "#7887f3",
+        "pageBgShare": 0.636,
+        "onDark": true,
+        "headerBg": "#00143c",
+        "heroBg": "#7887f3",
+        "heroHeight": 420,
+        "measuredBy": "in-page area survey (gradients included)"
+      },
+      "centred": true,
+      "structureNote": "The field names, lengths and option lists below are transcribed from the live form's markup, so this demonstration collects the same data in the same shape. It is never submitted anywhere but this local server.",
+      "noContentNote": null
+    },
+    {
+      "route": "/Forget/ForgetPassword",
+      "title": "Forgot Password",
+      "pageTitle": "Forgot Password",
+      "heading": "Forgot Password",
+      "pageType": "content",
+      "originalUrl": "https://eforensics.gov.in/Forget/ForgetPassword",
+      "forms": [
+        {
+          "id": "forget_forgetpassword_form0",
+          "heading": "Forgot Password",
+          "submitLabel": "Confirm",
+          "referencePrefix": "DEMO",
+          "fields": [
+            {
+              "name": "user_name",
+              "originalName": "user_name",
+              "label": "user_name",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 30,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            },
+            {
+              "name": "captcha",
+              "originalName": "Captcha",
+              "label": "Captcha",
+              "type": "text",
+              "inputType": "text",
+              "required": false,
+              "maxLength": 6,
+              "pattern": null,
+              "options": null,
+              "wide": false
+            }
+          ],
+          "captchaNote": "The original protects this form with a CAPTCHA. This demonstration asks a simple arithmetic question instead: no CAPTCHA was reproduced, solved or bypassed."
+        }
+      ],
+      "tables": [],
+      "outline": [
+        {
+          "level": 3,
+          "text": "Forgot Password"
+        },
+        {
+          "level": 2,
+          "text": "Contact Us"
+        },
+        {
+          "level": 4,
+          "text": "1800 111 555"
+        },
+        {
+          "level": 4,
+          "text": "Get Direction"
+        },
+        {
+          "level": 4,
+          "text": "E-Mail : dct[at]ncrb[dot]nic[dot]in"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Contact Us",
+          "cards": []
+        }
+      ],
+      "visual": {
+        "pageBg": "#7887f3",
+        "pageBgShare": 0.655,
+        "onDark": true,
+        "headerBg": "#00143c",
+        "heroBg": "#7887f3",
+        "heroHeight": 420,
+        "measuredBy": "in-page area survey (gradients included)"
+      },
+      "centred": true,
+      "structureNote": "The field names, lengths and option lists below are transcribed from the live form's markup, so this demonstration collects the same data in the same shape. It is never submitted anywhere but this local server.",
+      "noContentNote": null
+    },
+    {
+      "route": "/Authorize/RedirectToAuthorization",
+      "title": "Login with JanParichay",
+      "pageTitle": null,
+      "heading": "Login with JanParichay",
+      "pageType": "info",
+      "originalUrl": "https://eforensics.gov.in/Authorize/RedirectToAuthorization",
+      "forms": [],
+      "tables": [],
+      "outline": [],
+      "sections": [],
+      "visual": {
+        "pageBg": "#7887f3",
+        "pageBgShare": 0.619,
+        "onDark": true,
+        "headerBg": "#00143c",
+        "heroBg": "#7887f3",
+        "heroHeight": 420,
+        "measuredBy": "in-page area survey (gradients included)"
+      },
+      "centred": false
+    },
+    {
+      "route": "/Home/eForensic1",
+      "title": "e-Forensic 1.0",
+      "pageTitle": null,
+      "heading": "e-Forensic 1.0",
+      "pageType": "info",
+      "originalUrl": "https://eforensics.gov.in/",
+      "forms": [],
+      "tables": [],
+      "outline": [],
+      "sections": [],
+      "visual": {
+        "pageBg": "#7887f3",
+        "pageBgShare": 0.619,
+        "onDark": true,
+        "headerBg": "#00143c",
+        "heroBg": "#7887f3",
+        "heroHeight": 420,
+        "measuredBy": "in-page area survey (gradients included)"
+      },
+      "centred": false
+    }
+  ],
+  "tables": [],
+  "referenceLists": {},
+  "cascadeLists": {},
+  "errorRoutes": [],
+  "gapMeanings": {
+    "incomplete-interaction": "A form on the original was never submitted, so its real success and error states were never observed.",
+    "uncertain-technology": "Detected by inference rather than direct evidence.",
+    "missing-asset": "A referenced asset could not be downloaded.",
+    "platform-internal-asset": "Framework plumbing the replica does not use.",
+    "external-dependency": "Hosted on another domain; recorded rather than downloaded.",
+    "inaccessible-page": "The page could not be captured.",
+    "skipped-url": "Not crawled as a page (a document, or beyond the configured depth).",
+    "dynamic-navigation": "The menu is built in the browser and can differ between loads."
+  }
+}

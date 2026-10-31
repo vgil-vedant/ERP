@@ -1,0 +1,37 @@
+<footer class="site-footer">
+  <div class="shell site-footer__cols">
+    <div class="site-footer__col">
+      <h2 class="site-footer__h">IN THIS DEMONSTRATION</h2>
+      <ul class="footer-links">
+        <% nav.slice(0, 8).forEach(function (item) { %>
+          <li><a href="<%= item.href %>"><%= item.label %></a></li>
+        <% }); %>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <h2 class="site-footer__h">ABOUT THIS REPLICA</h2>
+      <address>
+        Unofficial local demonstration of <code><%= site.hostname %></code>.<br>
+        Placeholder details only &mdash; no real office is represented.<br>
+        Not operated by any government body.
+      </address>
+    </div>
+    <div class="site-footer__col">
+      <p style="font-size:12px;margin:0"><strong>Served from:</strong><br>127.0.0.1 (local demo)</p>
+    </div>
+  </div>
+  <div class="site-footer__bar">
+    <div class="shell site-footer__bar-inner">
+      <p>Unofficial local demonstration for development and testing.</p>
+      <ul class="footer-legal">
+        <li><a href="/__about">About this replica</a></li>
+        <li><a href="/__gaps">What is not reproduced</a></li>
+      </ul>
+      <p class="footer-note">Replica of a public portal. Not affiliated with, endorsed by,
+      or operated by any government agency.</p>
+    </div>
+  </div>
+</footer>
+<script src="/static/js/replica.js" defer></script>
+</body>
+</html>

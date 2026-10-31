@@ -1,0 +1,58 @@
+<%- include('_head') %>
+<div class="wrap wide">
+  <div class="panel">
+    <h1>My account</h1>
+
+    <% if (justRegistered) { %>
+      <div class="good">
+        Registered. This one account now works on every portal &mdash; and your details
+        are already in the ERP database as <code><%= person.erpCitizenRef || person.personRef %></code>.
+      </div>
+    <% } %>
+
+    <dl>
+      <dt>Name</dt><dd><%= person.fullName %></dd>
+      <dt>Email</dt><dd><%= person.email %></dd>
+      <dt>Mobile</dt><dd><%= person.mobile || '—' %></dd>
+      <dt>Reference</dt><dd><code><%= person.personRef %></code></dd>
+      <dt>Registered</dt><dd><%= person.registeredOn %>, via <%= person.registeredVia %></dd>
+      <dt>In the ERP as</dt>
+      <dd><% if (person.erpCitizenRef) { %><code><%= person.erpCitizenRef %></code>
+          <% } else { %>&mdash;<% } %></dd>
+    </dl>
+
+    <h1 style="font-size:17px">My submissions across all portals (<%= submissions.length %>)</h1>
+    <p class="lede">
+      Every record below was entered on one portal and written to two databases: this
+      one and the ERP's. The <strong>ERP ref</strong> column is the proof.
+    </p>
+
+    <% if (!submissions.length) { %>
+      <p class="hint">
+        Nothing submitted yet. Open any portal above and fill in a form &mdash; it will
+        appear here and in the ERP console at the same time.
+      </p>
+    <% } else { %>
+      <table>
+        <tr><th>Portal</th><th>Form</th><th>Portal ref</th><th>ERP ref</th><th>When</th></tr>
+        <% submissions.forEach(function (s) { %>
+          <tr>
+            <td><%= s.site %></td>
+            <td><%= s.heading || s.route %><br><code><%= s.route %></code></td>
+            <td><code><%= s.reference %></code></td>
+            <td><% if (s.erpRef) { %><code><%= s.erpRef %></code><% } else { %>&mdash;<% } %></td>
+            <td><%= s.createdAt %></td>
+          </tr>
+        <% }); %>
+      </table>
+    <% } %>
+
+    <%- include('_portals') %>
+
+    <form method="post" action="/account/logout" style="margin-top:22px">
+      <button type="submit" class="logout">Sign out of all portals</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

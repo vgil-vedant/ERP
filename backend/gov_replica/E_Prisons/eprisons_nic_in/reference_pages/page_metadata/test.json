@@ -1,0 +1,186 @@
+{
+  "url": "https://eprisons.nic.in/Test",
+  "finalUrl": "https://eprisons.nic.in/Test",
+  "redirected": false,
+  "slug": "test",
+  "depth": 2,
+  "via": "https://eprisons.nic.in/NPIP/public/SelectMISState.aspx",
+  "httpStatus": 404,
+  "crawlStatus": "captured",
+  "title": "404 - File or directory not found.",
+  "lang": null,
+  "charset": "windows-1252",
+  "description": "",
+  "keywords": "",
+  "headings": [
+    "Server Error",
+    "404 - File or directory not found.",
+    "The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+  ],
+  "headingTree": [
+    {
+      "level": 1,
+      "text": "Server Error"
+    },
+    {
+      "level": 2,
+      "text": "404 - File or directory not found."
+    },
+    {
+      "level": 3,
+      "text": "The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "Server Error 404 - File or directory not found. The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+  "textLength": 158,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 0,
+  "iframeCount": 0,
+  "htmlLength": 1104,
+  "forms": [],
+  "orphanControls": [],
+  "tables": [],
+  "components": [
+    {
+      "type": "header",
+      "selector": "#header",
+      "tag": "div",
+      "classes": null,
+      "id": "header",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 43
+      },
+      "text": "Server Error",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(85, 85, 85)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "11.2px",
+        "fontWeight": "400",
+        "fontFamily": "\"trebuchet MS\", Verdana, sans-serif",
+        "padding": "6px 27.3125px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [],
+  "links": [],
+  "fontFamilies": [
+    {
+      "value": "Verdana, Arial, Helvetica, sans-serif",
+      "count": 5
+    },
+    {
+      "value": "\"trebuchet MS\", Verdana, sans-serif",
+      "count": 2
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 6
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 2
+      },
+      {
+        "value": "rgb(204, 0, 0)",
+        "count": 1
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(238, 238, 238)",
+        "count": 1
+      },
+      {
+        "value": "rgb(85, 85, 85)",
+        "count": 1
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 1
+      }
+    ]
+  },
+  "bodyStyle": {
+    "fontFamily": "Verdana, Arial, Helvetica, sans-serif",
+    "fontSize": "11.2px",
+    "lineHeight": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgb(238, 238, 238)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": []
+  },
+  "responseHeaders": {
+    "content-length": "1245",
+    "content-type": "text/html",
+    "date": "Mon, 26 Oct 2026 11:45:59 GMT",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "network": [
+    {
+      "url": "https://eprisons.nic.in/Test",
+      "method": "GET",
+      "status": 404,
+      "resourceType": "document",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-length": "1245",
+        "content-type": "text/html",
+        "date": "Mon, 26 Oct 2026 11:45:59 GMT",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/test.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/test.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/test.tablet.png",
+    "mobile": "reference_pages/screenshots/test.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1214
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-26T11:46:03.706Z",
+  "pageType": "error"
+}

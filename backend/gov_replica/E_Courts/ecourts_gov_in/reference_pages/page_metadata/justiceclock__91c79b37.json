@@ -1,0 +1,1379 @@
+{
+  "url": "https://justiceclock.ecourts.gov.in/justiceClock/?p=home/index",
+  "finalUrl": "https://justiceclock.ecourts.gov.in/justiceClock/?p=home/index",
+  "redirected": false,
+  "slug": "justiceclock__91c79b37",
+  "depth": 2,
+  "via": "https://justiceclock.ecourts.gov.in/justiceClock/",
+  "httpStatus": 200,
+  "crawlStatus": "captured",
+  "title": "eCourts- Virtual Justice Clock",
+  "lang": "en",
+  "charset": "UTF-8",
+  "description": "eCourts- Virtual Justice Clock for District Courts",
+  "keywords": "",
+  "headings": [
+    "VIRTUAL JUSTICE CLOCK FOR DISTRICT JUDICIARY OF INDIA",
+    "INSTITUTION, DISPOSAL & CASE CLEARANCE RATE"
+  ],
+  "headingTree": [
+    {
+      "level": 1,
+      "text": "VIRTUAL JUSTICE CLOCK FOR DISTRICT JUDICIARY OF INDIA"
+    },
+    {
+      "level": 2,
+      "text": "INSTITUTION, DISPOSAL & CASE CLEARANCE RATE"
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "VIRTUAL JUSTICE CLOCK FOR DISTRICT JUDICIARY OF INDIA Tuesday, 27/10/2026 2:14:20 pm INSTITUTION, DISPOSAL & CASE CLEARANCE RATE State ALL STATES ANDAMAN AND NICOBAR ANDHRA PRADESH ARUNACHAL PRADESH ASSAM BIHAR CHANDIGARH CHHATTISGARH DELHI GOA GUJARAT HARYANA HIMACHAL PRADESH JAMMU AND KASHMIR JHARKHAND KARNATAKA KERALA LADAKH LAKSHADWEEP MADHYA PRADESH MAHARASHTRA MANIPUR MEGHALAYA MIZORAM NAGALAND ODISHA PUDUCHERRY PUNJAB RAJASTHAN SIKKIM TAMIL NADU TELANGANA THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU TRIPURA UTTARAKHAND UTTAR PRADESH WEST BENGAL District ALL DISTRICTS Establishment ALL ESTABLISHMENTS DURATION INSTITUTION DISPOSAL CCR Today 32796 6598 20% Last Day 44691 29794 67% Last Week 275018 159710 58% Last Month 4163505 3473258 83% This Year 24296711 20521705 84% Last Year 26769658 25344146 95% Last Reviewed and Updated on : 16-04-2026 B2 < >",
+  "textLength": 872,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 2,
+  "iframeCount": 0,
+  "htmlLength": 9758,
+  "forms": [],
+  "orphanControls": [
+    {
+      "tag": "select",
+      "type": "select",
+      "name": "fstate_code",
+      "id": "fstate_code",
+      "selector": "#fstate_code",
+      "label": "State",
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "",
+      "visible": true,
+      "replacedByWidget": false,
+      "functionalField": true,
+      "box": {
+        "x": 12,
+        "y": 126,
+        "w": 431,
+        "h": 60
+      },
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": "form-select form-select-lg",
+      "multiple": false,
+      "options": [
+        {
+          "value": "",
+          "text": "ALL STATES",
+          "selected": true
+        },
+        {
+          "value": "28",
+          "text": "ANDAMAN AND NICOBAR",
+          "selected": false
+        },
+        {
+          "value": "2",
+          "text": "ANDHRA PRADESH",
+          "selected": false
+        },
+        {
+          "value": "36",
+          "text": "ARUNACHAL PRADESH",
+          "selected": false
+        },
+        {
+          "value": "6",
+          "text": "ASSAM",
+          "selected": false
+        },
+        {
+          "value": "8",
+          "text": "BIHAR",
+          "selected": false
+        },
+        {
+          "value": "27",
+          "text": "CHANDIGARH",
+          "selected": false
+        },
+        {
+          "value": "18",
+          "text": "CHHATTISGARH",
+          "selected": false
+        },
+        {
+          "value": "26",
+          "text": "DELHI",
+          "selected": false
+        },
+        {
+          "value": "30",
+          "text": "GOA",
+          "selected": false
+        },
+        {
+          "value": "17",
+          "text": "GUJARAT",
+          "selected": false
+        },
+        {
+          "value": "14",
+          "text": "HARYANA",
+          "selected": false
+        },
+        {
+          "value": "5",
+          "text": "HIMACHAL PRADESH",
+          "selected": false
+        },
+        {
+          "value": "12",
+          "text": "JAMMU AND KASHMIR",
+          "selected": false
+        },
+        {
+          "value": "7",
+          "text": "JHARKHAND",
+          "selected": false
+        },
+        {
+          "value": "3",
+          "text": "KARNATAKA",
+          "selected": false
+        },
+        {
+          "value": "4",
+          "text": "KERALA",
+          "selected": false
+        },
+        {
+          "value": "33",
+          "text": "LADAKH",
+          "selected": false
+        },
+        {
+          "value": "37",
+          "text": "LAKSHADWEEP",
+          "selected": false
+        },
+        {
+          "value": "23",
+          "text": "MADHYA PRADESH",
+          "selected": false
+        },
+        {
+          "value": "1",
+          "text": "MAHARASHTRA",
+          "selected": false
+        },
+        {
+          "value": "25",
+          "text": "MANIPUR",
+          "selected": false
+        },
+        {
+          "value": "21",
+          "text": "MEGHALAYA",
+          "selected": false
+        },
+        {
+          "value": "19",
+          "text": "MIZORAM",
+          "selected": false
+        },
+        {
+          "value": "34",
+          "text": "NAGALAND",
+          "selected": false
+        },
+        {
+          "value": "11",
+          "text": "ODISHA",
+          "selected": false
+        },
+        {
+          "value": "35",
+          "text": "PUDUCHERRY",
+          "selected": false
+        },
+        {
+          "value": "22",
+          "text": "PUNJAB",
+          "selected": false
+        },
+        {
+          "value": "9",
+          "text": "RAJASTHAN",
+          "selected": false
+        },
+        {
+          "value": "24",
+          "text": "SIKKIM",
+          "selected": false
+        },
+        {
+          "value": "10",
+          "text": "TAMIL NADU",
+          "selected": false
+        },
+        {
+          "value": "29",
+          "text": "TELANGANA",
+          "selected": false
+        },
+        {
+          "value": "38",
+          "text": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+          "selected": false
+        },
+        {
+          "value": "20",
+          "text": "TRIPURA",
+          "selected": false
+        },
+        {
+          "value": "15",
+          "text": "UTTARAKHAND",
+          "selected": false
+        },
+        {
+          "value": "13",
+          "text": "UTTAR PRADESH",
+          "selected": false
+        },
+        {
+          "value": "16",
+          "text": "WEST BENGAL",
+          "selected": false
+        }
+      ],
+      "optionCount": 37,
+      "looksDependent": false
+    },
+    {
+      "tag": "select",
+      "type": "select",
+      "name": "fdist_code",
+      "id": "fdist_code",
+      "selector": "#fdist_code",
+      "label": "District",
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "",
+      "visible": true,
+      "replacedByWidget": false,
+      "functionalField": true,
+      "box": {
+        "x": 467,
+        "y": 126,
+        "w": 431,
+        "h": 60
+      },
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": "form-select form-select-lg",
+      "multiple": false,
+      "options": [
+        {
+          "value": "",
+          "text": "ALL DISTRICTS",
+          "selected": true
+        }
+      ],
+      "optionCount": 1,
+      "looksDependent": true
+    },
+    {
+      "tag": "select",
+      "type": "select",
+      "name": "fest_code",
+      "id": "fest_code",
+      "selector": "#fest_code",
+      "label": "Establishment",
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "",
+      "visible": true,
+      "replacedByWidget": false,
+      "functionalField": true,
+      "box": {
+        "x": 923,
+        "y": 126,
+        "w": 431,
+        "h": 60
+      },
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": "form-select form-select-lg",
+      "multiple": false,
+      "options": [
+        {
+          "value": "",
+          "text": "ALL ESTABLISHMENTS",
+          "selected": true
+        }
+      ],
+      "optionCount": 1,
+      "looksDependent": true
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": null,
+      "id": "currentPage",
+      "selector": "#currentPage",
+      "label": "B2",
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "1",
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": null,
+      "id": "jud_cat",
+      "selector": "#jud_cat",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "1",
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "base_url",
+      "id": "base_url",
+      "selector": "#base_url",
+      "label": "×",
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "/justiceClock",
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "app_token",
+      "id": "app_token",
+      "selector": "#app_token",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "sessionlangid",
+      "id": "sessionlangid",
+      "selector": "#sessionlangid",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "level1",
+      "id": "level1",
+      "selector": "#level1",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "link_id",
+      "id": "link_id",
+      "selector": "#link_id",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    }
+  ],
+  "tables": [
+    {
+      "selector": "#div_cat > table.table.table-lg",
+      "id": null,
+      "caption": null,
+      "headers": [
+        "DURATION",
+        "INSTITUTION",
+        "DISPOSAL",
+        "CCR"
+      ],
+      "columnCount": 4,
+      "rowCount": 7,
+      "sampleRows": [
+        [
+          "DURATION",
+          "INSTITUTION",
+          "DISPOSAL",
+          "CCR"
+        ],
+        [
+          "Today",
+          "32796",
+          "6598",
+          "20%"
+        ],
+        [
+          "Last Day",
+          "44691",
+          "29794",
+          "67%"
+        ],
+        [
+          "Last Week",
+          "275018",
+          "159710",
+          "58%"
+        ],
+        [
+          "Last Month",
+          "4163505",
+          "3473258",
+          "83%"
+        ]
+      ],
+      "box": {
+        "x": 12,
+        "y": 194,
+        "w": 1342,
+        "h": 441
+      },
+      "isLayoutTable": false
+    }
+  ],
+  "components": [
+    {
+      "type": "table",
+      "selector": "#div_cat > table.table.table-lg",
+      "tag": "table",
+      "classes": "table table-lg table-bordered rounded",
+      "id": null,
+      "box": {
+        "x": 12,
+        "y": 194,
+        "w": 1342,
+        "h": 441
+      },
+      "text": "DURATION INSTITUTION DISPOSAL CCR Today 32796 6598 20% Last Day 44691 29794 67% Last Week 275018 159710 58% Last Month 4163505 3473258 83% This Year 24296711 20521705 84% Last Year",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(2, 13, 33)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "40.98px",
+        "fontWeight": "700",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px 16px",
+        "border": "2px solid rgb(5, 51, 62)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "display": "table",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#toggleBtn",
+      "tag": "button",
+      "classes": "btn btn-info fixed-bottom m-1 text-dark",
+      "id": "toggleBtn",
+      "box": {
+        "x": 16,
+        "y": 655,
+        "w": 72,
+        "h": 42
+      },
+      "text": "< >",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgb(0, 170, 255)",
+        "color": "rgb(33, 33, 33)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "10px 24px",
+        "margin": "4px",
+        "border": "1px solid rgb(0, 170, 255)",
+        "borderRadius": "8px",
+        "boxShadow": "none",
+        "display": "inline-block",
+        "position": "sticky",
+        "textAlign": "center",
+        "zIndex": "1030"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/images/emblem.svg",
+      "category": "images",
+      "alt": "emblem of India",
+      "natural": {
+        "w": 58,
+        "h": 100
+      },
+      "rendered": {
+        "x": 12,
+        "y": 8,
+        "w": 35,
+        "h": 60
+      },
+      "loading": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/images/ecourts-logo.png",
+      "category": "images",
+      "alt": "ecourts logo",
+      "natural": {
+        "w": 79,
+        "h": 79
+      },
+      "rendered": {
+        "x": 51,
+        "y": 8,
+        "w": 60,
+        "h": 60
+      },
+      "loading": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/css/chosen.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/UX4G/css/ux4g-min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/fontawesome-free/css/all.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/css/app.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/jquery.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/jquery.validate.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/chosen.jquery.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/js/ecourts.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/UX4G/js/ux4g.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/js/home.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    }
+  ],
+  "links": [
+    {
+      "href": "https://justiceclock.ecourts.gov.in/justiceClock/?p=main/index",
+      "raw": "/justiceClock/?p=main/index",
+      "text": "",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "×",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "×",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "×",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "×",
+      "kind": "non-navigational",
+      "target": null
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "count": 51
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 63
+      },
+      {
+        "value": "rgb(97, 58, 245)",
+        "count": 3
+      },
+      {
+        "value": "rgb(0, 221, 247)",
+        "count": 3
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 1
+      },
+      {
+        "value": "rgb(33, 33, 33)",
+        "count": 1
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(2, 13, 33)",
+        "count": 5
+      },
+      {
+        "value": "rgb(0, 170, 255)",
+        "count": 1
+      }
+    ],
+    "backgroundByArea": [
+      {
+        "value": "rgb(2, 13, 33)",
+        "area": 1898802
+      },
+      {
+        "value": "rgb(0, 170, 255)",
+        "area": 3024
+      }
+    ],
+    "gradientsByArea": []
+  },
+  "bodyStyle": {
+    "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "fontSize": "15.2px",
+    "lineHeight": "22.8px",
+    "color": "rgb(255, 255, 255)",
+    "backgroundColor": "rgb(2, 13, 33)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": [
+      "jQuery",
+      "$",
+      "bootstrap"
+    ]
+  },
+  "responseHeaders": {
+    "cache-control": "no-store, no-cache, must-revalidate",
+    "content-length": "7431",
+    "content-type": "text/html; charset=utf-8",
+    "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+    "date": "Tue, 27 Oct 2026 08:44:18 GMT",
+    "expect-ct": "max-age=3600, enforce",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "pragma": "no-cache",
+    "referrer-policy": "strict-origin",
+    "server": "",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN\nSAMEORIGIN",
+    "x-xss-protection": "1; mode=block\n1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/?p=home/index",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "cache-control": "no-store, no-cache, must-revalidate",
+        "content-length": "7431",
+        "content-type": "text/html; charset=utf-8",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "date": "Tue, 27 Oct 2026 08:44:18 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "pragma": "no-cache",
+        "referrer-policy": "strict-origin",
+        "server": "",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN\nSAMEORIGIN",
+        "x-xss-protection": "1; mode=block\n1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/jquery.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "78748",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:31 GMT",
+        "content-type": "application/javascript",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/jquery.validate.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "26414",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:31 GMT",
+        "content-type": "application/javascript",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/chosen.jquery.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "28400",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:31 GMT",
+        "content-type": "application/javascript",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/css/chosen.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "11060",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:42 GMT",
+        "content-type": "text/css",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/js/ecourts.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "41389",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:14 GMT",
+        "content-type": "application/javascript",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/UX4G/js/ux4g.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "59994",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "application/javascript",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/UX4G/css/ux4g-min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "269512",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "text/css",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/fontawesome-free/css/all.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "73673",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:42 GMT",
+        "content-type": "text/css",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/vendor/css/app.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "55050",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:42 GMT",
+        "content-type": "text/css",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/images/emblem.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "210842",
+        "date": "Tue, 27 Oct 2026 08:43:54 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "image/svg+xml",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/fonts/NotoSans-400.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13120",
+        "date": "Tue, 27 Oct 2026 08:43:55 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "font/woff2",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/fonts/NotoSansDevanagari-400.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "50416",
+        "date": "Tue, 27 Oct 2026 08:43:55 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "font/woff2",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/fonts/NotoSans-500.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13496",
+        "date": "Tue, 27 Oct 2026 08:43:55 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "font/woff2",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/fonts/NotoSansDevanagari-500.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "53620",
+        "date": "Tue, 27 Oct 2026 08:43:55 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "font/woff2",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/fonts/NotoSans-700.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13464",
+        "date": "Tue, 27 Oct 2026 08:43:55 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "font/woff2",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/images/ecourts-logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "11157",
+        "date": "Tue, 27 Oct 2026 08:44:18 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:48 GMT",
+        "content-type": "image/png",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/js/home.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "4410",
+        "date": "Tue, 27 Oct 2026 08:44:18 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 13:09:14 GMT",
+        "content-type": "application/javascript",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://justiceclock.ecourts.gov.in/justiceClock/?p=home/getCategory1",
+      "method": "POST",
+      "status": 200,
+      "resourceType": "xhr",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "cache-control": "no-store, no-cache, must-revalidate",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "pragma": "no-cache",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "content-length": "2839",
+        "date": "Tue, 27 Oct 2026 08:44:18 GMT",
+        "x-xss-protection": "1; mode=block, 1; mode=block",
+        "content-type": "text/html; charset=utf-8",
+        "server": "",
+        "x-frame-options": "SAMEORIGIN, SAMEORIGIN"
+      },
+      "isXhr": true,
+      "postDataPresent": true
+    }
+  ],
+  "consoleIssues": [],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/justiceclock__91c79b37.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/justiceclock__91c79b37.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/justiceclock__91c79b37.tablet.png",
+    "mobile": "reference_pages/screenshots/justiceclock__91c79b37.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "throttleWaits": [],
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1213
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-27T08:44:22.974Z",
+  "pageType": "listing"
+}

@@ -1,0 +1,2700 @@
+{
+  "generatedAt": "2026-10-26T11:48:33.278Z",
+  "referenced": 150,
+  "downloaded": 139,
+  "failed": 7,
+  "skippedExternal": 4,
+  "unavailableByDesign": 0,
+  "byteIdenticalDuplicates": 9,
+  "totalBytes": 11134364,
+  "byCategory": {
+    "images": 50,
+    "icons": 0,
+    "fonts": 4,
+    "stylesheets": 21,
+    "scripts": 62,
+    "documents": 2
+  },
+  "licensingNote": "Asset reuse is limited. Government of India websites generally reserve copyright in their content and emblems; the National Emblem and official seals are additionally protected by the State Emblem of India (Prohibition of Improper Use) Act, 2005. Assets are retained here as analysis evidence for an internal, clearly-labelled demonstration. The replica substitutes a neutral placeholder mark for official emblems and logos so it cannot be mistaken for an official service.",
+  "method": "Only assets referenced by a captured page were fetched. No URL was guessed or enumerated. Certificate verification was enabled for every download.",
+  "assets": [
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/logo.png",
+      "localPath": "original_assets/images/logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 2459,
+      "sha256": "84fe18e1cbd7791ba3f12f9441ea47fb57ab9aa257db099292f3933942892ede",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/banner1.jpg",
+      "localPath": "original_assets/images/banner1.jpg",
+      "category": "images",
+      "mimeType": "image/jpeg",
+      "bytes": 245170,
+      "sha256": "4b5e57e15ed85d33db568bf72f5d9d6ad4e46a4620f3d71e348746cee1828cc0",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/banner2.jpg",
+      "localPath": "original_assets/images/banner2.jpg",
+      "category": "images",
+      "mimeType": "image/jpeg",
+      "bytes": 325006,
+      "sha256": "945d721243ce54302308ba2320e43713dbccde1e6465eec975b278382becc2f2",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/signup_icon.png",
+      "localPath": "original_assets/images/signup_icon.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1057,
+      "sha256": "208daf99992478576dde6fe87fef109f3f55b08a990b4edbe7cdaa5a891d7dd6",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/status_print_icon.png",
+      "localPath": "original_assets/images/status_print_icon.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 978,
+      "sha256": "0a9219cc36373f051bdfd07dfc2dc0dfed4f7baf39300e4f778f9e2511cc9c9a",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/cart_icon.png",
+      "localPath": "original_assets/images/cart_icon.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 999,
+      "sha256": "ac1e9a0f84d245ee4e935bb133fe2a0ae75330e930614ecfea7d82e7ff8b9b64",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/aadhaar_logo.png",
+      "localPath": "original_assets/images/aadhaar_logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1733,
+      "sha256": "1a82e261266539cd111493eb4511df2d430cdd4b5afbcf77b142284fa67bb54e",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/grievances_icon.png",
+      "localPath": "original_assets/images/grievances_icon.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1450,
+      "sha256": "790cc731abc15242e682d4248f5707c4dee035da639f9da9ddc88600e860d386",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/online_registration_icon.png",
+      "localPath": "original_assets/images/online_registration_icon.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1506,
+      "sha256": "35d29f3555d9d95821b05dc4187d3fcdfbc591514550392c7d8901165fa25b89",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/icon8.png",
+      "localPath": "original_assets/images/icon8.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1887,
+      "sha256": "ab20b4f3df3eca34d1373b50cb0a041d9ec9004c376b4da33bc6fb3e40615684",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/icon7.png",
+      "localPath": "original_assets/images/icon7.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1690,
+      "sha256": "07320f9a626ef5f2c14f8d8f3a8f8dc4c369b328bfc299dd4fbbdc3ced74abd4",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/icon5.png",
+      "localPath": "original_assets/images/icon5.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1614,
+      "sha256": "4c5a8a3c958e0b39c9f8846de22d21741a4b928d09fa72094a1fadd09fbe76aa",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/nic_logo.png",
+      "localPath": "original_assets/images/nic_logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 4826,
+      "sha256": "ddfbd7f8ada3ef512b2d7001f18ae2ebca05dfc39bbb1085b81abe46c40c4b1e",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/favicon-16x16.png",
+      "localPath": "original_assets/images/favicon-16x16.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1193,
+      "sha256": "e86c79c5e92c6af76e71a4eb5b34414f42fdc008baeb2ece9fcb6662fed0d1fb",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/css/bootstrap.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 317840,
+      "sha256": "e107abdcb71d94eb46c81f30a7461f4b7df86f84ec14d04f66ee0c783531c69b",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/css/custom_style.css",
+      "localPath": "original_assets/stylesheets/custom_style.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 34031,
+      "sha256": "b2ee9927b2152cab4aab61a7930b4d2f3e52c86dcc120fb35e26209174be68dc",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/css/hover.css",
+      "localPath": "original_assets/stylesheets/hover.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 134107,
+      "sha256": "a7579497b8f139584319d87039c6a59b7c4a458ed729b0104f7af3a6adf35edf",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/css/ionicons.min.css",
+      "localPath": "original_assets/stylesheets/ionicons.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 51295,
+      "sha256": "77d332fac16a1e8c80df4f42b9f22c4c738f46234d5f962377d327cd9d7dd9fc",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/css/bootstrap-icons.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap-icons.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 62144,
+      "sha256": "26a63fe14308e8147f74b3b72484c2f87e6fcca7655964da026789c62d650c90",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/css/chosen.min.css",
+      "localPath": "original_assets/stylesheets/chosen.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 10486,
+      "sha256": "371e5475d05eb79e8256b3d04bc8c9019d25864c21d588150ded9d767463d84e",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/js/jquery-min.js",
+      "localPath": "original_assets/scripts/jquery-min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 95067,
+      "sha256": "6e29a8e8e64d22c35d9d80631c1a7e33bd88e649077bc23ffb2d20dd759dea2c",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/js/popper.min.js",
+      "localPath": "original_assets/scripts/popper.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 20101,
+      "sha256": "f2e7174f126d84f0e051b1099bc97a163ff14338400cab1e32d18ca79182307c",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/js/bootstrap.bundle.min.js",
+      "localPath": "original_assets/scripts/bootstrap.bundle.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 92422,
+      "sha256": "ac4e10645851e0122ed00c2562d00dbe0083cd7668eb4dcf32fcefbc867b4dff",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/js/chosen.jquery.js",
+      "localPath": "original_assets/scripts/chosen.jquery.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 53089,
+      "sha256": "88d9a80a31a7ccfa3e4ad77e33ee5b9a5b5c33da2501e0a330d937250916cde4",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&t=639191031332169432",
+      "localPath": "original_assets/scripts/WebResource__8969a7c8.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 23063,
+      "sha256": "40732e9dcfa704cf615e4691bb07aecfd1cc5e063220a46e4a7ff6560c77f5db",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG0OUrYMiDnAtHQCFUaz0W--4WPMIG0lL9lnbwIsliZ0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__b0b338ea.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 357822,
+      "sha256": "0cfc4a70c37cecef342f0e14a9204008485665202a40ae48a2af09d381554435",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5VxFYOE_qs64fwvKe7dRnAlwJ4-ZR1AkMZ6VKiLePy3DznNeeSqdI8JPLK7hW1Eg2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__826353fe.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 95637,
+      "sha256": "06831185e31b1a87a5b40a61252ab31da46e5517f7899a1697a7ec8674adf5ab",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/js/popper.js",
+      "localPath": "original_assets/scripts/popper.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 22792,
+      "sha256": "c3dd9e82bda069fad7ced28ef13e768d027a98f8f616cd882cfe696569ba8364",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/js/bootstrap3.4.1.min.js",
+      "localPath": "original_assets/scripts/bootstrap3.4.1.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 39555,
+      "sha256": "599881a892a77c930e979c8fd44422f27ece1d5a88e84eaf91b37b273d40f86e",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/js/crypto.js",
+      "localPath": "original_assets/scripts/crypto.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 13395,
+      "sha256": "a0a28d71883d6791d7feb6c8ba3ca3fb089994f4cf111a34ed78ae803a638c3b",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/dist/js/app.min.js",
+      "localPath": "original_assets/scripts/app.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 6231,
+      "sha256": "6e99e1294fd04c59e4c3ecadf7b2bc4fc8c86b7aabe9b0882dc0d0569fb95fcd",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/login-icon-b.png",
+      "localPath": "original_assets/images/login-icon-b.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 16664,
+      "sha256": "08b030d97f16f5227ef038a2f78c8c2e890690496f5f3a2552e0843cd6250e98",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/Home",
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ParoleJumper",
+        "https://eprisons.nic.in/NPIP/public/Absconder",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/About",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance",
+        "https://eprisons.nic.in/NPIP/public/PrivacyPolicy",
+        "https://eprisons.nic.in/NPIP/public/TermsofUse",
+        "https://eprisons.nic.in/NPIP/public/CodeofConduct"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/css/chosen-sprite.png",
+      "localPath": "original_assets/images/chosen-sprite.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 538,
+      "sha256": "8aa69ee6b2376505578d758bfbbc52aec88fa5e591f1a7cabd8adfa80a7b613a",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/SelectMISState",
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/Images/eprisons.png",
+      "localPath": "original_assets/images/eprisons.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 3808,
+      "sha256": "ab898d7f32c266ab542e40fe99713ee069f6c28bfc4b7cae6c17f60ed2853518",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/Images/nalsa-logo.png",
+      "localPath": "original_assets/images/nalsa-logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 48572,
+      "sha256": "c16f23a40fb07a4c1264a3576ea4a9da776626b389b29eab6af5a769e302f2b2",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/Images/icjs-new-logo.png",
+      "localPath": "original_assets/images/icjs-new-logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 46531,
+      "sha256": "0bd2992dfe24adf8db9334a7940a0c9843774d02427ddfe15074fdd30a3b316f",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/Images/nic.png",
+      "localPath": "original_assets/images/nic.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 5398,
+      "sha256": "b622d659a0d18b7bfb6cc1b0463b015233824d7943cac3c6eafcac3d6230a941",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/css?v=tyJahhW-cLTTlMvK4EBMQ6dn3VveO5D9qy-LwRfwKvY1",
+      "localPath": "original_assets/stylesheets/css__0a34b37f",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 230760,
+      "sha256": "1d4c4746d9824f4f20f6c9850db2d75df42f279b8ba5f8a4c5fd1b96db8e70fa",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/bootstrap-datepicker.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap-datepicker.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 15737,
+      "sha256": "b23be0c266c66bfbe5fa86d43f001298e8c758bfc5a525c52df03d29a37938f9",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/login.css",
+      "localPath": "original_assets/stylesheets/login.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 6969,
+      "sha256": "d7aab2139b94688762385e7f58a1ce0b3f8ee49417392d17a50adf330ab18a2a",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/toastr.css",
+      "localPath": "original_assets/stylesheets/toastr.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 7078,
+      "sha256": "f2a3709c3ad92d0804da0a15becb673b381369fd12e159dcea214ba6d2fd89b7",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/bootstrap.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap.min__1.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 160409,
+      "sha256": "a547652943e11dd21e7a0c39fae37b84c6dd27de5efff7ea4f45cde43c938f89",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1",
+      "localPath": "original_assets/scripts/modernizr__94f5ad64",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 11095,
+      "sha256": "9e83216908224ffbc39992a5e60f93ca21b8e2240ba28025ba679c4b70f7112d",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/bundles/jquery?v=J46ViXFMANC8By_GzybfZLyPpQ8ldlujdWbzGE0jfMo1",
+      "localPath": "original_assets/scripts/jquery__01b7ea3b",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 92577,
+      "sha256": "4bc5aef092b914c91a1b5d2a686f89ce846e106e824b068f8e7a5d4c0d25f728",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/bundles/jqueryval?v=ewwbEwxCzNIunbw9c2Y5X5_ldbOkIBIkUo-LvchX7I81",
+      "localPath": "original_assets/scripts/jqueryval__f9ef79b4",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 28672,
+      "sha256": "bbac52df514e2fe1d036cd5e7f7f3f5da06801ebf367b9e1c511454c36e410cb",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/bundles/bootstrap?v=vG-xeH_TdwoI9T3YOXQXOK8DzzehPKKnhvCcvmy2OrE1",
+      "localPath": "original_assets/scripts/bootstrap__19089c29",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 182875,
+      "sha256": "ef143f9be895e0a31b2750699fb15f0a091f98e498da7a3c4777d53d43fc8f2d",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Scripts/bootstrap-datepicker.min.js",
+      "localPath": "original_assets/scripts/bootstrap-datepicker.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 33536,
+      "sha256": "bc582dd7e38c133f8b4472b969d09018ac8b6a5fb5448ba5a989cbb2697f3102",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Scripts/toastr.js",
+      "localPath": "original_assets/scripts/toastr.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 15734,
+      "sha256": "349975b6075f2f1e69b5129f0da9bc3a23f9574f56646acef5a43b48bcf1d323",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/Images/bg.jpg",
+      "localPath": "original_assets/images/bg.jpg",
+      "category": "images",
+      "mimeType": "image/jpeg",
+      "bytes": 27439,
+      "sha256": "f70360d1efdb24cb6b1006708ab30bfb3663c3b1ba41d96bb488cfab75a1f746",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/Images/citizen.png",
+      "localPath": "original_assets/images/citizen.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 29575,
+      "sha256": "1355592e250f4607ae72ab1058e24cdb9ea9088dc565c5ee1c1fbf6073d8beb8",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Content/Images/prison.png",
+      "localPath": "original_assets/images/prison.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 20588,
+      "sha256": "50494e7d22fe605872bfe7f88bbc9b8edea693680293e332805bea2fc65d85e7",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/fonts/roboto.woff",
+      "localPath": "original_assets/fonts/roboto.woff",
+      "category": "fonts",
+      "mimeType": "font/x-woff",
+      "bytes": 20332,
+      "sha256": "ea50ac7fddb61a5ce248a7f8b3a31a98fe16285e076b16e6da6b4e10910724bb",
+      "usedOnPages": [
+        "https://eprisons.nic.in/citizenservice",
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs",
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/images/eprisons_logo.png",
+      "localPath": "original_assets/images/eprisons_logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 4250,
+      "sha256": "f1d9d61be27f9e4adde2ebc2c3a70dcc895510650e63ee811216e2c1f32725f9",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/images/nalsa-logo.png",
+      "localPath": "original_assets/images/nalsa-logo__1.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 85007,
+      "sha256": "6ee8ae6dc847d5285cc6e66e33f18dd69f797d82c7946c1711e3d6ee6a79ad70",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/images/icjs-new-logo.png",
+      "localPath": "original_assets/images/icjs-new-logo__1.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 46531,
+      "sha256": "0bd2992dfe24adf8db9334a7940a0c9843774d02427ddfe15074fdd30a3b316f",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/images/icjs-new-logo.png`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/images/icjs-new-logo.png"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/Images/nalsa-logo.png",
+      "localPath": "original_assets/images/nalsa-logo__2.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 85007,
+      "sha256": "6ee8ae6dc847d5285cc6e66e33f18dd69f797d82c7946c1711e3d6ee6a79ad70",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/images/nalsa-logo__1.png`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/images/nalsa-logo__1.png"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/css/bootstrap.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap.min__2.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 250990,
+      "sha256": "d1db383d765fe39610b6fb319f4ad42a75d9d340e96ff17241d6afbc747088e1",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/css/font-awesome.min.css",
+      "localPath": "original_assets/stylesheets/font-awesome.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 23545,
+      "sha256": "d3aa463b167b27bef2a8ea0f6f8e12a937170c35f4f13eec94fbe0c5961bce72",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/css/style.css",
+      "localPath": "original_assets/stylesheets/style.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 24555,
+      "sha256": "37326dae1b064007b5aaadaf882c92d15daa0eebd3933ecef7a89c6a8338221c",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/JavaScripts/jquery-3.6.3.min.js",
+      "localPath": "original_assets/scripts/jquery-3.6.3.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 89947,
+      "sha256": "a6f3f0faea4b3d48e03176341bef0ed3151ffbf226d4c6635f1c6039c0500575",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/JavaScripts/bootstrap.min.js",
+      "localPath": "original_assets/scripts/bootstrap.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 80721,
+      "sha256": "0833b2e9c3a26c258476c46266e6877fc75218625162e0460be9a3a098a61c6c",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/JavaScripts/sha256.js",
+      "localPath": "original_assets/scripts/sha256.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 24939,
+      "sha256": "6a34e68fcc5cf3c0c5c94ef6258486393aa1ed0b06ff1fbc70d74368f4a71ec8",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/LegalAid/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDADaq-Turoq8LS6Nhj1hSRtKt8uJF7JTBMwy-KWlHxJxr0eZZk-EF-i3yaj656dXw2&t=639191031332169432",
+      "localPath": "original_assets/scripts/WebResource__9fa5b0d2.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 23063,
+      "sha256": "40732e9dcfa704cf615e4691bb07aecfd1cc5e063220a46e4a7ff6560c77f5db",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/scripts/WebResource__8969a7c8.axd`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/scripts/WebResource__8969a7c8.axd"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/LegalAid/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxTF7kVULQhp_orUC4D2-pXpbnUZpIYY24uRN0pIMy8_VPBnh1bwimj45SFuiMFaBvCWiUyMFTiIYzdMjFhaVjj6oDmpnK5lqrW4Y-hKijCyo0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__cd0dcd41.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 357822,
+      "sha256": "0cfc4a70c37cecef342f0e14a9204008485665202a40ae48a2af09d381554435",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/scripts/ScriptResource__b0b338ea.axd`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/scripts/ScriptResource__b0b338ea.axd"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/LegalAid/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DZbdGpqi0zA6hyhKqf2XJxc9qP32fz7VZ5LqbYmtPhE4OGNa7D4gzA7gVlH1vi94K0Jx8YiuH1PQGKjd08dE8wjKWCYi5gQeFpn1ts3Yk-eRxIPvTkHuK_EjKIQmDNIGHw2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__cc3a2be0.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 95637,
+      "sha256": "06831185e31b1a87a5b40a61252ab31da46e5517f7899a1697a7ec8674adf5ab",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/scripts/ScriptResource__826353fe.axd`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/scripts/ScriptResource__826353fe.axd"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/JavaScripts/chosen.jquery.js",
+      "localPath": "original_assets/scripts/chosen.jquery__1.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 45390,
+      "sha256": "9a8c012ee09b59398a4b5654ceb677a3ea31551819ff00ee0ada82efc25b90cb",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Legalaid/Content/fonts/fontawesome-webfont.woff?v=4.2.0",
+      "localPath": "original_assets/fonts/fontawesome-webfont__e46343de.woff",
+      "category": "fonts",
+      "mimeType": "font/x-woff",
+      "bytes": 98024,
+      "sha256": "ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/images/Emblem-India.png",
+      "localPath": "original_assets/images/Emblem-India.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 209519,
+      "sha256": "81217ff4617fdcbab0e5890798a33f9cd16c76f9449eb13ad7829338238108c5",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/images/ePrison-logo.png",
+      "localPath": "original_assets/images/ePrison-logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 3808,
+      "sha256": "ab898d7f32c266ab542e40fe99713ee069f6c28bfc4b7cae6c17f60ed2853518",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/images/eprisons.png`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/images/eprisons.png"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/images/digiLocker_logo.png",
+      "localPath": "original_assets/images/digiLocker_logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 33287,
+      "sha256": "1833cf7a6042e7a430a793b5e56c58bb9df45ea3b7b6e2487a71edf51809fc5e",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/images/icjslogo.png",
+      "localPath": "original_assets/images/icjslogo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 11158,
+      "sha256": "c8ec433c25dfe4cb6d9eef2ebe65a00fe5d9d41ac7d02130dcffe40cd9735e98",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/images/jan-parichay.png",
+      "localPath": "original_assets/images/jan-parichay.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 68965,
+      "sha256": "0ad7f56d268867f9954e0e49a624f12129ec3001ec7c15ad6dd279f910365480",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/images/logo.png",
+      "localPath": "original_assets/images/logo__1.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 3055,
+      "sha256": "624cc3f4dd8cc469402cd7d2e6769517e9545d31fa1fe8f29b182a8391c82c14",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/dist/css/bootstrap.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap.min__3.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 232907,
+      "sha256": "59794566a71dce81b585b022e8ea47a6100a89482fe650c119765fd7ae7a53a0",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/bootstrap-icons-1.13.1/bootstrap-icons.min.css",
+      "localPath": "original_assets/stylesheets/bootstrap-icons.min__1.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 87012,
+      "sha256": "5bde1b1280c519be069ff3a711b639e0e996886ad4e4f7c6b4ab99237ed875b4",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/css/login-style.css",
+      "localPath": "original_assets/stylesheets/login-style.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 8597,
+      "sha256": "c71ebfa0dea9b55bdc453ba00d27dfb3c82bf52c313bef8b37fdf911ec38fe10",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/js/jquery.js",
+      "localPath": null,
+      "category": "scripts",
+      "mimeType": null,
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/js/sha256.js",
+      "localPath": "original_assets/scripts/sha256__1.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 24816,
+      "sha256": "7c21e963dddd0af13dec8af9dbe55c344e3ed55618047e12615f7496e659211d",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZLyBIk_K6f0K4zI8p1MpKw9ZI3PTNbLz-wGwwxopPXkNyblZx8Aa2ygGoH543BATvw2&t=639191031332169432",
+      "localPath": "original_assets/scripts/WebResource__88aadb24.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 23063,
+      "sha256": "40732e9dcfa704cf615e4691bb07aecfd1cc5e063220a46e4a7ff6560c77f5db",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/scripts/WebResource__8969a7c8.axd`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/scripts/WebResource__8969a7c8.axd"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=qph9tUZ6hGPLbkznkRkqTZ3YZmHkpqawSiR2CSA26t6EipxJvm9Nv8OnOia28EAMvSj6Xr8HlAozG6GvWLQPVRKwOtH0WJ7UBvzJBBR_D0k1-VBXJROBOnSoc9tiYbfQ0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__ddb10773.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 87844,
+      "sha256": "f1d2a34f883d83fe764db7fa3b17845cfd31f81ccd1426129111cde47437ad0a",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=TvpD2YGOOsCm1yWcLkKnBQ38uns0DsffVYyuOH-YUzKsNdXwdvC9RsIrs3TaBHEOAkrbOqMaHOaoJS6ARsLWTMluMWf-Bw56NBwxagrswd4To2F-U1PmeDViw9kqrGhB0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__ac6fd875.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 37189,
+      "sha256": "3842b063705286e729befd4832755eb4aa7df42d505201c7ea76b19517b46ac9",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=Ph9KYRob2cmMiWgs3oahYg53cZQL0FrDFXV6QYA4tBkNy2RvqvDe1c6lLyDFSXVCWI6bSD-cAcI6dQZELr1SesuiWs9HuGzKdxFDNH4vp_HPsAz8FFWdfXSENNyYiWjX0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__2b720860.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 18169,
+      "sha256": "85f0b108360eb7cfd8c2e322df20732c194dc6dfc8855ea15d3282b8b3e1b16b",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=SCktwi-Z1SFGgmHzICetrrYQtxS0bc1_Uy2CGU63JNVIUtBm4Y84iL3hAcyABtPb7ZxRYz_45SN6d9r3YeIRM-pgoZDhY3RCWJognTaybq-ge_BzOgSTpqOaO2H-W5eTkti3I1ttTdNvbUaSotOO6g2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__e11b832f.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 20344,
+      "sha256": "896e4e80c16483722fe9be0f5af6f6cebf5e93ebc40ee565ea49a7060a09ab4b",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=rEnisSq7i0BGB42momXTIENwTDUKgz-9ooYmbo8zB2r6IKkOmHsnsnUJ6ye21FxdhlAQTwALjljfgrux7_KIdr11JN2kq2UiWJaJmXD4a6q6CIUVEZWT50mpkg1kwZr-3KD5efunVM-7RMk9810pew2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__8f019c47.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 7120,
+      "sha256": "6c9b074228d381433498fa1020eac60f10bd0eedcbd4f4f5407dbb9c423cbee4",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=6cv1RuDGw9eD36DQVPsZ64GITB9IJ0Hg01afl5SYKkPcdHOUdV3SMPzMAApQ9P1BlG-bXQHmwcPrJxdRJ2ylaVmxylZ6FQRfVF6oxL4sxlCnko4WlArh6DDfommzNFdv0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__ea0d3cf7.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 1848,
+      "sha256": "c44d7151d7dbdb1863d10fd19585882cb7bda2f02cb35c59af0124db50fda5e8",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=OIkWahXMyTi70MXMQWktDg4VdLmgpLUdpJST_Yfz3CK2hFQOwR8IKhs7_s_ooxJVtswKQHTA2k3XSPpGKFC4a1OBUedHmeIp1JjQ5VnO6-n4M12nZvrENakvch2CBkPA3m0hO1ddj0nxJ3KIjl2z8w2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__de53537a.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 6130,
+      "sha256": "0946ba6e08d1b07eafb9641879098019d24529b4dce2bcba1bbef108315e1093",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=t0O6Yc3FzeoXP8pjMQG5ygadjvv78SCWagPH8JeolN0UEgL5_llx4QWPyIVQz6-J0-5G_HDuPTd9qPyYvhk6lMzCEJUWiGz0K8WyuiYRCr_lYian-LMKyRLP-sAmTm-Us-VsaRVYzvusSQJAQ_yuxQ2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__351c2a4f.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 16987,
+      "sha256": "50e1ca4638e386cf7a226448754b50239dbf114df1b7341e22a2e69f615930d3",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=QCoWR-h63aOo-AZIyDRuwEtSYWFefPHNuXkrJ2YsN617TPelxLkHp5bhKTLQB1VxYS4pNuMokaKAOqT1tf5erRgxKXs4J89Is6gR0JZbBlQPRu0pKIzXrbhqazkhEzRaT2tYIEvSiw73IrJNZCnQGQ2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__57d52670.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 2778,
+      "sha256": "ef3d5e5f6ded398fc11cbf144a1f136788786320f4d23ba3fab05ae82d8953e9",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=5coR3jRChwN9r6AC5qT2WQfLlII8bZ6RN7OMXte2P0jhPTIfPqTOD-gJjl7jHhgU3CcBXers6jsJJatp3gSJTMKlNEZtJM2fr9i-61RywIawvytWiApfwJYZIXFP9IHA0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__dc133e1e.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 31171,
+      "sha256": "047ca8bb8b46c275db47e24b0e0d361fcc8c26c15977c7d9091396119ff5e820",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=nK6so0M3WJsZqnQeiF58DbbIqWSFS0kU8PT-sQpi5qnNxlgxXyWTpurUUR3pqAyO0IJJZTe_FLaZrOrUrchyEIA_t2TvwtljNTwvMX8R0bDRohAJzbeFjRK29T_PjUTD_d1U8LCWsI3XIOG0j8BNTw2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__d0fff2bb.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 5854,
+      "sha256": "0b90bf177a5d72bf2ad54e1028fb5d57b8677369171e18699097b3c1c86bd9a9",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=redQsF7wEkgmMSvWolVslgvxnSPDG47nK4HhAeGlcn371YLcUxxtMQP2jvFBe3wI3zFQvRR00TIh0qHL6LcSJlPB_MQEic__F_9gujAMe0u7oQNp0jDEzQ60snqcC-tT38fVLSjzrv5sC6m-OMnuGA2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__51c71bc5.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 5049,
+      "sha256": "a467a5462714c0777e64ad1b6866b5cad9c5628e4fd2cc71bc36fc915870925a",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/ScriptResource.axd?d=Va5YjwWIxP1x6ZWgL6LRAIGUTDE88YYHaaGVPqm5Y0MEXmn-hRP8V_M49WM_qxUZJ581YExundLZfBL6CtN7zfDkmIazt9Z-Jc0vjku8aukwGziPliO5knlrL8CCo_Y2pTiK_ANNBIndTZ3Us9dqNw2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__1c01d9ae.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 16067,
+      "sha256": "f1550a3b8766c45694b53be3d50894a64c77ec879fb5f8fcf59ef47b80dc25c5",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/js/jquery-3.2.1.min.js",
+      "localPath": "original_assets/scripts/jquery-3.2.1.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 69601,
+      "sha256": "1c05779033b4bc35bab6c2e04d1b7eca6d3fb213914c8392c605ddb4b2b0f677",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/dist/js/bootstrap.bundle.min.js",
+      "localPath": "original_assets/scripts/bootstrap.bundle.min__1.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 80427,
+      "sha256": "f5ae8f599f28fb11affea9a68b755b6b3f27d763500bea6242919f1ef6b49389",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/Images/login_bg.jpg",
+      "localPath": "original_assets/images/login_bg.jpg",
+      "category": "images",
+      "mimeType": "image/jpeg",
+      "bytes": 179867,
+      "sha256": "5e287962094af3da8f0c611f1909a031d2694606873592e8096fe3836e8bb928",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/Login/Content/bootstrap-icons-1.13.1/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a",
+      "localPath": "original_assets/fonts/bootstrap-icons__e9dc1c47.woff2",
+      "category": "fonts",
+      "mimeType": "application/font-woff2",
+      "bytes": 134044,
+      "sha256": "6c75710364a1ca5604267716f6d28997b26319fdb078cf11e0b42ab66ff2ea61",
+      "usedOnPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/CaptchaImage.axd?guid=b5d78505-9b02-4bd2-acb7-247ac8b7fda3",
+      "localPath": null,
+      "category": "images",
+      "mimeType": "image/jpeg",
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/WebResource.axd?d=QygwMQZzIIofqDLXDr-HEIGazH1joc7Cu1qaWQ2q2Nlkq2SAEa_HqTtP1fOFTUC0qq0u42cuBSyz91zSI5sHx5r2GLOPmO_8wOlmSfa91tJkUr7JVwHtELm-_kw9VNz7tn5gRFjqtpYc82T_LOY0BA2&t=638223438620000000",
+      "localPath": "original_assets/stylesheets/WebResource__68bb82cc.axd",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 4345,
+      "sha256": "34a56464a51063696a884328ed889cfba1f5701eef757ffb8156bb39d7118052",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhi5Ro_kZNYS25EW_-qnjE5td612Pg4yCmsppNjMlNOHA4TSyGjtSLiyLTXkCyrtWwy-ujq0l5_KQ4GDLT3w0kibGJju8sT5LgicObPHlBdtGGZfZ8yq_yskXKhwPJrvIrA2&t=ffffffffa5405632",
+      "localPath": "original_assets/scripts/ScriptResource__502314a7.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 26951,
+      "sha256": "ef9453f74b2617d43dcef4242cf5845101fcfb57289c81bceb20042b0023a192",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=HOXFl7MMm1dB63GFuHwdy7hKT295ZpJfY9C8S6dS-Awoi6zMOOUCNPhLhy0dv8hUF3q68d2fADyG_yOdXeyKDeEq8G7GfjmHPb4qDlAHlGX56Ws-FEAPMKn8uM3c7v530&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__ed05a3d7.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 63576,
+      "sha256": "078188b52e3ce4ea576eefd77c2614d29691d9cf2f8271dd1fd9247029881f32",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=OAE9ClUEcsgee1-mWvA7NsrSW-wmHfDngocZs0t4qi8zIgUemaHOgwlSk6xj_4vlGE0yPUf_Fnc1kxAdGg4E9SIzC3NQIVUeSDUbO7gEAtbKLiJVVsLCgLShEIj_MeVGWi_26-89KoocGgiDwG_Hiw2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__5b78b875.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 32152,
+      "sha256": "a5a917fe40968d5ed0496c8602907cd21e5f7c2070e201ff7f145efa2ddbeffa",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=5VssjZ0dMt582Pyf4GR9qUd-dxPDaDivdJ6kl9OIrkFtYvcj0Wdc4jHD5n0L8TX_ik5tL8EN4cu_bQ7dTZ233ESg-TYMVgPow7OGpCch8dVgoYpsf4iFntjWh2gRmoW1UtqbcrQ6YSkyRqybpjJRvQ2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__fd6d2dac.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 13561,
+      "sha256": "45f8c1dafde3cafc60672111d262230280a86793d5a9af9dd90254f0775f5930",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=IC8faVwqHcU587-O5lvWFOEQ_WcmUUDPm8PWSWmuUZKfAxr7t5m8s1sl7bAQiVbEr8Yqkq2FbTznMtN3qhCX5282SpmOZteJRoWvxEMrn-vormdvIJuIHOZIxfTkIRwUFSpCpfpTwAn0kgzxolAW3Epg6wxP_trFrk-3aysHwao1&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__6d613b08.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 18206,
+      "sha256": "8225f46080a391a5b90c1a223139ec7325644d7e4de43170ef429fddf0fc1065",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=VipJU41JWT5zhAy2EhOGe0CbalpXFmRWRmXqw-lT9vQek1OxKXKRVPhQLJGnJZlFqStKo4wyFeMrgFtQwA6JJ8DIaSJ_Nknzad_yelC32makK0L9D0MXNFDMeavG_yNbTLyRozfp49gE-uX8KK7pkQ2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__63382ac9.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 3338,
+      "sha256": "846f31d8c42a71574514adf95fe6ac7196c1d378bef7115167949876e145a0d6",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=dAhtX-LHyE_lp-njpOZj3ZGqi3GlqKwY9NP98pphJ1GlcUM7oxVb1M30Vu83Q0ETdwi8iRH3KMtiAGZham3UEBB4NePRObs1hhxLoBAhktfhSONBk1dnVd_ofsDiQiN3Tk0GuwYiT3PoFiOxy5CUBw2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__1ff634aa.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 24905,
+      "sha256": "b28b7bdc362950b8ba938504a6ce6869366af599c492dec5c0ef712552c355c2",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=0ZUZ7uFEcUB89sw1CEU-nHys0khas-XDDqXF5om580ls9KgKq0UdZqFiATwji3XsXo7iPxA8pn6gmOU-I79O_FL7Z72lO_HGBwNgBHhtnkObIeFf9NBoSR00hkvDIpwfDlcsx5_f5xZEirCU50SxLQ2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__e79f2374.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 158940,
+      "sha256": "773f61bd18e728b82f6bc053fb37b8e9db3be9a691e52b8cc6f2ffe9453fcdd1",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=AXQiVjCSPv9EhxJpO5hUe_ygDGGK79FpKVypXRMdhvVVjRtaxeaLEN68sgCM3WIEmK6LthsuD30Iy4jjHBqyQNV-E2y1kV4sLM0v2j_AoL0ntG10No-fD9ukXbjgkndN0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__ffeb6217.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 19358,
+      "sha256": "f8285e040427f129e0ec79294d6c0683b56ed2fecacb29ebe5a855892f0c16a7",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=DzxRqR8F63OBd-f-v8WRb8sstDPw8PtY9VuHC3d-vovzOOlzmCfcWwvbsO1JfEnDEir8_cZKraKkvQfbotTsR2qz69kHiFljxwFx_E8-3QwEtSWbUTtUEKdP0MP5M6sbYQEb8C9Y5FosV683ouHOXQ2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__aa0969bb.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 131217,
+      "sha256": "8059b4c0562623527705ab94ea70f96c813dc44d30987082e444d8a89f8ed7d3",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=c9Xru7HLGJDZEBWLWZAQRVA9UtikTn7g636k4iSHz6iuMSol23u00fBa_cCYhmLrJbPAFWPnLJut9025tZ7g_3cALw2wjKmy4bLDUwRbk8dEa8bCaVOQPzn8sNYwhZV7vW1NEqXsSJfPy4WeguFgPQ2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__23051284.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 14962,
+      "sha256": "83dea50e618847af499a292a42689d27b499d4e7302ddaba6f8fbe017a6f01c8",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=wqrJaHv8cZmMAIVxWd-aAFhkoUsFa49s0MPc1hM9UgCxNrk5lTd-e_MY0FA8RmfvVgBG8_SyXXgmotU8PInXKxrbxafmPmJEWEvSnlIoJykHoTNyQNbxD-YAsuXSG1TyYFfAQF41yLgeBSdy_W2FEQ2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__fb7a6d80.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 28069,
+      "sha256": "0e000bbdc0d7ba8a63087aeb2e27d947a81f6ac1749cd100f6a5396bb192708a",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=nhm3wcfpnOQWVgOBjq77hYEpmU9vRzsMx9Z7zEnp_BrJVAvAZ_D4ci8sCUE6Z7r2K8cbzut49lZrvNTZYnGR2YjnCm1v9q8SCMZn9-DVq3ZKcu1-3wj5tWsA5VDJaEKf0&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__ddd513da.axd",
+      "category": "scripts",
+      "mimeType": "application/x-javascript",
+      "bytes": 8670,
+      "sha256": "c519e51f2f90cd0c1e58dd7c06acd52c916cab3676df1fd37f13caa99e1b25cb",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=JtTA6DrAo0H7htwP7cFuTFENvHo097nca8Qp19awADbde8c19Y4IjsV4AcK5RdNUcL6NyEPEneCmeC-32SheNaBUjMbWUo2nLVF6DqCGR2HDAkaImQDbACRopNpZAJV21BkfE1vNV_Vy76YwqtGXtg2&t=3a1336b1",
+      "localPath": "original_assets/scripts/ScriptResource__70ac83c4.axd",
+      "category": "scripts",
+      "mimeType": "text/javascript",
+      "bytes": 83363,
+      "sha256": "c9daaaa6a6e7b5a53ce6251b4987a9eed10f76faa38bad74ddacac4edeccbb6e",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/js/crypto-js.min.js",
+      "localPath": "original_assets/scripts/crypto-js.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 48316,
+      "sha256": "8e3b0117f4df4be452c0b6af5b8f0a0acf9d4ade23d08d55d7e312af22077762",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/downloads/eMulakat_VCRequestPublic.pdf",
+      "localPath": "original_assets/documents/eMulakat_VCRequestPublic.pdf",
+      "category": "documents",
+      "mimeType": "application/pdf",
+      "bytes": 1044047,
+      "sha256": "d23b129b6bc2b01d7a0c871e8ada19e5098be736525f983a247de1564fcff379",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/refresh.png",
+      "localPath": "original_assets/images/refresh.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1610,
+      "sha256": "beb7ed94baf2dbee896d92b4d3ef0bf7c71ce6e797556965de9d974d9ae50d66",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/SmallCalendar.jpg",
+      "localPath": "original_assets/images/SmallCalendar.jpg",
+      "category": "images",
+      "mimeType": "image/jpeg",
+      "bytes": 775,
+      "sha256": "fa755dfeb810e0eec8ff5ce2ef6cd5651d94a581c4e724b2125d0bd222a19785",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitRegistration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/CaptchaImage.axd?guid=cf161372-4146-4a62-90f8-207546e2057a",
+      "localPath": null,
+      "category": "images",
+      "mimeType": "image/jpeg",
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/Refresh.png",
+      "localPath": "original_assets/images/Refresh.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1610,
+      "sha256": "beb7ed94baf2dbee896d92b4d3ef0bf7c71ce6e797556965de9d974d9ae50d66",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/MyVisitStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/images/refresh.png`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/images/refresh.png"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/icon11.png",
+      "localPath": "original_assets/images/icon11.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1047,
+      "sha256": "9f433bd3d6b6f1f0fe736d04c5d48ab7518c2ca54cf856119425edc6639b30d4",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/icon10.png",
+      "localPath": "original_assets/images/icon10.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1408,
+      "sha256": "a0217b0a87d4ecfd0da0681e5d608408646ca0284e95f534aef3c64d081c1118",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/icon1.png",
+      "localPath": "original_assets/images/icon1.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1402,
+      "sha256": "b9716cabadcfbaa8708ecde6bed362f999076ed86d5c39dc948f85184777b7f4",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/officers_icon.png",
+      "localPath": "original_assets/images/officers_icon.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 973,
+      "sha256": "edafd19c014545cdd591eca5a26db96b563245e383ca354d84b88f0d4bb504e9",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/Hearing_icon.png",
+      "localPath": "original_assets/images/Hearing_icon.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1336,
+      "sha256": "846628d2f5142b90dcaf4aa989d312930cb1be44f0a9bbbb3fe6e4f933ca6d7d",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/icon13.png",
+      "localPath": "original_assets/images/icon13.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 985,
+      "sha256": "f83b87e2d0a1de9178f86b7e16f1927524b6c950ac904eea5193bc30cb3e0a15",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/dist/css/AdminLTE.min.css",
+      "localPath": "original_assets/stylesheets/AdminLTE.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 84638,
+      "sha256": "1a7415b034f0558b940d523056a69a7be76cbbd42b58099b854e521e16ccf25f",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/dist/css/skin-blue.min.css",
+      "localPath": "original_assets/stylesheets/skin-blue.min.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 2959,
+      "sha256": "391ffd9324ff4aacaf01bf07cede138716c0ba7921099a43042915af8e33a976",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/content/js/highcharts.js",
+      "localPath": "original_assets/scripts/highcharts.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 278781,
+      "sha256": "599d16757f3f54b29e252307112e7253feeb3d566312916a8542116f9d184773",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/content/js/exporting.js",
+      "localPath": "original_assets/scripts/exporting.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 27606,
+      "sha256": "980739887665d256a333536d7a3f0a09d045820263b30af66d1fef27b14f002e",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/content/js/data.js",
+      "localPath": "original_assets/scripts/data.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 16839,
+      "sha256": "1dac10de6db8e098efdeed9a2930f9718b9976e37a3c838e39ea2927cc9717fd",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/content/js/drilldown.js",
+      "localPath": "original_assets/scripts/drilldown.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 21936,
+      "sha256": "4c2502f95cab91a46e2152248f5810ebc9de7cb2a599170311ca389b57f0ea5d",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/syncfusion-icons-white.png",
+      "localPath": "original_assets/images/syncfusion-icons-white.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 616,
+      "sha256": "45c159d308f822292e66b68f33c433e9dac256f5f83fbb974d18c62107718396",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard",
+        "https://eprisons.nic.in/NPIP/public/DashBoardForeigner"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/prisonsMapImage.png",
+      "localPath": "original_assets/images/prisonsMapImage.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 186347,
+      "sha256": "b440c83e1a13ead4ad81cfa1012cb41bb992fbdc0457e629f442f037eee4cc46",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/nic_logo.png",
+      "localPath": "original_assets/images/nic_logo__1.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 4826,
+      "sha256": "ddfbd7f8ada3ef512b2d7001f18ae2ebca05dfc39bbb1085b81abe46c40c4b1e",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": "Byte-identical to `original_assets/images/nic_logo.png`; kept for faithful per-URL mapping.",
+      "duplicateOf": "original_assets/images/nic_logo.png"
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/npipTab-logo.png",
+      "localPath": "original_assets/images/npipTab-logo.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 5994,
+      "sha256": "b75e48c744fcb1988ab8c8fcf9f8981064fe3b2c3749385deee9d4fd5d050fe9",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/manifest.json",
+      "localPath": "original_assets/documents/manifest.json",
+      "category": "documents",
+      "mimeType": "application/json",
+      "bytes": 326,
+      "sha256": "981d30f1c8f3bf53de956fb0c12bd36c51694c49e6cd45790fbd9b11910a6120",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/static/css/main.722187b3.css",
+      "localPath": "original_assets/stylesheets/main.722187b3.css",
+      "category": "stylesheets",
+      "mimeType": "text/css",
+      "bytes": 153893,
+      "sha256": "9f82bbd807f8c0e9eb6d86b6c8701207dff86a4f6a6008a0f4877221df8ab68f",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIPDashboard/static/js/main.811484a3.js",
+      "localPath": "original_assets/scripts/main.811484a3.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 2666994,
+      "sha256": "37cc04751ebe0ada8c6023cd61899a99839c6755533e4e9d4045797bf874f40b",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+      "localPath": null,
+      "category": "stylesheets",
+      "mimeType": "text/css; charset=utf-8",
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": true,
+      "downloadStatus": "skipped",
+      "error": null,
+      "notes": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline."
+    },
+    {
+      "originalUrl": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "localPath": null,
+      "category": "fonts",
+      "mimeType": "font/woff2",
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": true,
+      "downloadStatus": "skipped",
+      "error": null,
+      "notes": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline."
+    },
+    {
+      "originalUrl": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2",
+      "localPath": null,
+      "category": "fonts",
+      "mimeType": "font/woff2",
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": true,
+      "downloadStatus": "skipped",
+      "error": null,
+      "notes": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline."
+    },
+    {
+      "originalUrl": "https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnka.woff2",
+      "localPath": null,
+      "category": "fonts",
+      "mimeType": "font/woff2",
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "external": true,
+      "downloadStatus": "skipped",
+      "error": null,
+      "notes": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline."
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/css/grd_head.png",
+      "localPath": null,
+      "category": "images",
+      "mimeType": null,
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/Content/images/plus.png",
+      "localPath": "original_assets/images/plus.png",
+      "category": "images",
+      "mimeType": "image/png",
+      "bytes": 1313,
+      "sha256": "52c8bc63e701ff3570f1fd8e66c92b919d1a8151ee393ecb3b379d31c3039be3",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/captcha.aspx",
+      "localPath": "original_assets/images/captcha.aspx",
+      "category": "images",
+      "mimeType": "image/GIF",
+      "bytes": 2295,
+      "sha256": "a86383f8ab47c99fc2958408afa5686b100da3f852f9aa0732156c1179a9c193",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/NPIP/public/captcha",
+      "localPath": "original_assets/images/captcha",
+      "category": "images",
+      "mimeType": "image/GIF",
+      "bytes": 2301,
+      "sha256": "8419cfae518fa98d55e7d2a6108576cc5560c9bd2f77c76fef45554353cbf9a7",
+      "usedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/ContactUs",
+        "https://eprisons.nic.in/NPIP/public/grievance"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/images/image/phone-icon.png",
+      "localPath": null,
+      "category": "images",
+      "mimeType": null,
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/images/image/mail-icon.png",
+      "localPath": null,
+      "category": "images",
+      "mimeType": null,
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/images/image/location-icon.png",
+      "localPath": null,
+      "category": "images",
+      "mimeType": null,
+      "bytes": null,
+      "sha256": null,
+      "usedOnPages": [
+        "https://eprisons.nic.in/CitiZenService/Login/ContactUs"
+      ],
+      "external": false,
+      "downloadStatus": "failed",
+      "error": "HTTP 404",
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/Scripts/jquery-3.5.1.min.js",
+      "localPath": "original_assets/scripts/jquery-3.5.1.min.js",
+      "category": "scripts",
+      "mimeType": "application/javascript",
+      "bytes": 89478,
+      "sha256": "f36844906ad2309877aae3121b87fb15b9e09803cb4c333adc7e1e35ac92e14b",
+      "usedOnPages": [
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    },
+    {
+      "originalUrl": "https://eprisons.nic.in/CitiZenService/fonts/fontawesome-webfont.woff2?v=4.4.0",
+      "localPath": "original_assets/fonts/fontawesome-webfont__4a09f32e.woff2",
+      "category": "fonts",
+      "mimeType": "application/font-woff2",
+      "bytes": 64464,
+      "sha256": "3c4a1bb7ce3234407184f0d80cc4dec075e4ad616b44dcc5778e1cfb1bc24019",
+      "usedOnPages": [
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ",
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "external": false,
+      "downloadStatus": "downloaded",
+      "error": null,
+      "notes": null
+    }
+  ]
+}

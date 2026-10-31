@@ -1,0 +1,189 @@
+{
+  "generatedAt": "2026-10-27T05:36:25.531Z",
+  "category": "Aadhaar",
+  "confidence": "high",
+  "status": "confirmed",
+  "decidedBy": "page content (hostname only reinforced it)",
+  "wouldHoldWithoutHostname": true,
+  "governmentHost": true,
+  "thresholds": {
+    "CONFIDENT_SCORE": 20,
+    "CONFIDENT_MARGIN": 1.6,
+    "STRONG_WEIGHT": 10,
+    "WEAK_WEIGHT": 2,
+    "HOST_WEIGHT": 4
+  },
+  "ranking": [
+    {
+      "dir": "Aadhaar",
+      "label": "Aadhaar/UIDAI identity services, enrolment, updates and related official services",
+      "contentScore": 147.6,
+      "hostScore": 4,
+      "score": 151.6,
+      "hits": {
+        "strong": [
+          {
+            "term": "uidai",
+            "occurrences": 60,
+            "weight": 27.78
+          },
+          {
+            "term": "unique identification authority",
+            "occurrences": 30,
+            "weight": 24.77
+          },
+          {
+            "term": "aadhaar",
+            "occurrences": 219,
+            "weight": 33.4
+          },
+          {
+            "term": "myaadhaar",
+            "occurrences": 13,
+            "weight": 21.14
+          },
+          {
+            "term": "cidr",
+            "occurrences": 2,
+            "weight": 13.01
+          },
+          {
+            "term": "enrolment id",
+            "occurrences": 1,
+            "weight": 10
+          }
+        ],
+        "weak": [
+          {
+            "term": "identity",
+            "occurrences": 12,
+            "weight": 4.16
+          },
+          {
+            "term": "enrolment",
+            "occurrences": 35,
+            "weight": 5.09
+          },
+          {
+            "term": "biometric",
+            "occurrences": 19,
+            "weight": 4.56
+          },
+          {
+            "term": "resident",
+            "occurrences": 7,
+            "weight": 3.69
+          }
+        ],
+        "host": [
+          {
+            "hint": "uidai",
+            "weight": 4
+          }
+        ]
+      }
+    },
+    {
+      "dir": "CCTNS",
+      "label": "Crime and Criminal Tracking Network & Systems, police crime-record workflows and related portals",
+      "contentScore": 3.69,
+      "hostScore": 0,
+      "score": 3.69,
+      "hits": {
+        "strong": [],
+        "weak": [
+          {
+            "term": "fir",
+            "occurrences": 7,
+            "weight": 3.69
+          }
+        ],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Courts",
+      "label": "eCourts, case status, court listings, cause lists, orders, judgments and court services",
+      "contentScore": 3.2,
+      "hostScore": 0,
+      "score": 3.2,
+      "hits": {
+        "strong": [],
+        "weak": [
+          {
+            "term": "court",
+            "occurrences": 4,
+            "weight": 3.2
+          }
+        ],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Prisons",
+      "label": "ePrisons, prison/jail administration, inmate management, visitor services and related portals",
+      "contentScore": 2.6,
+      "hostScore": 0,
+      "score": 2.6,
+      "hits": {
+        "strong": [],
+        "weak": [
+          {
+            "term": "visitor",
+            "occurrences": 2,
+            "weight": 2.6
+          }
+        ],
+        "host": []
+      }
+    },
+    {
+      "dir": "E_Forensics",
+      "label": "Government forensic services, forensic laboratories, forensic case management and evidence workflows",
+      "contentScore": 0,
+      "hostScore": 0,
+      "score": 0,
+      "hits": {
+        "strong": [],
+        "weak": [],
+        "host": []
+      }
+    }
+  ],
+  "pagesConsidered": 4,
+  "samplesUsed": [
+    {
+      "url": "https://uidai.gov.in/en",
+      "title": "Home - Unique Identification Authority of India | Government of India - Unique Identification Authority of India | Government of India",
+      "headingCount": 24,
+      "navLabelCount": 1,
+      "textLength": 4561,
+      "error": null
+    },
+    {
+      "url": "https://uidai.gov.in/en#main-content",
+      "title": "Home - Unique Identification Authority of India | Government of India - Unique Identification Authority of India | Government of India",
+      "headingCount": 24,
+      "navLabelCount": 1,
+      "textLength": 4561,
+      "error": null
+    },
+    {
+      "url": "https://myaadhaarbeta.uidai.gov.in/",
+      "title": "myAadhaar - Unique Identification Authority of India | Government of India",
+      "headingCount": 0,
+      "navLabelCount": 0,
+      "textLength": 4405,
+      "error": null
+    },
+    {
+      "url": "https://myaadhaarbeta.uidai.gov.in/CheckAadhaarStatus/en",
+      "title": "myAadhaar - Unique Identification Authority of India | Government of India",
+      "headingCount": 0,
+      "navLabelCount": 0,
+      "textLength": 1965,
+      "error": null
+    }
+  ],
+  "note": "Classification is driven by page content. `wouldHoldWithoutHostname` records whether the same verdict is reached from content alone, with the hostname bonus removed."
+}

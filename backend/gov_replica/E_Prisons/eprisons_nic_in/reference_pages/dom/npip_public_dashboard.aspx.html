@@ -1,0 +1,1208 @@
+<!DOCTYPE html><html lang="en" class="h-100" data-bs-theme="auto"><head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description"><meta name="author"><link rel="icon" type="image/png" sizes="16x16" href="../Content/images/favicon-16x16.png"><title>
+	Welcome to National Prison Portal 
+</title>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="../Content/css/custom_style.css" rel="stylesheet" type="text/css"><link href="../Content/css/hover.css" rel="stylesheet" type="text/css">
+    <!-- FontAwesome 4.3.0 -->
+    
+    <!-- Ionicons 2.0.0 -->
+    <link href="../Content/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <!-- Option 1: Include in HTML -->
+     
+    
+    <link href="../Content/css/bootstrap-icons.min.css" rel="stylesheet">   
+    <!-- Custom Fonts -->
+    
+
+    <script src="../Content/js/jquery-min.js"></script>
+    <script src="../Content/js/popper.min.js"></script>
+    <script src="../Content/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="../Content/js/chosen.jquery.js"></script>
+   
+    <link href="../Content/css/chosen.min.css" rel="stylesheet" type="text/css">
+    
+
+ <style>
+     
+
+
+        @media (width: 1024px) {
+               .header_bg .container {
+            position: relative;
+            max-width: 100% !important;
+        }
+            .navbar-brand img {
+                width: 220px
+            }
+
+            .navbar-nav > li > a {
+                font-size: 14px;
+                font-weight: 600;
+                color: #3d4548 !important;
+            }
+        }
+    </style>
+
+</head>
+
+
+  <body class="d-flex flex-column h-100">
+    <form method="post" action="./DashBoard" id="frmMaster" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="AXmJvUbC6JfCFeIelT2c+ip2uDtkcUSzfsflE43HKMbOdJw9DuzK4vz3ZzypeBPuakb2uiP8tsCcX0NEm52yXwA0O/LZhsPac+mOP0+DNmpfoN0CdMGFraBpLvGyXxmsbZ4Ymovr1/yme4Od8STviYHT1de5bUpDDX++QT2fYKdfJxqlKhKaoBC/juMSDrlr/uGu4OXeOp7yPLrhyL/7lV3/opcy3FgrW/dqx6PfRmLT396HvBvrqroFyvKO7EvDdMM2W87iWxU0n1iYnv0st+9WMzUGmo66PqhqlYsk0FTs06fRda0Lc/4vsFdQ3pxgco/zZxCTRcKRQqtyO/OXh8LiEvi2Exu7tAx3iaGyaoHH4Id775oAMnyVvfJqrdkjxrFtYBw/HaP6vPowT4erqxVcabTJurjNEh8URt4nSpDARxb7QDXOw6hhY2sjIvzf5UVKzrBD1ZN0a+N96OuauG0IM/592bM6nVq22XUN+Xbx+D+e0MPf1d72MufDa+GHE2umv8VBdPSlFyTiaxolm2+2FeHm3EfrxtsxM6Kchndvdz7nGaG6zwfs+fZzBek8CuhvL0ii4sdo6O5WWcpnyYvjgDFNaFgrl8A2r4k0lrDT7FDTAeKFMM6iZpSEVTOdU3fjOjRrTt6qNmd1M7esLpyDx+W8sKm1DEuvzLDTIrQk2qhrgtl/r1YgmkuYU4btyuYn3PcNrcOz3kPq5sobQIDKP0l5BTPazgt0/Erd7DvyfUP/9AjDqyuvgGStra5Gqh1uIEBcsvPg6KVHd0wW+pd+uD5wvdJo1gi57JjeyNAil77v4UFy5uiIwUhPV4uttx4R8C1QoNFSXNtm3c7MFXmHC3kjCXMUIM5GkxnH0lqeW/OW7TWiI/k0BC5P56jffMaZgbUJNSjzdTAm8OBhozzUzx6x0wnZeAHMOkAbbF5kmbhgH7QnHo9DFkypgQMpN+CKGN1Ljyxz+Wx6wgcjUAp40CAIYbjrZRvujwR51LJD8sPqxtJsxVFROnaQBhIMbxLlkKc+yd8ENT0YRv3bEQA9aYWeCteA/WNq3Y4EeURMuM4g+fRvXhkAF1Msf5D3fYahTfhxOANL/YCOi/2hPWZ9k/w0+evpmHJEdDkn2CsSSnWxrTtavzwnXuVddUCL28bmu66d2lDzDXEYhY99cGzie1GGAcvUXC+7tOFeO/xnwSsrHW6c9BGVS8gg/OkQhdSyFRjJFszEY1Vm02exqgKyu3kreWBnP0zhJhcfSKoVEQn7jlFEqYom2ZXFxAMMzz/RlDl9nr5tjIsyZbs/06nCoOYzCO2MgnmMtHHmeJv5sbzNVYpv44wlzWnydF8J37oPWemtH2pa4GHFip3UXa74s5dlSyCAptPpNm72h0YWqy89ljg+8o9Sm8zrr5s1igS0hBRO+3ur5uvK7jbWpsW4IWYY5mJe8/nbv+SHYJ1yQSZk/mbyT/GK9HlOCpm15YA6ePw4FFiiU73aDMscfDF362Kc05h2PmWNjD4CHbJc4itnO4kk0GRtpZlNA3HzOKLFv7/3OwBzZS2MDE0Z8xqhQPPeCG7AQzTgslth4hP1fD+hSxIvBoFph4zRbHoxNkx7XT39JpYmts+Y9GiBQg47q1risYKS5F+cf/C8LOXUK0iVZZDPXqGRflCpEqYcKdiozbmChqdZp87DNlHzylYuurPwt9PHF/WSsYsBKJ7XtP70yS3FAluJk2S0zyLQffK8mN4OyoQmKSD2XgOMiBNQqctxvqZYNwIU6OjOcOrXkYCSmygiesGRM+EZZ/mENiMdi7MUrU75UlsqxBRtckWsLVPOsVrnrWkofTlRG/XL0lCtMahex5CxwPRge55l28gJBYHG2QHkuPc2VRMOBRCRIQRJyHIpoua7Sw+JeglfGHGOBKmSE/E1TvaHZitWuSxJXmDPwuXalerm5llO1palRaDVTO0gIqDsJJGbBk1yNeUK4uoVc0EjuKAOQKR8v76qylqUVh/STI/t407Qd5WgMSZvKZ67ZduuuNOYUvGykQT/gHYgXxqN7UeSnF24NT6BNm64c6b3YfRdjBu/Wo/cPtrqH6cRLKKzw67hRF5wRERYmYLuvw1MgjK6V+WD9KNEXQ+e08qySgxWFUgiullyook8Xksp0KfuzKAHRd+8Tef2IGx8DJBALHHFUfcv80Qccx4BnTyHxew94FUJaEIQuqnexHtwql2T9N7rW1hGH2UEPOCbtBdKdk1tTChgEHZmvXujcPmYfViIxAw2xsIWe1JOaEiespzlv+eoWSI4SK/LOWtjFUmsB8Wdr7YLVv7VVPhGCiSvzgH/zYdjKkV266NnFMN0jhcZ3SFlVHmpxtEqj0mEI+4ujpMLyt4AOPgXCkQHjPCkUJMdflqLhzSq/9+3Ev+EJ5RliWV+XOwzbh4wKb93aOFPhCPQXQo+v6Tk1wI1fKBOgSNtL3ceQs+pEwSSKvMnJft4b4j3HSoTwr8PMl8L5TS8/WvybEUucVYCGyqJ9b+TBAaelYQP9VYalhUDTwg4bVlGQStDlukjsWQsmklbcPcH1g50c284B21BhxzvVoAGicKx9zILwcNxbNtXw8VpyxLg68m+tM99V4ghG/eeyvT5+TNZWP8wumlJA+n4MUBrgm5ryi7cSy8+8rQa0VGKfkG98RRiGhtcYRWk6HxICsaFAXPRMQ/v2+PxEv5HqACvmcNd1y0GYqLpkthFz2yHkXEa/OzGc2j9JaD1tgFR54Hl/VkuNLrQvjLWPbQ5CBXxNxkzAJ5+Wolo4SbscADG4jpTZOlKdm48eQtLHoaTchRZ+QcXksJ+vFgwX3zeuCCV7Q+jXnMGcofw1pZvNwFp0csf1CKnWpR07BM9kslkELY1MKQREox0fseMVa2SR9dA/GKbrLyhoVxBa95uQQaed1WFZ2De7mfdigAs7bbAbPbFOTA4u4QC35VjrSeCmxp0q4nyzofSkrC++0++3UcenCWClcfk88vbUFvW9MJowymkd46fbMX0">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmMaster'];
+if (!theForm) {
+    theForm = document.frmMaster;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&amp;t=639191031332169432" type="text/javascript"></script>
+
+
+<script src="/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG0OUrYMiDnAtHQCFUaz0W--4WPMIG0lL9lnbwIsliZ0&amp;t=3a1336b1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5VxFYOE_qs64fwvKe7dRnAlwJ4-ZR1AkMZ6VKiLePy3DznNeeSqdI8JPLK7hW1Eg2&amp;t=3a1336b1" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4B8D91EF">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="spWwaRP2VQk7EDyGgoKyyncyRcFy6nleCuVpVHo43oZp5B2TRV9rm9+P+ZX6BaXuvi4n4mXzTQfoILW67luiO8JwlnWA23E1AnsOECXsTkyx4Zbxw546xbE77jrKvQT6IspK/7XrP3ngkmIxFccR7WHe85GAegfqsC43fSTabhR/T9dDhCfK2eHcq/UIykENCvUKJ1ljVmKCq9e9XlMMNq9Qbkwv1Da2liBKGtJDAl3ZPph0QpBjW9KVyOHoUQIC8ZCoDwxUrb1aYNFw9q9EC3sSrWbJ66nJuw2suTQM24cYMcFrJUm+fQWpbz+BNF3xtclxaAdYNZ0xNqZ721Up70QUZ8b2OwerZ5ntYFoW/LJcwVzaCYb9qtqwewpTci7IrdhHxXgv2MhhzKtINgb30mGQK+GyWosjnBxny44x6Zk/cGG1v5FQVS7kEeRnCUfYvP7d9xMoODXlkY48y0X9vEptXEOPqJhZpnjhiGYh6Pg8oMZVXpM27rIkUqHEOYyFLC29+Dmz+Jfoxsgis/rb6EYEF7w+Idi49CT7OPAWZTU3m3jKHQhg75G7tqrOsxtlS3hDVbckrx+zra5QRzU2c3rgW7azfKNqoWpZVScwMRNz1gVwVYSrO19zkTs8qJLf6RPAyJ58xwGTovaOSDmEmajR4yI5//c2LKpf3qUkQ907W/uLVDONIPDeHKr/k5YMs1rPgg3WxnKtwTshAh2Q5AILIHwByJUqXDaTK07eI8EQ6Qw6bW4Znr9IRrLLDOp92Qi5NXkcqf9+AaYBYmV3xJ2/9L2NztfNYQO36jocKfnwTrxl6E+6ZTAH6dziQRq13a2yuioDP2PQuNByqTIYRSPzC2BnWFcHKaBHYno62EhK8YVxQmMAa78YQnH9PwA4nSVk+CKYXKz7OW8qSpZnNWjALjhdRkl7rER/Pirw25ctGoiyvGPLyqnARYlO65XHnQEnbIe+DVXhGgI4KkS8wNQzUp3xg5lC6c3XIteudHWnkwZgLga6yEmnVgupV/gju42463L+SHwOO/9qS5E3EaMaDYWVTZaSNwcyMWJXQSVzxRO/ppE5D6nyKcp78jEbdXzMlTRP7qzk1VPHKzu0HvlR4ijLc7GWkJrPOsLwqfaaXjUxmxrHiqz1jdtVUh6+">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'frmMaster', ['tctl00$ContentPlaceHolder2$MainUpdatePanel','MainUpdatePanel','tctl00$ContentPlaceHolder2$UpdatePanel1','UpdatePanel1'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <div class="top_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="nav1">
+                            <li></li>
+                            <li></li>
+                            <li><a href="SelectMISState.aspx">ePrisons MIS</a></li>
+                            <li><a href="https://eprisons.nic.in/citizenservice/" id="lnkCitizen" target="_blank" rel="noopener noreferrer">Citizen Service</a></li>
+                            <li><a href="https://eprisons.nic.in/Legalaid/Secure/Login.aspx" id="lnkLegalaid" target="_blank" rel="noopener noreferrer">Legal Aid</a></li>
+                            <li><a href="https://eprisons.nic.in/Login" id="lnkSSOLogin" target="_blank" rel="noopener noreferrer">Other Stakeholders</a></li>
+
+                            
+
+
+
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header_bg">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="Home.aspx">
+                        <img src="../Content/images/logo.png">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item" style="font-weight: 700 !important; font-size: 15px;"><a class="nav-link" href="MyVisitRegistration.aspx">eMulakat</a></li>
+
+                            
+
+                            <li class="nav-item"><a class="nav-link" href="MyVisitStatus.aspx">eMulakat Status</a></li>
+                            <!--<li class="dropdown">
+                                            <a href="#" onclick="myFunction()" class="dropbtn dropdown-toggle">Dropdown<span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu toggle-drop dropdown-content" id="myDropdown">
+                                            <li><a href="ParoleJumper.aspx">Parole Jumper</a></li>
+                                            <li><a href="Absconder.aspx">Absconder</a></li>
+
+                                        </ul>
+                                    </li>-->
+                            <li class="nav-item"><a class="nav-link" href="DashBoard.aspx">DashBoard</a></li>
+                            <li id="lieprisonsmap" class="nav-item">
+                                <a href="https://eprisons.nic.in/NPIPDashboard" id="anch" class="nav-link" target="_blank" rel="noopener noreferrer">Prisons Map</a></li>
+                            <li id="lireports" class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reports</a>
+
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item" href="ePrisonsLiveStatus.aspx">ePrisons Live</a></li>
+
+                                    <li><a class="dropdown-item" href="ePrisonsLiveVisitorsStatus.aspx">eMulakat Statistics</a></li>
+
+                                    <li><a class="dropdown-item" href="ParoleJumper.aspx">Parole Jumper</a></li>
+                                    <li><a class="dropdown-item" href="Absconder.aspx">Absconder</a></li>
+                                     <li><a class="dropdown-item" href="DashBoardForeigner.aspx">Foreigner Prisoners</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="grievancelogin.aspx">Grievance</a></li>
+                            <li class="nav-item"><a class="nav-link" href="About.aspx">About Us </a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+        <!-- Begin page content -->
+<main class="flex-shrink-0">
+        <div class="page-content-wrapper">
+            
+            
+    <style type="text/css">
+        .carousel.carousel-fade .item {
+            -webkit-transition: opacity 0.5s ease-in-out;
+            -moz-transition: opacity 0.5s ease-in-out;
+            -ms-transition: opacity 0.5s ease-in-out;
+            -o-transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        .carousel.carousel-fade .active.item {
+            opacity: 1;
+        }
+
+        .carousel.carousel-fade .active.left, .carousel.carousel-fade .active.right {
+            left: 0;
+            z-index: 2;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .carousel.carousel-fade .next, .carousel.carousel-fade .prev {
+            left: 0;
+            z-index: 1;
+        }
+
+        .carousel.carousel-fade .carousel-control {
+            z-index: 3;
+        }
+
+        .main-header .navbar {
+            display: flow-root;
+        }
+    </style>
+    <script type="text/javascript">
+        function pageLoad(sender, args) {
+            $('.carousel').carousel('cycle');
+        }
+    </script>
+    <script src="../content/js/highcharts.js" type="text/javascript"></script>
+    <script src="../content/js/exporting.js" type="text/javascript"></script>
+    <script src="../content/js/data.js"></script>
+    <script src="../content/js/drilldown.js"></script>
+    <!-- Theme style -->
+    <link href="../Content/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css">
+    <link href="../Content/dist/css/skin-blue.min.css" rel="stylesheet" type="text/css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins 
+         folder instead of downloading all of them to reduce the load. -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <div class="wrapper dashboard_wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <div class="logo logo3">
+                Find Your Option
+            </div>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle  " data-toggle="offcanvas" role="button"><span class="sr-only">Toggle navigation</span> </a><span style="color: #ffffff; float: left; font-size: 17px; font-weight: 700; padding: 5px 10px;">Dashboard</span>
+            </nav>
+        </header>
+        <aside class="main-sidebar left_bg3">
+
+            <section class="sidebar">
+                <div id="MainUpdatePanel">
+	
+                        <br>
+                        <h5 class="page-title">
+                            <label for="ctl00_ContentPlaceHolder2_ddlstate" id="Label4">State</label></h5>
+                        <select name="ctl00$ContentPlaceHolder2$ddlstate" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder2$ddlstate\',\'\')', 0)" id="ctl00_ContentPlaceHolder2_ddlstate" class="chosen-select " style="display: none;">
+		<option selected="selected" value="SELECT">SELECT</option>
+		<option value="26">ANDAMAN &amp; NICOBAR             </option>
+		<option value="1">ANDHRA PRADESH</option>
+		<option value="2">ARUNACHAL  PRADESH            </option>
+		<option value="3">ASSAM                         </option>
+		<option value="4">BIHAR                         </option>
+		<option value="27">CHANDIGARH                    </option>
+		<option value="33">CHHATTISGARH                  </option>
+		<option value="28">DADRA &amp; NAGAR HAVELI AND DAMAN &amp; DIU</option>
+		<option value="30">DELHI                         </option>
+		<option value="5">GOA                           </option>
+		<option value="6">GUJARAT                       </option>
+		<option value="7">HARYANA                       </option>
+		<option value="8">HIMACHAL PRADESH              </option>
+		<option value="9">JAMMU &amp; KASHMIR               </option>
+		<option value="34">JHARKHAND                     </option>
+		<option value="10">KARNATAKA                     </option>
+		<option value="11">KERALA                        </option>
+		<option value="37">LADAKH</option>
+		<option value="31">LAKSHADWEEP                   </option>
+		<option value="12">MADHYA PRADESH                </option>
+		<option value="13">MAHARASHTRA                   </option>
+		<option value="14">MANIPUR                       </option>
+		<option value="15">MEGHALAYA                     </option>
+		<option value="16">MIZORAM                       </option>
+		<option value="17">NAGALAND                      </option>
+		<option value="18">ORISSA                        </option>
+		<option value="32">PUDUCHERRY                    </option>
+		<option value="19">PUNJAB                        </option>
+		<option value="20">RAJASTHAN                     </option>
+		<option value="21">SIKKIM                        </option>
+		<option value="22">TAMIL NADU                    </option>
+		<option value="36">TELANGANA</option>
+		<option value="23">TRIPURA                       </option>
+		<option value="24">UTTAR PRADESH                 </option>
+		<option value="35">UTTARAKHAND                   </option>
+		<option value="25">WEST BENGAL                   </option>
+
+	</select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="ctl00_ContentPlaceHolder2_ddlstate_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>SELECT</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+
+
+                        <h5 class="page-title">
+                            <label for="ctl00_ContentPlaceHolder2_ddlJail" id="Label2">Jails</label></h5>
+                    <select name="ctl00$ContentPlaceHolder2$ddlJail" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder2$ddlJail\',\'\')', 0)" id="ctl00_ContentPlaceHolder2_ddlJail" disabled="disabled" class="aspNetDisabled chosen-select " style="display: none;">
+
+	</select><div class="chosen-container chosen-container-single chosen-container-single-nosearch chosen-disabled" style="width: 100%;" title="" id="ctl00_ContentPlaceHolder2_ddlJail_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>SELECT</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly="" disabled=""></div><ul class="chosen-results"></ul></div></div>
+                            
+                            
+                            
+                    
+</div>
+
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+    </div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content" style="padding-bottom: 0px;">
+            <div id="UpdatePanel1">
+	
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4 class="pages_title" style="float: left">
+                                <span id="lblPageTitleSmall" style="font-size: 19px; margin: 10px 0 0; float: left;">All States</span>
+                            </h4>
+                            <h5 class="pages_title" style="float: right">
+                                <span id="lblLastUpdated" style="font-size: 14px; float: right; margin-top: 10px;">As on : 26/10/2026  4:37PM</span>
+                                
+                            </h5>
+                        </div>
+                        <div class="col-lg-12">
+                            
+                            <h6 class="pages_title" style="float: right; margin-top: -10px; color: #214AAB">
+                                <span id="Label6" style="font-size: 14px;">Dashboard updates every hour. </span>
+                            </h6>
+                        </div>
+                    </div>
+
+
+
+                    
+                    <div class="row dbim-row">
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box blue-madison hvr-glow">
+                                
+                                <!-- Wrapper for slides -->
+                                
+                                
+                                <div class="padd">
+                                    <div class="icon hvr-pulse blue-madison">
+                                        <img src="../Content/images/icon11.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard1Title">Inmates inside</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard1Message">544537</span>
+                                        </div>
+
+                                    </div>
+                                    <!-- padd End-->
+                                </div>
+                                <div class="blue-madison1 more more_img">
+                                    <a onclick="$('#carousel-example-generic').carousel('cycle');" id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard1" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard1','')">View more</a>
+                                </div>
+                                
+                                <!-- dashboard-box End-->
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box red-intense hvr-glow">
+
+                                <!-- Wrapper for slides -->
+
+
+                                <div class="padd">
+                                    <div class="icon hvr-pulse red-intense">
+                                        <img src="../Content/images/icon10.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard3Title">Admissions today</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard3Message">549</span>
+                                        </div>
+                                    </div>
+                                    <!-- padd End-->
+                                </div>
+                                <a onclick="$('#carousel-example-generic').carousel('cycle');" id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard3" class="red-intense1 more more_img" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard3','')">View more</a>
+
+
+
+
+                                <!-- dashboard-box End-->
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box aquamarine hvr-glow">
+                                <div class="padd">
+                                    <div class="icon hvr-pulse aquamarine">
+                                        <img src="../Content/images/icon1.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard2Title">Released today</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard2Message">329</span>
+                                        </div>
+                                    </div>
+                                    <!-- padd End-->
+                                </div>
+                                <a id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard2" class=" aquamarine1 more more_img" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard2','')">View more</a>
+                                <!-- dashboard-box End-->
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box purple-plum hvr-glow">
+                                <div class="padd">
+                                    <div class="icon hvr-pulse purple-plum">
+                                        <img src="../Content/images/officers_icon.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard6Title">Visits registered today </span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard6Message">44153</span>
+                                        </div>
+                                    </div>
+                                    <!-- padd End-->
+                                </div>
+                                <a id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard6" class="purple-plum1 more more_img" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard6','')">View more</a>
+                                <!-- dashboard-box End-->
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box dodger_blue hvr-glow">
+                                <div class="padd">
+                                    <div class="icon hvr-pulse dodger_blue">
+                                        <img src="../Content/images/Hearing_icon.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard8Title">Court Hearing today</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            
+                                            <span id="lblLargeBoard8Message">11362</span>
+                                            <div class="ide-unide">
+                                                <span id="lblLargeBoard8Sub">VC: 3584 | Physical: 7859</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- padd End-->
+                                </div>
+                                <a id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard8" class="dodger_blue1 more more_img" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard8','')">View more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row dbim-row dbim-row-foreign" style="display: none;">
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box orange hvr-glow">
+                                <div class="padd">
+                                    <div class="icon hvr-pulse orange">
+                                        <img src="../Content/images/icon13.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard7Title">Foreigners</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard7Message">7378</span>
+                                            <div class="ide-unide">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="orange1 more more_img">
+                                    <a id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard7" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard7','')">View more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box red-intense hvr-glow">
+                                <div class="padd">
+                                    <div class="icon hvr-pulse red-intense">
+                                        <img src="../Content/images/icon13.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard10Title">Unchecked Foreigners</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard10Message">4991</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard10" class="red-intense1 more more_img" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard10','')">View more</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box aquamarine hvr-glow">
+                                <div class="padd">
+                                    <div class="icon hvr-pulse aquamarine">
+                                        <img src="../Content/images/icon13.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard9Title">Checked Foreigners</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard9Message">2387</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard9" class="aquamarine1 more more_img" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard9','')">View more</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box blue-madison hvr-glow">
+                                <div class="padd">
+                                    <div class="icon hvr-pulse blue-madison">
+                                        <img src="../Content/images/icon13.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard11Title">Identified Foreigners</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard11Message">573</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard11" class="blue-madison1 more more_img" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard11','')">View more</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="dashboard-box purple-plum hvr-glow">
+                                <div class="padd">
+                                    <div class="icon hvr-pulse purple-plum">
+                                        <img src="../Content/images/icon13.png">
+                                    </div>
+                                    <div class="headlin">
+                                        <div class="dashboard_name">
+                                            <span id="lblLargeBoard12Title">Unidentified Foreigners</span>
+                                        </div>
+                                        <div class="dashboard_reports">
+                                            <span id="lblLargeBoard12Message">1814</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a id="ctl00_ContentPlaceHolder2_lnkButtonLargeBoard12" class="purple-plum1 more more_img" href="javascript:__doPostBack('ctl00$ContentPlaceHolder2$lnkButtonLargeBoard12','')">View more</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                
+</div>
+
+            <div class=" row">
+                <div class="col-lg-6">
+                    <div class="panel-default">
+                        <div class="panel-heading">
+                            <h5 class="panel-title text-left signup_titel">Nation wide prison population trend (last 7 days)
+                            </h5>
+                        </div>
+                        <div class="boder">
+                            <div class="chart" id="combination" style="height: 350px; overflow: hidden;" data-highcharts-chart="1"><div id="highcharts-9z2k6mk-32" dir="ltr" style="position: relative; overflow: hidden; width: 499px; height: 350px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none; padding: 0px;" class="highcharts-container "><svg version="1.1" class="highcharts-root" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif; font-size: 1rem;" xmlns="http://www.w3.org/2000/svg" width="499" height="350" viewBox="0 0 499 350" role="img" aria-label=""><desc>Created with Highcharts 12.4.0</desc><defs><filter id="highcharts-drop-shadow-1"><feDropShadow dx="1" dy="1" flood-color="#000000" flood-opacity="0.75" stdDeviation="2.5"></feDropShadow></filter><clipPath id="highcharts-9z2k6mk-49-"><rect x="0" y="0" width="443" height="253" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" filter="none" x="0" y="0" width="499" height="350" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="46" y="10" width="443" height="253" filter="none"></rect><g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 109.5 10 L 109.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 172.5 10 L 172.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 235.5 10 L 235.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 299.5 10 L 299.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 362.5 10 L 362.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 425.5 10 L 425.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 489.5 10 L 489.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 46.5 10 L 46.5 263" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 46 263.5 L 489 263.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 46 199.5 L 489 199.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 46 136.5 L 489 136.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 46 73.5 L 489 73.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 46 10.5 L 489 10.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" stroke="#cccccc" stroke-width="0" x="46" y="10" width="443" height="253"></rect><g class="highcharts-axis highcharts-xaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#333333" stroke-width="1" data-z-index="7" d="M 46 263.5 L 489 263.5"></path></g><g class="highcharts-axis highcharts-yaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#333333" stroke-width="0" data-z-index="7" d="M 46 10 L 46 263"></path></g><g class="highcharts-series-group" data-z-index="3" filter="none"><g class="highcharts-series highcharts-series-0 highcharts-areaspline-series highcharts-color-0" data-z-index="0.1" opacity="1" transform="translate(46,10) scale(1 1)" clip-path="url(#highcharts-9z2k6mk-49-)"><path fill="#2caffe" d="M 31.642857142857 110.5894625 C 31.642857142857 110.5894625 69.6142857142854 224.3098 94.928571428571 224.3098 C 120.24285714285861 224.3098 132.90000000000242 120.18765 158.21428571429 94.881325 C 183.52857142857403 69.575 196.185714285716 76.1941125 221.5 69.575 C 246.814285714284 62.9558875 259.471428571426 61.7857625 284.78571428571 61.7857625 C 310.099999999998 61.7857625 322.75714285714196 61.7857625 348.07142857143 67.9305 C 373.38571428571396 74.07523749999999 411.35714285714 216.1537125 411.35714285714 216.1537125 L 411.35714285714 247.5763125 C 411.35714285714 247.5763125 373.38571428571396 245.24428499999985 348.07142857143 243.5915625 C 322.75714285714196 241.93883999999989 310.099999999998 240.4689100000001 284.78571428571 239.3127 C 259.471428571426 238.1564900000001 246.814285714284 237.8105125 221.5 237.8105125 C 196.185714285716 237.8105125 183.52857142857403 237.8105125 158.21428571429 238.7086625 C 132.90000000000242 239.60681250000002 120.24285714285861 243.73007999999993 94.928571428571 246.0330125 C 69.6142857142854 248.33594499999992 31.642857142857 250.223325 31.642857142857 250.223325 Z" class="highcharts-area" data-z-index="0" fill-opacity="0.75" style="pointer-events: none;"></path><path fill="none" d="M 31.642857142857 110.5894625 C 31.642857142857 110.5894625 69.6142857142854 224.3098 94.928571428571 224.3098 C 120.24285714285861 224.3098 132.90000000000242 120.18765 158.21428571429 94.881325 C 183.52857142857403 69.575 196.185714285716 76.1941125 221.5 69.575 C 246.814285714284 62.9558875 259.471428571426 61.7857625 284.78571428571 61.7857625 C 310.099999999998 61.7857625 322.75714285714196 61.7857625 348.07142857143 67.9305 C 373.38571428571396 74.07523749999999 411.35714285714 216.1537125 411.35714285714 216.1537125" class="highcharts-graph" data-z-index="1" stroke="#2caffe" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" filter="none"></path><path fill="none" d="M 31.642857142857 110.5894625 C 31.642857142857 110.5894625 69.6142857142854 224.3098 94.928571428571 224.3098 C 120.24285714285861 224.3098 132.90000000000242 120.18765 158.21428571429 94.881325 C 183.52857142857403 69.575 196.185714285716 76.1941125 221.5 69.575 C 246.814285714284 62.9558875 259.471428571426 61.7857625 284.78571428571 61.7857625 C 310.099999999998 61.7857625 322.75714285714196 61.7857625 348.07142857143 67.9305 C 373.38571428571396 74.07523749999999 411.35714285714 216.1537125 411.35714285714 216.1537125" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="22"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-areaspline-series highcharts-color-0 highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(46,10) scale(1 1)" clip-path="none"><path fill="#2caffe" d="M 31.5 114.5894625 A 4 4 0 1 1 31.500199999999918 114.58946249499999 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 94.5 228.3098 A 4 4 0 1 1 94.50019999999992 228.309799995 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 158.5 98.881325 A 4 4 0 1 1 158.50019999999992 98.881324995 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 221.5 73.575 A 4 4 0 1 1 221.50019999999992 73.574999995 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 284.5 65.7857625 A 4 4 0 1 1 284.5001999999999 65.785762495 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 348.5 71.9305 A 4 4 0 1 1 348.5001999999999 71.93049999499999 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 411.5 220.1537125 A 4 4 0 1 1 411.5001999999999 220.153712495 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-0"></path></g><g class="highcharts-series highcharts-series-1 highcharts-areaspline-series highcharts-color-1" data-z-index="0.1" opacity="1" transform="translate(46,10) scale(1 1)" clip-path="url(#highcharts-9z2k6mk-49-)"><path fill="#544fc5" d="M 31.642857142857 250.223325 C 31.642857142857 250.223325 69.6142857142854 248.33594499999992 94.928571428571 246.0330125 C 120.24285714285861 243.73007999999993 132.90000000000242 239.60681250000002 158.21428571429 238.7086625 C 183.52857142857403 237.8105125 196.185714285716 237.8105125 221.5 237.8105125 C 246.814285714284 237.8105125 259.471428571426 238.1564900000001 284.78571428571 239.3127 C 310.099999999998 240.4689100000001 322.75714285714196 241.93883999999989 348.07142857143 243.5915625 C 373.38571428571396 245.24428499999985 411.35714285714 247.5763125 411.35714285714 247.5763125 L 411.35714285714 249.1259375 C 411.35714285714 249.1259375 373.38571428571396 248.13797249999996 348.07142857143 247.7028125 C 322.75714285714196 247.26765249999997 310.099999999998 247.23413000000005 284.78571428571 246.9501375 C 259.471428571426 246.66614500000003 246.814285714284 246.28285 221.5 246.28285 C 196.185714285716 246.28285 183.52857142857403 246.28285 158.21428571429 246.3176375 C 132.90000000000242 246.35242499999998 120.24285714285861 246.36254499999995 94.928571428571 247.351775 C 69.6142857142854 248.341005 31.642857142857 251.2637875 31.642857142857 251.2637875 Z" class="highcharts-area" data-z-index="0" fill-opacity="0.75" style="pointer-events: none;"></path><path fill="none" d="M 31.642857142857 250.223325 C 31.642857142857 250.223325 69.6142857142854 248.33594499999992 94.928571428571 246.0330125 C 120.24285714285861 243.73007999999993 132.90000000000242 239.60681250000002 158.21428571429 238.7086625 C 183.52857142857403 237.8105125 196.185714285716 237.8105125 221.5 237.8105125 C 246.814285714284 237.8105125 259.471428571426 238.1564900000001 284.78571428571 239.3127 C 310.099999999998 240.4689100000001 322.75714285714196 241.93883999999989 348.07142857143 243.5915625 C 373.38571428571396 245.24428499999985 411.35714285714 247.5763125 411.35714285714 247.5763125" class="highcharts-graph" data-z-index="1" stroke="#544fc5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" filter="none"></path><path fill="none" d="M 31.642857142857 250.223325 C 31.642857142857 250.223325 69.6142857142854 248.33594499999992 94.928571428571 246.0330125 C 120.24285714285861 243.73007999999993 132.90000000000242 239.60681250000002 158.21428571429 238.7086625 C 183.52857142857403 237.8105125 196.185714285716 237.8105125 221.5 237.8105125 C 246.814285714284 237.8105125 259.471428571426 238.1564900000001 284.78571428571 239.3127 C 310.099999999998 240.4689100000001 322.75714285714196 241.93883999999989 348.07142857143 243.5915625 C 373.38571428571396 245.24428499999985 411.35714285714 247.5763125 411.35714285714 247.5763125" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="22"></path></g><g class="highcharts-markers highcharts-series-1 highcharts-areaspline-series highcharts-color-1 highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(46,10) scale(1 1)" clip-path="none"><path fill="#544fc5" d="M 31.5 246.223325 L 35.5 250.223325 L 31.5 254.223325 L 27.5 250.223325 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 94.5 242.0330125 L 98.5 246.0330125 L 94.5 250.0330125 L 90.5 246.0330125 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 158.5 234.7086625 L 162.5 238.7086625 L 158.5 242.7086625 L 154.5 238.7086625 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 221.5 233.8105125 L 225.5 237.8105125 L 221.5 241.8105125 L 217.5 237.8105125 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 284.5 235.3127 L 288.5 239.3127 L 284.5 243.3127 L 280.5 239.3127 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 348.5 239.5915625 L 352.5 243.5915625 L 348.5 247.5915625 L 344.5 243.5915625 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 411.5 243.5763125 L 415.5 247.5763125 L 411.5 251.5763125 L 407.5 247.5763125 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-1"></path></g><g class="highcharts-series highcharts-series-2 highcharts-areaspline-series highcharts-color-2" data-z-index="0.1" opacity="1" transform="translate(46,10) scale(1 1)" clip-path="url(#highcharts-9z2k6mk-49-)"><path fill="#00e272" d="M 31.642857142857 251.2637875 C 31.642857142857 251.2637875 69.6142857142854 248.341005 94.928571428571 247.351775 C 120.24285714285861 246.36254499999995 132.90000000000242 246.35242499999998 158.21428571429 246.3176375 C 183.52857142857403 246.28285 196.185714285716 246.28285 221.5 246.28285 C 246.814285714284 246.28285 259.471428571426 246.66614500000003 284.78571428571 246.9501375 C 310.099999999998 247.23413000000005 322.75714285714196 247.26765249999997 348.07142857143 247.7028125 C 373.38571428571396 248.13797249999996 411.35714285714 249.1259375 411.35714285714 249.1259375 L 411.35714285714 253 C 411.35714285714 253 373.38571428571396 253 348.07142857143 253 C 322.75714285714196 253 310.099999999998 253 284.78571428571 253 C 259.471428571426 253 246.814285714284 253 221.5 253 C 196.185714285716 253 183.52857142857403 253 158.21428571429 253 C 132.90000000000242 253 120.24285714285861 253 94.928571428571 253 C 69.6142857142854 253 31.642857142857 253 31.642857142857 253 Z" class="highcharts-area" data-z-index="0" fill-opacity="0.75" style="pointer-events: none;"></path><path fill="none" d="M 31.642857142857 251.2637875 C 31.642857142857 251.2637875 69.6142857142854 248.341005 94.928571428571 247.351775 C 120.24285714285861 246.36254499999995 132.90000000000242 246.35242499999998 158.21428571429 246.3176375 C 183.52857142857403 246.28285 196.185714285716 246.28285 221.5 246.28285 C 246.814285714284 246.28285 259.471428571426 246.66614500000003 284.78571428571 246.9501375 C 310.099999999998 247.23413000000005 322.75714285714196 247.26765249999997 348.07142857143 247.7028125 C 373.38571428571396 248.13797249999996 411.35714285714 249.1259375 411.35714285714 249.1259375" class="highcharts-graph" data-z-index="1" stroke="#00e272" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" filter="none"></path><path fill="none" d="M 31.642857142857 251.2637875 C 31.642857142857 251.2637875 69.6142857142854 248.341005 94.928571428571 247.351775 C 120.24285714285861 246.36254499999995 132.90000000000242 246.35242499999998 158.21428571429 246.3176375 C 183.52857142857403 246.28285 196.185714285716 246.28285 221.5 246.28285 C 246.814285714284 246.28285 259.471428571426 246.66614500000003 284.78571428571 246.9501375 C 310.099999999998 247.23413000000005 322.75714285714196 247.26765249999997 348.07142857143 247.7028125 C 373.38571428571396 248.13797249999996 411.35714285714 249.1259375 411.35714285714 249.1259375" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="22"></path></g><g class="highcharts-markers highcharts-series-2 highcharts-areaspline-series highcharts-color-2 highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(46,10) scale(1 1)" clip-path="none"><path fill="#00e272" d="M 27.5 247.2637875 L 35.5 247.2637875 L 35.5 255.2637875 L 27.5 255.2637875 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 90.5 243.351775 L 98.5 243.351775 L 98.5 251.351775 L 90.5 251.351775 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 154.5 242.3176375 L 162.5 242.3176375 L 162.5 250.3176375 L 154.5 250.3176375 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 217.5 242.28285 L 225.5 242.28285 L 225.5 250.28285 L 217.5 250.28285 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 280.5 242.9501375 L 288.5 242.9501375 L 288.5 250.9501375 L 280.5 250.9501375 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 344.5 243.7028125 L 352.5 243.7028125 L 352.5 251.7028125 L 344.5 251.7028125 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 407.5 245.1259375 L 415.5 245.1259375 L 415.5 253.1259375 L 407.5 253.1259375 Z" stroke="#ffffff" stroke-width="0" opacity="1" class="highcharts-point highcharts-color-2"></path></g></g><g class="highcharts-exporting-group" data-z-index="3"><g class="highcharts-no-tooltip highcharts-button highcharts-contextbutton" stroke-linecap="round" style="cursor: pointer;" transform="translate(461,5)"><title>Chart context menu</title><rect fill="#ffffff" class="highcharts-button-box" x="0.5" y="0.5" width="28" height="28" rx="2" ry="2" stroke="none" stroke-width="1"></rect><path fill="#666666" d="M 8 9.5 L 22 9.5 M 8 14.5 L 22 14.5 M 8 19.5 L 22 19.5" class="highcharts-button-symbol" data-z-index="1" stroke="#666666" stroke-width="3"></path><text x="28" data-z-index="1" y="18.5" text-anchor="end" style="font-size: 0.8em; font-weight: normal; fill: rgb(51, 51, 51);"></text></g></g><text x="250" class="highcharts-title" data-z-index="4" style="font-size: 1.2em; font-weight: bold; fill: rgb(51, 51, 51);" text-align="center" y="25" text-anchor="middle" transform-origin="10 22" transform="translate(0,0) scale(1 1)"></text><text x="250" class="highcharts-subtitle" data-z-index="4" text-align="center" y="24" text-anchor="middle" transform-origin="10 15" transform="translate(0,0) scale(1 1)" style="font-size: 0.8em; fill: rgb(102, 102, 102);"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="font-size: 0.8em; fill: rgb(102, 102, 102);" text-align="left" y="347" transform-origin="10 15" transform="translate(0,0) scale(1 1)"></text><g class="highcharts-datalabels-group" data-z-index="6"></g><g class="highcharts-legend highcharts-no-tooltip" data-z-index="7" text-align="center" transform="translate(116,305)"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" stroke="#999999" stroke-width="0" filter="none" x="0" y="0" width="267" height="30"></rect><g data-z-index="1"><g><g class="highcharts-legend-item highcharts-areaspline-series highcharts-color-2 highcharts-series-2" data-z-index="1" transform="translate(8,3)"><path fill="none" class="highcharts-graph" stroke-width="2" stroke-linecap="round" d="M 1 12 L 15 12" stroke="#00e272"></path><path fill="#00e272" class="highcharts-area" d="M 1 12 L 15 12 L 15 17 L 1 17" fill-opacity="0.75"></path><path fill="#00e272" d="M 4 8 L 12 8 L 12 16 L 4 16 Z" class="highcharts-point" stroke="#ffffff" stroke-width="0" opacity="1"></path><text x="21" text-anchor="start" data-z-index="2" style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);" y="17">Admission</text></g><g class="highcharts-legend-item highcharts-areaspline-series highcharts-color-1 highcharts-series-1" data-z-index="1" transform="translate(108.03125,3)"><path fill="none" class="highcharts-graph" stroke-width="2" stroke-linecap="round" d="M 1 12 L 15 12" stroke="#544fc5"></path><path fill="#544fc5" class="highcharts-area" d="M 1 12 L 15 12 L 15 17 L 1 17" fill-opacity="0.75"></path><path fill="#544fc5" d="M 8 8 L 12 12 L 8 16 L 4 12 Z" class="highcharts-point" stroke="#ffffff" stroke-width="0" opacity="1"></path><text x="21" y="17" text-anchor="start" data-z-index="2" style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);">Release</text></g><g class="highcharts-legend-item highcharts-areaspline-series highcharts-color-0 highcharts-series-0" data-z-index="1" transform="translate(195.984375,3)"><path fill="none" class="highcharts-graph" stroke-width="2" stroke-linecap="round" d="M 1 12 L 15 12" stroke="#2caffe"></path><path fill="#2caffe" class="highcharts-area" d="M 1 12 L 15 12 L 15 17 L 1 17" fill-opacity="0.75"></path><path fill="#2caffe" d="M 8 16 A 4 4 0 1 1 8.000199999999918 15.999999995 Z" class="highcharts-point" stroke="#ffffff" stroke-width="0" opacity="1"></path><text x="21" y="17" text-anchor="start" data-z-index="2" style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);">Visitors</text></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"><text x="77.64285714285286" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">26 Oct</text><text x="140.92857142857287" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">25 Oct</text><text x="204.21428571428285" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">24 Oct</text><text x="267.50000000000284" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">23 Oct</text><text x="330.78571428571286" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">22 Oct</text><text x="394.0714285714328" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">21 Oct</text><text x="457.35714285714283" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">20 Oct</text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7"><text x="31" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="268" opacity="1">0</text><text x="31" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="204" opacity="1">20k</text><text x="31" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="141" opacity="1">40k</text><text x="31" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="78" opacity="1">60k</text><text x="31" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="15" opacity="1">80k</text></g></svg></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel-default">
+                        <div class="panel-heading">
+                            <h5 class="panel-title text-left signup_titel">Nation wide current prison population (top 7 states)
+                            </h5>
+                        </div>
+                        <div class="boder">
+                            <div class="chart" id="combination1" style="height: 350px; overflow: hidden;" data-highcharts-chart="0"><div id="highcharts-9z2k6mk-0" dir="ltr" style="position: relative; overflow: hidden; width: 499px; height: 350px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none; padding: 0px;" class="highcharts-container "><svg version="1.1" class="highcharts-root" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif; font-size: 1rem;" xmlns="http://www.w3.org/2000/svg" width="499" height="350" viewBox="0 0 499 350" role="img" aria-label=""><desc>Created with Highcharts 12.4.0</desc><defs><filter id="highcharts-drop-shadow-0"><feDropShadow dx="1" dy="1" flood-color="#000000" flood-opacity="0.75" stdDeviation="2.5"></feDropShadow></filter><clipPath id="highcharts-9z2k6mk-17-"><rect x="0" y="0" width="253" height="344" fill="none"></rect></clipPath><filter id="highcharts-drop-shadow-0-offsetx--1-offsety--1"><feDropShadow dx="-1" dy="-1" flood-color="#000000" flood-opacity="0.75" stdDeviation="2.5"></feDropShadow></filter></defs><rect fill="#ffffff" class="highcharts-background" filter="none" x="0" y="0" width="499" height="350" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="144" y="10" width="345" height="253" filter="none"></rect><g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144.5 10 L 144.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 213.5 10 L 213.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 282.5 10 L 282.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 351.5 10 L 351.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 420.5 10 L 420.5 263" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 489.5 10 L 489.5 263" opacity="1"></path></g><g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144 46.5 L 489 46.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144 82.5 L 489 82.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144 118.5 L 489 118.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144 154.5 L 489 154.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144 190.5 L 489 190.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144 226.5 L 489 226.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144 263.5 L 489 263.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="0" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 144 10.5 L 489 10.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" stroke="#cccccc" stroke-width="0" x="144" y="10" width="345" height="253"></rect><g class="highcharts-axis highcharts-yaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#333333" stroke-width="0" data-z-index="7" d="M 144 263 L 489 263"></path></g><g class="highcharts-axis highcharts-xaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#333333" stroke-width="1" data-z-index="7" d="M 144.5 10 L 144.5 263"></path></g><g class="highcharts-series-group" data-z-index="3" filter="none"><g class="highcharts-series highcharts-series-0 highcharts-bar-series highcharts-color-0 highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(144,10) rotate(90 46 299) scale(-1 1)" clip-path="url(#highcharts-9z2k6mk-17-)"><path fill="#2caffe" d="M 235.5 69.5 L 249.5 69.5 A 3 3 0 0 1 252.5 72.5 L 252.5 344.5 A 0 0 0 0 1 252.5 344.5 L 232.5 344.5 A 0 0 0 0 1 232.5 344.5 L 232.5 72.5 A 3 3 0 0 1 235.5 69.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 199.5 160.5 L 213.5 160.5 A 3 3 0 0 1 216.5 163.5 L 216.5 344.5 A 0 0 0 0 1 216.5 344.5 L 196.5 344.5 A 0 0 0 0 1 196.5 344.5 L 196.5 163.5 A 3 3 0 0 1 199.5 160.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 162.5 192.5 L 176.5 192.5 A 3 3 0 0 1 179.5 195.5 L 179.5 344.5 A 0 0 0 0 1 179.5 344.5 L 159.5 344.5 A 0 0 0 0 1 159.5 344.5 L 159.5 195.5 A 3 3 0 0 1 162.5 192.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 126.5 195.5 L 140.5 195.5 A 3 3 0 0 1 143.5 198.5 L 143.5 344.5 A 0 0 0 0 1 143.5 344.5 L 123.5 344.5 A 0 0 0 0 1 123.5 344.5 L 123.5 198.5 A 3 3 0 0 1 126.5 195.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 90.5 220.5 L 104.5 220.5 A 3 3 0 0 1 107.5 223.5 L 107.5 344.5 A 0 0 0 0 1 107.5 344.5 L 87.5 344.5 A 0 0 0 0 1 87.5 344.5 L 87.5 223.5 A 3 3 0 0 1 90.5 220.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 54.5 250.5 L 68.5 250.5 A 3 3 0 0 1 71.5 253.5 L 71.5 344.5 A 0 0 0 0 1 71.5 344.5 L 51.5 344.5 A 0 0 0 0 1 51.5 344.5 L 51.5 253.5 A 3 3 0 0 1 54.5 250.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-0"></path><path fill="#2caffe" d="M 18.5 252.5 L 32.5 252.5 A 3 3 0 0 1 35.5 255.5 L 35.5 344.5 A 0 0 0 0 1 35.5 344.5 L 15.5 344.5 A 0 0 0 0 1 15.5 344.5 L 15.5 255.5 A 3 3 0 0 1 18.5 252.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-0"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-bar-series highcharts-color-0" data-z-index="0.1" opacity="1" transform="translate(144,10) scale(1 1)" clip-path="none"></g><g class="highcharts-series highcharts-series-1 highcharts-bar-series highcharts-color-1 highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(144,10) rotate(90 46 299) scale(-1 1)" clip-path="url(#highcharts-9z2k6mk-17-)"><path fill="#544fc5" d="M 227.5 344.5 L 241.5 344.5 A 3 3 0 0 1 241.5 344.5 L 241.5 344.5 A 0 0 0 0 1 241.5 344.5 L 241.5 344.5 A 0 0 0 0 1 227.5 344.5 L 227.5 344.5 A 3 3 0 0 1 227.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 191.5 344.5 L 205.5 344.5 A 3 3 0 0 1 205.5 344.5 L 205.5 344.5 A 0 0 0 0 1 205.5 344.5 L 205.5 344.5 A 0 0 0 0 1 191.5 344.5 L 191.5 344.5 A 3 3 0 0 1 191.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 155.5 344.5 L 169.5 344.5 A 3 3 0 0 1 169.5 344.5 L 169.5 344.5 A 0 0 0 0 1 169.5 344.5 L 169.5 344.5 A 0 0 0 0 1 155.5 344.5 L 155.5 344.5 A 3 3 0 0 1 155.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 119.5 344.5 L 133.5 344.5 A 3 3 0 0 1 133.5 344.5 L 133.5 344.5 A 0 0 0 0 1 133.5 344.5 L 133.5 344.5 A 0 0 0 0 1 119.5 344.5 L 119.5 344.5 A 3 3 0 0 1 119.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 83.5 344.5 L 97.5 344.5 A 3 3 0 0 1 97.5 344.5 L 97.5 344.5 A 0 0 0 0 1 97.5 344.5 L 97.5 344.5 A 0 0 0 0 1 83.5 344.5 L 83.5 344.5 A 3 3 0 0 1 83.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 47.5 344.5 L 61.5 344.5 A 3 3 0 0 1 61.5 344.5 L 61.5 344.5 A 0 0 0 0 1 61.5 344.5 L 61.5 344.5 A 0 0 0 0 1 47.5 344.5 L 47.5 344.5 A 3 3 0 0 1 47.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-1"></path><path fill="#544fc5" d="M 11.5 344.5 L 25.5 344.5 A 3 3 0 0 1 25.5 344.5 L 25.5 344.5 A 0 0 0 0 1 25.5 344.5 L 25.5 344.5 A 0 0 0 0 1 11.5 344.5 L 11.5 344.5 A 3 3 0 0 1 11.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-1"></path></g><g class="highcharts-markers highcharts-series-1 highcharts-bar-series highcharts-color-1" data-z-index="0.1" opacity="1" transform="translate(144,10) scale(1 1)" clip-path="none"></g><g class="highcharts-series highcharts-series-2 highcharts-bar-series highcharts-color-2 highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(144,10) rotate(90 46 299) scale(-1 1)" clip-path="url(#highcharts-9z2k6mk-17-)"><path fill="#00e272" d="M 220.5 344.5 L 234.5 344.5 A 3 3 0 0 1 234.5 344.5 L 234.5 344.5 A 0 0 0 0 1 234.5 344.5 L 234.5 344.5 A 0 0 0 0 1 220.5 344.5 L 220.5 344.5 A 3 3 0 0 1 220.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 184.5 344.5 L 198.5 344.5 A 3 3 0 0 1 198.5 344.5 L 198.5 344.5 A 0 0 0 0 1 198.5 344.5 L 198.5 344.5 A 0 0 0 0 1 184.5 344.5 L 184.5 344.5 A 3 3 0 0 1 184.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 148.5 344.5 L 162.5 344.5 A 3 3 0 0 1 162.5 344.5 L 162.5 344.5 A 0 0 0 0 1 162.5 344.5 L 162.5 344.5 A 0 0 0 0 1 148.5 344.5 L 148.5 344.5 A 3 3 0 0 1 148.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 112.5 344.5 L 126.5 344.5 A 3 3 0 0 1 126.5 344.5 L 126.5 344.5 A 0 0 0 0 1 126.5 344.5 L 126.5 344.5 A 0 0 0 0 1 112.5 344.5 L 112.5 344.5 A 3 3 0 0 1 112.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 76.5 344.5 L 90.5 344.5 A 3 3 0 0 1 90.5 344.5 L 90.5 344.5 A 0 0 0 0 1 90.5 344.5 L 90.5 344.5 A 0 0 0 0 1 76.5 344.5 L 76.5 344.5 A 3 3 0 0 1 76.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 39.5 344.5 L 53.5 344.5 A 3 3 0 0 1 53.5 344.5 L 53.5 344.5 A 0 0 0 0 1 53.5 344.5 L 53.5 344.5 A 0 0 0 0 1 39.5 344.5 L 39.5 344.5 A 3 3 0 0 1 39.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-2"></path><path fill="#00e272" d="M 3.5 344.5 L 17.5 344.5 A 3 3 0 0 1 17.5 344.5 L 17.5 344.5 A 0 0 0 0 1 17.5 344.5 L 17.5 344.5 A 0 0 0 0 1 3.5 344.5 L 3.5 344.5 A 3 3 0 0 1 3.5 344.5 Z" stroke="#ffffff" stroke-width="1" opacity="1" filter="none" class="highcharts-point highcharts-color-2"></path></g><g class="highcharts-markers highcharts-series-2 highcharts-bar-series highcharts-color-2" data-z-index="0.1" opacity="1" transform="translate(144,10) scale(1 1)" clip-path="none"></g></g><g class="highcharts-exporting-group" data-z-index="3"><g class="highcharts-no-tooltip highcharts-button highcharts-contextbutton" stroke-linecap="round" style="cursor: pointer;" transform="translate(461,5)"><title>Chart context menu</title><rect fill="#ffffff" class="highcharts-button-box" x="0.5" y="0.5" width="28" height="28" rx="2" ry="2" stroke="none" stroke-width="1"></rect><path fill="#666666" d="M 8 9.5 L 22 9.5 M 8 14.5 L 22 14.5 M 8 19.5 L 22 19.5" class="highcharts-button-symbol" data-z-index="1" stroke="#666666" stroke-width="3"></path><text x="28" data-z-index="1" y="18.5" text-anchor="end" style="font-size: 0.8em; font-weight: normal; fill: rgb(51, 51, 51);"></text></g></g><text x="250" class="highcharts-title" data-z-index="4" style="font-size: 1.2em; font-weight: bold; fill: rgb(51, 51, 51);" text-align="center" y="25" text-anchor="middle" transform-origin="10 22" transform="translate(0,0) scale(1 1)"></text><text x="250" class="highcharts-subtitle" data-z-index="4" text-align="center" y="24" text-anchor="middle" transform-origin="10 15" transform="translate(0,0) scale(1 1)" style="font-size: 0.8em; fill: rgb(102, 102, 102);"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="font-size: 0.8em; fill: rgb(102, 102, 102);" text-align="left" y="347" transform-origin="10 15" transform="translate(0,0) scale(1 1)"></text><g class="highcharts-datalabels-group" data-z-index="6"></g><g class="highcharts-legend highcharts-no-tooltip" data-z-index="7" text-align="center" transform="translate(120,305)"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" stroke="#999999" stroke-width="0" filter="none" x="0" y="0" width="259" height="30"></rect><g data-z-index="1"><g><g class="highcharts-legend-item highcharts-bar-series highcharts-color-2 highcharts-series-2" data-z-index="1" transform="translate(8,3)"><text x="21" text-anchor="start" data-z-index="2" style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);" y="17">Admission</text><rect x="2" y="6" rx="6" ry="6" width="12" height="12" fill="#00e272" class="highcharts-point" data-z-index="3"></rect></g><g class="highcharts-legend-item highcharts-bar-series highcharts-color-1 highcharts-series-1" data-z-index="1" transform="translate(108.03125,3)"><text x="21" y="17" text-anchor="start" data-z-index="2" style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);">Release</text><rect x="2" y="6" rx="6" ry="6" width="12" height="12" fill="#544fc5" class="highcharts-point" data-z-index="3"></rect></g><g class="highcharts-legend-item highcharts-bar-series highcharts-color-0 highcharts-series-0" data-z-index="1" transform="translate(195.984375,3)"><text x="21" y="17" text-anchor="start" data-z-index="2" style="cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);">Inside</text><rect x="2" y="6" rx="6" ry="6" width="12" height="12" fill="#2caffe" class="highcharts-point" data-z-index="3"></rect></g></g></g></g><g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7"><text x="144" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">0</text><text x="213" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">20k</text><text x="282" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">40k</text><text x="351" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">60k</text><text x="420" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">80k</text><text x="474.82447052001953" text-anchor="middle" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="290" opacity="1">100k</text></g><g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"><text x="129" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="33" opacity="1">UTTAR PRADESH</text><text x="129" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="69" opacity="1">BIHAR</text><text x="129" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="105" opacity="1">MADHYA PRADESH</text><text x="129" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="141" opacity="1">MAHARASHTRA</text><text x="129" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="177" opacity="1">PUNJAB</text><text x="129" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="213" opacity="1">HARYANA</text><text x="129" text-anchor="end" transform="translate(0,0)" style="cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);" y="249" opacity="1">RAJASTHAN</text></g></svg></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6">
+                    
+                </div>
+                <div class="col-lg-6">
+                    
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+    <script type="text/javascript">
+        function DisplayHtml() {
+            $(".imgOrdersShow").each(function () {
+                if ($(this)[0].src.indexOf("minus") != -1) {
+                    $(this).closest("tr").after("<tr><td></td><td colspan = '999'>" + $(this).next().html() + "</td></tr>");
+                    $(this).next().remove();
+                }
+            });
+
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            //loadOffanceChart();
+            loadbar();
+            loadbar1();
+            loadTestChart();
+
+        });
+        function loadbar() {
+
+            $.ajax({
+                type: "POST",
+                url: "Chart.ashx",
+                data: { action: "bindbar" },
+                dataType: "json",
+
+                success: function (xdata) {
+
+                    var data_att_tab = [];
+                    var data_att_desk = [];
+                    var data_att_desk1 = [];
+                    var data_log_date = [];
+
+                    $.each(xdata, function (index) {
+
+                        $.each(xdata[index].series1, function (i) {
+                            data_att_tab.push(parseInt(xdata[index].series1[i]));
+                        });
+
+                        $.each(xdata[index].series2, function (i) {
+                            data_att_desk.push(parseInt(xdata[index].series2[i]));
+                        });
+
+                        $.each(xdata[index].series3, function (i) {
+                            data_att_desk1.push(parseInt(xdata[index].series3[i]));
+                        });
+
+                        $.each(xdata[index].name, function (i) {
+                            data_log_date.push(xdata[index].name[i]);
+                        });
+
+                    });
+
+                    $('#combination').highcharts({
+
+                        chart: {
+                            type: 'areaspline'
+                        },
+
+                        title: {
+                            text: ''
+                        },
+
+                        legend: {
+                            reversed: true
+                        },
+
+                        xAxis: {
+                            categories: data_log_date
+                        },
+
+                        yAxis: {
+                            title: {
+                                text: ''
+                            }
+                        },
+
+                        plotOptions: {
+                            series: {
+                                stacking: 'normal'
+                            }
+                        },
+
+                        tooltip: {
+                            shared: false
+                        },
+
+                        credits: {
+                            enabled: false
+                        },
+
+                        series: [
+                            {
+                                name: 'Visitors',
+                                data: data_att_desk1
+                            },
+                            {
+                                name: 'Release',
+                                data: data_att_desk
+                            },
+                            {
+                                name: 'Admission',
+                                data: data_att_tab
+                            }
+                        ]
+                    });
+
+                },
+
+                error: function (xhr, status, error) {
+                    console.log(xhr.responseText);
+                    console.log(status);
+                    console.log(error);
+                }
+
+            });
+
+        }
+        function loadbar1() {
+
+            $.ajax({
+                type: "POST",
+                url: "Chart.ashx",
+                data: {
+                    action: "bindbar1"
+                },
+                dataType: "json",
+
+                success: function (xdata) {
+
+                    var data_att_tab = [];
+                    var data_att_desk = [];
+                    var data_att_desk1 = [];
+                    var data_log_date = [];
+
+                    $.each(xdata, function (index) {
+
+                        $.each(xdata[index].series1, function (i) {
+                            data_att_tab.push(parseInt(xdata[index].series1[i]));
+                        });
+
+                        $.each(xdata[index].series2, function (i) {
+                            data_att_desk.push(parseInt(xdata[index].series2[i]));
+                        });
+
+                        $.each(xdata[index].series3, function (i) {
+                            data_att_desk1.push(parseInt(xdata[index].series3[i]));
+                        });
+
+                        $.each(xdata[index].name, function (i) {
+                            data_log_date.push(xdata[index].name[i]);
+                        });
+
+                    });
+
+                    $('#combination1').highcharts({
+                        chart: {
+                            type: 'bar'
+                        },
+                        title: {
+                            text: ''
+                        },
+                        legend: {
+                            reversed: true
+                        },
+                        xAxis: {
+                            categories: data_log_date
+                        },
+                        yAxis: {
+                            title: {
+                                text: ''
+                            }
+                        },
+                        tooltip: {
+                            shared: false
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        series: [
+                            {
+                                name: 'Inside',
+                                data: data_att_tab,
+                                pointWidth: 20
+                            },
+                            {
+                                name: 'Release',
+                                data: data_att_desk1,
+                                pointWidth: 20
+                            },
+                            {
+                                name: 'Admission',
+                                data: data_att_desk,
+                                pointWidth: 20
+                            }
+                        ]
+                    });
+
+                },
+
+                error: function (xhr, status, error) {
+                    console.log(xhr.responseText);
+                    console.log(status);
+                    console.log(error);
+                }
+            });
+        }
+
+        function loadOffanceChart() {
+
+            //alert('hi');
+            $.ajax({
+                type: "POST",
+                url: "Chart.asmx/bindOffanceChart1",
+                async: true,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (xdata) {
+                    xdata = xdata.d;
+                    var data_att_count = [];
+                    var data_log_name = [];
+                    $.each(xdata, function (index) {
+                        $.each(xdata[index].series1, function (index1) {
+                            data_att_count.push([parseInt(xdata[index].series1[index1])]);
+                            // alert(xdata[index].series1[index1]);
+                        });
+                        $.each(xdata[index].name, function (index1) {
+                            data_log_name.push([xdata[index].name[index1]]);
+                            // alert(xdata[index].series1[index1]);
+
+                        });
+                    });
+
+
+
+                    // Preconfigure
+                    $('#OffenceChart').highcharts({
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: ''
+                        },
+                        subtitle: {
+                            text: ''
+                        },
+                        accessibility: {
+                            announceNewData: {
+                                enabled: true
+                            }
+                        },
+                        legend: {
+                            reversed: true
+                        },
+                        xAxis: {
+                            categories: data_log_name,
+                            text: 'Act Section'
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Number of inmates'
+                            }
+                        },
+                        plotOptions: {
+                            series: {
+                                borderWidth: 0,
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '{point.y}'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            shared: false
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        tooltip: {
+                            headerFormat: '<span style="font-size:11px"><b>{point.y}</b></span>',
+                            pointFormat: '<span style="color:{point.color}">{series.name}</span>'
+                        },
+                        series: [{
+                            name: ' ',
+                            colorByPoint: true,
+                            data: data_att_count,
+                            pointWidth: 20
+                        }]
+                    });
+
+                }
+            });
+        }
+
+        function loadTestChart() {
+            $.ajax({
+                type: "POST",
+                url: "Chart.asmx/bindOffanceChart",
+                async: true,
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (xdata) {
+                    // alert(xdata.d);
+                    Highcharts.data({
+                        csv: xdata.d,
+                        itemDelimiter: '@',
+                        parsed: function (columns) {
+                            var brands = {}, brandsData = [], versions = {}, drilldownSeries = [];
+                            var str = xdata.d;
+                            var array = str.split("/");
+                            var array1 = array[0].split(",");
+                            var array2 = array[1].split(",");
+                            $.each(array1, function (i, name) {
+                                var brand, version;
+
+                                if (i > 0) {
+                                    brand = name.split('-')[0];
+                                    version = name.split('-')[1];
+
+                                    // Create the main data
+                                    if (!brands[brand]) {
+                                        brands[brand] = parseInt(array2[i]);
+                                    } else {
+                                        brands[brand] += parseInt(array2[i]);
+                                    }
+
+                                    // Create the version data
+                                    if (version !== null) {
+                                        if (!versions[brand]) {
+                                            versions[brand] = [];
+                                        }
+                                        versions[brand].push([version, parseInt(array2[i])]);
+                                    }
+                                }
+                            });
+                            $.each(brands, function (name, y) {
+                                brandsData.push({
+                                    name: name,
+                                    y: y,
+                                    drilldown: versions[name] ? name : null
+                                });
+                            });
+                            $.each(versions, function (key, value) {
+                                drilldownSeries.push({
+                                    name: key,
+                                    id: key,
+                                    data: value
+                                });
+                            });
+                            var chart = {
+                                type: 'pie'
+                            };
+                            var title = {
+                                text: 'Total inmates count offence wise.'
+                            };
+                            var subtitle = {
+                                text: 'Click the columns to view statewise count.'
+                            };
+                            var xAxis = {
+                                type: 'category'
+                            };
+                            var yAxis = {
+                                title: {
+                                    text: 'Total count section wise'
+                                }
+                            };
+                            var tooltip = {
+                                headerFormat: '<span style = "color:{point.color}">{point.name}</span><b>{point.y}</b> inmates in',
+                                pointFormat: '<span style = "font-size:11px"> {series.name}</span><br>'
+                            };
+                            var credits = {
+                                enabled: false
+                            };
+                            var series = [{
+                                name: 'Sections',
+                                colorByPoint: true,
+                                data: brandsData
+                            }];
+                            var drilldown = {
+                                series: drilldownSeries
+                            }
+                            var json = {};
+                            json.chart = chart;
+                            json.title = title;
+                            json.subtitle = subtitle;
+                            json.xAxis = xAxis;
+                            json.yAxis = yAxis;
+                            json.tooltip = tooltip;
+                            json.credits = credits;
+                            json.series = series;
+                            json.drilldown = drilldown;
+                            $('#BrowserChart').highcharts(json);
+                        }
+                    });
+                }
+            });
+        }
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+
+        prm.add_endRequest(function () {
+            loadbar();
+            loadbar1();
+            loadTestChart();
+        });
+    </script>
+
+            <div class="container">
+                
+                
+            </div>
+            <!-- page-content-wrapper End-->
+        </div>
+    </main>
+
+
+    
+<footer class="footer mt-auto footer_bg">
+
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5">
+                            <div class="footer-middle border_right pb-4">
+                                <h4>Information</h4>
+                                <ul class="links">
+                                    <li><a href="DashBoard.aspx"><i class="bi bi-link"></i>DashBoard</a></li>
+                                    <li><a href="MyVisitRegistration.aspx"><i class="bi bi-link"></i>eMulakat</a></li>
+                                    <li><a href="grievance.aspx"><i class="bi bi-link"></i>Grievance</a></li>
+                                    <li><a href="About.aspx"><i class="bi bi-link"></i>About us </a></li>
+
+                                </ul>
+                                <!-- footer-middle border_right End-->
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5">
+                            <div class="footer-middle border_right ">
+                                <h4><a href="ContactUs.aspx" style="color: #fff">Contact Us </a></h4>
+                                <ul class="contacts-info ">
+
+                                    <li>
+                                        <div class="add_email_phone-icon">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                        </div>
+                                        National Informatics Centre<br>
+                                        A-Block, CGO Complex, Lodhi Road<br>
+                                        New Delhi - 110 003 India</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-2 col-sm-2 col-lg-2">
+                            <h4 style="visibility: hidden">.</h4>
+                            <span class="float-end text-white"><b>Served From :</b><br>
+                                <span id="lblServerDetails">NQ34EP2P-ePApp4</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- container -->
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="footer_text" style="padding-top: 5px">
+                                    A Digital India Initiative by Government of India.
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-6 col-lg-6">
+                                <div class="footer_text">
+                                    <ul class="footer_nav">
+                                        <li><a href="PrivacyPolicy.aspx">Privacy Policy</a></li>
+                                        <li><a href="TermsofUse.aspx">Terms of Use</a></li>
+                                        <li><a href="CodeofConduct.aspx">Code of Conduct</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="footer_text powered_by float-end">
+                                    Copyright © 2015 by NIC .All rights reserved.
+                                <img src="../Content/images/nic_logo.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+
+    </footer>
+
+         
+         
+    
+
+<script type="text/javascript">
+//<![CDATA[
+DisplayHtml();//]]>
+</script>
+</form>
+
+         <a href="#" class="back-to-top" style="display: none;"><i class="bi bi-arrow-up-short"></i></a>
+   <script src="../Content/js/crypto.js"></script>
+   <script>
+       jQuery(document).ready(function () {
+           var offset = 250;
+           var duration = 300;
+           jQuery(window).scroll(function () {
+               if (jQuery(this).scrollTop() > offset) {
+                   jQuery('.back-to-top').fadeIn(duration);
+               } else {
+                   jQuery('.back-to-top').fadeOut(duration);
+               }
+           });
+
+           jQuery('.back-to-top').click(function (event) {
+               event.preventDefault();
+               jQuery('html, body').animate({ scrollTop: 0 }, duration);
+               return false;
+           })
+       });
+   </script>
+
+
+    <!-- AdminLTE App -->
+    <script src="../Content/dist/js/app.min.js" type="text/javascript"></script>
+    <!-- Optionally, you can add Slimscroll and FastClick plugins. 
+          Both of these plugins are recommended to enhance the 
+          user experience -->
+    <!-- Bootstrap Core JavaScript -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Binding Code
+            var config = {
+                '.chosen-select': {},
+                '.chosen-select-deselect': { allow_single_deselect: true },
+                '.chosen-select-no-single': { disable_search_threshold: 10 },
+                '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+                '.chosen-select-width': { width: "95%" }
+            }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+
+            }
+            $('#multistates').on('change', function (evt, params) {
+
+
+                $('#hidTest').val($(this).val());
+            });
+            //
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+            function EndRequestHandler(sender, args) {
+                var config = {
+                    '.chosen-select': {},
+                    '.chosen-select-deselect': { allow_single_deselect: true },
+                    '.chosen-select-no-single': { disable_search_threshold: 10 },
+                    '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+                    '.chosen-select-width': { width: "95%" }
+                }
+                for (var selector in config) {
+                    $(selector).chosen(config[selector]);
+
+                }
+                $('#multistates').on('change', function (evt, params) {
+
+
+                    $('#hidTest').val($(this).val());
+                });
+            }
+        });
+
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+    </script>
+
+
+</body></html>

@@ -1,0 +1,885 @@
+{
+  "generatedAt": "2026-10-27T09:29:40.816Z",
+  "measurementViewport": {
+    "name": "desktop",
+    "width": 1366,
+    "height": 900
+  },
+  "counts": {
+    "distinctComponents": 19,
+    "sharedAcrossPages": 9,
+    "byType": {
+      "header": 2,
+      "footer": 2,
+      "nav": 4,
+      "accordion": 1,
+      "form": 1,
+      "banner": 2,
+      "list": 1,
+      "card": 4,
+      "button": 2
+    }
+  },
+  "components": [
+    {
+      "componentId": "header-9b8642bdadcc",
+      "type": "header",
+      "tag": "header",
+      "classes": null,
+      "idPattern": null,
+      "instanceCount": 4,
+      "pageCount": 4,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 116,
+        "medianX": 0,
+        "medianY": 0,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(0, 20, 60)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px 0px 100px 100px",
+        "boxShadow": "rgb(38, 57, 77) 0px 9px 8px -13px",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Home FAQ Contact Us Login Login with JanParichay e-Forensic 1.0",
+      "behaviour": null
+    },
+    {
+      "componentId": "footer-de4bc48d2427",
+      "type": "footer",
+      "tag": "footer",
+      "classes": null,
+      "idPattern": null,
+      "instanceCount": 4,
+      "pageCount": 4,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 379,
+        "medianX": 0,
+        "medianY": 782,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 2,
+      "sampleText": "Contact Us Phone Number 24x7 NIC Service Desk 1800 111 555 E-Mail Address servicedesk.nic.in Headquarters Ministry of Home Affairs, Kartavya Bhavan 3, Central Secretariat New Delhi",
+      "behaviour": null
+    },
+    {
+      "componentId": "footer-ce407f2d8524",
+      "type": "footer",
+      "tag": "div",
+      "classes": "w-100 py-3 text-center last_footer",
+      "idPattern": null,
+      "instanceCount": 4,
+      "pageCount": 4,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 88,
+        "medianX": 0,
+        "medianY": 1073,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(6, 18, 66)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "16px 0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 1,
+      "sampleText": "© Content Owned by Ministry of Home Affairs, Government of India | Site Maintained by (NIC) National Informatics Center Version: 2.0.0.1, Released Date: 17/06/2026 11:30AM",
+      "behaviour": null
+    },
+    {
+      "componentId": "nav-20a13846344c",
+      "type": "nav",
+      "tag": "nav",
+      "classes": "navbar navbar-expand-lg navbar-light ef_head",
+      "idPattern": null,
+      "instanceCount": 4,
+      "pageCount": 4,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 1366,
+        "medianHeight": 116,
+        "medianX": 0,
+        "medianY": 0,
+        "widthRange": [
+          1366,
+          1366
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "8px 0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Home FAQ Contact Us Login Login with JanParichay e-Forensic 1.0",
+      "behaviour": null
+    },
+    {
+      "componentId": "nav-ffeb308000cf",
+      "type": "nav",
+      "tag": "a",
+      "classes": "navbar-brand",
+      "idPattern": null,
+      "instanceCount": 4,
+      "pageCount": 4,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 285,
+        "medianHeight": 100,
+        "medianX": 55,
+        "medianY": 8,
+        "widthRange": [
+          285,
+          285
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "5px 0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": null,
+      "behaviour": null
+    },
+    {
+      "componentId": "nav-5877a346a3bf",
+      "type": "nav",
+      "tag": "div",
+      "classes": "collapse navbar-collapse justify-content-end",
+      "idPattern": "navbarNavDropdown",
+      "instanceCount": 4,
+      "pageCount": 4,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 955,
+        "medianHeight": 73,
+        "medianX": 356,
+        "medianY": 24,
+        "widthRange": [
+          955,
+          955
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Home FAQ Contact Us Login Login with JanParichay e-Forensic 1.0",
+      "behaviour": null
+    },
+    {
+      "componentId": "nav-4e3a791d88b3",
+      "type": "nav",
+      "tag": "ul",
+      "classes": "navbar-nav",
+      "idPattern": null,
+      "instanceCount": 4,
+      "pageCount": 4,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 835,
+        "medianHeight": 73,
+        "medianX": 510,
+        "medianY": 24,
+        "widthRange": [
+          801,
+          835
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "textAlign": "start"
+      },
+      "medianChildCount": 6,
+      "sampleText": "Home FAQ Contact Us Login Login with JanParichay e-Forensic 1.0",
+      "behaviour": null
+    },
+    {
+      "componentId": "accordion-475850cffc04",
+      "type": "accordion",
+      "tag": "div",
+      "classes": "collapse navbar-collapse justify-content-end",
+      "idPattern": "navbarNavDropdown",
+      "instanceCount": 4,
+      "pageCount": 4,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/",
+        "https://eforensics.gov.in/Home/ContactUs",
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 955,
+        "medianHeight": 73,
+        "medianX": 356,
+        "medianY": 24,
+        "widthRange": [
+          955,
+          955
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Home FAQ Contact Us Login Login with JanParichay e-Forensic 1.0",
+      "behaviour": null
+    },
+    {
+      "componentId": "form-57ff5b1df352",
+      "type": "form",
+      "tag": "form",
+      "classes": null,
+      "idPattern": null,
+      "instanceCount": 2,
+      "pageCount": 2,
+      "shared": true,
+      "usedOnPages": [
+        "https://eforensics.gov.in/Login",
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 1342,
+        "medianHeight": 650,
+        "medianX": 12,
+        "medianY": 132,
+        "widthRange": [
+          1342,
+          1342
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 2,
+      "sampleText": "Log In to Portal user_name user_password Captcha Sign In Forgot Password?",
+      "behaviour": null
+    },
+    {
+      "componentId": "banner-a6e04404ad11",
+      "type": "banner",
+      "tag": "div",
+      "classes": "col-lg-6 col-md-12 banner_area_text text-white",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "measurements": {
+        "medianWidth": 652,
+        "medianHeight": 321,
+        "medianX": 31,
+        "medianY": 191,
+        "widthRange": [
+          652,
+          652
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px 75px 0px 15px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 4,
+      "sampleText": "Welcome Digitizing Forensic Labs for Efficiency and Accuracy Welcome to a revolutionary platform designed to automate forensic lab operations. Our portal helps forensic labs connec",
+      "behaviour": null
+    },
+    {
+      "componentId": "banner-c5ba4b38f7cd",
+      "type": "banner",
+      "tag": "div",
+      "classes": "col-lg-6 col-md-12 banner_area_img",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "measurements": {
+        "medianWidth": 652,
+        "medianHeight": 396,
+        "medianX": 683,
+        "medianY": 116,
+        "widthRange": [
+          652,
+          652
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px 12px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "right"
+      },
+      "medianChildCount": 1,
+      "sampleText": null,
+      "behaviour": null
+    },
+    {
+      "componentId": "list-0fe37900d8a1",
+      "type": "list",
+      "tag": "ul",
+      "classes": "p-0 m-0",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/"
+      ],
+      "measurements": {
+        "medianWidth": 1168,
+        "medianHeight": 376,
+        "medianX": 99,
+        "medianY": 1139,
+        "widthRange": [
+          1168,
+          1168
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 5,
+      "sampleText": "Login Securely log into the portal with your credentials to access your personalized dashboard and case management tools. Registration Quickly search for specific cases or reports ",
+      "behaviour": null
+    },
+    {
+      "componentId": "header-207704353189",
+      "type": "header",
+      "tag": "div",
+      "classes": "card-header border-success text-center",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs"
+      ],
+      "measurements": {
+        "medianWidth": 544,
+        "medianHeight": 49,
+        "medianX": 411,
+        "medianY": 198,
+        "widthRange": [
+          544,
+          544
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(33, 37, 41, 0.03)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "8px 16px",
+        "border": "",
+        "borderRadius": "5px 5px 0px 0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 1,
+      "sampleText": "National Informatics Centre",
+      "behaviour": null
+    },
+    {
+      "componentId": "card-7994683fbbb0",
+      "type": "card",
+      "tag": "div",
+      "classes": "col-md-12 note note-success box-2d",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs"
+      ],
+      "measurements": {
+        "medianWidth": 538,
+        "medianHeight": 41,
+        "medianX": 414,
+        "medianY": 140,
+        "widthRange": [
+          538,
+          538
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(198, 255, 221)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "10px",
+        "border": "",
+        "borderRadius": "5px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 1,
+      "sampleText": "Contact Details",
+      "behaviour": null
+    },
+    {
+      "componentId": "card-4864b0c3e524",
+      "type": "card",
+      "tag": "div",
+      "classes": "card border-success mb-3 box-3d",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs"
+      ],
+      "measurements": {
+        "medianWidth": 546,
+        "medianHeight": 157,
+        "medianX": 410,
+        "medianY": 197,
+        "widthRange": [
+          546,
+          546
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "0px",
+        "border": "1px solid rgb(25, 135, 84)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "display": "flex",
+        "textAlign": "start"
+      },
+      "medianChildCount": 2,
+      "sampleText": "National Informatics Centre Address: A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India",
+      "behaviour": null
+    },
+    {
+      "componentId": "card-1003edb31567",
+      "type": "card",
+      "tag": "div",
+      "classes": "card-header border-success text-center",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs"
+      ],
+      "measurements": {
+        "medianWidth": 544,
+        "medianHeight": 49,
+        "medianX": 411,
+        "medianY": 198,
+        "widthRange": [
+          544,
+          544
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(33, 37, 41, 0.03)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "8px 16px",
+        "border": "",
+        "borderRadius": "5px 5px 0px 0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 1,
+      "sampleText": "National Informatics Centre",
+      "behaviour": null
+    },
+    {
+      "componentId": "card-442ee2ee2972",
+      "type": "card",
+      "tag": "div",
+      "classes": "card-body",
+      "idPattern": null,
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/Home/ContactUs"
+      ],
+      "measurements": {
+        "medianWidth": 544,
+        "medianHeight": 106,
+        "medianX": 411,
+        "medianY": 247,
+        "widthRange": [
+          544,
+          544
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(33, 37, 41)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "16px",
+        "border": "0px none rgb(33, 37, 41)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "start"
+      },
+      "medianChildCount": 2,
+      "sampleText": "Address: A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India",
+      "behaviour": null
+    },
+    {
+      "componentId": "button-c20390c54cbf",
+      "type": "button",
+      "tag": "button",
+      "classes": "btn fw-bold bg_Gradiunt",
+      "idPattern": "login-btn",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/Login"
+      ],
+      "measurements": {
+        "medianWidth": 339,
+        "medianHeight": 38,
+        "medianX": 513,
+        "medianY": 472,
+        "widthRange": [
+          339,
+          339
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(0, 95, 191)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "6px 12px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "15px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 0,
+      "sampleText": "Sign In",
+      "behaviour": null
+    },
+    {
+      "componentId": "button-b9947eed13a0",
+      "type": "button",
+      "tag": "button",
+      "classes": "btn fw-bold bg_Gradiunt text-white",
+      "idPattern": "btnconfirm",
+      "instanceCount": 1,
+      "pageCount": 1,
+      "shared": false,
+      "usedOnPages": [
+        "https://eforensics.gov.in/Forget/ForgetPassword"
+      ],
+      "measurements": {
+        "medianWidth": 94,
+        "medianHeight": 38,
+        "medianX": 636,
+        "medianY": 388,
+        "widthRange": [
+          94,
+          94
+        ],
+        "note": "Measured at the desktop viewport (1366x900), in CSS pixels, document-relative."
+      },
+      "dominantStyle": {
+        "backgroundColor": "rgb(0, 95, 191)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "fontFamily": "Montserrat, sans-serif",
+        "padding": "6px 12px",
+        "border": "1px solid rgba(0, 0, 0, 0)",
+        "borderRadius": "6px",
+        "boxShadow": "none",
+        "display": "block",
+        "textAlign": "center"
+      },
+      "medianChildCount": 0,
+      "sampleText": "Confirm",
+      "behaviour": null
+    }
+  ],
+  "pageToComponents": [
+    {
+      "page": "https://eforensics.gov.in/",
+      "slug": "index",
+      "pageType": "home",
+      "componentIds": [
+        "header-9b8642bdadcc",
+        "footer-de4bc48d2427",
+        "footer-ce407f2d8524",
+        "nav-20a13846344c",
+        "nav-ffeb308000cf",
+        "nav-5877a346a3bf",
+        "nav-4e3a791d88b3",
+        "banner-a6e04404ad11",
+        "banner-c5ba4b38f7cd",
+        "accordion-475850cffc04",
+        "list-0fe37900d8a1"
+      ]
+    },
+    {
+      "page": "https://eforensics.gov.in/Home/ContactUs",
+      "slug": "home_contactus",
+      "pageType": "contact",
+      "componentIds": [
+        "header-9b8642bdadcc",
+        "header-207704353189",
+        "footer-de4bc48d2427",
+        "footer-ce407f2d8524",
+        "nav-20a13846344c",
+        "nav-ffeb308000cf",
+        "nav-5877a346a3bf",
+        "nav-4e3a791d88b3",
+        "card-7994683fbbb0",
+        "card-4864b0c3e524",
+        "card-1003edb31567",
+        "card-442ee2ee2972",
+        "accordion-475850cffc04"
+      ]
+    },
+    {
+      "page": "https://eforensics.gov.in/Login",
+      "slug": "login",
+      "pageType": "login",
+      "componentIds": [
+        "header-9b8642bdadcc",
+        "footer-de4bc48d2427",
+        "footer-ce407f2d8524",
+        "nav-20a13846344c",
+        "nav-ffeb308000cf",
+        "nav-5877a346a3bf",
+        "nav-4e3a791d88b3",
+        "form-57ff5b1df352",
+        "accordion-475850cffc04",
+        "button-c20390c54cbf"
+      ]
+    },
+    {
+      "page": "https://eforensics.gov.in/Forget/ForgetPassword",
+      "slug": "forget_forgetpassword",
+      "pageType": "content",
+      "componentIds": [
+        "header-9b8642bdadcc",
+        "footer-de4bc48d2427",
+        "footer-ce407f2d8524",
+        "nav-20a13846344c",
+        "nav-ffeb308000cf",
+        "nav-5877a346a3bf",
+        "nav-4e3a791d88b3",
+        "form-57ff5b1df352",
+        "accordion-475850cffc04",
+        "button-b9947eed13a0"
+      ]
+    }
+  ],
+  "note": "Components are grouped by tag + class signature, so one entry can represent the same header or card repeated across pages. Geometry is the median across instances; the per-page exact values stay in reference_pages/page_metadata/."
+}

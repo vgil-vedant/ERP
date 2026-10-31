@@ -1,0 +1,107 @@
+# The ERP stack: the ERP service and the platform (five portals + hub).
+#
+#   docker compose up -d --build
+#
+# Every Docker object this file creates is named with the ERP_ prefix.
+# (Image repository names must be lowercase, so those are erp_*.)
+#
+# Host ports default to 7xxx so the stack can run beside the processes that
+# already use 4100-4200. All are bound to 127.0.0.1 only. Override any of them
+# in the root .env with the ERP_HOST_PORT_* variables below.
+# ERP_BIND_ADDR (default 127.0.0.1) sets the address the hub and the five portals
+# listen on, so people on the network can reach them. The ERP console and
+# PostgreSQL always stay on 127.0.0.1.
+name: erp
+
+x-hardening: &hardening
+  restart: unless-stopped
+  read_only: true
+  tmpfs: [/tmp]
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  logging:
+    driver: json-file
+    options: { max-size: "10m", max-file: "3" }
+  networks: [ERP_net]
+
+services:
+  erp_api:
+    <<: *hardening
+    image: erp_erp_api:${ERP_IMAGE_TAG:-1.0.0}
+    build: { context: ., dockerfile: docker/Dockerfile, target: erp-api }
+    container_name: ERP_erp_api
+    environment:
+      HOST: 0.0.0.0
+    ports:
+      - "127.0.0.1:${ERP_HOST_PORT_ERP:-7200}:4200"
+    volumes:
+      - ERP_erp_data:/data/erp
+
+  platform_api:
+    <<: *hardening
+    image: erp_platform_api:${ERP_IMAGE_TAG:-1.0.0}
+    build: { context: ., dockerfile: docker/Dockerfile, target: platform-api }
+    container_name: ERP_platform_api
+    depends_on:
+      erp_api: { condition: service_healthy }
+    environment:
+      HOST: 0.0.0.0
+      ERP_HOST: erp_api
+      ERP_PORT: "4200"
+    ports:
+      - "${ERP_BIND_ADDR:-127.0.0.1}:${ERP_HOST_PORT_HUB:-7100}:4100"
+      - "${ERP_BIND_ADDR:-127.0.0.1}:${ERP_HOST_PORT_EPRISONS:-7173}:4173"
+      - "${ERP_BIND_ADDR:-127.0.0.1}:${ERP_HOST_PORT_CCTNS:-7175}:4175"
+      - "${ERP_BIND_ADDR:-127.0.0.1}:${ERP_HOST_PORT_EFORENSICS:-7176}:4176"
+      - "${ERP_BIND_ADDR:-127.0.0.1}:${ERP_HOST_PORT_AADHAAR:-7177}:4177"
+      - "${ERP_BIND_ADDR:-127.0.0.1}:${ERP_HOST_PORT_ECOURTS:-7178}:4178"
+    volumes:
+      - ERP_platform_data:/data/platform
+      # captured originals are data, not code: mounted read-only, not baked in
+      - ./backend/gov_replica/E_Prisons/eprisons_nic_in/original_assets:/app/backend/gov_replica/E_Prisons/eprisons_nic_in/original_assets:ro
+      - ./backend/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/original_assets:/app/backend/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/original_assets:ro
+      - ./backend/gov_replica/E_Forensics/eforensics_gov_in/original_assets:/app/backend/gov_replica/E_Forensics/eforensics_gov_in/original_assets:ro
+      - ./backend/gov_replica/Aadhaar/uidai_gov_in/original_assets:/app/backend/gov_replica/Aadhaar/uidai_gov_in/original_assets:ro
+      - ./backend/gov_replica/E_Courts/ecourts_gov_in/original_assets:/app/backend/gov_replica/E_Courts/ecourts_gov_in/original_assets:ro
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: ERP_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${PGUSER:-ams}
+      POSTGRES_DB: ${PGDATABASE:-demo_replica}
+      POSTGRES_PASSWORD_FILE: /run/secrets/ERP_pg_password
+    secrets: [ERP_pg_password]
+    ports:
+      - "127.0.0.1:${ERP_HOST_PORT_POSTGRES:-7432}:5432"
+    volumes:
+      - ERP_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 4s
+      retries: 5
+      start_period: 15s
+    security_opt: ["no-new-privileges:true"]
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+    networks: [ERP_net]
+
+secrets:
+  ERP_pg_password:
+    # created from PGPASSWORD in the root .env by docker/make-secrets.sh (gitignored)
+    file: ./docker/.secrets/pg_password
+
+networks:
+  ERP_net:
+    name: ERP_net
+
+volumes:
+  ERP_postgres_data:
+    name: ERP_postgres_data
+  ERP_erp_data:
+    name: ERP_erp_data
+  ERP_platform_data:
+    name: ERP_platform_data

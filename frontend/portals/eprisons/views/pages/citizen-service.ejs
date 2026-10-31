@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %> | Local Demo Replica</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/static/img/demo-mark.svg">
+<link rel="stylesheet" href="/static/css/replica.css">
+</head>
+<body class="cs-body">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="demo-banner" role="note">
+  <strong>Unofficial Local Demonstration &mdash; Not an Official Government Service.</strong>
+  <span>Synthetic data only.</span>
+</div>
+
+<div class="cs-topbar">
+  <div style="display:flex;align-items:center;gap:14px">
+    <button class="cs-burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+    <span class="cs-topbar__brand">Citizen Services <em>local demo</em></span>
+  </div>
+  <p class="cs-topbar__right">The original shows the ePrisons, ICJS and NIC marks here.
+  They are government artwork and are not reproduced.</p>
+</div>
+
+<main id="main" class="cs-stage">
+  <div>
+    <form class="cs-card" method="get" action="/CitiZenService/Visitor/Registration">
+      <h1>Login to your Account</h1>
+      <p class="cs-lede">Please enter your mobile number.</p>
+      <label for="cs_mobile" class="sr-only">Mobile number</label>
+      <input type="tel" id="cs_mobile" name="mobile" inputmode="numeric" maxlength="10"
+             autocomplete="off" placeholder="10-digit mobile number">
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <div class="cs-note">
+      <strong>This demonstration authenticates nobody.</strong>
+      The original sends a one-time password to the mobile number and opens an
+      authenticated area. That area was never accessed and nothing behind it is
+      reproduced here. The button simply opens the local registration form.
+    </div>
+
+    <ul class="cs-links">
+      <li><a href="/CitiZenService/Visitor/Registration">Visitor registration</a></li>
+      <li><a href="/CitiZenService/Login/FAQ">FAQ</a></li>
+      <li><a href="/CitiZenService/Login/ContactUs">Contact</a></li>
+      <li><a href="/">Main replica</a></li>
+    </ul>
+  </div>
+</main>
+
+<div class="cs-footer">Unofficial local demonstration &mdash; not an official government service.</div>
+<script src="/static/js/replica.js" defer></script>
+</body>
+</html>

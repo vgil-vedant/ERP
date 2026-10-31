@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Five Portals, Two Databases</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: numbered drawing plates stacked down one column; every connector orthogonal.
+   Colour carries meaning — indigo = platform, ochre = ERP, teal = ePrisons domain, brick = rollback. */
+:root{
+  --paper:#e9edf4; --card:#ffffff; --card-2:#f5f7fb;
+  --ink:#141a26; --ink-2:#5b6778; --ink-3:#8793a5;
+  --rule:#c9d2e0; --rule-2:#dde3ec;
+  --platform:#2d4a9c; --platform-soft:#e3e9f8; --platform-line:#4a66b5;
+  --erp:#8c5a0f; --erp-soft:#f8eeda; --erp-line:#b4801f;
+  --domain:#13625c; --domain-soft:#d9eeeb; --domain-line:#1d8077;
+  --fail:#97271f; --fail-soft:#fae3e0; --fail-line:#b8463c;
+  --f-serif:"IBM Plex Serif",Georgia,serif;
+  --f-sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0d1118; --card:#161c27; --card-2:#1b2230;
+  --ink:#e7ecf4; --ink-2:#9aa7bb; --ink-3:#6f7d92;
+  --rule:#2e394a; --rule-2:#242e3d;
+  --platform:#8fa9e8; --platform-soft:#1b2440; --platform-line:#6d8ad6;
+  --erp:#e0ad5e; --erp-soft:#2c2415; --erp-line:#c49143;
+  --domain:#5fc5bb; --domain-soft:#102b2a; --domain-line:#3fa69c;
+  --fail:#e8897e; --fail-soft:#2e1a18; --fail-line:#c4655a;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0d1118; --card:#161c27; --card-2:#1b2230;
+  --ink:#e7ecf4; --ink-2:#9aa7bb; --ink-3:#6f7d92;
+  --rule:#2e394a; --rule-2:#242e3d;
+  --platform:#8fa9e8; --platform-soft:#1b2440; --platform-line:#6d8ad6;
+  --erp:#e0ad5e; --erp-soft:#2c2415; --erp-line:#c49143;
+  --domain:#5fc5bb; --domain-soft:#102b2a; --domain-line:#3fa69c;
+  --fail:#e8897e; --fail-soft:#2e1a18; --fail-line:#c4655a;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-sans);
+     font-size:15px;line-height:1.6;margin:0}
+.wrap{max-width:1180px;margin:0 auto;
+      padding-left:max(16px,env(safe-area-inset-left,0px));
+      padding-right:max(16px,env(safe-area-inset-right,0px));
+      padding-block:38px 72px}
+
+/* --- masthead --- */
+.mast{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:10px}
+.eyebrow{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;
+         text-transform:uppercase;color:var(--ink-2);margin:0 0 10px}
+h1{font-family:var(--f-serif);font-size:clamp(28px,5.4vw,44px);font-weight:600;
+   line-height:1.1;margin:0 0 12px;text-wrap:balance}
+.standfirst{font-size:16.5px;color:var(--ink-2);max-width:62ch;margin:0}
+.counts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.count{background:var(--card);border:1px solid var(--rule);border-radius:3px;
+       padding:7px 12px;font-family:var(--f-mono);font-size:12px;color:var(--ink-2)}
+.count b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+
+/* --- plates --- */
+.plate{margin-top:46px}
+.plate-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+            border-bottom:1px solid var(--rule);padding-bottom:9px;margin-bottom:6px}
+.plate-no{font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--ink-3);
+          letter-spacing:.08em}
+h2{font-family:var(--f-serif);font-size:clamp(20px,3vw,26px);font-weight:600;
+   margin:0;line-height:1.2;text-wrap:balance}
+.plate-note{font-size:14.5px;color:var(--ink-2);margin:0 0 18px;max-width:72ch}
+.scroll{overflow-x:auto;background:var(--card);border:1px solid var(--rule);
+        border-radius:4px;padding:14px}
+.scroll svg{display:block}
+.hint{font-family:var(--f-mono);font-size:11px;color:var(--ink-3);margin:8px 0 0;
+      letter-spacing:.03em}
+
+/* --- svg shared --- */
+svg text{font-family:var(--f-sans);fill:var(--ink)}
+.t-name{font-family:var(--f-mono);font-size:13px;font-weight:600}
+.t-sub{font-size:11.5px;fill:var(--ink-2)}
+.t-col{font-family:var(--f-mono);font-size:11px;fill:var(--ink-2)}
+.t-lbl{font-family:var(--f-mono);font-size:11px;fill:var(--ink-2);letter-spacing:.02em}
+.t-hd{font-family:var(--f-mono);font-size:11.5px;font-weight:600;letter-spacing:.07em}
+.t-big{font-family:var(--f-serif);font-size:15px;font-weight:600}
+.ln{fill:none;stroke:var(--platform-line);stroke-width:1.6}
+.ln-e{fill:none;stroke:var(--erp-line);stroke-width:1.6}
+.ln-d{fill:none;stroke:var(--domain-line);stroke-width:1.6}
+.ln-f{fill:none;stroke:var(--fail-line);stroke-width:1.6}
+.ln-dash{stroke-dasharray:5 4}
+.life{stroke:var(--rule);stroke-width:1.2;stroke-dasharray:3 4}
+.bx{fill:var(--card-2);stroke:var(--platform);stroke-width:1.4}
+.bx-e{fill:var(--erp-soft);stroke:var(--erp);stroke-width:1.4}
+.bx-d{fill:var(--domain-soft);stroke:var(--domain);stroke-width:1.4}
+.bx-f{fill:var(--fail-soft);stroke:var(--fail);stroke-width:1.4}
+.bx-p{fill:var(--platform-soft);stroke:var(--platform);stroke-width:1.4}
+.bx-plain{fill:var(--card);stroke:var(--rule);stroke-width:1.2}
+.grp{fill:none;stroke:var(--erp);stroke-width:1.3;stroke-dasharray:6 4}
+.hdbar-p{fill:var(--platform)}
+.hdbar-e{fill:var(--erp)}
+.hdbar-d{fill:var(--domain)}
+.t-hdw{font-family:var(--f-mono);font-size:12px;font-weight:600;fill:#fff}
+.stepno{fill:var(--platform);stroke:none}
+.stepno-f{fill:var(--fail);stroke:none}
+.t-stepno{font-family:var(--f-mono);font-size:10.5px;font-weight:600;fill:#fff}
+
+/* --- legend list --- */
+ol.steps{list-style:none;counter-reset:s;margin:18px 0 0;padding:0;
+         display:grid;gap:1px;background:var(--rule-2);border:1px solid var(--rule);
+         border-radius:4px;overflow:hidden}
+ol.steps li{counter-increment:s;background:var(--card);padding:11px 14px 11px 46px;
+            position:relative;font-size:14px;min-width:0}
+ol.steps li::before{content:counter(s);position:absolute;left:13px;top:11px;
+   font-family:var(--f-mono);font-size:11px;font-weight:600;color:#fff;
+   background:var(--platform);width:20px;height:20px;border-radius:50%;
+   display:grid;place-items:center}
+ol.steps.fail li::before{background:var(--fail)}
+ol.steps li b{font-family:var(--f-mono);font-size:12.5px;font-weight:600;
+              color:var(--ink);display:block;margin-bottom:1px}
+
+/* --- tables --- */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;margin-top:18px}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--card);
+      min-width:620px}
+th{text-align:left;background:var(--card-2);padding:9px 12px;font-family:var(--f-mono);
+   font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-2);
+   border-bottom:1px solid var(--rule);white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--rule-2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td code,th code{font-family:var(--f-mono);font-size:12px}
+code{font-family:var(--f-mono);font-size:12.5px;background:var(--card-2);
+     padding:1px 5px;border-radius:3px;border:1px solid var(--rule-2)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--domain)}
+td.mid{text-align:center}
+.tag{font-family:var(--f-mono);font-size:10.5px;padding:2px 7px;border-radius:3px;
+     border:1px solid currentColor;white-space:nowrap}
+.tag.p{color:var(--platform)} .tag.e{color:var(--erp)}
+.tag.d{color:var(--domain)} .tag.f{color:var(--fail)}
+
+/* --- key --- */
+.key{display:flex;flex-wrap:wrap;gap:16px;margin-top:22px;padding:14px 16px;
+     background:var(--card);border:1px solid var(--rule);border-radius:4px}
+.key div{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.key i{width:13px;height:13px;border-radius:2px;display:block;flex:none}
+
+.callout{border-left:3px solid var(--domain);background:var(--card);padding:13px 16px;
+         margin-top:18px;font-size:14px;color:var(--ink-2);border-radius:0 4px 4px 0}
+.callout b{color:var(--ink)}
+footer{margin-top:54px;padding-top:18px;border-top:1px solid var(--rule);
+       font-size:12.5px;color:var(--ink-3);font-family:var(--f-mono)}
+@media (max-width:560px){ol.steps li{padding-left:42px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <p class="eyebrow">System blueprint · 28 Oct 2026</p>
+  <h1>Five portals, two databases</h1>
+  <p class="standfirst">Five government portal replicas served by one backend out of one database,
+  writing through to an ERP that keeps its own. Every connector below is drawn from the live
+  schema and the running processes.</p>
+  <div class="counts">
+    <span class="count">portal DB <b>25</b> tables</span>
+    <span class="count">ERP DB <b>5</b> tables</span>
+    <span class="count"><b>11</b> people ↔ <b>11</b> citizens</span>
+    <span class="count"><b>57</b> submissions · <b>57</b> mirrored</span>
+    <span class="count">ERP holds <b>68</b> records</span>
+  </div>
+</header>
+
+<!-- ===================== PLATE 1 ===================== -->
+<section class="plate">
+  <div class="plate-head"><span class="plate-no">PLATE 1</span><h2>Runtime topology</h2></div>
+  <p class="plate-note">Six listening ports, one Node process, one SQLite file. The only path to the
+  ERP is an HTTP call — the platform never opens the ERP's file, and the ERP never opens the
+  platform's.</p>
+
+  <div class="scroll">
+  <svg viewBox="0 0 1080 660" width="1080" height="660" role="img"
+       aria-label="Six ports funnel into one platform process, which writes to one database and calls the ERP over HTTP">
+    <defs>
+      <marker id="ap" markerWidth="9" markerHeight="9" refX="7.4" refY="3.2" orient="auto">
+        <path d="M0,0 L7.4,3.2 L0,6.4 z" fill="var(--platform-line)"/></marker>
+      <marker id="ae" markerWidth="9" markerHeight="9" refX="7.4" refY="3.2" orient="auto">
+        <path d="M0,0 L7.4,3.2 L0,6.4 z" fill="var(--erp-line)"/></marker>
+    </defs>
+
+    <text x="30" y="34" class="t-hd" fill="var(--ink-2)">A VISITOR'S BROWSER</text>
+    <line x1="30" y1="44" x2="1050" y2="44" stroke="var(--rule)" stroke-width="1"/>
+
+    <!-- portal boxes -->
+    <g>
+      <rect x="30"  y="72" width="152" height="58" rx="3" class="bx"/>
+      <text x="106" y="96"  text-anchor="middle" class="t-name">ePrisons</text>
+      <text x="106" y="114" text-anchor="middle" class="t-lbl">:4173</text>
+
+      <rect x="200" y="72" width="152" height="58" rx="3" class="bx"/>
+      <text x="276" y="96"  text-anchor="middle" class="t-name">CCTNS</text>
+      <text x="276" y="114" text-anchor="middle" class="t-lbl">:4175</text>
+
+      <rect x="370" y="72" width="152" height="58" rx="3" class="bx"/>
+      <text x="446" y="96"  text-anchor="middle" class="t-name">e-Forensics</text>
+      <text x="446" y="114" text-anchor="middle" class="t-lbl">:4176</text>
+
+      <rect x="540" y="72" width="152" height="58" rx="3" class="bx"/>
+      <text x="616" y="96"  text-anchor="middle" class="t-name">UIDAI</text>
+      <text x="616" y="114" text-anchor="middle" class="t-lbl">:4177</text>
+
+      <rect x="710" y="72" width="152" height="58" rx="3" class="bx"/>
+      <text x="786" y="96"  text-anchor="middle" class="t-name">eCourts</text>
+      <text x="786" y="114" text-anchor="middle" class="t-lbl">:4178</text>
+
+      <rect x="880" y="72" width="152" height="58" rx="3" class="bx"/>
+      <text x="956" y="96"  text-anchor="middle" class="t-name">Hub</text>
+      <text x="956" y="114" text-anchor="middle" class="t-lbl">:4100</text>
+    </g>
+
+    <!-- drops to the bus -->
+    <path class="ln" d="M106,130 L106,160"/>
+    <path class="ln" d="M276,130 L276,160"/>
+    <path class="ln" d="M446,130 L446,160"/>
+    <path class="ln" d="M616,130 L616,160"/>
+    <path class="ln" d="M786,130 L786,160"/>
+    <path class="ln" d="M956,130 L956,160"/>
+    <path class="ln" d="M106,160 L956,160"/>
+    <path class="ln" d="M531,160 L531,196" marker-end="url(#ap)"/>
+    <text x="545" y="180" class="t-lbl">all six bound by one process</text>
+
+    <!-- platform process -->
+    <rect x="60" y="200" width="942" height="172" rx="4" class="bx-p"/>
+    <text x="80" y="228" class="t-big" fill="var(--platform)">platform-api — one Node process</text>
+    <text x="80" y="246" class="t-lbl">backend/platform-api/src/server.js · one app per portal, all sharing this store</text>
+
+    <g>
+      <rect x="78"  y="262" width="216" height="62" rx="3" class="bx-plain"/>
+      <text x="186" y="286" text-anchor="middle" class="t-name">sessionMiddleware</text>
+      <text x="186" y="304" text-anchor="middle" class="t-col">cookie → person</text>
+
+      <rect x="308" y="262" width="216" height="62" rx="3" class="bx-plain"/>
+      <text x="416" y="286" text-anchor="middle" class="t-name">identityRouter</text>
+      <text x="416" y="304" text-anchor="middle" class="t-col">/account/register · login</text>
+
+      <rect x="538" y="262" width="216" height="62" rx="3" class="bx-plain"/>
+      <text x="646" y="286" text-anchor="middle" class="t-name">drivers</text>
+      <text x="646" y="304" text-anchor="middle" class="t-col">generic ×4 · eprisons</text>
+
+      <rect x="768" y="262" width="216" height="62" rx="3" class="bx-plain"/>
+      <text x="876" y="286" text-anchor="middle" class="t-name">erp-client</text>
+      <text x="876" y="304" text-anchor="middle" class="t-col">the only outbound call</text>
+    </g>
+    <text x="80" y="352" class="t-lbl">person and session carry no site_code — that omission is what makes one account work on all five</text>
+
+    <!-- down to own database -->
+    <path class="ln" d="M370,372 L370,430" marker-end="url(#ap)"/>
+    <text x="382" y="398" class="t-lbl">file I/O</text>
+    <rect x="180" y="430" width="380" height="84" rx="3" class="bx"/>
+    <text x="370" y="458" text-anchor="middle" class="t-name">platform.sqlite</text>
+    <text x="370" y="477" text-anchor="middle" class="t-col">database/sqlite/platform/data/</text>
+    <text x="370" y="495" text-anchor="middle" class="t-col">25 tables · one row per person</text>
+
+    <!-- across to the ERP -->
+    <path class="ln-e" d="M840,372 L840,446" marker-end="url(#ae)"/>
+    <text x="854" y="396" class="t-lbl" fill="var(--erp)">HTTP POST /api/intake</text>
+    <text x="854" y="412" class="t-lbl">never opens the file</text>
+
+    <rect x="660" y="420" width="360" height="190" rx="4" class="grp"/>
+    <text x="660" y="412" class="t-hd" fill="var(--erp)">SEPARATE PROCESS</text>
+
+    <rect x="682" y="446" width="316" height="56" rx="3" class="bx-e"/>
+    <text x="840" y="470" text-anchor="middle" class="t-name">erp-api</text>
+    <text x="840" y="488" text-anchor="middle" class="t-col">:4200 · backend/erp-api</text>
+
+    <path class="ln-e" d="M840,502 L840,532" marker-end="url(#ae)"/>
+
+    <rect x="682" y="532" width="316" height="56" rx="3" class="bx-e"/>
+    <text x="840" y="556" text-anchor="middle" class="t-name">erp.sqlite</text>
+    <text x="840" y="574" text-anchor="middle" class="t-col">5 tables · the ERP's own</text>
+  </svg>
+  </div>
+  <p class="hint">Wide drawing — scroll sideways on a narrow screen.</p>
+
+  <div class="key">
+    <div><i style="background:var(--platform)"></i>platform</div>
+    <div><i style="background:var(--erp)"></i>ERP</div>
+    <div><i style="background:var(--domain)"></i>ePrisons domain</div>
+    <div><i style="background:var(--fail)"></i>rollback path</div>
+  </div>
+</section>
+
+<!-- ===================== PLATE 2 ===================== -->
+<section class="plate">
+  <div class="plate-head"><span class="plate-no">PLATE 2</span><h2>One submission, accepted</h2></div>
+  <p class="plate-note">The write-through runs in two phases: the row is reserved locally first —
+  which is also what allocates its reference number — then handed to the ERP. Only after the ERP
+  answers is the local row stamped and the ledger written.</p>
+
+  <div class="scroll">
+  <svg viewBox="0 0 1080 560" width="1080" height="560" role="img"
+       aria-label="Sequence diagram of an accepted submission across visitor, portal, platform database, ERP API and ERP database">
+    <defs>
+      <marker id="aq" markerWidth="9" markerHeight="9" refX="7.4" refY="3.2" orient="auto">
+        <path d="M0,0 L7.4,3.2 L0,6.4 z" fill="var(--platform-line)"/></marker>
+      <marker id="ar" markerWidth="9" markerHeight="9" refX="7.4" refY="3.2" orient="auto">
+        <path d="M0,0 L7.4,3.2 L0,6.4 z" fill="var(--erp-line)"/></marker>
+    </defs>
+
+    <!-- lane heads -->
+    <rect x="10"  y="16" width="160" height="48" rx="3" class="bx-plain"/>
+    <text x="90"  y="38" text-anchor="middle" class="t-name">Visitor</text>
+    <text x="90"  y="55" text-anchor="middle" class="t-col">browser</text>
+
+    <rect x="230" y="16" width="160" height="48" rx="3" class="bx"/>
+    <text x="310" y="38" text-anchor="middle" class="t-name">portal</text>
+    <text x="310" y="55" text-anchor="middle" class="t-col">platform-api</text>
+
+    <rect x="450" y="16" width="160" height="48" rx="3" class="bx"/>
+    <text x="530" y="38" text-anchor="middle" class="t-name">platform.sqlite</text>
+    <text x="530" y="55" text-anchor="middle" class="t-col">shared DB</text>
+
+    <rect x="680" y="16" width="160" height="48" rx="3" class="bx-e"/>
+    <text x="760" y="38" text-anchor="middle" class="t-name">erp-api</text>
+    <text x="760" y="55" text-anchor="middle" class="t-col">:4200</text>
+
+    <rect x="900" y="16" width="160" height="48" rx="3" class="bx-e"/>
+    <text x="980" y="38" text-anchor="middle" class="t-name">erp.sqlite</text>
+    <text x="980" y="55" text-anchor="middle" class="t-col">ERP DB</text>
+
+    <!-- lifelines -->
+    <line class="life" x1="90"  y1="64" x2="90"  y2="524"/>
+    <line class="life" x1="310" y1="64" x2="310" y2="524"/>
+    <line class="life" x1="530" y1="64" x2="530" y2="524"/>
+    <line class="life" x1="760" y1="64" x2="760" y2="524"/>
+    <line class="life" x1="980" y1="64" x2="980" y2="524"/>
+
+    <!-- 1 -->
+    <path class="ln" d="M90,110 L310,110" marker-end="url(#aq)"/>
+    <circle cx="90" cy="110" r="9" class="stepno"/><text x="90" y="113.5" text-anchor="middle" class="t-stepno">1</text>
+    <text x="200" y="103" text-anchor="middle" class="t-lbl">POST form</text>
+
+    <!-- 2 self -->
+    <rect x="236" y="134" width="148" height="30" rx="3" class="bx-plain"/>
+    <text x="310" y="153" text-anchor="middle" class="t-lbl">validate</text>
+    <circle cx="310" cy="134" r="9" class="stepno"/><text x="310" y="137.5" text-anchor="middle" class="t-stepno">2</text>
+
+    <!-- 3 -->
+    <path class="ln" d="M310,196 L530,196" marker-end="url(#aq)"/>
+    <circle cx="310" cy="196" r="9" class="stepno"/><text x="310" y="199.5" text-anchor="middle" class="t-stepno">3</text>
+    <text x="420" y="189" text-anchor="middle" class="t-lbl">INSERT (reserve)</text>
+
+    <!-- 4 -->
+    <path class="ln ln-dash" d="M530,232 L310,232" marker-end="url(#aq)"/>
+    <circle cx="530" cy="232" r="9" class="stepno"/><text x="530" y="235.5" text-anchor="middle" class="t-stepno">4</text>
+    <text x="420" y="225" text-anchor="middle" class="t-lbl">id + reference</text>
+
+    <!-- 5 -->
+    <path class="ln-e" d="M310,272 L760,272" marker-end="url(#ar)"/>
+    <circle cx="310" cy="272" r="9" class="stepno"/><text x="310" y="275.5" text-anchor="middle" class="t-stepno">5</text>
+    <text x="535" y="265" text-anchor="middle" class="t-lbl" fill="var(--erp)">POST /api/intake</text>
+
+    <!-- 6 -->
+    <path class="ln-e" d="M760,308 L980,308" marker-end="url(#ar)"/>
+    <circle cx="760" cy="308" r="9" class="stepno"/><text x="760" y="311.5" text-anchor="middle" class="t-stepno">6</text>
+    <text x="870" y="301" text-anchor="middle" class="t-lbl">upsert + INSERT</text>
+
+    <!-- 7 -->
+    <path class="ln-e ln-dash" d="M980,344 L760,344" marker-end="url(#ar)"/>
+    <circle cx="980" cy="344" r="9" class="stepno"/><text x="980" y="347.5" text-anchor="middle" class="t-stepno">7</text>
+    <text x="870" y="337" text-anchor="middle" class="t-lbl">intake id</text>
+
+    <!-- 8 -->
+    <path class="ln-e ln-dash" d="M760,384 L310,384" marker-end="url(#ar)"/>
+    <circle cx="760" cy="384" r="9" class="stepno"/><text x="760" y="387.5" text-anchor="middle" class="t-stepno">8</text>
+    <text x="535" y="377" text-anchor="middle" class="t-lbl" fill="var(--erp)">201 intakeRef</text>
+
+    <!-- 9 -->
+    <path class="ln" d="M310,424 L530,424" marker-end="url(#aq)"/>
+    <circle cx="310" cy="424" r="9" class="stepno"/><text x="310" y="427.5" text-anchor="middle" class="t-stepno">9</text>
+    <text x="420" y="417" text-anchor="middle" class="t-lbl">stamp + ledger</text>
+
+    <!-- 10 -->
+    <path class="ln ln-dash" d="M310,470 L90,470" marker-end="url(#aq)"/>
+    <circle cx="310" cy="470" r="9" class="stepno"/><text x="310" y="473.5" text-anchor="middle" class="t-stepno">10</text>
+    <text x="200" y="463" text-anchor="middle" class="t-lbl">200 + both refs</text>
+
+    <text x="10" y="548" class="t-lbl">solid = call · dashed = return</text>
+  </svg>
+  </div>
+
+  <ol class="steps">
+    <li><b>POST /public/grievance</b>Form fields arrive. The session cookie, if present, identifies the person.</li>
+    <li><b>validate</b>Required fields, max lengths, the arithmetic challenge that stands in for a CAPTCHA, and the cascade check — a child value must belong to its chosen parent, enforced server-side.</li>
+    <li><b>INSERT INTO submission</b>The row is written first. The reference number is derived from the id the database just handed out, so it cannot collide.</li>
+    <li><b>id 57, reference GRV-000069</b>Field values are flattened into <code>submission_field</code> at the same time. Anything matching <code>pass|pwd|secret|otp|pin|captcha|token|cvv|challenge</code> is dropped before it is ever persisted.</li>
+    <li><b>POST /api/intake</b>Source system, source reference, the person, and the field list — over HTTP, to a separate process.</li>
+    <li><b>upsert citizen, INSERT intake</b>The citizen is created on first sight and refreshed after. The record is unique on <code>(source_system, source_reference)</code>, so a retry never duplicates it.</li>
+    <li><b>intake id</b>Field values land in <code>intake_field</code>.</li>
+    <li><b>201 { intakeRef: ERP-0000068 }</b>Or <code>200</code> with <code>duplicate: true</code> if this exact record was already received.</li>
+    <li><b>UPDATE + ledger + audit</b><code>submission.erp_intake_ref</code> is stamped, <code>erp_sync</code> records the attempt as synced, and <code>audit_log</code> takes a CREATE entry.</li>
+    <li><b>200 — both references shown</b>The visitor sees the portal's own reference and the ERP's, side by side.</li>
+  </ol>
+</section>
+
+<!-- ===================== PLATE 3 ===================== -->
+<section class="plate">
+  <div class="plate-head"><span class="plate-no">PLATE 3</span><h2>One submission, refused</h2></div>
+  <p class="plate-note">If the ERP will not take the record, the local row is taken back out. The data
+  row disappears; the audit entry does not, because <code>audit_log</code> rejects DELETE.</p>
+
+  <div class="scroll">
+  <svg viewBox="0 0 1080 350" width="1080" height="350" role="img"
+       aria-label="Sequence diagram of a refused submission being rolled back out of the portal database">
+    <defs>
+      <marker id="af" markerWidth="9" markerHeight="9" refX="7.4" refY="3.2" orient="auto">
+        <path d="M0,0 L7.4,3.2 L0,6.4 z" fill="var(--fail-line)"/></marker>
+    </defs>
+
+    <rect x="10"  y="16" width="160" height="48" rx="3" class="bx-plain"/>
+    <text x="90"  y="38" text-anchor="middle" class="t-name">Visitor</text>
+    <text x="90"  y="55" text-anchor="middle" class="t-col">browser</text>
+
+    <rect x="230" y="16" width="160" height="48" rx="3" class="bx"/>
+    <text x="310" y="38" text-anchor="middle" class="t-name">portal</text>
+    <text x="310" y="55" text-anchor="middle" class="t-col">platform-api</text>
+
+    <rect x="450" y="16" width="160" height="48" rx="3" class="bx"/>
+    <text x="530" y="38" text-anchor="middle" class="t-name">platform.sqlite</text>
+    <text x="530" y="55" text-anchor="middle" class="t-col">shared DB</text>
+
+    <rect x="680" y="16" width="160" height="48" rx="3" class="bx-f"/>
+    <text x="760" y="38" text-anchor="middle" class="t-name">erp-api</text>
+    <text x="760" y="55" text-anchor="middle" class="t-col">down or refusing</text>
+
+    <line class="life" x1="90"  y1="64" x2="90"  y2="312"/>
+    <line class="life" x1="310" y1="64" x2="310" y2="312"/>
+    <line class="life" x1="530" y1="64" x2="530" y2="312"/>
+    <line class="life" x1="760" y1="64" x2="760" y2="312"/>
+
+    <path class="ln-f" d="M310,110 L744,110" marker-end="url(#af)"/>
+    <circle cx="310" cy="110" r="9" class="stepno-f"/><text x="310" y="113.5" text-anchor="middle" class="t-stepno">1</text>
+    <text x="527" y="103" text-anchor="middle" class="t-lbl" fill="var(--fail)">POST /api/intake</text>
+    <g stroke="var(--fail)" stroke-width="2.2">
+      <line x1="752" y1="102" x2="768" y2="118"/><line x1="768" y1="102" x2="752" y2="118"/>
+    </g>
+
+    <path class="ln-f" d="M310,160 L530,160" marker-end="url(#af)"/>
+    <circle cx="310" cy="160" r="9" class="stepno-f"/><text x="310" y="163.5" text-anchor="middle" class="t-stepno">2</text>
+    <text x="420" y="153" text-anchor="middle" class="t-lbl">DELETE submission</text>
+
+    <path class="ln-f" d="M310,210 L530,210" marker-end="url(#af)"/>
+    <circle cx="310" cy="210" r="9" class="stepno-f"/><text x="310" y="213.5" text-anchor="middle" class="t-stepno">3</text>
+    <text x="420" y="203" text-anchor="middle" class="t-lbl">ledger + ROLLBACK audit</text>
+
+    <path class="ln-f ln-dash" d="M310,262 L90,262" marker-end="url(#af)"/>
+    <circle cx="310" cy="262" r="9" class="stepno-f"/><text x="310" y="265.5" text-anchor="middle" class="t-stepno">4</text>
+    <text x="200" y="255" text-anchor="middle" class="t-lbl">503 — not saved</text>
+
+    <text x="10" y="338" class="t-lbl">net effect: the record is in both databases, or in neither</text>
+  </svg>
+  </div>
+
+  <ol class="steps fail">
+    <li><b>POST /api/intake fails</b>Unreachable, timed out after 5s, or answered 400/500.</li>
+    <li><b>DELETE FROM submission</b>The reserved row goes back out; <code>submission_field</code> cascades with it.</li>
+    <li><b>erp_sync status 'failed' · audit_log action 'ROLLBACK'</b>The ledger keeps the HTTP status and the message. The audit entry is permanent — the triggers abort any DELETE against it.</li>
+    <li><b>503 with the reason</b>The page names the failure and says nothing was saved on either side.</li>
+  </ol>
+
+  <div class="callout"><b>Measured, not assumed.</b> <code>tests/e2e/test-rollback.sh</code> stops the ERP,
+  submits, and reads both files: 10 checks, 0 failures. The ledger currently holds 68 synced and
+  8 failed attempts — the 8 are these deliberate rollbacks.</div>
+</section>
+
+<!-- ===================== PLATE 4 ===================== -->
+<section class="plate">
+  <div class="plate-head"><span class="plate-no">PLATE 4</span><h2>Portal database — core entities</h2></div>
+  <p class="plate-note">Rows belonging to one portal carry <code>site_code</code>. The two that
+  deliberately do not — <code>person</code> and <code>session</code> — are why one registration is
+  accepted on all five.</p>
+
+  <div class="scroll">
+  <svg viewBox="0 0 1120 790" width="1120" height="790" role="img"
+       aria-label="Entity relationship diagram of the portal database core tables">
+    <defs>
+      <marker id="ak" markerWidth="8" markerHeight="8" refX="6.6" refY="2.9" orient="auto">
+        <path d="M0,0 L6.6,2.9 L0,5.8 z" fill="var(--platform-line)"/></marker>
+    </defs>
+
+    <!-- site : the hub -->
+    <rect x="40" y="56" width="250" height="96" rx="3" class="bx-p"/>
+    <rect x="40" y="56" width="250" height="24" rx="3" class="hdbar-p"/>
+    <rect x="40" y="72" width="250" height="8" class="hdbar-p"/>
+    <text x="52" y="73" class="t-hdw">site</text>
+    <text x="278" y="73" text-anchor="end" class="t-hdw">5</text>
+    <text x="52" y="98"  class="t-col">code  PK</text>
+    <text x="52" y="116" class="t-col">name · hostname</text>
+    <text x="52" y="134" class="t-col">category · port</text>
+
+    <!-- site.code bus -->
+    <path class="ln" d="M165,152 L165,640"/>
+    <text x="175" y="636" class="t-lbl">site.code →</text>
+
+    <!-- middle column -->
+    <path class="ln" d="M165,212 L380,212" marker-end="url(#ak)"/>
+    <rect x="380" y="180" width="260" height="64" rx="3" class="bx-plain"/>
+    <text x="392" y="202" class="t-name">reference_option</text>
+    <text x="628" y="202" text-anchor="end" class="t-lbl">727</text>
+    <text x="392" y="224" class="t-col">site_code · list · value · label</text>
+
+    <path class="ln" d="M165,296 L380,296" marker-end="url(#ak)"/>
+    <rect x="380" y="264" width="260" height="64" rx="3" class="bx-plain"/>
+    <text x="392" y="286" class="t-name">cascade_option</text>
+    <text x="628" y="286" text-anchor="end" class="t-lbl">0</text>
+    <text x="392" y="308" class="t-col">site_code · list · parent_value</text>
+
+    <path class="ln" d="M165,380 L380,380" marker-end="url(#ak)"/>
+    <rect x="380" y="348" width="260" height="64" rx="3" class="bx-plain"/>
+    <text x="392" y="370" class="t-name">demo_table_row</text>
+    <text x="628" y="370" text-anchor="end" class="t-lbl">829</text>
+    <text x="392" y="392" class="t-col">site_code · table_id · cells</text>
+
+    <path class="ln" d="M165,471 L380,471" marker-end="url(#ak)"/>
+    <rect x="380" y="432" width="260" height="78" rx="3" class="bx"/>
+    <text x="392" y="454" class="t-name">form</text>
+    <text x="628" y="454" text-anchor="end" class="t-lbl">70</text>
+    <text x="392" y="474" class="t-col">id PK = site:route:local_id</text>
+    <text x="392" y="492" class="t-col">reference_prefix · is_login</text>
+
+    <path class="ln" d="M165,578 L380,578" marker-end="url(#ak)"/>
+    <rect x="380" y="530" width="260" height="96" rx="3" class="bx-p"/>
+    <rect x="380" y="530" width="260" height="24" rx="3" class="hdbar-p"/>
+    <rect x="380" y="546" width="260" height="8" class="hdbar-p"/>
+    <text x="392" y="547" class="t-hdw">person</text>
+    <text x="628" y="547" text-anchor="end" class="t-hdw">11</text>
+    <text x="392" y="572" class="t-col">person_ref UNIQUE · email</text>
+    <text x="392" y="590" class="t-col">password_hash + salt (scrypt)</text>
+    <text x="392" y="608" class="t-col">registered_via · erp_citizen_ref</text>
+
+    <!-- site -> submission, routed above everything -->
+    <path class="ln" d="M290,104 L880,104 L880,180" marker-end="url(#ak)"/>
+    <text x="600" y="97" text-anchor="middle" class="t-lbl">site_code</text>
+
+    <!-- right column -->
+    <rect x="740" y="180" width="300" height="130" rx="3" class="bx-p"/>
+    <rect x="740" y="180" width="300" height="24" rx="3" class="hdbar-p"/>
+    <rect x="740" y="196" width="300" height="8" class="hdbar-p"/>
+    <text x="752" y="197" class="t-hdw">submission</text>
+    <text x="1028" y="197" text-anchor="end" class="t-hdw">57</text>
+    <text x="752" y="222" class="t-col">reference_no UNIQUE</text>
+    <text x="752" y="240" class="t-col">site_code → site · form_id → form</text>
+    <text x="752" y="258" class="t-col">person_id → person (nullable)</text>
+    <text x="752" y="276" class="t-col">payload JSON</text>
+    <text x="752" y="296" class="t-col">erp_intake_ref · erp_synced_at</text>
+
+    <!-- form -> submission -->
+    <path class="ln" d="M640,471 L690,471 L690,245 L740,245" marker-end="url(#ak)"/>
+    <text x="700" y="360" class="t-lbl">form_id</text>
+
+    <!-- person -> submission -->
+    <path class="ln" d="M640,548 L712,548 L712,268 L740,268" marker-end="url(#ak)"/>
+    <text x="722" y="430" class="t-lbl">person_id</text>
+
+    <!-- submission -> submission_field -->
+    <path class="ln" d="M890,310 L890,334" marker-end="url(#ak)"/>
+    <rect x="740" y="334" width="300" height="64" rx="3" class="bx-plain"/>
+    <text x="752" y="356" class="t-name">submission_field</text>
+    <text x="1028" y="356" text-anchor="end" class="t-lbl">246</text>
+    <text x="752" y="378" class="t-col">submission_id · name · label · value</text>
+
+    <!-- person -> session -->
+    <path class="ln" d="M640,600 L740,600" marker-end="url(#ak)"/>
+    <text x="690" y="593" text-anchor="middle" class="t-lbl">person_id</text>
+
+    <!-- site -> session, routed under the middle column -->
+    <path class="ln" d="M165,640 L790,640 L790,608" marker-end="url(#ak)"/>
+    <text x="470" y="634" text-anchor="middle" class="t-lbl">issued_by</text>
+
+    <rect x="740" y="530" width="300" height="78" rx="3" class="bx"/>
+    <text x="752" y="552" class="t-name">session</text>
+    <text x="1028" y="552" text-anchor="end" class="t-lbl">21</text>
+    <text x="752" y="572" class="t-col">token PK · person_id · issued_by</text>
+    <text x="752" y="590" class="t-col">expires_at</text>
+
+    <!-- standalone -->
+    <rect x="40" y="672" width="300" height="76" rx="3" class="bx-plain"/>
+    <text x="52" y="694" class="t-name">erp_sync</text>
+    <text x="328" y="694" text-anchor="end" class="t-lbl">76</text>
+    <text x="52" y="714" class="t-col">entity · local_ref · status</text>
+    <text x="52" y="732" class="t-col">http_status · erp_ref · message</text>
+
+    <rect x="380" y="672" width="300" height="76" rx="3" class="bx-plain"/>
+    <text x="392" y="694" class="t-name">audit_log</text>
+    <text x="668" y="694" text-anchor="end" class="t-lbl">275</text>
+    <text x="392" y="714" class="t-col">maker · approver · occurred_at</text>
+    <text x="392" y="732" class="t-col">append-only (triggers)</text>
+
+    <text x="700" y="700" class="t-lbl">no foreign keys on these two —</text>
+    <text x="700" y="718" class="t-lbl">erp_sync is the write-through ledger,</text>
+    <text x="700" y="736" class="t-lbl">audit_log rejects UPDATE and DELETE.</text>
+  </svg>
+  </div>
+  <p class="hint">Figures at the right of each entity are live row counts.</p>
+</section>
+
+<!-- ===================== PLATE 5 ===================== -->
+<section class="plate">
+  <div class="plate-head"><span class="plate-no">PLATE 5</span><h2>ePrisons domain</h2></div>
+  <p class="plate-note">Fourteen tables carried over unchanged from the hand-built ePrisons replica.
+  These hold the integration facts the ERP actually depends on.</p>
+
+  <div class="scroll">
+  <svg viewBox="0 0 1060 300" width="1060" height="300" role="img"
+       aria-label="The State to Jail cascade and the two relationship vocabularies">
+    <defs>
+      <marker id="ad" markerWidth="8" markerHeight="8" refX="6.6" refY="2.9" orient="auto">
+        <path d="M0,0 L6.6,2.9 L0,5.8 z" fill="var(--domain-line)"/></marker>
+    </defs>
+
+    <text x="20" y="28" class="t-hd" fill="var(--domain)">THE CASCADE</text>
+    <rect x="20" y="44" width="200" height="66" rx="3" class="bx-d"/>
+    <text x="32" y="66" class="t-name">state</text>
+    <text x="208" y="66" text-anchor="end" class="t-lbl">36</text>
+    <text x="32" y="88" class="t-col">id · name · sort_order</text>
+
+    <path class="ln-d" d="M220,77 L300,77" marker-end="url(#ad)"/>
+    <text x="260" y="70" text-anchor="middle" class="t-lbl">state_id</text>
+
+    <rect x="300" y="44" width="200" height="66" rx="3" class="bx-d"/>
+    <text x="312" y="66" class="t-name">jail</text>
+    <text x="488" y="66" text-anchor="end" class="t-lbl">154</text>
+    <text x="312" y="88" class="t-col">state_id · name · jail_type</text>
+
+    <path class="ln-d" d="M500,77 L580,77" marker-end="url(#ad)"/>
+
+    <rect x="580" y="44" width="300" height="66" rx="3" class="bx-plain"/>
+    <text x="592" y="66" class="t-name">every transaction table</text>
+    <text x="592" y="88" class="t-col">a jail must belong to its chosen state</text>
+
+    <text x="20" y="158" class="t-hd" fill="var(--domain)">TWO RELATIONSHIP VOCABULARIES, ONE TABLE</text>
+
+    <rect x="20" y="176" width="260" height="88" rx="3" class="bx-d"/>
+    <text x="32" y="198" class="t-name">source_portal = NPIP</text>
+    <text x="32" y="220" class="t-col">33 terms</text>
+    <text x="32" y="240" class="t-col">from the e-Mulakat visit form</text>
+
+    <rect x="320" y="176" width="260" height="88" rx="3" class="bx-d"/>
+    <text x="332" y="198" class="t-name">= CITIZEN_SERVICE</text>
+    <text x="332" y="220" class="t-col">20 terms</text>
+    <text x="332" y="240" class="t-col">from Citizen Services registration</text>
+
+    <path class="ln-d ln-dash" d="M280,220 L320,220"/>
+
+    <rect x="620" y="176" width="400" height="88" rx="3" class="bx-plain"/>
+    <text x="632" y="198" class="t-name">relationship — 53 rows, only 18 shared</text>
+    <text x="632" y="220" class="t-col">The two portals publish different lists for the same idea.</text>
+    <text x="632" y="240" class="t-col">COUSIN and Cousin collide on case alone.</text>
+  </svg>
+  </div>
+
+  <p class="plate-note" style="margin-top:22px">Every foreign key in the domain, as a matrix. A dot
+  means that transaction table carries a key into that reference table.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th>Transaction table</th><th>Rows</th>
+      <th><code>state</code></th><th><code>jail</code></th><th><code>gender</code></th>
+      <th><code>relationship</code></th><th><code>id_proof_type</code></th><th>Own parent</th>
+    </tr></thead>
+    <tbody>
+      <tr><td><code>visit_request</code></td><td>120</td>
+        <td class="mid"><span class="dot"></span></td><td class="mid"><span class="dot"></span></td>
+        <td class="mid"><span class="dot"></span><br><span class="t-lbl" style="font-size:10px">visitor + prisoner</span></td>
+        <td class="mid"><span class="dot"></span></td><td class="mid"><span class="dot"></span></td><td>—</td></tr>
+      <tr><td><code>additional_visitor</code></td><td>184</td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td><code>visit_request_id</code></td></tr>
+      <tr><td><code>grievance</code></td><td>69</td>
+        <td class="mid"><span class="dot"></span></td><td class="mid"><span class="dot"></span></td>
+        <td></td><td class="mid"><span class="dot"></span></td><td></td><td>—</td></tr>
+      <tr><td><code>grievance_action</code></td><td>132</td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td><code>grievance_id</code></td></tr>
+      <tr><td><code>citizen_account</code></td><td>0</td>
+        <td class="mid"><span class="dot"></span></td><td></td>
+        <td class="mid"><span class="dot"></span></td><td class="mid"><span class="dot"></span></td>
+        <td></td><td>—</td></tr>
+      <tr><td><code>absconder</code></td><td>45</td>
+        <td class="mid"><span class="dot"></span></td><td class="mid"><span class="dot"></span></td>
+        <td></td><td></td><td></td><td>—</td></tr>
+      <tr><td><code>parole_jumper</code></td><td>38</td>
+        <td class="mid"><span class="dot"></span></td><td class="mid"><span class="dot"></span></td>
+        <td></td><td></td><td></td><td>—</td></tr>
+      <tr><td><code>lockup_report</code></td><td>1078</td>
+        <td class="mid"><span class="dot"></span></td><td class="mid"><span class="dot"></span></td>
+        <td></td><td></td><td></td><td>—</td></tr>
+      <tr><td><code>statistic_snapshot</code></td><td>180</td>
+        <td class="mid"><span class="dot"></span></td><td class="mid"><span class="dot"></span></td>
+        <td></td><td></td><td></td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout"><b>Conditional numbering.</b> <code>id_proof_type</code> carries a
+  <code>requires_number</code> flag. The option <code>NOT AVAILABLE</code> sets it to 0, and the ID
+  number field stops being required — a rule taken from the live form, not invented.</div>
+</section>
+
+<!-- ===================== PLATE 6 ===================== -->
+<section class="plate">
+  <div class="plate-head"><span class="plate-no">PLATE 6</span><h2>ERP database, and the link across</h2></div>
+  <p class="plate-note">Five tables, and no foreign key reaches the portal database. The two sides are
+  joined by matching reference strings only, which is what lets them be separate processes holding
+  separate files.</p>
+
+  <div class="scroll">
+  <svg viewBox="0 0 1060 560" width="1060" height="560" role="img"
+       aria-label="ERP entity relationship diagram and the reference-only link to the portal database">
+    <defs>
+      <marker id="ag" markerWidth="8" markerHeight="8" refX="6.6" refY="2.9" orient="auto">
+        <path d="M0,0 L6.6,2.9 L0,5.8 z" fill="var(--erp-line)"/></marker>
+      <marker id="ah" markerWidth="8" markerHeight="8" refX="6.6" refY="2.9" orient="auto">
+        <path d="M0,0 L6.6,2.9 L0,5.8 z" fill="var(--ink-3)"/></marker>
+    </defs>
+
+    <rect x="30" y="40" width="250" height="84" rx="3" class="bx-e"/>
+    <rect x="30" y="40" width="250" height="24" rx="3" class="hdbar-e"/>
+    <rect x="30" y="56" width="250" height="8" class="hdbar-e"/>
+    <text x="42" y="57" class="t-hdw">source_system</text>
+    <text x="268" y="57" text-anchor="end" class="t-hdw">5</text>
+    <text x="42" y="82"  class="t-col">code PK · name</text>
+    <text x="42" y="100" class="t-col">hostname · category</text>
+
+    <path class="ln-e" d="M155,124 L155,190 L330,190" marker-end="url(#ag)"/>
+    <text x="165" y="184" class="t-lbl">first_seen_in</text>
+
+    <rect x="330" y="150" width="300" height="100" rx="3" class="bx-e"/>
+    <rect x="330" y="150" width="300" height="24" rx="3" class="hdbar-e"/>
+    <rect x="330" y="166" width="300" height="8" class="hdbar-e"/>
+    <text x="342" y="167" class="t-hdw">citizen</text>
+    <text x="618" y="167" text-anchor="end" class="t-hdw">11</text>
+    <text x="342" y="192" class="t-col">citizen_ref UNIQUE</text>
+    <text x="342" y="210" class="t-col">full_name · email · mobile</text>
+    <text x="342" y="228" class="t-col">first_seen_in · registered_on</text>
+
+    <path class="ln-e" d="M155,124 L155,330 L330,330" marker-end="url(#ag)"/>
+    <text x="165" y="324" class="t-lbl">source_system</text>
+
+    <path class="ln-e" d="M480,250 L480,290" marker-end="url(#ag)"/>
+    <text x="490" y="276" class="t-lbl">citizen_id</text>
+
+    <rect x="330" y="290" width="300" height="118" rx="3" class="bx-e"/>
+    <rect x="330" y="290" width="300" height="24" rx="3" class="hdbar-e"/>
+    <rect x="330" y="306" width="300" height="8" class="hdbar-e"/>
+    <text x="342" y="307" class="t-hdw">intake</text>
+    <text x="618" y="307" text-anchor="end" class="t-hdw">68</text>
+    <text x="342" y="332" class="t-col">intake_ref UNIQUE</text>
+    <text x="342" y="350" class="t-col">source_system · source_form</text>
+    <text x="342" y="368" class="t-col">source_reference</text>
+    <text x="342" y="388" class="t-col">UNIQUE(system, reference)</text>
+
+    <path class="ln-e" d="M480,408 L480,444" marker-end="url(#ag)"/>
+    <rect x="330" y="444" width="300" height="60" rx="3" class="bx-plain"/>
+    <text x="342" y="466" class="t-name">intake_field</text>
+    <text x="618" y="466" text-anchor="end" class="t-lbl">279</text>
+    <text x="342" y="488" class="t-col">intake_id · name · label · value</text>
+
+    <rect x="700" y="444" width="330" height="60" rx="3" class="bx-plain"/>
+    <text x="712" y="466" class="t-name">audit_log</text>
+    <text x="1018" y="466" text-anchor="end" class="t-lbl">79</text>
+    <text x="712" y="488" class="t-col">append-only · no foreign keys</text>
+
+    <!-- the cross-database link -->
+    <line x1="680" y1="40" x2="680" y2="410" stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="6 5"/>
+    <text x="700" y="58" class="t-hd" fill="var(--ink-2)">NO FOREIGN KEY CROSSES THIS LINE</text>
+    <text x="700" y="78" class="t-lbl">two files, two processes — matched on reference strings only</text>
+
+    <rect x="700" y="100" width="330" height="86" rx="3" class="bx-plain"/>
+    <text x="712" y="124" class="t-col">platform  person.person_ref</text>
+    <text x="712" y="146" class="t-name" fill="var(--ink-2)">≡</text>
+    <text x="736" y="146" class="t-col">ERP  citizen.citizen_ref</text>
+    <text x="712" y="170" class="t-lbl">one human, one row on each side</text>
+
+    <rect x="700" y="206" width="330" height="86" rx="3" class="bx-plain"/>
+    <text x="712" y="230" class="t-col">platform  submission.reference_no</text>
+    <text x="712" y="252" class="t-name" fill="var(--ink-2)">≡</text>
+    <text x="736" y="252" class="t-col">ERP  intake.source_reference</text>
+    <text x="712" y="276" class="t-lbl">every ERP row traces back to its submission</text>
+
+    <rect x="700" y="312" width="330" height="86" rx="3" class="bx-plain"/>
+    <text x="712" y="336" class="t-col">platform  submission.erp_intake_ref</text>
+    <text x="712" y="358" class="t-name" fill="var(--ink-2)">≡</text>
+    <text x="736" y="358" class="t-col">ERP  intake.intake_ref</text>
+    <text x="712" y="382" class="t-lbl">the stamp proving the handover landed</text>
+  </svg>
+  </div>
+</section>
+
+<!-- ===================== PLATE 7 ===================== -->
+<section class="plate">
+  <div class="plate-head"><span class="plate-no">PLATE 7</span><h2>Every foreign key</h2></div>
+  <p class="plate-note">All 28 foreign keys across both databases, read from the live files.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>DB</th><th>Table</th><th>Column</th><th>References</th><th>Group</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag p">portal</span></td><td><code>person</code></td><td><code>registered_via</code></td><td><code>site.code</code></td><td>core</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>session</code></td><td><code>person_id</code></td><td><code>person.id</code></td><td>core</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>session</code></td><td><code>issued_by</code></td><td><code>site.code</code></td><td>core</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>form</code></td><td><code>site_code</code></td><td><code>site.code</code></td><td>core</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>submission</code></td><td><code>site_code</code></td><td><code>site.code</code></td><td>core</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>submission</code></td><td><code>form_id</code></td><td><code>form.id</code></td><td>core</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>submission</code></td><td><code>person_id</code></td><td><code>person.id</code></td><td>core</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>submission_field</code></td><td><code>submission_id</code></td><td><code>submission.id</code></td><td>core</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>reference_option</code></td><td><code>site_code</code></td><td><code>site.code</code></td><td>per-portal</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>cascade_option</code></td><td><code>site_code</code></td><td><code>site.code</code></td><td>per-portal</td></tr>
+      <tr><td><span class="tag p">portal</span></td><td><code>demo_table_row</code></td><td><code>site_code</code></td><td><code>site.code</code></td><td>per-portal</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>jail</code></td><td><code>state_id</code></td><td><code>state.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>visit_request</code></td><td><code>state_id</code></td><td><code>state.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>visit_request</code></td><td><code>jail_id</code></td><td><code>jail.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>visit_request</code></td><td><code>relationship_id</code></td><td><code>relationship.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>visit_request</code></td><td><code>id_proof_type_id</code></td><td><code>id_proof_type.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>visit_request</code></td><td><code>visitor_gender_id</code></td><td><code>gender.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>visit_request</code></td><td><code>prisoner_gender_id</code></td><td><code>gender.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>additional_visitor</code></td><td><code>visit_request_id</code></td><td><code>visit_request.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>grievance</code></td><td><code>state_id</code></td><td><code>state.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>grievance</code></td><td><code>jail_id</code></td><td><code>jail.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>grievance</code></td><td><code>relationship_id</code></td><td><code>relationship.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>grievance_action</code></td><td><code>grievance_id</code></td><td><code>grievance.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>citizen_account</code></td><td><code>state_id</code> · <code>relationship_id</code> · <code>gender_id</code></td><td>3 reference tables</td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>absconder</code></td><td><code>state_id</code> · <code>jail_id</code></td><td><code>state.id</code> · <code>jail.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>parole_jumper</code></td><td><code>state_id</code> · <code>jail_id</code></td><td><code>state.id</code> · <code>jail.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>lockup_report</code></td><td><code>state_id</code> · <code>jail_id</code></td><td><code>state.id</code> · <code>jail.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag d">portal</span></td><td><code>statistic_snapshot</code></td><td><code>state_id</code> · <code>jail_id</code></td><td><code>state.id</code> · <code>jail.id</code></td><td>ePrisons</td></tr>
+      <tr><td><span class="tag e">ERP</span></td><td><code>citizen</code></td><td><code>first_seen_in</code></td><td><code>source_system.code</code></td><td>ERP</td></tr>
+      <tr><td><span class="tag e">ERP</span></td><td><code>intake</code></td><td><code>source_system</code></td><td><code>source_system.code</code></td><td>ERP</td></tr>
+      <tr><td><span class="tag e">ERP</span></td><td><code>intake</code></td><td><code>citizen_id</code></td><td><code>citizen.id</code></td><td>ERP</td></tr>
+      <tr><td><span class="tag e">ERP</span></td><td><code>intake_field</code></td><td><code>intake_id</code></td><td><code>intake.id</code></td><td>ERP</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout"><b>Two tables in each database carry no foreign key at all.</b>
+  <code>erp_sync</code> is a ledger of handover attempts, and <code>audit_log</code> on both sides is
+  append-only — a trigger aborts every UPDATE and every DELETE, so a rolled-back submission still
+  leaves a permanent mark.</div>
+</section>
+
+<footer>Drawn from the running system on 28 Oct 2026 · platform-api pid 3253182 · erp-api pid 3246711<br>
+Unofficial local demonstration — not an official government service.</footer>
+
+</div>
+</body>
+</html>

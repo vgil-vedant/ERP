@@ -1,0 +1,269 @@
+{
+  "url": "https://eprisons.nic.in/NPIP/public/grievancelogin.aspx",
+  "finalUrl": "https://eprisons.nic.in/NPIP/public/grievancelogin",
+  "redirected": true,
+  "slug": "npip_public_grievancelogin.aspx",
+  "depth": 1,
+  "via": "https://eprisons.nic.in/NPIP/public/Home",
+  "httpStatus": 200,
+  "crawlStatus": "captured",
+  "title": "",
+  "lang": null,
+  "charset": "UTF-8",
+  "description": "",
+  "keywords": "",
+  "headings": [],
+  "headingTree": [],
+  "breadcrumbs": [],
+  "navLabels": [],
+  "text": "Registered visitors or relatives of inmates can submit their grievances through the Citizen Services Portal by logging in at the link below : https://eprisons.nic.in/citizenservice/",
+  "textLength": 182,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 0,
+  "iframeCount": 0,
+  "htmlLength": 2469,
+  "forms": [
+    {
+      "index": 0,
+      "name": null,
+      "id": "form1",
+      "selector": "#form1",
+      "action": "https://eprisons.nic.in/NPIP/public/grievancelogin",
+      "actionRaw": "./grievancelogin",
+      "method": "post",
+      "enctype": null,
+      "target": null,
+      "heading": null,
+      "fieldCount": 0,
+      "fields": [],
+      "buttons": [],
+      "hiddenMachinery": [
+        "__EVENTTARGET",
+        "__EVENTARGUMENT",
+        "__VIEWSTATE",
+        "__VIEWSTATEGENERATOR",
+        "__EVENTVALIDATION"
+      ],
+      "hasCaptcha": false,
+      "hasFileInput": false,
+      "visibleText": "//<![CDATA[ var theForm = document.forms['form1']; if (!theForm) { theForm = document.form1; } function __doPostBack(eventTarget, eventArgument) { if (!theForm.onsubmit || (theForm.onsubmit() != false)) { theForm.__EVENTTARGET.value = eventTarget; theForm.__EVENTARGUMENT.value = eventArgument; theForm.submit(); } } //]]> Registered visitors or relatives of inmates can submit their grievances through the Citizen Services Portal by logging in at the link below : https://eprisons.nic.in/citizenservice/",
+      "box": {
+        "x": 8,
+        "y": 30,
+        "w": 1350,
+        "h": 146
+      }
+    }
+  ],
+  "orphanControls": [],
+  "tables": [],
+  "components": [
+    {
+      "type": "form",
+      "selector": "#form1",
+      "tag": "form",
+      "classes": null,
+      "id": "form1",
+      "box": {
+        "x": 8,
+        "y": 30,
+        "w": 1350,
+        "h": 146
+      },
+      "text": "//<![CDATA[ var theForm = document.forms['form1']; if (!theForm) { theForm = document.form1; } function __doPostBack(eventTarget, eventArgument) { if (!theForm.onsubmit || (theForm",
+      "childCount": 4,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"Times New Roman\"",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "alert",
+      "selector": "#form1 > div.grievance-notice:nth-of-type(3)",
+      "tag": "div",
+      "classes": "grievance-notice",
+      "id": null,
+      "box": {
+        "x": 362,
+        "y": 30,
+        "w": 642,
+        "h": 146
+      },
+      "text": "Registered visitors or relatives of inmates can submit their grievances through the Citizen Services Portal by logging in at the link below : https://eprisons.nic.in/citizenservice",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(243, 246, 255)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif",
+        "padding": "20px",
+        "margin": "30px 354px",
+        "border": "1px solid rgb(197, 215, 242)",
+        "borderRadius": "8px",
+        "boxShadow": "rgba(0, 0, 0, 0.05) 0px 0px 8px 0px",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [],
+  "links": [
+    {
+      "href": null,
+      "raw": "javascript:__doPostBack('lnkCitizenService','')",
+      "text": "https://eprisons.nic.in/citizenservice/",
+      "kind": "script-trigger",
+      "target": null
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "\"Times New Roman\"",
+      "count": 3
+    },
+    {
+      "value": "\"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif",
+      "count": 3
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 5
+      },
+      {
+        "value": "rgb(51, 51, 51)",
+        "count": 5
+      },
+      {
+        "value": "rgb(0, 74, 173)",
+        "count": 1
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(243, 246, 255)",
+        "count": 1
+      }
+    ]
+  },
+  "bodyStyle": {
+    "fontFamily": "\"Times New Roman\"",
+    "fontSize": "16px",
+    "lineHeight": "normal",
+    "color": "rgb(0, 0, 0)",
+    "backgroundColor": "rgba(0, 0, 0, 0)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": [
+      "__doPostBack"
+    ]
+  },
+  "responseHeaders": {
+    "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+    "cache-control": "private",
+    "content-length": "2601",
+    "content-security-policy": "object-src 'none'",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 26 Oct 2026 11:45:19 GMT",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN, DENY",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/grievancelogin.aspx",
+      "method": "GET",
+      "status": 301,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "144",
+        "content-security-policy": "object-src 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 11:45:19 GMT",
+        "location": "/NPIP/public/grievancelogin",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN, DENY",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/grievancelogin",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "cache-control": "private",
+        "content-length": "2601",
+        "content-security-policy": "object-src 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 11:45:19 GMT",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN, DENY",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/npip_public_grievancelogin.aspx.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/npip_public_grievancelogin.aspx.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/npip_public_grievancelogin.aspx.tablet.png",
+    "mobile": "reference_pages/screenshots/npip_public_grievancelogin.aspx.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1212
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-26T11:45:24.872Z",
+  "pageType": "login"
+}

@@ -1,0 +1,1208 @@
+{
+  "generatedAt": "2026-10-27T07:43:23.802Z",
+  "counts": {
+    "missing-asset": 27,
+    "external-dependency": 33,
+    "uncertain-technology": 10,
+    "incomplete-interaction": 129
+  },
+  "visualTolerance": 0.12,
+  "singlePageApplicationMounts": [],
+  "gaps": [
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/vendor/css/stylesheet.css",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//vendor/jquery/sha256.js",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/static/docs/FINAL_INNOVATIONS_IN_PHASE_II.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/static/docs/Objective_Accomplishment_Report-2019.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/static/docs/Annexures_of_the_report.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/js/jquery3.min.js",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/js/bootstrap.min.js",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/includes/javascript/xmlhttp.js",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/includes/javascript/combofunctions.js",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/cal/jquery.plugin.js",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/cal/jquery.datepick.js",
+      "detail": "HTTP 404.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//vendor/css/stylesheet.css",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/js/jquery3.min.js",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/js/bootstrap.min.js",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/includes/javascript/xmlhttp.js",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/includes/javascript/combofunctions.js",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/cal/jquery.plugin.js",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0/cal/jquery.datepick.js",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/player/dce23b30/www-player.css",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.9jHlf2SPX_c.L.W.O/am=AAAAQABj/d=1/br=1/rs=AGKMywH0tZyDtSb7oE1fzEhFbSACFoL86Q/m=root,base",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.9jHlf2SPX_c.L.W.O/am=AAAAQA/d=1/br=1/rs=AGKMywGkrjuQcMSdgCXlBv6Y61EI7W3lwA/m=root,base",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.AXr9bQl-SqY.2021.O/am=AAAAQABj/d=1/excm=base,root/br=1/rs=AGKMywGMmQ17i41PYwpLUu3YY3bmn1g0Ug/m=root,base",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/player/6b2fce74/www-player.css",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/player/dce23b30/player_embed_es6.vflset/en_GB/base.js",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.AXr9bQl-SqY.2021.O/am=AAAAQA/d=1/excm=base,root/br=1/rs=AGKMywGeBPgMBjGz7kdp6JhmOTPPpsi9bQ/m=root,base",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/player/6b2fce74/player_embed_es6.vflset/en_GB/base.js",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.AXr9bQl-SqY.2021.O/ck=ytembeds.base.9jHlf2SPX_c.L.W.O/am=AAAAQABj/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywFLsIBgZV9OXFoMHV5IQDhmK5ax6w/m=r78Drb",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://static.doubleclick.net/instream/ad_status.js",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.AXr9bQl-SqY.2021.O/ck=ytembeds.base.9jHlf2SPX_c.L.W.O/am=AAAAQA/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywG36pSrInEC8zU1A31hQZMwdw5AnA/m=r78Drb",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.google.com/js/th/pxwG18Euy-n6Uq6PY9vb4Ohp58yKH_56NpBvs6fBnH8.js",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/SEgUNcfKXdU/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/tEMUB9DnIT4/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/wyTTDMvlzIg/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/rdO7Wc0yiws/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi/zriUGseEmsg/default.jpg?sqp=-oaymwEkCHgQWvKriqkDGvABAfgB_gmAAtAFigIMCAAQARg5IFEofzAP&rs=AOn4CLAwYx48RnOgDsLOe7hHjDpwbIRyMg",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi/lll5NIoCfmA/default.jpg?sqp=-oaymwEkCHgQWvKriqkDGvABAfgB_gmAAtAFigIMCAAQARg6IFMofzAP&rs=AOn4CLDOM6vYlXsAg9zoTdXwE9gJRg4PuA",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/39sTfoNEUA4/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://yt3.ggpht.com/ytc/AIdro_lkyi7zTdvBy1ihrcg3dzLEry97oxZn7yYyhIOafXu8iA=s68-c-k-c0x00ffffff-no-rj",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/azaq9ngn8S8/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi/ac6B2Pat4tI/default.jpg?sqp=-oaymwEkCHgQWvKriqkDGvABAfgB_gmAAtAFigIMCAAQARg4IE0ocjAP&rs=AOn4CLAkxnYorXnbkzuEtP91Qt2PB9jemA",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/t4DhEOjSCKI/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi/e6Dk4ibkbJk/default.jpg?sqp=-oaymwEkCHgQWvKriqkDGvABAfgB_gmAAtAFigIMCAAQARg4IGUoXTAP&rs=AOn4CLDnzjg5C4rpa2WqSm4OSMYQ6dQY8g",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi/1tTGNxzlsXo/default.jpg?sqp=-oaymwEkCHgQWvKriqkDGvABAfgB_gmAAtAFigIMCAAQARg5IFIofzAP&rs=AOn4CLAW0XC10N1xNSHZ2uYaOC5YO_K_xg",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/IUjmZ4e_k3s/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi/fyiOdRs4s6Q/default.jpg?sqp=-oaymwEkCHgQWvKriqkDGvABAfgB_gmAAtAFigIMCAAQARg1IEwocjAP&rs=AOn4CLCCp2BYYOxwqzwYFqet4QXwIDp97A",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://i.ytimg.com/vi_webp/drkMOAVwqB4/default.webp",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/generate_204?0UwoMw",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/generate_204?rpWkJQ",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/generate_204?6d-XKQ",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://www.youtube.com/generate_204?QzN4pQ",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//static/manuals/Registration%20User%20Manual.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//static/manuals/Court%20User%20Manual.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//static/manuals/Super%20User%20Manual.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//manuals/epay_brochure.pdf",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//manuals/NSTEP_brochure.pdf",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//manuals/eCourts_brochure.pdf",
+      "detail": "HTTP 400.",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//static/docs/FINAL_INNOVATIONS_IN_PHASE_II.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//static/docs/Objective_Accomplishment_Report-2019.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "missing-asset",
+      "item": "https://ecourts.gov.in/ecourts2.0//static/docs/Annexures_of_the_report.pdf",
+      "detail": "server answered 200 but no body was written (likely over the size limit, or an empty/truncated response).",
+      "impact": "A placeholder stands in for this asset in the replica."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "database product and schema",
+      "detail": "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "application source code",
+      "detail": "Only the publicly served HTML, CSS and JavaScript were retrieved. No source map, repository or build artifact was requested, and none should be. The replica is an independent reimplementation, not recovered source.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "server-side language version and build tooling",
+      "detail": "The server does not advertise a version header beyond what is listed above. Nothing further is publicly observable.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "hosting provider and data-centre location",
+      "detail": "Not publicly identifiable from the served responses. `.nic.in` is operated by the National Informatics Centre, but that is organisational, not a verified hosting fact.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": " (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: ` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "cafe (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: cafe` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "ESF (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: ESF` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "fife (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: fife` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "scaffolding on HTTPServer2 (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: scaffolding on HTTPServer2` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "sffe (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: sffe` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0/",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0/",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0/?p=about_us/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://justiceclock.ecourts.gov.in/justiceClock/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0/?p=about_us/highcourts",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0/?p=dist_court",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0/?p=about_us/contactus",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://justiceclock.ecourts.gov.in/justiceClock/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://justiceclock.ecourts.gov.in/justiceClock/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://justiceclock.ecourts.gov.in/justiceClock/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/hcnjdg_v2/",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/hcnjdg_v2/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://justiceclock.ecourts.gov.in/justiceClock/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://justiceclock.ecourts.gov.in/justiceClock/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://justiceclock.ecourts.gov.in/justiceClock/",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/knowledge_mgmt",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/forms_for_advocates",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/help_videos",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/manuals",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/disclaimer",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/brochures",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/webinfo",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/privacy",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/terms",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/copyright",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/hyperlink",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/access",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=about_us/screen_recorder",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "ref: <Node> on https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?lang=&p=",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/ab",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/wi",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cu",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sm",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/as",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/sr",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/tc",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/cp",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/hl",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/pp",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://njdg.ecourts.gov.in/njdg_v3//?p=home/footerlinks/di",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/andaman",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/ap",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/arunachal",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/assam",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/bihar",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/chandigarh_district_court",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/chhattisgarh",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/dadra",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/damandiu",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/delhi",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/goa",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/gujarat",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/haryana",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/hp",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/jk",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/jharkhand",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/karnataka",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/kerala",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep",
+      "detail": "This is a live production government service. Submitting would create or query a real record, so no submission was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "(controls outside any <form>) on https://ecourts.gov.in/ecourts2.0//?p=dist_court/lakshadweep",
+      "detail": "Live production service; no interaction was attempted.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    }
+  ],
+  "honesty": "This file is the deliberate record of what the replica does NOT reproduce. Nothing here is papered over elsewhere in the project."
+}

@@ -1,0 +1,62 @@
+{
+  "runId": "2026-10-27T09-29-41-515Z",
+  "generatedAt": "2026-10-27T09:30:04.792Z",
+  "startUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+  "rootHost": "www.digitalpolicecitizenservices.gov.in",
+  "limits": {
+    "maxPages": 60,
+    "maxDepth": 4,
+    "navTimeoutMs": 45000,
+    "settleTimeoutMs": 3500,
+    "perRequestDelayMs": 1500,
+    "concurrency": 1,
+    "maxAssetBytes": 12582912,
+    "maxTotalRuntimeMs": 1500000,
+    "assetTimeoutMs": 30000,
+    "retriesPerUrl": 2,
+    "throttleBackoffMs": 4000
+  },
+  "visited": {
+    "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm": {
+      "slug": "centercitizen_login.htm",
+      "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "login",
+      "depth": 0,
+      "via": "start URL",
+      "capturedAt": "2026-10-27T07:05:04.805Z",
+      "error": null
+    },
+    "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm": {
+      "slug": "centercitizen_feedback.htm",
+      "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "contact",
+      "depth": 1,
+      "via": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "capturedAt": "2026-10-27T07:05:16.749Z",
+      "error": null
+    },
+    "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout": {
+      "slug": "centercitizen_logout",
+      "finalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+      "httpStatus": 404,
+      "crawlStatus": "captured",
+      "pageType": "error",
+      "depth": 2,
+      "via": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "capturedAt": "2026-10-27T07:05:28.874Z",
+      "error": null
+    }
+  },
+  "pending": [],
+  "aliases": [],
+  "skipped": [],
+  "errors": [],
+  "limitHit": null,
+  "exhaustedQueue": true,
+  "durationMs": 201,
+  "resumeHint": "Re-running the pipeline on the same domain reuses every page in `visited` whose metadata file still exists under reference_pages/page_metadata/, and re-queues everything in `pending`. Delete this file to force a full re-crawl."
+}

@@ -1,0 +1,3234 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="e-Filing services for online filing of cases, plaints, written statements, replies and various applications related to cases before any High Court or District Court of the country">
+    <meta name="keywords" content="e-Filing services for online filing of cases, plaints, written statements, replies and various applications related to cases before any High Court or District Court of the country">
+	
+	    <title>eFiling Services | Home</title>
+    
+	<script src="/pdedev/vendor/jquery/jquery.min.js"></script>
+	<script src="/pdedev/dist1/vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>
+	<link href="/pdedev/dist1/vendor/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+
+	<script src="/pdedev/js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="/pdedev/js/additional-methods.min.js" type="text/javascript"></script>
+	<script src="/pdedev/dist/js/chosen.jquery.min.js"></script>
+	<script src="/pdedev/jquery-date/js/jquery-ui.js"></script>
+	<link href="/pdedev/dist/css/chosen.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/pdedev/jquery-date/jquery-ui.css">
+	<script src="/pdedev/js/components.js"></script>
+	<script src="/pdedev/js/jquery.session.js" type="text/javascript"></script>
+	<script src="/pdedev/PDE/js/jquery.steps.min.js" type="text/javascript"></script>
+	<link href="/pdedev/PDE/css/myStyle.css" rel="stylesheet" type="text/css">
+	
+	<link href="/pdedev/dist1/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    .alert {
+	    padding: 0px;
+	    margin-bottom: 2px;
+	    border: 1px solid transparent;
+	    border-radius: 4px;
+	}
+ 	label.error {
+	    color: red;
+	    font-size: 12px;
+		font-weight: normal !important;
+    }
+</style>
+<script>
+var labels_array;
+var buttons_array;
+var alerts_array;
+$(document).ready(function(){
+   $('.sidebar-nav').height($(window).height())-50;
+});
+</script>
+</head>
+<body id="page-top" style="font-size:14px;">
+ 
+
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="efiling services">
+  <meta name="author" content="efiling services">
+  <title>e-Filing Services</title>
+
+
+
+  <link href="/pdedev/dist1/vendor/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/pdedev/dist1/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"> -->
+
+  <link href="/pdedev/dist1/css/eFileStyle.css" rel="stylesheet">
+  <link href="/pdedev/PDE/css/messagebox.css" rel="stylesheet" type="text/css">
+  <script src="/pdedev/PDE/js/popper.min.js" type="text/javascript"></script>
+  <script src="/pdedev/PDE/js/jquery.steps.min.js" type="text/javascript"></script>
+  <!-- <script src="/pdedev/js/registration.js"></script> -->
+  <style>
+    .input-validation-error {
+      border: solid 1px #ff0000 !important;
+    }
+
+    #frm_login label.error {
+      background: none !important
+    }
+
+    .top_margin_6 {
+      margin-top: 6%
+    }
+
+    .adv_bar_code_class {
+      padding: .375rem .375rem;
+    }
+
+    body {
+      padding-bottom: 0px;
+    }
+
+    ul.topheaderSmall li button {
+      background: none;
+      border: none;
+      padding: 0px 10px;
+      margin: 0;
+      color: inherit;
+      font-size: clamp(0.4rem, 0.8vw, 1.5rem);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #dvCustomMessage {
+      background: #fff5cc;
+      /* soft light yellow */
+      color: #b30000;
+      /* dark red text */
+      font-weight: bold;
+      width: 100%;
+      padding: 8px 12px;
+      overflow: hidden;
+      /* Important: hides overflow */
+      white-space: nowrap;
+      /* Keep text in one line */
+      position: static;
+      z-index: 9999;
+      height: 27px;
+      display: block;
+    }
+
+    #dvCustomMessage span {
+      display: inline-block;
+      padding-left: 100%;
+      /* start from right side */
+      animation: marquee 45s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+    /* ---------- Main menu link colours (uses :root variables) ----------
+       Prefixed with #mainNav (the header wrapper's id) so these beat the theme's
+       "#mainNav .navbar-nav .nav-link" rules, which an ordinary class selector cannot. */
+    #mainNav .mainnav.navbar {
+      --bs-navbar-color: #fff;
+      --bs-navbar-hover-color: var(--ec-navy-dark);
+      --bs-navbar-active-color: var(--ec-navy-dark);
+      --bs-navbar-disabled-color: var(--ec-navy-semi-light-bg);
+    }
+
+    #mainNav .mainnav.navbar .navbar-nav .nav-link,
+    #mainNav .mainnav.navbar .navbar-nav .nav-link:visited {
+      color: #fff !important;
+      border-radius: 8px;
+    }
+
+    #mainNav .mainnav.navbar .navbar-nav .nav-link:hover,
+    #mainNav .mainnav.navbar .navbar-nav .nav-link:focus,
+    #mainNav .mainnav.navbar .navbar-nav .nav-link:focus-visible,
+    #mainNav .mainnav.navbar .navbar-nav .nav-link.active,
+    #mainNav .mainnav.navbar .navbar-nav .nav-link.show {
+      color: var(--ec-green-dark) !important;
+      background: var(--ec-green-light-bg) !important;
+    }
+
+    #mainNav .mainnav.navbar .navbar-nav .nav-link:focus-visible {
+      outline: 3px solid var(--ec-focus);
+      outline-offset: 2px;
+    }
+
+    #mainNav .mainnav.navbar .navbar-toggler {
+      color: #fff;
+      border-color: rgba(255, 255, 255, .6);
+    }
+
+    #mainNav .mainnav.navbar .navbar-toggler:focus-visible {
+      outline: 3px solid var(--ec-focus);
+      outline-offset: 2px;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      // Restore theme from localStorage
+      let bodydarkclass = localStorage.getItem("bodydarkclass");
+      if (bodydarkclass) {
+        $("body").addClass(bodydarkclass);
+      }
+
+      // Increase font size
+      $("#increasefont").click(function() {
+        let curSize = parseInt($("body").css("font-size")) + 1;
+        if (curSize <= 20) { // allow up to 20px
+          $("body").css("font-size", curSize + "px");
+        }
+      });
+
+      // Decrease font size
+      $("#decreasefont").click(function() {
+        let curSize = parseInt($("body").css("font-size")) - 1;
+        if (curSize >= 12) { // min 12px
+          $("body").css("font-size", curSize + "px");
+        }
+      });
+
+      // Reset font size
+      $("#normalfont").click(function() {
+        $("body").css("font-size", "14px"); // default
+      });
+
+      // Enable high contrast
+      $("#Highcontrast").click(function() {
+        $("body").addClass("dark-theme");
+        localStorage.setItem("bodydarkclass", "dark-theme");
+      });
+
+      // Reset to default contrast
+      $("#Defaultcontrast").click(function() {
+        $("body").removeClass("dark-theme");
+        localStorage.removeItem("bodydarkclass");
+      });
+
+      var skipNav = document.querySelector('a[href="#mainNav"]');
+      if (skipNav) {
+        skipNav.addEventListener("click", function() {
+          var first = document.querySelector('.mainnav .nav-link');
+          if (first) first.focus();
+        });
+      }
+
+      var skipAbout = document.querySelector('a[href="#aboutLogin"]');
+      if (skipAbout) {
+        skipAbout.addEventListener("click", function() {
+          var about = document.getElementById("aboutLogin");
+          if (about) about.focus();
+        });
+      }
+      /*$("#selState_chosen").focus(function(){
+	   $("input[aria-owns='selState-chosen-search-results']").attr("aria-label","enter state name");
+	});*/
+    });
+  </script>
+
+
+
+
+  
+
+  <div class="alert alert-danger" style="    text-align: center;padding: 10px;position: absolute;width: 100%;z-index: 1;margin-top: 85px;display: none;"></div>  <!-- Navigation -->
+  <div role="banner" class="navbar navbar-expand-lg navbar-dark" id="mainNav" style="display:block;" tabindex="-1"><!-- sticky-top class removed for 400% zoom -->
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container topbar__inner">
+
+          <div class="topbar__gov">
+            <img src="images/flag.svg" alt="Indian Flag" aria-hidden="true">
+            <a class="topbar__hi headerNav" lang="hi" href="https://ecommitteesci.gov.in" onclick="return confirm('You are being redirected to an external website. ');" aria-label="इ-कमिटी, उच्चतम न्यायालय, भारत - External site that opens in a new window" title="इ-कमिटी, उच्चतम न्यायालय, भारत - External site that opens in a new window" target="_blank" rel="noopener noreferrer">इ-कमिटी, उच्चतम न्यायालय, भारत</a>
+            <span class="topbar__sep" aria-hidden="true"></span>
+            <a class="topbar__en headerNav" href="https://ecommitteesci.gov.in" onclick="return confirm('You are being redirected to an external website.');" aria-label="E-COMMITTEE, SUPREME COURT OF INDIA - External site that opens in a new window" title="E-COMMITTEE, SUPREME COURT OF INDIA - External site that opens in a new window" target="_blank" rel="noopener noreferrer">E-COMMITTEE, SUPREME COURT OF INDIA</a>
+          </div>
+          <ul class="topbar__tools list-unstyled mb-0">
+            <li>
+              <a class="tool-btn noToken" href="#main-content" title="Skip to main content">
+                <span class="visually-hidden">Skip to main content</span>
+                <svg width="32" height="24" viewBox="0 0 40 27" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M35.7451 0.628906C35.9372 0.628906 36.1614 0.628619 36.3535 0.661133C36.6739 0.693692 36.9949 0.75941 37.2832 0.889648C37.9558 1.15014 38.5006 1.57357 38.917 2.12695C39.2052 2.48504 39.4295 2.90824 39.5576 3.39648C39.6216 3.62421 39.6857 3.81945 39.7178 4.01465V22.7041C39.6537 22.8994 39.6216 23.0948 39.5576 23.29C39.4295 23.7459 39.2053 24.2024 38.917 24.5605C38.5006 25.1139 37.9238 25.5374 37.2832 25.7979C36.9949 25.8955 36.6739 25.9928 36.3535 26.0254C36.1614 26.0579 35.9373 26.0576 35.7451 26.0576H7.80762C5.50113 26.0574 3.83496 24.3646 3.83496 22.0205V19.1875C3.83508 18.6341 4.12402 18.2113 4.60449 18.0811C5.30927 17.8858 5.91797 18.4068 5.91797 19.2207V22.0205C5.91797 23.1925 6.62249 23.9412 7.80762 23.9414H35.6807C36.5135 23.9414 37.155 23.5186 37.4434 22.835C37.5074 22.6071 37.5712 22.3463 37.5713 22.0859V4.60156C37.5713 4.30867 37.5394 4.08034 37.4434 3.85254C37.1871 3.16879 36.5457 2.74512 35.6807 2.74512H7.80762C6.6546 2.7453 5.91808 3.46163 5.91797 4.66602V7.4668C5.91777 8.28044 5.30908 8.80153 4.60449 8.60645C4.12394 8.47621 3.83498 8.05251 3.83496 7.49902V4.66602C3.83509 2.32202 5.50122 0.629121 7.80762 0.628906H35.7451ZM27.6074 17.8203C28.2801 17.8203 28.7606 18.276 28.7607 18.8945C28.7607 19.5457 28.3122 19.9697 27.6074 19.9697H20.0781C19.5338 19.9695 19.0857 19.546 19.0215 19.0254C18.9894 18.4719 19.3419 17.9828 19.8545 17.8525C19.9506 17.8201 20.0788 17.8203 20.1748 17.8203H27.6074ZM10.6592 9.32227C10.7233 9.32227 10.7877 9.35449 10.8838 9.35449C11.108 9.38706 11.2684 9.51727 11.3965 9.64746C11.5246 9.7777 11.6843 9.90882 11.8125 10.0391C11.8766 10.1367 11.9733 10.2344 12.0693 10.332C12.1652 10.4294 12.2293 10.4944 12.3252 10.5918C12.5815 10.8523 12.8064 11.081 13.0947 11.374L13.1582 11.4385C13.4786 11.7315 13.7675 12.0576 14.0879 12.3506C14.1518 12.4156 14.2154 12.4809 14.2793 12.5459C14.3434 12.6436 14.44 12.709 14.5361 12.8066C14.7282 13.0018 14.9202 13.1971 15.1123 13.4248C15.1764 13.5225 15.1769 13.6204 15.209 13.6855V13.75C15.209 13.7825 15.2412 13.7829 15.2412 13.8154V14.0107C15.2114 14.0107 15.2091 14.039 15.209 14.043C15.1769 14.2383 15.0803 14.4342 14.9521 14.5645C14.6639 14.8574 14.4074 15.1182 14.1191 15.4111L13.5752 15.9648C13.2869 16.2579 12.9983 16.5507 12.71 16.8438C12.5498 17.0065 12.3896 17.1693 12.2295 17.332C11.9732 17.5925 11.7163 17.8528 11.46 18.1133L11.4287 18.1455C11.3006 18.2757 11.1717 18.4066 10.9795 18.4717H10.9482C10.9481 18.5022 10.9193 18.5038 10.916 18.5039L10.8838 18.5371H10.499V18.5039C10.4673 18.5038 10.4671 18.4719 10.4355 18.4717C10.4039 18.4396 10.3719 18.4385 10.3711 18.4385C10.1149 18.3733 9.98673 18.1784 9.89062 18.0156C9.76253 17.7553 9.73045 17.495 9.8584 17.2021C9.89044 17.0719 9.98671 16.9733 10.0508 16.9082L10.083 16.876C10.147 16.8109 10.2114 16.7457 10.2754 16.6807C10.3072 16.6484 10.3069 16.6477 10.3389 16.6152C10.4349 16.5176 10.5309 16.4199 10.627 16.3223L10.6592 16.29C10.6911 16.2576 10.7549 16.1929 10.7871 16.1602L11.2363 15.7041C11.2683 15.6716 11.3001 15.6389 11.332 15.6064C11.3961 15.5414 11.4604 15.4762 11.5244 15.4111C11.5565 15.3786 11.6203 15.3128 11.6523 15.2803C11.6843 15.2478 11.7482 15.183 11.7803 15.1504C11.8443 15.0853 11.9086 15.0201 11.9727 14.9551C12.0047 14.9225 12.0373 14.89 12.0693 14.8574H0.887695C0.727657 14.8574 0.567768 14.8573 0.47168 14.7598C0.279453 14.597 0.118763 14.434 0.0546875 14.2061C-0.0733002 13.8481 0.0227193 13.4899 0.342773 13.2295C0.502962 13.0667 0.695846 13.002 0.952148 13.002H12.0693C12.0373 12.9694 11.9735 12.9037 11.9414 12.8711C11.8774 12.806 11.7809 12.7087 11.7168 12.6436C11.6207 12.5459 11.5561 12.4805 11.46 12.3828C11.364 12.2853 11.3001 12.2197 11.2041 12.1221C11.1081 12.057 11.0442 11.992 10.9482 11.8945C10.8842 11.8294 10.8512 11.7966 10.7871 11.7314C10.755 11.6988 10.6911 11.634 10.6592 11.6016C10.4029 11.3411 10.243 11.1452 10.0508 10.9824C9.79471 10.7221 9.69856 10.4621 9.73047 10.1367C9.76251 9.87624 9.89078 9.68038 10.083 9.51758C10.2431 9.38749 10.4351 9.32231 10.6592 9.32227ZM33.2783 12.1875C34.0471 12.1876 34.5272 12.8062 34.335 13.5225C34.2068 13.9457 33.9184 14.2064 33.502 14.2715C33.3739 14.3039 33.2139 14.3037 33.0859 14.3037H20.335C20.2068 14.3037 20.0783 14.304 19.9502 14.2715C19.3736 14.1738 18.9896 13.7175 19.0537 13.1641C19.0859 12.6108 19.5017 12.1877 20.0781 12.1875H33.2783ZM33.2783 6.52246C34.0471 6.5226 34.5272 7.14119 34.335 7.85742C34.2068 8.28048 33.9183 8.54135 33.502 8.60645C33.3739 8.63888 33.2139 8.63867 33.0859 8.63867H20.335C20.2068 8.63867 20.0783 8.639 19.9502 8.60645C19.3736 8.50873 18.9896 8.01995 19.0537 7.49902C19.0857 6.94564 19.5016 6.52265 20.0781 6.52246H33.2783Z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="tool-menu d-none" data-tool-menu="">
+              <button type="button" class="tool-btn" data-tool-toggle="" aria-expanded="false" aria-controls="language-panel" aria-haspopup="true">
+                <span class="visually-hidden">Language</span>
+                <svg width="32" height="32" viewBox="-4 0 37 26" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.804 1.90925H16.0035V0.232836H10.4667V1.90925H11.9837V6.42627C11.8016 6.48836 11.6196 6.53493 11.4527 6.58149C10.9825 6.69015 10.4061 6.75224 9.72345 6.75224C9.25321 6.75224 8.8133 6.72119 8.40373 6.67463C8.34306 6.6591 8.26721 6.6591 8.20653 6.64358C8.19137 6.62806 8.1762 6.61254 8.16103 6.59701C8.00933 6.41075 7.85764 6.25552 7.72112 6.11582C8.11552 5.85194 8.43407 5.54149 8.67678 5.16896C9.04084 4.64119 9.2077 4.00478 9.2077 3.29075C9.2077 2.32836 8.90432 1.55224 8.28238 0.931343C7.66044 0.310448 6.78063 0 5.64294 0C4.96033 0 4.33839 0.0776119 3.80747 0.248358C3.27655 0.419104 2.79113 0.605373 2.36639 0.838209L2.95799 2.46806C3.41307 2.2197 3.85298 2.01791 4.26254 1.87821C4.68728 1.73851 5.14236 1.67642 5.62777 1.67642C6.12835 1.67642 6.55309 1.8006 6.88682 2.06448C7.23571 2.32836 7.40257 2.73194 7.40257 3.29075C7.40257 3.86507 7.1902 4.33075 6.76546 4.68776C6.34072 5.04478 5.64294 5.23104 4.68728 5.29313L4.85414 6.93851C5.26371 6.92299 5.65811 6.8609 6.02217 6.78328C6.35589 7.07821 6.64411 7.40418 6.91715 7.76119C7.37223 8.35104 7.61494 9.03403 7.61494 9.79463C7.61494 10.369 7.44807 10.8036 7.12952 11.083C6.81097 11.3624 6.4014 11.5021 5.90082 11.5021C5.30922 11.5021 4.76313 11.2848 4.27771 10.8502C3.7923 10.4155 3.32205 9.7791 2.89732 8.97194C2.47258 8.16478 2.04784 7.18687 1.63827 6.06925L0 6.61254C0.591599 8.1803 1.1832 9.45313 1.78997 10.4155C2.39673 11.3934 3.03384 12.0919 3.73162 12.5421C4.42941 12.9767 5.18786 13.194 6.03734 13.194C6.68961 13.194 7.28121 13.0854 7.7818 12.8525C8.28238 12.6197 8.69195 12.2627 8.98016 11.7815C9.26838 11.3003 9.42007 10.7104 9.42007 10.0275C9.42007 9.57731 9.37456 9.17373 9.26838 8.83224C9.22287 8.67701 9.16219 8.52179 9.10152 8.36657C9.14703 8.36657 9.19253 8.38209 9.23804 8.38209C9.51109 8.42866 9.76896 8.44418 9.9965 8.44418C10.5426 8.44418 11.0583 8.39761 11.5438 8.30448C11.6954 8.27343 11.832 8.24239 11.9837 8.19582V15.1654H13.804V1.90925Z"></path>
+                  <path d="M20.3722 8.84776H18.3092L12.6966 26H14.8203L16.5344 20.6758H22.147L23.8763 26H26L20.3722 8.84776ZM17.0653 18.7976L18.7036 13.4579C18.7643 13.2406 18.8401 12.9767 18.916 12.6973C18.9918 12.4179 19.0677 12.123 19.1435 11.8281C19.2194 11.5176 19.2649 11.2227 19.3256 10.9433C19.3711 11.1451 19.4317 11.4245 19.5228 11.7504C19.6138 12.0764 19.6896 12.4024 19.7806 12.7128C19.8716 13.0233 19.9323 13.2716 19.9778 13.4734L21.6161 18.8131H17.0653V18.7976Z"></path>
+                </svg>
+              </button>
+
+              <div class="tool-panel" id="language-panel" role="group" aria-labelledby="language-panel-title">
+                <p class="tool-panel__title" id="language-panel-title">Select language</p>
+                <ul class="lang-list list-unstyled mb-0">
+                  <li><a href="#" lang="en" hreflang="en" aria-current="true">English</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="tool-menu" data-tool-menu="">
+              <button type="button" class="tool-btn" data-tool-toggle="" aria-expanded="false" aria-controls="a11y-panel" aria-haspopup="true">
+                <span class="visually-hidden">Accessibility options</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32 " viewBox="0 0 64 64" fill="none" style="display: flex; justify-content: center;">
+                  <path class="accessibilIcon" d="M24.2921 29.7656C21.4604 29.7656 18.7402 29.7704 16.0199 29.7608C15.4887 29.7608 14.9503 29.7419 14.4286 29.6565C12.2182 29.296 10.6482 27.4043 10.6672 25.1638C10.6861 22.9779 12.3652 21.041 14.5305 20.7305C14.9977 20.6641 15.4744 20.6451 15.9488 20.6451C26.6163 20.6403 37.2838 20.6356 47.9515 20.6522C48.6534 20.6522 49.3862 20.7091 50.0505 20.9154C52.0307 21.5294 53.2593 23.4166 53.1265 25.491C52.9982 27.4968 51.4521 29.2771 49.4526 29.6256C48.7294 29.7512 47.9798 29.7536 47.2425 29.7584C44.7025 29.7725 42.1601 29.7632 39.3638 29.7632C39.5203 32.2075 39.3779 34.6163 39.8785 36.8827C41.0523 42.1933 42.5465 47.4328 43.8817 52.7077C44.5102 55.1947 43.1987 57.6104 40.8555 58.4072C38.2041 59.308 35.4126 57.7765 34.7414 54.9837C33.8307 51.188 32.9817 47.3757 32.1043 43.5731C32.0686 43.4165 32.0166 43.2648 31.7985 43.1059C31.3595 45.0168 30.9185 46.9301 30.4774 48.8408C30.0126 50.8584 29.5785 52.8832 29.0758 54.8912C28.4046 57.5632 25.9072 59.0613 23.3008 58.4141C20.7893 57.7883 19.2785 55.2325 19.9402 52.6128C21.1403 47.8523 22.2834 43.0752 23.6376 38.3573C24.4439 35.548 24.24 32.7384 24.2921 29.7656ZM31.9929 23.6868C26.6875 23.6868 21.3822 23.6868 16.0745 23.6868C15.7187 23.6868 15.3582 23.6797 15.012 23.7366C14.2341 23.8599 13.7218 24.4573 13.7147 25.1946C13.7076 25.9462 14.1914 26.5318 14.9788 26.6717C15.2966 26.7285 15.6286 26.7237 15.9535 26.7237C18.7093 26.7285 21.4675 26.7096 24.2234 26.7333C25.8219 26.7475 27.195 27.7456 27.2473 29.1704C27.335 31.6219 27.5222 34.1349 27.0977 36.52C26.429 40.2659 25.2906 43.9285 24.3467 47.6272C23.8629 49.5189 23.3483 51.4013 22.881 53.2981C22.613 54.3837 23.1443 55.2563 24.138 55.4885C25.0582 55.7043 25.8859 55.1379 26.1728 54.0923C26.1966 54.0069 26.2037 53.9168 26.2227 53.8315C27.2899 49.1587 28.3523 44.4859 29.4385 39.8176C29.5643 39.2795 29.7374 38.7128 30.0433 38.2672C30.5699 37.5037 31.3761 37.1933 32.3035 37.3664C33.3779 37.5677 34.0062 38.2435 34.2505 39.3032C35.3534 44.1184 36.4633 48.9333 37.571 53.7485C37.5899 53.8339 37.5945 53.9264 37.6158 54.0117C37.8958 55.1211 38.7259 55.7187 39.6697 55.4957C40.6942 55.2539 41.1947 54.3624 40.9054 53.2173C40.1987 50.4365 39.4777 47.6579 38.7521 44.8816C37.4878 40.0477 36.0009 35.2659 36.4419 30.1448C36.6363 27.8712 37.623 26.7285 39.9307 26.7213C42.5678 26.7144 45.2075 26.7213 47.8449 26.7192C48.1411 26.7192 48.4401 26.7237 48.7294 26.6741C49.5974 26.527 50.1334 25.8798 50.0859 25.0785C50.0385 24.2985 49.4907 23.7722 48.6227 23.6963C48.3286 23.6702 48.0297 23.6797 47.7334 23.6797C42.4873 23.6797 37.2411 23.6797 31.9929 23.6797V23.6868Z" fill="#29136C"></path>
+                  <path class="accessibilIcon" d="M31.6523 17.6787C28.1841 17.6715 25.4626 14.9253 25.4796 11.4504C25.4965 8.07201 28.3001 5.3138 31.6982 5.33311C35.0867 5.35482 37.8323 8.13473 37.8251 11.5397C37.8179 14.9519 35.0699 17.6859 31.6523 17.6787ZM34.7339 11.4938C34.7219 9.7974 33.2958 8.4002 31.6041 8.42433C29.9435 8.44844 28.5731 9.83841 28.5707 11.4962C28.5659 13.2313 29.9195 14.5826 31.6547 14.5802C33.395 14.5778 34.7483 13.2216 34.7339 11.4938Z" fill="#29136C"></path>
+                </svg>
+              </button>
+
+              <div class="tool-panel tool-panel--wide" id="a11y-panel" role="group" aria-labelledby="a11y-panel-title">
+                <h2 class="a11y-title" id="a11y-panel-title">Accessibility Tools</h2>
+                <p class="visually-hidden" id="a11y-live" role="status" aria-live="polite"></p>
+                <p class="a11y-section" id="a11y-sec-0">Color Contrast</p>
+                <div class="a11y-grid" role="group" aria-labelledby="a11y-sec-0">
+                  <button type="button" class="a11y-tile" data-a11y="contrast-high" aria-pressed="false">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <rect x="3" y="5" width="26" height="22" rx="3"></rect>
+                      <circle cx="16" cy="16" r="6"></circle>
+                      <path d="M16 10a6 6 0 0 0 0 12z" fill="currentColor"></path>
+                    </svg>
+                    <span class="a11y-tile__label">High Contrast</span>
+                  </button>
+                  <button type="button" class="a11y-tile is-active" data-a11y="contrast-normal" aria-pressed="true">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <rect x="3" y="5" width="26" height="22" rx="3"></rect>
+                      <circle cx="16" cy="16" r="3"></circle>
+                      <path d="M16 8.5v2M16 21.5v2M8.5 16h2M21.5 16h2M10.7 10.7l1.4 1.4M19.9 19.9l1.4 1.4M21.3 10.7l-1.4 1.4M12.1 19.9l-1.4 1.4"></path>
+                    </svg>
+                    <span class="a11y-tile__label">Normal Contrast</span>
+                  </button>
+                  <button type="button" class="a11y-tile" data-a11y="links" aria-pressed="false">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <path d="M13.5 11H10a5 5 0 0 0 0 10h3.5M18.5 11H22a5 5 0 0 1 0 10h-3.5M11.5 16h9"></path>
+                    </svg>
+                    <span class="a11y-tile__label">Highlight Links</span>
+                  </button>
+                  <button type="button" class="a11y-tile" data-a11y="invert" aria-pressed="false">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <circle cx="16" cy="16" r="12"></circle>
+                      <path d="M16 4a12 12 0 0 0 0 24z" fill="currentColor"></path>
+                    </svg>
+                    <span class="a11y-tile__label">Invert</span>
+                  </button>
+                  <button type="button" class="a11y-tile" data-a11y="desat" aria-pressed="false">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <path d="M16 3.5S7 13.5 7 19.5a9 9 0 0 0 18 0c0-6-9-16-9-16z"></path>
+                      <path d="M16 3.5v25a9 9 0 0 0 9-9c0-6-9-16-9-16z" fill="currentColor"></path>
+                    </svg>
+                    <span class="a11y-tile__label">Saturation</span>
+                  </button>
+                </div>
+                <p class="a11y-section" id="a11y-sec-1">Text Size</p>
+                <div class="a11y-grid" role="group" aria-labelledby="a11y-sec-1">
+                  <button type="button" class="a11y-tile" data-a11y="size-inc" aria-pressed="false">
+                    <span class="a11y-tile__glyph" aria-hidden="true">A+</span>
+                    <span class="a11y-tile__label">Font Size Increase</span>
+                  </button>
+                  <button type="button" class="a11y-tile" data-a11y="size-dec" aria-pressed="false">
+                    <span class="a11y-tile__glyph" aria-hidden="true">A−</span>
+                    <span class="a11y-tile__label">Font Size Decrease</span>
+                  </button>
+                  <button type="button" class="a11y-tile is-active" data-a11y="size-reset" aria-pressed="true">
+                    <span class="a11y-tile__glyph" aria-hidden="true">A</span>
+                    <span class="a11y-tile__label">Normal Font</span>
+                  </button>
+                  <button type="button" class="a11y-tile" data-a11y="spacing" aria-pressed="false">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <path d="M10 4h12M16 4v15M10 19h12"></path>
+                      <path d="M5 26h22M8.5 23 5 26l3.5 3M23.5 23l3.5 3-3.5 3"></path>
+                    </svg>
+                    <span class="a11y-tile__label">Text Spacing</span>
+                  </button>
+                  <button type="button" class="a11y-tile" data-a11y="lineheight" aria-pressed="false">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <path d="M4 7h15M11.5 7v17"></path>
+                      <path d="M26 5v22M22 9l4-4 4 4M22 23l4 4 4-4"></path>
+                    </svg>
+                    <span class="a11y-tile__label">Line Height</span>
+                  </button>
+                </div>
+                <p class="a11y-section" id="a11y-sec-2">Others</p>
+                <div class="a11y-grid" role="group" aria-labelledby="a11y-sec-2">
+                  <button type="button" class="a11y-tile" data-a11y="noimg" aria-pressed="false">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <rect x="4" y="5" width="24" height="22" rx="2"></rect>
+                      <path d="M4 22l7-7 5 5 4-4 8 8"></path>
+                      <circle cx="11" cy="11" r="2"></circle>
+                      <path d="M3 3l26 26"></path>
+                    </svg>
+                    <span class="a11y-tile__label">Hide Images</span>
+                  </button>
+                  <button type="button" class="a11y-tile" data-a11y="cursor" aria-pressed="false">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <path d="M13 12l13 6-5.5 1.5 4 6.5-3 1.7-4-6.5L10 27z" fill="currentColor"></path>
+                      <path d="M11 5l1 3M5 11l3 1M6.5 6.5l2 2M17 3v3"></path>
+                    </svg>
+                    <span class="a11y-tile__label">Big Cursor</span>
+                  </button>
+                </div>
+                <button type="button" class="a11y-reset" data-a11y-reset="">Reset all settings</button>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- ============ 2. Brand + search + logos ============ -->
+      <div class="brandbar">
+        <div class="container">
+          <div class="row align-items-center gy-3">
+
+            <!-- Brand -->
+            <div class="col-12 col-md-8 col-lg-5 order-1">
+              <a class="brand" href="/pdedev/?p=login">
+                <img id="logo" class="emblem" src="images/emblem.svg" alt="State Emblem of India" oncontextmenu="return false;" draggable="false">
+                <span class="brand__text">
+                  <span class="brand__hi" lang="hi">e-Committee, Supreme Court of India</span>
+                  <span class="brand__title">eFiling Services</span>
+                  <span class="brand__sub">Electronic filing of cases in the court</span>
+                </span>
+              </a>
+
+            </div>
+
+
+
+            <div class="col-12 col-lg-4 order-3 order-lg-2">
+              <form class="site-search d-none" role="search" action="#" method="get">
+                <label class="visually-hidden" for="site-search">Search this site</label>
+                <input class="site-search__input" id="site-search" type="search" name="q" placeholder="Search" autocomplete="off">
+                <button class="site-search__btn" type="button">
+                  <span class="visually-hidden">Search</span>
+
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false">
+                    <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                    <path d="m15.5 15.5 5 5"></path>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+
+            <div class="col-12 col-md-4 col-lg-3 order-2 order-lg-3 ">
+              <div class="brand-logos">
+                <!-- <a type="link" class="btn db-outline-btn me-2" href="https://scdg.sci.gov.in/" target="_new"> <i class="fas fa-university"></i> SC NJDG </a>
+              <a type="link" class="btn db-outline-btn" href="https://njdg.ecourts.gov.in/hcnjdg_v2/" target="_new"> <i class="fas fa-university"></i> HC NJDG </a> -->
+                <a href="https://ecourts.gov.in/ecourts2.0/" target="_blank" onclick="return confirm('You are being redirected to an external website. ');" rel="noopener noreferrer">
+                  <img class="" src="dist1/img/ecourt-logo.png" alt="eCourts eFiling Services">
+                </a>
+                <a href="https://www.digitalindia.gov.in/" target="_blank" onclick="return confirm('You are being redirected to an external website. ');" rel="noopener noreferrer">
+                  <img src="dist1/img/2019031587.png" alt="Digital India External website that opens a new window">
+                </a>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+            <nav class="mainnav navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-text">Menu</span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/pdedev/">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/pdedev/#aboutLogin">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/pdedev/#services">Features</a>
+              </li>
+
+              <li class="nav-item">
+                <!-- same handler the footer's Video Tutorials link uses -->
+                <a class="nav-link" href="#" onclick="showVideos('W'); return false;" aria-haspopup="dialog" aria-controls="fd_screen">Video Tutorials</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#FAQ" onclick="showFaqs()" aria-haspopup="dialog" aria-controls="fd_screen">FAQ</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#manuals" onclick="showManual()" id="showManual12" aria-haspopup="dialog" aria-controls="vd_screen">Manuals</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/pdedev/#contact">Contact</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--div id='dvCustomMessage' ><span>* E-filing services for Maharashtra will be unavailable today from 6:00 PM to 10:00 PM due to scheduled server maintenance. The inconvenience caused is regretted.</span></div-->
+    <!-- <div class="container-fluid topheader border-bottom">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="topheaderSmall" style="display: flex; align-items: center; list-style: none; margin: 0; padding: 0;">
+            External link
+            <li class="nav-item mr-01">
+              <a lang="en" class="js-scroll-trigger"
+                href="https://ecommitteesci.gov.in"
+                onclick="return confirm('You are being redirected to an external website.')"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="External website that opens a new window"
+                aria-label="e-Committee, Supreme Court of India, external website, opens in new window">
+                e-Committee, Supreme Court of India
+                <sup><i class="fa fa-external-link-alt"></i></sup>
+              </a>
+            </li>
+    
+    
+            Skip links
+            <li class="mr-01">
+              <a class="js-scroll-trigger" href="#mainNav">Skip to navigation</a>
+            </li>
+            <li class="mr-01">
+              <a class="js-scroll-trigger" href="#aboutLogin">Skip to main content</a>
+            </li>
+    
+            Font size buttons
+            <li class="border-right mr-01">
+              <button id="decreasefont"
+                title="Decrease Font Size"
+                aria-label="Decrease font size"
+                aria-pressed="false"
+                class="headerbtn">
+                A-
+              </button>
+            </li>
+            <li class="mr-01">
+              <button id="normalfont"
+                title="Normal Font Size"
+                aria-label="Normal font size"
+                aria-pressed="true"
+                class="headerbtn">
+                A
+              </button>
+            </li>
+            <li class="mr-01">
+              <button id="increasefont"
+                title="Increase Font Size"
+                aria-label="Increase font size"
+                aria-pressed="false"
+                class="headerbtn">
+                A+
+              </button>
+            </li>
+    
+            Contrast buttons
+            <li class="mr-01">
+              <button class="whitelink headerbtn"
+                id="Defaultcontrast"
+                title="Default contrast"
+                aria-label="Normal contrast theme"
+                aria-pressed="true"
+                class="headerbtn">
+                A
+              </button>
+            </li>
+            <li>
+              <button class="blacklink text-white bg-dark headerbtn"
+                id="Highcontrast"
+                title="High contrast"
+                aria-label="High contrast theme"
+                aria-pressed="false"
+                class="headerbtn">
+                A
+              </button>
+            </li>
+    
+          </ul>
+    
+    
+    
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <a class="navbar-brand js-scroll-trigger" href="/pdedev/">
+        <div class="row">
+          <div class="col d-md-block p-0 ps-2"><img class="w-75" src="dist1/img/emblem.png" alt="emblem, Government of India"></div>
+          <div class="col d-none d-md-block ps-0"><img class="" src="dist1/img/ecourt-logo.png" alt="eCourts eFiling Services"></div>
+          <div class="col">
+            <div class="mainHeading site_name_english">eFiling Services</div>
+            <div class="subHeading d-none d-md-block">Electronic filing of cases in the court</div>
+          </div>
+        </div>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive" role="navigation" aria-label="primary">
+        <ul class="navbar-nav text-uppercase ms-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/pdedev/" role="link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/pdedev/#aboutLogin" role="link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/pdedev/#services" role="link">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#" onclick="showVideos('W')" aria-haspopup="dialog" aria-controls="fd_screen">Video Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#FAQ" onclick="showFaqs()" aria-haspopup="dialog" aria-controls="fd_screen">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#manuals" onclick="showManual()" id="showManual12" aria-haspopup="dialog" aria-controls="vd_screen">Manuals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/pdedev/#contact" role="link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+    <!--	
+<div class="container-fluid">
+		<div class="row w-100 text-center">
+				<div class="col alert alert-danger lead" role="alert">Due to maintenance activity Karnataka state will not be available today from 05:00 PM to 07:00 PM</div>
+				</div>
+       </div>
+-->
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('#incresefont').click(function() {
+        curSize = parseInt($('body').css('font-size')) + 1;
+
+        var h6 = parseInt($('.h6').css('font-size')) + 1;
+        $('.h6').css('font-size', h6);
+
+        var h5 = parseInt($('.h5').css('font-size')) + 1;
+        $('.h5').css('font-size', h5);
+
+        var h4 = parseInt($('.h4').css('font-size')) + 1;
+        $('.h4').css('font-size', h4);
+
+        var h2 = parseInt($('.h2').css('font-size')) + 1;
+        $('.h2').css('font-size', h2);
+
+        if (curSize <= 16)
+          $('body').css('font-size', curSize);
+      });
+
+      $('#decresefont').click(function() {
+        curSize = parseInt($('body').css('font-size')) - 1;
+
+        var h6 = parseInt($('.h6').css('font-size')) - 1;
+        $('.h6').css('font-size', h6);
+
+        var h5 = parseInt($('.h5').css('font-size')) - 1;
+        $('.h5').css('font-size', h5);
+
+        var h4 = parseInt($('.h4').css('font-size')) - 1;
+        $('.h4').css('font-size', h4);
+
+        var h2 = parseInt($('.h2').css('font-size')) - 1;
+        $('.h2').css('font-size', h2);
+
+        var cardtitle = parseInt($('.card-title').css('font-size')) - 1;
+        $('.card-title').css('font-size', cardtitle);
+
+        if (curSize >= 12)
+          $('body').css('font-size', curSize);
+      });
+
+      $("#normalfont").click(function() {
+        curSize = 14;
+
+        $('.h6').css('font-size', '1rem');
+        $('.h5').css('font-size', '1.25rem');
+        $('.h4').css('font-size', '1rem');
+        $('.h3').css('font-size', '1.25rem');
+        $('.h2').css('font-size', '2.5rem');
+
+        $('.card-title').css('font-size', '1rem');
+
+        $("body").css("font-size", curSize);
+      });
+
+    });
+  </script>
+  <script>
+    (function() {
+      'use strict';
+
+      /* ---------- Top-bar panels: hover, click, keyboard ---------- */
+      var canHover = window.matchMedia('(hover: hover)');
+      var menus = Array.prototype.slice.call(document.querySelectorAll('[data-tool-menu]'));
+
+      function setOpen(menu, open) {
+        menu.classList.toggle('is-open', open);
+        menu.querySelector('[data-tool-toggle]').setAttribute('aria-expanded', String(open));
+      }
+
+      function closeOthers(keep) {
+        menus.forEach(function(m) {
+          if (m !== keep) setOpen(m, false);
+        });
+      }
+
+      menus.forEach(function(menu) {
+        var btn = menu.querySelector('[data-tool-toggle]');
+
+        menu.addEventListener('mouseenter', function() {
+          if (canHover.matches) {
+            closeOthers(menu);
+            setOpen(menu, true);
+          }
+        });
+        menu.addEventListener('mouseleave', function() {
+          if (canHover.matches) {
+            setOpen(menu, false);
+          }
+        });
+
+        btn.addEventListener('click', function(e) {
+          var open = menu.classList.contains('is-open');
+          // Mouse click on a hover-opened panel keeps it open; keyboard (detail 0) and touch toggle.
+          var next = (canHover.matches && e.detail > 0) ? true : !open;
+          closeOthers(menu);
+          setOpen(menu, next);
+        });
+
+        menu.addEventListener('focusout', function(e) {
+          if (!menu.contains(e.relatedTarget)) {
+            setOpen(menu, false);
+          }
+        });
+        menu.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            setOpen(menu, false);
+            btn.focus();
+          }
+        });
+      });
+
+      document.addEventListener('click', function(e) {
+        menus.forEach(function(m) {
+          if (!m.contains(e.target)) {
+            setOpen(m, false);
+          }
+        });
+      });
+
+      /* ---------- Accessibility tools ---------- */
+      var root = document.documentElement;
+      var STORE = 'ec-a11y';
+      var MIN = 80,
+        MAX = 140,
+        STEP = 10;
+      var DEFAULTS = {
+        contrast: 'normal',
+        links: false,
+        invert: false,
+        desat: false,
+        size: 100,
+        spacing: false,
+        lineheight: false,
+        noimg: false,
+        cursor: false
+      };
+      var FLAGS = {
+        links: 'a11y-links',
+        invert: 'a11y-invert',
+        desat: 'a11y-desat',
+        spacing: 'a11y-spacing',
+        lineheight: 'a11y-lineheight',
+        noimg: 'a11y-noimg',
+        cursor: 'a11y-cursor'
+      };
+      var state = {};
+      Object.keys(DEFAULTS).forEach(function(k) {
+        state[k] = DEFAULTS[k];
+      });
+
+      // restore saved settings
+      try {
+        var saved = JSON.parse(localStorage.getItem(STORE) || '{}');
+        Object.keys(DEFAULTS).forEach(function(k) {
+          if (typeof saved[k] === typeof DEFAULTS[k]) {
+            state[k] = saved[k];
+          }
+        });
+        if (state.contrast !== 'high') {
+          state.contrast = 'normal';
+        }
+        state.size = Math.min(MAX, Math.max(MIN, Math.round(state.size)));
+      } catch (err) {}
+
+      var tiles = Array.prototype.slice.call(document.querySelectorAll('.a11y-tile'));
+      var live = document.getElementById('a11y-live');
+
+      function isOn(action) {
+        switch (action) {
+          case 'contrast-high':
+            return state.contrast === 'high';
+          case 'contrast-normal':
+            return state.contrast === 'normal';
+          case 'size-inc':
+            return state.size > 100;
+          case 'size-dec':
+            return state.size < 100;
+          case 'size-reset':
+            return state.size === 100;
+          default:
+            return !!state[action];
+        }
+      }
+
+      function render() {
+        root.style.fontSize = state.size === 100 ? '' : state.size + '%';
+        document.body.classList.toggle('high-contrast', state.contrast === 'high');
+        Object.keys(FLAGS).forEach(function(k) {
+          root.classList.toggle(FLAGS[k], !!state[k]);
+        });
+        tiles.forEach(function(t) {
+          var on = isOn(t.getAttribute('data-a11y'));
+          t.classList.toggle('is-active', on);
+          t.setAttribute('aria-pressed', String(on));
+        });
+        try {
+          localStorage.setItem(STORE, JSON.stringify(state));
+        } catch (err) {}
+      }
+
+      function announce(msg) {
+        live.textContent = '';
+        setTimeout(function() {
+          live.textContent = msg;
+        }, 50);
+      }
+
+      tiles.forEach(function(tile) {
+        tile.addEventListener('click', function() {
+          var a = tile.getAttribute('data-a11y');
+          var label = tile.querySelector('.a11y-tile__label').textContent;
+
+          if (a === 'contrast-high') {
+            state.contrast = 'high';
+          } else if (a === 'contrast-normal') {
+            state.contrast = 'normal';
+          } else if (a === 'size-inc') {
+            state.size = Math.min(MAX, state.size + STEP);
+          } else if (a === 'size-dec') {
+            state.size = Math.max(MIN, state.size - STEP);
+          } else if (a === 'size-reset') {
+            state.size = 100;
+          } else {
+            state[a] = !state[a];
+          }
+
+          render();
+
+          if (a.indexOf('size') === 0) {
+            announce('Text size ' + state.size + ' percent');
+          } else if (a.indexOf('contrast') === 0) {
+            announce(label + ' selected');
+          } else {
+            announce(label + (state[a] ? ' on' : ' off'));
+          }
+        });
+      });
+
+      document.querySelector('[data-a11y-reset]').addEventListener('click', function() {
+        Object.keys(DEFAULTS).forEach(function(k) {
+          state[k] = DEFAULTS[k];
+        });
+        render();
+        announce('All accessibility settings reset');
+      });
+
+      render();
+    })();
+  </script>
+
+  <script>
+    /* ---------- Main navigation: keyboard support ----------
+     Tab / Shift+Tab   move through items
+     Enter / Space     open a dropdown (or follow a link)
+     Arrow Down / Up   open dropdown and move between its items (Bootstrap)
+     Arrow Right / Left move to next / previous top-level item (desktop layout)
+     Home / End        first / last top-level item
+     Escape            close dropdown and return focus to its button        */
+    (function() {
+      'use strict';
+      var nav = document.querySelector('.mainnav');
+      var tops = Array.prototype.slice.call(nav.querySelectorAll('.navbar-nav > .nav-item > .nav-link'));
+      var desktop = window.matchMedia('(min-width: 992px)');
+
+      function isToggle(el) {
+        return el.classList.contains('dropdown-toggle');
+      }
+
+      function isOpen(el) {
+        return el.getAttribute('aria-expanded') === 'true';
+      }
+
+      function closeAll() {
+        tops.forEach(function(t) {
+          if (isToggle(t) && isOpen(t)) {
+            bootstrap.Dropdown.getOrCreateInstance(t).hide();
+          }
+        });
+      }
+
+      nav.addEventListener('keydown', function(e) {
+        var target = e.target;
+
+        // Space activates dropdown buttons (links only react to Enter by default)
+        if (e.key === ' ' && target.classList.contains('dropdown-toggle')) {
+          e.preventDefault();
+          target.click();
+          return;
+        }
+
+        if (!desktop.matches) return;
+
+        // Find which top-level item the focus belongs to
+        var owner = tops.indexOf(target);
+        var inMenu = false;
+        if (owner === -1 && target.classList.contains('dropdown-item')) {
+          var parentToggle = target.closest('.dropdown').querySelector('.nav-link');
+          owner = tops.indexOf(parentToggle);
+          inMenu = true;
+        }
+        if (owner === -1) return;
+
+        var next = null;
+        if (e.key === 'ArrowRight') next = tops[(owner + 1) % tops.length];
+        else if (e.key === 'ArrowLeft') next = tops[(owner - 1 + tops.length) % tops.length];
+        else if (e.key === 'Home' && !inMenu) next = tops[0];
+        else if (e.key === 'End' && !inMenu) next = tops[tops.length - 1];
+        if (!next) return;
+
+        e.preventDefault();
+        var wasOpen = inMenu || (isToggle(tops[owner]) && isOpen(tops[owner]));
+        closeAll();
+        next.focus();
+        if (wasOpen && isToggle(next)) {
+          bootstrap.Dropdown.getOrCreateInstance(next).show();
+        }
+      });
+
+      // Close any open dropdown when focus leaves the navigation
+      nav.addEventListener('focusout', function(e) {
+        if (e.relatedTarget && !nav.contains(e.relatedTarget)) {
+          closeAll();
+        }
+      });
+    })();
+  </script>
+
+<script>
+	var macp_state=["7"]
+	var macp_district=["7"]
+	var macp_establishment=["DLND01"]
+	</script><style>
+#rulesModal .modal-dialog {
+    max-width: 800px;
+    width: 95%;
+    margin: 30px auto;
+}
+
+#rulesModal .modal-content {
+    max-height: 90vh;
+}
+
+#rulesModal .modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#rulesModal .modal-footer {
+    flex-shrink: 0;
+}
+	#selState_chosen {
+		width: 88% !important
+	}
+
+	.form-check-inline {
+		margin-right: 0px !important;
+	}
+
+	#captcha_image1 {
+		width: 82px !important;
+	}
+
+	#captcha_image2 {
+		width: 82px !important;
+	}
+</style>
+<style>
+	input[type="radio"] {
+		accent-color: #007bff;
+		/* blue */
+	}
+	
+	fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* equal, guaranteed spacing */
+}
+
+.form-check-inline {
+    margin-right: 0 !important; /* remove Bootstrap's default so gap controls it */
+}
+</style>
+
+
+<!-- Login & About -->
+<main role="main" id="aboutLogin" tabindex="-1">
+
+	<!-- Single H1 for the page -->
+	<!-- Slider -->
+	<button id="carouselToggle" class="btn btn-white border mt-3" style="position:absolute; right:20px;z-index: 1050;    background: #fff;" type="button">
+		<i id="carouselIcon" class="fas fa-pause" role="presentation"></i>
+		<span id="carouselText" class="small">Pause automatic slideshow</span>
+	</button>
+	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" role="region" aria-roledescription="carousel">
+
+		<ol class="carousel-indicators">
+			<li data-bs-target="#carouselExampleIndicators" role="button" data-bs-slide-to="0" class="active" aria-label="Go to slide 1 of 5" tabindex="0"></li>
+			<li data-bs-target="#carouselExampleIndicators" role="button" data-bs-slide-to="1" aria-label="Go to slide 2 of 5" tabindex="0"></li>
+			<li data-bs-target="#carouselExampleIndicators" role="button" data-bs-slide-to="2" aria-label="Go to slide 3 of 5" tabindex="0"></li>
+			<li data-bs-target="#carouselExampleIndicators" role="button" data-bs-slide-to="3" aria-label="Go to slide 4 of 5" tabindex="0"></li>
+			<li data-bs-target="#carouselExampleIndicators" role="button" data-bs-slide-to="4" aria-label="Go to slide 5 of 5" tabindex="0"></li>
+		</ol>
+
+		<div class="carousel-inner" role="list">
+
+			<div class="carousel-item active" role="group" aria-roledescription="slide" style="background-image: url('dist1/img/slider/Slider1.png')" aria-label="File Cases Online slide 1 of 5">
+				<div class="carousel-caption d-md-block">
+					<h2 class="display-4 fw-medium">File Cases Online</h2>
+					<p class="lead fw-medium" role="note">
+						Litigants and Advocates can file Cases/Applications from their offices/home.
+					</p>
+				</div>
+			</div>
+
+			<div class="carousel-item" role="group" aria-roledescription="slide" style="background-image: url('dist1/img/slider/Slider4.png')" aria-label="Upload Pleadings slide 2 of 5">
+				<div class="carousel-caption d-md-block">
+					<h2 class="display-4 text-dark fw-medium">Upload Pleadings</h2>
+					<p class="lead text-dark fw-medium" role="note">
+						Upload pleadings/documents in PDF form and e-Sign online.
+					</p>
+				</div>
+			</div>
+
+			<div class="carousel-item" role="group" aria-roledescription="slide" style="background-image: url('dist1/img/slider/Slider3.png')" aria-label="Payments slide 3 of 5">
+				<div class="carousel-caption d-md-block">
+					<h2 class="display-4 text-dark fw-medium">Payments</h2>
+					<p class="lead text-dark fw-medium" role="note">
+						Online payment of court fee
+					</p>
+				</div>
+			</div>
+
+			<div class="carousel-item" role="group" aria-roledescription="slide" style="background-image: url('dist1/img/slider/Slider5.png')" aria-label="Oath Recording slide 4 of 5">
+				<div class="carousel-caption d-md-block">
+					<h2 class="display-4 fw-medium">Oath Recording</h2>
+					<p class="lead fw-medium" role="note">
+						Administer the oath by online video recording
+					</p>
+				</div>
+			</div>
+
+			<div class="carousel-item" role="group" aria-roledescription="slide" style="background-image: url('dist1/img/slider/Slider2.png')" aria-label="Portfolio Management slide 5 of 5">
+				<div class="carousel-caption d-md-block">
+					<h2 class="display-4 fw-medium">Portfolio Management</h2>
+					<p class="lead fw-medium" role="note">
+						Portfolio and planner for managing cases
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev" aria-label="Go to previous slide">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</a>
+
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next" aria-label="Go to Next slide">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</a>
+
+	</div>
+
+
+
+
+
+
+
+	<h1 class="visually-hidden">eFiling Services Portal</h1>
+
+	<section class="page-section p-0 border-bottom">
+		<div class="container-fluid">
+			<div class="row">
+
+				<!--	<div class='col-auto text-danger fw-bold'>E-filing services for Tamil Nadu will be unavailable on 22nd September from 22:00  to 23:00  due to maintenance activity. The inconvenience caused is regretted.</div> -->
+ 
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4 bg-login ps-lg-5 pe-lg-5 pb-lg-1">
+					<div style="color:red; font-size:16px;font-weight:bold;">
+						We have updated the eFiling website theme. Please clear your browser cache and refresh the page to view the updated theme properly.
+					</div>
+					<h2 class="section-heading pt-2">Sign In</h2>
+					<div class=" alert-warning py-1 small">
+						<p id="required-note" class="fw-semibold mb-1" style="color:#7A0000">
+							Fields marked with * are mandatory.
+						</p>
+					</div>
+					   
+
+     <div id="form-status-message" role="status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+     <div class="alert alert-danger alert-dismissible" style="align:center;text-align:center;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+       <div id="msg-danger"></div>
+     </div>
+     <div class="alert alert-success alert-dismissible" style="align:center;text-align:center;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+       <div id="msg-success"></div>
+     </div>
+     <div class="alert alert-warning alert-dismissible" style="align:center;text-align:center;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+       <div id="msg-warning"></div>
+     </div>
+     <div class="alert alert-info alert-dismissible" style="align:center;text-align:center;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+       <div id="msg-info"></div>
+     </div>
+
+            <input type="hidden" name="base_url" id="base_url" value="/pdedev">
+       <input type="hidden" name="server_addr" id="server_addr" value="13">
+
+       <input type="hidden" name="server_mvc" id="server_mvc" value="37">
+       <input type="hidden" name="db_server" id="db_server" value="L">
+       <input type="hidden" name="is_macp_state" id="is_macp_state" value="">
+       <input type="hidden" name="controller_name" id="controller_name" value="login">
+       <input type="hidden" name="func_name" id="func_name" value="">
+       <input type="hidden" name="hidPFlag" id="hidPFlag" value="">
+       <input type="hidden" name="__csrf_magic" id="__csrf_magic" value="6256a0cd1755c132e0d264d5f9f38c8ccbc164c72ccf89e0f6e971c6d2eebabd">
+       <input type="hidden" name="sessionlangid" id="sessionlangid" value="">
+	
+       <input type="hidden" name="sessionLoginState" id="sessionLoginState" value="">
+
+	   <input type="hidden" name="sessionGovAuth" id="sessionGovAuth" value="">
+          <!-- Modal -->
+
+     <div class="modal fade" id="loadMe" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel" aria-hidden="true" aria-modal="true">
+       <div class="modal-dialog modal-sm" role="document">
+         <div class="modal-content">
+           <div class="modal-body text-center">
+             <div class="loader"></div>
+             <div class="loader-txt">
+               <p id="loadMeLabel">Loading...</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+     <div class="modal fade" id="validateError" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-label="validate Error window" style="display:none;" aria-modal="true">
+       <div class="modal-dialog modal-sm" role="document">
+         <div class="modal-content">
+           <div class="modal-header text-center">
+             <i class="fas fa-3x fa-exclamation-triangle mb-3 text-secondary mx-auto w-100 d-none" id="errorIcon"></i>
+             <i class="fas fa-3x fa-check-circle mb-3 text-success mx-auto w-100 " id="successIcon" aria-hidden="true"></i>
+             <button type="button" class="btn-close" onclick="closeModel({modal_id:'validateError'})" aria-label="Close">&nbsp;</button>
+           </div>
+
+           <div class="modal-body p-1 text-center">
+
+             <div class="loader-txt">
+               <div class="alert alert-danger-cust" role="alert" aria-live="assertive" aria-atomic="true" style="text-align:center; word-wrap: break-word; display:none;"></div>
+               <div class="alert alert-success-cust" role="status" aria-live="polite" aria-atomic="true" style="text-align:center; word-wrap: break-word; display:none;"></div>
+               <!--<div class='alert alert-danger-cust' tabindex="0" role="alert"  style='align:center;text-align:center;display: none;word-wrap: break-word;'></div>
+		<div class='alert alert-success-cust' tabindex="0" role="status"  style='align:center;text-align:center;display: none;word-wrap: break-word;'></div>-->
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="modal fade" id="fd_screen" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="fd_title" aria-describedby="fd_body">
+       <div class="modal-dialog modal-md modal-dialog-scrollable" role="document" id="fd_dialog">
+         <div class="modal-content  ">
+           <div class="modal-header">
+             <h2 class="modal-title" id="fd_title">Document</h2>
+               <button class="btn-close" onclick="closeModel({modal_id:'fd_screen',clear_data_id:'fd_body'})" aria-label="Close" type="button"><span aria-hidden="true" aria-label="close">&nbsp;</span></button>
+           </div>
+           <div class="modal-body text-justify" id="fd_body">
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+     <div class="modal fade" id="vd_screen" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="vd_title" aria-describedby="vd_body">
+       <div class="modal-dialog modal-md modal-dialog-scrollable" role="document" id="vd_dialog">
+         <div class="modal-content  ">
+           <div class="modal-header">
+             <h2 class="modal-title" id="vd_title">Video</h2>
+                <button class="btn-close" onclick="closeModel({modal_id:'vd_screen', clear_data_id:'vd_body'})" aria-label="Close" type="button"><span aria-hidden="true">&nbsp;</span></button>
+           </div>
+           <div class="modal-body text-center" id="vd_body">
+
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+
+     <!-- Export Cases Modal -->
+<div class="modal" id="exportCasesConfirm" style="padding-right:0!important;" aria-modal="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="border-radius:12px;overflow:hidden;border:none;box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+ 
+      <div class="modal-header" style="border-bottom:1px solid #f0f0f0;padding:18px 20px 14px;">
+        <div>
+          <h5 class="modal-title" style="margin:0;font-size:15px;font-weight:600;">Export my cases</h5>
+          <p style="margin:2px 0 0;font-size:12px;color:#888;">Choose a court type and download</p>
+        </div>
+      </div>
+ 
+      <div class="modal-body" style="padding:16px 20px;">
+        <!-- Court type pills -->
+        <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <div class="radio-pill-wrap">
+            <input type="radio" name="radOpt-export" id="radOpt_dc_export" value="exportDC" checked="" style="display:none;">
+            <label for="radOpt_dc_export" class="court-pill">DISTRICT COURT</label>
+          </div>
+          <div class="radio-pill-wrap">
+            <input type="radio" name="radOpt-export" id="radOpt_hc_export" value="exportHC" style="display:none;">
+            <label for="radOpt_hc_export" class="court-pill">HIGH COURT</label>
+          </div>
+        </div>
+ 
+        <!-- Actions -->
+        <div style="display:flex;gap:8px;">
+          <a id="download_link" onclick="downloadclicked()" download="myCases.txt" href="#" style="flex:1;padding:8px 0;border-radius:8px;background:#00599e;color:#fff;font-size:13px;font-weight:500;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">
+            <i class="fas fa-download" aria-hidden="true"></i> Download
+          </a>
+          <a id="download_link_hc" onclick="downloadclicked()" download="hcMyCases.txt" href="#" style="flex:1;padding:8px 0;border-radius:8px;background:#00599e;color:#fff;font-size:13px;font-weight:500;text-align:center;text-decoration:none;display:none;align-items:center;justify-content:center;gap:6px;">
+            <i class="fas fa-download" aria-hidden="true"></i> Download
+          </a>
+          <button onclick="closeModel({modal_id:'exportCasesConfirm'})" aria-label="Close" style="padding:8px 14px;border-radius:8px;border:1px solid #ddd;background:transparent;color:#666;font-size:13px;cursor:pointer;" type="button">
+            Cancel
+          </button>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+ 
+ 
+<!-- Import Cases Modal -->
+<div class="modal" id="importCasesModal" style="padding-right:0!important;" aria-modal="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="border-radius:12px;overflow:hidden;border:none;box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+ 
+      <div class="modal-header" style="border-bottom:1px solid #f0f0f0;padding:18px 20px 14px;">
+        <div>
+          <h5 class="modal-title" style="margin:0;font-size:15px;font-weight:600;">Import cases</h5>
+          <p style="margin:2px 0 0;font-size:12px;color:#888;">Upload a file and select court type</p>
+        </div>
+      </div>
+ 
+      <div class="modal-body" style="padding:16px 20px;">
+
+           <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <div class="radio-pill-wrap">
+            <input type="radio" name="radOpt-import" id="radOpt_Dc" value="importDC" checked="" style="display:none;">
+            <label for="radOpt_Dc" class="court-pill">DISTRICT COURT</label>
+          </div>
+          <div class="radio-pill-wrap">
+            <input type="radio" name="radOpt-import" id="radOpt_Hc" value="importHC" style="display:none;">
+            <label for="radOpt_Hc" class="court-pill">HIGH COURT</label>
+          </div>
+        </div>
+        <!-- File drop zone -->
+        <label for="myCasesFile1" style="display:block;border:1.5px dashed #ccc;border-radius:8px;padding:16px;text-align:center;cursor:pointer;background:#fafafa;margin-bottom:14px;transition:border-color .15s;" onmouseover="this.style.borderColor='#999'" onmouseout="this.style.borderColor='#ccc'">
+          <i class="fas fa-file-upload" style="font-size:22px;color:#aaa;display:block;margin-bottom:6px;" aria-hidden="true"></i>
+          <span style="font-size:12px;color:#888;">Drag &amp; drop or <strong style="color:#333;">browse</strong></span>
+          <p id="importFileName" style="margin:4px 0 0;font-size:12px;font-weight:600;color:#333;"></p>
+          <input type="file" id="myCasesFile1" name="filename" onchange="checkImportFile(event); showFileName(event)" style="display:none;">
+        </label>
+ 
+        <!-- Court type pills -->
+   
+ 
+        <!-- Actions -->
+        <div style="display:flex;gap:8px;">
+          <button id="importCases" disabled="" onclick="onImportClick()" aria-label="Import Cases" style="flex:1;padding:8px 0;border-radius:8px;border:none;background:#00599e;color:#fff;font-size:13px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity .15s;" type="button">
+            <i class="fas fa-file-import" aria-hidden="true"></i> Import
+          </button>
+          <button onclick="closeModel({modal_id:'importCasesModal'})" aria-label="Close" style="padding:8px 14px;border-radius:8px;border:1px solid #ddd;background:transparent;color:#666;font-size:13px;cursor:pointer;" type="button">
+            Cancel
+          </button>
+        </div>
+      </div>
+ 
+      <!-- Note bar -->
+      <div style="background:#fffbeb;border-top:1px solid #fde68a;padding:8px 16px;font-size:15px;color:#92400e;display:flex;align-items:center;gap:6px;">
+        <i class="fas fa-info-circle" aria-hidden="true"></i>
+        Your cases may take some time to refresh after being imported.
+      </div>
+ 
+    </div>
+  </div>
+</div>
+     <!---->
+
+
+     <div class="modal" id="deleteCasesModal" style="padding-right: 0px!important;" aria-modal="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header" style="text-align:center;">
+             <strong>Do you want to delete my cases ?</strong>
+           </div>
+           <div class="modal-body p-3 text-center" style="overflow-y: auto;">
+             <button class="btn btn-primary eFbtn pribtnbg" id="deletemyCases" onclick="onDeleteMycasesClick()" aria-label="Delete Cases" type="button"><i class="fas fa-file-import" aria-hidden="true"></i>&nbsp;Delete</button>
+             <button class="btn btn-primary eFbtn pribtnbg" onclick="closeModel({modal_id:'deleteCasesModal'})" aria-label="close button" type="button">Cancel</button>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+
+     <div class="modal fade" id="macpFutureProspects" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="futureProspectsTitle" aria-describedby="futureProspectsDesc">
+       <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+           <div class="modal-header border-0 pr-3">
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&nbsp;</span>
+             </button>
+           </div>
+           <!-- Message Body -->
+
+           <div class="modal-body">
+             <div class="col-lg-10 mx-auto p-0">
+
+
+               <div class="text-center">
+                 <h2 style="font-size: 24px; font-weight:bold;">Future Prospects</h2>
+               </div>
+               <div style="line-height: 25px;">
+                 While determining the income, an addition of 50% of actual salary to the income of the deceased towards future prospects, where the deceased had a permanent job and was below the age of 40 years, should be made. The addition should be 30%, if the age of the deceased was 48 between 40 to 50 years. In case the deceased was between the age of 50 to 60 years, the addition should be 15%.
+                 <br>
+                 Actual salary should be read as actual salary less tax. (iv) In case the deceased was self-employed or on a fixed salary, an addition of 40% of the established income should be the warrant where the deceased was below the age of 40 years. An addition of 25% where the deceased was between the age of 40 to 50 years and 10% where the deceased was between the age of 50 to 60 years should be regarded as the necessary method of computation. The established income means the income minus the tax component.
+                 <br>
+                 <table class="table table-bordered table-condensed">
+                   <thead>
+                     <tr>
+                       <th>Sr. No.</th>
+                       <th>Requirements</th>
+                       <th>Future Prospects</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td>1</td>
+                       <td>Employment type : Permanent (Age &lt;40) </td>
+                       <td>Add 50% of Actual Salary</td>
+                     </tr>
+                     <tr>
+                       <td>2</td>
+                       <td>Employment type : Permanent (Age &gt;=40 and &lt;50)</td>
+                       <td>Add 30% of Actual Salary</td>
+                     </tr>
+                     <tr>
+                       <td>3</td>
+                       <td>Employment type : Permanent (Age &gt;=50 and &lt;60)</td>
+                       <td>Add 15% of Actual Salary</td>
+                     </tr>
+                     <tr>
+                       <td>4</td>
+                       <td>Employment type : Permanent (Age &gt;=60)</td>
+                       <td>0</td>
+                     </tr>
+                     <tr>
+                       <td>5</td>
+                       <td>Employment type : Temporary/Fixed Income/Business (Age &lt;40)</td>
+                       <td>Add 40% of Actual Income</td>
+                     </tr>
+                     <tr>
+                       <td>6</td>
+                       <td>Employment type : Temporary/Fixed Income/Business (Age &gt;=40 and &lt;50)</td>
+                       <td>Add 25% of Actual Salary</td>
+                     </tr>
+                     <tr>
+                       <td>7</td>
+                       <td>Employment type : Temporary/Fixed Income/Business (Age &gt;=50 and &lt;60)</td>
+                       <td>Add 10% of Actual Salary</td>
+                     </tr>
+                     <tr>
+                       <td>8</td>
+                       <td>Employment type : Temporary/Fixed Income/Business (Age &gt;=60)</td>
+                       <td>0</td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+     <div class="modal fade" id="macpPersonalExpenses" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="personalExpensesTitle" aria-describedby="personalExpensesDesc">
+
+       <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+
+           <div class="modal-header border-0 pr-3">
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+             </button>
+           </div>
+
+           <div class="modal-body">
+             <div class="col-lg-10 mx-auto p-0">
+
+               <!--  Dialog Title -->
+               <h2 id="personalExpensesTitle" class="text-center h5 fw-bold" tabindex="-1">
+                 Deduction towards personal and living expenses
+               </h2>
+
+               <!--  Dialog Description -->
+               <div id="personalExpensesDesc" style="line-height: 25px;">
+
+                 <p>
+                   Where the deceased was married, the deduction towards personal and
+                   living expenses of the deceased should be one-third (1/3rd) where
+                   the number of dependent family members is 2 to 3, one-fourth (1/4th)
+                   where the number of dependent family members is 4 to 6, and
+                   one-fifth (1/5th) where the number of dependent family members
+                   exceeds six.
+                 </p>
+
+                 <p>
+                   Where the deceased was a bachelor and the claimants are the parents,
+                   normally 50% is deducted as personal and living expenses ...
+                 </p>
+
+                 <table class="table table-bordered table-condensed">
+                   <thead>
+                     <tr>
+                       <th>Sr. No.</th>
+                       <th>Requirements</th>
+                       <th>Deduction</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td>1</td>
+                       <td>Married Dependents 2-3</td>
+                       <td>1/3rd of Income</td>
+                     </tr>
+                     <tr>
+                       <td>2</td>
+                       <td>Married Dependents 4-6</td>
+                       <td>1/4th of Income</td>
+                     </tr>
+                     <tr>
+                       <td>3</td>
+                       <td>Married Dependents &gt;6</td>
+                       <td>1/5th of Income</td>
+                     </tr>
+                     <tr>
+                       <td>4</td>
+                       <td>Unmarried</td>
+                       <td>50% of Income</td>
+                     </tr>
+                   </tbody>
+                 </table>
+
+               </div>
+             </div>
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+
+
+
+     <div class="modal fade" id="macpMultiplier" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="multiplierTitle" aria-describedby="multiplierDesc">
+
+       <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+
+           <div class="modal-header border-0 pr-3">
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+             </button>
+           </div>
+
+           <div class="modal-body">
+             <div class="col-lg-10 mx-auto p-0">
+
+               <!--  Dialog Title -->
+               <h2 id="multiplierTitle" class="text-center h5 fw-bold" tabindex="-1">
+                 Multiplier
+               </h2>
+
+               <!-- Dialog Description -->
+               <div id="multiplierDesc" style="line-height: 25px;">
+
+                 <table class="table table-bordered table-condensed">
+                   <thead>
+                     <tr>
+                       <th>Age From</th>
+                       <th>Age To</th>
+                       <th>Multiplier</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td>0</td>
+                       <td>15</td>
+                       <td></td>
+                     </tr>
+                     <tr>
+                       <td>15</td>
+                       <td>20</td>
+                       <td>18</td>
+                     </tr>
+                     <tr>
+                       <td>21</td>
+                       <td>25</td>
+                       <td>18</td>
+                     </tr>
+                     <tr>
+                       <td>31</td>
+                       <td>35</td>
+                       <td>16</td>
+                     </tr>
+                     <tr>
+                       <td>36</td>
+                       <td>40</td>
+                       <td>15</td>
+                     </tr>
+                     <tr>
+                       <td>41</td>
+                       <td>45</td>
+                       <td>14</td>
+                     </tr>
+                     <tr>
+                       <td>46</td>
+                       <td>50</td>
+                       <td>13</td>
+                     </tr>
+                     <tr>
+                       <td>51</td>
+                       <td>55</td>
+                       <td>11</td>
+                     </tr>
+                     <tr>
+                       <td>56</td>
+                       <td>60</td>
+                       <td>9</td>
+                     </tr>
+                     <tr>
+                       <td>61</td>
+                       <td>65</td>
+                       <td>7</td>
+                     </tr>
+                     <tr>
+                       <td>65</td>
+                       <td>150</td>
+                       <td>5</td>
+                     </tr>
+                   </tbody>
+                 </table>
+
+               </div>
+             </div>
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+
+     <div class="modal fade" id="db_macp_view1" tabindex="-1" role="dialog" aria-labelledby="db_title_view" aria-modal="true">
+
+       <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+         <div class="modal-content">
+
+           <div class="modal-header">
+             <h2 class="modal-title h5 fw-bold m-0" id="db_title_view">
+               Dependent List
+             </h2>
+
+             <button class="btn-close" onclick="closeModel({modal_id:'db_macp_view1'})" aria-label="Close dialog" type="button">
+             </button>
+           </div>
+
+           <div class="modal-body text-center" id="macp_body_view1"></div>
+
+         </div>
+       </div>
+     </div>
+
+     <script>
+       $(".custom-file-input").on("change", function() {
+         var fileName = $(this).val().split("\\").pop();
+         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+       });
+     </script>
+     <script src="/pdedev/js/portfolio/mycases_common_functions.js" type="text/javascript"></script>
+     <script>
+       $('button').attr('type', 'button');
+     </script>
+
+     <style>
+       .text-justify {
+         text-align: justify;
+       }
+
+       .fd_screen {
+         text-align: justify;
+         /* Forces full justification */
+       }
+
+       .modal-footer .btn-secondary:focus {
+         outline: 3px solid #005A9C;
+         outline-offset: 2px;
+         background-color: #E5E5E5;
+         color: #000000;
+       }
+
+       /* =============================================================
+DataTables Global Styling (Final) 080426 after data table version change
+================================================================ */
+
+/* Fix sorting icon alignment */
+table.dataTable thead th.sorting:before,
+table.dataTable thead th.sorting:after,
+table.dataTable thead th.sorting_asc:before,
+table.dataTable thead th.sorting_desc:after {
+    position: static !important;
+    display: inline-block;
+    margin-left: 6px;
+    opacity: 0.6;
+    font-size: 11px;
+}
+
+/* Header styling (match td borders + allow wrapping) */
+table.dataTable thead th {
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+    padding: 8px;
+    white-space: normal !important;   /* important for no scroll */
+    /*word-break: break-word;*/
+}
+
+/* Body cells */
+table.dataTable tbody td {
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    white-space: normal !important;   /* important for no scroll */
+    /*word-break: break-word;*/
+}
+
+/* Table width */
+table.dataTable {
+    width: 100% !important;
+}
+
+/* Remove horizontal scroll */
+div.dataTables_wrapper {
+    width: 100%;
+    /*overflow-x: hidden !important;*/
+}
+
+/* Fix bottom border */
+table.dataTable.no-footer {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+
+
+.court-pill {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    background: #f5f5f5;
+    transition: all .15s;
+    user-select: none;
+  }
+  .court-pill.active {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-color: #93c5fd;
+  }
+  #importCases:not([disabled]) {
+    opacity: 1;
+    cursor: pointer;
+  }
+  #importCases:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+#importCases:not(:disabled) {
+  opacity: 1;
+  cursor: pointer;
+}
+/*------  DataTables Global Styling (Final) 080426 after data table version change -----*/
+     </style>
+
+     <script>
+       document.addEventListener('DOMContentLoaded', function() {
+         const modal = document.getElementById('fd_screen');
+         if (!modal) return;
+
+         function getFocusableElements() {
+           return modal.querySelectorAll(
+             'button:not([disabled]), a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+           );
+         }
+
+         function trapTabKey(e) {
+           if (e.key !== 'Tab') return;
+
+           const focusable = getFocusableElements();
+           if (!focusable.length) return;
+
+           const first = focusable[0];
+           const last = focusable[focusable.length - 1];
+
+           if (e.shiftKey) {
+             if (document.activeElement === first) {
+               e.preventDefault();
+               last.focus();
+             }
+           } else {
+             if (document.activeElement === last) {
+               e.preventDefault();
+               first.focus();
+             }
+           }
+         }
+
+         // 🔒 Trap TAB navigation
+         modal.addEventListener('keydown', trapTabKey);
+
+         // 🔒 Force focus back if it escapes (mouse / JS / screen readers)
+         document.addEventListener('focusin', function(e) {
+           if (modal.style.display === 'block' && !modal.contains(e.target)) {
+             const focusable = getFocusableElements();
+             focusable[0]?.focus();
+           }
+         });
+
+         // 🎯 Initial focus when modal is shown
+         const closeBtn = modal.querySelector('.btn-close');
+         if (closeBtn) {
+           closeBtn.focus();
+         }
+       });
+     </script>
+
+					<!-- Message Body -->
+					<div class="alert alert-danger alert-dismissible alert-danger4" style="text-align: center;padding: 5px;margin: 10px;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+						<div id="msg-danger4"></div>
+					</div>
+					<div id="login-form-status-message" role="status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+					<form name="frm_login" id="frm_login" action="" method="post" autocomplete="off" novalidate="novalidate">
+						<input type="hidden" name="hidden_otp" id="hidden_otp" value="Y">
+						<div class="form-group" role="form" aria-label="Login">
+							<label for="selState" class="fw-bold mb-2" aria-label="Select State"><span aria-hidden="true" class="text-danger">*</span>Select State</label>
+							<select aria-required="true" name="selState" class="form-select form-select-sm" style="width:256px; display:block;" id="selState" onchange="show_hide_lang()"><option value="">Select State</option><option value="2">Andhra Pradesh</option><option value="6">Assam</option><option value="8">Bihar</option><option value="27">Chandigarh</option><option value="18">Chhattisgarh</option><option value="26">Delhi</option><option value="30">Goa</option><option value="17">Gujarat</option><option value="14">Haryana</option><option value="5">Himachal Pradesh</option><option value="12">Jammu and Kashmir</option><option value="7">Jharkhand</option><option value="3">Karnataka</option><option value="33">Ladakh</option><option value="23">Madhya Pradesh</option><option value="1">Maharashtra</option><option value="25">Manipur</option><option value="21">Meghalaya</option><option value="19">Mizoram</option><option value="11">Odisha</option><option value="35">Puducherry</option><option value="22">Punjab</option><option value="9">Rajasthan</option><option value="24">Sikkim</option><option value="10">Tamil Nadu</option><option value="29">Telangana</option><option value="20">Tripura</option><option value="13">Uttar Pradesh</option><option value="15">Uttarakhand</option><option value="16">West Bengal</option><option value="4">Kerala</option></select>
+						</div>
+
+						<fieldset>
+							<legend class="fw-bold visually-hidden">Select User Type</legend>
+
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="rdoUser" id="user_advocate" value="1" checked="" onclick="show_hide_login_user()">
+								<label class="form-check-label fw-bold" for="user_advocate">Advocate</label>
+							</div>
+
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="rdoUser" id="user_person" value="2" onclick="show_hide_login_user()">
+								<label class="form-check-label fw-bold" for="user_person">Litigant</label>
+							</div>
+
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="rdoUser" id="user_pleader" value="3" onclick="show_hide_login_user()">
+								<label class="form-check-label fw-bold" for="user_pleader">Govt. Pleader</label>
+							</div>
+
+															<div class="form-check form-check-inline">
+									<input type="radio" class="form-check-input" name="rdoUser" id="user_clerk" value="4" onclick="show_hide_login_user()">
+									<label class="form-check-label fw-bold" for="user_clerk">Clerk</label>
+								</div>
+														
+							<div class="form-check form-check-inline" id="dvGovAuthority" style="display:none" aria-hidden="true">
+								<input type="radio" class="form-check-input" name="rdoUser" id="user_gov_auth" value="7" onclick="show_hide_login_user()" aria-hidden="true">
+								<label class="form-check-label fw-bold" for="user_pleader">Court Nominated Officials</label>
+							</div>
+							
+							<div class="form-check form-check-inline" id="dvInstLitigant" style="display:none" aria-hidden="true">
+								<input type="radio" class="form-check-input" name="rdoUser" id="user_insurance" value="6" onclick="show_hide_login_user()">
+								<label class="form-check-label fw-bold" for="user_insurance">Institutional Litigant</label>
+							</div>
+						</fieldset>
+
+
+
+						<div class="form-group gr_user_mobile mt-2">
+							<label for="user_name" class="fw-bold mb-2"><span class="text-danger">*</span>Username</label> <span style="font-style: italic;">(Username is not case sensitive) </span>
+							<input aria-required="true" type="text" class="form-control" placeholder="Bar Code/Email/Mobile/Unique Code" name="user_name" maxlength="40" id="user_name" autocomplete="off" style="font-size:0.8rem;width:256px;">
+						</div>
+
+						<div class="form-group gr_pin">
+							<label for="user_password" class="fw-bold mb-2"><span class="text-danger">*</span>Password</label> <span style="font-style: italic;">(Password is case sensitive) </span>
+							<input aria-required="true" type="password" class="form-control" placeholder="Enter Password" name="user_password" maxlength="20" id="user_password" style="font-size:0.8rem;width:256px;" autocomplete="off">
+
+							<input class="w3-check" type="checkbox" onchange="myFunction('user_password')" id="chkShowPassword" name="chkShowPassword" style="width:20px; height:20px; margin: 5px;"> <label class="form-check-label" for="chkShowPassword">Show Password</label>
+							<!--
+<div style='font-weight:bold; color:red;' id='dvMessage'>
+			<span>Dear user, if you are not able to login then please clear your browser cache or open site in incognito mode of browser.</span>
+</div> 
+-->
+						</div>
+
+						
+							<div class="row mb-2">
+								<div class="col-auto p-0">
+									<label for="" class="capLabel col-sm-3 mr-sm-2 col-form-label text-end visually-hidden">Captcha</label>
+									<div id="div_captcha_mobile" class="col-sm-12 pr-0">
+										<div class="form-inline text-left">
+		<div style="">
+		
+					<img style="padding-right: 0px;border:1px solid #ccc;" id="captcha_image" src="/pdedev/securimage/securimage_show.php?ecb89c66e3f4eb89a405cec0d9edefa0" alt="CAPTCHA Image" tabindex="0" width="120"><div id="captcha_image_audio_div" style="display:inline">
+<audio id="captcha_image_audio" preload="none" style="display: none">
+<source id="captcha_image_source_wav" src="/pdedev/securimage/securimage_play.php?id=6ae066ce8b40e" type="audio/wav">
+</audio>
+</div>
+<div id="captcha_image_audio_controls" style="display:inline-block;">
+<a tabindex="0" class="captcha_play_button" href="/pdedev/securimage/securimage_play.php?id=6ae066ce8b414" onclick="return false">
+<img class="captcha_play_image speaker-btn" height="34" width="39" src="/pdedev/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+<img class="captcha_loading_image rotating loading" height="34" width="39" src="images/refresh-btn.jpg" alt="Loading audio" style="display: none">
+</a>
+<noscript>Enable Javascript for audio controls</noscript>
+</div>
+<script type="text/javascript" src="/pdedev/securimage/securimage.js"></script>
+<script type="text/javascript">captcha_image_audioObj = new SecurimageAudio({ audioElement: 'captcha_image_audio', controlsElement: 'captcha_image_audio_controls' });</script>
+&nbsp;<a tabindex="0" style="border: 0" href="#" title="Refresh Image" onclick="if (typeof window.captcha_image_audioObj !== 'undefined') captcha_image_audioObj.refresh(); document.getElementById('captcha_image').src = '/pdedev/securimage/securimage_show.php?' + Math.random(); this.blur(); return false"><img class="refresh-btn" height="34" width="38" src="images/refresh-btn.jpg" alt="Refresh Image" onclick="clearCaptchaText();" style="border: 0px; vertical-align: bottom"></a></div></div>									</div>
+								</div>
+
+								<div class="col-md-5 p-0">
+									<label for="fcaptcha_code_mobile" class="mr-sm-2 col-form-label text-lg-right visually-hidden">Enter Captcha</label>
+									<input type="text" class=" form-control captchaClass col-sm-12" id="fcaptcha_code_mobile" name="fcaptcha_code_mobile" placeholder="Enter Captcha" style="width: 85%;margin-left:2px;" maxlength="6" aria-required="true">
+								</div>
+							</div>
+												<div class="form-check-inline" id="dvBilingual" style="display:none">
+							<label for="lang_id1" class="fw-bold">Language</label>&nbsp;&nbsp;&nbsp;
+							<input type="radio" class="form-check-input" name="rdoLang" id="lang_id1" value="0" checked=""><label id="sp_lang_id1" aria-label="Language">English</label>&nbsp;&nbsp;&nbsp;
+
+							<input type="radio" class="form-check-input" name="rdoLang" id="lang_id2" value="1"><label id="sp_lang_id2" for="lang_id2">Marathi</label>
+						</div>
+
+
+						<div class="form-group" style="text-align: center;">
+							<button type="submit" id="verify_button1" class="btn btn-primary eFbtn pribtnbg btn-sm" value="Login">Login</button>
+							<button type="button" id="reset_button" class="btn btn-secondary eFbtn secbtnbg btn-sm" onclick="reset_form('frm_login')" value="Reset login form" aria-live="polite">Reset</button>
+						</div>
+						
+						<!-- JanParichay -->
+													
+													
+							
+						<!-- PARICHAY 
+						<div class="py-2 m-2 mx-5 csParichay" style='width:240px; display:none'>
+						<a href="#" onclick="checkuserData('P')"  width: 100px;><img src="images/parichay.png" width="90" border="0" alt="Login with Parichay"></a>
+						</div>
+						-->
+						
+						<div class="input-group mb-1 justify-content-center clsGeneratePin">
+							<a class="register" href="/pdedev/?p=registration" onclick="reset_form('frm_register')">New User ? Register here</a>
+						</div>
+						<div class="input-group mb-1 justify-content-center clsGeneratePin">
+							<a class="register" aria-haspopup="dialog" href="#" data-bs-toggle="modal" data-bs-target="#regPINModal" onclick="open_fp_form()">Forgot Password</a>
+						</div>
+						<input type="hidden" id="gennum" name="gennum" value="9f59c598e59a8b5f560e85f6c7439ffb">
+					</form>
+				</div>
+				<div class="col-lg-5 p-3">
+					<h2 class="section-heading">About e-Filing</h2>
+					<p class="text-justify" style="line-height:1.5rem;">e-Filing system is a complete end to end solution developed for online filing of plaints, written statements, replies and various applications related to cases. Both Civil and Criminal cases can be filed before any High Court or District Court of the country. It is designed in Bilingual (English and local language) to reach wider group covering advocates/litigants.<br><br>
+					</p><h3>e-Filing system provides several benefits</h3>
+					<ul style="line-height:1.5rem;">
+						<li>Save time, money, travel of advocates and clients </li>
+						<li>Obviate the need to physically visit the court</li>
+						<li>Reduce the need of meetings between clients and advocates</li>
+						<li>Automatic digitization of case records</li>
+						<li>Positive impact on environment by reducing paper footprint</li>
+					</ul>
+					<p></p>
+				</div>
+				<div class="col-lg-3 text-center pb-2" style=" display: flex; align-items: center;justify-content: center;">
+					<img src="dist1/img/about-ilstr.png" alt="" class="aboutImg">
+				</div>
+				<div class="col-lg-2 text-center pb-2 d-none" style=" display: flex; align-items: center;justify-content: center;">
+					<div class="sticky-container1 col d-none">
+						<ul class="sticky1 p-0 m-0">
+							<li>
+								<a href="#" onclick="showVideos('W')" aria-label="Video Tutorials" aria-haspopup="dialog" aria-controls="fd_screen"><i class="fa fa-play-circle"></i>
+									<p>Video Tutorials</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" onclick="showFaqs()" aria-label="FAQ" aria-haspopup="dialog" aria-controls="fd_screen"><i class="fa fa-question-circle"></i>
+									<p>FAQ</p>
+								</a>
+							</li>
+							<li>
+								<a href="#" onclick="showManual()" aria-label="Manuals" aria-haspopup="dialog" aria-controls="vd_screen"><i class="fa fa-file-pdf"></i>
+									<p>Manuals</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services -->
+	<section class="page-section" tabindex="-1" id="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center mb-3">
+					<h2 class="section-heading">Features of e-Filing</h2>
+				</div>
+			</div>
+			<div class="row text-center d-none">
+				<div class="col-md-3">
+					<span class="fa-stack fa-2x">
+						<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i role="presentation" class="fas fa-home fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading" tabindex="0">Services from Home</h4>
+					<p class="text-muted" tabindex="0">Online e-File Service without requirement of visiting court.</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-2x">
+						<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i role="presentation" class="fas fa-clock fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading" tabindex="0">Convenient &amp; Time saving</h4>
+					<p class="text-muted" tabindex="0">Online case filing is very convenient and time saving.</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-2x">
+						<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i role="presentation" class="fas fa-rupee-sign fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading" tabindex="0">Online Payment</h4>
+					<p class="text-muted" tabindex="0">Fees applicable to file case can be paid online.</p>
+				</div>
+				<div class="col-md-3">
+					<span class="fa-stack fa-2x">
+						<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i role="presentation" class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading" tabindex="0">Exclusive Portfolio</h4>
+					<p class="text-muted" tabindex="0">Litigants and Advocates can track their cases from My cases.</p>
+				</div>
+			</div>
+
+			<div class="row text-center">
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/Copy.svg" alt="Editable ready-made templates">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">Readymade Templates</span>
+							<p class="text-muted m-0">Editable ready-made templates for various pleadings</p>
+						</div>
+						<div class="col-auto py-2 p-1 text-start"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox1" aria-label="Read more about Readymade Templates" aria-haspopup="dialog" aria-controls="featureModalBox1"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x ">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/Submission.svg" alt="Online Submission of Vakalat">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">Online Submission of Vakalat</span>
+							<p class="text-muted m-0">Online creation and submission of Vakalat</p>
+						</div>
+						<div class="col-auto py-2 p-1 text-start"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox2" aria-label="Read more about Online Submission of Vakalat" aria-haspopup="dialog" aria-controls="featureModalBox2"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/Esign.svg" alt="e-Signing">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">e-Signing</span>
+							<p class="text-muted m-0">e-Signing of uploaded document by multiple parties</p>
+						</div>
+						<div class="col-auto py-2 p-1 text-start"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox3" aria-label="Read more about e-Signing" aria-haspopup="dialog" aria-controls="featureModalBox3"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/Rupee.svg" alt="Online Payment">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">Online Payment</span>
+							<p class="text-muted m-0">Online payment of court fee</p>
+						</div>
+						<div class="col-auto py-2 p-1 text-start"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox4" aria-label="Read more about Online Payment" aria-haspopup="dialog" aria-controls="featureModalBox4"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/Video.svg" alt="Online Video Recording of Oath">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">Online Video Recording of Oath</span>
+							<p class="text-muted m-0">Administer the oath by online video recording</p>
+						</div>
+						<div class="col-auto py-2 p-1 text-start"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox5" aria-label="Read more about Online Video Recording of Oath" aria-haspopup="dialog" aria-controls="featureModalBox5"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/Application.svg" alt="Application Filing">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">Application Filing</span>
+							<p class="text-muted m-0">Filing of several applications for different cases simultaneously</p>
+						</div>
+						<div class="col-auto py-2 p-1 text-start"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox6" aria-label="Read more about Application Filing" aria-haspopup="dialog" aria-controls="featureModalBox6"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/Portfolio.svg" alt="Portfolio Management">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">Portfolio Management</span>
+							<p class="text-muted m-0">Portfolio and planner for managing cases</p>
+						</div>
+						<div class="col-auto py-2 p-1 text-start"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox7" aria-label="Read more about Portfolio Management" aria-haspopup="dialog" aria-controls="featureModalBox7"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/partner.svg" alt="My Partners">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">My Partners</span>
+							<p class="text-muted m-0">Add colleagues, juniors etc as partners</p>
+						</div>
+						<div class="col-auto py-2 p-1 text-start"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox8" aria-label="Read more about My Partners" aria-haspopup="dialog" aria-controls="featureModalBox8"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+				<div class="col-md-4 p-0">
+					<div class="row border rounded featurebox m-1 p-1">
+						<div class="col-auto p-0">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<img src="dist1/img/featureimg/Dash-board.svg" alt="Dashboard">
+							</span>
+						</div>
+						<div class="col text-start" role="note">
+							<span class="feature-heading2 py-2">Dashboard</span>
+							<p class="text-muted m-0">Status of all the completed/pending case related activities</p>
+						</div>
+						<div class="col-auto py-2 text-start p-1"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#featureModalBox9" aria-label="Read more about Dashboard" aria-haspopup="dialog" aria-controls="featureModalBox9"><i class="fa fa-angle-right px-1" aria-hidden="true"></i></button></div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+			<!--  with icon start-->
+			<!--
+	  <div class="row text-center">
+        <div class="col-md-4 p-2">
+			<div class="border rounded featurebox">
+			<img src="images/fi-01.png"  alt="">
+				<h4 class="feature-heading1" tabindex="0">Readymade Templates</h4>
+				<p class="text-muted" tabindex="0">Editable ready-made templates for various pleadings</p>
+				<a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc01" role="button"  aria-controls="feature-desc01">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc01">
+				  <div class="card card-body">
+					Enables creation of pleadings from the available several templates. It helps advocates to quickly draft the pleadings.
+				  </div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4 p-2">
+			<div class="border rounded featurebox">
+			<img src="images/fi-02.png"  alt="">
+          <h4 class="feature-heading1" tabindex="0">Online Submission of Vakalat</h4>
+          <p class="text-muted" tabindex="0">Online creation and submission of Vakalat</p>
+		  <a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc02" role="button"  aria-controls="feature-desc02">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc02">
+				  <div class="card card-body">
+					Enables online submission of Vakalat by the clients to the advocates and advocates further accepting it in the e-Filing software. This feature helps to authenticate and handshake advocates with the clients for exchanging information electronically. 
+				  </div>
+				</div>
+		  </div>
+        </div>
+        <div class="col-md-4 p-2">
+				<div class="border rounded featurebox">
+				<img src="images/fi-03.png"  alt="">
+          <h4 class="feature-heading1" tabindex="0">e-Signing </h4>
+          <p class="text-muted" tabindex="0">e-Signing of  uploaded document by multiple parties</p>
+		  <a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc03" role="button"  aria-controls="feature-desc03">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc03">
+				  <div class="card card-body">
+					Enables client to e-Sign the document uploaded by the advocate from the comfort of home or client's office. Multiple stakeholders can e-Sign a single document through their respective logins.  
+				  </div>
+				</div>
+		  </div>
+        </div>
+      </div>
+
+	  <div class="row text-center">
+        <div class="col-md-4 p-2">
+			<div class="border rounded featurebox">
+			<img src="images/fi-04.png"  alt="">
+				<h4 class="feature-heading1" tabindex="0">Online Payment </h4>
+				<p class="text-muted" tabindex="0">Online payment of court fee</p>
+				<a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc04" role="button"  aria-controls="feature-desc04">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc04">
+				  <div class="card card-body">
+					Enables online payment of court fee, judicial deposit, fine, etc by integrating respective state treasury payment gateway with the eFiling software. In addition, service of online payment for use of adhesive court fee stamp affixed on application is also provided through court fee wallet.   
+				  </div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4 p-2">
+			<div class="border rounded featurebox">
+			<img src="images/fi-05.png"  alt="">
+          <h4 class="feature-heading1" tabindex="0">Online Video Recording of Oath</h4>
+          <p class="text-muted" tabindex="0">Administer the oath by online video recording</p>
+		  <a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc05" role="button"  aria-controls="feature-desc05">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc05">
+				  <div class="card card-body">
+					Enables online video recording of Oath once the documents are e-Signed by clients and verified by advocates.   
+				  </div>
+				</div>
+		  </div>
+        </div>
+        <div class="col-md-4 p-2">
+				<div class="border rounded featurebox">
+				<img src="images/fi-06.png"  alt="">
+          <h4 class="feature-heading1" tabindex="0">Application Filing</h4>
+          <p class="text-muted" tabindex="0">Filing of several applications for different cases simultaneously</p>
+		  <a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc06" role="button"  aria-controls="feature-desc06">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc06">
+				  <div class="card card-body">
+					Enables filing of several applications by the advocates for different cases simultaneously at any given point of time. Facility is also available to select cases and choose the application templates. 
+				  </div>
+				</div>
+		  </div>
+        </div>
+      </div>
+
+	  <div class="row text-center">
+        <div class="col-md-4 p-2">
+			<div class="border rounded featurebox">
+			<img src="images/fi-07.png"  alt="">
+				<h4 class="feature-heading1" tabindex="0">Portfolio Management</h4>
+				<p class="text-muted" tabindex="0">Portfolio and planner for managing cases</p>
+				<a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc07" role="button"  aria-controls="feature-desc07">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc07">
+				  <div class="card card-body">
+					Enables management of new as well as existing cases through portfolio and case planner. The facilities to search cases, add events to the case calendar and add or delete cases from portfolio are provided. Cases can also be imported from or exported to eCourts services mobile app.  
+				  </div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4 p-2">
+			<div class="border rounded featurebox">
+			<img src="images/fi-08.png"  alt="">
+          <h4 class="feature-heading1" tabindex="0">My Partners</h4>
+          <p class="text-muted" tabindex="0">Add colleagues, juniors etc as partners</p>
+		  <a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc08" role="button"  aria-controls="feature-desc08">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc08">
+				  <div class="card card-body">
+					Enables addition of colleagues, juniors as partners so that cases can also be assigned to them. This helps partner advocates to sign vakalat, pleadings and submit applications collectively.  
+				  </div>
+				</div>
+		  </div>
+        </div>
+        <div class="col-md-4 p-2">
+				<div class="border rounded featurebox">
+				<img src="images/fi-09.png"  alt="">
+          <h4 class="feature-heading1" tabindex="0">Dashboard</h4>
+          <p class="text-muted" tabindex="0">Status of all the completed/pending case related activities</p>
+		  <a class="btn btn-secondary mb-2 btn-sm" data-bs-toggle="collapse" href="#feature-desc09" role="button"  aria-controls="feature-desc09">Read More&nbsp; <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<div class="collapse multi-collapse m-1" id="feature-desc09">
+				  <div class="card card-body">
+					Enables at-a-glance status of all the completed and pending activities related to cases in the portfolio along with the monthly calendar.
+				  </div>
+				</div>
+		  </div>
+        </div>
+      </div>
+	  -->
+			<!--  with icon end-->
+		</div>
+	</section>
+
+	<!-- Action Button -->
+	<section class="page-section py-3 d-none" id="actionBtn">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">Want to e-File case without visiting court</h2>
+					<a class="btn btn-secondary eFbtn secbtnbg js-scroll-trigger" href="#aboutLogin" area-label="Go to Login and eFile case">eFile Now</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What is eFiling -->
+	<section class="page-section  d-none">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center p-3">
+					<h2 class="section-heading">What is e-Filing ?</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8">
+					<p class="text-justify" tabindex="0">e-Filing system enables electronic filing of legal papers. Using e-filing, cases (both civil and criminal) can be filed before the High Courts and District Courts that have adopted e-Filing systems. <br><br>Introduction of e-Filing is aimed at promoting paperless filing and saving time and cost by adopting technological solutions to file cases before courts in India.
+					</p>
+					<a class="btn btn-primary eFbtn pribtnbg js-scroll-trigger" href="#aboutLogin" area-label="about eFile case">Learn More</a>
+				</div>
+				<div class="col-lg-4">
+					<div class="fourSteps bg-login p-4">
+						<label tabindex="0" class="visuallyhidden" role="note">Steps for e-filing case </label>
+						<ul>
+							<li tabindex="0"><span class="fa-stack">
+									<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+									<i role="presentation" class="fas fa-pen fa-stack-1x fa-inverse"></i>
+								</span>Fill Required Data</li>
+							<li tabindex="0"><span class="fa-stack">
+									<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+									<i role="presentation" class="fas fa-upload fa-stack-1x fa-inverse"></i>
+								</span>Upload Documents</li>
+							<li tabindex="0"><span class="fa-stack">
+									<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+									<i role="presentation" class="fas fa-rupee-sign fa-stack-1x fa-inverse"></i>
+								</span>Pay Fees Online</li>
+							<li tabindex="0"><span class="fa-stack">
+									<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+									<i role="presentation" class="fas fa-check fa-stack-1x fa-inverse"></i>
+								</span>File Case</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Features -->
+	<section class="py-2" id="clients" aria-label="ecourt services links">
+		<div class="container">
+			<div class="row customer-logos align-contents-center text-center d-flex">
+				<div class="slide d-inline me-2 w-auto" style="margin-left:200px;"><a href="http://vcourts.gov.in/virtualcourt/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" aria-label="virtual courts - External site that opens in a new window"><img src="images/virtual-courts.jpg" alt="virtual courts"></a></div>
+
+				<div class="slide d-inline me-2 w-auto"><a href="https://njdg.ecourts.gov.in/njdgnew/index.php" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" aria-label="National Judicial Data Grid - District Court -External site that opens in a new window"><img src="images/NJDG-DC.jpg" alt="National Judicial Data Grid - district court"></a></div>
+
+				<div class="slide d-inline me-2 w-auto"><a href="http://pay.ecourts.gov.in/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" aria-label="ePay - eCourt Digital Payments - External site that opens in a new window"><img src="images/ePay.jpg" alt="pay ecourts "></a></div>
+
+				<div class="slide d-inline me-2 w-auto"><a href="https://njdg.ecourts.gov.in/hcnjdgnew/?p=main/index" rel="noopener noreferrer" target="_blank" onclick="return confirm('You are being redirected to an external website.');" aria-label="National Judicial Data Grid - High Court- External site that opens in a new window"><img src="images/NJDG-HC.jpg" alt="National Judicial Data Grid - High court"></a></div>
+				<!--
+			  <div class="slide"><a href="https://play.google.com/store/apps/details?id=in.gov.ecourts.eCourtsServices" target="_blank"  onclick="return confirm('You are being redirected to an external website.');" title="Google play External website that opens a new window" tabindex="0"><img src="images/ecourts-app-Android.jpg" alt="ecourts app Android" role="complementary"></a></div>
+
+              <div class="slide"><a href="https://ecourts.gov.in/" target="_blank" onclick="return confirm('You are being redirected to an external website.');" aria-label="https://ecourts.gov.in/ - External site that opens in a new window" title="https://ecourts.gov.in/ - External site that opens in a new window" tabindex="0"><img src="images/ecourts-services.jpg" alt="eCourts Services App" role="complementary"></a></div>
+
+              <div class="slide"><a href="https://appsto.re/in/yv-jlb.i" target="_blank" onclick="return confirm('You are being redirected to an external website.');" title="App Store External website that opens a new window" tabindex="0"><img src="images/ecourts-app-iOS.jpg" alt="ecourts app iOS" role="complementary"></a></div>
+			  -->
+			</div>
+		</div>
+		
+
+	</section>
+
+
+
+	
+	<!-- Footer -->
+	<style>
+  /* ---------- eFiling footer (aligned to NJDG reference layout) ---------- */
+  footer.footer {
+    background: var(--ec-green-dark);
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  footer.footer .topfooter,
+  footer.footer .topfooter * {
+    text-align: left !important;
+  }
+
+  footer.footer .topfooter p {
+    line-height: 1.6;
+    margin: 0 0 12px;
+  }
+
+  footer.footer .topfooter li {
+    text-align: left !important;
+  }
+
+  footer.footer h2.footHeading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 16px 0 14px;
+  }
+
+  footer.footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  footer.footer a:hover {
+    text-decoration: underline;
+  }
+
+  footer.footer a:focus,
+  footer.footer a:active {
+    outline: 3px solid var(--ec-focus, #ffbf47);
+    outline-offset: 2px;
+    background-color: var(--ec-navy, #214AAB);
+    color: #fff;
+  }
+
+  footer.footer a img:focus {
+    outline: 3px solid var(--ec-focus, #ffbf47);
+    outline-offset: 2px;
+  }
+
+  footer.footer .topfooter {
+    padding: 8px 0 16px;
+  }
+
+  footer.footer .topfooter>div+div {
+    border-left: 1px solid rgba(255, 255, 255, .25);
+  }
+
+  /* Useful links: 3-column flowing list, arrow styles taken from the site's login-footer CSS */
+  footer.footer .footerlinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    column-count: 3;
+    column-gap: 24px;
+  }
+
+  footer.footer .footerlinks li {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    /* space between arrow and text */
+    padding: .35rem 0;
+    margin: 0;
+    break-inside: avoid;
+  }
+
+  /* arrow lives on the li, so link padding can't affect it */
+  footer.footer .footerlinks li::before {
+    content: "";
+    flex: none;
+    width: .42em;
+    height: .42em;
+    margin-left: .25rem;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: transform .15s ease;
+  }
+
+  footer.footer .footerlinks li a {
+    padding: 0;
+    color: #fff;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  footer.footer .footerlinks li:hover::before,
+  footer.footer .footerlinks li:focus-within::before {
+    transform: translateX(3px) rotate(45deg);
+  }
+
+  footer.footer .footerlinks li a:hover,
+  footer.footer .footerlinks li a:focus-visible {
+    text-decoration: underline;
+  }
+
+  footer.footer .footerlinks li a:focus-visible {
+    outline: 3px solid var(--ec-focus, #ffbf47);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    footer.footer .footerlinks li::before {
+      transition: none;
+    }
+  }
+
+  footer.footer .nicText a {
+    color: var(--ec-navy-semi-light-bg, #A3BBF3);
+    text-decoration: underline;
+  }
+
+  footer.footer .nicText a:focus {
+    color: #fff;
+  }
+
+  /* Social */
+  footer.footer ul.socialIcons {
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+  }
+
+  footer.footer ul.socialIcons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--ec-hover, #eef0f7);
+    border-radius: 4px;
+  }
+
+  footer.footer ul.socialIcons img {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Logo strip */
+  footer.footer .logoStrip {
+    background: var(--ec-green-dark);
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    padding: 10px 0;
+  }
+
+  footer.footer .logoStrip ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  footer.footer .logoStrip img {
+    height: 46px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  footer.footer .logoStrip img.india-gov-logo {
+    height: 42px;
+  }
+
+  /* Bottom bar */
+  footer.footer .bottomBar {
+    background: var(--ec-green-dark);
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    padding: 14px 0;
+    font-size: 14px;
+  }
+
+  footer.footer .bottomBar .text-right {
+    text-align: right !important;
+  }
+
+  @media (max-width: 991px) {
+    footer.footer .topfooter>div+div {
+      border-left: 0;
+      border-top: 1px solid rgba(255, 255, 255, .25);
+    }
+
+    footer.footer ol.footerlinks {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 575px) {
+    footer.footer ol.footerlinks {
+      column-count: 1;
+    }
+  }
+</style>
+
+
+<!-- Footer -->
+<footer class="footer" id="contact" role="contentinfo" tabindex="-1" style="bottom:0">
+  <div class="container clearfix pt-2 mt-2">
+
+    <div class="row topfooter p-0">
+
+      <!-- Useful Links -->
+      <div class="col-md-5">
+        <nav aria-label="Useful Links">
+          <h2 class="footHeading">Useful Links</h2>
+          <ol class="footerlinks">
+            <li><a href="?p=otherPages/AboutUs">About Us</a></li>
+            <li><a href="?p=otherPages/siteMap">Site map</a></li>
+            <li><a href="?p=otherPages/contactUs">Contact Us</a></li>
+            <li><a href="?p=otherPages/accessStmt">Accessibility Statement</a></li>
+            <li><a href="?p=otherPages/srAccess">Screen Reader Access</a></li>
+            <li><a href="?p=otherPages/webInformation">Web Information Manager</a></li>
+            <li><a href="?p=otherPages/termsCondition">Terms and Conditions</a></li>
+            <li><a href="?p=otherPages/copyrightPolicy">Copyright Policy</a></li>
+            <li><a href="?p=otherPages/hyperlinkingPolicy">Hyper Linking Policy</a></li>
+            <li><a href="?p=otherPages/privacyPolicy">Privacy Policy</a></li>
+            <li><a href="?p=otherPages/disclaimer">Disclaimer</a></li>
+            <li><a href="#" onclick="showVideos('W'); return false;" aria-haspopup="dialog" aria-controls="fd_screen">Video Tutorials</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Designed / hosted by NIC -->
+      <div class="col-md-4 nicText">
+        <div class="px-2">
+          <p class="m-0 pt-md-4">
+            This site is designed, hosted and maintained by
+            <a href="https://www.nic.in/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" title="National Informatics Centre (NIC) External website that opens a new window" aria-label="National Informatics Centre (NIC) opens a new window">National Informatics Centre (NIC)</a>
+            Ministry of Electronics &amp; Information Technology, Government of India.
+          </p>
+          <p class="pt-md-4">Last Updated : <strong>08-10-2026</strong></p>
+        </div>
+      </div>
+
+      <!-- Follow Us / version -->
+      <div class="col-md">
+        <div class="px-2">
+          <h2 class="footHeading">Follow Us</h2>
+          <ul class="socialIcons">
+            <li>
+              <!-- TODO: replace with the eFiling YouTube channel URL -->
+              <a href="https://www.youtube.com/channel/UCPMHFB1lou-P_YtErFFYjgw" target="_blank" rel="noopener noreferrer" aria-label="YouTube | External site that opens in a new window" title="YouTube - External site that opens in a new window" onclick="return confirm('You are being redirected to an external website. Please note that eFiling cannot be held responsible for external websites content &amp; privacy policies.');">
+                <svg class="youtube" xmlns="http://www.w3.org/2000/svg" width="24" height="24 " viewBox="0 0 65 65" fill="none" style="display: flex; justify-content: center;">
+                  <path d="M21.7194 8.23955C16.7027 8.40138 11.0263 8.72504 9.83126 8.91176C7.75239 9.24787 6.13411 9.98232 4.67765 11.2769C3.54485 12.2728 2.90999 13.1566 2.28757 14.5509C1.54067 16.2687 1.09253 18.2231 0.843566 20.9866C0.532358 24.4224 0.519909 40.1446 0.843566 43.5928C1.39129 49.6552 2.97223 52.6926 6.50756 54.4727C8.62378 55.5432 11.0263 55.842 20.1634 56.1532C30.2216 56.5017 40.5413 56.4395 49.7904 55.9665C55.1557 55.6926 56.276 55.5183 58.0063 54.7092C60.4711 53.5639 62.052 51.6718 63.0354 48.734C64.0687 45.6468 64.2305 43.3314 64.2305 32.0657C64.218 24.9701 64.1807 22.9286 64.0189 21.0364C63.4711 14.9741 62.0147 12.0487 58.5665 10.0695C57.7076 9.58397 56.388 9.14828 55.081 8.93666C51.2469 8.30179 32.1013 7.90345 21.7194 8.23955ZM42.4584 12.0861C47.4875 12.2479 53.3133 12.5591 54.3216 12.721C55.9026 12.9699 57.3466 13.6919 58.2055 14.6753C59.9358 16.6422 60.4711 20.7999 60.4711 32.3146C60.4711 39.8459 60.2221 44.3273 59.6868 46.3439C59.052 48.7962 58.4171 49.8543 57.0976 50.7506C55.7283 51.6967 54.9938 51.8212 49.5415 52.1075C39.0226 52.6428 28.8897 52.6677 16.9268 52.1697C10.1425 51.8834 8.36236 51.4975 6.85611 49.9913C5.81045 48.9581 5.0511 46.8294 4.78969 44.2899C4.22951 38.489 4.22951 25.7419 4.80214 20.2895C4.95152 18.8082 5.4121 17.0779 5.94738 15.9077C6.69428 14.3143 8.21298 13.1815 10.1425 12.7956C11.101 12.5965 16.5409 12.2728 21.7817 12.0985C26.2755 11.9492 38.1014 11.9492 42.4584 12.0861Z" fill="#29136C"></path>
+                  <path d="M26.1761 21.4204C25.1678 21.7192 24.5329 22.4661 24.3337 23.574C24.2466 24.0221 24.2092 27.0222 24.2341 32.0887L24.2715 39.9062L24.5827 40.4664C25.0557 41.3004 25.7777 41.7486 26.7487 41.8108C27.4707 41.8606 27.6325 41.8233 28.4168 41.4249C30.1969 40.5162 42.334 33.9559 42.6577 33.7318C43.1307 33.3833 43.6286 32.3252 43.6286 31.6405C43.6286 30.9559 43.2925 30.1965 42.8071 29.7359C42.4212 29.3874 28.4043 21.6819 27.7072 21.4453C27.2342 21.2835 26.674 21.2711 26.1761 21.4204ZM32.4998 28.404C34.8899 29.711 37.2053 30.9683 37.6285 31.2173L38.4252 31.653L34.0185 34.0182C31.6035 35.3128 29.2757 36.5701 28.8525 36.7941L28.0682 37.2298V31.6281C28.0682 28.5409 28.0931 26.0263 28.118 26.0263C28.1429 26.0263 30.1097 27.0969 32.4998 28.404Z" fill="#29136C"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+                      <p class="m-0 p-1">B1</p>
+                    <p class="m-0 p-1">Version : 3.0</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Government logos -->
+  <div class="logoStrip">
+    <div class="container-fluid">
+      <nav aria-label="Government links">
+        <ul>
+          <li>
+            <a href="http://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" title="Digital India External website that opens a new window" aria-label="Digital India opens a new window">
+              <img src="dist1/img/digital-Indiawhite.svg" alt="Digital India External website that opens a new window">
+            </a>
+          </li>
+          <li>
+            <a href="http://www.india.gov.in/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" title="National Portal of India External website that opens a new window" aria-label="National Portal of India opens a new window">
+              <img class="india-gov-logo" src="dist1/img/india_gov.svg" alt="National Portal of India External website that opens a new window">
+            </a>
+          </li>
+          <li>
+            <a href="https://doj.gov.in/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" title="Department of Justice External website that opens a new window" aria-label="Department of Justice opens a new window">
+              <img src="dist1/img/department-of-justice.svg" alt="Department of Justice External website that opens a new window">
+            </a>
+          </li>
+          <li>
+            <a href="https://ecommitteesci.gov.in/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" title="e-Committee Supreme Court of India External website that opens a new window" aria-label="e-Committee Supreme Court of India opens a new window">
+              <img src="dist1/img/ecommittee.svg" alt="e-Committee Supreme Court of India External website that opens a new window">
+            </a>
+          </li>
+          <li>
+            <a href="http://indiacode.nic.in/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" title="India Code External website that opens a new window" aria-label="India Code opens a new window">
+              <img src="dist1/img/india-code.svg" alt="India Code External website that opens a new window">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.nic.in/" target="_blank" rel="noopener noreferrer" onclick="return confirm('You are being redirected to an external website.');" title="National Informatics Centre External website that opens a new window" aria-label="National Informatics Centre opens a new window">
+              <img src="dist1/img/nic.svg" alt="National Informatics Centre External website that opens a new window">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="bottomBar">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col">
+          <span class="copyright">© 2020 eFiling Services eCommittee Supreme Court of India. All Rights Reserved.</span>
+        </div>
+        <div class="col text-right">
+          <a href="?p=otherPages/termsCondition">Terms and Conditions</a>
+          <span aria-hidden="true">|</span>
+          <a href="?p=otherPages/privacyPolicy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top" title="Scroll to top" style="display: none;">
+		<i role="presentation" class="fas fa-angle-up"></i>
+	</a>
+	<div class="sticky-container d-none">
+		<ul class="sticky" role="list">
+			<li role="listitem">
+				<a href="#" onclick="showVideos('W')"><i class="fa fa-play-circle"></i>
+					<p>Video Tutorials</p>
+				</a>
+			</li>
+			<li role="listitem">
+				<a href="#" onclick="showFaqs()"><i class="fa fa-question-circle"></i>
+					<p>FAQ</p>
+				</a>
+			</li>
+			<li role="listitem">
+				<a href="#" onclick="showManual()" id="showManual1"><i class="fa fa-file-pdf"></i>
+					<p>&nbsp;Manuals</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!------------------------------------------------------------- Regenerate PIN Modal ------------------------------------------------------------->
+
+	<div class="modal fade" id="regForPassModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header border-0 pr-3">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+
+				<!-- Message Body -->
+				<div class="alert alert-danger alert-dismissible alert-danger3" style="text-align: center;padding: 5px;margin: 10px;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+					<div id="msg-danger3"></div>
+				</div>
+
+				<div class="alert alert-success alert-dismissible alert-success3" style="text-align: center;padding: 5px;margin: 10px;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+					<div id="msg-success3"></div>
+				</div>
+
+				<div class="modal-body">
+					<div class="col-lg-10 mx-auto p-0">
+						<div class="alert alert-danger alert-dismissible alert-danger1" style="align:center;text-align:center;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+							<div id="msg-danger1"></div>
+						</div>
+						<div class="text-center">
+							<span class="fa-stack fa-2x">
+								<i role="presentation" class="fas fa-circle fa-stack-2x text-primary"></i>
+								<i role="presentation" class="fas fa-key fa-stack-1x fa-inverse"></i>
+							</span>
+							<span class="text-uppercase mt-2  d-block" style="font-weight:bold; font-size:14px;">
+								<h2 class="h5">Forgot Password</h2>
+							</span>
+						</div>
+						<form action="" id="frmRegenerate" name="frmRegenerate" novalidate="novalidate">
+							<input type="hidden" name="hidden_otp1" id="hidden_otp1" value="Y">
+							<div class="form-group mb-2">
+								<label for="selState2" class="fw-bold"><span style="color: red;">*</span>State</label>
+								<select aria-required="true" name="selState2" class="form-select form-select-sm" id="selState2" onchange="show_hide_user_type()"><option value="">Select State</option><option value="2">Andhra Pradesh</option><option value="6">Assam</option><option value="8">Bihar</option><option value="27">Chandigarh</option><option value="18">Chhattisgarh</option><option value="26">Delhi</option><option value="30">Goa</option><option value="17">Gujarat</option><option value="14">Haryana</option><option value="5">Himachal Pradesh</option><option value="12">Jammu and Kashmir</option><option value="7">Jharkhand</option><option value="3">Karnataka</option><option value="33">Ladakh</option><option value="23">Madhya Pradesh</option><option value="1">Maharashtra</option><option value="25">Manipur</option><option value="21">Meghalaya</option><option value="19">Mizoram</option><option value="11">Odisha</option><option value="35">Puducherry</option><option value="22">Punjab</option><option value="9">Rajasthan</option><option value="24">Sikkim</option><option value="10">Tamil Nadu</option><option value="29">Telangana</option><option value="20">Tripura</option><option value="13">Uttar Pradesh</option><option value="15">Uttarakhand</option><option value="16">West Bengal</option><option value="4">Kerala</option></select>
+							</div>
+
+							<div class="form-group mb-2">
+								<input type="radio" name="rdoUser1" id="user_advocate1" value="1" checked=""> <label for="user_advocate1" style="color: #000000; font-weight: bold;">Advocate</label>
+								&nbsp; &nbsp;
+								<input type="radio" name="rdoUser1" id="user_person1" value="2"><label for="user_person1" style="color: #000000; font-weight: bold;"> &nbsp; Litigant </label>
+								&nbsp; &nbsp;
+								<input type="radio" name="rdoUser1" id="user_pleader1" value="3"><label for="user_pleader1" style="color: #000000; font-weight: bold;"> &nbsp; Govt. Pleader</label>
+																	&nbsp; &nbsp;
+									<input type="radio" name="rdoUser1" id="user_clerk1" value="4"><label for="user_clerk1" style="color: #000000; font-weight: bold;"> &nbsp; Clerk</label>
+																&nbsp; &nbsp;
+								<span id="spGovAuthority" style="display:none;"><input type="radio" name="rdoUser1" id="user_govauth1" value="7"><label for="user_govauth1" style="color: #000000; font-weight: bold;"> &nbsp; Govt. Authority</label></span>
+							</div>
+							<div class="form-group m-0">
+								<small class="text-muted">
+									<span id="selectOneCred" style="color: #B30000 !important;">* At least one of Mobile Number or Email is required </span>
+								</small>
+							</div>
+
+							<div class="form-group m-0 ">
+								<label for="txtMobile" class="fw-bold">Mobile Number </label>
+								<input aria-labelledby="selectOneCred" type="text" class="form-control form-control-sm user_mobile_email" placeholder="Enter Mobile Number" name="txtMobile" id="txtMobile" autocomplete="off" maxlength="10" aria-describedby="txtMobile-error">
+							</div>
+
+							<div class="form-group m-0" style="text-align: center;">
+								<label for="" aria-label="Or" class="fw-bold">OR</label>
+							</div>
+
+							<div class="form-group m-0">
+								<label for="txtEmail" class="fw-bold">Enter Email</label>
+								<input aria-labelledby="selectOneCred" type="text" class="form-control form-control-sm user_mobile_email" placeholder="Enter Email" name="txtEmail" id="txtEmail" autocomplete="off" maxlength="50">
+							</div>
+
+							<div class="form-group m-0" id="div_otp2" style="display:none">
+								<label for="user_otp2" class="fw-bold">OTP</label>
+								<div class="input-group mb-3 gr_regenerate_pin">
+									<div id="div_countdown2" style="display:none;color:#555;font-weight:bold;font-size:15px;border:1px solid #ccc;padding: 2px 10px;text-align: CENTER;">
+										<time id="countdown2"></time>&nbsp;&nbsp;
+									</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="Password" id="user_otp2" name="user_otp2" class="form-control form-control-sm" placeholder="Enter OTP" maxlength="6">
+									<!--
+					  <div class="input-group-append">
+						<button type="button" id="verify_button" class="btn btn-sm btn-primary pribtnbg btn-sm" onclick="verify_regenerated_otp()">Verify OTP</button>
+					 </div>
+					 -->
+								</div>
+
+							</div>
+
+							
+								<div class="row mb-2" style="margin-top: 12px;">
+									<div class="col-auto p-0">
+										<label for="" class="capLabel col-sm-3 mr-sm-2 col-form-label text-end d-none">Captcha</label>
+										<div id="div_captcha_mobile2" class="col-sm-12 pr-0">
+											<div class="form-inline text-left">
+		<div style="">
+		
+					<img style="padding-right: 0px;border:1px solid #ccc;" id="captcha_image2" src="/pdedev/securimage/securimage_show.php?0bd48618fdf5b58b3a4355f182860024" alt="CAPTCHA Image" tabindex="0" width="120"><div id="captcha_image2_audio_div" style="display:inline">
+<audio id="captcha_image2_audio" preload="none" style="display: none">
+<source id="captcha_image2_source_wav" src="/pdedev/securimage/securimage_play.php?id=6ae066ce8b434" type="audio/wav">
+</audio>
+</div>
+<div id="captcha_image2_audio_controls" style="display:inline-block;">
+<a tabindex="0" class="captcha_play_button" href="/pdedev/securimage/securimage_play.php?id=6ae066ce8b437" onclick="return false">
+<img class="captcha_play_image speaker-btn" height="34" width="39" src="/pdedev/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+<img class="captcha_loading_image rotating loading" height="34" width="39" src="images/refresh-btn.jpg" alt="Loading audio" style="display: none">
+</a>
+<noscript>Enable Javascript for audio controls</noscript>
+</div>
+<script type="text/javascript">captcha_image2_audioObj = new SecurimageAudio({ audioElement: 'captcha_image2_audio', controlsElement: 'captcha_image2_audio_controls' });</script>
+&nbsp;<a tabindex="0" style="border: 0" href="#" title="Refresh Image" onclick="if (typeof window.captcha_image2_audioObj !== 'undefined') captcha_image2_audioObj.refresh(); document.getElementById('captcha_image2').src = '/pdedev/securimage/securimage_show.php?' + Math.random(); this.blur(); return false"><img class="refresh-btn" height="34" width="38" src="images/refresh-btn.jpg" alt="Refresh Image" onclick="clearCaptchaText();" style="border: 0px; vertical-align: bottom"></a></div></div>										</div>
+									</div>
+
+									<div class="col-md-5 p-0">
+										<label for="fcaptcha_code_mobile2" class="mr-sm-2 col-form-label text-lg-right d-none">Enter Captcha</label>
+										<input type="text" class=" form-control captchaClass col-sm-12" id="fcaptcha_code_mobile2" name="fcaptcha_code_mobile2" placeholder="Enter Captcha" style="width: 235px;margin-left: 3px;" maxlength="6" aria-required="true">
+									</div>
+								</div>
+							
+							<div id="div_footer_btn3" style="margin-top:10px;text-align: center;">
+								<button type="button" id="btn_send_otp" class="btn btn-sm btn-primary eFbtn pribtnbg" onclick="send_forgot_pass_otp()">Get OTP</button>
+							</div>
+
+							<div id="div_footer_btn4" style="display:none; text-align: center;">
+								<button type="button" id="verify_button" class="btn btn-sm btn-primary pribtnbg btn-sm eFbtn" onclick="verify_regenerated_otp()">Verify OTP</button>
+								<button type="button" id="re_btn_send_otp" class="btn btn-sm btn-primary eFbtn pribtnbg" onclick="send_forgot_pass_otp()">Resend OTP</button>
+							</div>
+
+							<div id="div_footer_btn1" style="display:none">
+								<button type="button" id="regenerate_pin_button" class="btn btn-sm btn-primary eFbtn pribtnbg" onclick="regenerate_pin()">Submit</button>
+								<button type="reset" class="btn btn-sm btn-secondary eFbtn secbtnbg">Reset</button>
+							</div>
+
+
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="alert_invalid_pin">
+		<div class="modal-dialog">
+			<div class="modal-content" style="">
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Logout From All Devices</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&nbsp;</button>
+				</div>
+
+				<div class="alert alert-danger alert-dismissible alert-danger5" style="text-align: center;padding: 5px;margin: 10px;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+					<div id="msg-danger5"></div>
+				</div>
+
+				<div class="alert alert-success alert-dismissible alert-success5" style="text-align: center;padding: 5px;margin: 10px;display: none;"><a href="#" class="btn-close" data-bs-dismiss="alert" aria-label="close" style="padding: 0px;">&nbsp;</a>
+					<div id="msg-success5"></div>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<form name="frm_duplicate_login" id="frm_duplicate_login" action="" method="post" autocomplete="off" novalidate="novalidate">
+
+						<div class="row mb-2">
+							<div class="col-sm-3"><label for="lbl_user_state" class="fw-bold">State:</label></div>
+							<div class="col-sm-4">
+								<label tabindex="0" id="lbl_user_state">State</label>
+							</div>
+						</div>
+
+						<div class="row mb-2" style="margin-top: 5px;">
+							<div class="col-sm-3"><label class="fw-bold" for="lbl_user_type">User Type:</label></div>
+							<div class="col-sm-4">
+								<label tabindex="0" id="lbl_user_type">User Type</label>
+							</div>
+						</div>
+
+						<div class="row mb-2" style="margin-top: 5px;">
+							<div class="col-sm-3"><label class="fw-bold" for="lbl_user_name">User Name:</label></div>
+							<div class="col-sm-4">
+								<label tabindex="0" id="lbl_user_name">User Name</label>
+							</div>
+						</div>
+
+						<div class="row" style="margin-top: 10px;">
+							<div class="col-sm-3"><label class="fw-bold" for="user_pwd">Password:</label></div>
+							<div class="col-sm-6">
+								<input type="password" class="form-control" placeholder="Enter Password" name="user_pwd" id="user_pwd" style="font-size:0.8rem;" autocomplete="off">
+								<input class="w3-check" type="checkbox" id="Show_Password" onclick="myFunction('user_pwd')"> <label for="Show_Password">Show Password</label>
+							</div>
+						</div>
+
+						
+							<div class="row mb-2" style="margin-top: 12px;">
+								<div class="col-auto p-0">
+									<label for="" class="capLabel col-sm-3 mr-sm-2 col-form-label text-end d-none">Captcha</label>
+									<div id="div_captcha_mobile1" class="col-sm-12 pr-0">
+										<div class="form-inline text-left">
+		<div style="">
+		
+					<img style="padding-right: 0px;border:1px solid #ccc;" id="captcha_image1" src="/pdedev/securimage/securimage_show.php?7831c500adfa49afeb53ab5105627f81" alt="CAPTCHA Image" tabindex="0" width="120"><div id="captcha_image1_audio_div" style="display:inline">
+<audio id="captcha_image1_audio" preload="none" style="display: none">
+<source id="captcha_image1_source_wav" src="/pdedev/securimage/securimage_play.php?id=6ae066ce8b444" type="audio/wav">
+</audio>
+</div>
+<div id="captcha_image1_audio_controls" style="display:inline-block;">
+<a tabindex="0" class="captcha_play_button" href="/pdedev/securimage/securimage_play.php?id=6ae066ce8b446" onclick="return false">
+<img class="captcha_play_image speaker-btn" height="34" width="39" src="/pdedev/securimage/images/audio_icon.png" alt="Play CAPTCHA Audio" style="border: 0px">
+<img class="captcha_loading_image rotating loading" height="34" width="39" src="images/refresh-btn.jpg" alt="Loading audio" style="display: none">
+</a>
+<noscript>Enable Javascript for audio controls</noscript>
+</div>
+<script type="text/javascript">captcha_image1_audioObj = new SecurimageAudio({ audioElement: 'captcha_image1_audio', controlsElement: 'captcha_image1_audio_controls' });</script>
+&nbsp;<a tabindex="0" style="border: 0" href="#" title="Refresh Image" onclick="if (typeof window.captcha_image1_audioObj !== 'undefined') captcha_image1_audioObj.refresh(); document.getElementById('captcha_image1').src = '/pdedev/securimage/securimage_show.php?' + Math.random(); this.blur(); return false"><img class="refresh-btn" height="34" width="38" src="images/refresh-btn.jpg" alt="Refresh Image" onclick="clearCaptchaText();" style="border: 0px; vertical-align: bottom"></a></div></div>									</div>
+								</div>
+
+								<div class="col-md-5 p-0">
+									<label for="fcaptcha_code_mobile1" class="mr-sm-2 col-form-label text-lg-right d-none">Enter Captcha</label>
+									<input type="text" class=" form-control captchaClass col-sm-12" id="fcaptcha_code_mobile1" name="fcaptcha_code_mobile1" placeholder="Enter Captcha" style="width: 235px;margin-left: 3px;" maxlength="6" aria-required="true">
+								</div>
+							</div>
+						
+						<div class="row" style="margin-top: 5px;">
+							<div class="col-sm-6">
+								<button type="submit" id="re_verify_button" class="btn btn-primary eFbtn pribtnbg btn-sm" value="Login">Login</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- Modal footer 
+        <div class="modal-footer" id="div_footer_btn2">		
+          <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>	
+        </div>
+		-->
+			</div>
+
+
+		</div>
+	</div>
+
+	<!-- Features Modal 1-->
+	<div class="modal fade" id="featureModalBox1" tabindex="-1" aria-labelledby="featureModal1" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title h5" id="featureModal1">Readymade Templates</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables creation of pleadings from the available several templates. It helps advocates to quickly draft the pleadings.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Features Modal 2-->
+	<div class="modal fade" id="featureModalBox2" tabindex="-1" aria-labelledby="featureModal2" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title h5" id="featureModal2">Online Submission of Vakalat</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables online submission of Vakalat by the clients to the advocates and advocates further accepting it in the e-Filing software. This feature helps to authenticate and handshake advocates with the clients for exchanging information electronically. </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Features Modal 3-->
+	<div class="modal fade" id="featureModalBox3" tabindex="-1" aria-labelledby="featureModal3" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title h5" id="featureModal3">e-Signing </h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables client to e-Sign the document uploaded by the advocate from the comfort of home or client's office. Multiple stakeholders can e-Sign a single document through their respective logins. </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Features Modal 4-->
+	<div class="modal fade" id="featureModalBox4" tabindex="-1" aria-labelledby="featureModal4" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title h5" id="featureModal4">Online Payment </h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables online payment of court fee, judicial deposit, fine, etc by integrating respective state treasury payment gateway with the eFiling software. In addition, service of online payment for use of adhesive court fee stamp affixed on application is also provided through court fee wallet. </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Features Modal 5-->
+	<div class="modal fade" id="featureModalBox5" tabindex="-1" aria-labelledby="featureModal5" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title h5" id="featureModal5">Online Video Recording of Oath</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables online video recording of Oath once the documents are e-Signed by clients and verified by advocates. </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Features Modal 6-->
+	<div class="modal fade" id="featureModalBox6" tabindex="-1" aria-labelledby="featureModal6" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title h5" id="featureModal6">Application Filing </h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables filing of several applications by the advocates for different cases simultaneously at any given point of time. Facility is also available to select cases and choose the application templates.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Features Modal 7-->
+	<div class="modal fade" id="featureModalBox7" tabindex="-1" aria-labelledby="featureModal7" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title text-dark h5" id="featureModal7">Portfolio Management</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables management of new as well as existing cases through portfolio and case planner. The facilities to search cases, add events to the case calendar and add or delete cases from portfolio are provided. Cases can also be imported from or exported to eCourts services mobile app.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Features Modal 8-->
+	<div class="modal fade" id="featureModalBox8" tabindex="-1" aria-labelledby="featureModal8" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title h5" id="featureModal8">My Partners</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables addition of colleagues, juniors as partners so that cases can also be assigned to them. This helps partner advocates to sign vakalat, pleadings and submit applications collectively. </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Features Modal 9-->
+	<div class="modal fade" id="featureModalBox9" tabindex="-1" aria-labelledby="featureModal9" aria-hidden="true" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title h5" id="featureModal9">Dashboard</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&nbsp;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Enables at-a-glance status of all the completed and pending activities related to cases in the portfolio along with the monthly calendar.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+
+
+
+<div id="rulesModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Note</h4>
+            </div>
+
+            <div class="modal-body" style="max-height:400px; overflow-y:auto;">
+                <p>Please read the following rules carefully before proceeding:</p>
+
+               <ul>
+   <li>
+    Please select the appropriate <strong>State</strong> for registration as an
+    <strong>Advocate, Litigant, or Clerk</strong> through
+    <strong>Parichay / Meri Pehchaan</strong>. The selected State should be the
+    same as the State selected on the <strong>eFiling login screen</strong>.
+</li>
+
+    <li>
+        The <strong>State selected in the eFiling Portal</strong> will be
+        considered for your registration.
+    </li>
+
+    <li>
+        If you are already <strong>registered on the eFiling Portal</strong>
+        and log in through <strong>JanParichay</strong>, your existing
+        eFiling login will be used.
+    </li>
+
+    <li>
+        If you are <strong>not registered on the eFiling Portal</strong> and
+        register through <strong>JanParichay</strong>, a new login will be
+        created on the eFiling Portal. 
+    </li>
+	<li>
+	<img src="images/meri_pahechan_instructions.png" style="width:40%" alt="Login with JanParichay">
+	</li>
+</ul>
+            </div>
+
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" id="btnNoRules">
+    Ok
+</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/pdedev/dist1/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/pdedev/dist1/js/eFileStyle.js"></script>
+<script src="/pdedev/js/login1.js" type="text/javascript"></script>
+<!-- <script src="/pdedev/js/slick.js" type="text/javascript"></script>-->
+
+<script language="JavaScript" src="/pdedev/js/md5.js" type="text/javascript"></script>
+<script language="JavaScript" src="/pdedev/js/sha256.js" type="text/javascript"></script>
+
+<script>
+	$('.customer-logos').slick({
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		arrows: false,
+		dots: false,
+		pauseOnHover: true,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 3
+			}
+		}, {
+			breakpoint: 520,
+			settings: {
+				slidesToShow: 2
+			}
+		}]
+	});
+</script>
+
+
+<script>
+	
+	var labels_array=null
+	var buttons_array=null
+	var alerts_array=null
+	
+	var macp_state_sr_no=["7"]
+	var macp_state=["26"]
+	var macp_district=["7"]
+	var macp_establishment=["DLND01"]	
+	
+	</script></body></html>

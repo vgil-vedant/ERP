@@ -1,0 +1,365 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="/NPIPDashboard/npipTab-logo.png"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Web site created using create-react-app"><link rel="manifest" href="/NPIPDashboard/manifest.json"><title>| Dashboard</title><script defer="defer" src="/NPIPDashboard/static/js/main.811484a3.js"></script><link href="/NPIPDashboard/static/css/main.722187b3.css" rel="stylesheet"><style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div id="_rht_toaster" style="position: fixed; z-index: 9999; inset: 16px; pointer-events: none;"></div><div class="flex h-screen flex-col overflow-hidden"><header class="h-[65px] shrink-0 bg-white border-b border-gray-200 flex items-center justify-between px-5"><div class="flex items-center"><a href="https://eprisons.nic.in/NPIP/public/Home" class="flex items-center cursor-pointer" title="Click here for NPIP Home Page"><img src="data:image/png;base64,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" alt="NPIP" class="w-[220px] object-contain"></a><button class="group ml-6 flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-[#0997ca] shadow-lg transition-all duration-300 hover:border-white hover:bg-[#0997ca] hover:text-white hover:shadow-xl active:scale-90"><svg stroke="currentColor" fill="none" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 ease-out group-hover:scale-125" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><title>Click here to expand menu items</title><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div><div class="flex items-center gap-6"><div class="flex items-center gap-3"><div class="h-10 w-10 rounded-full border border-gray-200 bg-gray-100 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9 9 0 1118.879 17.8M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div></div></div></header><div class="flex min-h-0 flex-1"><div class="fixed left-0 top-[65px] z-[100] h-[calc(100vh-65px)] w-18 border-r border-white/60 bg-white/60 backdrop-blur-xl shadow-[4px_0_20px_rgba(15,23,42,0.08)] transition-all duration-200 flex flex-col"><div class="flex-1 overflow-y-visible px-1 sm:px-2 py-3 sm:py-6"><ul class="space-y-1.5 sm:space-y-2"><li class="relative"><a class="group relative flex items-center rounded-xl sm:rounded-2xl border px-1.5 sm:px-2 py-1.5 sm:py-2 backdrop-blur-md transition-all duration-200 border-white/70 bg-white/45 text-slate-700 shadow-sm hover:border-sky-200/80 hover:bg-white/75 hover:shadow-md" href="/NPIPDashboard"><div class="h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 shrink-0 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl lg:text-[22px] border backdrop-blur-md transition-all duration-200 border-sky-200/50 bg-sky-100/70 text-sky-600 group-hover:border-sky-300 group-hover:bg-sky-500 group-hover:text-white"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 18v476h32V18zm144 0v279.883c5.308-1.866 10.97-2.883 16.885-2.883 5.262 0 10.323.812 15.115 2.303V18zm160 0v279.594c5.053-1.674 10.41-2.594 16-2.594s10.947.92 16 2.594V18zm144 0v476h32V18zM256 62.074c-17.06 0-33 9.87-45.242 27.46-.26.37-.504.764-.758 1.142v138.646c.254.378.5.772.758 1.143C223 248.053 238.94 257.925 256 257.925c17.06 0 33-9.872 45.242-27.46.26-.37.504-.765.758-1.143V90.676c-.254-.378-.5-.772-.758-1.143C289 71.945 273.06 62.073 256 62.073zM256 265c-17.772 0-32.922 2.757-46 7.697v34.387c14.584 11.926 23.885 31.442 23.885 52.916 0 21.474-9.3 40.99-23.885 52.916V494h92v-81.814c-14.076-11.984-23-31.147-23-52.186 0-21.04 8.924-40.202 23-52.186V272.65c-13.078-4.91-28.23-7.65-46-7.65zm-79.115 48c-20.835 0-39 20.24-39 47s18.165 47 39 47c16.12 0 30.634-12.123 36.38-30H176v-18h39.863c-.084-4.926-.78-9.62-2-14H176v-18h28.63c-7.182-8.72-17.112-14-27.745-14zM336 313c-10.633 0-20.563 5.28-27.746 14H336v18h-36.98c-1.217 4.38-1.914 9.074-2 14H336v18h-36.38c5.746 17.877 20.26 30 36.38 30 20.835 0 39-20.24 39-47s-18.165-47-39-47zm-207.094 82.04c-6.388 34.67-7.555 70.32-7.775 98.96H142v-82.584c-5.156-4.57-9.582-10.12-13.094-16.377zm254.492 1.036c-3.618 6.187-8.152 11.644-13.398 16.11V494h20.875c-.2-28.3-1.29-63.54-7.477-97.924zM160 422.116V494h32v-71.303c-4.792 1.49-9.853 2.303-15.115 2.303-5.915 0-11.577-1.017-16.885-2.883zm160 .29V494h32v-71.594c-5.053 1.674-10.41 2.594-16 2.594s-10.947-.92-16-2.594z"></path></svg></div><span class="pointer-events-none absolute left-full top-1/2 z-[9999] ml-3 hidden -translate-y-1/2 translate-x-[-4px] whitespace-nowrap rounded-xl border border-sky-200 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 px-3 py-2 text-sm font-semibold text-white opacity-0 shadow-[0_8px_25px_rgba(14,165,233,0.35)] backdrop-blur-xl transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 lg:block"><span class="absolute -left-1.5 top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 bg-sky-500 border-l border-b border-sky-200"></span><span class="relative z-10">Jail Location</span></span></a></li><li class="relative"><a class="group relative flex items-center rounded-xl sm:rounded-2xl border px-1.5 sm:px-2 py-1.5 sm:py-2 backdrop-blur-md transition-all duration-200 border-white/70 bg-white/45 text-slate-700 shadow-sm hover:border-sky-200/80 hover:bg-white/75 hover:shadow-md" href="/NPIPDashboard/lockupReport"><div class="h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 shrink-0 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl lg:text-[22px] border backdrop-blur-md transition-all duration-200 border-sky-200/50 bg-sky-100/70 text-sky-600 group-hover:border-sky-300 group-hover:bg-sky-500 group-hover:text-white"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-width="2" d="M4.99787498,8.99999999 L4.99787498,0.999999992 L19.4999998,0.999999992 L22.9999998,4.50000005 L23,23 L16,23 M18,1 L18,6 L23,6 M8,11 C6.34325,11 5,12.34325 5,14 C5,15.65675 6.34325,17 8,17 C9.65675,17 11,15.65675 11,14 C11,12.34325 9.65675,11 8,11 L8,11 Z M3,23 L3,22 C3,18 6,17 8,17 C10,17 13,18 13,22 L13,23 L3,23 Z"></path></svg></div><span class="pointer-events-none absolute left-full top-1/2 z-[9999] ml-3 hidden -translate-y-1/2 translate-x-[-4px] whitespace-nowrap rounded-xl border border-sky-200 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 px-3 py-2 text-sm font-semibold text-white opacity-0 shadow-[0_8px_25px_rgba(14,165,233,0.35)] backdrop-blur-xl transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 lg:block"><span class="absolute -left-1.5 top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 bg-sky-500 border-l border-b border-sky-200"></span><span class="relative z-10">Lockup Report</span></span></a></li><li class="relative"><a class="group relative flex items-center rounded-xl sm:rounded-2xl border px-1.5 sm:px-2 py-1.5 sm:py-2 backdrop-blur-md transition-all duration-200 border-sky-300/60 bg-gradient-to-r from-sky-500/90 to-blue-600/90 text-white shadow-lg shadow-sky-500/20" href="/NPIPDashboard/paroleJumper"><div class="h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 shrink-0 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl lg:text-[22px] border backdrop-blur-md transition-all duration-200 border-white/30 bg-white/20 text-white"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 4v16"></path><path d="M14 4v16"></path><path d="M6 4v5"></path><path d="M6 15v5"></path><path d="M10 4v5"></path><path d="M11 9h-6v6h6z"></path><path d="M10 15v5"></path><path d="M8 12h-.01"></path></svg></div><span class="pointer-events-none absolute left-full top-1/2 z-[9999] ml-3 hidden -translate-y-1/2 translate-x-[-4px] whitespace-nowrap rounded-xl border border-sky-200 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 px-3 py-2 text-sm font-semibold text-white opacity-0 shadow-[0_8px_25px_rgba(14,165,233,0.35)] backdrop-blur-xl transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 lg:block"><span class="absolute -left-1.5 top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 bg-sky-500 border-l border-b border-sky-200"></span><span class="relative z-10">Parole Jumper</span></span></a></li><li class="relative"><a class="group relative flex items-center rounded-xl sm:rounded-2xl border px-1.5 sm:px-2 py-1.5 sm:py-2 backdrop-blur-md transition-all duration-200 border-white/70 bg-white/45 text-slate-700 shadow-sm hover:border-sky-200/80 hover:bg-white/75 hover:shadow-md" href="/NPIPDashboard/absconder"><div class="h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 shrink-0 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl lg:text-[22px] border backdrop-blur-md transition-all duration-200 border-sky-200/50 bg-sky-100/70 text-sky-600 group-hover:border-sky-300 group-hover:bg-sky-500 group-hover:text-white"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19 19m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M17 21l4 -4"></path><path d="M19 12h2l-9 -9l-9 9h2v7a2 2 0 0 0 2 2h5.5"></path><path d="M9 21v-6a2 2 0 0 1 2 -2h2c.58 0 1.103 .247 1.468 .642"></path></svg></div><span class="pointer-events-none absolute left-full top-1/2 z-[9999] ml-3 hidden -translate-y-1/2 translate-x-[-4px] whitespace-nowrap rounded-xl border border-sky-200 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 px-3 py-2 text-sm font-semibold text-white opacity-0 shadow-[0_8px_25px_rgba(14,165,233,0.35)] backdrop-blur-xl transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 lg:block"><span class="absolute -left-1.5 top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 bg-sky-500 border-l border-b border-sky-200"></span><span class="relative z-10">Absconder</span></span></a></li><li class="relative"><a class="group relative flex items-center rounded-xl sm:rounded-2xl border px-1.5 sm:px-2 py-1.5 sm:py-2 backdrop-blur-md transition-all duration-200 border-white/70 bg-white/45 text-slate-700 shadow-sm hover:border-sky-200/80 hover:bg-white/75 hover:shadow-md" href="/NPIPDashboard/ePrisonsLiveStatus"><div class="h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 shrink-0 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl lg:text-[22px] border backdrop-blur-md transition-all duration-200 border-sky-200/50 bg-sky-100/70 text-sky-600 group-hover:border-sky-300 group-hover:bg-sky-500 group-hover:text-white"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20ZM7 11V13C9.76142 13 12 15.2386 12 18H14C14 14.134 10.866 11 7 11ZM7 15V18H10C10 16.3431 8.65685 15 7 15Z"></path></svg></div><span class="pointer-events-none absolute left-full top-1/2 z-[9999] ml-3 hidden -translate-y-1/2 translate-x-[-4px] whitespace-nowrap rounded-xl border border-sky-200 bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 px-3 py-2 text-sm font-semibold text-white opacity-0 shadow-[0_8px_25px_rgba(14,165,233,0.35)] backdrop-blur-xl transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 lg:block"><span class="absolute -left-1.5 top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 bg-sky-500 border-l border-b border-sky-200"></span><span class="relative z-10">ePrisons Live</span></span></a></li></ul></div></div><div class="min-w-0 min-h-0 flex-1 overflow-x-hidden mt-1 overflow-y-auto transition-all duration-300 ease-in-out ml-20"><div class="card-wrapper ml-2 pr-5"><div class="relative flex flex-col items-center justify-between border-b border-white/90 pb-2 mt-2 lg:flex-row"><div class="flex items-center gap-2"><div class="h-7 w-1 shrink-0 rounded-full bg-gradient-to-b from-pink-400 via-pink-500 to-[#c799f7] shadow-[0_0_6px_rgba(241,65,227,0.35)]"></div><div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-blue-400/40  bg-gradient-to-br from-[#f472b6] via-blue-500 to-blue-600  shadow-[0_4px_10px_rgba(37,99,235,0.35)]"><div class="flex h-7 w-7 items-center justify-center rounded-full border border-white/60 bg-white/10 text-white backdrop-blur-sm"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></div></div><div class="flex flex-col justify-center"><h1 class="text-xl font-extrabold p-0 leading-tight tracking-tight text-sky-800">Parole Jumpers</h1><span class="text-[11px] text-slate-500 font-medium">Track parole jumpers records across India</span></div></div></div><div class="relative overflow-hidden rounded-[24px] border border-white/40 bg-gradient-to-br  from-[#dfe8ff]  via-[#cddcff] mt-4 to-[#becdf5] shadow-[0_20px_60px_rgba(88,110,255,0.20)]"><div class="absolute inset-0 pointer-events-none overflow-hidden"><div class="absolute -top-40 -left-24 h-[400px] w-[400px] rounded-full bg-blue-400/20 blur-[120px]"></div><div class=" absolute bottom-0 right-0 h-[380px] w-[380px] rounded-full bg-violet-400/25 blur-[130px]"></div><div class="absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300/15 blur-[110px]"></div></div><div class=" relative z-10 flex flex-col gap-4 rounded-t-[24px] border-b  border-white/40  bg-white/20 px-3 py-2 backdrop-blur-2xl shadow-[0_8px_30px_rgba(99,102,241,0.15)] sm:flex-row sm:flex-wrap sm:items-center sm:justify-between"><div class="w-full md:w-auto"><div class="group flex w-full items-center rounded-2xl border border-white/60  bg-white/30 px-3 py-2 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,.8),0_6px_20px_rgba(30,64,175,.08)] transition-all duration-300  hover:border-white/80  hover:bg-white/40 hover:shadow-[0_8px_25px_rgba(56,189,248,.12)] md:w-auto"><div class="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-xl border border-white/60  bg-white/35  text-[#29457f] backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,.8)] transition-all duration-300 group-hover:scale-105"><span class="text-sm">#</span></div><span class="whitespace-nowrap text-sm font-semibold tracking-wide text-[#29457f]">Total Records :<span class="ml-1 font-bold text-red-600"> 2312</span></span></div></div><div class=" group flex w-full flex-col gap-2 rounded-2xl border  border-white/50  bg-white/20 p-2 backdrop-blur-2xl backdrop-saturate-150 shadow-[inset_0_1px_0_rgba(255,255,255,.75),0_8px_30px_rgba(30,64,175,.10)] transition-all duration-300  hover:border-white/70  hover:bg-white/25 hover:shadow-[inset_0_1px_0_rgba(255,255,255,.85),0_10px_35px_rgba(30,64,175,.14)] sm:w-auto sm:flex-row sm:items-center sm:gap-3"><label for="selectstate" class="flex items-center gap-2 whitespace-nowrap px-1 text-sm font-medium tracking-wide text-[#334a82] sm:text-base"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/70 bg-white/35 text-[#334a82] backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,.8),0_4px_12px_rgba(80,100,180,.12)]  transition-all duration-300 hover:bg-white/50 hover:border-white hover:shadow-[0_0_12px_rgba(99,102,241,.20)]"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-lg" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"></path></svg></span><span class="whitespace-nowrap text-sm font-semibold tracking-wide text-[#29457f]">Select State :</span></label><div class=" relative w-full sm:w-[220px]"><select id="selectstate" class=" h-11 w-full appearance-none rounded-xl border border-white/60 bg-white/35 px-4 pr-10  py-2 text-sm font-semibold text-[#29457f] shadow-[inset_0_1px_0_rgba(255,255,255,.8),0_5px_18px_rgba(80,100,180,.10)]  outline-none transition-all duration-300 hover:border-white/80 focus:border-indigo-400/70 focus:bg-white/50 focus:ring-1"><option value="0">All State</option><option value="26">ANDAMAN &amp; NICOBAR</option><option value="1">ANDHRA PRADESH</option><option value="2">ARUNACHAL  PRADESH</option><option value="3">ASSAM</option><option value="4">BIHAR</option><option value="27">CHANDIGARH</option><option value="33">CHHATTISGARH</option><option value="28">DADRA &amp; NAGAR HAVELI AND DAMAN &amp; DIU</option><option value="29">DAMAN &amp; DIU</option><option value="30">DELHI</option><option value="5">GOA</option><option value="6">GUJARAT</option><option value="7">HARYANA</option><option value="8">HIMACHAL PRADESH</option><option value="9">JAMMU &amp; KASHMIR</option><option value="34">JHARKHAND</option><option value="10">KARNATAKA</option><option value="11">KERALA</option><option value="37">LADAKH</option><option value="31">LAKSHADWEEP</option><option value="12">MADHYA PRADESH</option><option value="13">MAHARASHTRA</option><option value="14">MANIPUR</option><option value="15">MEGHALAYA</option><option value="16">MIZORAM</option><option value="17">NAGALAND</option><option value="18">ORISSA</option><option value="32">PUDUCHERRY</option><option value="19">PUNJAB</option><option value="20">RAJASTHAN</option><option value="21">SIKKIM</option><option value="22">TAMIL NADU</option><option value="36">TELANGANA</option><option value="23">TRIPURA</option><option value="24">UTTAR PRADESH</option><option value="35">UTTARAKHAND</option><option value="25">WEST BENGAL</option></select><div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[#334a82] transition-transform duration-300 group-focus-within:rotate-180">▾</div></div></div></div><div class="relative"><table class="p-3 border-separate w-full border-spacing-y-[5px] text-left text-[#29457f]"><thead class="sticky top-0 z-30"><tr class="whitespace-nowrap"><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm rounded-l-2xl border-l ">S.No.</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">State Name</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">Jail Name</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">Prisoner Name</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">Father Name</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">Age</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">Gender</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">Nationality</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">Police Station</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">FIR</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  ">Image</th><th class="border-y border-white/60 bg-white/45 px-3 py-4 text-left text-xs font-bold tracking-wide text-[#263d78] backdrop-blur-2xl shadow-[0_4px_15px_rgba(70,90,160,0.08)] 
+                        sm:px-4 sm:py-5 sm:text-sm  rounded-r-2xl border-r">Read More</th></tr></thead><tbody class="text-sm font-normal"><tr class="group whitespace-nowrap transition-all duration-300 hover:-translate-y-[1px] hover:scale-[1.01]"><td class="rounded-l-2xl border-y border-l border-white/60 bg-white/40 px-3 py-3 font-medium text-[#26437A] backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4">1</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">ANDHRA PRADESH</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">CJ-Kadapa</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">CHINTHAPUDI.KISHORE</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">CHENGAIAH</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">28</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">Male</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">INDIA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-red-500
+        
+        
+      ">NA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">51/2006</td><td class="border-y border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><div class="flex h-14 w-14 cursor-not-allowed items-center justify-center rounded-xl border border-white/60 bg-white/30 text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,.7)] backdrop-blur-xl sm:h-16 sm:w-16"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="text-slate-400" height="56" width="56" xmlns="http://www.w3.org/2000/svg"><path fill="#8CBCD6" d="M40,41H8c-2.2,0-4-1.8-4-4V11c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4v26C44,39.2,42.2,41,40,41z"></path><circle fill="#B3DDF5" cx="35" cy="16" r="3"></circle><polygon fill="#9AC9E3" points="20,16 9,32 31,32"></polygon><polygon fill="#B3DDF5" points="31,22 23,32 39,32"></polygon><circle fill="#F44336" cx="38" cy="38" r="10"></circle><g fill="#fff"><rect x="36.5" y="32" transform="matrix(-.707 .707 -.707 -.707 91.74 38)" width="3" height="12"></rect><rect x="36.5" y="32" transform="matrix(-.707 -.707 .707 -.707 38 91.74)" width="3" height="12"></rect></g></svg></div></td><td class=" rounded-r-2xl border-y border-r border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><button type="button" class=" group flex h-[2.8rem] w-full items-center justify-center rounded-2xl border border-white bg-gradient-to-br from-red-500/95 to-rose-600/90 px-4 py-0 text-sm font-normal text-white backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_8px_25px_rgba(239,68,68,.45)] transition-all duration-300 hover:-translate-y-[2px] hover:border-red-300 hover:from-red-500 hover:to-rose-500 hover:shadow-[inset_0_1px_0_rgba(255,255,255,.9),0_12px_35px_rgba(239,68,68,.55)] active:scale-95 sm:w-auto"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-sm transition-all duration-500 group-hover:rotate-90 group-hover:drop-shadow-[0_0_7px_rgba(255,255,255,.8)]" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M11 14l4 -4l-4 -4"></path><path d="M16 14l4 -4l-4 -4"></path><path d="M15 10h-7a4 4 0 1 0 0 8h1"></path></svg>Click</button></td></tr><tr class="group whitespace-nowrap transition-all duration-300 hover:-translate-y-[1px] hover:scale-[1.01]"><td class="rounded-l-2xl border-y border-l border-white/60 bg-white/40 px-3 py-3 font-medium text-[#26437A] backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4">2</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">ANDHRA PRADESH</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">CJ-Kadapa</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">NEELA MUKESH RAJU@MUKESH</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">PASUPULARAO</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">32</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">Male</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">INDIA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-red-500
+        
+        
+      ">NA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">462/2004</td><td class="border-y border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><div class="flex h-14 w-14 cursor-not-allowed items-center justify-center rounded-xl border border-white/60 bg-white/30 text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,.7)] backdrop-blur-xl sm:h-16 sm:w-16"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="text-slate-400" height="56" width="56" xmlns="http://www.w3.org/2000/svg"><path fill="#8CBCD6" d="M40,41H8c-2.2,0-4-1.8-4-4V11c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4v26C44,39.2,42.2,41,40,41z"></path><circle fill="#B3DDF5" cx="35" cy="16" r="3"></circle><polygon fill="#9AC9E3" points="20,16 9,32 31,32"></polygon><polygon fill="#B3DDF5" points="31,22 23,32 39,32"></polygon><circle fill="#F44336" cx="38" cy="38" r="10"></circle><g fill="#fff"><rect x="36.5" y="32" transform="matrix(-.707 .707 -.707 -.707 91.74 38)" width="3" height="12"></rect><rect x="36.5" y="32" transform="matrix(-.707 -.707 .707 -.707 38 91.74)" width="3" height="12"></rect></g></svg></div></td><td class=" rounded-r-2xl border-y border-r border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><button type="button" class=" group flex h-[2.8rem] w-full items-center justify-center rounded-2xl border border-white bg-gradient-to-br from-red-500/95 to-rose-600/90 px-4 py-0 text-sm font-normal text-white backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_8px_25px_rgba(239,68,68,.45)] transition-all duration-300 hover:-translate-y-[2px] hover:border-red-300 hover:from-red-500 hover:to-rose-500 hover:shadow-[inset_0_1px_0_rgba(255,255,255,.9),0_12px_35px_rgba(239,68,68,.55)] active:scale-95 sm:w-auto"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-sm transition-all duration-500 group-hover:rotate-90 group-hover:drop-shadow-[0_0_7px_rgba(255,255,255,.8)]" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M11 14l4 -4l-4 -4"></path><path d="M16 14l4 -4l-4 -4"></path><path d="M15 10h-7a4 4 0 1 0 0 8h1"></path></svg>Click</button></td></tr><tr class="group whitespace-nowrap transition-all duration-300 hover:-translate-y-[1px] hover:scale-[1.01]"><td class="rounded-l-2xl border-y border-l border-white/60 bg-white/40 px-3 py-3 font-medium text-[#26437A] backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4">3</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">ANDHRA PRADESH</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">CJ-Kadapa</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">KALAIGIRI LATHEEF HUSSAIN</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">MUSTHAFA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">38</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">Male</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">INDIA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-red-500
+        
+        
+      ">NA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">427/05</td><td class="border-y border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><div class="flex h-14 w-14 cursor-not-allowed items-center justify-center rounded-xl border border-white/60 bg-white/30 text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,.7)] backdrop-blur-xl sm:h-16 sm:w-16"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="text-slate-400" height="56" width="56" xmlns="http://www.w3.org/2000/svg"><path fill="#8CBCD6" d="M40,41H8c-2.2,0-4-1.8-4-4V11c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4v26C44,39.2,42.2,41,40,41z"></path><circle fill="#B3DDF5" cx="35" cy="16" r="3"></circle><polygon fill="#9AC9E3" points="20,16 9,32 31,32"></polygon><polygon fill="#B3DDF5" points="31,22 23,32 39,32"></polygon><circle fill="#F44336" cx="38" cy="38" r="10"></circle><g fill="#fff"><rect x="36.5" y="32" transform="matrix(-.707 .707 -.707 -.707 91.74 38)" width="3" height="12"></rect><rect x="36.5" y="32" transform="matrix(-.707 -.707 .707 -.707 38 91.74)" width="3" height="12"></rect></g></svg></div></td><td class=" rounded-r-2xl border-y border-r border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><button type="button" class=" group flex h-[2.8rem] w-full items-center justify-center rounded-2xl border border-white bg-gradient-to-br from-red-500/95 to-rose-600/90 px-4 py-0 text-sm font-normal text-white backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_8px_25px_rgba(239,68,68,.45)] transition-all duration-300 hover:-translate-y-[2px] hover:border-red-300 hover:from-red-500 hover:to-rose-500 hover:shadow-[inset_0_1px_0_rgba(255,255,255,.9),0_12px_35px_rgba(239,68,68,.55)] active:scale-95 sm:w-auto"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-sm transition-all duration-500 group-hover:rotate-90 group-hover:drop-shadow-[0_0_7px_rgba(255,255,255,.8)]" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M11 14l4 -4l-4 -4"></path><path d="M16 14l4 -4l-4 -4"></path><path d="M15 10h-7a4 4 0 1 0 0 8h1"></path></svg>Click</button></td></tr><tr class="group whitespace-nowrap transition-all duration-300 hover:-translate-y-[1px] hover:scale-[1.01]"><td class="rounded-l-2xl border-y border-l border-white/60 bg-white/40 px-3 py-3 font-medium text-[#26437A] backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4">4</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">ANDHRA PRADESH</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">CJ-Kadapa</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">SELVARAJ</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">SESHANNA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">23</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">Male</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">INDIA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-red-500
+        
+        
+      ">NA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">154/1999</td><td class="border-y border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><div class="flex h-14 w-14 cursor-not-allowed items-center justify-center rounded-xl border border-white/60 bg-white/30 text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,.7)] backdrop-blur-xl sm:h-16 sm:w-16"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="text-slate-400" height="56" width="56" xmlns="http://www.w3.org/2000/svg"><path fill="#8CBCD6" d="M40,41H8c-2.2,0-4-1.8-4-4V11c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4v26C44,39.2,42.2,41,40,41z"></path><circle fill="#B3DDF5" cx="35" cy="16" r="3"></circle><polygon fill="#9AC9E3" points="20,16 9,32 31,32"></polygon><polygon fill="#B3DDF5" points="31,22 23,32 39,32"></polygon><circle fill="#F44336" cx="38" cy="38" r="10"></circle><g fill="#fff"><rect x="36.5" y="32" transform="matrix(-.707 .707 -.707 -.707 91.74 38)" width="3" height="12"></rect><rect x="36.5" y="32" transform="matrix(-.707 -.707 .707 -.707 38 91.74)" width="3" height="12"></rect></g></svg></div></td><td class=" rounded-r-2xl border-y border-r border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><button type="button" class=" group flex h-[2.8rem] w-full items-center justify-center rounded-2xl border border-white bg-gradient-to-br from-red-500/95 to-rose-600/90 px-4 py-0 text-sm font-normal text-white backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_8px_25px_rgba(239,68,68,.45)] transition-all duration-300 hover:-translate-y-[2px] hover:border-red-300 hover:from-red-500 hover:to-rose-500 hover:shadow-[inset_0_1px_0_rgba(255,255,255,.9),0_12px_35px_rgba(239,68,68,.55)] active:scale-95 sm:w-auto"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-sm transition-all duration-500 group-hover:rotate-90 group-hover:drop-shadow-[0_0_7px_rgba(255,255,255,.8)]" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M11 14l4 -4l-4 -4"></path><path d="M16 14l4 -4l-4 -4"></path><path d="M15 10h-7a4 4 0 1 0 0 8h1"></path></svg>Click</button></td></tr><tr class="group whitespace-nowrap transition-all duration-300 hover:-translate-y-[1px] hover:scale-[1.01]"><td class="rounded-l-2xl border-y border-l border-white/60 bg-white/40 px-3 py-3 font-medium text-[#26437A] backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4">5</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">ANDHRA PRADESH</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">CJ-Nellore</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">PASAM SURESH@CHINNA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">prasad</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">40</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">Male</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">INDIA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-red-500
+        
+        
+      ">NA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">11/2003</td><td class="border-y border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><div class="group/photo relative h-14 w-14 cursor-pointer overflow-hidden rounded-xl border border-white/70 shadow-[0_6px_18px_rgba(50,70,140,0.20)] sm:h-16 sm:w-16"><img src="data:image/jpeg;base64,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" alt="PASAM SURESH@CHINNA" title="Click to view" class="h-full w-full object-cover transition-all duration-500 group-hover/photo:scale-110 group-hover/photo:blur-[1px]"><div class="absolute  inset-0 flex items-center justify-center backdrop-blur-0 opacity-0 transition-all duration-300 group-hover/photo:bg-[#0e1931]/45 group-hover/photo:backdrop-blur-[2px] group-hover/photo:opacity-100"><span class="text-[9px] uppercase tracking-wide text-white transition-all duration-300 group-hover/photo:scale-100">Click me</span></div></div></td><td class=" rounded-r-2xl border-y border-r border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><button type="button" class=" group flex h-[2.8rem] w-full items-center justify-center rounded-2xl border border-white bg-gradient-to-br from-red-500/95 to-rose-600/90 px-4 py-0 text-sm font-normal text-white backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_8px_25px_rgba(239,68,68,.45)] transition-all duration-300 hover:-translate-y-[2px] hover:border-red-300 hover:from-red-500 hover:to-rose-500 hover:shadow-[inset_0_1px_0_rgba(255,255,255,.9),0_12px_35px_rgba(239,68,68,.55)] active:scale-95 sm:w-auto"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-sm transition-all duration-500 group-hover:rotate-90 group-hover:drop-shadow-[0_0_7px_rgba(255,255,255,.8)]" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M11 14l4 -4l-4 -4"></path><path d="M16 14l4 -4l-4 -4"></path><path d="M15 10h-7a4 4 0 1 0 0 8h1"></path></svg>Click</button></td></tr><tr class="group whitespace-nowrap transition-all duration-300 hover:-translate-y-[1px] hover:scale-[1.01]"><td class="rounded-l-2xl border-y border-l border-white/60 bg-white/40 px-3 py-3 font-medium text-[#26437A] backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4">6</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">ANDHRA PRADESH</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">CJ-Nellore</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">MERAVARAPU INDRASENA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">VENKATESWARULU</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">29</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">Male</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">INDIA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-red-500
+        
+        
+      ">NA</td><td class=" border-y border-white/60 bg-white/40 px-3 py-3 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4
+        text-left
+        text-[#26437A]
+        
+        
+      ">242/07</td><td class="border-y border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><div class="flex h-14 w-14 cursor-not-allowed items-center justify-center rounded-xl border border-white/60 bg-white/30 text-slate-400 shadow-[inset_0_1px_0_rgba(255,255,255,.7)] backdrop-blur-xl sm:h-16 sm:w-16"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 48 48" enable-background="new 0 0 48 48" class="text-slate-400" height="56" width="56" xmlns="http://www.w3.org/2000/svg"><path fill="#8CBCD6" d="M40,41H8c-2.2,0-4-1.8-4-4V11c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4v26C44,39.2,42.2,41,40,41z"></path><circle fill="#B3DDF5" cx="35" cy="16" r="3"></circle><polygon fill="#9AC9E3" points="20,16 9,32 31,32"></polygon><polygon fill="#B3DDF5" points="31,22 23,32 39,32"></polygon><circle fill="#F44336" cx="38" cy="38" r="10"></circle><g fill="#fff"><rect x="36.5" y="32" transform="matrix(-.707 .707 -.707 -.707 91.74 38)" width="3" height="12"></rect><rect x="36.5" y="32" transform="matrix(-.707 -.707 .707 -.707 38 91.74)" width="3" height="12"></rect></g></svg></div></td><td class=" rounded-r-2xl border-y border-r border-white/60 bg-white/40 px-3 py-2 text-left align-middle backdrop-blur-xl transition-all duration-300 group-hover:bg-white/60 sm:px-4"><button type="button" class=" group flex h-[2.8rem] w-full items-center justify-center rounded-2xl border border-white bg-gradient-to-br from-red-500/95 to-rose-600/90 px-4 py-0 text-sm font-normal text-white backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_8px_25px_rgba(239,68,68,.45)] transition-all duration-300 hover:-translate-y-[2px] hover:border-red-300 hover:from-red-500 hover:to-rose-500 hover:shadow-[inset_0_1px_0_rgba(255,255,255,.9),0_12px_35px_rgba(239,68,68,.55)] active:scale-95 sm:w-auto"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-1 text-sm transition-all duration-500 group-hover:rotate-90 group-hover:drop-shadow-[0_0_7px_rgba(255,255,255,.8)]" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M11 14l4 -4l-4 -4"></path><path d="M16 14l4 -4l-4 -4"></path><path d="M15 10h-7a4 4 0 1 0 0 8h1"></path></svg>Click</button></td></tr></tbody></table></div><div class=" flex flex-wrap justify-center items-center gap-2 pr-3 pt-1 pb-5 "><button type="button" disabled="" title="First" class=" flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/30 backdrop-blur-xl border border-white/40 shadow-[0_8px_20px_rgba(120,120,255,.18)] text-violet-500 transition-all duration-300 hover:scale-105 hover:bg-violet-400 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:bg-white/30 disabled:hover:text-violet-500 "><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 18V6H9V18H7ZM11 12 17 6V18L11 12Z"></path></svg></button><button type="button" disabled="" title="Previous" class=" flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/30 backdrop-blur-xl border border-white/40 shadow-[0_8px_20px_rgba(120,120,255,.18)] text-blue-500 transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:bg-white/30 disabled:hover:text-blue-500 "><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z"></path></svg></button><div class="flex items-center gap-2"><button type="button" class="
+                  h-9
+                  w-9
+                  shrink-0
+                  rounded-full
+                  text-sm
+                  font-semibold
+
+                  transition-all
+                  duration-300
+
+                  
+                        bg-gradient-to-r
+                        from-blue-500
+                        to-indigo-600
+                        text-white
+                        shadow-[0_10px_30px_rgba(59,130,246,.45)]
+                        scale-110
+                      
+                ">1</button><button type="button" class="
+                  h-9
+                  w-9
+                  shrink-0
+                  rounded-full
+                  text-sm
+                  font-semibold
+
+                  transition-all
+                  duration-300
+
+                  
+                        bg-white/30
+                        backdrop-blur-xl
+                        border
+                        border-white/40
+                        text-slate-700
+
+                        hover:bg-white/50
+                        hover:scale-105
+                      
+                ">2</button><button type="button" class="
+                  h-9
+                  w-9
+                  shrink-0
+                  rounded-full
+                  text-sm
+                  font-semibold
+
+                  transition-all
+                  duration-300
+
+                  
+                        bg-white/30
+                        backdrop-blur-xl
+                        border
+                        border-white/40
+                        text-slate-700
+
+                        hover:bg-white/50
+                        hover:scale-105
+                      
+                ">3</button><span class=" px-1 text-slate-500 font-semibold ">...</span><button type="button" class="
+                  h-9
+                  w-9
+                  shrink-0
+                  rounded-full
+                  text-sm
+                  font-semibold
+
+                  transition-all
+                  duration-300
+
+                  
+                        bg-white/30
+                        backdrop-blur-xl
+                        border
+                        border-white/40
+                        text-slate-700
+
+                        hover:bg-white/50
+                        hover:scale-105
+                      
+                ">386</button></div><button type="button" title="Next" class=" flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/30 backdrop-blur border border-white/40 shadow-[0_8px_20px_rgba(120,120,255,.18)] text-blue-500 transition-all duration-300 hover:scale-105  hover:bg-blue-500  hover:text-white disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100  disabled:hover:bg-white/30  disabled:hover:text-blue-500 "><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z"></path></svg></button><button type="button" title="Last" class=" flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/30 backdrop-blur-xl border border-white/40 shadow-[0_8px_20px_rgba(120,120,255,.18)] text-violet-500 transition-all duration-300 hover:scale-105 hover:bg-violet-500 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:bg-white/30 disabled:hover:text-violet-500 "><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M17 6 17 18H15L15 6 17 6ZM13 12 7 18V6L13 12Z"></path></svg></button></div></div></div></div></div><footer class=" relative z-40 ml-[5rem] shrink-0 block lg:flex lg:items-center lg:justify-between gap-2 px-3 py-[1px] border-t border-sky-300/40 bg-gradient-to-r from-[#1b83b7] to-[#2b3a5d] text-xs text-white shadow-lg shadow-sky-500/10 backdrop-blur-md font-normal transition-all duration-200"><p class="py-1 text-center lg:text-left">A Digital India Initiative by Government of India.</p><div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 py-1"><a class="whitespace-nowrap  underline-offset-4  transition-colors hover:text-sky-200 hover:underline" href="/NPIPDashboard/siteMap">Site Map</a><span class="hidden sm:inline">|</span><p class="whitespace-nowrap text-xs font-normal">Last Update on: <span>26/10/2026, 4:00:01 pm</span></p></div><div class="flex flex-wrap items-center justify-center gap-2 py-1 lg:justify-end"><p class="text-center">Copyright © 2015 by NIC. All rights reserved.</p><img src="/NPIPDashboard/nic_logo.png" class="h-5 w-auto object-contain" alt="NIC Logo"></div></footer></div></div></body></html>

@@ -1,0 +1,288 @@
+{
+  "detectedAt": "2026-10-27T07:34:57.003Z",
+  "target": {
+    "hostname": "ecourts.gov.in",
+    "finalUrl": "https://ecourts.gov.in/ecourts2.0/"
+  },
+  "summary": {
+    "confirmed": 16,
+    "inferred": 6,
+    "unknown": 4
+  },
+  "findings": [
+    {
+      "name": "Bootstrap",
+      "category": "CSS framework",
+      "evidence": [
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/bootstrap/css/bootstrap.min.css`",
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/bootstrap/css/bootstrap-icons.css`",
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/bootstrap/js/bootstrap.bundle.min.js`",
+        "asset path `https://ecourts.gov.in/js/bootstrap.min.js`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/bootstrap/css/bootstrap.min.css`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/bootstrap/js/bootstrap.bundle.min.js`",
+        "asset path `https://ecourts.gov.in/ecourts2.0/js/bootstrap.min.js`",
+        "asset path `https://njdg.ecourts.gov.in/njdg_v3//vendor/bootstrap/css/bootstrap.min.css`"
+      ],
+      "evidenceUrl": "https://ecourts.gov.in/ecourts2.0//vendor/bootstrap/css/bootstrap.min.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Bootstrap (JS bundle)",
+      "category": "CSS framework",
+      "evidence": [
+        "`window.bootstrap` is defined on 59 captured page(s)"
+      ],
+      "evidenceUrl": "https://ecourts.gov.in/ecourts2.0/",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Bootstrap 4.",
+      "category": "CSS framework",
+      "evidence": [
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/responsive.bootstrap4.min.css`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/responsive.bootstrap4.min.js`",
+        "asset path `https://njdg.ecourts.gov.in/njdg_v3//vendor/DataTables/responsive.bootstrap4.min.css`",
+        "asset path `https://njdg.ecourts.gov.in/njdg_v3//vendor/DataTables/responsive.bootstrap4.min.js`"
+      ],
+      "evidenceUrl": "https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/responsive.bootstrap4.min.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Google Fonts",
+      "category": "font provider",
+      "evidence": [
+        "asset path `https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2`"
+      ],
+      "evidenceUrl": "https://fonts.gstatic.com/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Bootstrap Icons",
+      "category": "icon library",
+      "evidence": [
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/bootstrap/css/bootstrap-icons.css`",
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/bootstrap/css/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a`"
+      ],
+      "evidenceUrl": "https://ecourts.gov.in/ecourts2.0//vendor/bootstrap/css/bootstrap-icons.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Font Awesome",
+      "category": "icon library",
+      "evidence": [
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/fontawesome/css/all.min.css`",
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/fontawesome/webfonts/fa-solid-900.woff2`",
+        "asset path `https://justiceclock.ecourts.gov.in/justiceClock/vendor/fontawesome-free/css/all.min.css`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/fontawesome-free/css/all.min.css`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/fontawesome-free/webfonts/fa-solid-900.woff2`",
+        "asset path `https://njdg.ecourts.gov.in/njdg_v3//vendor/fontawesome-free/css/all.min.css`",
+        "asset path `https://njdg.ecourts.gov.in/njdg_v3//vendor/fontawesome-free/webfonts/fa-solid-900.woff2`"
+      ],
+      "evidenceUrl": "https://ecourts.gov.in/ecourts2.0//vendor/fontawesome/css/all.min.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Chosen (jQuery select widget)",
+      "category": "JavaScript library",
+      "evidence": [
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/css/chosen.min.css`",
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/jquery/chosen.jquery.min.js`",
+        "asset path `https://justiceclock.ecourts.gov.in/justiceClock/vendor/css/chosen.min.css`",
+        "asset path `https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/chosen.jquery.min.js`"
+      ],
+      "evidenceUrl": "https://ecourts.gov.in/ecourts2.0//vendor/css/chosen.min.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "DataTables",
+      "category": "JavaScript library",
+      "evidence": [
+        "`window.DataTable` is defined on 2 captured page(s)",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/css/rowGroup.ecourtGrid.min.css`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/responsive.bootstrap4.min.css`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/ecourtGrid.css`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/js/jquery.ecourtGrid.min.js`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/Buttons/js/ecourtGrid.buttons.min.js`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/js/ecourtGrid.rowGroup.min.js`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/DataTables/Buttons/js/buttons.html5.min.js`"
+      ],
+      "evidenceUrl": "https://njdg.ecourts.gov.in/hcnjdg_v2/",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "jQuery",
+      "category": "JavaScript library",
+      "evidence": [
+        "`window.jQuery` is defined on 59 captured page(s)",
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/jquery/jquery.min.js`",
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/jquery/chosen.jquery.min.js`",
+        "asset path `https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/jquery.min.js`",
+        "asset path `https://justiceclock.ecourts.gov.in/justiceClock/vendor/jquery/chosen.jquery.min.js`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/jquery/jquery.min.js`",
+        "asset path `https://njdg.ecourts.gov.in/njdg_v3//vendor/jquery/jquery.min.js`"
+      ],
+      "evidenceUrl": "https://ecourts.gov.in/ecourts2.0/",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "jQuery UI",
+      "category": "JavaScript library",
+      "evidence": [
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/jquery-date/jquery-ui.css`",
+        "asset path `https://ecourts.gov.in/ecourts2.0//vendor/jquery-date/js/jquery-ui.js`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/jquery-date/jquery-ui.css`",
+        "asset path `https://njdg.ecourts.gov.in/hcnjdg_v2/vendor/jquery-date/js/jquery-ui.js`",
+        "asset path `https://njdg.ecourts.gov.in/njdg_v3//vendor/jquery-date/jquery-ui.css`",
+        "asset path `https://njdg.ecourts.gov.in/njdg_v3//vendor/jquery-date/js/jquery-ui.js`"
+      ],
+      "evidenceUrl": "https://ecourts.gov.in/ecourts2.0//vendor/jquery-date/jquery-ui.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: \"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 5729 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 1213 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: \"Times New Roman\"",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 1 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: \"Titillium Web\", sans-serif",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 24 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: Helvetica, Arial, sans-serif",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 6 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: sans-serif",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 4 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "",
+      "category": "web server",
+      "evidence": [
+        "`Server: ` response header (product not recognised by this tool)"
+      ],
+      "evidenceUrl": "https://ecourts.gov.in/ecourts2.0/",
+      "confidence": "medium",
+      "status": "inferred"
+    },
+    {
+      "name": "cafe",
+      "category": "web server",
+      "evidence": [
+        "`Server: cafe` response header (product not recognised by this tool)"
+      ],
+      "evidenceUrl": "https://googleads.g.doubleclick.net/pagead/id",
+      "confidence": "medium",
+      "status": "inferred"
+    },
+    {
+      "name": "ESF",
+      "category": "web server",
+      "evidence": [
+        "`Server: ESF` response header (product not recognised by this tool)"
+      ],
+      "evidenceUrl": "https://www.youtube.com/embed/tEMUB9DnIT4",
+      "confidence": "medium",
+      "status": "inferred"
+    },
+    {
+      "name": "fife",
+      "category": "web server",
+      "evidence": [
+        "`Server: fife` response header (product not recognised by this tool)"
+      ],
+      "evidenceUrl": "https://yt3.ggpht.com/ytc/AIdro_lkyi7zTdvBy1ihrcg3dzLEry97oxZn7yYyhIOafXu8iA=s68-c-k-c0x00ffffff-no-rj",
+      "confidence": "medium",
+      "status": "inferred"
+    },
+    {
+      "name": "scaffolding on HTTPServer2",
+      "category": "web server",
+      "evidence": [
+        "`Server: scaffolding on HTTPServer2` response header (product not recognised by this tool)"
+      ],
+      "evidenceUrl": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "confidence": "medium",
+      "status": "inferred"
+    },
+    {
+      "name": "sffe",
+      "category": "web server",
+      "evidence": [
+        "`Server: sffe` response header (product not recognised by this tool)"
+      ],
+      "evidenceUrl": "https://www.youtube.com/s/player/dce23b30/www-player.css",
+      "confidence": "medium",
+      "status": "inferred"
+    }
+  ],
+  "unknowns": [
+    {
+      "item": "database product and schema",
+      "why": "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner."
+    },
+    {
+      "item": "application source code",
+      "why": "Only the publicly served HTML, CSS and JavaScript were retrieved. No source map, repository or build artifact was requested, and none should be. The replica is an independent reimplementation, not recovered source."
+    },
+    {
+      "item": "server-side language version and build tooling",
+      "why": "The server does not advertise a version header beyond what is listed above. Nothing further is publicly observable."
+    },
+    {
+      "item": "hosting provider and data-centre location",
+      "why": "Not publicly identifiable from the served responses. `.nic.in` is operated by the National Informatics Centre, but that is organisational, not a verified hosting fact."
+    }
+  ],
+  "notes": [
+    "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner."
+  ],
+  "method": "Evidence was taken from response headers, the rendered DOM, computed styles, asset paths, in-page global objects and observed network requests. Appearance and URL shape alone are recorded as `inferred`, never `confirmed`. No source map, repository, credential or private endpoint was requested."
+}

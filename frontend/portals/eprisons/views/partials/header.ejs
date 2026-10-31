@@ -1,0 +1,54 @@
+<div class="utility-bar">
+  <div class="shell utility-bar__inner">
+    <% topLinks.forEach(function (l) { %>
+      <a class="pill" href="<%= l.href %>">
+        <span class="pill__icon" aria-hidden="true"></span><%= l.label %>
+      </a>
+    <% }); %>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="brand" href="/">
+      <%- include('img/logo', { cls: 'brand__logo' }) %>
+      <span class="brand__text">
+        <span class="sr-only">National Prisons Information Portal</span>
+        <em class="brand__demo">local demo</em>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <ul class="primary-nav__list">
+        <% nav.forEach(function (item) { %>
+          <% if (item.children) { %>
+            <li class="primary-nav__item has-children">
+              <button type="button" class="primary-nav__link" aria-expanded="false">
+                <%= item.label %> <span class="caret" aria-hidden="true"></span>
+              </button>
+              <ul class="submenu">
+                <% item.children.forEach(function (c) { %>
+                  <li><a href="<%= c.href %>" <%= currentPath === c.href ? 'aria-current="page"' : '' %>><%= c.label %></a></li>
+                <% }); %>
+              </ul>
+            </li>
+          <% } else { %>
+            <li class="primary-nav__item">
+              <a class="primary-nav__link" href="<%= item.href %>"
+                 <%= currentPath === item.href ? 'aria-current="page"' : '' %>><%= item.label %></a>
+            </li>
+          <% } %>
+        <% }); %>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<% if (typeof pageTitle !== 'undefined' && pageTitle) { %>
+  <div class="page-title-bar"><div class="page-title-bar__inner"><%= pageTitle %></div></div>
+<% } %>

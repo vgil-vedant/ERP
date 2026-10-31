@@ -1,0 +1,107 @@
+<%#
+  Hand-written view for the eforensics.gov.in home page.
+
+  The generic template gets the fields and structure right but renders this
+  page as a heading list, where the original is a laid-out marketing page. The
+  geometry below is taken from the reference capture: a navy header, a purple
+  gradient hero with text on the left, a white feature panel overlapping the
+  gradient, a five-step row, and a white contact band.
+
+  The images are the ones captured from the original (original_assets/images),
+  embedded as base64 by backend/scripts/embed-eforensics-images.js and placed
+  where the original placed them. The prose is this replica's own words or a
+  captured heading.
+%>
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/static/css/custom.css">
+<%- include('../partials/header') %>
+
+<main id="main">
+  <!-- hero: text left, illustration right -->
+  <section class="ef-hero">
+    <div class="ef-hero__inner">
+      <div class="ef-hero__text">
+        <p class="ef-hero__eyebrow">Welcome</p>
+        <h1 class="ef-hero__title">Digitizing Forensic Labs for<br>Efficiency and Accuracy</h1>
+        <p class="ef-hero__lede">
+          This is a local demonstration replica of the e-Forensic portal. The original
+          describes a platform that connects forensic laboratories with police, courts
+          and other agencies. Its wording is not reproduced here.
+        </p>
+      </div>
+      <div class="ef-hero__art">
+        <%- include('../partials/img/banner', { cls: 'ef-hero__img' }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- white feature panel sitting on the gradient -->
+  <section class="ef-panel-wrap">
+    <div class="ef-panel">
+      <h2 class="ef-panel__title">Key Features</h2>
+      <div class="ef-features">
+        <% [
+          ['Automated Workflows', 'Speed up the forensic process with fully automated workflows.', 'key-feature-1'],
+          ['Seamless Data Sharing', 'Easily share reports and data with police and courts.', 'key-feature-2'],
+          ['Real-Time Dashboard', 'Stay updated on case status, report readiness, and more.', 'key-feature-3']
+        ].forEach(function (f, i) { %>
+          <div class="ef-feature <%= i === 0 ? 'ef-feature--tint' : '' %>">
+            <%- include('../partials/img/' + f[2], { cls: 'ef-feature__img' }) %>
+            <h3 class="ef-feature__title"><%= f[0] %></h3>
+            <p class="ef-feature__text"><%= f[1] %></p>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- five-step row -->
+  <section class="ef-steps">
+    <h2 class="ef-steps__title">How It Works</h2>
+    <p class="ef-steps__sub">A step-by-step process to manage and monitor forensic cases.</p>
+    <div class="ef-steps__row">
+      <% [
+        ['Login', 'Sign in to reach your dashboard and case tools.', 'step-login'],
+        ['Registration', 'Search for specific cases or reports using filters.', 'step-registration'],
+        ['Report Submission', 'Track the progress of cases and receive updates.', 'step-report-submission'],
+        ['Analyze & Track', 'Follow case status, report readiness and dispatch.', 'step-analyze-track'],
+        ['Monitor via Dashboard', 'See overall progress from start to finish.', 'step-monitor-dashboard']
+      ].forEach(function (s) { %>
+        <div class="ef-step">
+          <%- include('../partials/img/' + s[2], { cls: 'ef-step__img' }) %>
+          <h3 class="ef-step__title"><%= s[0] %></h3>
+          <p class="ef-step__text"><%= s[1] %></p>
+        </div>
+      <% }); %>
+    </div>
+  </section>
+
+  <!-- white contact band -->
+  <section class="ef-contact">
+    <div class="ef-contact__inner">
+      <h2 class="ef-contact__title">Contact Us</h2>
+      <div class="ef-contact__row">
+        <% [
+          ['Phone Number', 'Placeholder only', 'phone'],
+          ['E-Mail Address', 'Placeholder only', 'email'],
+          ['Headquarters', 'No real office is represented in this replica.', 'location'],
+          ['Other Address', 'No real office is represented in this replica.', 'location']
+        ].forEach(function (c) { %>
+          <div class="ef-contact__item">
+            <%- include('../partials/img/' + c[2], { cls: 'ef-contact__img' }) %>
+            <div>
+              <p class="ef-contact__label"><%= c[0] %></p>
+              <p class="ef-contact__value"><%= c[1] %></p>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+      <p class="ef-contact__note">
+        The original publishes real contact details here. They are deliberately not
+        copied: this replica is not a contact channel for anyone.
+      </p>
+    </div>
+  </section>
+</main>
+
+<%- include('../partials/footer') %>

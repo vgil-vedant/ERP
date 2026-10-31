@@ -1,0 +1,2156 @@
+{
+  "url": "https://pay.ecourts.gov.in/epay/static/web_info.php",
+  "finalUrl": "https://pay.ecourts.gov.in/epay/static/web_info.php",
+  "redirected": false,
+  "slug": "epay_static_web_info.php",
+  "depth": 2,
+  "via": "https://pay.ecourts.gov.in/",
+  "httpStatus": 200,
+  "crawlStatus": "captured",
+  "title": "ePay-eCourts Digital Payment",
+  "lang": "en",
+  "charset": "UTF-8",
+  "description": "",
+  "keywords": "",
+  "headings": [
+    "Web Information Manager",
+    "Useful Links",
+    "Follow Us"
+  ],
+  "headingTree": [
+    {
+      "level": 2,
+      "text": "Web Information Manager"
+    },
+    {
+      "level": 2,
+      "text": "Useful Links"
+    },
+    {
+      "level": 2,
+      "text": "Follow Us"
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [
+    "Home",
+    "About ePay",
+    "Overview",
+    "Contact",
+    "Web Information Manager",
+    "Contact Us",
+    "Terms and Conditions",
+    "Screen Reader Access",
+    "Site Map",
+    "Privacy Policy",
+    "Hyperlinking Policy",
+    "Disclaimer",
+    "Copyright Policy"
+  ],
+  "text": "इ-कमिटी, उच्चतम न्यायालय, भारत E-COMMITTEE, SUPREME COURT OF INDIA Skip to main content Accessibility options ई-पे ePay eCourts Digital Payment Home About ePay Contact Web Information Manager Name: Ms. Kaveri Designation: Member - Human Resources Department: eCommittee, Supreme Court of India Email: hr-ecommittee[at]aij[dot]gov[dot]in Useful Links Terms and Conditions Screen Reader Access Site Map Privacy Policy Hyperlinking Policy Disclaimer Copyright Policy This site is designed, hosted and maintained by National Informatics Centre (NIC) Ministry of Electronics & Information Technology, Government of India. © 2026 eCommittee Supreme Court of India. All Rights Reserved Last Updated : 07 Oct 2026 Follow Us B4",
+  "textLength": 747,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 1076
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 10,
+  "iframeCount": 0,
+  "htmlLength": 45906,
+  "forms": [
+    {
+      "index": 0,
+      "name": null,
+      "id": "frm",
+      "selector": "#frm",
+      "action": null,
+      "actionRaw": null,
+      "method": "post",
+      "enctype": null,
+      "target": null,
+      "heading": "Accessibility Tools",
+      "fieldCount": 0,
+      "fields": [],
+      "buttons": [
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Accessibility options",
+          "selector": "div.topbar:nth-of-type(1) > div.container.topbar__inner > ul.topbar__tools.list-unstyled > li.tool-menu:nth-of-type(2) > button.tool-btn",
+          "box": {
+            "x": 1206,
+            "y": 0,
+            "w": 46,
+            "h": 40
+          },
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "High Contrast",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(1) > button.a11y-tile:nth-of-type(1)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Normal Contrast",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(1) > button.a11y-tile.is-active:nth-of-type(2)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Highlight Links",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(1) > button.a11y-tile:nth-of-type(3)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Invert",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(1) > button.a11y-tile:nth-of-type(4)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Saturation",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(1) > button.a11y-tile:nth-of-type(5)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "A+ Font Size Increase",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(2) > button.a11y-tile:nth-of-type(1)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "A− Font Size Decrease",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(2) > button.a11y-tile:nth-of-type(2)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "A Normal Font",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(2) > button.a11y-tile.is-active:nth-of-type(3)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Text Spacing",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(2) > button.a11y-tile:nth-of-type(4)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Line Height",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(2) > button.a11y-tile:nth-of-type(5)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Hide Images",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(3) > button.a11y-tile:nth-of-type(1)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Big Cursor",
+          "selector": "#a11y-panel > div.a11y-grid:nth-of-type(3) > button.a11y-tile:nth-of-type(2)",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Reset all settings",
+          "selector": "#a11y-panel > button.a11y-reset",
+          "box": null,
+          "hasOnClick": false
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Menu",
+          "selector": "#frm > nav.mainnav.navbar > div.container > button.navbar-toggler",
+          "box": null,
+          "hasOnClick": false
+        }
+      ],
+      "hiddenMachinery": [],
+      "hasCaptcha": false,
+      "hasFileInput": false,
+      "visibleText": "इ-कमिटी, उच्चतम न्यायालय, भारत E-COMMITTEE, SUPREME COURT OF INDIA Skip to main content Accessibility options Accessibility Tools Color Contrast High Contrast Normal Contrast Highlight Links Invert Saturation Text Size A+ Font Size Increase A− Font Size Decrease A Normal Font Text Spacing Line Height Others Hide Images Big Cursor Reset all settings ई-पे ePay eCourts Digital Payment Menu Home About ePay Overview Contact Web Information Manager Contact Us",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 218
+      }
+    }
+  ],
+  "orphanControls": [],
+  "tables": [],
+  "components": [
+    {
+      "type": "footer",
+      "selector": "html > body > footer.login-footer",
+      "tag": "footer",
+      "classes": "login-footer",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 751,
+        "w": 1366,
+        "h": 325
+      },
+      "text": "Useful Links Terms and Conditions Screen Reader Access Site Map Privacy Policy Hyperlinking Policy Disclaimer Copyright Policy This site is designed, hosted and maintained by Natio",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(15, 87, 87)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#footer-container > div.row.topfooter",
+      "tag": "div",
+      "classes": "row topfooter p-0",
+      "id": null,
+      "box": {
+        "x": 113,
+        "y": 759,
+        "w": 1140,
+        "h": 241
+      },
+      "text": "Useful Links Terms and Conditions Screen Reader Access Site Map Privacy Policy Hyperlinking Policy Disclaimer Copyright Policy This site is designed, hosted and maintained by Natio",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "13.6px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#footer-container > div.row.topfooter > div.col-md-5.border-end:nth-of-type(1) > nav.row.contrastFiltertxt > ol.col.footerlinks",
+      "tag": "ol",
+      "classes": "col footerlinks contrastFiltertxt",
+      "id": null,
+      "box": {
+        "x": 125,
+        "y": 815,
+        "w": 450,
+        "h": 126
+      },
+      "text": "Terms and Conditions Screen Reader Access Site Map Privacy Policy Hyperlinking Policy Disclaimer Copyright Policy",
+      "childCount": 7,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "13.6px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#footer-container > div.row.topfooter > div.col-md:nth-of-type(3) > div.footerSocial-wrap",
+      "tag": "div",
+      "classes": "footerSocial-wrap",
+      "id": null,
+      "box": {
+        "x": 980,
+        "y": 775,
+        "w": 261,
+        "h": 89
+      },
+      "text": "Follow Us",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "13.6px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "body > footer.login-footer > div.container-fluid:nth-of-type(2) > div.row > div.col.text-center",
+      "tag": "div",
+      "classes": "col text-center footer-col",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 1000,
+        "w": 1366,
+        "h": 76
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px 12px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "footer.login-footer > div.container-fluid:nth-of-type(2) > div.row > div.col.text-center > ol.footerlogolist",
+      "tag": "ol",
+      "classes": "footerlogolist",
+      "id": null,
+      "box": {
+        "x": 12,
+        "y": 1001,
+        "w": 1342,
+        "h": 75
+      },
+      "text": "",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#frm > nav.mainnav.navbar",
+      "tag": "nav",
+      "classes": "mainnav navbar navbar-expand-lg",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 157,
+        "w": 1366,
+        "h": 61
+      },
+      "text": "Menu Home About ePay Overview Contact Web Information Manager Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(15, 87, 87)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "8px 0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#mainMenu",
+      "tag": "div",
+      "classes": "collapse navbar-collapse",
+      "id": "mainMenu",
+      "box": {
+        "x": 113,
+        "y": 166,
+        "w": 1140,
+        "h": 43
+      },
+      "text": "Home About ePay Overview Contact Web Information Manager Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#mainMenu > ul.navbar-nav",
+      "tag": "ul",
+      "classes": "navbar-nav",
+      "id": null,
+      "box": {
+        "x": 113,
+        "y": 166,
+        "w": 324,
+        "h": 43
+      },
+      "text": "Home About ePay Overview Contact Web Information Manager Contact Us",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#footer-container > div.row.topfooter > div.col-md-5.border-end:nth-of-type(1) > nav.row.contrastFiltertxt",
+      "tag": "nav",
+      "classes": "row contrastFiltertxt",
+      "id": null,
+      "box": {
+        "x": 125,
+        "y": 759,
+        "w": 450,
+        "h": 182
+      },
+      "text": "Useful Links Terms and Conditions Screen Reader Access Site Map Privacy Policy Hyperlinking Policy Disclaimer Copyright Policy",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "13.6px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "form",
+      "selector": "#frm",
+      "tag": "form",
+      "classes": null,
+      "id": "frm",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 218
+      },
+      "text": "इ-कमिटी, उच्चतम न्यायालय, भारत E-COMMITTEE, SUPREME COURT OF INDIA Skip to main content Accessibility options Accessibility Tools Color Contrast High Contrast Normal Contrast Highl",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "#mainMenu",
+      "tag": "div",
+      "classes": "collapse navbar-collapse",
+      "id": "mainMenu",
+      "box": {
+        "x": 113,
+        "y": 166,
+        "w": 1140,
+        "h": 43
+      },
+      "text": "Home About ePay Overview Contact Web Information Manager Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "#frm > div.topbar:nth-of-type(1) > div.container.topbar__inner > ul.topbar__tools.list-unstyled",
+      "tag": "ul",
+      "classes": "topbar__tools list-unstyled mb-0",
+      "id": null,
+      "box": {
+        "x": 1158,
+        "y": 0,
+        "w": 95,
+        "h": 40
+      },
+      "text": "Skip to main content Accessibility options Accessibility Tools Color Contrast High Contrast Normal Contrast Highlight Links Invert Saturation Text Size A+ Font Size Increase A− Fon",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "#footer-container > div.row.topfooter > div.col-md-5.border-end:nth-of-type(1) > nav.row.contrastFiltertxt > ol.col.footerlinks",
+      "tag": "ol",
+      "classes": "col footerlinks contrastFiltertxt",
+      "id": null,
+      "box": {
+        "x": 125,
+        "y": 815,
+        "w": 450,
+        "h": 126
+      },
+      "text": "Terms and Conditions Screen Reader Access Site Map Privacy Policy Hyperlinking Policy Disclaimer Copyright Policy",
+      "childCount": 7,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "13.6px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "#footer-container > div.row.topfooter > div.col-md:nth-of-type(3) > div.footerSocial-wrap > ul.socialIcons",
+      "tag": "ul",
+      "classes": "socialIcons",
+      "id": null,
+      "box": {
+        "x": 980,
+        "y": 815,
+        "w": 261,
+        "h": 49
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "13.6px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px 0px 16px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "footer.login-footer > div.container-fluid:nth-of-type(2) > div.row > div.col.text-center > ol.footerlogolist",
+      "tag": "ol",
+      "classes": "footerlogolist",
+      "id": null,
+      "box": {
+        "x": 12,
+        "y": 1001,
+        "w": 1342,
+        "h": 75
+      },
+      "text": "",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.topbar:nth-of-type(1) > div.container.topbar__inner > ul.topbar__tools.list-unstyled > li:nth-of-type(1) > a.tool-btn.noToken",
+      "tag": "a",
+      "classes": "tool-btn noToken",
+      "id": null,
+      "box": {
+        "x": 1159,
+        "y": 0,
+        "w": 46,
+        "h": 40
+      },
+      "text": "Skip to main content",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(15, 87, 87)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(15, 87, 87)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.topbar:nth-of-type(1) > div.container.topbar__inner > ul.topbar__tools.list-unstyled > li.tool-menu:nth-of-type(2) > button.tool-btn",
+      "tag": "button",
+      "classes": "tool-btn",
+      "id": null,
+      "box": {
+        "x": 1206,
+        "y": 0,
+        "w": 46,
+        "h": 40
+      },
+      "text": "Accessibility options",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(15, 87, 87)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(15, 87, 87)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#mainMenu > ul.navbar-nav > li.nav-item.dropdown:nth-of-type(2) > a.nav-link.dropdown-toggle",
+      "tag": "a",
+      "classes": "nav-link dropdown-toggle",
+      "id": null,
+      "box": {
+        "x": 193,
+        "y": 166,
+        "w": 134,
+        "h": 43
+      },
+      "text": "About ePay",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "9.6px 16px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "6.4px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#mainMenu > ul.navbar-nav > li.nav-item.dropdown:nth-of-type(3) > a.nav-link.dropdown-toggle",
+      "tag": "a",
+      "classes": "nav-link dropdown-toggle",
+      "id": null,
+      "box": {
+        "x": 330,
+        "y": 166,
+        "w": 107,
+        "h": 43
+      },
+      "text": "Contact",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "9.6px 16px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "6.4px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/flag.svg",
+      "category": "images",
+      "alt": "Indian Flag",
+      "natural": {
+        "w": 36,
+        "h": 24
+      },
+      "rendered": {
+        "x": 113,
+        "y": 8,
+        "w": 36,
+        "h": 24
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/emblem.svg",
+      "category": "images",
+      "alt": "State Emblem of India",
+      "natural": {
+        "w": 58,
+        "h": 100
+      },
+      "rendered": {
+        "x": 125,
+        "y": 49,
+        "w": 58,
+        "h": 100
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/2020052969.png",
+      "category": "images",
+      "alt": "Digital India",
+      "natural": {
+        "w": 250,
+        "h": 250
+      },
+      "rendered": {
+        "x": 1068,
+        "y": 69,
+        "w": 60,
+        "h": 60
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/2019031587.png",
+      "category": "images",
+      "alt": "Digital India",
+      "natural": {
+        "w": 127,
+        "h": 86
+      },
+      "rendered": {
+        "x": 1152,
+        "y": 69,
+        "w": 89,
+        "h": 60
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/digital-Indiawhite.svg",
+      "category": "images",
+      "alt": "Digital India External website that opens a new window",
+      "natural": {
+        "w": 113,
+        "h": 45
+      },
+      "rendered": {
+        "x": 225,
+        "y": 1011,
+        "w": 113,
+        "h": 45
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/india_gov.svg",
+      "category": "images",
+      "alt": "National Portal of India External website that opens a new window",
+      "natural": {
+        "w": 217,
+        "h": 71
+      },
+      "rendered": {
+        "x": 384,
+        "y": 1017,
+        "w": 128,
+        "h": 42
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/department-of-justice.svg",
+      "category": "images",
+      "alt": "Department of Justice External website that opens a new window",
+      "natural": {
+        "w": 117,
+        "h": 41
+      },
+      "rendered": {
+        "x": 558,
+        "y": 1013,
+        "w": 117,
+        "h": 41
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/ecommittee.svg",
+      "category": "images",
+      "alt": "e-Committee Supreme Court of India External website that opens a new window",
+      "natural": {
+        "w": 105,
+        "h": 40
+      },
+      "rendered": {
+        "x": 723,
+        "y": 1013,
+        "w": 105,
+        "h": 40
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/india-code.svg",
+      "category": "images",
+      "alt": "India Code Centre External website that opens a new window",
+      "natural": {
+        "w": 70,
+        "h": 40
+      },
+      "rendered": {
+        "x": 876,
+        "y": 1013,
+        "w": 70,
+        "h": 40
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/nic.svg",
+      "category": "images",
+      "alt": "National Informatics Centre External website that opens a new window",
+      "natural": {
+        "w": 147,
+        "h": 40
+      },
+      "rendered": {
+        "x": 994,
+        "y": 1013,
+        "w": 147,
+        "h": 40
+      },
+      "loading": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/dist/css/bootstrap.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/style.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/stylesheet.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/font-awesome.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/js/jquery.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/js/index_js.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/common_static_js.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/dist/js/bootstrap.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/images/sprite2.png",
+      "category": "images",
+      "fromCss": true,
+      "selector": "div.col.text-center > ol.footerlogolist > li.logos:nth-of-type(1) > a > img.digital-india.fooimg"
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/images/sprite2.png",
+      "category": "images",
+      "fromCss": true,
+      "selector": "div.col.text-center > ol.footerlogolist > li.logos:nth-of-type(3) > a > img.doj-logo.fooimg"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://ecommitteesci.gov.in/",
+      "raw": "https://ecommitteesci.gov.in",
+      "text": "इ-कमिटी, उच्चतम न्यायालय, भारत",
+      "title": "इ-कमिटी, उच्चतम न्यायालय, भारत - External site that opens in a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://ecommitteesci.gov.in/",
+      "raw": "https://ecommitteesci.gov.in",
+      "text": "E-COMMITTEE, SUPREME COURT OF INDIA",
+      "title": "E-COMMITTEE, SUPREME COURT OF INDIA - External site that opens in a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/index.php#main-content",
+      "raw": "/epay/index.php#main-content",
+      "text": "Skip to main content",
+      "title": "Skip to main content",
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/",
+      "raw": "/epay/",
+      "text": "ई-पे ePay eCourts Digital Payment",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://ecourts.gov.in/ecourts2.0/",
+      "raw": "https://ecourts.gov.in/ecourts2.0/",
+      "text": "",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.digitalindia.gov.in/",
+      "raw": "https://www.digitalindia.gov.in/",
+      "text": "",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/",
+      "raw": "/epay/",
+      "text": "Home",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "About ePay",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/about_us.php",
+      "raw": "about_us.php",
+      "text": "Overview",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "Contact",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/web_info.php",
+      "raw": "web_info.php",
+      "text": "Web Information Manager",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/contact_us.php",
+      "raw": "contact_us.php",
+      "text": "Contact Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/tandc.php",
+      "raw": "tandc.php",
+      "text": "Terms and Conditions",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/sr_aceess.php",
+      "raw": "sr_aceess.php",
+      "text": "Screen Reader Access",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/sitemap.php",
+      "raw": "sitemap.php",
+      "text": "Site Map",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/privacy_policy.php",
+      "raw": "privacy_policy.php",
+      "text": "Privacy Policy",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/hyperlinking_policy.php",
+      "raw": "hyperlinking_policy.php",
+      "text": "Hyperlinking Policy",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/disclaimer.php",
+      "raw": "disclaimer.php",
+      "text": "Disclaimer",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://pay.ecourts.gov.in/epay/static/copyright_policy.php",
+      "raw": "copyright_policy.php",
+      "text": "Copyright Policy",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "http://www.nic.in/",
+      "raw": "http://www.nic.in/",
+      "text": "National Informatics Centre (NIC)",
+      "title": "National Informatics Centre (NIC) External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCPMHFB1lou-P_YtErFFYjgw",
+      "raw": "https://www.youtube.com/channel/UCPMHFB1lou-P_YtErFFYjgw",
+      "text": "",
+      "title": "https://www.youtube.com/channel/UCPMHFB1lou-P_YtErFFYjgw - External site that opens in a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "http://www.digitalindia.gov.in/",
+      "raw": "http://www.digitalindia.gov.in/",
+      "text": "",
+      "title": "Digital India External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "http://www.india.gov.in/",
+      "raw": "http://www.india.gov.in/",
+      "text": "",
+      "title": "National Portal of India External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://doj.gov.in/",
+      "raw": "https://doj.gov.in/",
+      "text": "",
+      "title": "Department of Justice External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://ecommitteesci.gov.in/",
+      "raw": "https://ecommitteesci.gov.in/",
+      "text": "",
+      "title": "e-Committee Supreme Court of India External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "http://indiacode.nic.in/",
+      "raw": "http://indiacode.nic.in/",
+      "text": "",
+      "title": "India Code External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.nic.in/",
+      "raw": "https://www.nic.in/",
+      "text": "",
+      "title": "National Informatics Centre External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "count": 65
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(28, 31, 38)",
+        "count": 63
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 35
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 22
+      },
+      {
+        "value": "rgb(15, 87, 87)",
+        "count": 10
+      },
+      {
+        "value": "rgb(21, 2, 2)",
+        "count": 2
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(15, 87, 87)",
+        "count": 2
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 1
+      },
+      {
+        "value": "rgb(223, 226, 232)",
+        "count": 1
+      },
+      {
+        "value": "rgb(217, 242, 242)",
+        "count": 1
+      },
+      {
+        "value": "rgb(238, 238, 238)",
+        "count": 1
+      }
+    ],
+    "backgroundByArea": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "area": 1229400
+      },
+      {
+        "value": "rgb(15, 87, 87)",
+        "area": 527276
+      },
+      {
+        "value": "rgb(217, 242, 242)",
+        "area": 3354
+      },
+      {
+        "value": "rgb(238, 238, 238)",
+        "area": 1936
+      },
+      {
+        "value": "rgb(223, 226, 232)",
+        "area": 16
+      }
+    ],
+    "gradientsByArea": []
+  },
+  "bodyStyle": {
+    "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "fontSize": "14px",
+    "lineHeight": "21px",
+    "color": "rgb(28, 31, 38)",
+    "backgroundColor": "rgb(255, 255, 255)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": [
+      "jQuery",
+      "$",
+      "bootstrap"
+    ]
+  },
+  "responseHeaders": {
+    "connection": "Keep-Alive",
+    "content-length": "46112",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Tue, 27 Oct 2026 08:53:25 GMT",
+    "expect-ct": "max-age=3600, enforce",
+    "keep-alive": "timeout=5, max=100",
+    "referrer-policy": "strict-origin",
+    "server": "Apache",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "network": [
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/web_info.php",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html; charset=UTF-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "connection": "Keep-Alive",
+        "content-length": "46112",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Tue, 27 Oct 2026 08:53:25 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "keep-alive": "timeout=5, max=100",
+        "referrer-policy": "strict-origin",
+        "server": "Apache",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-xss-protection": "1; mode=block",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/dist/css/bootstrap.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "232063",
+        "keep-alive": "timeout=5, max=99",
+        "date": "Tue, 27 Oct 2026 08:53:16 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Fri, 24 Apr 2026 07:03:12 GMT",
+        "content-type": "text/css",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/style.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "7345",
+        "keep-alive": "timeout=5, max=98",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "text/css",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/stylesheet.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "104413",
+        "keep-alive": "timeout=5, max=97",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "text/css",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/font-awesome.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "57163",
+        "keep-alive": "timeout=5, max=96",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 05 Jan 2026 08:31:43 GMT",
+        "content-type": "text/css",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/js/jquery.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "78660",
+        "keep-alive": "timeout=5, max=95",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Tue, 10 Feb 2026 10:28:46 GMT",
+        "content-type": "text/javascript",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/js/index_js.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "40757",
+        "keep-alive": "timeout=5, max=94",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Thu, 15 Oct 2026 06:10:05 GMT",
+        "content-type": "text/javascript",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/common_static_js.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "2338",
+        "keep-alive": "timeout=5, max=93",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 10 Dec 2025 06:38:27 GMT",
+        "content-type": "text/javascript",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/flag.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "8811",
+        "keep-alive": "timeout=5, max=92",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/svg+xml",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/fonts/NotoSans-400.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13120",
+        "keep-alive": "timeout=5, max=90",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "font/woff2",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/fonts/NotoSansDevanagari-400.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "50416",
+        "keep-alive": "timeout=5, max=87",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "font/woff2",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/fonts/NotoSans-500.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13496",
+        "keep-alive": "timeout=5, max=91",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "font/woff2",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/fonts/NotoSansDevanagari-500.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "53620",
+        "keep-alive": "timeout=5, max=88",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "font/woff2",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/css/fonts/NotoSans-700.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13464",
+        "keep-alive": "timeout=5, max=89",
+        "date": "Tue, 27 Oct 2026 08:53:17 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "font/woff2",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/emblem.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "210842",
+        "keep-alive": "timeout=5, max=86",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/svg+xml",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/2020052969.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "58739",
+        "keep-alive": "timeout=5, max=85",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/png",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/2019031587.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "6778",
+        "keep-alive": "timeout=5, max=84",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/png",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/digital-Indiawhite.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "17009",
+        "keep-alive": "timeout=5, max=83",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/svg+xml",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/india_gov.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "23250",
+        "keep-alive": "timeout=5, max=81",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/svg+xml",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/department-of-justice.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "219180",
+        "keep-alive": "timeout=5, max=100",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/svg+xml",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/ecommittee.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "154930",
+        "keep-alive": "timeout=5, max=100",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/svg+xml",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/india-code.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "3103102",
+        "keep-alive": "timeout=5, max=100",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/svg+xml",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/static/images/nic.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "38739",
+        "keep-alive": "timeout=5, max=100",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Wed, 14 Oct 2026 05:55:38 GMT",
+        "content-type": "image/svg+xml",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://pay.ecourts.gov.in/epay/dist/js/bootstrap.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "text/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "expect-ct": "max-age=3600, enforce",
+        "connection": "Keep-Alive",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "60490",
+        "keep-alive": "timeout=5, max=82",
+        "date": "Tue, 27 Oct 2026 08:53:18 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Fri, 24 Apr 2026 07:03:12 GMT",
+        "content-type": "text/javascript",
+        "server": "Apache",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/epay_static_web_info.php.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/epay_static_web_info.php.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/epay_static_web_info.php.tablet.png",
+    "mobile": "reference_pages/screenshots/epay_static_web_info.php.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "throttleWaits": [],
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1213
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-27T08:53:30.573Z",
+  "pageType": "content"
+}

@@ -1,0 +1,36 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section">
+  <h1 class="section__title">What this replica does not reproduce</h1>
+  <div class="prose">
+    <p>This page is generated from <code>analysis/replication_gaps.json</code>. It is the
+    deliberate record of what was not accessible or not reproduced &mdash; nothing here is
+    papered over elsewhere in the project.</p>
+  </div>
+  <div class="table-wrap">
+    <table class="data">
+      <caption><%= gapTotal %> item(s) across <%= Object.keys(gapCounts).length %> categories.</caption>
+      <thead><tr><th scope="col">Kind</th><th scope="col" class="num">Count</th><th scope="col">What it means</th></tr></thead>
+      <tbody>
+        <% Object.keys(gapCounts).forEach(function (k) { %>
+          <tr><th scope="row"><code><%= k %></code></th>
+              <td class="num"><%= gapCounts[k] %></td>
+              <td><%= gapMeanings[k] || '—' %></td></tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <h3>Always out of scope</h3>
+    <ul>
+      <li>Anything behind a login. Authenticated areas were never accessed.</li>
+      <li>Anything behind a CAPTCHA. None was reproduced, solved or bypassed; this
+      demonstration asks a simple arithmetic question instead.</li>
+      <li>The original's database, source code and server behaviour, none of which a public
+      frontend exposes.</li>
+      <li>The original's success, validation and error states: no form was ever submitted to
+      it, so those were never observed and are not guessed at.</li>
+    </ul>
+  </div>
+</section></div></main>
+<%- include('../partials/footer') %>

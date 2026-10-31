@@ -1,0 +1,1037 @@
+/* =========================================================
+   UNIVERSAL ACCESSIBILITY CSS (WCAG AA)
+   Works with Bootstrap + Chosen + Forms + Tables
+   ========================================================= */
+
+
+/* =========================
+   1. GLOBAL FOCUS STYLE
+   ========================= */
+
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid #000000 !important;   /* Strong contrast */
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px #FFD54F !important; /* Yellow glow */
+}
+
+
+/* =========================
+   2. BUTTON FOCUS
+   ========================= */
+
+.btn:focus, 
+.btn:focus-visible,
+button:focus,
+button:focus-visible,
+a.btn:focus,
+a.btn:focus-visible {
+    outline: 3px solid #000 !important;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px #FFD54F !important;
+}
+
+
+/* =========================
+   3. INPUT / SELECT / TEXTAREA
+   ========================= */
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #2B6CB0 !important;   /* Accessible blue */
+    outline-offset: 2px;
+    box-shadow: none !important;
+}
+
+
+/* =========================
+   4. CHOSEN DROPDOWN FIX
+   ========================= */
+
+.chosen-container-active .chosen-single,
+.chosen-container-active .chosen-choices {
+    outline: 2px solid #2B6CB0 !important;
+    outline-offset: 2px;
+    box-shadow: none !important;
+}
+
+.chosen-container .chosen-single:focus {
+    outline: 2px solid #2B6CB0 !important;
+}
+
+
+/* =========================
+   5. LINK FOCUS
+   ========================= */
+
+a:focus,
+a:focus-visible {
+    outline: 2px dashed #000;
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   6. FORM REQUIRED ASTERISK
+   ========================= */
+
+.text-danger,
+.required-star {
+    color: #B00020 !important;  /* WCAG compliant red */
+}
+
+
+/* =========================
+   7. HEADING VISUAL CONSISTENCY
+   (Keeps headings small but semantic)
+   ========================= */
+
+h1.h6, h2.h6, h3.h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/* =========================
+   8. TABLE FOCUS / HOVER
+   ========================= */
+
+table tr:focus-within {
+    outline: 2px solid #000;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* =========================
+   9. PAGINATION FOCUS
+   ========================= */
+
+.pagination a:focus,
+.pagination span:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   10. MODAL FOCUS VISIBILITY
+   ========================= */
+
+.modal:focus,
+.modal *:focus-visible {
+    outline: 2px solid #000;
+}
+
+
+/* =========================
+   11. DATEPICKER FOCUS
+   ========================= */
+
+.ui-datepicker-calendar a:focus {
+    outline: 2px solid #000 !important;
+    background: #FFD54F !important;
+}
+
+
+/* =========================
+   12. HR / DECORATIVE ELEMENTS
+   ========================= */
+
+hr {
+    border-top: 1px solid #ccc;
+}
+
+
+/* =========================
+   13. VISUALLY HIDDEN (ACCESSIBLE)
+   ========================= */
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* =========================
+   14. ERROR MESSAGE CONTRAST
+   ========================= */
+
+label.error,
+.error {
+    color: #ff0000 !important;
+    font-weight: 600;
+}
+
+
+/* =========================
+   15. DISABLED FIELD VISIBILITY
+   ========================= */
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    background: #f1f1f1 !important;
+    color: #555 !important;
+}
+
+
+/* =========================
+   END
+   ========================= */
+
+
+/* Fix for labels, placeholders and helper text contrast */
+label,
+.form-label,
+.sectionInput::placeholder,
+::placeholder,
+.small,
+.help-text,
+.text-muted {
+    color: #484848 !important;   /* Contrast  5.2:1  */
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #53595F !important;
+  
+  }
+  
+  
+  /* Accessible DataTable header contrast fix */
+
+table.dataTable thead th.sorting,
+table.dataTable thead th.sorting_asc,
+table.dataTable thead th.sorting_desc {
+    background-color: #0b7f8f !important;
+    color: #ffffff !important;
+}
+
+/***************************************************ABOVE CSS STYLE FROM CHAT GPT FOR SUGAMY CONTARST ISSUE***********/
+#userDropdown span {color: #fff !important;}
+.alert{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+
+.menu_heading{
+	font-style: italic;
+	font-weight: bold;
+	color: #4677bd;
+}
+.menu_heading h3{
+font-weight: bold;
+	font-size:1.2rem;
+	margin-bottom:0;
+}
+.loader {
+  position: relative;
+  text-align: center;
+  margin: 15px auto 35px auto;
+  z-index: 9999;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+	border-top: 16px solid #3498db;
+ -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.justify-content-center{
+	margin : auto !important;
+}
+#mainContainer{
+    background:#ececec;
+    padding-top:5px;
+  }
+
+  #mainContainer1{
+
+    padding-top:5px;
+  }
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.wizard,
+.tabcontrol {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+	font-size:.9rem
+}
+
+.wizard a,
+.tabcontrol a {
+    outline: 0
+}
+
+.wizard ul,
+.tabcontrol ul {
+    list-style: none!important;
+    padding: 0;
+    margin: 0
+}
+
+.wizard ul>li,
+.tabcontrol ul>li {
+    display: block;
+    padding: 0
+}
+
+.wizard>.steps .current-info,
+.tabcontrol>.steps .current-info {
+    position: absolute;
+    left: -999em
+}
+
+.wizard>.content>.title,
+.tabcontrol>.content>.title {
+    position: absolute;
+    left: -999em
+}
+
+.wizard>.steps {
+    position: relative;
+    display: block;
+    width: 100%
+}
+
+.wizard.vertical>.steps {
+    display: inline;
+    float: left;
+    width: 20%
+}
+
+.wizard>.steps .number {
+    font-size: 1em
+}
+
+.wizard>.steps>ul>li {
+    width: auto;
+	font-size:.9rem;
+}
+
+.wizard>.steps>ul>li,
+.wizard>.actions>ul>li {
+    float: left
+}
+
+.wizard.vertical>.steps>ul>li {
+    float: none;
+    width: 100%
+}
+ 
+.wizard>.steps a:before {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    left: 100%;
+    border-left: 13px solid #adabc3;
+}
+.wizard>.steps a:after {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    right: 100%;
+    border-left: 13px solid #f2f4f8;
+    background:#adabc3;
+}
+
+.wizard>.steps a,
+.wizard>.steps a:hover,
+.wizard>.steps a:active {
+    display: block;
+    width: auto;
+    margin: 0 .9em;
+    text-decoration: none;
+	 position: relative;
+    height: 26px;
+	color:#fff;
+    background-color: #ADABC3;
+}
+
+.wizard>.steps .disabled a:before {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    left: 100%;
+    border-left: 13px solid #adabc3;
+}
+.wizard>.steps .disabled a:after {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    right: 100%;
+    border-left: 13px solid #f2f4f8;
+    background:#adabc3;
+}
+
+.wizard>.steps .disabled a,
+.wizard>.steps .disabled a:hover,
+.wizard>.steps .disabled a:active {
+    background: #adabc3;
+    color: #fff;
+    cursor: default
+}
+
+.wizard>.steps .current a:before {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    left: 100%;
+    border-left: 13px solid #222034 !important;
+}
+.wizard>.steps .current a:after {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    right: 100%;
+    border-left: 13px solid #f2f4f8 !important;
+    background:#222034 !important;
+}
+
+.wizard>.steps .current a,
+.wizard>.steps .current a:hover,
+.wizard>.steps .current a:active {
+    background: #222034 !important;
+    color: #fff;
+    cursor: default
+}
+
+
+
+.wizard>.steps .done a:before {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    left: 100%;
+    border-left: 13px solid #56b45a;
+}
+.wizard>.steps .done a:after {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    right: 100%;
+    border-left: 13px solid #f2f4f8 !important;
+    background:#56b45a !important;
+}
+
+
+.wizard>.steps .done a,
+.wizard>.steps .done a:hover,
+.wizard>.steps .done a:active {
+    background: #56b45a;
+    color: #fff
+}
+
+
+
+.wizard>.steps .error a:before {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    left: 100%;
+    border-left: 13px solid #222034;
+}
+.wizard>.steps .error a:after {
+    content:" ";
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    right: 100%;
+    border-left: 13px solid #f2f4f8;
+    background:#222034;
+}
+.wizard>.steps .error a,
+.wizard>.steps .error a:hover,
+.wizard>.steps .error a:active {
+    background: #222034;
+    color: #fff
+}
+.tab-pane{
+	color: #514d6a !important;
+	background: #fff !important;
+}
+
+.tab-done {
+background: #56b45a !important;
+}
+
+
+/*.steps{
+	background: #222034;
+}*/
+.wizard>.content {
+    background: #fff;
+    display: block;
+    margin: .5em;
+    min-height: 35em;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	border-color:#9dc7ca;;
+	border-width: 1px; /* this allows you to adjust the thickness */
+	border-style: solid;
+}
+
+.wizard.vertical>.content {
+    display: inline;
+    float: left;
+    margin: 0 2.5% .5em 2.5%;
+    width: 75%
+}
+
+.wizard>.content>.body {
+    float: left;
+    position: absolute;
+    width: 100%;
+    height:95%;
+    padding:5px 10px;
+    overflow-y: auto;
+
+}
+
+.wizard>.content>.body ul {
+    list-style: disc!important
+}
+
+.wizard>.content>.body ul>li {
+    display: list-item
+}
+
+.wizard>.content>.body>iframe {
+    border: 0 none;
+    width: 100%;
+    height: 100%
+}
+
+.wizard>.content>.body input {
+    display: inline-block;
+    border: 1px solid #ccc
+}
+
+.wizard>.content>.body input[type="checkbox"] {
+    display: inline-block
+}
+
+.wizard>.content>.body input.error {
+    background: #fbe3e4;
+    border: 1px solid #fbc2c4;
+    color: #8a1f11
+}
+
+.wizard>.content>.body label {
+    display: inline-block;
+    margin-bottom: .5em
+}
+
+.wizard>.content>.body label.error {
+    color: #8a1f11;
+    display: inline-block;
+    margin-left: 1.5em
+}
+
+.wizard>.actions {
+    position: relative;
+    display: block;
+    text-align: right;
+    width: 100%
+}
+
+.wizard.vertical>.actions {
+    display: inline;
+    float: right;
+    margin: 0 2.5%;
+    width: 95%
+}
+
+.wizard>.actions>ul {
+    display: inline-block;
+    text-align: right
+}
+
+.wizard>.actions>ul>li {
+    margin: 0 .5em
+}
+
+.wizard.vertical>.actions>ul>li {
+    margin: 0 0 0 1em
+}
+
+.wizard>.actions a,
+.wizard>.actions a:hover,
+.wizard>.actions a:active {
+    background: #2184be;
+    color: #fff;
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px
+}
+
+.wizard>.actions .disabled a,
+.wizard>.actions .disabled a:hover,
+.wizard>.actions .disabled a:active {
+    background: #eee;
+    color: #aaa
+}
+
+
+
+.clearfix {
+    *zoom: 1
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.clearfix:after {
+    clear: both
+}
+.csPetition div.row{
+  padding:2px 5px; 
+}
+.csPetition div.col-sm-2, .csPetition32 div.col-sm-2  {
+    text-align: right;
+    font-weight:500;
+}
+.csPetition input[type="text"],.csPetition textarea,.csPetition select, .chosen-drop{
+  border: none;
+  outline: none;
+  width: 100%;
+  min-height:32px !important;
+  color:#514d6a;
+  border: 1px solid #aaa;
+	box-shadow: 0 1px 0 #fff inset;
+	border-radius:3px;
+	padding-left:5px;
+	font-family: "PT Sans", sans-serif;
+	border-color: #aaa;
+	color: #74708d;
+/*background:#F8F9F9;*/
+}
+
+#Petitioner_section div.row{
+  padding:2px 5px; 
+}
+#Petitioner_section div.col-sm-2, #Petitioner_section32 div.col-sm-2  {
+    text-align: right;
+    font-weight:500;
+}
+#Petitioner_section input[type="text"],#Petitioner_section textarea,#Petitioner_section select, .chosen-drop{
+  border: none;
+  outline: none;
+  width: 100%;
+  min-height:32px !important;
+  color:#514d6a;
+  border: 1px solid #aaa;
+	box-shadow: 0 1px 0 #fff inset;
+	border-radius:3px;
+	padding-left:5px;
+	font-family: "PT Sans", sans-serif;
+	border-color: #aaa;
+	color: #74708d;
+/*background:#F8F9F9;*/
+}
+
+.csPetition input[type="text"]:hover,.csPetition input[type="text"]:active,.csPetition input[type="text"]:focus,.csPetition textarea:hover,.csPetition textarea:active,.csPetition textarea:focus,
+.csPetition select:hover,.csPetition select:active,.csPetition select:focus{
+  border: 1px solid #aaa;
+}
+
+
+#Petitioner_section input[type="text"]:hover,#Petitioner_section input[type="text"]:active,#Petitioner_section input[type="text"]:focus,#Petitioner_section textarea:hover,#Petitioner_section textarea:active,#Petitioner_section textarea:focus,
+#Petitioner_section select:hover,#Petitioner_section select:active,#Petitioner_section select:focus{
+  border: 1px solid #aaa;
+}
+
+.StateDistEst{
+background: transparent !important;
+border: none !important;
+}
+.StateDistEst select{
+  background: #e1e1e1;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #555;
+  width: 100%;
+  height: 35px;
+}
+nav.bg-dark {
+    background-color: #0089eb!important;
+}
+.mainTabUl li a {
+  color: #1f7a4a;
+  font-weight: bold;
+}
+
+.mainTabUl li a:hover,
+.mainTabUl li a:focus {
+  color: #155d3b;   /* darker for interaction */
+  outline: 2px solid #155d3b;
+  outline-offset: 2px;
+}
+
+.mainTabUl li.active a {
+  color: #0f4d2f;   /* strongest contrast */
+}
+.tab-content>.active {
+      border: 1px solid transparent;
+    border-color: #fff #dee2e6  #dee2e6 !important;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.eCourtsLabel{
+    font-size: 30px;color: #6cc47f;font-weight: bold;
+    /*text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);*/
+	line-height:.5em;
+}
+.PDELabel{
+    font-size: 25px;color: #1579c0;font-weight:bold;
+   /* text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);*/
+}
+#mainHeader{
+    /*background: #fff url('../images/sub-bg-banner.png') no-repeat right;*/
+	height:45px;
+}
+.radioLabel{
+    font-weight: 500;
+}
+
+/*---------------------- media query-------------------*/
+
+@media only screen and (max-width: 600px){
+    .eCourtsLabel{
+    font-size:22px;color: #6cc47f;font-weight: bold;
+}
+.PDELabel{
+    font-size: 15px;color: #1579c0;font-weight:bold;font-style: italic;
+}
+#mainHeader .col-4{
+    padding: 0 !important;
+}
+.StateDistEst select{
+  margin-bottom:5px;
+}
+.csPetition div.col-sm-2 {
+    text-align: left;
+    font-weight: 500;
+}
+
+#Petitioner_section div.col-sm-2 {
+    text-align: left;
+    font-weight: 500;
+}
+
+.radioLabel{
+    display:inline-block;
+}
+
+}
+
+@media(max-width:600px) {
+    .wizard>.steps>ul>li {
+        width: 50%
+    }
+    .wizard>.steps a,
+    .wizard>.steps a:hover,
+    .wizard>.steps a:active {
+        margin-top: .5em
+    }
+    .wizard.vertical>.steps,
+    .wizard.vertical>.actions {
+        display: block;
+        float: none;
+        width: 100%
+    }
+    .wizard.vertical>.content {
+        display: block;
+        float: none;
+        margin: 0 .5em .5em;
+        width: auto
+    }
+}
+
+@media(max-width:480px) {
+    .wizard>.steps>ul>li {
+        width: 100%
+    }
+}
+
+.loginBG{
+    background:#192933 url("../images/bg-2.png") left top no-repeat;
+}
+
+.loginDiv{
+    background: #fff;
+    padding: 0;
+    max-width: 320px;
+}
+
+.loginHeaderDiv{
+    background: #f3f3f3;color: #555;padding:10px;font-weight: bold;
+}
+
+.loginFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: transparent;
+}
+.dtPicker{width:94% !important;padding-right: 32px;margin-right: 1%;}
+
+.req {color:#AD0000}
+
+.nav-link {
+    display: block;
+    padding: .2rem 0.5rem !important;
+}
+
+.disabledtab
+{
+  pointer-events: none;
+
+  /* for "disabled" effect */
+  opacity: 0.5;
+  background: #000;
+}
+.langDivider{
+	text-align:center;
+	border-top:1px solid #ccc;
+	padding-top:5px;
+	margin-top:5px;
+}
+
+.langDivider b{
+	color:#934106 !important;
+}
+
+
+.StateDistEst label{
+	color:#fff;
+	font-weight:bold;
+	font-size:.8rem;
+}
+.StateDistEst div{
+	padding:0 3px;
+}
+
+
+#mainContainer #selRePrintPde_chosen   {width:500px !important}
+#mainContainer #selectboxPdeno_chosen  {width:500px !important}
+
+.sectionInput {
+     width: 100% !important;
+	  max-width:250px !important;
+    box-sizing: border-box;
+border:1px solid #000000;
+}
+
+.aaa #fpet_salutation_chosen{
+	width:80px !important;
+}
+.aaa #fpet_father_flag_chosen{
+	width:120px !important;
+}
+
+.aaa #fres_salutation_chosen{
+	width:80px !important;
+}
+.aaa #fres_father_flag_chosen{
+width:120px !important;
+}
+
+.aaa #ffir_type_chosen{
+width:120px !important;
+}
+
+.aaa #ffir_type_code_chosen{
+width:120px !important;
+}
+
+.aaa #fextra_salutation_chosen{
+width:80px !important;
+}
+
+.aaa #fextra_father_flag_chosen{
+width:120px !important;
+}
+
+.aaa #fextra_caste_chosen{
+width:120px !important;
+}
+
+.aaa  #fextra_salutation_lh_chosen{
+width:80px !important;
+}
+
+.aaa #fextra_father_flag_lh_chosen{
+width:120px !important;
+}
+
+.aaa #fextra_caste_lh_chosen{
+width:120px !important;
+}
+
+#dvSubmittedPDE{margin:20px; padding:20px; background:#fff !important; height:90%; border-radius:5px ; border: 1px solid #9DC7CA}
+
+.ReprintPDE{margin:15px !important; padding:20px; background:#fff !important; height:90%; border-radius:5px ; border: 1px solid #9DC7CA; font-size:.9rem}
+
+.cslbl {}
+
+.redStar {
+	color:#AD0000;
+	font-size: 13px;
+	margin-right:1px;
+}
+
+.alert-success {
+    color: #3c763d;
+   /* background-color: #dff0d8;
+    border-color: #d6e9c6;*/
+    background-color: white;
+    border-color: white;
+}
+.title{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:19px;
+	color:#4c859e;
+	}
+	.red{ color:#FF0000;}
+	tr.tr_pet > td {color: #304e59;}
+	.content {color: ##242426; padding-left:2px  !important; font-weight:normal !important;}
+
+.alert-success-cust {
+    color: #155724 !important;
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+}
+.alert-danger-cust {
+    color: #721c24 !important;
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+}
+#validateError .modal-dialog {
+  max-width: 600px!important;
+}
+	
+	.title{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:19px;
+	color:#4c859e;
+	}
+	.red{ color:#FF0000;}
+	
+	span.csHeader {color: #304e59;}
+	.csData {color: #242426; padding-left:2px; font-weight:normal;}
+	.tblParty td, .tblParty th {padding: 5px !important}
+
+.nav-tabs .nav-link.disabled {
+    color: #000 !important;
+   /* background-color: #eae2e2 !important;*/
+    border-color: #e6d2d2 !important;
+}
+
+
+.nav-tabs .nav-link.disabled.active{
+    color: #ffffff !important;
+}
+
+.tab_note {
+    color: #db2323;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+ 
+
+  #dropdown_content10_length .chosen-container {width:100px !important}
+
+ 
+.text-primary {
+    color: #035191!important;
+}

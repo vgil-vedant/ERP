@@ -1,0 +1,72 @@
+/* ---------------------------------------------------------------------------
+   Design tokens for the eforensics.gov.in local demonstration replica.
+
+   These values are MEASURED from the original's computed styles during the
+   crawl (see the colour and font tables in reference_pages/page_metadata/).
+   They are written here as tokens so the replica can be compared against the
+   reference screenshots, and so base.css stays site-agnostic.
+
+   The page background is the colour that covers the most AREA on the original,
+   not the one used by the most elements -- a full-bleed gradient is one element
+   and a nav bar may be thirty. Measured page background share here: 0.651.
+
+   The original's emblems and logos are NOT reproduced; a neutral placeholder
+   mark stands in.
+--------------------------------------------------------------------------- */
+
+:root {
+  --brand:      #00143c;
+  --accent:     #703fe8;
+  --title-bar:  #703fe8;
+  --link:       #703fe8;
+  --footer-bg:  #061242;
+  --footer-text:#c7d0d4;
+  --mark-bg:    #00143c;
+
+  --tile-a:     #00143c;
+  --tile-b:     #703fe8;
+  --tile-c:     #061242;
+
+  --body-text:  #f2f5f7;
+  --muted:      #aebac1;
+  --rule:       rgba(255,255,255,.22);
+  --page-bg:    #7887f3;
+  --header-bg:  #00143c;
+  --header-fg:  #ffffff;
+  --panel-bg:   rgba(255,255,255,.08);
+  --input-bg:   #ffffff;
+  --surface:    rgba(255,255,255,.10);
+
+  --demo-amber:    #8a5a00;
+  --demo-amber-bg: #fff4d6;
+  --ok:            #1d6f42;
+  --ok-bg:         #e6f4ea;
+  --err:           #a3281f;
+  --err-bg:        #fdeceb;
+
+  --font:    "Times New Roman", Times, "Liberation Serif", serif;   /* e-Forensics only: Times New Roman; Liberation Serif is the metric-compatible stand-in on systems without it */
+  --fs-base: 14px;
+  --lh-base: 21px;
+  --shell:   1206px;
+}
+
+/* The original has no dark theme. These keep the demo legible if the viewer's
+   OS is dark, without claiming to mirror anything upstream. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
+    --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
+    --link: #7fb6e4; --footer-text: #b4bfc4;
+    --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
+    --ok-bg: #14301f; --ok: #7fd8a0;
+    --err-bg: #3a1a17; --err: #f09a90;
+  }
+}
+:root[data-theme="dark"] {
+  --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
+  --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
+  --link: #7fb6e4; --footer-text: #b4bfc4;
+  --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
+  --ok-bg: #14301f; --ok: #7fd8a0;
+  --err-bg: #3a1a17; --err: #f09a90;
+}

@@ -1,0 +1,558 @@
+{
+  "generatedAt": "2026-10-27T09:33:32.120Z",
+  "baseUrl": "http://127.0.0.1:4175",
+  "method": "Each replica route was rendered in Chromium at the same three viewports used for the reference capture, screenshotted full-page, and compared pixel by pixel with pixelmatch (threshold 0.18, anti-aliasing ignored). Images of differing height are padded to a common canvas, so a longer or shorter page counts as a difference rather than being cropped away. Comparison height is capped at 6000px.",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1366,
+      "height": 900
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "tolerance": 0.12,
+  "counts": {
+    "routesCompared": 3,
+    "comparable": 3,
+    "withinTolerance": 0,
+    "outsideTolerance": 3,
+    "replicaRoutesWithConsoleErrors": 1,
+    "replicaRoutesWithFailedRequests": 1
+  },
+  "rawDesktopDifferenceRatio": {
+    "mean": 0.3522,
+    "note": "Measured with the replica's demonstration banner left in place, so every row below it is displaced relative to the original. Reported for completeness; the banner-aligned figure below is the better measure of layout fidelity."
+  },
+  "desktopDifferenceRatio": {
+    "mean": 0.3302,
+    "median": 0.2851,
+    "best": 0.1922,
+    "worst": 0.5133
+  },
+  "expectedDifferences": [
+    "A demonstration banner runs across the top of every replica page. The original has no such banner, so every page differs by that strip and everything below it is displaced downwards.",
+    "The official NPIP wordmark, the National Emblem and the NIC logo are replaced by a neutral placeholder mark, deliberately, so the replica cannot be mistaken for the official service.",
+    "The home page hero on the original is a photographic carousel. The replica uses a flat gradient: the photograph is government material that is not ours to redistribute.",
+    "Figures differ because the replica reports its own synthetic database, not the original's live statistics.",
+    "The original renders its select controls through the Chosen jQuery widget. The replica uses native selects, which the browser paints differently."
+  ],
+  "honesty": "These are measured pixel ratios from the images in reference_pages/screenshots/ and replica_screenshots/, with the diffs in comparison/. No similarity figure in this project is asserted without one of these measurements behind it, and no page is claimed to match the original exactly.",
+  "routes": [
+    {
+      "slug": "centercitizen_login.htm",
+      "demoBannerHeightPx": 36,
+      "route": "/login.htm",
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/login.htm",
+      "pageType": "login",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 73
+        },
+        "nav": {
+          "x": 954,
+          "y": 56,
+          "w": 316,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 663,
+          "w": 1366,
+          "h": 1350
+        },
+        "footer": {
+          "x": 0,
+          "y": 2053,
+          "w": 1366,
+          "h": 238
+        },
+        "firstForm": {
+          "x": 16,
+          "y": 811,
+          "w": 440,
+          "h": 742
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 109,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 2291
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1396,
+          "height": 2290,
+          "referenceSize": {
+            "w": 1396,
+            "h": 1865
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 2290
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 425,
+          "heightDeltaExcludingBanner": 389,
+          "raw": {
+            "differingPixels": 1564135,
+            "totalPixels": 3196840,
+            "differenceRatio": 0.4893,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 1615148,
+            "totalPixels": 3146584,
+            "differenceRatio": 0.5133,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_login.htm.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.5133,
+          "similarity": 0.4867,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_login.htm.desktop.png",
+          "replicaImage": "replica_screenshots/centercitizen_login.htm.desktop.png",
+          "diffImage": "comparison/centercitizen_login.htm.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 798,
+          "height": 2501,
+          "referenceSize": {
+            "w": 798,
+            "h": 1692
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 2501
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 809,
+          "heightDeltaExcludingBanner": 773,
+          "raw": {
+            "differingPixels": 1003098,
+            "totalPixels": 1995798,
+            "differenceRatio": 0.5026,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 1023777,
+            "totalPixels": 1967070,
+            "differenceRatio": 0.5205,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_login.htm.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.5205,
+          "similarity": 0.4795,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_login.htm.tablet.png",
+          "replicaImage": "replica_screenshots/centercitizen_login.htm.tablet.png",
+          "diffImage": "comparison/centercitizen_login.htm.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2800,
+          "referenceSize": {
+            "w": 390,
+            "h": 1656
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2800
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1144,
+          "heightDeltaExcludingBanner": 1108,
+          "raw": {
+            "differingPixels": 460713,
+            "totalPixels": 1092000,
+            "differenceRatio": 0.4219,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 458569,
+            "totalPixels": 1077960,
+            "differenceRatio": 0.4254,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_login.htm.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.4254,
+          "similarity": 0.5746,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_login.htm.mobile.png",
+          "replicaImage": "replica_screenshots/centercitizen_login.htm.mobile.png",
+          "diffImage": "comparison/centercitizen_login.htm.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.5133,
+      "desktopRawDifferenceRatio": 0.4893
+    },
+    {
+      "slug": "centercitizen_feedback.htm",
+      "demoBannerHeightPx": 36,
+      "route": "/feedback.htm",
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/feedback.htm",
+      "pageType": "contact",
+      "replicaStatus": 200,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 73
+        },
+        "nav": {
+          "x": 954,
+          "y": 56,
+          "w": 316,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 143,
+          "w": 1366,
+          "h": 1214
+        },
+        "footer": {
+          "x": 0,
+          "y": 1397,
+          "w": 1366,
+          "h": 238
+        },
+        "firstForm": {
+          "x": 96,
+          "y": 273,
+          "w": 1174,
+          "h": 860
+        },
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": {
+          "x": 0,
+          "y": 109,
+          "w": 1366,
+          "h": 34
+        },
+        "document": {
+          "w": 1366,
+          "h": 1635
+        }
+      },
+      "consoleIssues": [],
+      "failedRequests": [],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 1635,
+          "referenceSize": {
+            "w": 1366,
+            "h": 1065
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 1635
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 570,
+          "heightDeltaExcludingBanner": 534,
+          "raw": {
+            "differingPixels": 512488,
+            "totalPixels": 2233410,
+            "differenceRatio": 0.2295,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 419897,
+            "totalPixels": 2184234,
+            "differenceRatio": 0.1922,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_feedback.htm.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.1922,
+          "similarity": 0.8078,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_feedback.htm.desktop.png",
+          "replicaImage": "replica_screenshots/centercitizen_feedback.htm.desktop.png",
+          "diffImage": "comparison/centercitizen_feedback.htm.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1983,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1983
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 959,
+          "heightDeltaExcludingBanner": 923,
+          "raw": {
+            "differingPixels": 378230,
+            "totalPixels": 1522944,
+            "differenceRatio": 0.2484,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 349885,
+            "totalPixels": 1495296,
+            "differenceRatio": 0.234,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_feedback.htm.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.234,
+          "similarity": 0.766,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_feedback.htm.tablet.png",
+          "replicaImage": "replica_screenshots/centercitizen_feedback.htm.tablet.png",
+          "diffImage": "comparison/centercitizen_feedback.htm.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 2876,
+          "referenceSize": {
+            "w": 390,
+            "h": 1149
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 2876
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 1727,
+          "heightDeltaExcludingBanner": 1691,
+          "raw": {
+            "differingPixels": 298972,
+            "totalPixels": 1121640,
+            "differenceRatio": 0.2665,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 276258,
+            "totalPixels": 1107600,
+            "differenceRatio": 0.2494,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_feedback.htm.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.2494,
+          "similarity": 0.7506,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_feedback.htm.mobile.png",
+          "replicaImage": "replica_screenshots/centercitizen_feedback.htm.mobile.png",
+          "diffImage": "comparison/centercitizen_feedback.htm.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.1922,
+      "desktopRawDifferenceRatio": 0.2295
+    },
+    {
+      "slug": "centercitizen_logout",
+      "demoBannerHeightPx": 36,
+      "route": "/logout",
+      "originalUrl": "https://www.digitalpolicecitizenservices.gov.in/centercitizen/logout",
+      "pageType": "error",
+      "replicaStatus": 404,
+      "replicaError": null,
+      "geometry": {
+        "header": {
+          "x": 0,
+          "y": 36,
+          "w": 1366,
+          "h": 73
+        },
+        "nav": {
+          "x": 954,
+          "y": 56,
+          "w": 316,
+          "h": 32
+        },
+        "main": {
+          "x": 0,
+          "y": 109,
+          "w": 1366,
+          "h": 230
+        },
+        "footer": {
+          "x": 0,
+          "y": 379,
+          "w": 1366,
+          "h": 238
+        },
+        "firstForm": null,
+        "firstTable": null,
+        "demoBanner": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 36
+        },
+        "pageTitleBar": null,
+        "document": {
+          "w": 1366,
+          "h": 900
+        }
+      },
+      "consoleIssues": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "failedRequests": [
+        {
+          "url": "http://127.0.0.1:4175/logout",
+          "failure": "HTTP 404"
+        }
+      ],
+      "viewports": {
+        "desktop": {
+          "comparable": true,
+          "width": 1366,
+          "height": 900,
+          "referenceSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "replicaSize": {
+            "w": 1366,
+            "h": 900
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 415197,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.3377,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 350554,
+            "totalPixels": 1229400,
+            "differenceRatio": 0.2851,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_logout.desktop.diff.aligned.png"
+          },
+          "differenceRatio": 0.2851,
+          "similarity": 0.7149,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_logout.desktop.png",
+          "replicaImage": "replica_screenshots/centercitizen_logout.desktop.png",
+          "diffImage": "comparison/centercitizen_logout.desktop.diff.png",
+          "withinTolerance": false
+        },
+        "tablet": {
+          "comparable": true,
+          "width": 768,
+          "height": 1024,
+          "referenceSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "replicaSize": {
+            "w": 768,
+            "h": 1024
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 0,
+          "heightDeltaExcludingBanner": -36,
+          "raw": {
+            "differingPixels": 334282,
+            "totalPixels": 786432,
+            "differenceRatio": 0.4251,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 330092,
+            "totalPixels": 786432,
+            "differenceRatio": 0.4197,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_logout.tablet.diff.aligned.png"
+          },
+          "differenceRatio": 0.4197,
+          "similarity": 0.5803,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_logout.tablet.png",
+          "replicaImage": "replica_screenshots/centercitizen_logout.tablet.png",
+          "diffImage": "comparison/centercitizen_logout.tablet.diff.png",
+          "withinTolerance": false
+        },
+        "mobile": {
+          "comparable": true,
+          "width": 390,
+          "height": 979,
+          "referenceSize": {
+            "w": 390,
+            "h": 844
+          },
+          "replicaSize": {
+            "w": 390,
+            "h": 979
+          },
+          "bannerHeightPx": 36,
+          "heightDeltaPx": 135,
+          "heightDeltaExcludingBanner": 99,
+          "raw": {
+            "differingPixels": 237226,
+            "totalPixels": 381810,
+            "differenceRatio": 0.6213,
+            "diffImage": null
+          },
+          "bannerAligned": {
+            "differingPixels": 237642,
+            "totalPixels": 367770,
+            "differenceRatio": 0.6462,
+            "diffImage": "/home/vedant/projects/4_ERP/gov_replica/CCTNS/www_digitalpolicecitizenservices_gov_in/comparison/centercitizen_logout.mobile.diff.aligned.png"
+          },
+          "differenceRatio": 0.6462,
+          "similarity": 0.3538,
+          "heightCapped": false,
+          "referenceImage": "reference_pages/screenshots/centercitizen_logout.mobile.png",
+          "replicaImage": "replica_screenshots/centercitizen_logout.mobile.png",
+          "diffImage": "comparison/centercitizen_logout.mobile.diff.png",
+          "withinTolerance": false
+        }
+      },
+      "desktopDifferenceRatio": 0.2851,
+      "desktopRawDifferenceRatio": 0.3377
+    }
+  ]
+}

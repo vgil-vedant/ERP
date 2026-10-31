@@ -1,0 +1,776 @@
+<!DOCTYPE html><html lang="en" class="h-100" data-bs-theme="auto"><head id="Head1"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description"><meta name="author"><link rel="icon" type="image/png" sizes="16x16" href="../Content/images/favicon-16x16.png"><title>
+	Welcome to National Prison Portal 
+</title>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="../Content/css/custom_style.css" rel="stylesheet" type="text/css"><link href="../Content/css/hover.css" rel="stylesheet" type="text/css">
+    <!-- FontAwesome 4.3.0 -->
+    
+    <!-- Ionicons 2.0.0 -->
+    <link href="../Content/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <!-- Option 1: Include in HTML -->
+     
+    
+    <link href="../Content/css/bootstrap-icons.min.css" rel="stylesheet">   
+    <!-- Custom Fonts -->
+    
+
+    <script src="../Content/js/jquery-min.js"></script>
+    <script src="../Content/js/popper.min.js"></script>
+    <script src="../Content/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="../Content/js/chosen.jquery.js"></script>
+   
+    <link href="../Content/css/chosen.min.css" rel="stylesheet" type="text/css">
+    
+
+ <style>
+     
+
+
+        @media (width: 1024px) {
+               .header_bg .container {
+            position: relative;
+            max-width: 100% !important;
+        }
+            .navbar-brand img {
+                width: 220px
+            }
+
+            .navbar-nav > li > a {
+                font-size: 14px;
+                font-weight: 600;
+                color: #3d4548 !important;
+            }
+        }
+    </style>
+
+</head>
+
+
+  <body class="d-flex flex-column h-100">
+    <form method="post" action="./grievance" onsubmit="javascript:return WebForm_OnSubmit();" id="frmMaster" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmMaster'];
+if (!theForm) {
+    theForm = document.frmMaster;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&amp;t=639191031332169432" type="text/javascript"></script>
+
+
+<script src="/NPIP/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhi5Ro_kZNYS25EW_-qnjE5td612Pg4yCmsppNjMlNOHA4TSyGjtSLiyLTXkCyrtWwy-ujq0l5_KQ4GDLT3w0kibGJju8sT5LgicObPHlBdtGGZfZ8yq_yskXKhwPJrvIrA2&amp;t=ffffffffa5405632" type="text/javascript"></script>
+<script src="/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG0OUrYMiDnAtHQCFUaz0W--4WPMIG0lL9lnbwIsliZ0&amp;t=3a1336b1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5VxFYOE_qs64fwvKe7dRnAlwJ4-ZR1AkMZ6VKiLePy3DznNeeSqdI8JPLK7hW1Eg2&amp;t=3a1336b1" type="text/javascript"></script>
+<script src="/NPIP/ScriptResource.axd?d=HOXFl7MMm1dB63GFuHwdy7hKT295ZpJfY9C8S6dS-Awoi6zMOOUCNPhLhy0dv8hUF3q68d2fADyG_yOdXeyKDeEq8G7GfjmHPb4qDlAHlGX56Ws-FEAPMKn8uM3c7v530&amp;t=3a1336b1" type="text/javascript"></script>
+<script src="/NPIP/ScriptResource.axd?d=OAE9ClUEcsgee1-mWvA7NsrSW-wmHfDngocZs0t4qi8zIgUemaHOgwlSk6xj_4vlGE0yPUf_Fnc1kxAdGg4E9SIzC3NQIVUeSDUbO7gEAtbKLiJVVsLCgLShEIj_MeVGWi_26-89KoocGgiDwG_Hiw2&amp;t=3a1336b1" type="text/javascript"></script>
+<script src="/NPIP/ScriptResource.axd?d=5VssjZ0dMt582Pyf4GR9qUd-dxPDaDivdJ6kl9OIrkFtYvcj0Wdc4jHD5n0L8TX_ik5tL8EN4cu_bQ7dTZ233ESg-TYMVgPow7OGpCch8dVgoYpsf4iFntjWh2gRmoW1UtqbcrQ6YSkyRqybpjJRvQ2&amp;t=3a1336b1" type="text/javascript"></script>
+<script src="/NPIP/ScriptResource.axd?d=IC8faVwqHcU587-O5lvWFOEQ_WcmUUDPm8PWSWmuUZKfAxr7t5m8s1sl7bAQiVbEr8Yqkq2FbTznMtN3qhCX5282SpmOZteJRoWvxEMrn-vormdvIJuIHOZIxfTkIRwUFSpCpfpTwAn0kgzxolAW3Epg6wxP_trFrk-3aysHwao1&amp;t=3a1336b1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+null;if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3FCEC000">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'frmMaster', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <div class="top_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="nav1">
+                            <li></li>
+                            <li></li>
+                            <li><a href="SelectMISState.aspx">ePrisons MIS</a></li>
+                            <li><a href="https://eprisons.nic.in/citizenservice/" id="lnkCitizen" target="_blank" rel="noopener noreferrer">Citizen Service</a></li>
+                            <li><a href="https://eprisons.nic.in/Legalaid/Secure/Login.aspx" id="lnkLegalaid" target="_blank" rel="noopener noreferrer">Legal Aid</a></li>
+                            <li><a href="https://eprisons.nic.in/Login" id="lnkSSOLogin" target="_blank" rel="noopener noreferrer">Other Stakeholders</a></li>
+
+                            
+
+
+
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="header_bg">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="Home.aspx">
+                        <img src="../Content/images/logo.png">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item" style="font-weight: 700 !important; font-size: 15px;"><a class="nav-link" href="MyVisitRegistration.aspx">eMulakat</a></li>
+
+                            
+
+                            <li class="nav-item"><a class="nav-link" href="MyVisitStatus.aspx">eMulakat Status</a></li>
+                            <!--<li class="dropdown">
+                                            <a href="#" onclick="myFunction()" class="dropbtn dropdown-toggle">Dropdown<span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu toggle-drop dropdown-content" id="myDropdown">
+                                            <li><a href="ParoleJumper.aspx">Parole Jumper</a></li>
+                                            <li><a href="Absconder.aspx">Absconder</a></li>
+
+                                        </ul>
+                                    </li>-->
+                            <li class="nav-item"><a class="nav-link" href="DashBoard.aspx">DashBoard</a></li>
+                            <li id="lieprisonsmap" class="nav-item">
+                                <a href="https://eprisons.nic.in/NPIPDashboard" id="anch" class="nav-link" target="_blank" rel="noopener noreferrer">Prisons Map</a></li>
+                            <li id="lireports" class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reports</a>
+
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item" href="ePrisonsLiveStatus.aspx">ePrisons Live</a></li>
+
+                                    <li><a class="dropdown-item" href="ePrisonsLiveVisitorsStatus.aspx">eMulakat Statistics</a></li>
+
+                                    <li><a class="dropdown-item" href="ParoleJumper.aspx">Parole Jumper</a></li>
+                                    <li><a class="dropdown-item" href="Absconder.aspx">Absconder</a></li>
+                                     <li><a class="dropdown-item" href="DashBoardForeigner.aspx">Foreigner Prisoners</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="grievancelogin.aspx">Grievance</a></li>
+                            <li class="nav-item"><a class="nav-link" href="About.aspx">About Us </a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="ContactUs.aspx">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+        <!-- Begin page content -->
+<main class="flex-shrink-0">
+        <div class="page-content-wrapper">
+             <div class="registion_head"><div class="container"><div class="row"><div class="col-lg-12">Grievance</div></div></div></div>
+            
+            
+            <div class="container">
+                
+    <div class="row">
+        <div class="col-md-6">
+            <span id="ContentPlaceHolder1_lblErrorMsg" style="color:Red;font-weight:bold;"></span><br>
+            <span id="ContentPlaceHolder1_lblMsg" style="color:Red;font-weight:bold;"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel-default">
+                <div class="panel-heading">
+                    <h5 class="panel-title text-center signup_titel">
+                       Complainant Details</h5>
+                </div>
+                <div class="boder">
+                    <div class="form-group">
+                        <div class="signup_texthead">
+                            Name &nbsp;
+                            <span id="ContentPlaceHolder1_RequiredFieldValidator5" class="valediction" style="visibility:hidden;">Please enter the name</span></div>
+                        <input name="ctl00$ContentPlaceHolder1$txtVisitorName" type="text" maxlength="100" id="ContentPlaceHolder1_txtVisitorName" style="border-width:1px;border-style:solid;" class="watermarked">
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender2_ClientState" id="ContentPlaceHolder1_TextBoxWatermarkExtender2_ClientState">
+                    </div>
+                    <div class="form-group">
+                        <div class="signup_texthead">
+                            Mobile No &nbsp;
+                            
+                            &nbsp;<span id="ContentPlaceHolder1_RegularExpressionValidator3" style="color:Red;visibility:hidden;">Please enter the correct Mobile Number</span></div>
+                        <input name="ctl00$ContentPlaceHolder1$txtPhoneNo" type="text" maxlength="24" id="ContentPlaceHolder1_txtPhoneNo" style="border-width:1px;border-style:solid;" class="watermarked">
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender7_ClientState" id="ContentPlaceHolder1_TextBoxWatermarkExtender7_ClientState">
+                    </div>
+                    <div class="form-group">
+                        <div class="signup_texthead">
+                            Email ID &nbsp;
+                            <span id="ContentPlaceHolder1_RegularExpressionValidator2" style="color:Red;visibility:hidden;">Please enter the correct Email ID</span></div>
+                        <input name="ctl00$ContentPlaceHolder1$txteMail" type="text" maxlength="50" id="ContentPlaceHolder1_txteMail" style="border-width:1px;border-style:solid;" class="watermarked">
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender6_ClientState" id="ContentPlaceHolder1_TextBoxWatermarkExtender6_ClientState">
+                    </div>
+
+                              <div class="form-group">
+                                <div class="signup_texthead">
+                                    <span id="ContentPlaceHolder1_Label1">Relation with Inmate</span>
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator10" class="valediction" style="visibility:hidden;">Please select your Relation </span></div>
+                                <select name="ctl00$ContentPlaceHolder1$Ddlrel" id="ContentPlaceHolder1_Ddlrel" class="chosen-select " style="display: none;">
+	<option value="SELECT">SELECT</option>
+	<option value="AU">Aunt</option>
+	<option value="BL">Brother in Law</option>
+	<option value="BR">Brother</option>
+	<option value="CA">Consule/Ambassador</option>
+	<option value="CB">Co Brother</option>
+	<option value="CO">Cousin</option>
+	<option value="DA">Daughter</option>
+	<option value="DL">Daughter in Law</option>
+	<option value="DO">Doctor</option>
+	<option value="FA">Father</option>
+	<option value="FL">Father-in-law</option>
+	<option value="FR">Friend</option>
+	<option value="GD">Grand daughter</option>
+	<option value="GF">Grand Father</option>
+	<option value="GM">Grand Mother</option>
+	<option value="GS">Grand son</option>
+	<option value="HW">Husband / Wife</option>
+	<option value="JU">Judge</option>
+	<option value="LA">Lawyer</option>
+	<option value="MI">Minister</option>
+	<option value="ML">Mother-in-law</option>
+	<option value="MO">Mother</option>
+	<option value="NB">Neighbour</option>
+	<option value="NC">Niece</option>
+	<option value="NG">NGO</option>
+	<option value="NP">Nephew</option>
+	<option value="OT">Others</option>
+	<option value="PO">Police</option>
+	<option value="SI">Sister</option>
+	<option value="SL">Sister-in-law</option>
+	<option value="SN">Son-in-law</option>
+	<option value="SO">Son</option>
+	<option value="UN">Uncle</option>
+
+</select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="ContentPlaceHolder1_Ddlrel_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>SELECT</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+                            </div>
+               
+                </div>
+
+                    <div class="width100p">
+         <div class="row">
+                        <div class="col-lg-3">
+                            <div class="captcha_img">
+                                <img id="ContentPlaceHolder1_Image2" src="captcha.aspx"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <input name="ctl00$ContentPlaceHolder1$txtCaptchaEntered" type="text" autocomplete="off" maxlength="6" id="ContentPlaceHolder1_txtCaptchaEntered">
+                            Type the characters you see in this Picture
+                            <span id="ContentPlaceHolder1_RequiredFieldValidator7" class="valediction" style="visibility:hidden;">Please enter the text</span></div>
+                        <div class="col-lg-3">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Send" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;, &quot;&quot;, true, &quot;SupplierMaster&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_btnSubmit" class="btn btn-primary btn-small">
+                        </div>
+                    </div>
+    </div>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel-default">
+                <div class="panel-heading">
+                    <h5 class="panel-title text-center signup_titel">
+                       Grievance Details</h5>
+                </div>
+                <div class="boder">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="signup_texthead">
+                                    <span id="ContentPlaceHolder1_lbl_state">State</span>
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator2" class="valediction" style="visibility:hidden;">Please select state</span></div>
+                                <select name="ctl00$ContentPlaceHolder1$ddl_state" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddl_state\',\'\')', 0)" id="ContentPlaceHolder1_ddl_state" class="chosen-select " style="display: none;">
+	<option selected="selected" value="SELECT">SELECT</option>
+	<option value="26">ANDAMAN &amp; NICOBAR             </option>
+	<option value="1">ANDHRA PRADESH</option>
+	<option value="2">ARUNACHAL  PRADESH            </option>
+	<option value="3">ASSAM                         </option>
+	<option value="4">BIHAR                         </option>
+	<option value="27">CHANDIGARH                    </option>
+	<option value="33">CHHATTISGARH                  </option>
+	<option value="28">DADRA &amp; NAGAR HAVELI AND DAMAN &amp; DIU</option>
+	<option value="30">DELHI                         </option>
+	<option value="5">GOA                           </option>
+	<option value="6">GUJARAT                       </option>
+	<option value="7">HARYANA                       </option>
+	<option value="8">HIMACHAL PRADESH              </option>
+	<option value="9">JAMMU &amp; KASHMIR               </option>
+	<option value="34">JHARKHAND                     </option>
+	<option value="10">KARNATAKA                     </option>
+	<option value="11">KERALA                        </option>
+	<option value="37">LADAKH</option>
+	<option value="31">LAKSHADWEEP                   </option>
+	<option value="12">MADHYA PRADESH                </option>
+	<option value="13">MAHARASHTRA                   </option>
+	<option value="14">MANIPUR                       </option>
+	<option value="15">MEGHALAYA                     </option>
+	<option value="16">MIZORAM                       </option>
+	<option value="17">NAGALAND                      </option>
+	<option value="18">ORISSA                        </option>
+	<option value="32">PUDUCHERRY                    </option>
+	<option value="19">PUNJAB                        </option>
+	<option value="20">RAJASTHAN                     </option>
+	<option value="21">SIKKIM                        </option>
+	<option value="22">TAMIL NADU                    </option>
+	<option value="36">TELANGANA</option>
+	<option value="23">TRIPURA                       </option>
+	<option value="24">UTTAR PRADESH                 </option>
+	<option value="35">UTTARAKHAND                   </option>
+	<option value="25">WEST BENGAL                   </option>
+
+</select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="ContentPlaceHolder1_ddl_state_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>SELECT</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="signup_texthead">
+                                    Prisoner Name &nbsp;
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator4" class="valediction" style="display:none;">Please enter the Prisoner Name</span></div>
+                                <input name="ctl00$ContentPlaceHolder1$txt_prisonername" type="text" maxlength="100" id="ContentPlaceHolder1_txt_prisonername" style="border-width:1px;border-style:solid;" class="watermarked">
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender1_ClientState" id="ContentPlaceHolder1_TextBoxWatermarkExtender1_ClientState">
+                            </div>
+                            <div class="form-group">
+                                <div class="signup_texthead">
+                                    <span id="ContentPlaceHolder1_lbl_pgender">Prisoner Gender</span>
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator9" class="valediction" style="display:none;">Please select Prisoner Gender</span></div>
+                                <select name="ctl00$ContentPlaceHolder1$ddl_pgender" id="ContentPlaceHolder1_ddl_pgender" class="chosen-select " style="display: none;">
+	<option value="SELECT">SELECT</option>
+	<option value="F">Female</option>
+	<option value="M">Male</option>
+	<option value="H">Transgender</option>
+
+</select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="ContentPlaceHolder1_ddl_pgender_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>SELECT</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="signup_texthead">
+                                    <span id="ContentPlaceHolder1_lbl_jail">Jail</span>
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator3" style="color:Red;visibility:hidden;">Please select jail</span></div>
+                                <select name="ctl00$ContentPlaceHolder1$ddl_jail" id="ContentPlaceHolder1_ddl_jail" class="chosen-select " style="display: none;">
+
+</select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="ContentPlaceHolder1_ddl_jail_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>SELECT</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>
+                            </div>
+                            <div class="form-group">
+                                <div class="signup_texthead">
+                                    Prisoner Age &nbsp;
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator8" class="valediction" style="visibility:hidden;">Please enter the Prisoner Age</span></div>
+                                <input name="ctl00$ContentPlaceHolder1$txt_prisoner_age" type="text" maxlength="18" id="ContentPlaceHolder1_txt_prisoner_age" filtertype="Numbers" style="border-width:1px;border-style:solid;" class="watermarked">
+                                
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender3_ClientState" id="ContentPlaceHolder1_TextBoxWatermarkExtender3_ClientState">
+                            </div>
+                            <div class="form-group">
+                                <div class="signup_texthead">
+                                    <span id="ContentPlaceHolder1_Label6">Grievance Category</span>
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator1" class="valediction" style="visibility:hidden;">Please select your issue</span></div>
+                                <select name="ctl00$ContentPlaceHolder1$ddlIssue" id="ContentPlaceHolder1_ddlIssue" class="chosen-select " style="display: none;">
+	<option value="SELECT">SELECT</option>
+	<option value="1">Ill treated by the prison authorities.</option>
+	<option value="2">Basic facilities not provided inside prison.</option>
+	<option value="3">Manhandling by co prisoners</option>
+	<option value="99">Others</option>
+
+</select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="ContentPlaceHolder1_ddlIssue_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>SELECT</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="signup_texthead">
+                            Message &nbsp;
+                            <span id="ContentPlaceHolder1_RequiredFieldValidator6" class="valediction" style="visibility:hidden;">Please enter the message</span></div>
+                        <textarea name="ctl00$ContentPlaceHolder1$txtMessage" rows="2" cols="20" maxlength="250" id="ContentPlaceHolder1_txtMessage" style="border-width:1px;border-style:solid;" class="watermarked"></textarea>
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender4_ClientState" id="ContentPlaceHolder1_TextBoxWatermarkExtender4_ClientState">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+            </div>
+            <!-- page-content-wrapper End-->
+        </div>
+    </main>
+
+
+    
+<footer class="footer mt-auto footer_bg">
+
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5">
+                            <div class="footer-middle border_right pb-4">
+                                <h4>Information</h4>
+                                <ul class="links">
+                                    <li><a href="DashBoard.aspx"><i class="bi bi-link"></i>DashBoard</a></li>
+                                    <li><a href="MyVisitRegistration.aspx"><i class="bi bi-link"></i>eMulakat</a></li>
+                                    <li><a href="grievance.aspx"><i class="bi bi-link"></i>Grievance</a></li>
+                                    <li><a href="About.aspx"><i class="bi bi-link"></i>About us </a></li>
+
+                                </ul>
+                                <!-- footer-middle border_right End-->
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-5 col-sm-5 col-lg-5">
+                            <div class="footer-middle border_right ">
+                                <h4><a href="ContactUs.aspx" style="color: #fff">Contact Us </a></h4>
+                                <ul class="contacts-info ">
+
+                                    <li>
+                                        <div class="add_email_phone-icon">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                        </div>
+                                        National Informatics Centre<br>
+                                        A-Block, CGO Complex, Lodhi Road<br>
+                                        New Delhi - 110 003 India</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-2 col-sm-2 col-lg-2">
+                            <h4 style="visibility: hidden">.</h4>
+                            <span class="float-end text-white"><b>Served From :</b><br>
+                                <span id="lblServerDetails">NQ34EP2P-ePApp4</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- container -->
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="footer_text" style="padding-top: 5px">
+                                    A Digital India Initiative by Government of India.
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-6 col-lg-6">
+                                <div class="footer_text">
+                                    <ul class="footer_nav">
+                                        <li><a href="PrivacyPolicy.aspx">Privacy Policy</a></li>
+                                        <li><a href="TermsofUse.aspx">Terms of Use</a></li>
+                                        <li><a href="CodeofConduct.aspx">Code of Conduct</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="footer_text powered_by float-end">
+                                    Copyright © 2015 by NIC .All rights reserved.
+                                <img src="../Content/images/nic_logo.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+
+    </footer>
+
+         
+         
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ContentPlaceHolder1_RequiredFieldValidator5"), document.getElementById("ContentPlaceHolder1_RegularExpressionValidator3"), document.getElementById("ContentPlaceHolder1_RegularExpressionValidator2"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator10"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator7"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator2"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator4"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator9"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator3"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator8"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator1"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator6"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ContentPlaceHolder1_RequiredFieldValidator5 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator5"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator5");
+ContentPlaceHolder1_RequiredFieldValidator5.controltovalidate = "ContentPlaceHolder1_txtVisitorName";
+ContentPlaceHolder1_RequiredFieldValidator5.errormessage = "Please enter the name";
+ContentPlaceHolder1_RequiredFieldValidator5.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator5.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator5.initialvalue = "";
+var ContentPlaceHolder1_RegularExpressionValidator3 = document.all ? document.all["ContentPlaceHolder1_RegularExpressionValidator3"] : document.getElementById("ContentPlaceHolder1_RegularExpressionValidator3");
+ContentPlaceHolder1_RegularExpressionValidator3.controltovalidate = "ContentPlaceHolder1_txtPhoneNo";
+ContentPlaceHolder1_RegularExpressionValidator3.errormessage = "Invalid Mobile number";
+ContentPlaceHolder1_RegularExpressionValidator3.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ContentPlaceHolder1_RegularExpressionValidator3.validationexpression = "\\d{10}";
+var ContentPlaceHolder1_RegularExpressionValidator2 = document.all ? document.all["ContentPlaceHolder1_RegularExpressionValidator2"] : document.getElementById("ContentPlaceHolder1_RegularExpressionValidator2");
+ContentPlaceHolder1_RegularExpressionValidator2.controltovalidate = "ContentPlaceHolder1_txteMail";
+ContentPlaceHolder1_RegularExpressionValidator2.errormessage = "Invalid email id ";
+ContentPlaceHolder1_RegularExpressionValidator2.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ContentPlaceHolder1_RegularExpressionValidator2.validationexpression = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+var ContentPlaceHolder1_RequiredFieldValidator10 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator10"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator10");
+ContentPlaceHolder1_RequiredFieldValidator10.controltovalidate = "ContentPlaceHolder1_Ddlrel";
+ContentPlaceHolder1_RequiredFieldValidator10.errormessage = "Please select your Relation ";
+ContentPlaceHolder1_RequiredFieldValidator10.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator10.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator10.initialvalue = "SELECT";
+var ContentPlaceHolder1_RequiredFieldValidator7 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator7"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator7");
+ContentPlaceHolder1_RequiredFieldValidator7.controltovalidate = "ContentPlaceHolder1_txtCaptchaEntered";
+ContentPlaceHolder1_RequiredFieldValidator7.errormessage = "Please enter the text";
+ContentPlaceHolder1_RequiredFieldValidator7.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator7.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator7.initialvalue = "";
+var ContentPlaceHolder1_RequiredFieldValidator2 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator2"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator2");
+ContentPlaceHolder1_RequiredFieldValidator2.controltovalidate = "ContentPlaceHolder1_ddl_state";
+ContentPlaceHolder1_RequiredFieldValidator2.errormessage = "Please select state";
+ContentPlaceHolder1_RequiredFieldValidator2.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator2.initialvalue = "SELECT";
+var ContentPlaceHolder1_RequiredFieldValidator4 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator4"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator4");
+ContentPlaceHolder1_RequiredFieldValidator4.controltovalidate = "ContentPlaceHolder1_txt_prisonername";
+ContentPlaceHolder1_RequiredFieldValidator4.errormessage = "Please enter the Prisoner Name";
+ContentPlaceHolder1_RequiredFieldValidator4.display = "Dynamic";
+ContentPlaceHolder1_RequiredFieldValidator4.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator4.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator4.initialvalue = "";
+var ContentPlaceHolder1_RequiredFieldValidator9 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator9"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator9");
+ContentPlaceHolder1_RequiredFieldValidator9.controltovalidate = "ContentPlaceHolder1_ddl_pgender";
+ContentPlaceHolder1_RequiredFieldValidator9.errormessage = "Please select Prisoner Gender";
+ContentPlaceHolder1_RequiredFieldValidator9.display = "Dynamic";
+ContentPlaceHolder1_RequiredFieldValidator9.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator9.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator9.initialvalue = "SELECT";
+var ContentPlaceHolder1_RequiredFieldValidator3 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator3"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator3");
+ContentPlaceHolder1_RequiredFieldValidator3.controltovalidate = "ContentPlaceHolder1_ddl_jail";
+ContentPlaceHolder1_RequiredFieldValidator3.errormessage = "Please select jail";
+ContentPlaceHolder1_RequiredFieldValidator3.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator3.initialvalue = "SELECT";
+var ContentPlaceHolder1_RequiredFieldValidator8 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator8"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator8");
+ContentPlaceHolder1_RequiredFieldValidator8.controltovalidate = "ContentPlaceHolder1_txt_prisoner_age";
+ContentPlaceHolder1_RequiredFieldValidator8.errormessage = "Please enter the Prisoner Age";
+ContentPlaceHolder1_RequiredFieldValidator8.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator8.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator8.initialvalue = "";
+var ContentPlaceHolder1_RequiredFieldValidator1 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator1"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator1");
+ContentPlaceHolder1_RequiredFieldValidator1.controltovalidate = "ContentPlaceHolder1_ddlIssue";
+ContentPlaceHolder1_RequiredFieldValidator1.errormessage = "Please select your issue";
+ContentPlaceHolder1_RequiredFieldValidator1.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator1.initialvalue = "SELECT";
+var ContentPlaceHolder1_RequiredFieldValidator6 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator6"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator6");
+ContentPlaceHolder1_RequiredFieldValidator6.controltovalidate = "ContentPlaceHolder1_txtMessage";
+ContentPlaceHolder1_RequiredFieldValidator6.errormessage = "Please enter the message";
+ContentPlaceHolder1_RequiredFieldValidator6.validationGroup = "SupplierMaster";
+ContentPlaceHolder1_RequiredFieldValidator6.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolder1_RequiredFieldValidator6.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator5').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator5'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ContentPlaceHolder1_TextBoxWatermarkExtender2_ClientState","WatermarkCssClass":"watermarked","WatermarkText":"Enter Your Name","id":"ContentPlaceHolder1_TextBoxWatermarkExtender2"}, null, null, $get("ContentPlaceHolder1_txtVisitorName"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"FilterType":3,"ValidChars":"*","id":"ContentPlaceHolder1_txtQtyPUnit_FilteredTextBoxExtender"}, null, null, $get("ContentPlaceHolder1_txtPhoneNo"));
+});
+
+document.getElementById('ContentPlaceHolder1_RegularExpressionValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RegularExpressionValidator3'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ContentPlaceHolder1_TextBoxWatermarkExtender7_ClientState","WatermarkCssClass":"watermarked","WatermarkText":"Enter Your Mobile Number","id":"ContentPlaceHolder1_TextBoxWatermarkExtender7"}, null, null, $get("ContentPlaceHolder1_txtPhoneNo"));
+});
+
+document.getElementById('ContentPlaceHolder1_RegularExpressionValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RegularExpressionValidator2'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ContentPlaceHolder1_TextBoxWatermarkExtender6_ClientState","WatermarkCssClass":"watermarked","WatermarkText":"Enter Your Email Id","id":"ContentPlaceHolder1_TextBoxWatermarkExtender6"}, null, null, $get("ContentPlaceHolder1_txteMail"));
+});
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator10').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator10'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator7').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator7'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator2'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator4').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator4'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ContentPlaceHolder1_TextBoxWatermarkExtender1_ClientState","WatermarkCssClass":"watermarked","WatermarkText":"Enter Prisoner name","id":"ContentPlaceHolder1_TextBoxWatermarkExtender1"}, null, null, $get("ContentPlaceHolder1_txt_prisonername"));
+});
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator9').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator9'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator3'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator8').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator8'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"FilterType":2,"id":"ContentPlaceHolder1_FilteredTextBoxExtender1"}, null, null, $get("ContentPlaceHolder1_txt_prisoner_age"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ContentPlaceHolder1_TextBoxWatermarkExtender3_ClientState","WatermarkCssClass":"watermarked","WatermarkText":"Enter Prisoner age","id":"ContentPlaceHolder1_TextBoxWatermarkExtender3"}, null, null, $get("ContentPlaceHolder1_txt_prisoner_age"));
+});
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator1'));
+}
+
+document.getElementById('ContentPlaceHolder1_RequiredFieldValidator6').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator6'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ContentPlaceHolder1_TextBoxWatermarkExtender4_ClientState","WatermarkCssClass":"watermarked","WatermarkText":"Enter issue description","id":"ContentPlaceHolder1_TextBoxWatermarkExtender4"}, null, null, $get("ContentPlaceHolder1_txtMessage"));
+});
+//]]>
+</script>
+</form>
+
+         <a href="#" class="back-to-top" style="display: inline;"><i class="bi bi-arrow-up-short"></i></a>
+   <script src="../Content/js/crypto.js"></script>
+   <script>
+       jQuery(document).ready(function () {
+           var offset = 250;
+           var duration = 300;
+           jQuery(window).scroll(function () {
+               if (jQuery(this).scrollTop() > offset) {
+                   jQuery('.back-to-top').fadeIn(duration);
+               } else {
+                   jQuery('.back-to-top').fadeOut(duration);
+               }
+           });
+
+           jQuery('.back-to-top').click(function (event) {
+               event.preventDefault();
+               jQuery('html, body').animate({ scrollTop: 0 }, duration);
+               return false;
+           })
+       });
+   </script>
+
+
+    <!-- AdminLTE App -->
+    <script src="../Content/dist/js/app.min.js" type="text/javascript"></script>
+    <!-- Optionally, you can add Slimscroll and FastClick plugins. 
+          Both of these plugins are recommended to enhance the 
+          user experience -->
+    <!-- Bootstrap Core JavaScript -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Binding Code
+            var config = {
+                '.chosen-select': {},
+                '.chosen-select-deselect': { allow_single_deselect: true },
+                '.chosen-select-no-single': { disable_search_threshold: 10 },
+                '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+                '.chosen-select-width': { width: "95%" }
+            }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+
+            }
+            $('#multistates').on('change', function (evt, params) {
+
+
+                $('#hidTest').val($(this).val());
+            });
+            //
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+            function EndRequestHandler(sender, args) {
+                var config = {
+                    '.chosen-select': {},
+                    '.chosen-select-deselect': { allow_single_deselect: true },
+                    '.chosen-select-no-single': { disable_search_threshold: 10 },
+                    '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+                    '.chosen-select-width': { width: "95%" }
+                }
+                for (var selector in config) {
+                    $(selector).chosen(config[selector]);
+
+                }
+                $('#multistates').on('change', function (evt, params) {
+
+
+                    $('#hidTest').val($(this).val());
+                });
+            }
+        });
+
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+    </script>
+
+
+</body></html>

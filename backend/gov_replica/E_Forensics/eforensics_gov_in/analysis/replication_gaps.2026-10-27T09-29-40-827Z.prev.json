@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-10-27T07:01:32.758Z",
+  "counts": {
+    "off-scope-redirect": 1,
+    "skipped-url": 1,
+    "external-dependency": 2,
+    "uncertain-technology": 6,
+    "incomplete-interaction": 2
+  },
+  "visualTolerance": 0.12,
+  "singlePageApplicationMounts": [],
+  "gaps": [
+    {
+      "kind": "off-scope-redirect",
+      "item": "https://eforensics.gov.in/Authorize/RedirectToAuthorization",
+      "detail": "redirected to janparichay.meripehchaan.gov.in, which is outside the authorized scope",
+      "impact": "Deliberately not captured: it redirects to janparichay.meripehchaan.gov.in, a host this crawl is not authorized for. The replica renders a local stand-in instead."
+    },
+    {
+      "kind": "skipped-url",
+      "item": "https://eforensics.gov.in/Authorize/RedirectToAuthorization",
+      "detail": "redirected off-scope to janparichay.meripehchaan.gov.in; not captured",
+      "impact": "Not replicated."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2",
+      "detail": "External host: recorded as an external dependency, not downloaded. The replica must either vendor an equivalent locally or declare it as unreproducible offline.",
+      "impact": "The replica must vendor an equivalent locally or declare the dependency."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "database product and schema",
+      "detail": "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "application source code",
+      "detail": "Only the publicly served HTML, CSS and JavaScript were retrieved. No source map, repository or build artifact was requested, and none should be. The replica is an independent reimplementation, not recovered source.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "server-side language version and build tooling",
+      "detail": "The server does not advertise a version header beyond what is listed above. Nothing further is publicly observable.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "hosting provider and data-centre location",
+      "detail": "Not publicly identifiable from the served responses. `.nic.in` is operated by the National Informatics Centre, but that is organisational, not a verified hosting fact.",
+      "impact": "The replica uses an approximation and says so."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "Form-based login (server-side session) (authentication pattern)",
+      "detail": "Status: inferred, confidence medium. Evidence: 1 login page(s) captured, e.g. https://eforensics.gov.in/Login",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "uncertain-technology",
+      "item": "sffe (web server)",
+      "detail": "Status: inferred, confidence medium. Evidence: `Server: sffe` response header (product not recognised by this tool)",
+      "impact": "Not relied on for the replica build."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://eforensics.gov.in/Login",
+      "detail": "Form is CAPTCHA-protected. Solving or bypassing a CAPTCHA is out of scope.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "incomplete-interaction",
+      "item": "form[0] on https://eforensics.gov.in/Forget/ForgetPassword",
+      "detail": "Form is CAPTCHA-protected. Solving or bypassing a CAPTCHA is out of scope.",
+      "impact": "The replica implements local validation and local success/error states that approximate, but are not verified against, the original behaviour."
+    },
+    {
+      "kind": "external-dependency",
+      "item": "server-side application behaviour",
+      "detail": "The portal posts back to ASP.NET server code that is not publicly observable. No API contract exists to reproduce.",
+      "impact": "The replica backend is an independent mock driven by synthetic data."
+    }
+  ],
+  "honesty": "This file is the deliberate record of what the replica does NOT reproduce. Nothing here is papered over elsewhere in the project."
+}

@@ -1,0 +1,99 @@
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/static/css/custom.css">
+<%- include('../partials/header') %>
+<main id="main">
+  <section class="cc-banner">
+    <div class="cc-crest"><span>crest not reproduced</span></div>
+    <p class="cc-banner__title">CCTNS</p>
+    <p class="cc-banner__sub">Crime and Criminal Tracking Network &amp; Systems</p>
+    <p class="cc-banner__welcome">Welcome</p>
+  </section>
+
+  <section class="cc-infobar">
+    <div class="cc-infobar__inner">
+      <div class="cc-infobar__plates">
+        <span class="cc-plate">emblem not reproduced</span>
+        <span class="cc-plate">emblem not reproduced</span>
+      </div>
+      <div class="cc-infobar__links">
+        <a href="/feedback.htm">Feedback</a><a href="/">Contact Us</a>
+        <p>This is an unofficial local demonstration. The original states who manages its
+        content; that statement is not reproduced here.</p>
+      </div>
+      <div class="cc-infobar__addr">
+        <p style="margin:0">The original prints a postal address here.<br>
+        It is deliberately not copied: this replica is not a contact channel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cc-loginstrip">
+    <div class="cc-loginstrip__inner">
+      <p class="cc-loginstrip__hint">Enter the characters in the textbox below</p>
+      <p class="cc-loginstrip__hint" style="margin-bottom:16px">Characters are case sensitive</p>
+
+      <% const ek = Object.keys(errors || {}); if (ek.length) { %>
+        <div class="notice notice--error" style="max-width:520px;margin:0 auto 14px" role="alert">
+          <strong>Please correct <%= ek.length %> field<%= ek.length === 1 ? '' : 's' %>.</strong>
+          <ul><% ek.forEach(function (k) { %><li><%= errors[k] %></li><% }); %></ul>
+        </div>
+      <% } %>
+      <% if (submitted) { %>
+        <div class="notice notice--ok" style="max-width:520px;margin:0 auto 14px" role="status">
+          <strong>Recorded locally.</strong> Reference <span class="ref-no"><%= submitted.reference %></span>.
+        </div>
+      <% } %>
+
+      <% const f = (page.forms && page.forms[0]) ? page.forms[0] : null; %>
+      <% if (f) { %>
+        <form class="cc-form" method="post" action="<%= page.route %>" novalidate>
+          <input type="hidden" name="__form" value="<%= f.id %>">
+          <input type="hidden" name="challenge_expected" value="<%= challenge.expected %>">
+          <% f.fields.forEach(function (x) { %>
+            <div class="field">
+              <label for="<%= x.name %>"><%= x.label %></label>
+              <input type="<%= x.inputType === 'password' ? 'password' : 'text' %>"
+                     id="<%= x.name %>" name="<%= x.name %>"
+                     <%= x.maxLength ? 'maxlength=' + x.maxLength : '' %>
+                     value="<%= form[x.name] || '' %>" autocomplete="off"
+                     <%= errors[x.name] ? 'aria-invalid="true"' : '' %>>
+              <% if (errors[x.name]) { %><span class="field__error"><%= errors[x.name] %></span><% } %>
+            </div>
+          <% }); %>
+          <div class="field">
+            <label for="challenge_answer"><%= challenge.question %></label>
+            <input type="text" id="challenge_answer" name="challenge_answer" maxlength="6" autocomplete="off">
+          </div>
+          <div class="cc-actions">
+            <button type="submit" class="cc-btn">Login (local only)</button>
+            <a class="cc-btn cc-btn--wide" href="/">View Proclaimed Offenders</a>
+          </div>
+          <p class="field__hint" style="margin-top:12px;text-align:center">
+            The original protects this form with a CAPTCHA. This demonstration asks an
+            arithmetic question instead; no CAPTCHA was reproduced, solved or bypassed.
+          </p>
+        </form>
+      <% } %>
+    </div>
+  </section>
+
+  <section class="cc-contact"><h2>CONTACT US</h2></section>
+  <section class="cc-contact-body">
+    <div class="cc-contact-body__inner">
+      <p style="margin:0">Placeholder Organisation</p>
+      <p style="margin:0">Address, telephone, fax and email are <strong>not reproduced</strong>.</p>
+      <p style="margin:0;font-weight:400;font-size:13px;color:#555">
+        The original prints real contact details here. Copying them into a demonstration
+        would invite mail to an office that has nothing to do with this replica.
+      </p>
+    </div>
+  </section>
+
+  <section class="cc-notice">
+    <h3>NOTICE</h3>
+    <p>The original carries a public notice at this position, in Hindi and English, about the
+    services being free of charge. Its wording is not reproduced here; this block preserves the
+    page's structure only.</p>
+  </section>
+</main>
+<%- include('../partials/footer') %>

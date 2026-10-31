@@ -1,0 +1,2578 @@
+{
+  "url": "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/ab",
+  "finalUrl": "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/ab",
+  "redirected": false,
+  "slug": "pdfsearch__6daaeb38",
+  "depth": 2,
+  "via": "https://judgments.ecourts.gov.in/",
+  "httpStatus": 200,
+  "crawlStatus": "captured",
+  "title": "Home | Judgements and Orders, Supreme Court and High courts of India",
+  "lang": "en",
+  "charset": "UTF-8",
+  "description": "Judgements and Orders, High Courts of India",
+  "keywords": "Judgements, Orders, High courts of India, High Courts",
+  "headings": [
+    "About Us",
+    "Useful Links",
+    "Follow Us"
+  ],
+  "headingTree": [
+    {
+      "level": 1,
+      "text": "About Us"
+    },
+    {
+      "level": 2,
+      "text": "Useful Links"
+    },
+    {
+      "level": 2,
+      "text": "Follow Us"
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [
+    "इ-कमिटी, उच्चतम न्यायालय, भारत",
+    "E-COMMITTEE, SUPREME COURT OF INDIA",
+    "Skip to main content",
+    "ई-एस-सी-आर, जजमेंट्स एंड ऑर्डर्स eSCR, Judgements and Orders Indian Judiciary",
+    "Home",
+    "About Us",
+    "e-Committee",
+    "NJDG",
+    "Supreme Court",
+    "District Courts",
+    "Contact Us",
+    "Site map",
+    "Accessibility Statement",
+    "Screen Reader Access",
+    "Web Information Manager",
+    "Terms and Conditions",
+    "Copyright Policy",
+    "Hyper Linking Policy",
+    "Privacy Policy",
+    "Disclaimer"
+  ],
+  "text": "इ-कमिटी, उच्चतम न्यायालय, भारत E-COMMITTEE, SUPREME COURT OF INDIA Skip to main content Accessibility options ई-एस-सी-आर, जजमेंट्स एंड ऑर्डर्स eSCR, Judgements and Orders Indian Judiciary Home About Us e-Committee NJDG Supreme Court District Courts Contact Us About Us The Judgment search portal is a repository of judgments pronounced by various High Courts in the country. This portal is designed for various stakeholders to find out similar judgments based on the requirements. Most important feature of this portal is that it has a free text search engine, which calls out judgments based on the given keyword in the search box provided. Various other filter criteria include High Court, Act, Sections,Names of the parties, Hon'ble judge name, judgment date etc. Combination of any of the search criteria can be used to filter results. The embedded filtering feature allows further filtering on available results, thus adding value to the search. Useful Links Site map Accessibility Statement Screen Reader Access Web Information Manager Terms and Conditions Copyright Policy Hyper Linking Policy Privacy Policy Disclaimer Content Owned by eCommittee, Supreme Court of India. This site is designed, hosted and maintained by National Informatics Centre (NIC) Ministry of Electronics & Information Technology, Government of India. Last Updated : 27 Oct 2026 Follow Us B1 Version :2.0",
+  "textLength": 1399,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 900
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 11,
+  "iframeCount": 0,
+  "htmlLength": 56545,
+  "forms": [
+    {
+      "index": 0,
+      "name": null,
+      "id": null,
+      "selector": "div.brandbar:nth-of-type(2) > div.container > div.row.align-items-center > div.col-12.col-lg-4:nth-of-type(2) > form.site-search.d-none",
+      "action": "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/ab#",
+      "actionRaw": "#",
+      "method": "get",
+      "enctype": null,
+      "target": null,
+      "heading": null,
+      "fieldCount": 1,
+      "fields": [
+        {
+          "tag": "input",
+          "type": "search",
+          "name": "q",
+          "id": "site-search",
+          "selector": "#site-search",
+          "label": "Search this site",
+          "placeholder": "Search",
+          "required": false,
+          "disabled": false,
+          "readOnly": false,
+          "maxLength": null,
+          "minLength": null,
+          "pattern": null,
+          "min": null,
+          "max": null,
+          "step": null,
+          "autocomplete": "off",
+          "defaultValue": null,
+          "visible": false,
+          "replacedByWidget": false,
+          "functionalField": false,
+          "box": null,
+          "ariaDescribedBy": null,
+          "onchangeAttr": false,
+          "cssClasses": "site-search__input"
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": "Search",
+          "selector": "div.container > div.row.align-items-center > div.col-12.col-lg-4:nth-of-type(2) > form.site-search.d-none > button.site-search__btn",
+          "box": null,
+          "hasOnClick": false
+        }
+      ],
+      "hiddenMachinery": [],
+      "hasCaptcha": false,
+      "hasFileInput": false,
+      "visibleText": "Search this site Search",
+      "box": null
+    }
+  ],
+  "orphanControls": [
+    {
+      "tag": "select",
+      "type": "select",
+      "name": "sel_lang",
+      "id": "sel_lang",
+      "selector": "#sel_lang",
+      "label": "Select language",
+      "placeholder": null,
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "",
+      "visible": false,
+      "replacedByWidget": true,
+      "functionalField": true,
+      "box": null,
+      "ariaDescribedBy": "Select_alert",
+      "onchangeAttr": false,
+      "cssClasses": "form-select form-select-sm chosen w-100",
+      "multiple": false,
+      "options": [
+        {
+          "value": "",
+          "text": "English",
+          "selected": false
+        },
+        {
+          "value": "ASM",
+          "text": "Assamese - অসমীয়া",
+          "selected": false
+        },
+        {
+          "value": "BEN",
+          "text": "Bengali - বাংলা",
+          "selected": false
+        },
+        {
+          "value": "GAR",
+          "text": "Garo - আ·চিক",
+          "selected": false
+        },
+        {
+          "value": "GUJ",
+          "text": "Gujarati - ગુજરાતી",
+          "selected": false
+        },
+        {
+          "value": "HIN",
+          "text": "Hindi - हिन्दी",
+          "selected": false
+        },
+        {
+          "value": "KAN",
+          "text": "Kannada - ಕನ್ನಡ",
+          "selected": false
+        },
+        {
+          "value": "KAS",
+          "text": "Kashmiri - कॉशुर",
+          "selected": false
+        },
+        {
+          "value": "KHA",
+          "text": "Khasi - খসি",
+          "selected": false
+        },
+        {
+          "value": "KOK",
+          "text": "Konkani - कोंकणी",
+          "selected": false
+        },
+        {
+          "value": "MAL",
+          "text": "Malayalam - മലയാളം",
+          "selected": false
+        },
+        {
+          "value": "MAN",
+          "text": "Manipuri - ꯃꯅꯤꯄꯨꯔꯤꯗꯥ ꯂꯩꯕꯥ꯫",
+          "selected": false
+        },
+        {
+          "value": "MAR",
+          "text": "Marathi - मराठी",
+          "selected": false
+        },
+        {
+          "value": "NEP",
+          "text": "Nepali - नेपाली",
+          "selected": false
+        },
+        {
+          "value": "ORI",
+          "text": "Odia - ଓଡ଼ିଆ",
+          "selected": false
+        },
+        {
+          "value": "PUN",
+          "text": "Punjabi - ਪੰਜਾਬੀ",
+          "selected": false
+        },
+        {
+          "value": "SAN",
+          "text": "Santali - ᱥᱟᱱᱛᱟᱲᱤ",
+          "selected": false
+        },
+        {
+          "value": "TAM",
+          "text": "Tamil - தமிழ்",
+          "selected": false
+        },
+        {
+          "value": "TEL",
+          "text": "Telugu - తెలుగు",
+          "selected": false
+        },
+        {
+          "value": "URD",
+          "text": "Urdu - اُردُو",
+          "selected": false
+        }
+      ],
+      "optionCount": 20,
+      "looksDependent": false
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "base_url",
+      "id": "base_url",
+      "selector": "#base_url",
+      "label": "×",
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "/pdfsearch",
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "app_token",
+      "id": "app_token",
+      "selector": "#app_token",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": "3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "sessionlangid",
+      "id": "sessionlangid",
+      "selector": "#sessionlangid",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "level1",
+      "id": "level1",
+      "selector": "#level1",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    },
+    {
+      "tag": "input",
+      "type": "hidden",
+      "name": "link_id",
+      "id": "link_id",
+      "selector": "#link_id",
+      "label": null,
+      "placeholder": null,
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "maxLength": null,
+      "minLength": null,
+      "pattern": null,
+      "min": null,
+      "max": null,
+      "step": null,
+      "autocomplete": null,
+      "defaultValue": null,
+      "visible": false,
+      "replacedByWidget": false,
+      "functionalField": false,
+      "box": null,
+      "ariaDescribedBy": null,
+      "onchangeAttr": false,
+      "cssClasses": null
+    }
+  ],
+  "tables": [],
+  "components": [
+    {
+      "type": "header",
+      "selector": "html > body > header.site-header",
+      "tag": "header",
+      "classes": "site-header",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 216
+      },
+      "text": "इ-कमिटी, उच्चतम न्यायालय, भारत E-COMMITTEE, SUPREME COURT OF INDIA Skip to main content Language Select language English Assamese - অসমীয়াBengali - বাংলাGaro - আ·চিকGujarati - ગુજ",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "relative",
+        "textAlign": "start",
+        "zIndex": "1030"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "html > body > footer.login-footer",
+      "tag": "footer",
+      "classes": "login-footer",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 463,
+        "w": 1366,
+        "h": 300
+      },
+      "text": "Useful Links Site map Accessibility Statement Screen Reader Access Web Information Manager Terms and Conditions Copyright Policy Hyper Linking Policy Privacy Policy Disclaimer Cont",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(15, 87, 87)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#footer-container > div.row.topfooter",
+      "tag": "div",
+      "classes": "row topfooter p-0",
+      "id": null,
+      "box": {
+        "x": 113,
+        "y": 479,
+        "w": 1140,
+        "h": 211
+      },
+      "text": "Useful Links Site map Accessibility Statement Screen Reader Access Web Information Manager Terms and Conditions Copyright Policy Hyper Linking Policy Privacy Policy Disclaimer Cont",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px -12px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#footer-container > div.row.topfooter > div.col-md-5.border-right:nth-of-type(1) > nav.row.contrastFiltertxt > ol.col.footerlinks",
+      "tag": "ol",
+      "classes": "col footerlinks",
+      "id": null,
+      "box": {
+        "x": 113,
+        "y": 536,
+        "w": 474,
+        "h": 136
+      },
+      "text": "Site map Accessibility Statement Screen Reader Access Web Information Manager Terms and Conditions Copyright Policy Hyper Linking Policy Privacy Policy Disclaimer",
+      "childCount": 9,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#footer-container > div.row.topfooter > div.col-md:nth-of-type(3) > div.footerSocial-wrap",
+      "tag": "div",
+      "classes": "footerSocial-wrap",
+      "id": null,
+      "box": {
+        "x": 980,
+        "y": 495,
+        "w": 261,
+        "h": 90
+      },
+      "text": "Follow Us",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "body > footer.login-footer > div.container-fluid:nth-of-type(2) > div.row > div.col.text-center",
+      "tag": "div",
+      "classes": "col text-center footer-col",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 690,
+        "w": 1366,
+        "h": 73
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px 12px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "footer.login-footer > div.container-fluid:nth-of-type(2) > div.row > div.col.text-center > ol.footerlogolist",
+      "tag": "ol",
+      "classes": "footerlogolist",
+      "id": null,
+      "box": {
+        "x": 12,
+        "y": 691,
+        "w": 1342,
+        "h": 72
+      },
+      "text": "",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "html > body > header.site-header > nav.mainnav.navbar",
+      "tag": "nav",
+      "classes": "mainnav navbar navbar-expand-lg",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 157,
+        "w": 1366,
+        "h": 59
+      },
+      "text": "Menu Home About Us e-Committee NJDG Supreme Court District Courts Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(15, 87, 87)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "8px 0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#mainMenu",
+      "tag": "div",
+      "classes": "collapse navbar-collapse",
+      "id": "mainMenu",
+      "box": {
+        "x": 125,
+        "y": 166,
+        "w": 1116,
+        "h": 41
+      },
+      "text": "Home About Us e-Committee NJDG Supreme Court District Courts Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#mainMenu > ul.navbar-nav",
+      "tag": "ul",
+      "classes": "navbar-nav",
+      "id": null,
+      "box": {
+        "x": 125,
+        "y": 166,
+        "w": 741,
+        "h": 41
+      },
+      "text": "Home About Us e-Committee NJDG Supreme Court District Courts Contact Us",
+      "childCount": 7,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#navbar-sm",
+      "tag": "nav",
+      "classes": "navbar navbar-expand-md mb-0",
+      "id": "navbar-sm",
+      "box": {
+        "x": 0,
+        "y": 216,
+        "w": 1366,
+        "h": 16
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "8px 0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#footer-container > div.row.topfooter > div.col-md-5.border-right:nth-of-type(1) > nav.row.contrastFiltertxt",
+      "tag": "nav",
+      "classes": "row contrastFiltertxt",
+      "id": null,
+      "box": {
+        "x": 113,
+        "y": 479,
+        "w": 474,
+        "h": 193
+      },
+      "text": "Useful Links Site map Accessibility Statement Screen Reader Access Web Information Manager Terms and Conditions Copyright Policy Hyper Linking Policy Privacy Policy Disclaimer",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px -12px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "#mainMenu",
+      "tag": "div",
+      "classes": "collapse navbar-collapse",
+      "id": "mainMenu",
+      "box": {
+        "x": 125,
+        "y": 166,
+        "w": 1116,
+        "h": 41
+      },
+      "text": "Home About Us e-Committee NJDG Supreme Court District Courts Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "body > header.site-header > div.topbar:nth-of-type(1) > div.container.topbar__inner > ul.topbar__tools.list-unstyled",
+      "tag": "ul",
+      "classes": "topbar__tools list-unstyled mb-0",
+      "id": null,
+      "box": {
+        "x": 1146,
+        "y": 0,
+        "w": 95,
+        "h": 40
+      },
+      "text": "Skip to main content Language Select language English Assamese - অসমীয়াBengali - বাংলাGaro - আ·চিকGujarati - ગુજરાતીHindi - हिन्दीKannada - ಕನ್ನಡKashmiri - कॉशुरKhasi - খসিKonkani",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "#footer-container > div.row.topfooter > div.col-md-5.border-right:nth-of-type(1) > nav.row.contrastFiltertxt > ol.col.footerlinks",
+      "tag": "ol",
+      "classes": "col footerlinks",
+      "id": null,
+      "box": {
+        "x": 113,
+        "y": 536,
+        "w": 474,
+        "h": 136
+      },
+      "text": "Site map Accessibility Statement Screen Reader Access Web Information Manager Terms and Conditions Copyright Policy Hyper Linking Policy Privacy Policy Disclaimer",
+      "childCount": 9,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "#footer-container > div.row.topfooter > div.col-md:nth-of-type(3) > div.footerSocial-wrap > ul.socialIcons",
+      "tag": "ul",
+      "classes": "socialIcons",
+      "id": null,
+      "box": {
+        "x": 980,
+        "y": 536,
+        "w": 261,
+        "h": 49
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px 0px 16px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "footer.login-footer > div.container-fluid:nth-of-type(2) > div.row > div.col.text-center > ol.footerlogolist",
+      "tag": "ol",
+      "classes": "footerlogolist",
+      "id": null,
+      "box": {
+        "x": 12,
+        "y": 691,
+        "w": 1342,
+        "h": 72
+      },
+      "text": "",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.topbar:nth-of-type(1) > div.container.topbar__inner > ul.topbar__tools.list-unstyled > li:nth-of-type(1) > a.tool-btn.noToken",
+      "tag": "a",
+      "classes": "tool-btn noToken",
+      "id": null,
+      "box": {
+        "x": 1147,
+        "y": 0,
+        "w": 46,
+        "h": 40
+      },
+      "text": "Skip to main content",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "div.topbar:nth-of-type(1) > div.container.topbar__inner > ul.topbar__tools.list-unstyled > li.tool-menu:nth-of-type(3) > button.tool-btn.accbtn",
+      "tag": "button",
+      "classes": "tool-btn accbtn",
+      "id": null,
+      "box": {
+        "x": 1194,
+        "y": 0,
+        "w": 46,
+        "h": 40
+      },
+      "text": "Accessibility options",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(28, 31, 38)",
+        "backgroundGradient": null,
+        "backgroundGradientColor": null,
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(28, 31, 38)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "center",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/flag.svg",
+      "category": "images",
+      "alt": "Indian Flag",
+      "natural": {
+        "w": 36,
+        "h": 24
+      },
+      "rendered": {
+        "x": 125,
+        "y": 8,
+        "w": 36,
+        "h": 24
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/emblem.svg",
+      "category": "images",
+      "alt": "State Emblem of India",
+      "natural": {
+        "w": 58,
+        "h": 100
+      },
+      "rendered": {
+        "x": 125,
+        "y": 49,
+        "w": 58,
+        "h": 100
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/2020052969.png",
+      "category": "images",
+      "alt": "ecourts logo",
+      "natural": {
+        "w": 250,
+        "h": 250
+      },
+      "rendered": {
+        "x": 1068,
+        "y": 69,
+        "w": 60,
+        "h": 60
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/2019031587.png",
+      "category": "images",
+      "alt": "Digital India",
+      "natural": {
+        "w": 127,
+        "h": 86
+      },
+      "rendered": {
+        "x": 1152,
+        "y": 69,
+        "w": 89,
+        "h": 60
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/book.gif",
+      "category": "images",
+      "alt": "loader",
+      "natural": {
+        "w": 640,
+        "h": 640
+      },
+      "rendered": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/digital-Indiawhite.svg",
+      "category": "images",
+      "alt": "Digital India External website that opens a new window",
+      "natural": {
+        "w": 113,
+        "h": 45
+      },
+      "rendered": {
+        "x": 223,
+        "y": 704,
+        "w": 113,
+        "h": 45
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/india_gov.svg",
+      "category": "images",
+      "alt": "National Portal of India External website that opens a new window",
+      "natural": {
+        "w": 217,
+        "h": 71
+      },
+      "rendered": {
+        "x": 382,
+        "y": 701,
+        "w": 128,
+        "h": 42
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/department-of-justice.svg",
+      "category": "images",
+      "alt": "Department of Justice External website that opens a new window",
+      "natural": {
+        "w": 117,
+        "h": 41
+      },
+      "rendered": {
+        "x": 558,
+        "y": 701,
+        "w": 117,
+        "h": 41
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/ecommittee.svg",
+      "category": "images",
+      "alt": "e-Committee Supreme Court of India External website that opens a new window",
+      "natural": {
+        "w": 105,
+        "h": 40
+      },
+      "rendered": {
+        "x": 723,
+        "y": 702,
+        "w": 105,
+        "h": 40
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/india-code.svg",
+      "category": "images",
+      "alt": "India Code Centre External website that opens a new window",
+      "natural": {
+        "w": 70,
+        "h": 40
+      },
+      "rendered": {
+        "x": 876,
+        "y": 702,
+        "w": 70,
+        "h": 40
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/nic.svg",
+      "category": "images",
+      "alt": "National Informatics Centre External website that opens a new window",
+      "natural": {
+        "w": 147,
+        "h": 40
+      },
+      "rendered": {
+        "x": 994,
+        "y": 702,
+        "w": 147,
+        "h": 40
+      },
+      "loading": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/css/ecourts.select.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery-date/jquery-ui.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/bootstrap/css/bootstrap.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/fontawesome-7/css/all.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/css/app.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery/jquery.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery/jquery.validate.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery/ecourts.select.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/js/ecourts.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery-date/js/jquery-ui.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/bootstrap/js/bootstrap.bundle.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/pramukhime/js/pramukhime.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/pramukhime/js/pramukhindic.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://ecommitteesci.gov.in/",
+      "raw": "https://ecommitteesci.gov.in",
+      "text": "इ-कमिटी, उच्चतम न्यायालय, भारत",
+      "title": "इ-कमिटी, उच्चतम न्यायालय, भारत - External site that opens in a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://ecommitteesci.gov.in/",
+      "raw": "https://ecommitteesci.gov.in",
+      "text": "E-COMMITTEE, SUPREME COURT OF INDIA",
+      "title": "E-COMMITTEE, SUPREME COURT OF INDIA - External site that opens in a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/ab#main_content",
+      "raw": "#main_content",
+      "text": "Skip to main content",
+      "title": "Skip to main content",
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/index&escr_flag=&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/index&escr_flag=&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "ई-एस-सी-आर, जजमेंट्स एंड ऑर्डर्स eSCR, Judgements and Orders Indian Judiciary",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://ecourts.gov.in/",
+      "raw": "https://ecourts.gov.in",
+      "text": "",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.digitalindia.gov.in/",
+      "raw": "https://www.digitalindia.gov.in/",
+      "text": "",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch",
+      "raw": "/pdfsearch",
+      "text": "Home",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/ab&escr_flag=&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/ab&escr_flag=&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "About Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://ecommitteesci.gov.in/",
+      "raw": "https://ecommitteesci.gov.in/",
+      "text": "e-Committee",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://njdg.ecourts.gov.in/",
+      "raw": "https://njdg.ecourts.gov.in/",
+      "text": "NJDG",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://sci.gov.in/",
+      "raw": "https://sci.gov.in/",
+      "text": "Supreme Court",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://ecourts.gov.in/",
+      "raw": "https://ecourts.gov.in/",
+      "text": "District Courts",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/cu&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/cu&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Contact Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "×",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "×",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "×",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "×",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/sm&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/sm&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Site map",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/as&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/as&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Accessibility Statement",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/sr&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/sr&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Screen Reader Access",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/we&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/we&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Web Information Manager",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/tc&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/tc&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Terms and Conditions",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/cp&escr_flag=&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/cp&escr_flag=&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Copyright Policy",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/hl&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/hl&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Hyper Linking Policy",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/pp&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/pp&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Privacy Policy",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/footerlinks/di&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "raw": "/pdfsearch/?p=pdf_search/footerlinks/di&app_token=3d9c0280b849e89962ff815efaa4fb5467dc7366841d64836d2cda237e39a3b5",
+      "text": "Disclaimer",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "http://www.nic.in/",
+      "raw": "http://www.nic.in/",
+      "text": "National Informatics Centre (NIC)",
+      "title": "National Informatics Centre (NIC) External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCPMHFB1lou-P_YtErFFYjgw",
+      "raw": "https://www.youtube.com/channel/UCPMHFB1lou-P_YtErFFYjgw",
+      "text": "",
+      "title": "https://www.youtube.com/channel/UCPMHFB1lou-P_YtErFFYjgw - External site that opens in a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "http://www.digitalindia.gov.in/",
+      "raw": "http://www.digitalindia.gov.in/",
+      "text": "",
+      "title": "Digital India External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "http://www.india.gov.in/",
+      "raw": "http://www.india.gov.in/",
+      "text": "",
+      "title": "National Portal of India External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://doj.gov.in/",
+      "raw": "https://doj.gov.in/",
+      "text": "",
+      "title": "Department of Justice External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://ecommitteesci.gov.in/",
+      "raw": "https://ecommitteesci.gov.in/",
+      "text": "",
+      "title": "e-Committee Supreme Court of India External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "http://indiacode.nic.in/",
+      "raw": "http://indiacode.nic.in/",
+      "text": "",
+      "title": "India Code External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://www.nic.in/",
+      "raw": "https://www.nic.in/",
+      "text": "",
+      "title": "National Informatics Centre External website that opens a new window",
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "count": 77
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(28, 31, 38)",
+        "count": 53
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 51
+      },
+      {
+        "value": "rgb(13, 110, 253)",
+        "count": 20
+      },
+      {
+        "value": "rgb(21, 2, 2)",
+        "count": 2
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 1
+      },
+      {
+        "value": "rgb(15, 87, 87)",
+        "count": 1
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 3
+      },
+      {
+        "value": "rgb(15, 87, 87)",
+        "count": 2
+      },
+      {
+        "value": "rgb(223, 226, 232)",
+        "count": 1
+      },
+      {
+        "value": "rgb(238, 238, 238)",
+        "count": 1
+      }
+    ],
+    "backgroundByArea": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "area": 1528392
+      },
+      {
+        "value": "rgb(15, 87, 87)",
+        "area": 490394
+      },
+      {
+        "value": "rgb(238, 238, 238)",
+        "area": 1936
+      },
+      {
+        "value": "rgb(223, 226, 232)",
+        "area": 16
+      }
+    ],
+    "gradientsByArea": []
+  },
+  "bodyStyle": {
+    "fontFamily": "\"Noto Sans\", \"Noto Sans Devanagari\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "fontSize": "14px",
+    "lineHeight": "21px",
+    "color": "rgb(28, 31, 38)",
+    "backgroundColor": "rgb(255, 255, 255)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": [
+      "jQuery",
+      "$",
+      "bootstrap"
+    ]
+  },
+  "responseHeaders": {
+    "access-control-allow-origin": "*",
+    "cache-control": "no-store, no-cache, must-revalidate",
+    "content-length": "57030",
+    "content-type": "text/html; charset=utf-8",
+    "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+    "date": "Tue, 27 Oct 2026 08:57:00 GMT",
+    "expect-ct": "max-age=3600, enforce",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "pragma": "no-cache",
+    "referrer-policy": "strict-origin",
+    "server": "",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "vary": "Accept-Encoding,User-Agent",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/?escr_flag=&p=pdf_search/footerlinks/ab",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "cache-control": "no-store, no-cache, must-revalidate",
+        "content-length": "57030",
+        "content-type": "text/html; charset=utf-8",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "date": "Tue, 27 Oct 2026 08:57:00 GMT",
+        "expect-ct": "max-age=3600, enforce",
+        "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "pragma": "no-cache",
+        "referrer-policy": "strict-origin",
+        "server": "",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "vary": "Accept-Encoding,User-Agent",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery/jquery.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"13344-65da43785df91-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "78660",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:55:47 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "application/javascript",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery/jquery.validate.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"62dc-65da437875691-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "25308",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:55:47 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "application/javascript",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery/ecourts.select.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"71c1-65da437872f81-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "29121",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:55:47 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "application/javascript",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/css/ecourts.select.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"2b34-65da43911794d-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "11060",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:13 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "text/css",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/js/ecourts.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"15777-65da4392c600a-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "87927",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:15 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "application/javascript",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery-date/js/jquery-ui.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"7e4fc-65da438c09e06-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "517372",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:08 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "application/javascript",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery-date/jquery-ui.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"830d-65da438c14216-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "33549",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:08 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "text/css",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/bootstrap/js/bootstrap.bundle.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"13a70-65da437713295-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "80496",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:55:46 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "application/javascript",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/bootstrap/css/bootstrap.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"38aaf-65da43778897e-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "232111",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:55:46 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "text/css",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/fontawesome-7/css/all.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"127d8-65da4391b163f-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "75736",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:14 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "text/css",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/css/app.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"b5c8-65ecd814a4bf0-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "46536",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Tue, 27 Oct 2026 07:36:30 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "text/css",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/flag.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"226b-65ecd864222cc-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "2894",
+        "x-xss-protection": "1; mode=block",
+        "server": ""
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/fontawesome-7/webfonts/fa-solid-900.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"1c034-65da4391a9557\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "114740",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:14 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "font/woff2",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/fonts/NotoSans-400.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"3340-65da43929c412\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13120",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:15 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "font/woff2",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/fonts/NotoSansDevanagari-400.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"c4f0-65da4392a3172\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "50416",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:15 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "font/woff2",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/fonts/NotoSans-500.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"34b8-65da43929e352\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13496",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:15 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "font/woff2",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/fonts/NotoSansDevanagari-500.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"d174-65da4392a48e2\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "53620",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:15 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "font/woff2",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/fonts/NotoSans-700.woff2",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"3498-65da4392a0292\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "13464",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:56:15 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "font/woff2",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/emblem.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-encoding": "gzip",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"3379a-65ecd86426534-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/2020052969.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"e573-65ecd8643c0dd\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "58739",
+        "date": "Tue, 27 Oct 2026 08:56:52 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "image/png",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/2019031587.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"1a7a-65ecd8643b13d\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "6778",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "image/png",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/pramukhime/js/pramukhime.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"1bc2-65da4378969d2-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "7106",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:55:48 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "application/javascript",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/vendor/pramukhime/js/pramukhindic.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"706a-65da437895262-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "28778",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Mon, 12 Oct 2026 12:55:48 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "application/javascript",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/book.gif",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/gif",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"8be56-65ecd8641f3ec\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "573014",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "User-Agent",
+        "server": "",
+        "content-type": "image/gif",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/digital-Indiawhite.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"4271-65ecd86429414-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "6684",
+        "x-xss-protection": "1; mode=block",
+        "server": ""
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/india_gov.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"5ad2-65ecd864376a5-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "8280",
+        "x-xss-protection": "1; mode=block",
+        "server": ""
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/department-of-justice.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-encoding": "gzip",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"3582c-65ecd8642808c-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/ecommittee.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"25d32-65ecd8642ab85-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "56901",
+        "x-xss-protection": "1; mode=block",
+        "server": ""
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/india-code.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-encoding": "gzip",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "etag": "\"2f597e-65ecd8643631d-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "x-xss-protection": "1; mode=block",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "server": "",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://judgments.ecourts.gov.in/pdfsearch/images/nic.svg",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"9753-65ecd86439db5-gzip\"",
+        "expect-ct": "max-age=3600, enforce",
+        "x-content-type-options": "nosniff",
+        "date": "Tue, 27 Oct 2026 08:56:53 GMT",
+        "last-modified": "Tue, 27 Oct 2026 07:37:54 GMT",
+        "vary": "Accept-Encoding,User-Agent",
+        "content-type": "image/svg+xml",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'",
+        "referrer-policy": "strict-origin",
+        "accept-ranges": "bytes",
+        "content-length": "12715",
+        "x-xss-protection": "1; mode=block",
+        "server": ""
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "warning",
+      "text": "jQuery.Deferred exception TypeError: Cannot set properties of undefined (setting '_renderItem')\n    at HTMLDocument.<anonymous> (https://judgments.ecourts.gov.in/pdfsearch/js/ecourts.js:259:40)\n    at l (https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery/jquery.min.js:2:24813)\n    at c (https://judgments.ecourts.gov.in/pdfsearch/vendor/jquery/jquery.min.js:2:25132) undefined"
+    },
+    {
+      "type": "pageerror",
+      "text": "Cannot set properties of undefined (setting '_renderItem')"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/pdfsearch__6daaeb38.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/pdfsearch__6daaeb38.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/pdfsearch__6daaeb38.tablet.png",
+    "mobile": "reference_pages/screenshots/pdfsearch__6daaeb38.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "throttleWaits": [],
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1214
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-27T08:57:04.670Z",
+  "pageType": "search"
+}

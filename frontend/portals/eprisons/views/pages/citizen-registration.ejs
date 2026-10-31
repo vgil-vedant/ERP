@@ -1,0 +1,125 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section section--flush">
+
+  <% if (submitted) { %>
+    <div class="notice notice--ok" role="status">
+      <strong>Demonstration account created.</strong>
+      Mobile number <code><%= submitted.mobile %></code> is now registered in the local
+      database. No one-time password was sent, because nothing leaves this machine,
+      and <strong>no password was stored</strong>.
+    </div>
+  <% } %>
+
+  <% const ek = Object.keys(errors); if (ek.length) { %>
+    <div class="notice notice--error" role="alert">
+      <strong>Please correct <%= ek.length %> field<%= ek.length === 1 ? '' : 's' %>.</strong>
+      <ul><% ek.forEach(function (k) { %><li><%= errors[k] %></li><% }); %></ul>
+    </div>
+  <% } %>
+
+  <form method="post" action="/CitiZenService/Visitor/Registration" novalidate
+        class="card card-narrow" style="max-width:720px">
+    <h2 class="card__head">Visitor Registration</h2>
+    <div class="card__body">
+      <input type="hidden" name="challenge_expected" value="<%= challenge.expected %>">
+
+      <div class="field-grid">
+        <div class="field">
+          <label for="full_name">Visitor Name <span class="req">*</span></label>
+          <input type="text" id="full_name" name="full_name" maxlength="60" required
+                 value="<%= form.full_name || '' %>" <%= errors.full_name ? 'aria-invalid="true"' : '' %>>
+          <% if (errors.full_name) { %><span class="field__error"><%= errors.full_name %></span><% } %>
+        </div>
+
+        <div class="field">
+          <label for="father_name">Father Name <span class="req">*</span></label>
+          <input type="text" id="father_name" name="father_name" maxlength="60" required
+                 value="<%= form.father_name || '' %>" <%= errors.father_name ? 'aria-invalid="true"' : '' %>>
+          <% if (errors.father_name) { %><span class="field__error"><%= errors.father_name %></span><% } %>
+        </div>
+
+        <div class="field field--wide">
+          <label for="address">Address <span class="req">*</span></label>
+          <textarea id="address" name="address" maxlength="150" required rows="3"
+                    <%= errors.address ? 'aria-invalid="true"' : '' %>><%= form.address || '' %></textarea>
+          <span class="field__hint">[OBS] the live form uses a textarea here, unlike the NPIP form.</span>
+          <% if (errors.address) { %><span class="field__error"><%= errors.address %></span><% } %>
+        </div>
+
+        <div class="field">
+          <label for="gender_id">Gender <span class="req">*</span></label>
+          <select id="gender_id" name="gender_id" required
+                  <%= errors.gender_id ? 'aria-invalid="true"' : '' %>>
+            <option value="">Select</option>
+            <% ref.genders.forEach(function (g) { %>
+              <option value="<%= g.id %>" <%= String(form.gender_id) === String(g.id) ? 'selected' : '' %>><%= g.name %></option>
+            <% }); %>
+          </select>
+          <% if (errors.gender_id) { %><span class="field__error"><%= errors.gender_id %></span><% } %>
+        </div>
+
+        <div class="field">
+          <label for="age">Age <span class="req">*</span></label>
+          <input type="number" id="age" name="age" min="1" max="120" required
+                 value="<%= form.age || '' %>" <%= errors.age ? 'aria-invalid="true"' : '' %>>
+          <% if (errors.age) { %><span class="field__error"><%= errors.age %></span><% } %>
+        </div>
+
+        <div class="field">
+          <label for="relationship_id">Relation <span class="req">*</span></label>
+          <select id="relationship_id" name="relationship_id" required
+                  <%= errors.relationship_id ? 'aria-invalid="true"' : '' %>>
+            <option value="">Select</option>
+            <% ref.csRelationships.forEach(function (r) { %>
+              <option value="<%= r.id %>" <%= String(form.relationship_id) === String(r.id) ? 'selected' : '' %>><%= r.name %></option>
+            <% }); %>
+          </select>
+          <span class="field__hint">
+            <%= ref.csRelationships.length %> values &mdash; this portal's own list.
+            The NPIP visit form offers <%= ref.relationships.length %>, and only 18 are shared.
+          </span>
+          <% if (errors.relationship_id) { %><span class="field__error"><%= errors.relationship_id %></span><% } %>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Id</label>
+          <input type="email" id="email" name="email" maxlength="50"
+                 value="<%= form.email || '' %>" <%= errors.email ? 'aria-invalid="true"' : '' %>>
+          <span class="field__hint">Optional, as on the live form.</span>
+          <% if (errors.email) { %><span class="field__error"><%= errors.email %></span><% } %>
+        </div>
+
+        <div class="field">
+          <label for="mobile_no">Mobile Number <span class="req">*</span></label>
+          <input type="tel" id="mobile_no" name="mobile_no" inputmode="numeric" required
+                 pattern="[6-9][0-9]{9}" value="<%= form.mobile_no || '' %>"
+                 <%= errors.mobile_no ? 'aria-invalid="true"' : '' %>>
+          <% if (errors.mobile_no) { %><span class="field__error"><%= errors.mobile_no %></span><% } %>
+        </div>
+
+        <div class="field">
+          <label for="password">Password <span class="req">*</span></label>
+          <input type="password" id="password" name="password" maxlength="40" required
+                 autocomplete="new-password" <%= errors.password ? 'aria-invalid="true"' : '' %>>
+          <span class="field__hint"><strong>Not stored.</strong> This demonstration
+          authenticates nobody, so keeping a password would be a liability with no purpose.</span>
+          <% if (errors.password) { %><span class="field__error"><%= errors.password %></span><% } %>
+        </div>
+
+        <div class="field">
+          <label for="challenge_answer"><%= challenge.question %> <span class="req">*</span></label>
+          <input type="text" id="challenge_answer" name="challenge_answer" maxlength="6" required
+                 autocomplete="off" <%= errors.challenge_answer ? 'aria-invalid="true"' : '' %>>
+          <% if (errors.challenge_answer) { %><span class="field__error"><%= errors.challenge_answer %></span><% } %>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn btn--primary">Register (local only)</button>
+        <a class="btn btn--secondary" href="/CitiZenService/Visitor/Registration">Reset</a>
+      </div>
+    </div>
+  </form>
+</section></div></main>
+<%- include('../partials/footer') %>

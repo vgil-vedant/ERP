@@ -1,0 +1,124 @@
+/* Hand-written styles for the eforensics.gov.in home page.
+   Geometry measured from reference_pages/screenshots/index.desktop.png.
+   Images are the captured originals, embedded as base64 in the views. */
+
+.ef-hero {
+  background: linear-gradient(160deg, #7d8bf5 0%, #8f7ef0 48%, #a86ee8 100%);
+  color: #fff;
+}
+.ef-hero__inner {
+  max-width: var(--shell); margin: 0 auto; padding: 56px 16px 70px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+}
+.ef-hero__eyebrow { font-size: 14px; margin: 0 0 10px; opacity: .92; }
+.ef-hero__title { font-size: 36px; line-height: 48px; font-weight: 400; margin: 0 0 22px; }
+.ef-hero__lede { font-size: 15px; line-height: 26px; margin: 0; max-width: 580px; opacity: .95; }
+
+.ef-hero__art { display: flex; justify-content: center; align-items: center; }
+.ef-hero__img { display: block; width: 100%; max-width: 640px; height: auto; }
+
+.ef-panel-wrap { background: linear-gradient(180deg, #a86ee8 0%, #b06ae4 100%); padding: 0 16px 56px; }
+.ef-panel {
+  max-width: 1190px; margin: 0 auto; background: #fff; border-radius: 10px;
+  padding: 30px 34px 36px; box-shadow: 0 10px 30px rgba(40, 20, 80, .18);
+}
+.ef-panel__title {
+  font-size: 24px; font-weight: 400; color: #3c3c5a; margin: 0 0 24px;
+  display: inline-block; padding-bottom: 8px; border-bottom: 3px solid #7d8bf5;
+}
+.ef-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.ef-feature { border: 1px solid #ececf4; border-radius: 8px; padding: 22px 22px 26px; background: #fff; }
+.ef-feature--tint { background: #fdf6ff; }
+.ef-feature__img { display: block; width: auto; height: auto; max-width: 89px; margin: 0 0 18px; }
+.ef-feature__title { font-size: 15px; font-weight: 700; color: #2f2f45; margin: 0 0 8px;
+  padding-bottom: 8px; border-bottom: 2px solid #e8574a; display: inline-block; }
+.ef-feature__text { font-size: 13px; line-height: 21px; color: #6b6b80; margin: 0; }
+
+.ef-steps {
+  background: linear-gradient(180deg, #b06ae4 0%, #c45ddd 100%);
+  color: #fff; padding: 44px 16px 60px; text-align: center;
+}
+.ef-steps__title { font-size: 30px; font-weight: 400; margin: 0 0 10px; }
+.ef-steps__sub { font-size: 14px; margin: 0 auto 36px; max-width: 720px; opacity: .92; }
+.ef-steps__row {
+  max-width: var(--shell); margin: 0 auto; display: grid;
+  grid-template-columns: repeat(5, 1fr); gap: 22px;
+}
+/* the original sets each icon on a 100px white rounded square */
+.ef-step__img { display: block; width: 100px; height: 100px; object-fit: none; object-position: center;
+  background: #fff; border-radius: 14px; margin: 0 auto 16px; }
+.ef-step__title { font-size: 16px; font-weight: 400; margin: 0 0 8px; }
+.ef-step__text { font-size: 13px; line-height: 20px; margin: 0; opacity: .92; }
+
+.ef-contact { background: #fff; color: #333; padding: 42px 16px 48px; }
+.ef-contact__inner { max-width: var(--shell); margin: 0 auto; }
+.ef-contact__title { font-size: 26px; font-weight: 700; margin: 0 0 28px; }
+.ef-contact__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+.ef-contact__item { display: flex; gap: 12px; align-items: flex-start; }
+.ef-contact__img { flex: none; width: auto; height: auto; max-width: 24px; margin-top: 2px; }
+.ef-contact__label { font-size: 14px; margin: 0 0 4px; }
+.ef-contact__value { font-size: 13px; line-height: 20px; margin: 0; color: #6b6b80; }
+.ef-contact__note { font-size: 12px; color: #8d8da0; margin: 26px 0 0; }
+
+@media (max-width: 980px) {
+  .ef-hero__inner { grid-template-columns: 1fr; }
+  .ef-features { grid-template-columns: 1fr; }
+  .ef-steps__row { grid-template-columns: repeat(2, 1fr); }
+  .ef-contact__row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .ef-hero__title { font-size: 26px; line-height: 36px; }
+  .ef-steps__row, .ef-contact__row { grid-template-columns: 1fr; }
+}
+
+/* --- login / password pages ---------------------------------------------
+   Measured from reference_pages/screenshots/login.desktop.png: a purple
+   gradient stage with a centred white card, icon-prefixed inputs, a blue
+   submit, then the white contact band. */
+.ef-stage {
+  background: linear-gradient(170deg, #7d8bf5 0%, #9b74ee 46%, #c45ddd 100%);
+  min-height: 660px; display: grid; place-items: start center; padding: 56px 16px 90px;
+}
+.ef-card {
+  background: #fff; width: 100%; max-width: 440px; border-radius: 10px;
+  padding: 30px 40px 36px; box-shadow: 0 14px 34px rgba(40, 20, 80, .22);
+}
+.ef-card__title { font-size: 24px; font-weight: 700; color: #16214a; text-align: center; margin: 0 0 26px; }
+.ef-row { display: flex; align-items: stretch; border: 1px solid #c9d2e3; border-radius: 6px;
+  overflow: hidden; margin: 0 0 16px; background: #fff; }
+.ef-row__icon { width: 44px; flex: none; background: #16407e; display: grid; place-items: center; }
+.ef-row__icon span { width: 16px; height: 16px; border-radius: 50%; background: #fff; opacity: .9; display: block; }
+.ef-row input { border: 0; outline: none; flex: 1; min-width: 0; padding: 11px 12px;
+  font-family: var(--font); font-size: 14px; color: #222; background: #fff; }
+.ef-row input:focus { box-shadow: inset 0 0 0 2px #7d8bf5; }
+.ef-row__challenge { background: #fff6f6; color: #d8372a; font-weight: 700; letter-spacing: .12em;
+  padding: 11px 14px; font-size: 15px; border-right: 1px solid #f0d8d6; white-space: nowrap; }
+.ef-submit { width: 100%; margin-top: 12px; padding: 12px 0; border: 0; border-radius: 22px;
+  background: linear-gradient(180deg, #11529c, #0c3f7d); color: #fff; font-size: 16px;
+  font-weight: 700; font-family: var(--font); cursor: pointer; }
+.ef-submit:hover { filter: brightness(1.08); }
+.ef-card__link { display: block; text-align: center; margin: 18px 0 0; font-size: 13px;
+  color: #16407e; text-decoration: underline; }
+.ef-card__note { font-size: 11px; line-height: 17px; color: #8d8da0; margin: 18px 0 0; text-align: center; }
+.ef-errors { max-width: 440px; margin: 0 auto 16px; }
+@media (max-width: 680px) { .ef-card { padding: 24px 22px 28px; } .ef-stage { min-height: 0; padding: 30px 16px 46px; } }
+
+/* --- contact details page -------------------------------------------------
+   Measured from reference_pages/screenshots/home_contactus.desktop.png.
+   The original prints a real postal address in this card; it is NOT copied. */
+.ef-contact-stage {
+  background: linear-gradient(170deg, #8089f3 0%, #9b74ee 50%, #b85ae0 100%);
+  padding: 34px 16px 96px; min-height: 430px;
+}
+.ef-contact-card { max-width: 540px; margin: 0 auto; }
+.ef-contact-card__bar {
+  background: #cdf7d8; border-left: 5px solid #3aa55c; border-radius: 4px;
+  padding: 10px 16px; font-size: 13px; font-weight: 700; color: #1c3b26; margin: 0 0 14px;
+}
+.ef-contact-card__box { background: #fff; border: 1px solid #dfe3ea; border-radius: 4px; overflow: hidden; }
+.ef-contact-card__head {
+  background: #f6f7f9; border-bottom: 1px solid #dfe3ea; text-align: center;
+  font-size: 20px; font-weight: 700; color: #16214a; padding: 16px 18px; margin: 0;
+}
+.ef-contact-card__body { padding: 20px 22px 24px; font-size: 14px; line-height: 24px; color: #4a4a60; }
+.ef-contact-card__body strong { color: #222; }

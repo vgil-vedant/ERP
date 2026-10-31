@@ -1,0 +1,2072 @@
+{
+  "url": "https://eprisons.nic.in/NPIP/public/About.aspx",
+  "finalUrl": "https://eprisons.nic.in/NPIP/public/About",
+  "redirected": true,
+  "slug": "npip_public_about.aspx",
+  "depth": 1,
+  "via": "https://eprisons.nic.in/NPIP/public/Home",
+  "httpStatus": 200,
+  "crawlStatus": "captured",
+  "title": "Welcome to National Prison Portal",
+  "lang": "en",
+  "charset": "UTF-8",
+  "description": "",
+  "keywords": "",
+  "headings": [
+    "Information",
+    "Contact Us"
+  ],
+  "headingTree": [
+    {
+      "level": 4,
+      "text": "Information"
+    },
+    {
+      "level": 4,
+      "text": "Contact Us"
+    }
+  ],
+  "breadcrumbs": [],
+  "navLabels": [
+    "ePrisons MIS",
+    "Citizen Service",
+    "Legal Aid",
+    "Other Stakeholders",
+    "eMulakat",
+    "eMulakat Status",
+    "DashBoard",
+    "Prisons Map",
+    "Reports",
+    "ePrisons Live",
+    "eMulakat Statistics",
+    "Parole Jumper",
+    "Absconder",
+    "Foreigner Prisoners",
+    "Grievance",
+    "About Us",
+    "Contact Us",
+    "Privacy Policy",
+    "Terms of Use",
+    "Code of Conduct"
+  ],
+  "text": "ePrisons MIS Citizen Service Legal Aid Other Stakeholders eMulakat eMulakat Status DashBoard Prisons Map Reports Grievance About Us Contact Us About The Scope of this project is to computerize and integrate all the activities related to prison and prisoner management in the jail. This application suite will provide the vital information about the inmates, lodged in the prisons, in real time environment to the prison officials and other entities, involved in Criminal Justice System. It will also facilitate online visit request and grievance redressal. ePrisons application suite, developed by NIC, is cloud based product designed with easy to use GUI and embedded with a comprehensive security features. It can be easily adopted by any state prisons department with minimum customization efforts since all the possible customization features are parameterized and can be configured by the users. This application suite consists of three main products: The application suite comprises products organized into three primary categories: 1. Core Applications : These applications are fundamental to prison operations and are vital sources of information for the government. Key applications include the: Prisoner Information Management System (PIMS); Visitor Information Management System (VIMS); Custody Certificate Management and Delivery; Bail and Release Communication System Parole and Furlough Management; Legal Aid Management Portal; National Prisons Portal eMulakat VC System Kiosk Information, among others 2. Peripheral Applications: These applications are utilized within prisons and operate locally, accessing information from the ePrisons system. They encompass various applications from the National Informatics Centre (NIC) or third-party integrations tailored to local needs, such as the Canteen Management System; Hospital Management System; Staff/Employee Management; Police Escort Request. Roaster Management Prison Calling System; 3. External applications: These applications are integrated with the Integrated Criminal Justice System (ICJS) or other platforms and either consume or provide data directly to ePrisons. Examples include the Court Management System; Police Management System; , which were previously standalone services but are now part of the ICJS portal, along with the Faster system for the swift delivery of orders in prisons. **Note: Legacy services have been consolidated into core services and new facilities are continually being added to the suite in response to departmental and governmental requirements. Key Features: Available as SaaS from the NIC Cloud, which provides high availability, scalable and robust system to the users; The solution is ready to adopted by any prison / stakeholder for free. Parameterized and configurable gap aspects; SMS and email alerts; Equipped with necessary services required for integrating with other Criminal Justice System stakeholders; and Authorization checks & validation to improve the data quality. Services - To the Public: Registration of visit request and Status query of that request; SMS/eMail Alerts to the visitors; Statistical information / drilled down Reports on national basis; Sumission of grievance; and KaraBazaar Services - To the Prisons: Controlled registration of prisoners (checking duplicity of prisoner’s entry to the jail); Recording and tracking their movement activities and their management throughout their term inside the prison; Well structured information about Availability of various reports (daily/Monthly) for administrative purpose; Graphical and statistical reports for monitoring and informational purpose; Enables the prison management to utilize the resources optimally; Various alerts like Hearing, 436/436 A, parole jump, inventory, medicine etc for monitoring purpose. Services - To the Courts: Availability of CrPC 436 / 436 ‘A’/441 reports to court. Availability of Nominal roll online to the court; Alerts for jumping Parole/Interim Bail retrun due dates; Availability of other information of the prisoner online to the court on demand. Services - To the Police, Other investigating agencies: Nationwide search for inmates and their complete profile; Marking of Alert (eMail/SMS) at various events; Reports of list and statistical format for a period which can be drilled down to individual jails The procedure for applying the visit request is as follows: Prospective visitors are requested to submit the visit details in the prescribed format as shown in the Registration page. The visit details as entered (registration number, date of visit and approval status) are communicated to the visitor through SMS / eMail; The visit requested will be authenticated / verified by the officer to be visited through this eVisitor operational at the Ministry; The current approval status of the visit can also be enquired by the visitor on this website by entering Reg.No. The status of visit approval / change in visiting time will be communicated to the visitor through SMS / eMail; Visitor pass will be issued to the approved visitors after capturing a photograph at the reception counter. If visitor is earlier registered at least once with this eVisitor, he / she can refer his / her old registration number, mobile number or personal details for quick registration of his / her current visit at the Reception Counter. The procedure for Submitting the grievance is as follows: Prospective visitors are requested to submit the grievance details in the prescribed format as shown in the Grievance page. The Complaint details as entered (Name,Mobile number and Relation with Inmate) and Grievance details (Stae, Jail ,Prisoner name, age, gender, Grievance category and message) is submitted by the visitors. The Grievance will be authenticated / verified by the officer through this ----- The current approval status of the grievance can also be enquired by the visitor on this website by entering Request Number The status of Grievance will be communicated to the visitor through SMS / eMai l; Visitor pass will be issued to the approved visitors after capturing a photograph at the reception counter. If visitor is earlier registered at least once with this portal, he / she can refer his / her old request number, mobile number or personal details for quick submission of his / her grievance.. INFORMATION DashBoard eMulakat Grievance About us CONTACT US National Informatics Centre A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India Served From : NQ34EP2P-ePApp4 A Digital India Initiative by Government of India. Privacy Policy Terms of Use Code of Conduct Copyright © 2015 by NIC .All rights reserved.",
+  "textLength": 6671,
+  "document": {
+    "scrollWidth": 1366,
+    "scrollHeight": 2338
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 900
+  },
+  "imageCount": 2,
+  "iframeCount": 0,
+  "htmlLength": 27952,
+  "forms": [
+    {
+      "index": 0,
+      "name": null,
+      "id": "frmMaster",
+      "selector": "#frmMaster",
+      "action": "https://eprisons.nic.in/NPIP/public/About",
+      "actionRaw": "./About",
+      "method": "post",
+      "enctype": null,
+      "target": null,
+      "heading": "Information",
+      "fieldCount": 0,
+      "fields": [],
+      "buttons": [
+        {
+          "tag": "button",
+          "type": "button",
+          "name": null,
+          "id": null,
+          "text": null,
+          "selector": "#frmMaster > header.header_bg > div.container > nav.navbar.navbar-expand-lg > button.navbar-toggler",
+          "box": null,
+          "hasOnClick": false
+        }
+      ],
+      "hiddenMachinery": [
+        "__EVENTTARGET",
+        "__EVENTARGUMENT",
+        "__VIEWSTATE",
+        "__VIEWSTATEGENERATOR"
+      ],
+      "hasCaptcha": false,
+      "hasFileInput": false,
+      "visibleText": "//<![CDATA[ var theForm = document.forms['frmMaster']; if (!theForm) { theForm = document.frmMaster; } function __doPostBack(eventTarget, eventArgument) { if (!theForm.onsubmit || (theForm.onsubmit() != false)) { theForm.__EVENTTARGET.value = eventTarget; theForm.__EVENTARGUMENT.value = eventArgument; theForm.submit(); } } //]]> //<![CDATA[ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.'); //]]> //<![CDATA[ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'frmMaster', [], [], [], 90, 'ctl00'); //]]> ePrisons MIS Citizen S",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 2338
+      }
+    }
+  ],
+  "orphanControls": [],
+  "tables": [],
+  "components": [
+    {
+      "type": "header",
+      "selector": "#frmMaster > header.header_bg",
+      "tag": "header",
+      "classes": "header_bg",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 40,
+        "w": 1366,
+        "h": 76
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgb(255, 255, 255)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "15px 0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#frmMaster > footer.footer.mt-auto",
+      "tag": "footer",
+      "classes": "footer mt-auto footer_bg",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 2140,
+        "w": 1366,
+        "h": 198
+      },
+      "text": "Information DashBoard eMulakat Grievance About us Contact Us National Informatics Centre A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India . Served From : NQ34EP2P-ePApp4 ",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgb(59, 67, 72)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "15px 0px 0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "footer.footer.mt-auto > div.container:nth-of-type(1) > div.row > div.col-xs-12.col-md-5:nth-of-type(1) > div.footer-middle.border_right",
+      "tag": "div",
+      "classes": "footer-middle border_right pb-4",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 2155,
+        "w": 488,
+        "h": 125
+      },
+      "text": "Information DashBoard eMulakat Grievance About us",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 24px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "footer.footer.mt-auto > div.container:nth-of-type(1) > div.row > div.col-xs-12.col-md-5:nth-of-type(2) > div.footer-middle.border_right",
+      "tag": "div",
+      "classes": "footer-middle border_right",
+      "id": null,
+      "box": {
+        "x": 593,
+        "y": 2155,
+        "w": 488,
+        "h": 111
+      },
+      "text": "Contact Us National Informatics Centre A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 15px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "#frmMaster > footer.footer.mt-auto > div.footer-bottom:nth-of-type(2)",
+      "tag": "div",
+      "classes": "footer-bottom",
+      "id": null,
+      "box": {
+        "x": 0,
+        "y": 2280,
+        "w": 1366,
+        "h": 58
+      },
+      "text": "A Digital India Initiative by Government of India. Privacy Policy Terms of Use Code of Conduct Copyright © 2015 by NIC .All rights reserved.",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "10px 0px 0px",
+        "margin": "0px",
+        "border": "",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "div.footer-bottom:nth-of-type(2) > div.container > div.row > div.col-xs-12.col-sm-3:nth-of-type(1) > div.footer_text",
+      "tag": "div",
+      "classes": "footer_text",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 2291,
+        "w": 283,
+        "h": 23
+      },
+      "text": "A Digital India Initiative by Government of India.",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "5px 0px 0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "div.footer-bottom:nth-of-type(2) > div.container > div.row > div.col-xs-12.col-sm-3:nth-of-type(2) > div.footer_text",
+      "tag": "div",
+      "classes": "footer_text",
+      "id": null,
+      "box": {
+        "x": 388,
+        "y": 2291,
+        "w": 591,
+        "h": 28
+      },
+      "text": "Privacy Policy Terms of Use Code of Conduct",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "div.container > div.row > div.col-xs-12.col-sm-3:nth-of-type(2) > div.footer_text > ul.footer_nav",
+      "tag": "ul",
+      "classes": "footer_nav",
+      "id": null,
+      "box": {
+        "x": 388,
+        "y": 2291,
+        "w": 591,
+        "h": 28
+      },
+      "text": "Privacy Policy Terms of Use Code of Conduct",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "footer",
+      "selector": "div.footer-bottom:nth-of-type(2) > div.container > div.row > div.col-xs-12.col-sm-3:nth-of-type(3) > div.footer_text.powered_by",
+      "tag": "div",
+      "classes": "footer_text powered_by float-end",
+      "id": null,
+      "box": {
+        "x": 1002,
+        "y": 2291,
+        "w": 283,
+        "h": 47
+      },
+      "text": "Copyright © 2015 by NIC .All rights reserved.",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#frmMaster > header.header_bg > div.container > nav.navbar.navbar-expand-lg",
+      "tag": "nav",
+      "classes": "navbar navbar-expand-lg",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 55,
+        "w": 1205,
+        "h": 46
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 1px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "relative",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#frmMaster > header.header_bg > div.container > nav.navbar.navbar-expand-lg > a.navbar-brand",
+      "tag": "a",
+      "classes": "navbar-brand",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 55,
+        "w": 276,
+        "h": 45
+      },
+      "text": "",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(0, 0, 0)",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "5px 0px",
+        "margin": "0px 16px 0px 0px",
+        "border": "0px none rgb(0, 0, 0)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#navbarSupportedContent",
+      "tag": "div",
+      "classes": "collapse navbar-collapse",
+      "id": "navbarSupportedContent",
+      "box": {
+        "x": 372,
+        "y": 59,
+        "w": 913,
+        "h": 37
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "nav",
+      "selector": "#navbarSupportedContent > ul.navbar-nav.ms-auto",
+      "tag": "ul",
+      "classes": "navbar-nav ms-auto",
+      "id": null,
+      "box": {
+        "x": 443,
+        "y": 59,
+        "w": 843,
+        "h": 37
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 8,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px 0px 70.4062px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "form",
+      "selector": "#frmMaster",
+      "tag": "form",
+      "classes": null,
+      "id": "frmMaster",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 2338
+      },
+      "text": "//<![CDATA[ var theForm = document.forms['frmMaster']; if (!theForm) { theForm = document.frmMaster; } function __doPostBack(eventTarget, eventArgument) { if (!theForm.onsubmit || ",
+      "childCount": 12,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "accordion",
+      "selector": "#navbarSupportedContent",
+      "tag": "div",
+      "classes": "collapse navbar-collapse",
+      "id": "navbarSupportedContent",
+      "box": {
+        "x": 372,
+        "y": 59,
+        "w": 913,
+        "h": 37
+      },
+      "text": "eMulakat eMulakat Status DashBoard Prisons Map Reports ePrisons Live eMulakat Statistics Parole Jumper Absconder Foreigner Prisoners Grievance About Us Contact Us",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "flex",
+        "position": "static",
+        "flexDirection": "row",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "map",
+      "selector": "#lieprisonsmap",
+      "tag": "li",
+      "classes": "nav-item",
+      "id": "lieprisonsmap",
+      "box": {
+        "x": 783,
+        "y": 59,
+        "w": 116,
+        "h": 37
+      },
+      "text": "Prisons Map",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "list-item",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-4:nth-of-type(2) > ul.list",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 494,
+        "w": 378,
+        "h": 229
+      },
+      "text": "Prisoner Information Management System (PIMS); Visitor Information Management System (VIMS); Custody Certificate Management and Delivery; Bail and Release Communication System Paro",
+      "childCount": 9,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-4:nth-of-type(3) > ul.list",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 482,
+        "y": 539,
+        "w": 378,
+        "h": 151
+      },
+      "text": "Canteen Management System; Hospital Management System; Staff/Employee Management; Police Escort Request. Roaster Management Prison Calling System;",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-4:nth-of-type(4) > ul.list",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 884,
+        "y": 494,
+        "w": 378,
+        "h": 47
+      },
+      "text": "Court Management System; Police Management System;",
+      "childCount": 2,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-12:nth-of-type(5) > ul.list:nth-of-type(1)",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 802,
+        "w": 1181,
+        "h": 151
+      },
+      "text": "Available as SaaS from the NIC Cloud, which provides high availability, scalable and robust system to the users; The solution is ready to adopted by any prison / stakeholder for fr",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-12:nth-of-type(5) > ul.list:nth-of-type(2)",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 1008,
+        "w": 1181,
+        "h": 125
+      },
+      "text": "Registration of visit request and Status query of that request; SMS/eMail Alerts to the visitors; Statistical information / drilled down Reports on national basis; Sumission of gri",
+      "childCount": 5,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-12:nth-of-type(5) > ul.list:nth-of-type(3)",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 1187,
+        "w": 1181,
+        "h": 151
+      },
+      "text": "Controlled registration of prisoners (checking duplicity of prisoner’s entry to the jail); Recording and tracking their movement activities and their management throughout their te",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-12:nth-of-type(5) > ul.list:nth-of-type(4)",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 1393,
+        "w": 1181,
+        "h": 99
+      },
+      "text": "Availability of CrPC 436 / 436 ‘A’/441 reports to court. Availability of Nominal roll online to the court; Alerts for jumping Parole/Interim Bail retrun due dates; Availability of ",
+      "childCount": 4,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-12:nth-of-type(5) > ul.list:nth-of-type(5)",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 1546,
+        "w": 1181,
+        "h": 73
+      },
+      "text": "Nationwide search for inmates and their complete profile; Marking of Alert (eMail/SMS) at various events; Reports of list and statistical format for a period which can be drilled d",
+      "childCount": 3,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-12:nth-of-type(5) > ul.list:nth-of-type(6)",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 1674,
+        "w": 1181,
+        "h": 193
+      },
+      "text": "Prospective visitors are requested to submit the visit details in the prescribed format as shown in the Registration page. The visit details as entered (registration number, date o",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(2) > div.row > div.row > div.col-lg-12:nth-of-type(5) > ul.list:nth-of-type(7)",
+      "tag": "ul",
+      "classes": "list",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 1910,
+        "w": 1181,
+        "h": 195
+      },
+      "text": "Prospective visitors are requested to submit the grievance details in the prescribed format as shown in the Grievance page. The Complaint details as entered (Name,Mobile number and",
+      "childCount": 6,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px 0px 0px 32px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(1) > div.row > div.col-xs-12.col-md-5:nth-of-type(1) > div.footer-middle.border_right > ul.links",
+      "tag": "ul",
+      "classes": "links",
+      "id": null,
+      "box": {
+        "x": 80,
+        "y": 2182,
+        "w": 487,
+        "h": 74
+      },
+      "text": "DashBoard eMulakat Grievance About us",
+      "childCount": 4,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "list",
+      "selector": "div.container:nth-of-type(1) > div.row > div.col-xs-12.col-md-5:nth-of-type(2) > div.footer-middle.border_right > ul.contacts-info",
+      "tag": "ul",
+      "classes": "contacts-info",
+      "id": null,
+      "box": {
+        "x": 593,
+        "y": 2182,
+        "w": 487,
+        "h": 69
+      },
+      "text": "National Informatics Centre A-Block, CGO Complex, Lodhi Road New Delhi - 110 003 India",
+      "childCount": 1,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "start",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "type": "button",
+      "selector": "#lireports > a.nav-link.dropdown-toggle",
+      "tag": "a",
+      "classes": "nav-link dropdown-toggle",
+      "id": null,
+      "box": {
+        "x": 899,
+        "y": 59,
+        "w": 94,
+        "h": 37
+      },
+      "text": "Reports",
+      "childCount": 0,
+      "style": {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(51, 51, 51)",
+        "fontSize": "18px",
+        "fontWeight": "500",
+        "fontFamily": "Arial, Helvetica, sans-serif",
+        "padding": "8px",
+        "margin": "0px",
+        "border": "0px none rgb(51, 51, 51)",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "display": "block",
+        "position": "static",
+        "textAlign": "left",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/logo.png",
+      "category": "images",
+      "alt": "",
+      "natural": {
+        "w": 276,
+        "h": 35
+      },
+      "rendered": {
+        "x": 80,
+        "y": 60,
+        "w": 276,
+        "h": 35
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/nic_logo.png",
+      "category": "images",
+      "alt": "",
+      "natural": {
+        "w": 147,
+        "h": 29
+      },
+      "rendered": {
+        "x": 1002,
+        "y": 2309,
+        "w": 147,
+        "h": 29
+      },
+      "loading": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/favicon-16x16.png",
+      "category": "icons",
+      "rel": "icon",
+      "sizes": "16x16"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/bootstrap.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/custom_style.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/hover.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/ionicons.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/bootstrap-icons.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen.min.css",
+      "category": "stylesheets",
+      "media": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/jquery-min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/popper.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/bootstrap.bundle.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/chosen.jquery.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&t=639191031332169432",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG0OUrYMiDnAtHQCFUaz0W--4WPMIG0lL9lnbwIsliZ0&t=3a1336b1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5VxFYOE_qs64fwvKe7dRnAlwJ4-ZR1AkMZ6VKiLePy3DznNeeSqdI8JPLK7hW1Eg2&t=3a1336b1",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/crypto.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": null
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/dist/js/app.min.js",
+      "category": "scripts",
+      "async": false,
+      "defer": false,
+      "type": "text/javascript"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/SelectMISState.aspx",
+      "raw": "SelectMISState.aspx",
+      "text": "ePrisons MIS",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/citizenservice/",
+      "raw": "https://eprisons.nic.in/citizenservice/",
+      "text": "Citizen Service",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "raw": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "text": "Legal Aid",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://eprisons.nic.in/Login",
+      "raw": "https://eprisons.nic.in/Login",
+      "text": "Other Stakeholders",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/Home.aspx",
+      "raw": "Home.aspx",
+      "text": "",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/MyVisitRegistration.aspx",
+      "raw": "MyVisitRegistration.aspx",
+      "text": "eMulakat",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/MyVisitStatus.aspx",
+      "raw": "MyVisitStatus.aspx",
+      "text": "eMulakat Status",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/DashBoard.aspx",
+      "raw": "DashBoard.aspx",
+      "text": "DashBoard",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIPDashboard",
+      "raw": "https://eprisons.nic.in/NPIPDashboard",
+      "text": "Prisons Map",
+      "title": null,
+      "target": "_blank",
+      "kind": "navigational",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "Reports",
+      "kind": "non-navigational",
+      "target": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ePrisonsLiveStatus.aspx",
+      "raw": "ePrisonsLiveStatus.aspx",
+      "text": "ePrisons Live",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ePrisonsLiveVisitorsStatus.aspx",
+      "raw": "ePrisonsLiveVisitorsStatus.aspx",
+      "text": "eMulakat Statistics",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ParoleJumper.aspx",
+      "raw": "ParoleJumper.aspx",
+      "text": "Parole Jumper",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/Absconder.aspx",
+      "raw": "Absconder.aspx",
+      "text": "Absconder",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/DashBoardForeigner.aspx",
+      "raw": "DashBoardForeigner.aspx",
+      "text": "Foreigner Prisoners",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/grievancelogin.aspx",
+      "raw": "grievancelogin.aspx",
+      "text": "Grievance",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/About.aspx",
+      "raw": "About.aspx",
+      "text": "About Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ContactUs.aspx",
+      "raw": "ContactUs.aspx",
+      "text": "Contact Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/DashBoard.aspx",
+      "raw": "DashBoard.aspx",
+      "text": "DashBoard",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/MyVisitRegistration.aspx",
+      "raw": "MyVisitRegistration.aspx",
+      "text": "eMulakat",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/grievance.aspx",
+      "raw": "grievance.aspx",
+      "text": "Grievance",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/About.aspx",
+      "raw": "About.aspx",
+      "text": "About us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/ContactUs.aspx",
+      "raw": "ContactUs.aspx",
+      "text": "Contact Us",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/PrivacyPolicy.aspx",
+      "raw": "PrivacyPolicy.aspx",
+      "text": "Privacy Policy",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/TermsofUse.aspx",
+      "raw": "TermsofUse.aspx",
+      "text": "Terms of Use",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": "https://eprisons.nic.in/NPIP/public/CodeofConduct.aspx",
+      "raw": "CodeofConduct.aspx",
+      "text": "Code of Conduct",
+      "title": null,
+      "target": null,
+      "kind": "navigational",
+      "rel": null
+    },
+    {
+      "href": null,
+      "raw": "#",
+      "text": "",
+      "kind": "non-navigational",
+      "target": null
+    }
+  ],
+  "fontFamilies": [
+    {
+      "value": "Arial, Helvetica, sans-serif",
+      "count": 62
+    },
+    {
+      "value": "Arial",
+      "count": 19
+    }
+  ],
+  "colors": {
+    "text": [
+      {
+        "value": "rgb(51, 51, 51)",
+        "count": 161
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 16
+      },
+      {
+        "value": "rgb(170, 170, 170)",
+        "count": 10
+      },
+      {
+        "value": "rgb(0, 0, 0)",
+        "count": 7
+      },
+      {
+        "value": "rgb(204, 204, 204)",
+        "count": 3
+      },
+      {
+        "value": "rgb(120, 159, 191)",
+        "count": 3
+      },
+      {
+        "value": "rgb(128, 0, 0)",
+        "count": 2
+      }
+    ],
+    "background": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 7
+      },
+      {
+        "value": "rgb(61, 69, 72)",
+        "count": 1
+      },
+      {
+        "value": "rgb(87, 142, 190)",
+        "count": 1
+      },
+      {
+        "value": "rgb(59, 67, 72)",
+        "count": 1
+      }
+    ]
+  },
+  "bodyStyle": {
+    "fontFamily": "Arial, Helvetica, sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "18px",
+    "color": "rgb(51, 51, 51)",
+    "backgroundColor": "rgb(255, 255, 255)"
+  },
+  "spaHints": {
+    "hasHistoryPushState": true,
+    "hashRoutingLinks": 0,
+    "reactRoot": false,
+    "frameworkGlobals": [
+      "jQuery",
+      "$",
+      "bootstrap",
+      "WebForm_DoPostBackWithOptions",
+      "Sys",
+      "__doPostBack"
+    ]
+  },
+  "responseHeaders": {
+    "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+    "cache-control": "private",
+    "content-length": "28542",
+    "content-security-policy": "object-src 'none'",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 26 Oct 2026 11:45:25 GMT",
+    "referrer-policy": "no-referrer",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN, DENY",
+    "x-permitted-cross-domain-policies": "none",
+    "x-xss-protection": "1; mode=block"
+  },
+  "network": [
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/About.aspx",
+      "method": "GET",
+      "status": 301,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "135",
+        "content-security-policy": "object-src 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 11:45:24 GMT",
+        "location": "/NPIP/public/About",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN, DENY",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/public/About",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "document",
+      "contentType": "text/html; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "cache-control": "private",
+        "content-length": "28542",
+        "content-security-policy": "object-src 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 26 Oct 2026 11:45:25 GMT",
+        "referrer-policy": "no-referrer",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN, DENY",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "1; mode=block"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/bootstrap.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"d4e01268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "317840",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/custom_style.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"e1a3347ddb57dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "34031",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Fri, 09 Oct 2026 10:46:50 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/hover.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"2cb20268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "134107",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/ionicons.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"97a221268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "51295",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/bootstrap-icons.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"177eff258a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "62144",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/jquery-min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"1fe59278a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "95067",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:38 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/popper.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"cc8214278a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "20101",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:38 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/bootstrap.bundle.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"1ce6ec268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "92422",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/chosen.jquery.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"40cbee268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "53089",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/chosen.min.css",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "stylesheet",
+      "contentType": "text/css",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"dbf1a268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "10486",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "text/css",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&t=639191031332169432",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/x-javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/x-javascript",
+        "last-modified": "Wed, 08 Jul 2026 04:55:33 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG0OUrYMiDnAtHQCFUaz0W--4WPMIG0lL9lnbwIsliZ0&t=3a1336b1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/x-javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/x-javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5VxFYOE_qs64fwvKe7dRnAlwJ4-ZR1AkMZ6VKiLePy3DznNeeSqdI8JPLK7hW1Eg2&t=3a1336b1",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/x-javascript; charset=utf-8",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "cache-control": "public",
+        "x-permitted-cross-domain-policies": "none",
+        "connection": "close",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "expires": "Tue, 26 Oct 2027 05:06:02 GMT",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/x-javascript; charset=utf-8",
+        "last-modified": "Mon, 26 Oct 2026 05:06:02 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"4c989268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "2459",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "image/png",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/login-icon-b.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"24c786268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "16664",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "image/png",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/images/nic_logo.png",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fromServiceWorker": false,
+      "headers": {
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"bec099268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "4826",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "image/png",
+        "last-modified": "Thu, 06 Aug 2026 09:58:37 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/js/crypto.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"18af6268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "13395",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:38 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/dist/js/app.min.js",
+      "method": "GET",
+      "status": 200,
+      "resourceType": "script",
+      "contentType": "application/javascript",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "etag": "\"a6a332268a25dd1:0\"",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "6231",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:43:47 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Thu, 06 Aug 2026 09:58:36 GMT",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/fonts/bootstrap-icons.woff?4601c71fb26c9277391ec80789bfde9c",
+      "method": "GET",
+      "status": 404,
+      "resourceType": "font",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "103",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:45:25 GMT",
+        "content-type": "text/html",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    },
+    {
+      "url": "https://eprisons.nic.in/NPIP/Content/css/fonts/bootstrap-icons.woff2?4601c71fb26c9277391ec80789bfde9c",
+      "method": "GET",
+      "status": 404,
+      "resourceType": "font",
+      "contentType": "text/html",
+      "fromServiceWorker": false,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "content-security-policy": "object-src 'none'",
+        "x-permitted-cross-domain-policies": "none",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "access-control-allow-origin": "https://eprisons.nic.in/public/Home.aspx",
+        "content-length": "103",
+        "x-xss-protection": "1; mode=block",
+        "date": "Mon, 26 Oct 2026 11:45:25 GMT",
+        "content-type": "text/html",
+        "x-frame-options": "DENY, SAMEORIGIN"
+      },
+      "isXhr": false,
+      "postDataPresent": false
+    }
+  ],
+  "consoleIssues": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "screenshots": {
+    "desktop": "reference_pages/screenshots/npip_public_about.aspx.desktop.png",
+    "desktop_viewport": "reference_pages/screenshots/npip_public_about.aspx.desktop.viewport.png",
+    "tablet": "reference_pages/screenshots/npip_public_about.aspx.tablet.png",
+    "mobile": "reference_pages/screenshots/npip_public_about.aspx.mobile.png"
+  },
+  "reachedViaSpa": null,
+  "spaLateSettleApplied": false,
+  "contentSettle": {
+    "settled": true,
+    "sawLoading": false,
+    "waitedMs": 1213
+  },
+  "accessMethod": "direct HTTP request",
+  "capturedAt": "2026-10-26T11:45:30.970Z",
+  "pageType": "about"
+}

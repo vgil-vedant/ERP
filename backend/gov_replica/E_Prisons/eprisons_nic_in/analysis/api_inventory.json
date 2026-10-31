@@ -1,0 +1,273 @@
+{
+  "generatedAt": "2026-10-26T11:48:33.324Z",
+  "counts": {
+    "endpointsObserved": 11
+  },
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/NPIP/public/Chart.ashx",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": true,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "POST",
+      "path": "/NPIP/public/Chart.asmx/bindOffanceChart",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIP/public/DashBoard"
+      ],
+      "statuses": [
+        500
+      ],
+      "contentTypes": [
+        "text/html"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": true,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/NPIPNode/api/jailLocation",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/NPIPNode/api/epCounts",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/NPIPNode/api/jailList",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/",
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport",
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper",
+        "https://eprisons.nic.in/NPIPDashboard/absconder",
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus",
+        "https://eprisons.nic.in/NPIPDashboard/siteMap"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "POST",
+      "path": "/CitiZenService/Visitor/ApplyRegistration",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/CitiZenService/Visitor/Registration"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "text/html; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/NPIPNode/api/lockupReport",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/lockupReport"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/NPIPNode/api/payRoleJumpers",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/paroleJumper"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/NPIPNode/api/absconder",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/absconder"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/NPIPNode/api/eprisonsStateLiveStatus",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    },
+    {
+      "method": "GET",
+      "path": "/NPIPNode/api/eprisonsJailLiveStatus",
+      "origin": "https://eprisons.nic.in",
+      "sameHost": true,
+      "observedOnPages": [
+        "https://eprisons.nic.in/NPIPDashboard/ePrisonsLiveStatus"
+      ],
+      "statuses": [
+        200
+      ],
+      "contentTypes": [
+        "application/json; charset=utf-8"
+      ],
+      "queryParameters": [],
+      "resourceType": "xhr",
+      "carriesRequestBody": false,
+      "authenticationRequired": null,
+      "responseSchema": null,
+      "sampleResponse": null,
+      "schemaNote": "Response bodies were not captured. Recording them from a live government service risks storing real personal data, so only the endpoint shape, status and content type are kept."
+    }
+  ],
+  "publicApiAvailable": false,
+  "publicApiEvidence": "11 data request(s) were observed, all internal to the application. None is a documented public API.",
+  "integrationRestrictions": [
+    "No public, self-service API is published for this portal.",
+    "Public forms are CAPTCHA-protected; automated submission is not available.",
+    "Authenticated functionality sits behind a server-side session and is out of scope."
+  ],
+  "safetyPolicy": "Endpoints here were observed passively while loading public pages. No endpoint was enumerated, fuzzed or probed. No credential, session token, cookie or authorization header was recorded: those header names are stripped before anything is written to disk. No request body was captured."
+}

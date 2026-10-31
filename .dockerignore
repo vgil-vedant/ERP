@@ -1,0 +1,29 @@
+# Only what the two services need at run time goes into an image.
+.git
+.env
+.env.*
+**/node_modules
+**/*.sqlite
+**/*.sqlite-shm
+**/*.sqlite-wal
+docker/.test-data
+
+# not run by either service
+# npm only needs the tools manifest to resolve the workspaces
+backend/tools/*
+!backend/tools/package.json
+backend/scripts
+docs
+tests
+database/postgres
+database/sqlite/*/data
+
+# capture archives: large, never read by the servers
+# (original_assets is mounted read-only by compose.yaml instead of baked in)
+backend/gov_replica/*/*/reference_pages
+backend/gov_replica/*/*/comparison
+backend/gov_replica/*/*/logs
+backend/gov_replica/*/*/replica_screenshots
+backend/gov_replica/*/*/original_assets
+backend/gov_replica/*/*/tests
+docker/.secrets

@@ -1,0 +1,91 @@
+{
+  "runId": "2026-10-27T09-29-17-560Z",
+  "generatedAt": "2026-10-27T09:29:40.820Z",
+  "startUrl": "https://eforensics.gov.in",
+  "rootHost": "eforensics.gov.in",
+  "limits": {
+    "maxPages": 60,
+    "maxDepth": 4,
+    "navTimeoutMs": 45000,
+    "settleTimeoutMs": 3500,
+    "perRequestDelayMs": 1500,
+    "concurrency": 1,
+    "maxAssetBytes": 12582912,
+    "maxTotalRuntimeMs": 1500000,
+    "assetTimeoutMs": 30000,
+    "retriesPerUrl": 2,
+    "throttleBackoffMs": 4000
+  },
+  "visited": {
+    "https://eforensics.gov.in/": {
+      "slug": "index",
+      "finalUrl": "https://eforensics.gov.in/",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "home",
+      "depth": 0,
+      "via": "start URL",
+      "capturedAt": "2026-10-27T07:01:09.229Z",
+      "error": null
+    },
+    "https://eforensics.gov.in/Home/ContactUs": {
+      "slug": "home_contactus",
+      "finalUrl": "https://eforensics.gov.in/Home/ContactUs",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "contact",
+      "depth": 1,
+      "via": "https://eforensics.gov.in/",
+      "capturedAt": "2026-10-27T07:01:15.552Z",
+      "error": null
+    },
+    "https://eforensics.gov.in/Login": {
+      "slug": "login",
+      "finalUrl": "https://eforensics.gov.in/Login",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "login",
+      "depth": 1,
+      "via": "https://eforensics.gov.in/",
+      "capturedAt": "2026-10-27T07:01:21.953Z",
+      "error": null
+    },
+    "https://eforensics.gov.in/Forget/ForgetPassword": {
+      "slug": "forget_forgetpassword",
+      "finalUrl": "https://eforensics.gov.in/Forget/ForgetPassword",
+      "httpStatus": 200,
+      "crawlStatus": "captured",
+      "pageType": "content",
+      "depth": 2,
+      "via": "https://eforensics.gov.in/Login",
+      "capturedAt": "2026-10-27T07:01:31.146Z",
+      "error": null
+    },
+    "https://eforensics.gov.in/Authorize/RedirectToAuthorization": {
+      "slug": "authorize_redirecttoauthorization",
+      "finalUrl": null,
+      "httpStatus": 200,
+      "crawlStatus": "off-scope-redirect",
+      "pageType": null,
+      "depth": 1,
+      "via": "https://eforensics.gov.in/",
+      "capturedAt": null,
+      "error": "redirected to janparichay.meripehchaan.gov.in, which is outside the authorized scope"
+    }
+  },
+  "pending": [],
+  "aliases": [],
+  "skipped": [
+    {
+      "url": "https://eforensics.gov.in/Authorize/RedirectToAuthorization",
+      "reason": "redirected off-scope to janparichay.meripehchaan.gov.in; not captured",
+      "landedOn": "https://janparichay.meripehchaan.gov.in/v1/pehchaan/login.html?service=passive&active=true&rm_5=false&continue=https%3A%2F%2Fjan_com%2Fmail%2F&pp=1&scc=1&lmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&sid=eforensicsstagingfrrjc8nyqw-prod&v=2.0&lang=en&urlid=bb6a0432-3b71-485f-8667-ff73d744b455",
+      "via": "https://eforensics.gov.in/"
+    }
+  ],
+  "errors": [],
+  "limitHit": null,
+  "exhaustedQueue": true,
+  "durationMs": 2633,
+  "resumeHint": "Re-running the pipeline on the same domain reuses every page in `visited` whose metadata file still exists under reference_pages/page_metadata/, and re-queues everything in `pending`. Delete this file to force a full re-crawl."
+}

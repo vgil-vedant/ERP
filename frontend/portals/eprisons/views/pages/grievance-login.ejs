@@ -1,0 +1,19 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main id="main"><div class="shell"><section class="section">
+  <h1 class="section__title">Grievance Status</h1>
+  <% if (notice) { %>
+    <div class="notice notice--<%= notice.kind %>" role="alert"><%= notice.text %></div>
+  <% } %>
+  <p class="section__intro">Enter the reference number issued when the grievance was
+  submitted in this local demonstration.</p>
+  <form method="post" action="/public/grievancelogin" class="panel" style="max-width:520px" novalidate>
+    <div class="field">
+      <label for="reference_no">Grievance reference number</label>
+      <input type="text" id="reference_no" name="reference_no" maxlength="30" required autocomplete="off">
+      <span class="field__hint">For example GRVDEMO00001, from the seeded demonstration data.</span>
+    </div>
+    <div class="actions"><button type="submit" class="btn btn--primary">Show status</button></div>
+  </form>
+</section></div></main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,1772 @@
+{
+  "generatedAt": "2026-10-27T08:42:34.360Z",
+  "hostname": "uidai.gov.in",
+  "baseUrl": "http://127.0.0.1:4277",
+  "totals": {
+    "tests": 286,
+    "passed": 286,
+    "failed": 0
+  },
+  "byGroup": {
+    "routes": {
+      "passed": 251,
+      "failed": 0
+    },
+    "assets": {
+      "passed": 4,
+      "failed": 0
+    },
+    "isolation": {
+      "passed": 4,
+      "failed": 0
+    },
+    "validation": {
+      "passed": 16,
+      "failed": 0
+    },
+    "roundtrip": {
+      "passed": 3,
+      "failed": 0
+    },
+    "api": {
+      "passed": 3,
+      "failed": 0
+    },
+    "errors": {
+      "passed": 1,
+      "failed": 0
+    },
+    "audit": {
+      "passed": 3,
+      "failed": 0
+    },
+    "restart": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "failures": [],
+  "results": [
+    {
+      "name": "GET /en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET / -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /CheckAadhaarStatus/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/how-to-videos -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/faq -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/about-uidai -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/vision-and-mission -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/aadhaar-dashboard -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/annual-reports -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/updating-data-on-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /check-aadhaar-validity/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /pvc/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /genericGenerateOrRetrieveVID -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /retrieve-eid-uid/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/documents -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/enrolment-and-updates -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/handbooks -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/circulars -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/policies -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/developer-section -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/ovse -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/site-map -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/website-policies -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/website-help -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/help -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/resources -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/how-to-videos/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/how-to-videos/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/how-to-videos/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/how-to-videos/v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/how-to-videos/v6 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/how-to-videos/v7 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/how-to-videos/v8 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/who-we-are -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-dashboard/enrollment-dashboard -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-dashboard/authentication-dashboard -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-dashboard/updates-dashboard -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/aadhaar-dashboard/ekyc -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-dashboard/registered-devices -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/transparency-accountability -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/my-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/understand-your-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/annual-reports/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/handbooks/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/enrolment-and-updates/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/legal -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/announcements -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/circulars/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/notifications -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/policies/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/internship-policy -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/compendium -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/year-calendar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/tenders -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/circulars-notifications-official-memorandums -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/faq -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/about-uidai -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/vision-and-mission -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-dashboard -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/annual-reports -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/updating-data-on-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/documents -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/enrolment-and-updates -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/handbooks -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/policies -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/developer-section -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/ovse -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/site-map -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/website-policies -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/website-help -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/help -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/resources -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v6 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v7 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v8 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/who-we-are -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/transparency-accountability -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/my-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/understand-your-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/annual-reports/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/handbooks/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/enrolment-and-updates/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/legal -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/announcements -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/notifications -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/policies/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/internship-policy -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/compendium -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/year-calendar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/tenders -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars-notifications-official-memorandums -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v6 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/build-with-us -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /v6 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /v7 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /genricDownloadAadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /checkStatus/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /genericGenerateOrRetrieveVID/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /v8 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /access/login -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /lock-unlock-aadhaar/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/about-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/features-of-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/usage-of-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-enrolment -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-generation -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/people-at-uidai -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/our-offices -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/departments -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/composition-of-uidai-authority -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/officers-served-in-past -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/head-office -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/regional-offices -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/uidai-regional-office-bengaluru -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/uidai-regional-office-chandigarh -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/uidai-regional-office-guwahati -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/uidai-regional-office-hyderabad -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/uidai-regional-office-lucknow -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/uidai-regional-office-mumbai -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/uidai-regional-office-new-delhi -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/uidai-regional-office-ranchi -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/technology-centre -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/state-offices -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/legal-framework -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/right-to-information -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/budget -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/parliament-questions -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/notifications/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/official-memorandums -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/acts -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/regulations -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/gazetted-notifications -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/updated-regulations -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/rules -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/judgements -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/enrolment-partners -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/authentication-partners -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/authentication-devices -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/registrars -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/enrolment-agencies -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-seva-kendra -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/enrolment-documents -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/terms-of-engagement -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/training-testing-and-certification -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/training-testing-and-certification-documents -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/about-authentication -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/operational-model -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/authentication-requesting-agency -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/authentication-service-agencies -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/authentication-documents -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-paperless-offline-e-kyc -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/about-authentication-devices -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/biometric-devices -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/qr-code-reader -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/sitaa -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/tenders/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/tutorial -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/data-and-download -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/discussion-forum -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/news-and-updates -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/gallery -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/brand-resources -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/press-releases -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-in-print -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-in-media -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/photos -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/videos -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/advertisements -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/iec -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-logo -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/internship-policy/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/internal-policies -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/compendium/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/year-calendar/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/announcements/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/archives -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/grievance-feedback -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/glossary -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-mythbusters -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-app-faq -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/ovse-faq -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/your-aadhaar -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/authentication -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/direct-benefit-transfer -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/enrolment-and-update -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/crm-division -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-online-services -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /grievance-feedback/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /grievance-feedback-status/en -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v9 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v10 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v11 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v12 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v13 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/how-to-videos/v14 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v7 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v8 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v9 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v10 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/notifications/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/notifications/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/notifications/v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/tenders/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/tenders/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/tenders/v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/circulars/v11 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /en/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/notifications/v6 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/notifications/v7 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/notifications/v8 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/official-memorandums/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/official-memorandums/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/official-memorandums/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/official-memorandums/v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/official-memorandums/v6 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/official-memorandums/v7 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/gazetted-notifications/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/gazetted-notifications/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/gazetted-notifications/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/gazetted-notifications/v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/gazetted-notifications/v6 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/judgements/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/judgements/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/judgements/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /du/en_IN -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/terms-of-engagement/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/terms-of-engagement/v3 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/terms-of-engagement/v4 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/terms-of-engagement/v5 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/terms-of-engagement/v6 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/terms-of-engagement/v7 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/authentication-documents/v2 -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/aadhaar-in-global-words -> 500 (as on the original)",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /hi/help@uidai.gov.in -> 404 (as on the original)",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /__about -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /__gaps -> 200",
+      "group": "routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/css/base.css",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/css/tokens.css",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/js/replica.js",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "asset /static/img/demo-mark.svg",
+      "group": "assets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no page references an off-host URL",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every form posts to a local path",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CSP restricts form-action to 'self'",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the demonstration notice is on every page",
+      "group": "isolation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "check-aadhaar-validity_en_form0: an empty submission is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "check-aadhaar-validity_en_form0: a wrong verification answer is reported",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "check-aadhaar-validity_en_form0: over 14 chars in \"uid\" is refused",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "genricdownloadaadhaar_form0: an empty submission is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "genricdownloadaadhaar_form0: a wrong verification answer is reported",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "checkstatus_en_form0: an empty submission is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "checkstatus_en_form0: a wrong verification answer is reported",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "checkstatus_en_form0: over 6 chars in \"captcha\" is refused",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "access_login__6f006319_form0: an empty submission is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "access_login__6f006319_form0: a wrong verification answer is reported",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grievance-feedback_en_form0: an empty submission is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grievance-feedback_en_form0: a wrong verification answer is reported",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grievance-feedback_en_form0: 4 required field(s) are named",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grievance-feedback_en_form0: a value outside \"Select state\"'s captured list is refused",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grievance-feedback-status_en_form0: an empty submission is rejected",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grievance-feedback-status_en_form0: a wrong verification answer is reported",
+      "group": "validation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a complete submission is accepted",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the submission is retrievable from the local API",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nothing secret-shaped was stored",
+      "group": "roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /api/meta returns the site model",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GET /api/reference/translate_plugin_target_language_list returns its captured options",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "an unknown reference list returns 404",
+      "group": "api",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "an unknown path returns 404",
+      "group": "errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "submissions write an audit entry",
+      "group": "audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the audit trail cannot be rewritten",
+      "group": "audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the audit trail cannot be deleted from",
+      "group": "audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the replica serves again after a restart",
+      "group": "restart",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "notes": [
+    "These tests exercise the LOCAL replica only. No request in this suite reaches uidai.gov.in or any other external host.",
+    "Routes the original itself answers with an error are asserted to answer the same way here.",
+    "What is not reproduced is listed in analysis/replication_gaps.json, not here."
+  ]
+}

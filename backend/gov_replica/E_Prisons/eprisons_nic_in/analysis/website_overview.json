@@ -1,0 +1,226 @@
+{
+  "generatedAt": "2026-10-26T11:48:33.325Z",
+  "input": "eprisons.nic.in",
+  "initialUrl": "https://eprisons.nic.in",
+  "finalUrl": "https://ePrisons.nic.in/NPIP/public/Home",
+  "redirectChain": [
+    "https://ePrisons.nic.in/NPIP",
+    "https://ePrisons.nic.in/NPIP/",
+    "/NPIP/public/Home.aspx",
+    "/NPIP/public/Home"
+  ],
+  "hostname": "eprisons.nic.in",
+  "normalizedHostname": "eprisons_nic_in",
+  "scheme": "https",
+  "httpStatus": 200,
+  "category": {
+    "selected": "E_Prisons",
+    "confidence": "high",
+    "status": "confirmed",
+    "decidedBy": "page content (hostname only reinforced it)",
+    "wouldHoldWithoutHostname": true,
+    "governmentHost": true,
+    "evidence": [
+      {
+        "category": "E_Prisons",
+        "score": 105,
+        "contentScore": 97,
+        "hostScore": 8,
+        "topStrongTerms": [
+          {
+            "term": "eprisons",
+            "occurrences": 14,
+            "weight": 21.46
+          },
+          {
+            "term": "national prison",
+            "occurrences": 6,
+            "weight": 17.78
+          },
+          {
+            "term": "emulakat",
+            "occurrences": 18,
+            "weight": 22.55
+          },
+          {
+            "term": "inmate",
+            "occurrences": 2,
+            "weight": 13.01
+          },
+          {
+            "term": "prisoner",
+            "occurrences": 5,
+            "weight": 16.99
+          }
+        ],
+        "topWeakTerms": [
+          {
+            "term": "prison",
+            "occurrences": 40,
+            "weight": 5.2
+          }
+        ],
+        "hostHints": [
+          {
+            "hint": "eprisons",
+            "weight": 4
+          },
+          {
+            "hint": "prison",
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "category": "Aadhaar",
+        "score": 0,
+        "contentScore": 0,
+        "hostScore": 0,
+        "topStrongTerms": [],
+        "topWeakTerms": [],
+        "hostHints": []
+      },
+      {
+        "category": "CCTNS",
+        "score": 0,
+        "contentScore": 0,
+        "hostScore": 0,
+        "topStrongTerms": [],
+        "topWeakTerms": [],
+        "hostHints": []
+      }
+    ],
+    "pagesConsidered": 4
+  },
+  "siteTitle": "Welcome to National Prison Portal",
+  "languages": [
+    "en"
+  ],
+  "crawlScope": {
+    "rootHost": "eprisons.nic.in",
+    "limits": {
+      "maxPages": 60,
+      "maxDepth": 4,
+      "navTimeoutMs": 45000,
+      "settleTimeoutMs": 3500,
+      "perRequestDelayMs": 900,
+      "concurrency": 1,
+      "maxAssetBytes": 12582912,
+      "maxTotalRuntimeMs": 1500000,
+      "assetTimeoutMs": 30000,
+      "retriesPerUrl": 2
+    },
+    "robotsTxt": "absent (HTTP 404) - no crawl directives were published",
+    "sitemapXml": "absent (HTTP 404)",
+    "scopeRule": "same registrable host and its subdomains only; external hosts recorded as links, never crawled"
+  },
+  "counts": {
+    "pagesCaptured": 30,
+    "pagesFailed": 0,
+    "pagesPartial": 0,
+    "pagesSkipped": 1,
+    "pagesStillPending": 0,
+    "urlAliasesMerged": 4,
+    "formsFound": 21,
+    "visibleFormFields": 118,
+    "dataTables": 6,
+    "assetsReferenced": 150,
+    "assetsDownloaded": 139,
+    "externalLinks": 3,
+    "technologiesConfirmed": 27,
+    "technologiesInferred": 4
+  },
+  "coverage": {
+    "queueExhausted": true,
+    "limitThatStoppedTheCrawl": null,
+    "claim": "Every in-scope page reachable by link-following from the start URL, within the configured depth, was captured."
+  },
+  "urlAliases": {
+    "note": "This target runs on IIS/ASP.NET, which resolves paths case-insensitively and serves the same page with and without the `.aspx` extension. These URL spellings were reached during the crawl and proved to be the same page (identical title, text and form shape), so they are recorded as aliases instead of being counted as separate pages.",
+    "merged": [
+      {
+        "url": "https://eprisons.nic.in/NPIP/public/Home.aspx",
+        "sameAs": "https://eprisons.nic.in/NPIP/public/Home",
+        "basis": "alias key matched a captured page",
+        "via": "https://eprisons.nic.in/NPIP/public/Home"
+      },
+      {
+        "url": "https://eprisons.nic.in/CitiZenService",
+        "sameAs": "https://eprisons.nic.in/citizenservice",
+        "basis": "alias key matched a captured page",
+        "via": "https://eprisons.nic.in/CitiZenService/Login/ContactUs"
+      },
+      {
+        "url": "https://eprisons.nic.in/Legalaid/Secure/Default.aspx",
+        "landedOn": "https://eprisons.nic.in/LegalAid/secure/login.aspx",
+        "sameAs": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+        "basis": "identical title, text and form shape after navigation",
+        "via": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      },
+      {
+        "url": "https://eprisons.nic.in/LegalAid/secure/Default.aspx",
+        "landedOn": "https://eprisons.nic.in/LegalAid/secure/login.aspx",
+        "sameAs": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+        "basis": "identical title, text and form shape after navigation",
+        "via": "https://eprisons.nic.in/Legalaid/Secure/Default.aspx"
+      }
+    ]
+  },
+  "externalLinks": [
+    {
+      "url": "https://amritmahotsav.nic.in/",
+      "host": "amritmahotsav.nic.in",
+      "texts": [],
+      "onPages": [
+        "https://eprisons.nic.in/NPIP/public/Home"
+      ]
+    },
+    {
+      "url": "https://www.nic.in/",
+      "host": "www.nic.in",
+      "texts": [],
+      "onPages": [
+        "https://eprisons.nic.in/Login/Secure/Login.aspx"
+      ]
+    },
+    {
+      "url": "https://servicedesk.nic.in/",
+      "host": "servicedesk.nic.in",
+      "texts": [
+        "servicedesk.nic.in"
+      ],
+      "onPages": [
+        "https://eprisons.nic.in/CitiZenService/Login/FAQ"
+      ]
+    }
+  ],
+  "durationMs": 238569,
+  "workspaceBefore": {
+    "replicaRootExists": true,
+    "categories": {
+      "Aadhaar": {
+        "projects": [],
+        "strayFiles": []
+      },
+      "CCTNS": {
+        "projects": [],
+        "strayFiles": []
+      },
+      "E_Courts": {
+        "projects": [],
+        "strayFiles": []
+      },
+      "E_Forensics": {
+        "projects": [],
+        "strayFiles": []
+      },
+      "E_Prisons": {
+        "projects": [
+          "eprisons_nic_in"
+        ],
+        "strayFiles": []
+      }
+    }
+  },
+  "disclaimer": "This analysis supports an unofficial local demonstration replica for authorized development, testing and educational use. It is not affiliated with, endorsed by or operated by any government body."
+}

@@ -1,0 +1,85 @@
+<%#
+  Shared layout for the eforensics.gov.in login-style pages.
+  Geometry measured from the reference capture. No original artwork, prose or
+  contact details are reproduced; the CAPTCHA is replaced by an arithmetic
+  question, which is never solved or bypassed.
+%>
+<section class="ef-stage">
+  <div style="width:100%;max-width:440px">
+    <% const ek = Object.keys(errors || {}); if (ek.length) { %>
+      <div class="notice notice--error ef-errors" role="alert">
+        <strong>Please correct <%= ek.length %> field<%= ek.length === 1 ? '' : 's' %>.</strong>
+        <ul><% ek.forEach(function (k) { %><li><%= errors[k] %></li><% }); %></ul>
+      </div>
+    <% } %>
+    <% if (submitted) { %>
+      <div class="notice notice--ok ef-errors" role="status">
+        <strong>Recorded in the local demonstration.</strong>
+        Reference <span class="ref-no"><%= submitted.reference %></span>.
+      </div>
+    <% } %>
+
+    <% const f = (page.forms && page.forms[0]) ? page.forms[0] : null; %>
+    <form class="ef-card" method="post" action="<%= page.route %>" novalidate>
+      <h1 class="ef-card__title"><%= cardTitle %></h1>
+      <% if (f) { %>
+        <input type="hidden" name="__form" value="<%= f.id %>">
+        <input type="hidden" name="challenge_expected" value="<%= challenge.expected %>">
+        <% f.fields.forEach(function (x) { %>
+          <div class="ef-row">
+            <span class="ef-row__icon" aria-hidden="true"><span></span></span>
+            <label class="sr-only" for="<%= x.name %>"><%= x.label %></label>
+            <% if (x.type === 'select') { %>
+              <select id="<%= x.name %>" name="<%= x.name %>" style="border:0;flex:1;padding:11px 12px;font-size:14px">
+                <option value="">SELECT</option>
+                <% (x.options || []).forEach(function (o) { %>
+                  <option value="<%= o.value %>" <%= String(form[x.name]) === String(o.value) ? 'selected' : '' %>><%= o.label %></option>
+                <% }); %>
+              </select>
+            <% } else { %>
+              <input type="<%= x.inputType === 'password' ? 'password' : (x.inputType || 'text') %>"
+                     id="<%= x.name %>" name="<%= x.name %>"
+                     <%= x.maxLength ? 'maxlength=' + x.maxLength : '' %>
+                     placeholder="<%= x.label %>" value="<%= form[x.name] || '' %>"
+                     autocomplete="off">
+            <% } %>
+          </div>
+        <% }); %>
+        <div class="ef-row">
+          <span class="ef-row__challenge"><%= challenge.question %></span>
+          <label class="sr-only" for="challenge_answer">Answer to the verification question</label>
+          <input type="text" id="challenge_answer" name="challenge_answer" maxlength="6"
+                 placeholder="Enter the answer" autocomplete="off">
+        </div>
+        <button type="submit" class="ef-submit"><%= submitLabel %></button>
+      <% } else { %>
+        <p style="font-size:13px;line-height:20px;color:#6b6b80;margin:0">
+          The original serves a form here that this capture could not reach. Nothing is
+          invented in its place.
+        </p>
+      <% } %>
+      <a class="ef-card__link" href="/Forget/ForgetPassword">Forgot Password?</a>
+      <p class="ef-card__note">
+        This demonstration authenticates nobody. The original shows a CAPTCHA image here;
+        no CAPTCHA was reproduced, solved or bypassed anywhere in this project.
+      </p>
+    </form>
+  </div>
+</section>
+
+<section class="ef-contact">
+  <div class="ef-contact__inner">
+    <h2 class="ef-contact__title">Contact Us</h2>
+    <div class="ef-contact__row">
+      <% [['Phone Number','phone'],['E-Mail Address','email'],['Headquarters','location'],['Other Address','location']].forEach(function (c) { %>
+        <div class="ef-contact__item">
+          <%- include('../partials/img/' + c[1], { cls: 'ef-contact__img' }) %>
+          <div>
+            <p class="ef-contact__label"><%= c[0] %></p>
+            <p class="ef-contact__value">Placeholder only — not copied from the original.</p>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>

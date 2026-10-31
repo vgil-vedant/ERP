@@ -1,0 +1,372 @@
+{
+  "detectedAt": "2026-10-26T11:47:46.118Z",
+  "target": {
+    "hostname": "eprisons.nic.in",
+    "finalUrl": "https://ePrisons.nic.in/NPIP/public/Home"
+  },
+  "summary": {
+    "confirmed": 27,
+    "inferred": 4,
+    "unknown": 4
+  },
+  "findings": [
+    {
+      "name": "CAPTCHA-protected forms",
+      "category": "authentication / anti-bot",
+      "evidence": [
+        "4 form(s) contain a CAPTCHA image or control, e.g. on https://eprisons.nic.in/NPIP/public/MyVisitRegistration"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/public/MyVisitRegistration",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "ASP.NET ScriptManager (WebResource.axd)",
+      "category": "backend framework",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&t=...`",
+        "asset path `https://eprisons.nic.in/NPIP/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxakRHISp-kx_2I9NFdB_jzUQZ5AOqfmScI-GDzKKdBZp2f35q5-LN3dDexq3Z3JNajG...`",
+        "asset path `https://eprisons.nic.in/NPIP/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DRwh0Ta1PYv7gEsIyu2qbLDYBOdJIVTmySYRq0vcI8hWzJ-fBOo3ccgXobXcDEpASt5...`",
+        "asset path `https://eprisons.nic.in/LegalAid/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDADaq-Turoq8LS6Nhj1hSRtKt8uJF7JTBMwy-KWlHxJxr0eZZk-EF-i3yaj656dXw...`",
+        "asset path `https://eprisons.nic.in/LegalAid/ScriptResource.axd?d=myY3Two0UxZV16VMBw4qxTF7kVULQhp_orUC4D2-pXpbnUZpIYY24uRN0pIMy8_VPBnh1bwimj45SFuiMFa...`",
+        "asset path `https://eprisons.nic.in/LegalAid/ScriptResource.axd?d=on1t6Pk2_uvvrXX5hXL_DZbdGpqi0zA6hyhKqf2XJxc9qP32fz7VZ5LqbYmtPhE4OGNa7D4gzA7gVlH1vi9...`",
+        "asset path `https://eprisons.nic.in/Login/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZLyBIk_K6f0K4zI8p1MpKw9ZI3PTNbLz-wGwwxopPXkNyblZx8Aa2ygGoH543BATvw2&t...`",
+        "asset path `https://eprisons.nic.in/Login/ScriptResource.axd?d=qph9tUZ6hGPLbkznkRkqTZ3YZmHkpqawSiR2CSA26t6EipxJvm9Nv8OnOia28EAMvSj6Xr8HlAozG6GvWLQPVR...`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZK248WKpbaz6ARiWONS6aZVMXHi1yYS65CQjb9Lc0PIpQyLnOD2ZRPu5UiHy7xwtyg2&t=639191031332169432",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "ASP.NET Web Forms",
+      "category": "backend framework",
+      "evidence": [
+        "`__VIEWSTATE` hidden field present on 19 captured page(s)"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/public/Home",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Highcharts",
+      "category": "charting library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/NPIP/content/js/highcharts.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/content/js/highcharts.js",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Bootstrap",
+      "category": "CSS framework",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/NPIP/Content/css/bootstrap.min.css`",
+        "asset path `https://eprisons.nic.in/NPIP/Content/css/bootstrap-icons.min.css`",
+        "asset path `https://eprisons.nic.in/NPIP/Content/js/bootstrap.bundle.min.js`",
+        "asset path `https://eprisons.nic.in/CitiZenService/Content/bootstrap-datepicker.min.css`",
+        "asset path `https://eprisons.nic.in/CitiZenService/Content/bootstrap.min.css`",
+        "asset path `https://eprisons.nic.in/CitiZenService/Scripts/bootstrap-datepicker.min.js`",
+        "asset path `https://eprisons.nic.in/Legalaid/Content/css/bootstrap.min.css`",
+        "asset path `https://eprisons.nic.in/Legalaid/Content/JavaScripts/bootstrap.min.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/Content/css/bootstrap.min.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Bootstrap (JS bundle)",
+      "category": "CSS framework",
+      "evidence": [
+        "`window.bootstrap` is defined on 22 captured page(s)"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/public/Home",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Bootstrap 3.4.1.",
+      "category": "CSS framework",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/NPIP/Content/js/bootstrap3.4.1.min.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/Content/js/bootstrap3.4.1.min.js",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Google Fonts",
+      "category": "font provider",
+      "evidence": [
+        "asset path `https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display...`",
+        "asset path `https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2`",
+        "asset path `https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMaxKUBGEe.woff2`",
+        "asset path `https://fonts.gstatic.com/s/roboto/v51/KFO5CnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmkBnka.woff2`"
+      ],
+      "evidenceUrl": "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "ASP.NET Web Forms postback model",
+      "category": "frontend behaviour",
+      "evidence": [
+        "`__doPostBack` defined in page scope on 19 page(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Create React App production build",
+      "category": "frontend framework",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/NPIPDashboard/static/js/main.811484a3.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIPDashboard/static/js/main.811484a3.js",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "React (single-page application)",
+      "category": "frontend framework",
+      "evidence": [
+        "React mount node (`#root`) present on 6 captured page(s)",
+        "`<meta name=\"description\" content=\"Web site created using create-react-app\">`",
+        "content-hashed bundle `https://eprisons.nic.in/NPIPDashboard/static/js/main.811484a3.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIPDashboard/",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Bootstrap Icons",
+      "category": "icon library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/NPIP/Content/css/bootstrap-icons.min.css`",
+        "asset path `https://eprisons.nic.in/NPIP/Content/css/fonts/bootstrap-icons.woff?4601c71fb26c9277391ec80789bfde9c`",
+        "asset path `https://eprisons.nic.in/NPIP/Content/css/fonts/bootstrap-icons.woff2?4601c71fb26c9277391ec80789bfde9c`",
+        "asset path `https://eprisons.nic.in/Login/Content/bootstrap-icons-1.13.1/bootstrap-icons.min.css`",
+        "asset path `https://eprisons.nic.in/Login/Content/bootstrap-icons-1.13.1/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/Content/css/bootstrap-icons.min.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Font Awesome",
+      "category": "icon library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/Legalaid/Content/css/font-awesome.min.css`",
+        "asset path `https://eprisons.nic.in/Legalaid/Content/fonts/fontawesome-webfont.woff?v=4.2.0`",
+        "asset path `https://eprisons.nic.in/CitiZenService/fonts/fontawesome-webfont.woff2?v=4.4.0`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/Legalaid/Content/css/font-awesome.min.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "ASP.NET AJAX (MicrosoftAjax / Sys namespace)",
+      "category": "JavaScript library",
+      "evidence": [
+        "`window.Sys` is defined on 18 captured page(s)"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/public/Home",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Chosen (jQuery select widget)",
+      "category": "JavaScript library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/NPIP/Content/css/chosen.min.css`",
+        "asset path `https://eprisons.nic.in/NPIP/Content/js/chosen.jquery.js`",
+        "asset path `https://eprisons.nic.in/Legalaid/Content/JavaScripts/chosen.jquery.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/Content/css/chosen.min.css",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "jQuery",
+      "category": "JavaScript library",
+      "evidence": [
+        "`window.jQuery` is defined on 22 captured page(s)",
+        "asset path `https://eprisons.nic.in/NPIP/Content/js/chosen.jquery.js`",
+        "asset path `https://eprisons.nic.in/Legalaid/Content/JavaScripts/chosen.jquery.js`",
+        "asset path `https://eprisons.nic.in/Login/Content/js/jquery.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/public/Home",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "jQuery 3.2.1.",
+      "category": "JavaScript library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/Login/Content/js/jquery-3.2.1.min.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/Login/Content/js/jquery-3.2.1.min.js",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "jQuery 3.5.1.",
+      "category": "JavaScript library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/CitiZenService/Scripts/jquery-3.5.1.min.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/CitiZenService/Scripts/jquery-3.5.1.min.js",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "jQuery 3.6.3.",
+      "category": "JavaScript library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/Legalaid/Content/JavaScripts/jquery-3.6.3.min.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/Legalaid/Content/JavaScripts/jquery-3.6.3.min.js",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Modernizr",
+      "category": "JavaScript library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/CitiZenService/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/CitiZenService/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Popper.js",
+      "category": "JavaScript library",
+      "evidence": [
+        "asset path `https://eprisons.nic.in/NPIP/Content/js/popper.min.js`",
+        "asset path `https://eprisons.nic.in/NPIP/Content/js/popper.js`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/Content/js/popper.min.js",
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 133 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: \"Noto Sans\", Arial, Helvetica, sans-serif",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 42 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: arial",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 68 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: Arial",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 49 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: Arial, Helvetica, sans-serif",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 2184 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "font stack: Roboto, sans-serif",
+      "category": "typography",
+      "evidence": [
+        "computed `font-family` on 1181 rendered element(s)"
+      ],
+      "confidence": "high",
+      "status": "confirmed"
+    },
+    {
+      "name": "Form-based login (server-side session)",
+      "category": "authentication pattern",
+      "evidence": [
+        "3 login page(s) captured, e.g. https://eprisons.nic.in/Legalaid/Secure/Login.aspx"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/Legalaid/Secure/Login.aspx",
+      "confidence": "medium",
+      "status": "inferred"
+    },
+    {
+      "name": "ASP.NET (.aspx handler)",
+      "category": "backend framework",
+      "evidence": [
+        "18 captured URL(s) end in `.aspx`"
+      ],
+      "evidenceUrl": "https://eprisons.nic.in/NPIP/public/SelectMISState",
+      "confidence": "medium",
+      "status": "inferred"
+    },
+    {
+      "name": "ESF",
+      "category": "web server",
+      "evidence": [
+        "`Server: ESF` response header (product not recognised by this tool)"
+      ],
+      "evidenceUrl": "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap",
+      "confidence": "medium",
+      "status": "inferred"
+    },
+    {
+      "name": "sffe",
+      "category": "web server",
+      "evidence": [
+        "`Server: sffe` response header (product not recognised by this tool)"
+      ],
+      "evidenceUrl": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "confidence": "medium",
+      "status": "inferred"
+    }
+  ],
+  "unknowns": [
+    {
+      "item": "database product and schema",
+      "why": "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner."
+    },
+    {
+      "item": "application source code",
+      "why": "Only the publicly served HTML, CSS and JavaScript were retrieved. No source map, repository or build artifact was requested, and none should be. The replica is an independent reimplementation, not recovered source."
+    },
+    {
+      "item": "server-side language version and build tooling",
+      "why": "The server does not advertise a version header beyond what is listed above. Nothing further is publicly observable."
+    },
+    {
+      "item": "hosting provider and data-centre location",
+      "why": "Not publicly identifiable from the served responses. `.nic.in` is operated by the National Informatics Centre, but that is organisational, not a verified hosting fact."
+    }
+  ],
+  "notes": [
+    "This target is two applications on one host: the ASP.NET Web Forms portal, and a React single-page application mounted at a sub-path (/NPIPDashboard/, /NPIPDashboard/lockupReport, /NPIPDashboard/paroleJumper, /NPIPDashboard/absconder, /NPIPDashboard/ePrisonsLiveStatus, /NPIPDashboard/siteMap). The replica must reproduce both behaviours: server-rendered pages, and a client-routed dashboard whose inner routes have no server-side path.",
+    "`.aspx` URLs are an inference on their own; the ASP.NET verdict above rests on the session cookie and `__VIEWSTATE`, which are direct evidence.",
+    "No database product or schema is asserted. A website frontend does not expose its database, and nothing in the captured headers, markup, scripts or error output named one. Treat the database as `unknown` and ask the system owner."
+  ],
+  "method": "Evidence was taken from response headers, the rendered DOM, computed styles, asset paths, in-page global objects and observed network requests. Appearance and URL shape alone are recorded as `inferred`, never `confirmed`. No source map, repository, credential or private endpoint was requested."
+}
