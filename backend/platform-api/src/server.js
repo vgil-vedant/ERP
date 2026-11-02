@@ -17,6 +17,7 @@ const path = require('path');
 const express = require('express');
 const store = require('./db');
 const erp = require('./services/erp-client');
+const stats = require('./services/hub-stats');
 const { SITES } = require('./config/sites');
 const { identityRouter, sessionMiddleware } = require('./services/identity');
 const { genericRouter } = require('./drivers/generic');
@@ -43,6 +44,9 @@ function buildPortal(site) {
   app.use(express.json({ limit: '256kb' }));
 
   app.use((req, res, next) => {
+    // Links to the other portals reuse the address the visitor typed (the LAN
+    // address or 127.0.0.1), so they resolve on the visitor's side, not the server's.
+    res.locals.linkHost = req.hostname;
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Replica-Notice',
       'Unofficial local demonstration - not an official government service');
@@ -96,22 +100,65 @@ function buildPortal(site) {
   return app;
 }
 
+/**
+ * Each portal's own logo, served from the captured originals without copying or
+ * editing them. Fixed map: a request can only ever name one of these files.
+ */
+const SITE_LOGOS = {
+  eprisons: 'images/eprisons_logo.png',
+  cctns: 'images/cctnsLogoNew.png',
+  eforensics: 'images/logo.png',
+  uidai: 'icons/logoWithTitle.svg',
+  ecourts: 'images/ecourts-logo.png',
+};
+
 /** A small hub, so there is one page that shows the whole arrangement. */
 function buildHub() {
   const app = express();
   app.set('view engine', 'ejs');
   app.set('views', PLATFORM_VIEWS);
   app.use(express.urlencoded({ extended: false }));
+  // Same reason as in buildPortal: link back to the address the visitor used.
+  app.use((req, res, next) => { res.locals.linkHost = req.hostname; next(); });
 
-  app.get('/', (req, res) => {
-    res.render('platform/hub', {
-      title: 'Portal platform - shared backend',
-      summary: store.summary(),
-      erpTarget: erp.target(),
-      dbPath: store.DB_PATH,
-      pid: process.pid,
-      sites: SITES,
-    });
+  // One page, one navigation entry ("All portals"). It tells the shared shell
+  // which entry is current; the /api/* JSON routes below feed the same figures.
+  app.use((req, res, next) => { res.locals.currentPath = req.path; next(); });
+
+  app.get('/logo/:code', (req, res) => {
+    const site = SITES.find((x) => x.code === req.params.code);
+    const rel = site && SITE_LOGOS[site.code];
+    if (!rel) return res.status(404).end();
+    res.set('Cache-Control', 'public, max-age=3600');
+    res.sendFile(path.join(site.assets, rel), (err) => { if (err && !res.headersSent) res.status(404).end(); });
+  });
+
+  // The hub is one page; older links to /portals land on it.
+  app.get('/portals', (req, res) => res.redirect('/'));
+
+  app.get('/', async (req, res, next) => {
+    try {
+      const days = stats.parseDays(req.query.days);
+      res.render('platform/hub', {
+        title: 'ERP Hub - All portals',
+        days: days || 'all',
+        summary: store.summary(),
+        portals: stats.portals(),
+        overview: stats.overview(days),
+        integration: stats.integration(days),
+        database: stats.database(),
+        health: await stats.health(),
+        endpoints: stats.endpoints(),
+        people: store.people(25).map(store.personPublic),
+        submissions: store.allSubmissions(25),
+        syncs: store.syncTail(25),
+        audits: store.auditTail(25),
+        erpTarget: erp.target(),
+        sites: SITES,
+        dbPath: store.DB_PATH,
+        pid: process.pid,
+      });
+    } catch (err) { next(err); }
   });
 
   app.get('/api/summary', (req, res) => res.json({
@@ -119,6 +166,14 @@ function buildHub() {
   }));
   app.get('/api/sync', (req, res) => res.json({ attempts: store.syncTail(200) }));
   app.get('/api/audit', (req, res) => res.json({ entries: store.auditTail(200) }));
+  app.get('/api/portals', (req, res) => res.json({ portals: stats.portals() }));
+  app.get('/api/overview', (req, res) => res.json(stats.overview(stats.parseDays(req.query.days))));
+  app.get('/api/integration', (req, res) => res.json(stats.integration(stats.parseDays(req.query.days))));
+  app.get('/api/database', (req, res) => res.json(stats.database()));
+  app.get('/api/health', async (req, res, next) => {
+    try { res.json(await stats.health()); } catch (err) { next(err); }
+  });
+  app.get('/api/endpoints', (req, res) => res.json({ endpoints: stats.endpoints() }));
   app.get('/api/people', (req, res) => res.json({
     people: store.people(200).map(store.personPublic),
   }));

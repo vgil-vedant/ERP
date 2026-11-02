@@ -1,0 +1,208 @@
+    </main>
+
+    <footer class="app-foot">
+      <b>ERP Hub · Maharashtra Prisons</b>
+      &mdash; Unofficial Local Demonstration · Not an Official Government Service · Read-only hub for <code style="font-family:var(--mono);font-size:10.5px">platform.sqlite</code>
+    </footer>
+  </div><!-- .shell -->
+
+</div><!-- .app -->
+
+<!-- DETAIL DRAWER -->
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<div class="drawer" id="detailDrawer" role="dialog" aria-modal="true" aria-label="Record details">
+  <div class="drawer-head">
+    <div class="drawer-title" id="drawerTitle">Record details</div>
+    <button class="drawer-close" id="drawerClose" type="button" aria-label="Close details">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<!-- TOASTS -->
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* -------- Date chip -------- */
+  var d = new Date();
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('todayChip').textContent = d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+
+
+
+
+  /* -------- Sidebar collapse -------- */
+  var app = document.getElementById('app');
+  var collapseBtn = document.getElementById('collapseBtn');
+  if (collapseBtn) {
+    var collapsed = localStorage.getItem('hub-sidebar-collapsed') === '1';
+    if (collapsed) { app.classList.add('is-collapsed'); collapseBtn.setAttribute('aria-expanded', 'false'); }
+    collapseBtn.addEventListener('click', function () {
+      var isNow = app.classList.toggle('is-collapsed');
+      localStorage.setItem('hub-sidebar-collapsed', isNow ? '1' : '0');
+      collapseBtn.setAttribute('aria-expanded', isNow ? 'false' : 'true');
+    });
+  }
+
+  /* -------- Mobile nav -------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var navClose = document.getElementById('navClose');
+  var scrim = document.getElementById('navScrim');
+  function openNav() { app.classList.add('nav-open'); scrim.hidden = false; document.body.classList.add('no-scroll'); }
+  function closeNav() { app.classList.remove('nav-open'); scrim.hidden = true; document.body.classList.remove('no-scroll'); }
+  if (menuBtn) menuBtn.addEventListener('click', openNav);
+  if (navClose) navClose.addEventListener('click', closeNav);
+  if (scrim) scrim.addEventListener('click', closeNav);
+
+  /* -------- Nav group collapse -------- */
+  document.querySelectorAll('.nav-group-head').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var grp = btn.closest('.nav-group');
+      var open = !grp.classList.contains('is-closed');
+      grp.classList.toggle('is-closed', open);
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+  });
+
+  /* -------- Global search (/ shortcut) -------- */
+  var searchInput = document.getElementById('globalSearch');
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && document.activeElement !== searchInput && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      if (searchInput) searchInput.focus();
+    }
+    if (e.key === 'Escape') {
+      closeDrawer();
+      closeNav();
+    }
+  });
+
+  /* -------- Row search filter -------- */
+  function attachRowSearch(inputEl, tableEl) {
+    if (!inputEl || !tableEl) return;
+    inputEl.addEventListener('input', function () {
+      var q = inputEl.value.toLowerCase().trim();
+      var rows = tableEl.querySelectorAll('tbody tr');
+      rows.forEach(function (tr) {
+        tr.style.display = !q || tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+      updatePager();
+    });
+  }
+  // The hub is one page with several tables and the portal cards: search all of them.
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      var q = searchInput.value.toLowerCase().trim();
+      document.querySelectorAll('table.tbl:not(#portalsExport) tbody tr, .portal-card').forEach(function (el) {
+        el.style.display = !q || el.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  }
+
+  /* -------- Table sort -------- */
+  document.querySelectorAll('th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var table = th.closest('table');
+      var tbody = table.querySelector('tbody');
+      var col = Array.from(th.parentElement.children).indexOf(th);
+      var asc = !th.classList.contains('sort-asc');
+      table.querySelectorAll('th').forEach(function (t) { t.classList.remove('sort-asc', 'sort-desc'); });
+      th.classList.add(asc ? 'sort-asc' : 'sort-desc');
+      var rows = Array.from(tbody.querySelectorAll('tr'));
+      rows.sort(function (a, b) {
+        var av = (a.cells[col] || {}).textContent || '';
+        var bv = (b.cells[col] || {}).textContent || '';
+        var n = parseFloat(av) - parseFloat(bv);
+        if (!isNaN(n)) return asc ? n : -n;
+        return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+      });
+      rows.forEach(function (r) { tbody.appendChild(r); });
+    });
+  });
+
+  /* -------- Pager -------- */
+  var PAGE_SIZE = 25;
+  var currentPage = 1;
+  function updatePager() {
+    var tbl = document.querySelector('table.tbl');
+    var pagerInfo = document.getElementById('pagerInfo');
+    var prevBtn = document.getElementById('pagerPrev');
+    var nextBtn = document.getElementById('pagerNext');
+    if (!tbl || !pagerInfo) return;
+    var rows = Array.from(tbl.querySelectorAll('tbody tr')).filter(function (r) { return r.style.display !== 'none'; });
+    var total = rows.length;
+    var pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    currentPage = Math.min(currentPage, pages);
+    var start = (currentPage - 1) * PAGE_SIZE;
+    var end = Math.min(start + PAGE_SIZE, total);
+    rows.forEach(function (r, i) { r.style.display = (i >= start && i < end) ? '' : 'none'; });
+    pagerInfo.textContent = total === 0 ? 'No records' : 'Showing ' + (start + 1) + '–' + end + ' of ' + total;
+    if (prevBtn) prevBtn.disabled = currentPage <= 1;
+    if (nextBtn) nextBtn.disabled = currentPage >= pages;
+  }
+  window.goPage = function (delta) {
+    currentPage += delta;
+    updatePager();
+  };
+  setTimeout(updatePager, 0);
+
+  /* -------- Drawer -------- */
+  var drawer = document.getElementById('detailDrawer');
+  var drawerBackdrop = document.getElementById('drawerBackdrop');
+  var drawerClose = document.getElementById('drawerClose');
+  var drawerTitle = document.getElementById('drawerTitle');
+  var drawerBody = document.getElementById('drawerBody');
+
+  window.openDrawer = function (title, contentHtml) {
+    drawerTitle.textContent = title;
+    drawerBody.innerHTML = contentHtml;
+    drawer.classList.add('is-open');
+    drawerBackdrop.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+    drawerClose.focus();
+  };
+  function closeDrawer() {
+    drawer.classList.remove('is-open');
+    drawerBackdrop.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+  }
+  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+
+  /* -------- Toasts -------- */
+  window.showToast = function (msg) {
+    var container = document.getElementById('toasts');
+    var t = document.createElement('div');
+    t.className = 'toast';
+    t.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>' + msg;
+    container.appendChild(t);
+    setTimeout(function () { t.remove(); }, 3200);
+  };
+
+  /* -------- CSV export -------- */
+  window.exportTableCSV = function (filename) {
+    var tbl = document.querySelector('table.tbl');
+    if (!tbl) return;
+    var rows = [];
+    tbl.querySelectorAll('tr').forEach(function (tr) {
+      var cells = Array.from(tr.querySelectorAll('th,td')).map(function (c) {
+        return '"' + c.textContent.trim().replace(/"/g, '""') + '"';
+      });
+      rows.push(cells.join(','));
+    });
+    var blob = new Blob([rows.join('\n')], { type: 'text/csv' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename || 'erp-export.csv';
+    a.click();
+    showToast('CSV downloaded');
+  };
+})();
+</script>
+
+</body>
+</html>
