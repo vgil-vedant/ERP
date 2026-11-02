@@ -14,6 +14,7 @@
 const path = require('path');
 const express = require('express');
 const store = require('./db');
+const pg    = require('./pg');
 
 const app = express();
 const PORT = Number(process.env.ERP_PORT) || 4200;
@@ -77,6 +78,8 @@ app.get('/', (req, res) => {
     title: 'ERP - Intake Console',
     summary: store.summary(),
     recent: store.recentIntake(15),
+    recentAudit: store.auditTail(8),
+    dailyIntake: store.dailyIntake(30),
   });
 });
 
@@ -95,6 +98,75 @@ app.get('/intake', (req, res) => {
 
 app.get('/audit', (req, res) => {
   res.render('audit', { title: 'ERP - Audit trail', rows: store.auditTail(200) });
+});
+
+app.get('/portals', (req, res) => {
+  const filter = req.query.system || null;
+  const sum = store.summary();
+  /* form label per portal — matches the documented forms in the platform */
+  const FORM_LABEL = {
+    eprisons:   'Visit request',
+    cctns:      'FIR verification',
+    eforensics: 'Evidence request',
+    uidai:      'Grievance / feedback',
+    ecourts:    'Case status enquiry',
+  };
+  res.render('portals', {
+    title: 'ERP - Government Portals',
+    filter,
+    bySystem: sum.bySystem,
+    recent: filter ? store.recentIntake(25, filter) : [],
+    FORM_LABEL,
+  });
+});
+
+app.get('/sync', async (req, res) => {
+  const siteFilter = req.query.system || null;
+  try {
+    const [rows, summary] = await Promise.all([
+      pg.syncLedger(300, siteFilter),
+      pg.syncSummary(),
+    ]);
+    const total = summary.reduce((a, b) => a + (b.total || 0), 0);
+    res.render('sync', {
+      title: 'ERP - Sync Activity',
+      rows,
+      summary,
+      total,
+      siteFilter,
+      pgAvailable: rows.length > 0 || total === 0,
+    });
+  } catch (err) {
+    process.stderr.write(`[erp] /sync error: ${err.message}\n`);
+    res.render('sync', {
+      title: 'ERP - Sync Activity',
+      rows: [], summary: [], total: 0, siteFilter,
+      pgAvailable: false,
+    });
+  }
+});
+
+app.get('/integration', async (req, res) => {
+  try {
+    const [summary, pgUp] = await Promise.all([
+      pg.syncSummary(),
+      pg.pgOnline(),
+    ]);
+    const erp = store.summary();
+    res.render('integration', {
+      title: 'ERP - Integration Status',
+      summary,
+      pgUp,
+      erpSummary: erp,
+    });
+  } catch (err) {
+    process.stderr.write(`[erp] /integration error: ${err.message}\n`);
+    res.render('integration', {
+      title: 'ERP - Integration Status',
+      summary: [], pgUp: false,
+      erpSummary: store.summary(),
+    });
+  }
 });
 
 app.use((req, res) => res.status(404).json({ error: 'not found' }));

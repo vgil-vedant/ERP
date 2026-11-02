@@ -1,43 +1,403 @@
 <%- include('layout-head') %>
-<div class="cards">
-  <div class="card"><b><%= summary.citizens %></b><span>Citizens</span></div>
-  <div class="card"><b><%= summary.intake %></b><span>Records received</span></div>
-  <div class="card"><b><%= summary.fields %></b><span>Field values</span></div>
-  <div class="card"><b><%= systems.length %></b><span>Source portals</span></div>
+
+<!-- PAGE HEADER -->
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Dashboard</h1>
+    <p class="page-desc">A single view of what the ERP has received from the platform service. The console starts empty on purpose — if a row is here, a portal put it there.</p>
+  </div>
+  <div class="page-actions">
+    <button class="btn" type="button" onclick="exportTableCSV('erp-dashboard.csv')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      Export CSV
+    </button>
+    <a href="/intake" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h10"/></svg>
+      Received Records
+    </a>
+  </div>
 </div>
 
-<h2>By source portal</h2>
-<table>
-  <tr><th>Portal</th><th>Host</th><th>Category</th><th>Records</th></tr>
-  <% summary.bySystem.forEach(function (s) { %>
-    <tr>
-      <td><strong><%= s.name %></strong> <code><%= s.code %></code></td>
-      <td><%= (systems.find(function(x){return x.code===s.code}) || {}).hostname %></td>
-      <td><%= (systems.find(function(x){return x.code===s.code}) || {}).category %></td>
-      <td><%= s.n %></td>
-    </tr>
-  <% }); %>
-</table>
-
-<h2 style="margin-top:26px">Most recent records</h2>
-<% if (!recent.length) { %>
-  <div class="empty">
-    Nothing has arrived yet.<br>
-    Submit a form on any portal and it will appear here.
+<!-- KPI CARDS -->
+<div class="g-kpi">
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M17 11a3 3 0 1 0 0-6"/><path d="M22 20v-1.5a4 4 0 0 0-3-3.8"/></svg>
+      </div>
+      <span class="pill pill-neutral">all time</span>
+    </div>
+    <div class="kpi-label">Registered Citizens</div>
+    <div class="kpi-value"><%= summary.citizens %></div>
+    <div class="kpi-note">unique citizen_ref records</div>
   </div>
-<% } else { %>
-  <table>
-    <tr><th>ERP ref</th><th>From</th><th>Form</th><th>Portal ref</th><th>Citizen</th><th>Received</th></tr>
-    <% recent.forEach(function (r) { %>
-      <tr>
-        <td><code><%= r.intake_ref %></code></td>
-        <td><span class="chip"><%= r.source_system %></span></td>
-        <td><%= r.subject || r.source_form %><% if (r.source_route) { %><br><code><%= r.source_route %></code><% } %></td>
-        <td><code><%= r.source_reference %></code></td>
-        <td><%= r.full_name || '—' %></td>
-        <td><%= r.received_at %></td>
-      </tr>
-    <% }); %>
-  </table>
-<% } %>
+
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7a2 2 0 0 1 2-2h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 5v5h5M8 14h8M8 17h5"/></svg>
+      </div>
+      <span class="pill pill-ok">intake</span>
+    </div>
+    <div class="kpi-label">Records Received</div>
+    <div class="kpi-value"><%= summary.intake %></div>
+    <div class="kpi-note">rows in erp.sqlite intake table</div>
+  </div>
+
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h9l3 3v13H9z"/><path d="M6 7H3v13h9"/><path d="M13 9h5M13 13h5M13 17h3"/></svg>
+      </div>
+      <span class="pill pill-mint">field values</span>
+    </div>
+    <div class="kpi-label">Field Values Stored</div>
+    <div class="kpi-value"><%= summary.fields %></div>
+    <div class="kpi-note">rows in intake_field table</div>
+  </div>
+
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>
+      </div>
+      <span class="pill pill-info">registered</span>
+    </div>
+    <div class="kpi-label">Source Portals</div>
+    <div class="kpi-value"><%= systems.length %></div>
+    <div class="kpi-note">active source_system entries</div>
+  </div>
+</div>
+
+<!-- CHART ROW A: Area line chart + Donut -->
+<div class="grid g-ab" style="margin-bottom:16px">
+
+  <!-- Area / Line chart: records received over time -->
+  <div class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-title">Records received over time</div>
+        <div class="card-sub">Daily intake count — last 30 days.</div>
+      </div>
+      <span class="pill pill-mint">30 d</span>
+    </div>
+    <div class="card-body" style="padding:0 4px 0 0">
+      <div class="chart-box" id="chartActivity" style="min-height:160px"></div>
+      <div class="chart-legend">
+        <span class="lg-item"><span class="lg-dot" style="background:var(--emerald)"></span>Received into ERP</span>
+        <span class="lg-item" style="color:var(--text-3);margin-left:auto">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+          Timed from intake.received_at
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Donut: records by source system -->
+  <div class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-title">Records by source system</div>
+        <div class="card-sub">Which portal produced the intake rows.</div>
+      </div>
+    </div>
+    <div class="donut-wrap" style="padding:4px 20px 12px">
+      <div class="donut-svg" id="chartDonut"></div>
+      <div class="donut-legend" id="donutLegend"></div>
+    </div>
+    <div class="card-foot">
+      <span style="font-size:11.5px;color:var(--text-3)"><%= systems.length %> registered source systems</span>
+      <a href="/portals" class="btn btn-sm" style="margin-left:auto">Portals &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- CHART ROW B: Bar chart (by portal) + Recent audit -->
+<div class="grid g-ab" style="margin-bottom:16px">
+
+  <!-- Bar chart: submissions by portal -->
+  <div class="card">
+    <div class="card-head tight">
+      <div>
+        <div class="card-title">Intake by portal</div>
+        <div class="card-sub">Records accepted per source system.</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <% if (!summary.bySystem || !summary.bySystem.length) { %>
+        <div class="empty-state">
+          <div class="empty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18"/></svg></div>
+          <div class="empty-title">No portal data yet</div>
+          <div class="empty-hint">Records will appear once a portal submits data.</div>
+        </div>
+      <% } else { %>
+        <%
+          var maxN = Math.max.apply(null, summary.bySystem.map(function(s){ return s.n; })) || 1;
+          var COLORS = ['#0E9F6B','#4FB9A8','#6DB2EF','#D8A64E','#A08CF0'];
+        %>
+        <div class="bars" id="chartBars">
+          <% summary.bySystem.forEach(function(s, idx) { %>
+            <div class="bar-row">
+              <div class="bar-name">
+                <span class="sys-dot" style="background:<%= COLORS[idx % COLORS.length] %>"></span>
+                <span><%= s.name || s.code %></span>
+              </div>
+              <div class="bar-track" data-name="<%= s.name || s.code %>" data-kept="<%= s.n %>" data-rolled="0">
+                <div class="bar-fill" style="width:<%= Math.round((s.n / maxN) * 100) %>%;background:<%= COLORS[idx % COLORS.length] %>"></div>
+              </div>
+              <div class="bar-val"><%= s.n %><small>records</small></div>
+            </div>
+          <% }); %>
+        </div>
+      <% } %>
+    </div>
+    <div class="card-foot">
+      <span class="micro"><span class="lg-dot" style="background:var(--emerald)"></span> Kept intake</span>
+      <a href="/intake" class="btn btn-sm" style="margin-left:auto">All records &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Recent audit feed -->
+  <div class="card">
+    <div class="card-head tight">
+      <div>
+        <div class="card-title">Recent audit activity</div>
+        <div class="card-sub">Append-only · newest first. Triggers reject UPDATE / DELETE.</div>
+      </div>
+      <span class="pill pill-neutral">read-only</span>
+    </div>
+    <div class="feed">
+      <% if (!recentAudit || !recentAudit.length) { %>
+        <div class="empty-state">
+          <div class="empty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <div class="empty-title">Audit trail is empty</div>
+          <div class="empty-hint">Events are written as records arrive.</div>
+        </div>
+      <% } else { %>
+        <% recentAudit.slice(0, 8).forEach(function (r) { %>
+          <div class="feed-item">
+            <div class="feed-dot<%= r.action && r.action.toLowerCase().includes('fail') ? ' warn' : '' %>"></div>
+            <div class="feed-body">
+              <div class="feed-action"><%= r.action %> &mdash; <span style="font-weight:400;color:var(--text-2)"><%= r.entity %> <code style="font-family:var(--mono);font-size:11px"><%= r.entity_id || '' %></code></span></div>
+              <div class="feed-meta">by <strong><%= r.maker %></strong><% if (r.approver) { %> · approved by <%= r.approver %><% } %></div>
+            </div>
+            <div class="feed-time"><%= r.occurred_at %></div>
+          </div>
+        <% }); %>
+      <% } %>
+    </div>
+    <div class="card-foot">
+      <span class="pill pill-neutral" style="font-size:10.5px">INSERT only · audit_log</span>
+      <a href="/audit" class="btn btn-sm" style="margin-left:auto">Full trail &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- RECENT RECORDS TABLE -->
+<div class="card">
+  <div class="card-head">
+    <div>
+      <div class="card-title">Most recent records</div>
+      <div class="card-sub">Latest intake rows. Click a row to view field-level detail.</div>
+    </div>
+    <a href="/intake" class="btn btn-sm">View all &rarr;</a>
+  </div>
+
+  <% if (!recent.length) { %>
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7a2 2 0 0 1 2-2h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 5v5h5"/></svg>
+      </div>
+      <div class="empty-title">No records yet</div>
+      <div class="empty-hint">Submit a form on any portal and it will appear here.</div>
+    </div>
+  <% } else { %>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th data-sort>ERP Ref</th>
+            <th data-sort>Source</th>
+            <th data-sort>Form</th>
+            <th data-sort>Portal Ref</th>
+            <th data-sort>Citizen</th>
+            <th data-sort>Received</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% recent.forEach(function (r) { %>
+            <%
+              var fields = r.fields || [];
+              var drawerHtml = '<div><div class="drawer-section-title">Record</div><div class="kv-list">'
+                + '<div class="kv-row"><div class="kv-key">ERP Ref</div><div class="kv-val"><code style="font-family:var(--mono);font-size:11.5px">' + (r.intake_ref || '—') + '</code></div></div>'
+                + '<div class="kv-row"><div class="kv-key">Source system</div><div class="kv-val">' + (r.source_system || '—') + '</div></div>'
+                + '<div class="kv-row"><div class="kv-key">Form</div><div class="kv-val">' + (r.subject || r.source_form || '—') + '</div></div>'
+                + '<div class="kv-row"><div class="kv-key">Portal ref</div><div class="kv-val"><code style="font-family:var(--mono);font-size:11.5px">' + (r.source_reference || '—') + '</code></div></div>'
+                + '<div class="kv-row"><div class="kv-key">Citizen</div><div class="kv-val">' + (r.full_name || '—') + '</div></div>'
+                + '<div class="kv-row"><div class="kv-key">Received at</div><div class="kv-val">' + (r.received_at || '—') + '</div></div>'
+                + '</div></div>';
+              if (fields.length) {
+                drawerHtml += '<div><div class="drawer-section-title">Field values (' + fields.length + ')</div><div class="kv-list">';
+                fields.forEach(function(f) {
+                  drawerHtml += '<div class="kv-row"><div class="kv-key">' + (f.label || f.name) + '</div><div class="kv-val">' + (f.value == null ? '—' : f.value) + '</div></div>';
+                });
+                drawerHtml += '</div></div>';
+              }
+            %>
+            <tr class="clickable" onclick="openDrawer('<%= r.intake_ref %>', '<%= drawerHtml.replace(/'/g, "\\'").replace(/\n/g, '') %>')">
+              <td><code class="mono-chip"><%= r.intake_ref %></code></td>
+              <td><span class="sys-chip"><%= r.source_system %></span></td>
+              <td>
+                <%= r.subject || r.source_form %>
+                <% if (r.source_route) { %><br><code style="font-family:var(--mono);font-size:10.5px;color:var(--text-3)"><%= r.source_route %></code><% } %>
+              </td>
+              <td><code class="mono-chip"><%= r.source_reference %></code></td>
+              <td><%= r.full_name || '—' %></td>
+              <td style="color:var(--text-3);font-size:12.5px"><%= r.received_at %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  <% } %>
+</div>
+
+<!-- ── Chart data injected from server ── -->
+<script>
+(function(){
+  /* ── palette matching the 5 portals ── */
+  var SYS_COLORS = ['#0E9F6B','#4FB9A8','#6DB2EF','#D8A64E','#A08CF0'];
+
+  /* ── daily intake buckets (last 30 days) ── */
+  var dailyRaw = <%- JSON.stringify(dailyIntake) %>;
+  /* ── by-system counts ── */
+  var bySysRaw = <%- JSON.stringify(summary.bySystem) %>;
+
+  /* ──────────────────────────────────────────
+     Smooth-curve path helper (Catmull-Rom)
+  ────────────────────────────────────────── */
+  function smoothPath(pts){
+    if (pts.length < 2) return pts.length ? 'M'+pts[0][0]+' '+pts[0][1] : '';
+    var d = ['M'+pts[0][0]+' '+pts[0][1]];
+    for (var i = 1; i < pts.length; i++){
+      var p0 = pts[Math.max(i-2,0)], p1 = pts[i-1], p2 = pts[i], p3 = pts[Math.min(i+1,pts.length-1)];
+      var c1x = p1[0] + (p2[0]-p0[0])/6, c1y = p1[1] + (p2[1]-p0[1])/6;
+      var c2x = p2[0] - (p3[0]-p1[0])/6, c2y = p2[1] - (p3[1]-p1[1])/6;
+      d.push('C'+[c1x,c1y,c2x,c2y,p2[0],p2[1]].map(function(v){return Math.round(v*100)/100;}).join(' '));
+    }
+    return d.join(' ');
+  }
+
+  /* ──────────────────────────────────────────
+     LINE / AREA CHART — records over time
+  ────────────────────────────────────────── */
+  function renderAreaChart(el, buckets){
+    if (!buckets.length) {
+      el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:160px;color:var(--text-3);font-size:12px">No intake data in range</div>';
+      return;
+    }
+    var W=780, H=200, L=46, R=16, T=18, B=30;
+    var innerW=W-L-R, innerH=H-T-B;
+    var vals = buckets.map(function(b){ return b.n; });
+    var maxVal = Math.max.apply(null,[1].concat(vals));
+    /* nice round ceiling */
+    var mag = Math.pow(10, Math.floor(Math.log(maxVal)/Math.LN10));
+    maxVal = Math.ceil(maxVal/mag)*mag || 1;
+
+    var xOf = function(i){ return L + (buckets.length===1 ? innerW/2 : i*innerW/(buckets.length-1)); };
+    var yOf = function(v){ return T + innerH - (v/maxVal)*innerH; };
+
+    var pts = buckets.map(function(b,i){ return [xOf(i), yOf(b.n)]; });
+    var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    /* grid lines */
+    var gridVals = [0,.25,.5,.75,1].map(function(f){ return Math.round(maxVal*f); });
+    var grid = gridVals.map(function(v){
+      return '<line x1="'+L+'" y1="'+yOf(v)+'" x2="'+(W-R)+'" y2="'+yOf(v)+'" stroke="#EDF4F0" stroke-width="1"/>'
+           + '<text x="'+(L-9)+'" y="'+(yOf(v)+3.5)+'" text-anchor="end" font-size="10" fill="#A9B7B1" font-weight="600">'+v+'</text>';
+    }).join('');
+
+    /* x-axis ticks */
+    var tickCount = Math.min(6, buckets.length);
+    var ticks = '';
+    for (var k=0; k<tickCount; k++){
+      var idx = Math.round(k*(buckets.length-1)/Math.max(1,tickCount-1));
+      var d = new Date(buckets[idx].date+'T00:00:00');
+      var lbl = MONTHS[d.getMonth()]+' '+d.getDate();
+      ticks += '<text x="'+xOf(idx)+'" y="'+(H-10)+'" text-anchor="middle" font-size="10" fill="#A9B7B1" font-weight="600">'+lbl+'</text>';
+    }
+
+    var line = smoothPath(pts);
+    var area = line + ' L'+(xOf(buckets.length-1))+' '+(T+innerH)+' L'+L+' '+(T+innerH)+' Z';
+
+    el.innerHTML = '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto" role="img" aria-label="Daily intake trend">'
+      + '<defs><linearGradient id="gradDash" x1="0" y1="0" x2="0" y2="1">'
+      + '<stop offset="0%" stop-color="#0E9F6B" stop-opacity=".22"/>'
+      + '<stop offset="100%" stop-color="#0E9F6B" stop-opacity="0"/>'
+      + '</linearGradient></defs>'
+      + grid + ticks
+      + '<path d="'+area+'" fill="url(#gradDash)"/>'
+      + '<path d="'+line+'" fill="none" stroke="#0E9F6B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'
+      + '</svg>';
+  }
+
+  /* ──────────────────────────────────────────
+     DONUT CHART — records by source system
+  ────────────────────────────────────────── */
+  function renderDonut(el, items){
+    var total = items.reduce(function(a,b){ return a+b.value; }, 0) || 1;
+    var R=60, C=2*Math.PI*R, SW=17, size=168, cx=size/2, cy=size/2;
+    var offset=0;
+    var arcs = items.map(function(it,i){
+      var len = (it.value/total)*C;
+      var gap = items.length>1 ? 2.5 : 0;
+      var seg = '<circle class="dseg" cx="'+cx+'" cy="'+cy+'" r="'+R+'" fill="none"'
+        +' stroke="'+it.color+'" stroke-width="'+SW+'" stroke-linecap="butt"'
+        +' stroke-dasharray="'+Math.max(0.5,len-gap)+' '+(C-Math.max(0.5,len-gap))+'"'
+        +' stroke-dashoffset="'+(-offset)+'" transform="rotate(-90 '+cx+' '+cy+')"'
+        +' style="transition:stroke-width .16s ease,opacity .16s ease"></circle>';
+      offset += len;
+      return seg;
+    }).join('');
+
+    el.innerHTML = '<svg viewBox="0 0 '+size+' '+size+'" style="width:100%;height:auto" role="img" aria-label="Records by source">'
+      + '<circle cx="'+cx+'" cy="'+cy+'" r="'+R+'" fill="none" stroke="#F1F7F3" stroke-width="'+SW+'"></circle>'
+      + arcs
+      + '<text x="'+cx+'" y="'+(cy-2)+'" text-anchor="middle" class="donut-center">'+total+'</text>'
+      + '<text x="'+cx+'" y="'+(cy+14)+'" text-anchor="middle" class="donut-center-sub">TOTAL</text>'
+      + '</svg>';
+
+    var legend = document.getElementById('donutLegend');
+    if (legend){
+      legend.innerHTML = items.map(function(it){
+        var pct = Math.round(it.value/total*100);
+        return '<div class="dl-row">'
+          + '<span class="lg-dot" style="background:'+it.color+'"></span>'
+          + '<span class="dl-name">'+it.name+'</span>'
+          + '<span class="dl-val">'+it.value+'<span style="color:var(--text-3);font-weight:600"> · '+pct+'%</span></span>'
+          + '</div>';
+      }).join('');
+    }
+  }
+
+  /* ── render on DOM ready ── */
+  document.addEventListener('DOMContentLoaded', function(){
+    /* Area chart */
+    var actEl = document.getElementById('chartActivity');
+    if (actEl) renderAreaChart(actEl, dailyRaw);
+
+    /* Donut */
+    var donutEl = document.getElementById('chartDonut');
+    if (donutEl && bySysRaw.length){
+      var items = bySysRaw.map(function(s,i){
+        return { name: s.name||s.code, value: s.n, color: SYS_COLORS[i%SYS_COLORS.length] };
+      });
+      renderDonut(donutEl, items);
+    } else if (donutEl){
+      donutEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:140px;color:var(--text-3);font-size:12px">No data yet</div>';
+    }
+  });
+})();
+</script>
+
 <%- include('layout-foot') %>

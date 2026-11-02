@@ -154,7 +154,20 @@ function auditTail(limit = 100) {
   return db.prepare('SELECT * FROM audit_log ORDER BY id DESC LIMIT ?').all(limit);
 }
 
+/**
+ * Daily intake counts for the last `days` days, for the line chart.
+ * Returns [{date:'2026-10-29', n:14}, ...] oldest-first.
+ */
+function dailyIntake(days = 30) {
+  return db.prepare(
+    `SELECT date(received_at) AS date, COUNT(*) AS n
+     FROM intake
+     WHERE received_at >= date('now', ? || ' days')
+     GROUP BY date(received_at)
+     ORDER BY date(received_at) ASC`).all(`-${days}`);
+}
+
 module.exports = {
-  db, DB_PATH, open, receive, summary, recentIntake, citizens, auditTail,
+  db, DB_PATH, open, receive, summary, recentIntake, citizens, auditTail, dailyIntake,
   systems: () => q.systems.all(),
 };

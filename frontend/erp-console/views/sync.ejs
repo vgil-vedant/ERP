@@ -1,0 +1,229 @@
+<%- include('layout-head') %>
+
+<%
+  /* result pill colour */
+  function resultClass(s) {
+    if (s === 'kept')        return 'pill-ok';
+    if (s === 'duplicate')   return 'pill-warn';
+    if (s === 'rolled_back') return 'pill-danger';
+    return 'pill-neutral';
+  }
+  function httpClass(code) {
+    if (!code) return 'pill-neutral';
+    if (code < 300) return 'pill-ok';
+    if (code < 400) return 'pill-warn';
+    return 'pill-danger';
+  }
+  var SITE_LABELS = {
+    eprisons: 'ePrisons', cctns: 'CCTNS', eforensics: 'e-Forensics',
+    uidai: 'UIDAI', ecourts: 'eCourts'
+  };
+%>
+
+<!-- PAGE HEADER -->
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Sync Activity</h1>
+    <p class="page-desc">
+      One row per write-through attempt.
+      A rolled-back attempt has no matching intake row — the portal undid its own insert when the ERP refused the write.
+    </p>
+  </div>
+  <div class="page-actions">
+    <% if (siteFilter) { %>
+      <a href="/sync" class="btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg>
+        All portals
+      </a>
+    <% } %>
+    <button class="btn" onclick="exportTableCSV('erp-sync.csv')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      Export
+    </button>
+  </div>
+</div>
+
+<% if (!pgAvailable && total === 0) { %>
+  <!-- PG unavailable notice -->
+  <div style="background:var(--warning-bg);border:1px solid #E8D5A0;border-radius:var(--r-sm);padding:12px 16px;margin-bottom:18px;display:flex;align-items:flex-start;gap:10px">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:15px;height:15px;flex-shrink:0;margin-top:1px;color:#B67C24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+    <div>
+      <strong style="font-size:13px">PostgreSQL unavailable</strong><br>
+      <span style="font-size:12.5px;color:var(--text-2)">
+        Run <code style="font-family:var(--mono);font-size:11px">npm install</code> in the project root, then restart the ERP server.
+        The sync ledger lives in <code style="font-family:var(--mono);font-size:11px">demo_replica</code> (Docker: ERP_postgres, port 7432).
+      </span>
+    </div>
+  </div>
+<% } %>
+
+<!-- SUMMARY KPI CARDS -->
+<% if (summary && summary.length) {
+  var grandTotal    = summary.reduce(function(a,b){ return a+(b.total||0); }, 0);
+  var grandKept     = summary.reduce(function(a,b){ return a+(b.kept||0); }, 0);
+  var grandDup      = summary.reduce(function(a,b){ return a+(b.duplicate||0); }, 0);
+  var grandRolled   = summary.reduce(function(a,b){ return a+(b.rolled_back||0); }, 0);
+%>
+<div class="g-kpi" style="margin-bottom:18px">
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M20 9A8 8 0 0 0 6 6L4 10m16 4-2 4a8 8 0 0 1-14-3"/></svg>
+      </div>
+      <span class="pill pill-neutral">ledger</span>
+    </div>
+    <div class="kpi-label">Total Attempts</div>
+    <div class="kpi-value"><%= grandTotal %></div>
+    <div class="kpi-note">erp_sync ledger · all portals</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <span class="pill pill-ok">HTTP 201</span>
+    </div>
+    <div class="kpi-label">Kept</div>
+    <div class="kpi-value"><%= grandKept %></div>
+    <div class="kpi-note">successfully written to ERP</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 9H4V4M15 9h5V4M9 15H4v5M15 15h5v5"/></svg>
+      </div>
+      <span class="pill pill-warn">HTTP 200</span>
+    </div>
+    <div class="kpi-label">Duplicate</div>
+    <div class="kpi-value"><%= grandDup %></div>
+    <div class="kpi-note">idempotent — already in ERP</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </div>
+      <span class="pill pill-danger">4xx / 5xx</span>
+    </div>
+    <div class="kpi-label">Rolled Back</div>
+    <div class="kpi-value"><%= grandRolled %></div>
+    <div class="kpi-note">portal undid insert on refusal</div>
+  </div>
+</div>
+<% } %>
+
+<!-- SEARCH + FILTER ROW -->
+<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+  <div class="search-field" style="max-width:340px;flex:1">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+    <input id="globalSearch" type="search" placeholder="Search submission ref, intake ref or portal…" autocomplete="off" />
+    <span class="kbd">/</span>
+  </div>
+  <!-- system filter chips -->
+  <div style="display:flex;gap:6px;flex-wrap:wrap">
+    <a href="/sync" class="chip-filter<%= !siteFilter ? ' is-active' : '' %>">All portals</a>
+    <% ['eprisons','cctns','eforensics','uidai','ecourts'].forEach(function(code) { %>
+      <a href="/sync?system=<%= code %>" class="chip-filter<%= siteFilter === code ? ' is-active' : '' %>">
+        <%= SITE_LABELS[code] || code %>
+      </a>
+    <% }); %>
+  </div>
+</div>
+
+<!-- SYNC TABLE -->
+<div class="card">
+  <div class="card-head">
+    <div>
+      <div class="card-title">
+        <% if (siteFilter) { %><%= SITE_LABELS[siteFilter] || siteFilter %> sync log<% } else { %>Write-through attempts<% } %>
+      </div>
+      <div class="card-sub">
+        <% if (total) { %><%= total %> attempts · erp_sync ledger · synchronous write-through · hub /api/sync<% } else { %>No sync data yet<% } %>
+      </div>
+    </div>
+    <button class="btn btn-sm" onclick="exportTableCSV('erp-sync.csv')">Export CSV</button>
+  </div>
+
+  <% if (!rows || !rows.length) { %>
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M20 9A8 8 0 0 0 6 6L4 10m16 4-2 4a8 8 0 0 1-14-3"/></svg>
+      </div>
+      <div class="empty-title">No sync records found</div>
+      <div class="empty-hint">
+        Sync data is read from <code style="font-family:var(--mono);font-size:11px">demo_replica</code> (PostgreSQL).
+        Ensure the Docker container is running and <code style="font-family:var(--mono);font-size:11px">npm install</code> has been run.
+      </div>
+    </div>
+  <% } else { %>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th data-sort>Attempted at</th>
+            <th data-sort>Portal</th>
+            <th data-sort>Submission ref</th>
+            <th data-sort>ERP intake ref</th>
+            <th data-sort>HTTP</th>
+            <th data-sort>Result</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% rows.forEach(function(r) {
+            var drawerHtml = '<div class="kv-list">'
+              + '<div class="kv-row"><div class="kv-key">Portal</div><div class="kv-val">' + (r.site_label||r.site_code) + '</div></div>'
+              + '<div class="kv-row"><div class="kv-key">Entity</div><div class="kv-val">' + (r.entity||'—') + '</div></div>'
+              + '<div class="kv-row"><div class="kv-key">Submission ref</div><div class="kv-val"><code style="font-family:var(--mono);font-size:11.5px">' + (r.local_ref||'—') + '</code></div></div>'
+              + '<div class="kv-row"><div class="kv-key">ERP intake ref</div><div class="kv-val"><code style="font-family:var(--mono);font-size:11.5px">' + (r.erp_ref||'—') + '</code></div></div>'
+              + '<div class="kv-row"><div class="kv-key">HTTP status</div><div class="kv-val">' + (r.http_status||'—') + '</div></div>'
+              + '<div class="kv-row"><div class="kv-key">Result</div><div class="kv-val">' + (r.status||'—') + '</div></div>'
+              + '<div class="kv-row"><div class="kv-key">Attempted at</div><div class="kv-val">' + (r.attempted_at||'—') + '</div></div>'
+              + (r.message ? '<div class="kv-row"><div class="kv-key">Message</div><div class="kv-val">' + r.message + '</div></div>' : '')
+              + '</div>';
+          %>
+          <tr class="clickable" onclick="openDrawer('<%= r.local_ref || r.erp_ref || 'Sync record' %>', '<%= drawerHtml.replace(/'/g, "\\'").replace(/\n/g,'') %>')">
+            <td style="white-space:nowrap;font-size:12.5px;color:var(--text-2)"><%= r.attempted_at ? r.attempted_at.replace('T',' ').slice(0,16) : '—' %></td>
+            <td>
+              <span class="sys-chip" style="font-size:11.5px"><%= r.site_label || r.site_code %></span>
+            </td>
+            <td><code class="mono-chip"><%= r.local_ref || '—' %></code></td>
+            <td>
+              <% if (r.erp_ref) { %>
+                <a href="/intake" style="color:var(--emerald);text-decoration:underline;font-family:var(--mono);font-size:11.5px"><%= r.erp_ref %></a>
+              <% } else { %>
+                <span style="color:var(--text-4)">—</span>
+              <% } %>
+            </td>
+            <td>
+              <span class="pill <%= httpClass(r.http_status) %>" style="font-size:11px;font-variant-numeric:tabular-nums"><%= r.http_status || '—' %></span>
+            </td>
+            <td>
+              <span class="pill <%= resultClass(r.status) %>" style="font-size:11px"><%= r.status || '—' %></span>
+            </td>
+            <td style="font-size:12px;color:var(--text-3);max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+              <%= r.message || '' %>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <!-- pager -->
+    <div class="tbl-foot">
+      <span id="pagerInfo"></span>
+      <div class="pager-btns">
+        <button class="btn btn-sm" id="pagerPrev" onclick="goPage(-1)" disabled>&#8592;</button>
+        <button class="btn btn-sm" id="pagerNext" onclick="goPage(1)">&#8594;</button>
+      </div>
+    </div>
+  <% } %>
+
+  <div style="padding:10px 20px;border-top:1px solid var(--border);font-size:11.5px;color:var(--text-3);display:flex;align-items:center;gap:6px">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+    Latency is bounded by <code style="font-family:var(--mono);font-size:10.5px">ERP_TIMEOUT_MS</code> (default 5000 ms) inside the portal's open transaction.
+    There is no retry queue — the idempotent intake API is what makes a manual retry safe.
+  </div>
+</div>
+
+<%- include('layout-foot') %>

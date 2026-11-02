@@ -1,0 +1,172 @@
+<%- include('layout-head') %>
+
+<%
+  var grandTotal  = (summary||[]).reduce(function(a,b){ return a+(b.total||0); }, 0);
+  var grandKept   = (summary||[]).reduce(function(a,b){ return a+(b.kept||0); }, 0);
+  var grandDup    = (summary||[]).reduce(function(a,b){ return a+(b.duplicate||0); }, 0);
+  var grandRolled = (summary||[]).reduce(function(a,b){ return a+(b.rolled_back||0); }, 0);
+  var successRate = grandTotal ? Math.round((grandKept+grandDup)/grandTotal*100) : 0;
+%>
+
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Integration Status</h1>
+    <p class="page-desc">
+      Write-through health across all five portal replicas.
+      Each portal holds its own transaction open during the ERP call — a refusal rolls back both sides atomically.
+    </p>
+  </div>
+  <div class="page-actions">
+    <% if (pgUp) { %>
+      <span class="pill pill-ok" style="height:30px;padding:0 12px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:12px;height:12px"><path d="M20 6 9 17l-5-5"/></svg>
+        demo_replica online
+      </span>
+    <% } else { %>
+      <span class="pill pill-danger" style="height:30px;padding:0 12px">demo_replica offline</span>
+    <% } %>
+    <a href="/sync" class="btn">View full sync log &rarr;</a>
+  </div>
+</div>
+
+<!-- TOP KPI ROW -->
+<div class="g-kpi" style="margin-bottom:18px">
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M20 9A8 8 0 0 0 6 6L4 10m16 4-2 4a8 8 0 0 1-14-3"/></svg>
+      </div>
+      <span class="pill pill-neutral">all portals</span>
+    </div>
+    <div class="kpi-label">Total Attempts</div>
+    <div class="kpi-value"><%= grandTotal %></div>
+    <div class="kpi-note">across all 5 portal tables</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <span class="pill pill-ok">success</span>
+    </div>
+    <div class="kpi-label">Success Rate</div>
+    <div class="kpi-value"><%= successRate %>%</div>
+    <div class="kpi-note">kept + duplicate</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 13h4l2 3h4l2-3h4"/><path d="M5.5 5h13l1.5 8v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4Z"/></svg>
+      </div>
+      <span class="pill pill-ok">ERP</span>
+    </div>
+    <div class="kpi-label">Records in ERP</div>
+    <div class="kpi-value"><%= erpSummary ? erpSummary.intake : '—' %></div>
+    <div class="kpi-note">rows in erp.sqlite · intake table</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-top">
+      <div class="kpi-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </div>
+      <span class="pill pill-danger">refused</span>
+    </div>
+    <div class="kpi-label">Rolled Back</div>
+    <div class="kpi-value"><%= grandRolled %></div>
+    <div class="kpi-note">portal undid insert on refusal</div>
+  </div>
+</div>
+
+<div class="g-2">
+  <!-- Per-portal breakdown -->
+  <div class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-title">Per-portal sync breakdown</div>
+        <div class="card-sub">From <code style="font-family:var(--mono);font-size:11px">platform_erp_sync</code> rows in <code style="font-family:var(--mono);font-size:11px">demo_replica</code></div>
+      </div>
+    </div>
+    <% if (!summary || !summary.length) { %>
+      <div class="empty-state">
+        <div class="empty-title">No sync data</div>
+        <div class="empty-hint">Ensure Docker container <code style="font-family:var(--mono);font-size:11px">ERP_postgres</code> is running and <code style="font-family:var(--mono);font-size:11px">npm install</code> has been run.</div>
+      </div>
+    <% } else { %>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr>
+            <th>Portal</th>
+            <th data-sort>Attempts</th>
+            <th data-sort>Kept</th>
+            <th data-sort>Duplicate</th>
+            <th data-sort>Rolled back</th>
+            <th>Rate</th>
+          </tr></thead>
+          <tbody>
+            <% (summary||[]).forEach(function(s) {
+              var rate = s.total ? Math.round((s.kept+s.duplicate)/s.total*100) : 0;
+            %>
+            <tr>
+              <td>
+                <div style="display:flex;align-items:center;gap:8px">
+                  <span class="sys-chip"><%= s.site_label || s.site_code %></span>
+                </div>
+              </td>
+              <td style="font-variant-numeric:tabular-nums;font-weight:600"><%= s.total %></td>
+              <td><span class="pill pill-ok" style="font-size:11px"><%= s.kept %></span></td>
+              <td><span class="pill pill-warn" style="font-size:11px"><%= s.duplicate %></span></td>
+              <td><span class="pill <%= s.rolled_back > 0 ? 'pill-danger' : 'pill-neutral' %>" style="font-size:11px"><%= s.rolled_back %></span></td>
+              <td>
+                <div style="display:flex;align-items:center;gap:6px">
+                  <div style="width:60px;height:6px;background:var(--surface-3);border-radius:3px;overflow:hidden">
+                    <div style="width:<%= rate %>%;height:100%;background:var(--emerald);border-radius:3px"></div>
+                  </div>
+                  <span style="font-size:11.5px;font-weight:600;font-variant-numeric:tabular-nums"><%= rate %>%</span>
+                </div>
+              </td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    <% } %>
+    <div style="padding:10px 20px;border-top:1px solid var(--border)">
+      <a href="/sync" class="btn btn-sm">Full sync log &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Runtime config -->
+  <div class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-title">Runtime configuration</div>
+        <div class="card-sub">Variables the ERP backend reads at startup.</div>
+      </div>
+    </div>
+    <div class="def-list">
+      <div class="def-row"><div class="def-key">ERP_PORT</div><div class="def-val"><code style="font-family:var(--mono);font-size:11px">4200</code> default</div></div>
+      <div class="def-row"><div class="def-key">ERP_DB</div><div class="def-val">Path to <code style="font-family:var(--mono);font-size:11px">erp.sqlite</code></div></div>
+      <div class="def-row"><div class="def-key">ERP_HOST / HOST</div><div class="def-val">Bind address — defaults to <code style="font-family:var(--mono);font-size:11px">127.0.0.1</code></div></div>
+      <div class="def-row"><div class="def-key">ERP_TIMEOUT_MS</div><div class="def-val"><code style="font-family:var(--mono);font-size:11px">5000</code> — write-through timeout</div></div>
+      <div class="def-row"><div class="def-key">PGHOST / PGPORT</div><div class="def-val"><code style="font-family:var(--mono);font-size:11px">127.0.0.1:7432</code> — Docker ERP_postgres</div></div>
+      <div class="def-row"><div class="def-key">PGDATABASE</div><div class="def-val"><code style="font-family:var(--mono);font-size:11px">demo_replica</code> — sync ledger source</div></div>
+      <div class="def-row"><div class="def-key">PLATFORM_PORT</div><div class="def-val"><code style="font-family:var(--mono);font-size:11px">4100</code> — platform hub</div></div>
+      <div class="def-row"><div class="def-key">PORT_OFFSET</div><div class="def-val">Shifts all portal ports for a parallel instance</div></div>
+    </div>
+
+    <div class="card-head" style="margin-top:0;border-top:1px solid var(--border)">
+      <div>
+        <div class="card-title" style="font-size:13.5px">Write-through design</div>
+      </div>
+    </div>
+    <div class="def-list">
+      <div class="def-row"><div class="def-key">Method</div><div class="def-val">Synchronous — portal holds transaction open during ERP call</div></div>
+      <div class="def-row"><div class="def-key">Idempotency</div><div class="def-val">Same <code style="font-family:var(--mono);font-size:11px">(source_system, source_reference)</code> → HTTP 200 <em>duplicate:true</em></div></div>
+      <div class="def-row"><div class="def-key">Rollback</div><div class="def-val">ERP 4xx/5xx → portal rolls back; neither DB has the row</div></div>
+      <div class="def-row"><div class="def-key">No retry queue</div><div class="def-val">Manual retry is safe because the API is idempotent</div></div>
+      <div class="def-row"><div class="def-key">Ledger</div><div class="def-val"><code style="font-family:var(--mono);font-size:11px">erp_sync</code> in platform.sqlite · mirrored to Postgres as <code style="font-family:var(--mono);font-size:11px">platform_erp_sync</code></div></div>
+    </div>
+  </div>
+</div>
+
+<%- include('layout-foot') %>

@@ -30,12 +30,32 @@ services:
     image: erp_erp_api:${ERP_IMAGE_TAG:-1.0.0}
     build: { context: ., dockerfile: docker/Dockerfile, target: erp-api }
     container_name: ERP_erp_api
+    depends_on:
+      postgres: { condition: service_healthy }
+    secrets: [ERP_pg_password]
     environment:
       HOST: 0.0.0.0
+      # PostgreSQL — talk to the postgres service by Docker service name
+      PGHOST:     postgres
+      PGPORT:     "5432"
+      PGUSER:     ${PGUSER:-ams}
+      PGDATABASE: ${PGDATABASE:-demo_replica}
+      # Password is read from the secret file by pg.js (PGPASSWORD env is empty;
+      # the pool reads /run/secrets/ERP_pg_password if PGPASSWORD is unset)
     ports:
       - "127.0.0.1:${ERP_HOST_PORT_ERP:-7200}:4200"
     volumes:
       - ERP_erp_data:/data/erp
+    healthcheck:
+      test:
+        - "CMD"
+        - "node"
+        - "-e"
+        - "require('http').get('http://127.0.0.1:4200/api/summary',r=>process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))"
+      interval: 15s
+      timeout: 4s
+      start_period: 20s
+      retries: 3
 
   platform_api:
     <<: *hardening

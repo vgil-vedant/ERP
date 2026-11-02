@@ -1,26 +1,134 @@
 <%- include('layout-head') %>
-<h2>Audit trail <span style="font-weight:400;color:var(--muted)">(<%= rows.length %>)</span></h2>
-<p style="font-size:13px;color:var(--muted);margin-top:0">
-  Append-only, enforced by database triggers: <code>audit_log</code> rejects every
-  UPDATE and DELETE, so no role can alter it. Required by
-  <code>erp-scope.pdf</code> section 4.
-</p>
-<% if (!rows.length) { %>
-  <div class="empty">The trail is empty.</div>
-<% } else { %>
-  <table>
-    <tr><th>#</th><th>When</th><th>Entity</th><th>Action</th><th>Maker</th><th>Approver</th><th>Details</th></tr>
-    <% rows.forEach(function (r) { %>
-      <tr>
-        <td><%= r.id %></td>
-        <td><%= r.occurred_at %></td>
-        <td><%= r.entity %> <code><%= r.entity_id %></code></td>
-        <td><span class="chip"><%= r.action %></span></td>
-        <td><%= r.maker %></td>
-        <td><%= r.approver || '—' %></td>
-        <td style="color:var(--muted)"><%= r.details || '—' %></td>
-      </tr>
-    <% }); %>
-  </table>
-<% } %>
+
+<!-- PAGE HEADER -->
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Audit Trail</h1>
+    <p class="page-desc">
+      Append-only, enforced by database triggers: <code style="font-family:var(--mono);font-size:12px;background:var(--surface-3);padding:1px 5px;border-radius:5px">audit_log</code>
+      rejects every UPDATE and DELETE, so no role can alter it. Required by <code style="font-family:var(--mono);font-size:12px">erp-scope.pdf</code> section&nbsp;4.
+    </p>
+  </div>
+  <div class="page-actions">
+    <span class="pill pill-neutral" style="height:34px;padding:0 12px;display:inline-flex;align-items:center;gap:5px;font-size:11.5px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      read-only · append-only
+    </span>
+    <button class="btn" type="button" onclick="exportTableCSV('erp-audit.csv')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      Export CSV
+    </button>
+  </div>
+</div>
+
+<!-- AUDIT CARD -->
+<div class="card">
+  <div class="card-head">
+    <div>
+      <div class="card-title">Audit events</div>
+      <div class="card-sub"><%= rows.length %> event<%= rows.length === 1 ? '' : 's' %> recorded</div>
+    </div>
+    <span class="pill pill-mint">audit_log</span>
+  </div>
+
+  <!-- Search toolbar -->
+  <div class="tbl-toolbar">
+    <div class="tbl-search-wrap" style="max-width:300px;width:100%">
+      <div class="tbl-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input id="tableSearch" type="search" placeholder="Search events…" autocomplete="off" aria-label="Search audit events">
+      </div>
+    </div>
+  </div>
+
+  <% if (!rows.length) { %>
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h9l3 3v13H9z"/><path d="M6 7H3v13h9"/><path d="M13 9h5M13 13h5M13 17h3"/></svg>
+      </div>
+      <div class="empty-title">The audit trail is empty</div>
+      <div class="empty-hint">Events are written automatically as records arrive through the intake API.</div>
+    </div>
+  <% } else { %>
+    <div class="tbl-wrap">
+      <table class="tbl" id="mainTable">
+        <thead>
+          <tr>
+            <th data-sort>#</th>
+            <th data-sort>When</th>
+            <th data-sort>Entity</th>
+            <th data-sort>Action</th>
+            <th data-sort>Maker</th>
+            <th data-sort>Approver</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% rows.forEach(function (r) { %>
+            <tr>
+              <td style="font-family:var(--mono);font-size:12px;color:var(--text-3);font-variant-numeric:tabular-nums"><%= r.id %></td>
+              <td style="font-size:12.5px;color:var(--text-2);white-space:nowrap"><%= r.occurred_at %></td>
+              <td>
+                <span style="font-weight:600"><%= r.entity %></span>
+                <code class="mono-chip" style="margin-left:4px"><%= r.entity_id %></code>
+              </td>
+              <td>
+                <%
+                  var actionLower = (r.action || '').toLowerCase();
+                  var pillClass = 'pill-ok';
+                  if (actionLower.includes('delete') || actionLower.includes('fail') || actionLower.includes('reject'))
+                    pillClass = 'pill-danger';
+                  else if (actionLower.includes('update') || actionLower.includes('change'))
+                    pillClass = 'pill-warn';
+                  else if (actionLower.includes('create') || actionLower.includes('insert'))
+                    pillClass = 'pill-ok';
+                  else
+                    pillClass = 'pill-info';
+                %>
+                <span class="pill <%= pillClass %>"><%= r.action %></span>
+              </td>
+              <td style="font-weight:600;font-size:13px"><%= r.maker %></td>
+              <td style="color:var(--text-3)"><%= r.approver || '—' %></td>
+              <td style="font-size:12.5px;color:var(--text-2);max-width:280px;overflow:hidden;text-overflow:ellipsis" title="<%= r.details || '' %>"><%= r.details || '—' %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pager -->
+    <div class="pager">
+      <span class="pager-info" id="pagerInfo"></span>
+      <button class="pager-btn" id="pagerPrev" type="button" onclick="goPage(-1)" aria-label="Previous page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="pager-btn" id="pagerNext" type="button" onclick="goPage(1)" aria-label="Next page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  <% } %>
+
+  <div style="padding:10px 20px;border-top:1px solid var(--border);font-size:11.5px;line-height:1.7;color:var(--text-3);overflow-wrap:anywhere">
+    <svg style="vertical-align:-2px;margin-right:6px" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+    Database triggers prevent any UPDATE or DELETE on <code style="font-family:var(--mono);font-size:10.5px">audit_log</code>. This console provides no editing controls.
+    <code style="font-family:var(--mono);font-size:10.5px;margin-left:2px">maker</code> records the caller — <code style="font-family:var(--mono);font-size:10.5px">platform-api</code> for write-through, <code style="font-family:var(--mono);font-size:10.5px">seed</code> for the registry.
+  </div>
+</div>
+
+<script>
+(function () {
+  var searchInput = document.getElementById('tableSearch');
+  var table = document.getElementById('mainTable');
+  if (!searchInput || !table) return;
+  searchInput.addEventListener('input', function () {
+    var q = searchInput.value.toLowerCase().trim();
+    var rows = table.querySelectorAll('tbody tr');
+    rows.forEach(function (tr) {
+      tr.style.display = !q || tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+    if (typeof updatePager === 'function') updatePager();
+  });
+})();
+</script>
+
 <%- include('layout-foot') %>

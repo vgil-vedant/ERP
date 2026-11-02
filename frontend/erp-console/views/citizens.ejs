@@ -1,29 +1,140 @@
 <%- include('layout-head') %>
-<h2>Citizens <span style="font-weight:400;color:var(--muted)">(<%= rows.length %>)</span></h2>
-<p style="font-size:13px;color:var(--muted);margin-top:0">
-  One row per person. They registered once, on one portal, and the
-  <strong>Used on</strong> column shows every portal that has since sent data for them
-  &mdash; with no second registration.
-</p>
-<% if (!rows.length) { %>
-  <div class="empty">No citizen has registered yet.</div>
-<% } else { %>
-  <table>
-    <tr><th>ERP citizen ref</th><th>Name</th><th>Email</th><th>Mobile</th>
-        <th>Registered on</th><th>Used on</th><th>Records</th></tr>
-    <% rows.forEach(function (c) { %>
-      <tr>
-        <td><code><%= c.citizen_ref %></code></td>
-        <td><strong><%= c.full_name %></strong></td>
-        <td><%= c.email %></td>
-        <td><%= c.mobile || '—' %></td>
-        <td><span class="chip"><%= c.first_seen_in %></span><br>
-            <span style="font-size:11.5px;color:var(--muted)"><%= c.registered_on %></span></td>
-        <td><% (c.systems ? c.systems.split(',') : []).forEach(function (s) { %><span class="chip" style="margin:1px"><%= s %></span> <% }); %>
-            <% if (!c.systems) { %>&mdash;<% } %></td>
-        <td><%= c.intake_count %></td>
-      </tr>
-    <% }); %>
-  </table>
-<% } %>
+
+<!-- PAGE HEADER -->
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Citizens</h1>
+    <p class="page-desc">
+      One row per person in <code style="font-family:var(--mono);font-size:12px;background:var(--surface-3);padding:1px 5px;border-radius:5px">citizen</code>,
+      keyed by <code style="font-family:var(--mono);font-size:12px">citizen_ref</code>.
+      Registered once on any portal, reusable on all five. The <strong>Used&nbsp;on</strong> column shows every portal that has since sent data for them.
+    </p>
+  </div>
+  <div class="page-actions">
+    <button class="btn" type="button" onclick="exportTableCSV('erp-citizens.csv')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      Export CSV
+    </button>
+    <a href="/intake" class="btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h10"/></svg>
+      Received Records
+    </a>
+  </div>
+</div>
+
+<!-- CITIZENS CARD -->
+<div class="card">
+  <div class="card-head">
+    <div>
+      <div class="card-title">Registered citizens</div>
+      <div class="card-sub"><%= rows.length %> citizen<%= rows.length === 1 ? '' : 's' %> in erp.sqlite</div>
+    </div>
+    <span class="pill pill-mint">GET /api/citizens</span>
+  </div>
+
+  <!-- Search toolbar -->
+  <div class="tbl-toolbar">
+    <div class="tbl-search-wrap" style="max-width:300px;width:100%">
+      <div class="tbl-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input id="tableSearch" type="search" placeholder="Search name, email, ref…" autocomplete="off" aria-label="Search citizens">
+      </div>
+    </div>
+  </div>
+
+  <% if (!rows.length) { %>
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M17 11a3 3 0 1 0 0-6"/><path d="M22 20v-1.5a4 4 0 0 0-3-3.8"/></svg>
+      </div>
+      <div class="empty-title">No citizens registered yet</div>
+      <div class="empty-hint">Register on any portal and the citizen record will appear here.</div>
+    </div>
+  <% } else { %>
+    <div class="tbl-wrap">
+      <table class="tbl" id="mainTable">
+        <thead>
+          <tr>
+            <th data-sort>Citizen Ref</th>
+            <th data-sort>Name</th>
+            <th data-sort>Email</th>
+            <th data-sort>Mobile</th>
+            <th data-sort>Registered on</th>
+            <th data-sort>Used on</th>
+            <th data-sort>Records</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% rows.forEach(function (c) { %>
+            <%
+              var systemList = c.systems ? c.systems.split(',') : [];
+              var drawerHtml = '<div><div class="drawer-section-title">Citizen</div><div class="kv-list">'
+                + '<div class="kv-row"><div class="kv-key">Citizen ref</div><div class="kv-val"><code style="font-family:var(--mono);font-size:11.5px">' + (c.citizen_ref||'—') + '</code></div></div>'
+                + '<div class="kv-row"><div class="kv-key">Full name</div><div class="kv-val"><strong>' + (c.full_name||'—') + '</strong></div></div>'
+                + '<div class="kv-row"><div class="kv-key">Email</div><div class="kv-val">' + (c.email||'—') + '</div></div>'
+                + '<div class="kv-row"><div class="kv-key">Mobile</div><div class="kv-val">' + (c.mobile||'—') + '</div></div>'
+                + '<div class="kv-row"><div class="kv-key">First seen in</div><div class="kv-val"><span class="sys-chip">' + (c.first_seen_in||'—') + '</span></div></div>'
+                + '<div class="kv-row"><div class="kv-key">Registered on</div><div class="kv-val">' + (c.registered_on||'—') + '</div></div>'
+                + '<div class="kv-row"><div class="kv-key">Record count</div><div class="kv-val"><strong>' + (c.intake_count||0) + '</strong></div></div>'
+                + '</div></div>';
+              if (systemList.length) {
+                drawerHtml += '<div><div class="drawer-section-title">Portals used</div><div style="display:flex;flex-wrap:wrap;gap:6px;padding:10px 0">';
+                systemList.forEach(function(s){ drawerHtml += '<span class="sys-chip">' + s + '</span>'; });
+                drawerHtml += '</div></div>';
+              }
+            %>
+            <tr class="clickable" onclick="openDrawer('<%= c.citizen_ref %>', '<%= drawerHtml.replace(/'/g, "\\'").replace(/\n/g, '').replace(/\r/g, '') %>')">
+              <td><code class="mono-chip"><%= c.citizen_ref %></code></td>
+              <td><strong><%= c.full_name %></strong></td>
+              <td style="color:var(--text-2)"><%= c.email %></td>
+              <td style="font-family:var(--mono);font-size:12.5px;color:var(--text-2)"><%= c.mobile || '—' %></td>
+              <td>
+                <span class="sys-chip"><%= c.first_seen_in %></span>
+                <br><span style="font-size:11px;color:var(--text-4)"><%= c.registered_on %></span>
+              </td>
+              <td>
+                <% if (!systemList.length) { %>
+                  <span style="color:var(--text-4)">—</span>
+                <% } else { %>
+                  <% systemList.forEach(function (s) { %><span class="sys-chip" style="margin:1px"><%= s %></span> <% }); %>
+                <% } %>
+              </td>
+              <td>
+                <span style="font-size:15px;font-weight:700;font-variant-numeric:tabular-nums"><%= c.intake_count %></span>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pager -->
+    <div class="pager">
+      <span class="pager-info" id="pagerInfo"></span>
+      <button class="pager-btn" id="pagerPrev" type="button" onclick="goPage(-1)" aria-label="Previous page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="pager-btn" id="pagerNext" type="button" onclick="goPage(1)" aria-label="Next page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  <% } %>
+</div>
+
+<script>
+(function () {
+  var searchInput = document.getElementById('tableSearch');
+  var table = document.getElementById('mainTable');
+  if (!searchInput || !table) return;
+  searchInput.addEventListener('input', function () {
+    var q = searchInput.value.toLowerCase().trim();
+    var rows = table.querySelectorAll('tbody tr');
+    rows.forEach(function (tr) {
+      tr.style.display = !q || tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+    if (typeof updatePager === 'function') updatePager();
+  });
+})();
+</script>
+
 <%- include('layout-foot') %>
