@@ -1,0 +1,25 @@
+<%- include('_auth-top') %>
+  <div class="lg-center">
+    <h1>Welcome back</h1>
+    <p class="lg-sub">Please sign in to the ERP Hub.</p>
+
+    <form method="post" action="/login<%= next ? '?next=' + encodeURIComponent(next) : '' %>" novalidate data-auth>
+      <%- include('_auth-field', {id:'username', name:'username', type:'text', label:'Username', icon:'user',
+            value: form.username || '', required:true, autocomplete:'username', autofocus:true,
+            empty:'Please enter your username.', error:''}) %>
+      <%- include('_auth-field', {id:'password', name:'password', type:'password', label:'Password', icon:'lock',
+            pw:true, required:true, autocomplete:'current-password',
+            empty:'Please enter your password.', error:''}) %>
+
+      <% if (error) { %><p class="lg-server-err" role="alert"><%= error %></p><% } %>
+
+      <div class="lg-actions">
+        <button class="lg-btn lg-btn-primary" type="submit">
+          <span class="lg-bic"><%- include('_auth-icon', {n:'login'}) %></span><span class="lg-spin" aria-hidden="true"></span>
+          <span class="lg-lbl" data-busy="Signing in…">Login</span>
+        </button>
+      </div>
+    </form>
+  </div>
+  <p class="lg-foot">ERP Hub &middot; Maharashtra Prisons</p>
+<%- include('_auth-bottom') %>

@@ -167,7 +167,21 @@ function dailyIntake(days = 30) {
      ORDER BY date(received_at) ASC`).all(`-${days}`);
 }
 
+/** Table names and row counts of erp.sqlite, read from the database itself. */
+function database() {
+  const tables = db.prepare(
+    `SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%' ORDER BY name`)
+    .all()
+    .map((t) => ({
+      name: t.name,
+      rows: db.prepare(`SELECT COUNT(*) AS n FROM "${t.name.replace(/"/g, '""')}"`).get().n,
+    }));
+  let bytes = null;
+  try { bytes = fs.statSync(DB_PATH).size; } catch { /* moved while running */ }
+  return { engine: 'SQLite', file: path.basename(DB_PATH), bytes, tables };
+}
+
 module.exports = {
-  db, DB_PATH, open, receive, summary, recentIntake, citizens, auditTail, dailyIntake,
+  db, DB_PATH, open, receive, summary, recentIntake, citizens, auditTail, dailyIntake, database,
   systems: () => q.systems.all(),
 };

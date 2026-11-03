@@ -9,6 +9,7 @@
  */
 
 const fs = require('fs');
+const path = require('path');
 const http = require('http');
 const net = require('net');
 const store = require('../db');
@@ -107,7 +108,7 @@ function database() {
   try { bytes = fs.statSync(store.DB_PATH).size; } catch { /* in-memory or moved */ }
   return {
     engine: 'SQLite',
-    file: store.DB_PATH,
+    file: path.basename(store.DB_PATH),
     bytes,
     tables,
     totalRows: tables.reduce((t, x) => t + x.rows, 0),

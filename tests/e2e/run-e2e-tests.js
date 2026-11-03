@@ -46,7 +46,7 @@ function eq(name, actual, expected) {
 }
 
 // --- a tiny HTTP client with its own cookie jar ---------------------------
-function request(port, method, pathname, { body, cookie, redirect = false } = {}) {
+function request(port, method, pathname, { body, cookie, headers = {}, redirect = false } = {}) {
   return new Promise((resolve, reject) => {
     const payload = body == null ? null
       : Buffer.from(new URLSearchParams(body).toString(), 'utf8');
@@ -57,7 +57,7 @@ function request(port, method, pathname, { body, cookie, redirect = false } = {}
           'Content-Type': 'application/x-www-form-urlencoded',
           'Content-Length': payload.length,
         } : {},
-        cookie ? { Cookie: cookie } : {}),
+        cookie ? { Cookie: cookie } : {}, headers),
       timeout: 15000,
     }, (res) => {
       const chunks = [];
@@ -145,7 +145,17 @@ async function main() {
   }
   eq('all five portals report ONE process id', pids.size, 1);
 
-  const hub = await json(HUB, '/api/summary');
+  // The hub asks for a sign-in. /api/summary is open to a request from the same machine (the container's own health
+  // check uses it), so a local run needs no password. Against a published Docker port the request does not come from
+  // loopback: set HUB_ADMIN_PASSWORD (and HUB_ADMIN_USER if it was changed) and the test sends HTTP Basic credentials.
+  const hubHeaders = process.env.HUB_ADMIN_PASSWORD
+    ? { Authorization: 'Basic ' + Buffer.from(`${process.env.HUB_ADMIN_USER || 'admin'}:${process.env.HUB_ADMIN_PASSWORD}`).toString('base64') }
+    : {};
+  const unsigned = await request(HUB, 'GET', '/api/dashboard');
+  eq('the hub refuses an unsigned request for its data', unsigned.status, 401);
+  const hubPage = await request(HUB, 'GET', '/');
+  eq('the hub page sends an unsigned visitor to /login', hubPage.status === 302 && /\/login$/.test(hubPage.location || ''), true);
+  const hub = JSON.parse((await request(HUB, 'GET', '/api/summary', { headers: hubHeaders })).text);
   // Inside a container the hub reports the container's own path to the file the
   // test reads on the host; PLATFORM_DB_REPORTED names that path.
   eq('the hub names one shared database', hub.database, process.env.PLATFORM_DB_REPORTED || PLATFORM_DB);

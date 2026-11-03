@@ -61,10 +61,39 @@ app.post('/api/intake', (req, res) => {
 });
 
 app.get('/api/summary', (req, res) => res.json(store.summary()));
-app.get('/api/citizens', (req, res) => res.json({ citizens: store.citizens(200) }));
-app.get('/api/intake', (req, res) => res.json({
-  intake: store.recentIntake(Number(req.query.limit) || 50, req.query.system || null),
+/** ?limit= as a whole number between 1 and MAX_ROWS; anything else uses the default. */
+const MAX_ROWS = 5000;
+function limitOf(value, fallback) {
+  const n = Number.parseInt(value, 10);
+  return Number.isInteger(n) && n > 0 ? Math.min(n, MAX_ROWS) : fallback;
+}
+
+app.get('/api/citizens', (req, res) => res.json({
+  citizens: store.citizens(limitOf(req.query.limit, 200)),
 }));
+app.get('/api/intake', (req, res) => res.json({
+  intake: store.recentIntake(limitOf(req.query.limit, 50), req.query.system || null),
+}));
+// Read-only. The audit log is append-only: nothing here, or anywhere, updates or deletes it.
+app.get('/api/audit', (req, res) => res.json({
+  audit: store.auditTail(limitOf(req.query.limit, 200)),
+}));
+app.get('/api/database', (req, res) => res.json(store.database()));
+app.get('/api/health', async (req, res) => {
+  let sqlite = { status: 'ok' };
+  try { store.db.prepare('SELECT 1').get(); } catch (err) { sqlite = { status: 'down', detail: err.message }; }
+  // PostgreSQL is only used by the console's /sync and /integration pages; say so plainly.
+  let postgres = { status: 'unavailable', detail: 'no PostgreSQL client in this process' };
+  try {
+    const pg = require('./pg');
+    postgres = (await pg.pgOnline())
+      ? { status: 'ok' }
+      : { status: 'down', detail: 'PostgreSQL did not answer' };
+  } catch { /* pg module absent: stays unavailable */ }
+  res.status(sqlite.status === 'ok' ? 200 : 503).json({
+    status: sqlite.status === 'ok' ? 'ok' : 'down', sqlite, postgres,
+  });
+});
 
 // --- the console ----------------------------------------------------------
 app.use((req, res, next) => {

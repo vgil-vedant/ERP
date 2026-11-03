@@ -24,6 +24,8 @@ const { genericRouter } = require('./drivers/generic');
 const { eprisonsRouter } = require('./drivers/eprisons');
 
 const { PLATFORM_VIEWS } = require('./config/paths');
+const dashboard = require('./services/hub-dashboard');
+const HUB_STATIC = path.join(PLATFORM_VIEWS, '..', 'static');
 const HUB_PORT = Number(process.env.PLATFORM_PORT) || 4100;
 // 127.0.0.1 unless told otherwise; a container sets HOST=0.0.0.0 so its published ports work.
 const HOST = process.env.HOST || '127.0.0.1';
@@ -125,6 +127,9 @@ function buildHub() {
   // which entry is current; the /api/* JSON routes below feed the same figures.
   app.use((req, res, next) => { res.locals.currentPath = req.path; next(); });
 
+  // Sign-in for the hub: /login, /logout, and a guard in front of everything below.
+  require('./services/hub-auth').install(app);
+
   app.get('/logo/:code', (req, res) => {
     const site = SITES.find((x) => x.code === req.params.code);
     const rel = site && SITE_LOGOS[site.code];
@@ -136,28 +141,18 @@ function buildHub() {
   // The hub is one page; older links to /portals land on it.
   app.get('/portals', (req, res) => res.redirect('/'));
 
-  app.get('/', async (req, res, next) => {
+  // The dashboard: the reference markup and styles, with its script reading real
+  // data from /api/dashboard. Nothing in it is generated in the browser.
+  app.use('/assets', express.static(HUB_STATIC, { maxAge: '5m' }));
+  app.get('/', (req, res) => {
+    res.set('X-Replica-Notice', 'Unofficial local demonstration - not an official government service');
+    res.set('Cache-Control', 'no-cache');
+    res.sendFile(path.join(HUB_STATIC, 'erp-hub.html'));
+  });
+  app.get('/api/dashboard', async (req, res, next) => {
     try {
-      const days = stats.parseDays(req.query.days);
-      res.render('platform/hub', {
-        title: 'ERP Hub - All portals',
-        days: days || 'all',
-        summary: store.summary(),
-        portals: stats.portals(),
-        overview: stats.overview(days),
-        integration: stats.integration(days),
-        database: stats.database(),
-        health: await stats.health(),
-        endpoints: stats.endpoints(),
-        people: store.people(25).map(store.personPublic),
-        submissions: store.allSubmissions(25),
-        syncs: store.syncTail(25),
-        audits: store.auditTail(25),
-        erpTarget: erp.target(),
-        sites: SITES,
-        dbPath: store.DB_PATH,
-        pid: process.pid,
-      });
+      res.set('Cache-Control', 'no-store');
+      res.json(await dashboard.build());
     } catch (err) { next(err); }
   });
 
@@ -182,6 +177,10 @@ function buildHub() {
   }));
 
   app.use((req, res) => res.status(404).json({ error: 'not found' }));
+  app.use((err, req, res, next) => {
+    process.stderr.write(`[hub] ${err.stack || err}\n`);
+    res.status(500).json({ error: err.message });
+  });
   return app;
 }
 

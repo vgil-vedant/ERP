@@ -1,0 +1,159 @@
+Task: Redesign the ERP console UI to match the ERP Hub design reference
+
+You are working in /home/vedant/projects/4_ERP on the git branch "erp_hub".
+Do all work on erp_hub only. Never switch to, commit to, or push to main.
+
+GOAL
+Redesign the look and layout of the ERP console (frontend/erp-console/views/:
+layout-head.ejs, layout-foot.ejs, dashboard.ejs, intake.ejs, citizens.ejs,
+audit.ejs) so it follows the visual style and layout of
+info/template/erphub.html.
+
+Use the template as a style and layout reference only. Do not copy its sample
+data, its generated records, its client-side data generators, its "prototype"
+notice or badge, or any invented figures. Every number, row and label on screen
+must come from the real ERP data the server already provides.
+
+SCOPE
+- IN scope: the ERP console served by backend/erp-api on :4200.
+- OUT of scope, do not touch: the five portals and their views, the platform hub
+  and identity pages (frontend/platform-hub), the replicas under
+  backend/gov_replica, the database schemas, the seed scripts, Docker files,
+  and package.json or any manifest.
+- Keep every route and API unchanged: /, /intake, /citizens, /audit,
+  POST/GET /api/intake, /api/citizens, /api/summary. You may add server-side
+  variables passed to the views, but do not change what the APIs return.
+- Keep the views server-rendered with EJS. Client-side JavaScript is allowed only
+  to enhance rows the server already rendered (sorting, filtering, search,
+  pagination, drawer open/close, sidebar collapse). It must never fabricate data.
+
+HARD RULES FROM THIS REPOSITORY
+1. The ERP never calls a portal and never opens the platform database. Only
+   show data from the ERP's own database (erp.sqlite: source_system, citizen,
+   intake, intake_field, audit_log). Do not add pages that need platform data
+   (sync activity, integration status, submission monitoring, system health).
+2. Every page keeps the visible banner "Unofficial Local Demonstration - Not an
+   Official Government Service" and the X-Replica-Notice header.
+3. No off-host references: no CDN, Google Fonts, external images or scripts.
+   Everything is served locally. Inline <style> and <script> are fine for the
+   ERP console, which has no CSP.
+4. Empty states must be honest: the console starts empty on purpose. Show a
+   clear "No records yet" state with a hint to register or submit on a portal.
+5. Do not add or change anything about versions. The version lives in the
+   README only.
+
+DESIGN SYSTEM TO REPRODUCE (taken from the reference)
+
+Tokens (CSS variables on :root)
+- Ink / primary action: #0F1714 (hover #1C2B25).
+- Mint and emerald family: --mint-50 #F2FBF6, --mint-100 #E4F7EC,
+  --mint-200 #CFEFDE, --mint-300 #AEE2C8, --mint-400 #7FD3AE,
+  --emerald #0E9F6B, --emerald-deep #0A7C54, --emerald-ink #064D36.
+- Status: success #0E9F6B on #E6F7EE; warning #B67C24 on #FBF0DC;
+  danger #C1514A on #F9E5E2; info #3C7F94 on #E7F1F4.
+- Neutrals: canvas #F1F8F4, surface #FFFFFF, surface-2 #F7FBF9,
+  surface-3 #EFF6F2, border #E4EDE8, border-strong #D2E1D9,
+  text #101A16, text-2 #586862, text-3 #87968F.
+- Radii: 24 / 20 / 14 / 11 / 8 px and pill 999px. Cards use 20px.
+- Shadows: very soft and greenish, e.g.
+  0 1px 2px rgba(11,35,26,.05), 0 8px 20px -16px rgba(11,35,26,.35)
+- Font: Plus Jakarta Sans (weights 400 to 800), falling back to Inter,
+  Segoe UI, system-ui. Body 14px / 1.5. Page titles 27px weight 800 with
+  letter-spacing -.035em. Table headers 10px, weight 800, uppercase, letter
+  spacing .09em. Use tabular numerals for counts. If the font file is not
+  available locally, use the fallback stack. Do not load it from the network;
+  you may serve a local copy through a small express.static route for the
+  console only.
+- Layout sizes: sidebar 278px (collapsed rail 84px), top bar 70px, main content
+  padding 24px 26px with a max width of 1560px.
+
+App shell
+- Fixed left sidebar with a white-to-mint vertical gradient and a faint mint
+  radial glow at the top. Brand block: rounded-square mark plus "ERP Hub" and
+  "Maharashtra Prisons". Under it, a small status card showing "ERP service -
+  intake console" and the console's own address.
+- Numbered, collapsible nav groups with an icon per item. The active item has a
+  mint gradient background, emerald-ink text and an inset hairline. Items can
+  show a count badge. A collapse button shrinks the sidebar to an icon rail
+  with tooltips; on narrow screens it becomes an off-canvas drawer with a scrim.
+- Sticky top bar with a translucent white background and backdrop blur:
+  menu button (mobile), breadcrumb ("ERP Hub / Section / Page"), a search
+  field with a "/" keyboard hint that searches the rows already on the page, and
+  right-side chips (service address with a live dot, today's date).
+- Footer strip with a short unofficial-demo note and the app name.
+
+Page pattern
+- Page header: large title and one-line description on the left, actions on the
+  right (for example an export-to-CSV button of the rows shown, using
+  client-side code on the existing rows, and a primary dark button).
+- KPI cards in a responsive grid (icon tile, label, big value, small note,
+  status pill). Use the real counts: citizens, records received, field values,
+  source portals.
+- Cards with a title, subtitle, optional "view all" link and a footer.
+- Table cards: toolbar with filter or search, sticky uppercase header,
+  sortable columns, row hover in mint, monospace chips for references
+  (ERP-..., CIT-..., DEMO-...), status pills, and a pager with "showing x to
+  y of n".
+- A right-hand detail drawer that opens when a record row is clicked, showing
+  the record's fields from intake_field, its references and its citizen.
+- Feed-style list for the audit trail: dot icon, bold action, entity, maker,
+  timestamp. Keep the append-only explanation.
+- Source portals shown as portal cards (name, category, hostname, record
+  count) using source_system and per-portal counts from the ERP database.
+  Do not show portal ports or link to portals unless the link is built from
+  the address the visitor used (never a hard-coded 127.0.0.1).
+- Toasts for client-side actions such as "CSV downloaded".
+- Responsive breakpoints at roughly 1420, 1200, 1080, 900 and 640px; respect
+  prefers-reduced-motion; add a print style that hides the sidebar and top bar.
+- Accessibility: visible focus rings (emerald), proper landmarks and aria
+  labels, keyboard-reachable drawer with Esc to close, sufficient contrast.
+
+PAGES TO DELIVER (all from real ERP data)
+1. Dashboard (/): KPI cards, records-by-portal breakdown (bar or table), a
+   recent-records table, and a recent-activity feed from the audit log.
+   Charts, if any, are drawn from the real counts as inline SVG or CSS. No
+   chart library, no sample series.
+2. Received Records (/intake): table with portal filter (keeps the existing
+   ?system= query), search, sort, pager, and the row drawer.
+3. Citizens (/citizens): table with "used on" portal chips and record counts.
+4. Audit Trail (/audit): feed or table, with the append-only note.
+5. Source portals: a section or page built from source_system. Optional, only
+   if it needs no new data source.
+
+PROCESS
+- Work only inside frontend/erp-console/ (add a small static route in
+  backend/erp-api/src/server.js only if you serve a local font or CSS file).
+- Do not touch the running services. The live ERP is on :4200 and the Docker
+  stack is running: do not restart, rebuild or stop anything. Test on a
+  staging instance instead. Check the ports are free first, seed a scratch
+  database, then run the ERP against it:
+    ERP_DB=<scratch path>/erp.sqlite node backend/erp-api/src/seed.js
+    ERP_PORT=6200 ERP_DB=<scratch path>/erp.sqlite node backend/erp-api/src/server.js
+- To get rows on screen without dummy data, create records through the
+  platform's own forms on a staging platform instance (PORT_OFFSET=2000,
+  PLATFORM_PORT=6100, PLATFORM_DB=<scratch path>/platform.sqlite,
+  ERP_PORT=6200), or through POST /api/intake. Use only this persona:
+  Rohan Ingle, Software Engineer, rohaningle705@gmail.com. Never leave test
+  data in the project.
+- Verify at 1440x860 and at 390px wide: no horizontal scroll, no overlapping
+  text, sidebar collapse and the mobile drawer both work, the drawer and the
+  search work, and the empty state shows on a fresh database.
+- Run node tests/e2e/run-e2e-tests.js against the staging instance (or confirm
+  it cannot be pointed there and say so). All 77 checks must still pass, and
+  /api/* responses must be unchanged.
+- Do not add the template file, its base64 font blob, or its Cloudflare script
+  to the console.
+
+GIT RULES
+- Commit on erp_hub only, with small logical commits.
+- Commits are authored by the user's own configured git identity. Never set a
+  Claude author and never add a "Co-Authored-By: Claude" line.
+- The folder is owned by another user, so use
+    GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=safe.directory GIT_CONFIG_VALUE_0=/home/vedant/projects/4_ERP
+  on each git command. Do not edit the global git config.
+- Do not push, tag, or force-push unless asked.
+
+REPORT BACK
+List the files changed, what each page now shows, the test results, screenshots
+taken (blurred if anything sensitive), anything you could not do and why, and
+the steps to deploy (rebuilding ERP_erp_api only) without running them.
