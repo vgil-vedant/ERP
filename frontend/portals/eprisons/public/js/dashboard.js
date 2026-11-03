@@ -43,7 +43,7 @@
     return '' +
       '<header class="spa-header"><div class="spa-header__inner">' +
         '<a class="spa-brand" href="/"><img src="/static/img/demo-mark.svg" alt="" width="104" height="28">' +
-        '<span>Prisons Dashboard <em>local demo</em></span></a>' +
+        '<span>Prisons Dashboard</span></a>' +
         '<nav class="spa-nav" aria-label="Dashboard">' +
           NAV.map(function (n) {
             var active = n.path === path;
