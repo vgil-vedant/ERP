@@ -1,38 +1,133 @@
+<%
+/* Navigation labels: the captured page titles are long ("Case Status - eCourt India Services"), so the bar shows
+   the part before " - eCourt India ...". The routes are unchanged. */
+var _used = {};
+var _navItems = nav.map(function (item) {
+  var label = String(item.label || '');
+  if (item.href === '/') label = 'Home';
+  else if (item.href === '/ecourtindia_v6') label = 'Services Home';
+  else {
+    label = label.replace(/\s*[-:|]\s*e-?Court.*$/i, '').trim() || label;
+    if (/^home$/i.test(label)) label = 'Search by CNR';
+  }
+  _used[label] = (_used[label] || 0) + 1;
+  if (_used[label] > 1) label += ' (' + _used[label] + ')';
+  return { href: item.href, label: label };
+});
+var _pg = (typeof page !== 'undefined' && page) ? page : null;
+var _isHero = !!(_pg && (_pg.route === '/' || _pg.route === '/ecourtindia_v6'));
+var _clean = function (t) {
+  return String(t || '').replace(/^Homepage\s*\|\s*/i, '').replace(/^Home\s*-\s*/i, '').replace(/\s*[-:|]\s*eCourts?\b.*$/i, '').trim();
+};
+var _h1 = '';
+if (_pg) {
+  var _lv1 = (_pg.outline || []).filter(function (o) { return o.level === 1; })[0];
+  _h1 = _lv1 ? _lv1.text : (_clean(_pg.heading || title) || (_pg.heading || title));
+}
+var _quick = _navItems.filter(function (n) { return ['/ecourtindia_v6/v12', '/ecourtindia_v6/v13', '/ecourtindia_v6/v14'].indexOf(n.href) >= 0; });
+%>
 <header class="site-header">
-  <div class="shell site-header__inner">
-    <a class="brand" href="/">
-      <img src="/static/img/demo-mark.svg" alt="" width="124" height="34">
-      <span class="brand__text">
-        <%= site.name %>
-        <em class="brand__demo">local demo</em>
-      </span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-      <span class="nav-toggle__bar" aria-hidden="true"></span><span class="sr-only">Menu</span>
-    </button>
-    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-      <ul class="primary-nav__list">
-        <% nav.forEach(function (item) { %>
-          <li><a class="primary-nav__link" href="<%= item.href %>"
-                 <%= currentPath === item.href ? 'aria-current="page"' : '' %>><%= item.label %></a></li>
-        <% }); %>
+  <div class="utility-bar">
+    <div class="shell utility-bar__inner">
+      <div class="utility-bar__id">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg>
+        <span><%= site.hostname %> &middot; local demonstration replica</span>
+      </div>
+      <ul class="utility-bar__links">
+        <li><a href="#main">Skip to main content</a></li>
+        <li><a href="/ecourtindia_v6/v28">Screen Reader Access</a></li>
+        <li><a href="/ecourtindia_v6/v23">Sitemap</a></li>
+        <li><a href="/ecourtindia_v6/v11">Contact Us</a></li>
+        <li class="text-size" role="group" aria-label="Text size">
+          <button type="button" data-text-size="small" aria-label="Smaller text">A-</button>
+          <button type="button" data-text-size="normal" aria-label="Normal text" aria-pressed="true">A</button>
+          <button type="button" data-text-size="large" aria-label="Larger text">A+</button>
+        </li>
       </ul>
-    </nav>
+    </div>
+  </div>
+
+  <div class="branding">
+    <div class="shell branding__inner">
+      <a class="brand" href="/" aria-label="eCourts Single Sign-On, High Courts of India, District and Taluka Courts of India: home">
+        <img src="/static/img/ecourts-sso-logo.png" alt="Emblem of India. eCourts Single Sign-On. High Courts of India. District and Taluka Courts of India." width="369" height="115">
+      </a>
+      <div class="branding__logos">
+        <img class="branding__seal" src="/static/img/ecourts-seal.png" alt="eCourts India seal" width="240" height="240">
+        <img class="branding__digital" src="/static/img/digital-india.png" alt="Digital India: Power To Empower" width="127" height="86">
+      </div>
+    </div>
+  </div>
+
+  <div class="primary-nav-bar">
+    <div class="shell primary-nav-bar__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Menu
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <% _navItems.slice(0, 7).forEach(function (item) { %>
+            <li><a class="primary-nav__link" href="<%= item.href %>"
+                   <%= currentPath === item.href ? 'aria-current="page"' : '' %>><%= item.label %></a></li>
+          <% }); %>
+          <% var _more = _navItems.slice(7); if (_more.length) { var _moreActive = _more.some(function (m) { return m.href === currentPath; }); %>
+            <li class="primary-nav__more">
+              <button class="primary-nav__link primary-nav__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="nav-more"
+                      <%= _moreActive ? 'aria-current="page"' : '' %>>More
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <ul class="primary-nav__sub" id="nav-more" hidden>
+                <% _more.forEach(function (item) { %>
+                  <li><a class="primary-nav__sublink" href="<%= item.href %>"
+                         <%= currentPath === item.href ? 'aria-current="page"' : '' %>><%= item.label %></a></li>
+                <% }); %>
+              </ul>
+            </li>
+          <% } %>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
-<% if (typeof pageTitle !== 'undefined' && pageTitle) { %>
-  <div class="page-title-bar"><div class="page-title-bar__inner"><%= pageTitle %></div></div>
-<% } %>
 
-<% const _hv = (typeof page !== 'undefined' && page && page.visual) ? page.visual : null; %>
-<% if (_hv && _hv.heroBg && _hv.heroHeight >= 140) { %>
-  <section class="hero-band <%= _hv.onDark ? 'hero-band--dark' : 'hero-band--light' %>"
-           style="background: <%= _hv.heroBg %>; min-height: <%= _hv.heroHeight %>px">
-    <div class="hero-band__inner">
-      <p class="hero-band__lede"><%= (page.outline && page.outline[0]) ? page.outline[0].text : page.heading %></p>
-      <p class="hero-band__sub">The original shows an illustrated hero here. Its artwork is
-      government material and is not redistributed, so the replica reproduces the band and its
-      measured height only.</p>
+<% if (_isHero) { %>
+  <section class="hero" aria-roledescription="carousel" aria-label="Highlights">
+    <div class="hero__viewport" id="heroViewport">
+      <% [1, 2, 3, 4, 5].forEach(function (n, i) { %>
+        <div class="hero__slide<%= i === 0 ? ' is-active' : '' %>" role="group" aria-roledescription="slide" aria-label="Slide <%= n %> of 5">
+          <img src="/static/img/hero-<%= n %>.webp" alt="" width="1600" height="500" <%= i === 0 ? '' : 'loading="lazy"' %>>
+        </div>
+      <% }); %>
+      <div class="hero__scrim"></div>
+      <div class="hero__content"><div class="shell">
+        <div class="hero__text">
+          <h1 class="hero__title"><%= _pg.route === '/' ? 'eCourts Single Sign-On' : (_clean(_pg.heading || title) || title) %></h1>
+          <p class="hero__lede"><%= _pg.route === '/' ? 'High Courts of India and District and Taluka Courts of India' : (((_pg.outline || [])[0] || {}).text || '') %></p>
+          <% if (_quick.length) { %><div class="hero__actions">
+            <% _quick.forEach(function (q, qi) { %><a class="btn <%= qi === 0 ? 'btn--primary' : 'btn--secondary' %>" href="<%= q.href %>"><%= q.label %></a><% }); %>
+          </div><% } %>
+        </div>
+      </div></div>
+      <button class="hero__arrow hero__arrow--prev" type="button" data-hero="prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button class="hero__arrow hero__arrow--next" type="button" data-hero="next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+      <div class="hero__bar">
+        <button class="hero__pause" type="button" data-hero="pause" aria-pressed="false" aria-label="Pause slideshow">
+          <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="hero__dots" role="group" aria-label="Choose a slide">
+          <% [1, 2, 3, 4, 5].forEach(function (n, i) { %><button type="button" data-hero-dot="<%= i %>" aria-label="Slide <%= n %>" <%= i === 0 ? 'aria-current="true"' : '' %>></button><% }); %>
+        </div>
+      </div>
+    </div>
+  </section>
+<% } else if (typeof pageTitle !== 'undefined' && pageTitle) { %>
+  <section class="page-hero">
+    <div class="shell page-hero__inner">
+      <p class="page-hero__crumbs"><a href="/">Home</a> &rsaquo; <span><%= _h1 %></span></p>
+      <h1 class="page-hero__title"><%= _h1 %></h1>
     </div>
   </section>
 <% } %>

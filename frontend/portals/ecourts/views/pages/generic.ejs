@@ -1,7 +1,7 @@
 <%- include('../partials/head') %>
 <%- include('../partials/header') %>
 <main id="main" class="<%= page.centred ? 'centred-stage' : '' %>">
-  <div class="<%= page.centred ? '' : 'shell' %>"><section class="<%= page.centred ? '' : 'section' %>">
+  <div class="shell"><section class="<%= page.centred ? '' : 'section' %>">
 
   <% if (!pageTitle) { %><h1 class="section__title"><%= page.heading || title %></h1><% } %>
 
@@ -110,18 +110,48 @@
     </div>
   <% }); %>
 
-  <%# ---- what this page showed on the original ---- %>
-  <% if (page.outline && page.outline.length) { %>
-    <h2 class="section__title" style="font-size:18px">Page outline</h2>
-    <div class="prose">
-      <p class="field__hint">The original's heading structure, reproduced so the layout matches.
-      Its body text is not copied: this replica does not republish government prose.</p>
+  <%# ---- the page's own content groups, as captured ---- %>
+  <% if (page.outline && page.outline.length) {
+       var _skip = { 'Useful Links': 1, 'Follow Us': 1 };
+       var _title1 = (page.outline.filter(function (o) { return o.level === 1; })[0] || {}).text;
+       var _groups = [], _cur = null, _doc = false;
+       page.outline.forEach(function (h) {
+         if (h.level === 1) return;
+         if (h.level === 2) { _cur = { title: h.text, items: [], doc: /^References$/i.test(h.text) }; if (!_skip[h.text]) _groups.push(_cur); else _cur = null; return; }
+         if (_cur) _cur.items.push(h.text);
+       });
+       _groups = _groups.filter(function (g) { return g.title || g.items.length; });
+       var _isFig = function (t) { return /^[\d.,]+\s*[KMB]?$/i.test(String(t).trim()); };
+  %>
+    <% if (_groups.length) { %>
+      <div class="outline">
+        <% _groups.forEach(function (g, gi) { var figs = g.items.length > 0 && g.items.every(_isFig); var media = page.route === '/ecourtindia_v6' && gi === 0; %>
+          <section class="outline__group<%= media ? ' outline__group--media' : '' %>">
+            <% if (media) { %><img class="outline__media" src="/static/img/app-phone.png" alt="" width="160" height="165"><% } %>
+            <h2 class="outline__title"><%= g.title %></h2>
+            <% if (g.items.length && figs) { %>
+              <ul class="outline__figures"><% g.items.forEach(function (t) { %><li><strong><%= t %></strong></li><% }); %></ul>
+            <% } else if (g.items.length) { %>
+              <ul class="outline__list <%= g.doc ? 'outline__list--doc' : '' %>">
+                <% g.items.forEach(function (t) { %>
+                  <li><% if (g.doc) { %><img src="/static/img/pdf-icon.png" alt="PDF document" width="22" height="22"><% } %><span><%= t %></span></li>
+                <% }); %>
+              </ul>
+            <% } %>
+          </section>
+        <% }); %>
+      </div>
+    <% } %>
+    <details class="outline-note">
+      <summary>Page outline as captured (<%= page.outline.length %> headings)</summary>
+      <p>The original's heading structure, kept here so nothing captured is lost. Its body text is not copied:
+      this replica does not republish government prose.</p>
       <ul>
         <% page.outline.forEach(function (h) { %>
-          <li style="margin-left:<%= (h.level - 1) * 16 %>px"><%= h.text %></li>
+          <li style="margin-left:<%= (h.level - 1) * 14 %>px"><%= h.text %></li>
         <% }); %>
       </ul>
-    </div>
+    </details>
   <% } %>
 
   <% if (page.noContentNote) { %>

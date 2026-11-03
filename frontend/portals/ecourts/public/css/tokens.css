@@ -1,72 +1,46 @@
 /* ---------------------------------------------------------------------------
-   Design tokens for the ecourts.gov.in local demonstration replica.
+   Design tokens for the eCourts local demonstration replica.
 
-   These values are MEASURED from the original's computed styles during the
-   crawl (see the colour and font tables in reference_pages/page_metadata/).
-   They are written here as tokens so the replica can be compared against the
-   reference screenshots, and so base.css stays site-agnostic.
-
-   The page background is the colour that covers the most AREA on the original,
-   not the one used by the most elements -- a full-bleed gradient is one element
-   and a nav bar may be thirty. Measured page background share here: 0.617.
-
-   The original's emblems and logos are NOT reproduced; a neutral placeholder
-   mark stands in.
+   Institutional palette: deep teal navigation, white content, light-blue hero
+   and band backgrounds, dark navy text. Status colours (notice, success, error)
+   are kept apart from the palette because they carry meaning.
 --------------------------------------------------------------------------- */
 
 :root {
-  --brand:      #162f6a;
-  --accent:     #0f5757;
-  --title-bar:  #d2dfff;
-  --link:       #162f6a;
-  --footer-bg:  #162f6a;
-  --footer-text:#c7d0d4;
-  --mark-bg:    #162f6a;
+  /* palette */
+  --teal:        #105B59;   /* primary navigation, primary buttons, links   */
+  --teal-dark:   #084846;   /* footer, hover and pressed states             */
+  --hero-bg:     #D9EFFB;   /* hero and page title band                     */
+  --pale-bg:     #EFF8FC;   /* secondary background, card headers           */
+  --accent:      #77B8D6;   /* subtle accent                                */
+  --body-text:   #172B3A;
+  --muted:       #596B78;
+  --rule:        #DCE3E8;
+  --page-bg:     #FFFFFF;
 
-  --tile-a:     #162f6a;
-  --tile-b:     #0f5757;
-  --tile-c:     #575757;
+  /* names the shared markup and scripts already use */
+  --brand:       var(--teal);
+  --link:        var(--teal);
+  --title-bar:   var(--hero-bg);
+  --footer-bg:   var(--teal-dark);
+  --footer-text: #D9EFFB;
+  --panel-bg:    var(--pale-bg);
+  --input-bg:    #FFFFFF;
+  --surface:     #FFFFFF;
+  --header-bg:   #FFFFFF;
+  --header-fg:   var(--body-text);
 
-  --body-text:  #1c1f26;
-  --muted:      #8d989d;
-  --rule:       #cccccc;
-  --page-bg:    #ffffff;
-  --header-bg:  #ffffff;
-  --header-fg:  #1c1f26;
-  --panel-bg:   #f6f8fa;
-  --input-bg:   #ffffff;
-  --surface:    #ffffff;
+  /* status (kept distinct on purpose) */
+  --demo-amber:    #7A5200;
+  --demo-amber-bg: #FFF4D6;
+  --ok:            #1D6F42;
+  --ok-bg:         #E6F4EA;
+  --err:           #A3281F;
+  --err-bg:        #FDECEB;
 
-  --demo-amber:    #8a5a00;
-  --demo-amber-bg: #fff4d6;
-  --ok:            #1d6f42;
-  --ok-bg:         #e6f4ea;
-  --err:           #a3281f;
-  --err-bg:        #fdeceb;
-
-  --font:    "Noto Sans", "Noto Sans Devanagari", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --fs-base: 13.6px;
-  --lh-base: 20.4px;
+  --font:    Inter, Roboto, "Noto Sans", "Noto Sans Devanagari", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --fs-base: 15px;
+  --lh-base: 1.55;
   --shell:   1206px;
-}
-
-/* The original has no dark theme. These keep the demo legible if the viewer's
-   OS is dark, without claiming to mirror anything upstream. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
-    --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
-    --link: #7fb6e4; --footer-text: #b4bfc4;
-    --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
-    --ok-bg: #14301f; --ok: #7fd8a0;
-    --err-bg: #3a1a17; --err: #f09a90;
-  }
-}
-:root[data-theme="dark"] {
-  --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
-  --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
-  --link: #7fb6e4; --footer-text: #b4bfc4;
-  --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
-  --ok-bg: #14301f; --ok: #7fd8a0;
-  --err-bg: #3a1a17; --err: #f09a90;
+  --radius:  6px;
 }
