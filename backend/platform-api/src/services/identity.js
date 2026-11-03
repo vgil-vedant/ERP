@@ -16,8 +16,12 @@
 const express = require('express');
 const store = require('../db');
 const erp = require('./erp-client');
+const { summarize } = require('./account-activity');
 
 const COOKIE = 'gov_demo_session';
+
+/** Stylesheet and script of the sign-in and registration pages (the portals' CSP allows only same-origin files). */
+const AUTH_UI_DIR = require('path').join(__dirname, '..', '..', '..', '..', 'frontend', 'platform-hub', 'auth');
 
 function parseCookies(header) {
   const out = {};
@@ -82,6 +86,7 @@ function validateRegistration(body) {
  */
 function identityRouter(site) {
   const r = express.Router();
+  r.use('/account/ui', express.static(AUTH_UI_DIR, { maxAge: '5m', index: false }));
 
   const common = (req) => ({
     site,
@@ -170,16 +175,21 @@ function identityRouter(site) {
     }
     store.endSession(req.sessionToken);
     clearCookie(res);
-    res.redirect('/');
+    res.redirect('/account/login');                      // signing out lands on the sign-in page, not the portal home
   });
 
   r.get('/account', (req, res) => {
     if (!req.person) return res.redirect('/account/login?next=/account');
+    const ctx = common(req);
+    const mine = store.submissionsForPerson(req.person.id);          // this person's, every portal (latest 100)
     res.render('platform/account', {
       title: `My account — ${site.name}`, pageTitle: 'My account',
-      ...common(req),
+      ...ctx,
       person: store.personPublic(req.person),
-      submissions: store.submissionsForPerson(req.person.id),
+      // the table lists only what was submitted on the portal being viewed; the other portals show their own
+      submissions: mine.filter((x) => x.site === site.code),
+      // the Overview counts across all five portals
+      activity: summarize(mine, ctx.portals, site.code),
       justRegistered: req.query.registered === '1',
     });
   });

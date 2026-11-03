@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %></title>
+<link rel="stylesheet" href="/account/ui/auth.css">
+<script src="/account/ui/auth.js"></script>
+</head>
+<body class="lg-body">
+<div class="lg-notice"><span>Unofficial Local Demonstration &mdash; Not an Official Government Service</span>
+  <button class="lg-notice-x" type="button" data-dismiss-notice aria-label="Dismiss this notice"><%- include('_auth-icon', {n:'close'}) %></button></div>
+<div class="lg-shell">
+<main class="lg-form" id="main">
+  <div class="lg-toprow">
+    <% if (typeof hubMode === 'undefined' || !hubMode) { %><a class="lg-back" href="/"><%- include('_auth-icon', {n:'back'}) %><span><%= site.name %> &middot; back to the portal</span></a><% } else { %><span class="lg-back-spacer"></span><% } %>
+    <div class="lg-mobile-brand">
+      <span class="lg-mark"><%- include('_auth-icon', {n:'grid'}) %></span>
+      <span class="lg-brand-name">ERP Hub</span>
+    </div>
+    <button class="lg-theme" id="lgTheme" type="button" aria-pressed="false" aria-label="Switch colour theme" title="Switch colour theme">
+      <span class="lg-ic-moon"><%- include('_auth-icon', {n:'moon'}) %></span>
+      <span class="lg-ic-sun"><%- include('_auth-icon', {n:'sun'}) %></span>
+    </button>
+  </div>

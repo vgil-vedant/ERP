@@ -1,0 +1,26 @@
+<%
+/* Pages that really exist on each portal (seen in the shared form table); the first link of every portal is its home. */
+var PORTAL_LINKS = {
+  eprisons:   [['Dashboard', '/public/DashBoard', 'dash'], ['Visit registration', '/public/MyVisitRegistration', 'doc'],
+               ['Visit status', '/public/MyVisitStatus', 'doc'], ['Grievance', '/public/grievance', 'doc']],
+  cctns:      [['Feedback', '/feedback.htm', 'doc'], ['Login', '/login.htm', 'doc']],
+  eforensics: [['Log in', '/Login', 'doc'], ['Forgot password', '/Forget/ForgetPassword', 'doc']],
+  uidai:      [['Check Aadhaar validity', '/check-aadhaar-validity/en', 'doc'], ['Check status', '/checkStatus/en', 'doc'],
+               ['Grievance and feedback', '/grievance-feedback/en', 'doc']],
+  ecourts:    [['Search by CNR number', '/ecourtindia_v6/v2', 'doc']]
+};
+var links = PORTAL_LINKS[site.code] || [];
+var host = typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost;
+%>
+<nav class="ac-nav" aria-label="Account navigation">
+  <div class="ac-group">Account</div>
+  <a href="#overview" class="ac-item is-active" data-view="overview"><%- include('_auth-icon', {n:'user'}) %><span>Overview</span></a>
+  <a href="#submissions" class="ac-item" data-view="submissions"><%- include('_auth-icon', {n:'list'}) %><span>My submissions</span><b class="ac-count"><%= submissions.length %></b></a>
+
+  <div class="ac-group"><%= site.name %></div>
+  <a href="/" class="ac-item"><%- include('_auth-icon', {n:'home'}) %><span>Portal home</span></a>
+  <% links.forEach(function (l) { %>
+    <a href="<%= l[1] %>" class="ac-item"><%- include('_auth-icon', {n:l[2]}) %><span><%= l[0] %></span></a>
+  <% }); %>
+
+</nav>

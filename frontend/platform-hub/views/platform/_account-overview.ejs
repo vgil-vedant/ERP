@@ -1,0 +1,125 @@
+<%
+/* Everything below is drawn from `activity`, which counts this person's own submissions. */
+var esc = function (v) { return String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+var stamp = function (iso) { return iso ? iso.slice(0, 16).replace('T', ' ') + ' UTC' : '—'; };
+var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var nice = function (d) { var p = d.split('-'); return Number(p[2]) + ' ' + MON[Number(p[1]) - 1] + ' ' + p[0]; };
+
+/* donut: items = [{label, count, cls}] ; circumference is 100 so a share is its percentage */
+var donut = function (items, total, centre, aria) {
+  var out = '<svg class="ac-donut" viewBox="0 0 42 42" role="img" aria-label="' + esc(aria) + '">' +
+    '<circle class="ac-donut-track" cx="21" cy="21" r="15.9155" fill="none" stroke-width="5"/>';
+  var acc = 0;
+  if (total > 0) {
+    items.forEach(function (it) {
+      if (!it.count) return;
+      var pct = it.count / total * 100;
+      out += '<circle class="ac-seg ' + it.cls + '" cx="21" cy="21" r="15.9155" fill="none" stroke-width="5" stroke-dasharray="' +
+        pct.toFixed(3) + ' ' + (100 - pct).toFixed(3) + '" stroke-dashoffset="' + (25 - acc).toFixed(3) + '"><title>' +
+        esc(it.label) + ': ' + it.count + '</title></circle>';
+      acc += pct;
+    });
+  }
+  out += '<text class="ac-donut-n" x="21" y="21.5" text-anchor="middle" dominant-baseline="middle">' + total + '</text>' +
+    '<text class="ac-donut-l" x="21" y="27" text-anchor="middle">' + esc(centre) + '</text></svg>';
+  return out;
+};
+
+var portalItems = activity.byPortal.map(function (p, i) { return { label: p.name, count: p.count, cls: 's' + (i + 1) }; });
+var forms = activity.here.byForm, formItems = [];
+forms.slice(0, 4).forEach(function (f, i) { formItems.push({ label: f.label, count: f.count, cls: 's' + (i + 1) }); });
+if (forms.length > 4) { formItems.push({ label: 'Other forms', count: forms.slice(4).reduce(function (t, f) { return t + f.count; }, 0), cls: 's5' }); }
+var heat = activity.heat, STEP = 16, LEFT = 28, TOP = 18;
+%>
+<% if (justRegistered) { %>
+  <div class="ac-good" role="status">
+    Registered. This one account now works on every portal &mdash; and your details
+    are already in the ERP database as <code><%= person.erpCitizenRef || person.personRef %></code>.
+  </div>
+<% } %>
+
+<div class="ac-kpis">
+  <div class="ac-kpi">
+    <div class="ac-kpi-top"><span class="ac-kic"><%- include('_auth-icon', {n:'list'}) %></span><div><div class="ac-lbl">Submissions</div><div class="ac-big"><%= activity.total %></div></div></div>
+    <div class="ac-kfoot">across all <%= activity.portalsTotal %> websites</div>
+  </div>
+  <div class="ac-kpi">
+    <div class="ac-kpi-top"><span class="ac-kic"><%- include('_auth-icon', {n:'grid'}) %></span><div><div class="ac-lbl">Websites used</div><div class="ac-big"><%= activity.portalsUsed %><small> of <%= activity.portalsTotal %></small></div></div></div>
+    <div class="ac-kfoot">with at least one submission</div>
+  </div>
+  <div class="ac-kpi">
+    <div class="ac-kpi-top"><span class="ac-kic"><%- include('_auth-icon', {n:'database'}) %></span><div><div class="ac-lbl">Confirmed in the ERP</div><div class="ac-big"><%= activity.confirmed %><small> of <%= activity.total %></small></div></div></div>
+    <div class="ac-kfoot">each has an ERP ref</div>
+  </div>
+  <div class="ac-kpi">
+    <div class="ac-kpi-top"><span class="ac-kic"><%- include('_auth-icon', {n:'calendar'}) %></span><div><div class="ac-lbl">Last activity</div><div class="ac-big ac-big-s"><%= activity.last ? stamp(activity.last) : '—' %></div></div></div>
+    <div class="ac-kfoot"><%= activity.last ? 'most recent submission' : 'nothing submitted yet' %></div>
+  </div>
+</div>
+
+<h2 class="ac-sec">The five websites</h2>
+<div class="ac-sites">
+  <% activity.byPortal.forEach(function (p, i) { %>
+    <article class="ac-site<%= p.current ? ' is-current' : '' %>">
+      <div class="ac-site-top"><span class="ac-dot s<%= i + 1 %>"></span><span class="ac-site-name"><%= p.name %></span><% if (p.current) { %><span class="ac-here">this site</span><% } %></div>
+      <div class="ac-site-n"><%= p.count %><small> submission<%= p.count === 1 ? '' : 's' %></small></div>
+      <% if (!p.current) { %><a class="ac-site-link" href="http://<%= typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost %>:<%= p.port %>/account">Open <%- include('_auth-icon', {n:'external'}) %></a>
+      <% } else { %><a class="ac-site-link" href="#submissions" data-view="submissions" aria-label="Open my submissions on <%= p.name %>">Open <%- include('_auth-icon', {n:'external'}) %></a><% } %>
+    </article>
+  <% }); %>
+</div>
+
+<div class="ac-two">
+  <section class="ac-card" aria-labelledby="ac-h-portals">
+    <div class="ac-card-head"><div class="ac-card-title" id="ac-h-portals">Activity by website</div><span class="ac-pill"><%= activity.total %></span></div>
+    <div class="ac-chart">
+      <%- donut(portalItems, activity.total, 'submissions', 'Submissions by website: ' + portalItems.map(function (i) { return i.label + ' ' + i.count; }).join(', ')) %>
+      <ul class="ac-legend">
+        <% activity.byPortal.forEach(function (p, i) { %>
+          <li><span class="ac-dot s<%= i + 1 %>"></span><span class="ac-leg-name"><%= p.name %></span><b><%= p.count %></b></li>
+        <% }); %>
+      </ul>
+    </div>
+    <% if (!activity.total) { %><p class="ac-card-foot">No submissions yet, so there is nothing to chart.</p><% } %>
+  </section>
+
+  <section class="ac-card" aria-labelledby="ac-h-forms">
+    <div class="ac-card-head"><div class="ac-card-title" id="ac-h-forms">Forms used on <%= site.name %></div><span class="ac-pill"><%= activity.here.count %></span></div>
+    <div class="ac-chart">
+      <%- donut(formItems, activity.here.count, 'on ' + site.name, 'Forms used on ' + site.name + ': ' + (formItems.length ? formItems.map(function (i) { return i.label + ' ' + i.count; }).join(', ') : 'none')) %>
+      <ul class="ac-legend">
+        <% if (!formItems.length) { %><li class="ac-muted">No form submitted on <%= site.name %> yet.</li><% } %>
+        <% formItems.forEach(function (f) { %>
+          <li><span class="ac-dot <%= f.cls %>"></span><span class="ac-leg-name" title="<%= f.label %>"><%= f.label %></span><b><%= f.count %></b></li>
+        <% }); %>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<section class="ac-card ac-heat-card" aria-labelledby="ac-h-heat">
+  <div class="ac-card-head"><div class="ac-card-title" id="ac-h-heat">Activity calendar</div>
+    <span class="ac-muted-s"><%= heat.inWindow %> submission<%= heat.inWindow === 1 ? '' : 's' %> in the last <%= heat.weeks %> weeks, all websites</span></div>
+  <div class="ac-heatwrap">
+    <svg class="ac-heat" viewBox="0 0 <%= LEFT + heat.weeks * STEP %> <%= TOP + 7 * STEP %>" role="img"
+         aria-label="Calendar of submissions per day, <%= heat.from %> to <%= heat.to %>">
+      <% ['Mon', 'Wed', 'Fri'].forEach(function (d, i) { %>
+        <text class="ac-axis" x="0" y="<%= TOP + (i * 2) * STEP + 10 %>"><%= d %></text>
+      <% }); %>
+      <% heat.columns.forEach(function (col, w) { var first = col.find(function (c) { return !c.future; }); %>
+        <% if (first && Number(first.date.slice(8)) <= 7) { %>
+          <text class="ac-axis" x="<%= LEFT + w * STEP %>" y="10"><%= MON[Number(first.date.slice(5, 7)) - 1] %></text>
+        <% } %>
+        <% col.forEach(function (c, d) { if (c.future) return; %>
+          <rect class="h<%= c.level %>" x="<%= LEFT + w * STEP %>" y="<%= TOP + d * STEP %>" width="13" height="13" rx="3">
+            <title><%= nice(c.date) %>: <%= c.count %> submission<%= c.count === 1 ? '' : 's' %></title>
+          </rect>
+        <% }); %>
+      <% }); %>
+    </svg>
+    <div class="ac-heat-legend" aria-hidden="true">Less
+      <svg viewBox="0 0 80 13" width="80" height="13"><% [0,1,2,3,4].forEach(function (l) { %><rect class="h<%= l %>" x="<%= l * 16 %>" y="0" width="13" height="13" rx="3"/><% }); %></svg>
+    More</div>
+  </div>
+</section>
+<% if (activity.total >= 100) { %><p class="ac-muted-s">Counts cover your latest 100 submissions.</p><% } %>

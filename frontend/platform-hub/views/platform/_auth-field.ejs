@@ -1,0 +1,27 @@
+<%
+var _err = typeof error === 'undefined' ? '' : error;
+var _val = typeof value === 'undefined' ? '' : value;
+var _pw = typeof pw !== 'undefined' && pw;
+%>
+<div class="lg-group">
+  <div class="lg-field<%= _err ? ' is-bad' : '' %>">
+    <span class="lg-fic"><%- include('_auth-icon', {n: icon}) %></span>
+    <input id="<%= id %>" name="<%= name %>" type="<%= typeof type === 'undefined' ? 'text' : type %>"
+           placeholder=" " value="<%= _val %>"
+           <% if (typeof required !== 'undefined' && required) { %>required data-required="1"<% } %>
+           <% if (typeof autocomplete !== 'undefined') { %>autocomplete="<%= autocomplete %>"<% } %>
+           <% if (typeof maxlength !== 'undefined') { %>maxlength="<%= maxlength %>"<% } %>
+           <% if (typeof inputmode !== 'undefined') { %>inputmode="<%= inputmode %>"<% } %>
+           <% if (typeof autofocus !== 'undefined' && autofocus) { %>autofocus<% } %>
+           aria-invalid="<%= _err ? 'true' : 'false' %>" aria-describedby="<%= id %>-err">
+    <label for="<%= id %>"><%= label %></label>
+    <% if (_pw) { %>
+      <button class="lg-eye" type="button" data-toggle-pw="<%= id %>" aria-pressed="false" aria-label="Show password">
+        <span class="lg-ic-eye"><%- include('_auth-icon', {n:'eye'}) %></span>
+        <span class="lg-ic-eyeoff"><%- include('_auth-icon', {n:'eyeoff'}) %></span>
+      </button>
+    <% } %>
+  </div>
+  <p class="lg-err" id="<%= id %>-err" data-msg="<%= typeof empty === 'undefined' ? '' : empty %>" role="alert"><%= _err %></p>
+  <% if (typeof hint !== 'undefined' && hint) { %><p class="lg-hint"><%= hint %></p><% } %>
+</div>

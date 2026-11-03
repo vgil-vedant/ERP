@@ -1,58 +1,119 @@
-<%- include('_head') %>
-<div class="wrap wide">
-  <div class="panel">
-    <h1>My account</h1>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %></title>
+<link rel="stylesheet" href="/account/ui/account.css">
+<script src="/account/ui/auth.js"></script>
+<script src="/account/ui/account.js" defer></script>
+</head>
+<body class="ac-body">
+<div class="ac-notice"><span>Unofficial Local Demonstration &mdash; Not an Official Government Service</span>
+  <button class="ac-notice-x" type="button" data-dismiss-notice aria-label="Dismiss this notice"><%- include('_auth-icon', {n:'close'}) %></button></div>
 
-    <% if (justRegistered) { %>
-      <div class="good">
-        Registered. This one account now works on every portal &mdash; and your details
-        are already in the ERP database as <code><%= person.erpCitizenRef || person.personRef %></code>.
-      </div>
-    <% } %>
-
-    <dl>
-      <dt>Name</dt><dd><%= person.fullName %></dd>
-      <dt>Email</dt><dd><%= person.email %></dd>
-      <dt>Mobile</dt><dd><%= person.mobile || '—' %></dd>
-      <dt>Reference</dt><dd><code><%= person.personRef %></code></dd>
-      <dt>Registered</dt><dd><%= person.registeredOn %>, via <%= person.registeredVia %></dd>
-      <dt>In the ERP as</dt>
-      <dd><% if (person.erpCitizenRef) { %><code><%= person.erpCitizenRef %></code>
-          <% } else { %>&mdash;<% } %></dd>
-    </dl>
-
-    <h1 style="font-size:17px">My submissions across all portals (<%= submissions.length %>)</h1>
-    <p class="lede">
-      Every record below was entered on one portal and written to two databases: this
-      one and the ERP's. The <strong>ERP ref</strong> column is the proof.
-    </p>
-
-    <% if (!submissions.length) { %>
-      <p class="hint">
-        Nothing submitted yet. Open any portal above and fill in a form &mdash; it will
-        appear here and in the ERP console at the same time.
-      </p>
-    <% } else { %>
-      <table>
-        <tr><th>Portal</th><th>Form</th><th>Portal ref</th><th>ERP ref</th><th>When</th></tr>
-        <% submissions.forEach(function (s) { %>
-          <tr>
-            <td><%= s.site %></td>
-            <td><%= s.heading || s.route %><br><code><%= s.route %></code></td>
-            <td><code><%= s.reference %></code></td>
-            <td><% if (s.erpRef) { %><code><%= s.erpRef %></code><% } else { %>&mdash;<% } %></td>
-            <td><%= s.createdAt %></td>
-          </tr>
+<div class="ac-shell" id="acShell">
+  <aside class="ac-side" id="acSide" aria-label="Sidebar">
+    <div class="ac-brand">
+      <button class="ac-switch" id="acSwitch" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="acSwitchMenu" title="Switch website">
+        <span class="ac-mark"><%- include('_auth-icon', {n:'grid'}) %></span>
+        <span class="ac-brand-text">
+          <span class="ac-brand-name"><%= site.name %></span>
+          <span class="ac-brand-sub"><%= site.hostname %> &middot; replica</span>
+        </span>
+        <span class="ac-sw-chev"><%- include('_auth-icon', {n:'chevdown'}) %></span>
+      </button>
+      <button class="ac-close" id="acClose" type="button" aria-label="Close menu"><%- include('_auth-icon', {n:'close'}) %></button>
+      <ul class="ac-switch-menu" id="acSwitchMenu" role="menu" aria-label="Switch website" hidden>
+        <% portals.forEach(function (p, i) { %>
+          <li role="none">
+            <a role="menuitem" class="ac-sw-item<%= p.code === site.code ? ' is-current' : '' %>" data-port-link
+               href="http://<%= typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost %>:<%= p.port %>/account"<%= p.code === site.code ? ' aria-current="true"' : '' %>>
+              <span class="ac-dot s<%= i + 1 %>"></span>
+              <span class="ac-sw-text"><span class="ac-sw-name"><%= p.name %></span><span class="ac-sw-host"><%= p.hostname %></span></span>
+              <% if (p.code === site.code) { %><span class="ac-sw-check"><%- include('_auth-icon', {n:'check'}) %></span><% } %>
+            </a>
+          </li>
         <% }); %>
-      </table>
-    <% } %>
+      </ul>
+    </div>
 
-    <%- include('_portals') %>
+    <%- include('_account-nav') %>
 
-    <form method="post" action="/account/logout" style="margin-top:22px">
-      <button type="submit" class="logout">Sign out of all portals</button>
-    </form>
-  </div>
+    <div class="ac-bottom">
+      <a href="#info" class="ac-profile" data-view="info" aria-label="Account info">
+        <span class="ac-avatar" aria-hidden="true"><%= (person.fullName || '?').trim().charAt(0).toUpperCase() %></span>
+        <span class="ac-pr-text"><span class="ac-pr-name"><%= person.fullName %></span><span class="ac-pr-sub">Account info</span></span>
+        <svg class="ac-pr-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+      <form class="ac-signout" method="post" action="/account/logout">
+        <button type="submit"><%- include('_auth-icon', {n:'logout'}) %><span>Sign out of all portals</span></button>
+      </form>
+    </div>
+  </aside>
+  <div class="ac-scrim" id="acScrim"></div>
+
+  <main class="ac-main" id="main">
+    <header class="ac-top">
+      <button class="ac-menu" id="acMenu" type="button" aria-label="Open menu" aria-controls="acSide" aria-expanded="false"><%- include('_auth-icon', {n:'menu'}) %></button>
+      <div class="ac-title">
+        <h1 id="acHeading">Overview</h1>
+        <p id="acSub">What you have done on the five websites, counted from your own submissions.</p>
+      </div>
+      <button class="ac-theme" id="lgTheme" type="button" aria-pressed="false" aria-label="Switch colour theme" title="Switch colour theme">
+        <span class="ac-ic-moon"><%- include('_auth-icon', {n:'moon'}) %></span>
+        <span class="ac-ic-sun"><%- include('_auth-icon', {n:'sun'}) %></span>
+      </button>
+    </header>
+
+    <section class="ac-view" id="view-overview" data-title="Overview" data-sub="What you have done on the five websites, counted from your own submissions.">
+      <%- include('_account-overview') %>
+    </section>
+
+    <section class="ac-view" id="view-info" data-title="Account info" data-sub="Your details, as stored on the platform and in the ERP.">
+      <div class="ac-grid">
+        <div class="ac-item-card"><span class="ac-ic"><%- include('_auth-icon', {n:'user'}) %></span><div class="ac-txt"><div class="ac-lbl">Name</div><div class="ac-val"><%= person.fullName %></div></div></div>
+        <div class="ac-item-card"><span class="ac-ic"><%- include('_auth-icon', {n:'mail'}) %></span><div class="ac-txt"><div class="ac-lbl">Email</div><div class="ac-val"><%= person.email %></div></div></div>
+        <div class="ac-item-card"><span class="ac-ic"><%- include('_auth-icon', {n:'phone'}) %></span><div class="ac-txt"><div class="ac-lbl">Mobile</div><div class="ac-val"><%= person.mobile || '—' %></div></div></div>
+        <div class="ac-item-card"><span class="ac-ic"><%- include('_auth-icon', {n:'id'}) %></span><div class="ac-txt"><div class="ac-lbl">Reference</div><div class="ac-val"><code><%= person.personRef %></code></div></div></div>
+        <div class="ac-item-card"><span class="ac-ic"><%- include('_auth-icon', {n:'calendar'}) %></span><div class="ac-txt"><div class="ac-lbl">Registered</div><div class="ac-val"><%= person.registeredOn %>, via <%= person.registeredVia %></div></div></div>
+        <div class="ac-item-card"><span class="ac-ic"><%- include('_auth-icon', {n:'database'}) %></span><div class="ac-txt"><div class="ac-lbl">In the ERP as</div><div class="ac-val"><% if (person.erpCitizenRef) { %><code><%= person.erpCitizenRef %></code><% } else { %>&mdash;<% } %></div></div></div>
+      </div>
+    </section>
+
+    <section class="ac-view" id="view-submissions" data-title="My submissions on <%= site.name %>" data-sub="Every record below was entered on <%= site.name %> and written to two databases: this one and the ERP's. The ERP ref column is the proof.">
+      <div class="ac-card">
+        <div class="ac-card-head">
+          <div class="ac-card-title">Submissions on <%= site.name %></div>
+          <span class="ac-pill"><%= submissions.length %></span>
+        </div>
+        <% if (!submissions.length) { %>
+          <div class="ac-empty">
+            <span class="ac-empty-ic"><%- include('_auth-icon', {n:'inbox'}) %></span>
+            <p>Nothing submitted on <%= site.name %> yet.</p>
+            <p class="ac-muted">Fill in a form on this portal &mdash; it will appear here and in the ERP console at the same time.</p>
+          </div>
+        <% } else { %>
+          <div class="ac-tablewrap">
+            <table class="ac-table">
+              <thead><tr><th>Portal</th><th>Form</th><th>Portal ref</th><th>ERP ref</th><th>When</th></tr></thead>
+              <tbody>
+              <% submissions.forEach(function (s) { %>
+                <tr>
+                  <td><%= s.site %></td>
+                  <td><%= s.heading || s.route %><br><code><%= s.route %></code></td>
+                  <td><code><%= s.reference %></code></td>
+                  <td><% if (s.erpRef) { %><code><%= s.erpRef %></code><% } else { %>&mdash;<% } %></td>
+                  <td><%= s.createdAt %></td>
+                </tr>
+              <% }); %>
+              </tbody>
+            </table>
+          </div>
+        <% } %>
+      </div>
+    </section>
+  </main>
 </div>
 </body>
 </html>

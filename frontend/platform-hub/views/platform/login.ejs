@@ -1,28 +1,34 @@
-<%- include('_head') %>
-<div class="wrap">
-  <div class="panel">
-    <h1>Sign in</h1>
-    <p class="lede">
-      One account covers every portal in this demonstration. Sign in here and you are
-      signed in on all of them.
-    </p>
-
-    <form method="post" action="/account/login<%= next ? '?next=' + encodeURIComponent(next) : '' %>" novalidate>
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required
-             class="<%= errors.email ? 'bad' : '' %>" value="<%= form.email || '' %>">
-
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" required>
-      <% if (errors.email) { %><p class="err"><%= errors.email %></p><% } %>
-
-      <button type="submit">Sign in</button>
-    </form>
-
-    <p class="alt">No account yet? <a href="/account/register">Register once</a></p>
-
+<%- include('_auth-top') %>
+  <div class="lg-portals-top">
+    <p class="lg-hint">One account, <%= portals.length %> portals. A session here is a session on all of them.</p>
     <%- include('_portals') %>
   </div>
-</div>
-</body>
-</html>
+  <div class="lg-center">
+    <h1>Welcome back</h1>
+    <p class="lg-sub">Please sign in to your account.</p>
+
+    <form method="post" action="/account/login<%= next ? '?next=' + encodeURIComponent(next) : '' %>" novalidate data-auth>
+      <%- include('_auth-field', {id:'email', name:'email', type:'email', label:'Email', icon:'mail',
+            value: form.email || '', required:true, autocomplete:'username', autofocus:true,
+            empty:'Please enter your email.', error:''}) %>
+      <%- include('_auth-field', {id:'password', name:'password', type:'password', label:'Password', icon:'lock',
+            pw:true, required:true, autocomplete:'current-password',
+            empty:'Please enter your password.', error:''}) %>
+
+      <% if (errors.email) { %><p class="lg-server-err" role="alert"><%= errors.email %></p><% } %>
+
+      <div class="lg-actions">
+        <button class="lg-btn lg-btn-primary" type="submit">
+          <span class="lg-bic"><%- include('_auth-icon', {n:'login'}) %></span><span class="lg-spin" aria-hidden="true"></span>
+          <span class="lg-lbl" data-busy="Signing in…">Login</span>
+        </button>
+        <a class="lg-btn lg-btn-outline" href="/account/register<%= next ? '?next=' + encodeURIComponent(next) : '' %>">
+          <span class="lg-bic"><%- include('_auth-icon', {n:'userplus'}) %></span>
+          <span class="lg-lbl">Create account</span>
+        </a>
+      </div>
+    </form>
+
+  </div>
+  <p class="lg-foot"><%= site.hostname %> &middot; replica</p>
+<%- include('_auth-bottom') %>
