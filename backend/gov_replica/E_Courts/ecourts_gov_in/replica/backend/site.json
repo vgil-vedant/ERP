@@ -134,7 +134,143 @@
       },
       "centred": false,
       "structureNote": null,
-      "noContentNote": "This page carried text content on the original. Its prose is <strong>not copied here</strong>: this replica does not republish government material. The heading structure above shows what the page contained."
+      "noContentNote": "This page carried text content on the original. Its prose is <strong>not copied here</strong>: this replica does not republish government material. The heading structure above shows what the page contained.",
+      "home": {
+        "services": [
+          {
+            "title": "High Court Services",
+            "text": "Access to eCourts Services: Cause Lists, Case Status, Orders/Judgments of High Courts",
+            "route": "/hcservices/main.php",
+            "icon": "scales"
+          },
+          {
+            "title": "District Court Services",
+            "text": "Access to eCourts Services: Cause Lists, Case Status, Orders/Judgements",
+            "route": "/ecourtindia_v6",
+            "icon": "scales"
+          },
+          {
+            "title": "Virtual Court",
+            "text": "Eliminating presence of litigant or lawyer in the court and adjudication of the case online",
+            "route": null,
+            "icon": "court"
+          },
+          {
+            "title": "ePay",
+            "text": "Single point access for all types of court payments",
+            "route": "/epay",
+            "icon": "rupee"
+          },
+          {
+            "title": "High Court NJDG",
+            "text": "NJDG works as a monitoring tool to identify, manage and reduce pendency of cases.",
+            "route": "/hcnjdg_v2",
+            "icon": "chart"
+          },
+          {
+            "title": "District Court NJDG",
+            "text": "NJDG works as a monitoring tool to identify, manage and reduce pendency of cases.",
+            "route": "/njdg_v3",
+            "icon": "chart"
+          },
+          {
+            "title": "eFiling Services",
+            "text": "Online filing of cases empowered by digital tools",
+            "route": "/pdedev",
+            "icon": "filepen"
+          },
+          {
+            "title": "Judgment Search",
+            "text": "Making Judgements easily accessible",
+            "route": "/pdfsearch",
+            "icon": "filesearch"
+          },
+          {
+            "title": "High Courts of India",
+            "text": "Dissemination of information related to High Courts to stakeholders of eCourts",
+            "route": "/v40",
+            "icon": "scales"
+          },
+          {
+            "title": "District Courts of India",
+            "text": "Access to eCourts Services: Cause Lists, Case Status, Orders/Judgements",
+            "route": "/v41",
+            "icon": "scales"
+          },
+          {
+            "title": "Justice Clock",
+            "text": "Real-time Pendency Status Monitoring",
+            "route": "/justiceClock",
+            "icon": "clock"
+          },
+          {
+            "title": "Knowledge Management",
+            "text": "Help Videos, User Manuals & Brochures",
+            "route": "/v6",
+            "icon": "book"
+          }
+        ],
+        "statisticsLabels": [
+          {
+            "label": "High Court Complexes",
+            "icon": "court"
+          },
+          {
+            "label": "HC Pending Cases",
+            "icon": "hourglass"
+          },
+          {
+            "label": "HC Disposed Cases",
+            "icon": "check"
+          },
+          {
+            "label": "HC Cases Listed Today",
+            "icon": "calendar"
+          },
+          {
+            "label": "District & Taluka Court Complexes",
+            "icon": "court"
+          },
+          {
+            "label": "DC Pending Cases",
+            "icon": "hourglass"
+          },
+          {
+            "label": "DC Disposed Cases",
+            "icon": "check"
+          },
+          {
+            "label": "DC Cases Listed Today",
+            "icon": "calendar"
+          }
+        ],
+        "login": {
+          "label": "Login with JanParichay",
+          "logo": "/original-assets/images/jan-parichay-blue-logo.png"
+        },
+        "references": [
+          {
+            "title": "Policy Action Plan Document of Phase II",
+            "size": "776 KB",
+            "file": "/original-assets/documents/PolicyActionPlanDocument-PhaseII-approved-08012014-indexed_Sign.pdf"
+          },
+          {
+            "title": "Innovations in Phase II",
+            "size": "18.7 MB",
+            "file": "/static/docs/FINAL_INNOVATIONS_IN_PHASE_II.pdf"
+          },
+          {
+            "title": "Objectives Accomplishments Report-2019",
+            "size": "12.3 MB",
+            "file": "/static/docs/Objective_Accomplishment_Report-2019.pdf"
+          },
+          {
+            "title": "Annexure to the Report-2019",
+            "size": "34.6 MB",
+            "file": "/static/docs/Annexures_of_the_report.pdf"
+          }
+        ]
+      }
     },
     {
       "route": "/v2",

@@ -1,6 +1,7 @@
 <%- include('../partials/head') %>
 <%- include('../partials/header') %>
 <main id="main" class="<%= page.centred ? 'centred-stage' : '' %>">
+  <% if (page.home) { %><%- include('../partials/home-sections', { page: page }) %><% } %>
   <div class="shell"><section class="<%= page.centred ? '' : 'section' %>">
 
   <% if (!pageTitle) { %><h1 class="section__title"><%= page.heading || title %></h1><% } %>
@@ -123,7 +124,7 @@
        _groups = _groups.filter(function (g) { return g.title || g.items.length; });
        var _isFig = function (t) { return /^[\d.,]+\s*[KMB]?$/i.test(String(t).trim()); };
   %>
-    <% if (_groups.length) { %>
+    <% if (_groups.length && !page.home) { %>
       <div class="outline">
         <% _groups.forEach(function (g, gi) { var figs = g.items.length > 0 && g.items.every(_isFig); var media = page.route === '/ecourtindia_v6' && gi === 0; %>
           <section class="outline__group<%= media ? ' outline__group--media' : '' %>">
