@@ -52,7 +52,7 @@
         {
           "id": "centercitizen_login.htm_form0",
           "heading": ":::CCTNS:::",
-          "submitLabel": "ओटीपी भेजें / Send OTP",
+          "submitLabel": "Send OTP",
           "referencePrefix": "DEMO",
           "fields": [
             {
@@ -114,15 +114,15 @@
       "outline": [
         {
           "level": 3,
-          "text": "सीसीटीएनएस / CCTNS"
+          "text": "CCTNS"
         },
         {
           "level": 3,
-          "text": "स्वागतम / Welcome"
+          "text": "Welcome"
         },
         {
           "level": 3,
-          "text": "नागरिक लॉगिन / Citizen Login"
+          "text": "Citizen Login"
         },
         {
           "level": 2,
@@ -134,7 +134,7 @@
         },
         {
           "level": 2,
-          "text": "सूचना"
+          "text": "Notice"
         },
         {
           "level": 2,
@@ -151,7 +151,7 @@
           ]
         },
         {
-          "heading": "सूचना",
+          "heading": "Notice",
           "cards": []
         },
         {

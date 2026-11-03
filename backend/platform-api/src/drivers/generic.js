@@ -84,6 +84,22 @@ function validateForm(site, formSpec, body) {
 function genericRouter(site) {
   const cfg = JSON.parse(fs.readFileSync(site.siteJson, 'utf8'));
   const r = express.Router();
+
+  // Keep the stored form headings in step with site.json. They are written once when the database is
+  // seeded, so a heading corrected in site.json (for example translated to English) would otherwise
+  // stay as it was in an existing database and keep showing in "My submissions".
+  try {
+    const setHeading = store.db.prepare('UPDATE form SET heading = ? WHERE id = ?');
+    store.db.transaction(() => {
+      for (const p of cfg.pages || []) {
+        for (const f of p.forms || []) {
+          setHeading.run(f.heading || p.title || null, store.formKey(site.code, p.route, f.id));
+        }
+      }
+    })();
+  } catch (err) {
+    process.stderr.write(`[${site.code}] could not refresh form headings: ${err.message}\n`);
+  }
   const CUSTOM_DIR = path.join(site.views, 'custom');
 
   /** A hand-written view for one route, if this project has one. */
