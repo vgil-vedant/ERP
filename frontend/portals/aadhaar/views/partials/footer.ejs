@@ -1,34 +1,56 @@
+<%
+var _COLS = [
+  ['About UIDAI', [['Vision & Mission', '/en/vision-and-mission'], ['Aadhaar Dashboard', '/en/aadhaar-dashboard'], ['Annual Reports', '/en/annual-reports']]],
+  ['Aadhaar Services', [['Download Aadhaar', '/genricDownloadAadhaar'], ['Update Aadhaar', '/en/updating-data-on-aadhaar'], ['Check Aadhaar Status', '/check-aadhaar-validity/en'],
+                        ['Order PVC Card', '/pvc/en'], ['Generate VID', '/genericGenerateOrRetrieveVID/en'], ['Retrieve Lost UID', '/retrieve-eid-uid/en']]],
+  ['Documents', [['Enrolment & Update Forms', '/en/enrolment-and-updates'], ['Handbooks', '/en/handbooks'], ['Annual Reports', '/en/annual-reports'], ['Circulars', '/en/circulars'], ['Policies', '/en/policies']]],
+  ['Quick Links', [['My Aadhaar Portal', '/'], ['Developer Sandbox', '/en/developer-section'], ['Become an OVSE', '/en/ovse']]],
+  ['Other Links', [['Site Map', '/en/site-map'], ['Website Policies', '/en/website-policies'], ['Website Help', '/en/website-help']]]
+];
+%>
 <footer class="site-footer">
-  <div class="shell site-footer__cols">
-    <div class="site-footer__col">
-      <h2 class="site-footer__h">IN THIS DEMONSTRATION</h2>
-      <ul class="footer-links">
-        <% nav.slice(0, 8).forEach(function (item) { %>
-          <li><a href="<%= item.href %>"><%= item.label %></a></li>
-        <% }); %>
-      </ul>
-    </div>
-    <div class="site-footer__col">
-      <h2 class="site-footer__h">ABOUT THIS REPLICA</h2>
-      <address>
-        Unofficial local demonstration of <code><%= site.hostname %></code>.<br>
-        Placeholder details only &mdash; no real office is represented.<br>
-        Not operated by any government body.
-      </address>
-    </div>
-    <div class="site-footer__col">
-      <p style="font-size:12px;margin:0"><strong>Served from:</strong><br>127.0.0.1 (local demo)</p>
-    </div>
-  </div>
-  <div class="site-footer__bar">
-    <div class="shell site-footer__bar-inner">
-      <p>Unofficial local demonstration for development and testing.</p>
-      <ul class="footer-legal">
-        <li><a href="/__about">About this replica</a></li>
-        <li><a href="/__gaps">What is not reproduced</a></li>
-      </ul>
-      <p class="footer-note">Replica of a public portal. Not affiliated with, endorsed by,
-      or operated by any government agency.</p>
+  <div class="shell">
+    <div class="site-footer__card">
+      <div class="shell" style="padding:0 32px">
+        <div class="f-top">
+          <a href="/en" aria-label="Unique Identification Authority of India: home"><img src="/original-assets/icons/logoWithTitle.svg" alt="Aadhaar. Unique Identification Authority of India" width="525" height="64"></a>
+        </div>
+        <div class="f-cols">
+          <% _COLS.forEach(function (c) { %>
+            <div class="f-col">
+              <h2><%= c[0] %></h2>
+              <ul><% c[1].forEach(function (l) { %><li><a href="<%= l[1] %>"><%= l[0] %></a></li><% }); %></ul>
+            </div>
+          <% }); %>
+        </div>
+        <div class="f-office">
+          <div>
+            <h2 class="is-serif">UIDAI Head Office</h2>
+            <p class="lead">Unique Identification Authority of India</p>
+            <address><p>Bangla Sahib Road, Behind Kali Mandir,<br>Gole Market, New Delhi - 110001</p></address>
+          </div>
+          <div>
+            <h2>Regional and State Offices</h2>
+            <p><strong>Assam</strong></p>
+            <p><strong>UIDAI Regional Office, Guwahati</strong></p>
+            <address><p>Block-V, First Floor, HOUSEFED Complex, Beltola-Basistha Road, Dispur, Guwahati - 781 006</p></address>
+          </div>
+          <div class="contact">
+            <h2>Contact details</h2>
+            <dl><dt>Toll-free Number</dt><dd>1947</dd>
+            <dt>Email</dt><dd>help[at]uidai[dot]gov[dot]in</dd></dl>
+          </div>
+        </div>
+        <div class="f-copy">Content structure follows uidai.gov.in. &copy; Unique Identification Authority of India. This is an unofficial local demonstration.</div>
+        <div class="f-notes">
+          <p>Unofficial local demonstration of <code><%= site.hostname %></code> for development and testing. Placeholder details only &mdash; no real office is represented.</p>
+          <ul class="f-legal">
+            <li><a href="/__about">About this replica</a></li>
+            <li><a href="/__gaps">What is not reproduced</a></li>
+            <li>Not affiliated with, endorsed by, or operated by any government agency.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

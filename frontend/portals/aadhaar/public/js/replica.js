@@ -3,6 +3,39 @@
 (function () {
   'use strict';
 
+  // Text size in the "More" menu: scales the whole page, remembered in this browser only.
+  var sizeButtons = document.querySelectorAll('[data-text-size]');
+  if (sizeButtons.length) {
+    var KEY = 'uidai_text_size';
+    var applySize = function (size) {
+      if (size === 'normal') document.documentElement.removeAttribute('data-text');
+      else document.documentElement.setAttribute('data-text', size);
+      Array.prototype.forEach.call(sizeButtons, function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-text-size') === size ? 'true' : 'false'); });
+    };
+    var savedSize = null;
+    try { savedSize = localStorage.getItem(KEY); } catch (e) { /* storage blocked */ }
+    if (savedSize === 'small' || savedSize === 'large') applySize(savedSize);
+    Array.prototype.forEach.call(sizeButtons, function (b) {
+      b.addEventListener('click', function () {
+        var size = b.getAttribute('data-text-size');
+        applySize(size);
+        try { localStorage.setItem(KEY, size); } catch (e) { /* ignore */ }
+      });
+    });
+  }
+
+  // Header menus (language, More): close on Esc or on a click elsewhere.
+  var menus = document.querySelectorAll('details.tb-item');
+  if (menus.length) {
+    document.addEventListener('click', function (e) {
+      Array.prototype.forEach.call(menus, function (d) { if (d.open && !d.contains(e.target)) d.open = false; });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      Array.prototype.forEach.call(menus, function (d) { if (d.open) { d.open = false; var sm = d.querySelector('summary'); if (sm) sm.focus(); } });
+    });
+  }
+
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('primary-nav');
   if (toggle && nav) {

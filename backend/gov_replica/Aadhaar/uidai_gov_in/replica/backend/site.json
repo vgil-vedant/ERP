@@ -2682,7 +2682,189 @@
       },
       "centred": false,
       "structureNote": null,
-      "noContentNote": "This page carried text content on the original. Its prose is <strong>not copied here</strong>: this replica does not republish government material. The heading structure above shows what the page contained."
+      "noContentNote": "This page carried text content on the original. Its prose is <strong>not copied here</strong>: this replica does not republish government material. The heading structure above shows what the page contained.",
+      "myAadhaar": {
+        "intro": "Understand Aadhaar, its features, enrolment process, benefits, security and its role in enabling trusted digital identity and governance.",
+        "sections": [
+          {
+            "id": "updates",
+            "title": "Updates Details",
+            "tone": "lilac",
+            "cards": [
+              {
+                "title": "Address update",
+                "text": "Use your documents or family member’s Aadhaar",
+                "otp": true,
+                "fee": "₹ 75 fee",
+                "route": "/du/en_IN",
+                "icon": "home-refresh"
+              },
+              {
+                "title": "Photo biometric update and more",
+                "text": "At seva kendra",
+                "otp": false,
+                "fee": "Charges applied",
+                "route": "/en/updating-data-on-aadhaar",
+                "icon": "photo"
+              }
+            ],
+            "status": {
+              "label": "Check Status",
+              "title": "Address Update",
+              "route": "/checkStatus/en"
+            },
+            "more": "/"
+          },
+          {
+            "id": "download",
+            "title": "Download or Order Card",
+            "tone": "lilac",
+            "cards": [
+              {
+                "title": "Download Aadhaar",
+                "text": "Get your Aadhaar instantly",
+                "otp": true,
+                "fee": "Free",
+                "route": "/genricDownloadAadhaar",
+                "icon": "download"
+              },
+              {
+                "title": "Order Online PVC card",
+                "text": "Durable, easy-to-carry mode of Aadhaar",
+                "otp": true,
+                "fee": "₹ 75 fee",
+                "route": "/pvc/en",
+                "icon": "card"
+              }
+            ],
+            "status": {
+              "label": "Check Status",
+              "title": "Order Aadhaar PVC Card",
+              "route": "/pvc/en"
+            },
+            "more": "/",
+            "promo": {
+              "text": "You can do more with your Aadhaar",
+              "label": "Show all services",
+              "route": "/"
+            }
+          },
+          {
+            "id": "secure",
+            "title": "Keep Aadhaar Secure",
+            "tone": "mint",
+            "cards": [
+              {
+                "title": "Generate Virtual ID",
+                "text": "16-digit VID as Aadhaar number replacement",
+                "otp": true,
+                "fee": "Free",
+                "route": "/genericGenerateOrRetrieveVID/en",
+                "icon": "shield-user"
+              },
+              {
+                "title": "Download Masked Aadhaar",
+                "text": "Only the last 4 digits of your Aadhaar number are visible",
+                "otp": true,
+                "fee": "Free",
+                "route": "/genricDownloadAadhaar",
+                "icon": "id-card"
+              },
+              {
+                "title": "Lock/Unlock Biometrics",
+                "text": "Lock your fingerprints and iris data",
+                "otp": true,
+                "fee": null,
+                "route": null,
+                "icon": "fingerprint"
+              },
+              {
+                "title": "Lock/Unlock Aadhaar",
+                "text": "Lock your Aadhaar to restrict the use of your Aadhaar number",
+                "otp": true,
+                "fee": "Free",
+                "route": "/lock-unlock-aadhaar/en",
+                "icon": "id-lock"
+              }
+            ]
+          },
+          {
+            "id": "enrolment",
+            "title": "Aadhaar Enrolment",
+            "tone": "peach",
+            "cards": [
+              {
+                "title": "Book an Appointment",
+                "text": "Schedule a visit to the nearest Aadhaar Seva Kendra",
+                "otp": false,
+                "fee": "Free",
+                "route": "/v7",
+                "icon": "calendar"
+              },
+              {
+                "title": "Check Enrolment Status",
+                "text": "Track the status of your Aadhaar enrolment using your EID/SID",
+                "otp": false,
+                "fee": "Free",
+                "route": "/checkStatus/en",
+                "icon": "clipboard-check"
+              }
+            ]
+          }
+        ],
+        "enrolmentUpdates": {
+          "title": "Enrolment & Updates",
+          "text": "Access Aadhaar enrolment and update resources, forms, guidelines and related documents for residents, NRIs, children and foreign nationals to manage Aadhaar details seamlessly.",
+          "route": "/en/enrolment-and-updates",
+          "docs": [
+            {
+              "title": "Aadhaar Enrolment And Update Charges",
+              "kind": "Common Pdfs",
+              "type": "PDF",
+              "size": "153.05 KB",
+              "uploaded": "28-09-2026",
+              "file": "/original-assets/documents/Aadhaar_Enrolment__and__Update__-__English__2.pdf",
+              "others": null
+            },
+            {
+              "title": "List Of Acceptable Documents",
+              "kind": "Common Pdfs",
+              "type": "PDF",
+              "size": "2.08 MB",
+              "uploaded": "29-04-2026",
+              "file": "/original-assets/documents/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update.pdf",
+              "others": "1 other language document(s)"
+            }
+          ]
+        },
+        "understand": {
+          "title": "Understand your Aadhaar",
+          "text": "Know more about our organisation\nStructure, composition of UIDAI, policies and officers served in past",
+          "route": "/en/understand-your-aadhaar"
+        },
+        "contentInfo": {
+          "published": "22 Apr 2026",
+          "updated": "26 Jun 2026"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "more": "/en/faq",
+          "items": [
+            {
+              "q": "How to download the Aadhaar app?",
+              "a": "You can download the Aadhaar app on your Android/iOS device from the Play Store/App Store."
+            },
+            {
+              "q": "How to register on the Aadhaar app?",
+              "a": "After downloading the app, the Aadhaar Number Holder (ANH): →Select Language→ Enters their Aadhaar number → Agrees to the Terms and Conditions and Privacy Policy → Chooses the SIM card → Performs Face Authentication → Gets registered on the app → Sets a 6-digit PIN to secure access to the app."
+            },
+            {
+              "q": "Which services are available on this app?",
+              "a": "Presently, the Aadhaar app offers various services like - Mobile Number Update, Address Update, Biometric lock/unlock, Selective Sharing of Aadhaar Verifiable Credential, check Authentication History, download e-Aadhaar, share Contact Card, Track my request, etc."
+            }
+          ]
+        }
+      }
     },
     {
       "route": "/en/understand-your-aadhaar",
@@ -5737,7 +5919,189 @@
       },
       "centred": false,
       "structureNote": null,
-      "noContentNote": "This page carried text content on the original. Its prose is <strong>not copied here</strong>: this replica does not republish government material. The heading structure above shows what the page contained."
+      "noContentNote": "This page carried text content on the original. Its prose is <strong>not copied here</strong>: this replica does not republish government material. The heading structure above shows what the page contained.",
+      "myAadhaar": {
+        "intro": "Understand Aadhaar, its features, enrolment process, benefits, security and its role in enabling trusted digital identity and governance.",
+        "sections": [
+          {
+            "id": "updates",
+            "title": "Updates Details",
+            "tone": "lilac",
+            "cards": [
+              {
+                "title": "Address update",
+                "text": "Use your documents or family member’s Aadhaar",
+                "otp": true,
+                "fee": "₹ 75 fee",
+                "route": "/du/en_IN",
+                "icon": "home-refresh"
+              },
+              {
+                "title": "Photo biometric update and more",
+                "text": "At seva kendra",
+                "otp": false,
+                "fee": "Charges applied",
+                "route": "/en/updating-data-on-aadhaar",
+                "icon": "photo"
+              }
+            ],
+            "status": {
+              "label": "Check Status",
+              "title": "Address Update",
+              "route": "/checkStatus/en"
+            },
+            "more": "/"
+          },
+          {
+            "id": "download",
+            "title": "Download or Order Card",
+            "tone": "lilac",
+            "cards": [
+              {
+                "title": "Download Aadhaar",
+                "text": "Get your Aadhaar instantly",
+                "otp": true,
+                "fee": "Free",
+                "route": "/genricDownloadAadhaar",
+                "icon": "download"
+              },
+              {
+                "title": "Order Online PVC card",
+                "text": "Durable, easy-to-carry mode of Aadhaar",
+                "otp": true,
+                "fee": "₹ 75 fee",
+                "route": "/pvc/en",
+                "icon": "card"
+              }
+            ],
+            "status": {
+              "label": "Check Status",
+              "title": "Order Aadhaar PVC Card",
+              "route": "/pvc/en"
+            },
+            "more": "/",
+            "promo": {
+              "text": "You can do more with your Aadhaar",
+              "label": "Show all services",
+              "route": "/"
+            }
+          },
+          {
+            "id": "secure",
+            "title": "Keep Aadhaar Secure",
+            "tone": "mint",
+            "cards": [
+              {
+                "title": "Generate Virtual ID",
+                "text": "16-digit VID as Aadhaar number replacement",
+                "otp": true,
+                "fee": "Free",
+                "route": "/genericGenerateOrRetrieveVID/en",
+                "icon": "shield-user"
+              },
+              {
+                "title": "Download Masked Aadhaar",
+                "text": "Only the last 4 digits of your Aadhaar number are visible",
+                "otp": true,
+                "fee": "Free",
+                "route": "/genricDownloadAadhaar",
+                "icon": "id-card"
+              },
+              {
+                "title": "Lock/Unlock Biometrics",
+                "text": "Lock your fingerprints and iris data",
+                "otp": true,
+                "fee": null,
+                "route": null,
+                "icon": "fingerprint"
+              },
+              {
+                "title": "Lock/Unlock Aadhaar",
+                "text": "Lock your Aadhaar to restrict the use of your Aadhaar number",
+                "otp": true,
+                "fee": "Free",
+                "route": "/lock-unlock-aadhaar/en",
+                "icon": "id-lock"
+              }
+            ]
+          },
+          {
+            "id": "enrolment",
+            "title": "Aadhaar Enrolment",
+            "tone": "peach",
+            "cards": [
+              {
+                "title": "Book an Appointment",
+                "text": "Schedule a visit to the nearest Aadhaar Seva Kendra",
+                "otp": false,
+                "fee": "Free",
+                "route": "/v7",
+                "icon": "calendar"
+              },
+              {
+                "title": "Check Enrolment Status",
+                "text": "Track the status of your Aadhaar enrolment using your EID/SID",
+                "otp": false,
+                "fee": "Free",
+                "route": "/checkStatus/en",
+                "icon": "clipboard-check"
+              }
+            ]
+          }
+        ],
+        "enrolmentUpdates": {
+          "title": "Enrolment & Updates",
+          "text": "Access Aadhaar enrolment and update resources, forms, guidelines and related documents for residents, NRIs, children and foreign nationals to manage Aadhaar details seamlessly.",
+          "route": "/en/enrolment-and-updates",
+          "docs": [
+            {
+              "title": "Aadhaar Enrolment And Update Charges",
+              "kind": "Common Pdfs",
+              "type": "PDF",
+              "size": "153.05 KB",
+              "uploaded": "28-09-2026",
+              "file": "/original-assets/documents/Aadhaar_Enrolment__and__Update__-__English__2.pdf",
+              "others": null
+            },
+            {
+              "title": "List Of Acceptable Documents",
+              "kind": "Common Pdfs",
+              "type": "PDF",
+              "size": "2.08 MB",
+              "uploaded": "29-04-2026",
+              "file": "/original-assets/documents/List_of_Supporting_Document_for_Aadhaar_Enrolment_and_Update.pdf",
+              "others": "1 other language document(s)"
+            }
+          ]
+        },
+        "understand": {
+          "title": "Understand your Aadhaar",
+          "text": "Know more about our organisation\nStructure, composition of UIDAI, policies and officers served in past",
+          "route": "/en/understand-your-aadhaar"
+        },
+        "contentInfo": {
+          "published": "22 Apr 2026",
+          "updated": "26 Jun 2026"
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "more": "/en/faq",
+          "items": [
+            {
+              "q": "How to download the Aadhaar app?",
+              "a": "You can download the Aadhaar app on your Android/iOS device from the Play Store/App Store."
+            },
+            {
+              "q": "How to register on the Aadhaar app?",
+              "a": "After downloading the app, the Aadhaar Number Holder (ANH): →Select Language→ Enters their Aadhaar number → Agrees to the Terms and Conditions and Privacy Policy → Chooses the SIM card → Performs Face Authentication → Gets registered on the app → Sets a 6-digit PIN to secure access to the app."
+            },
+            {
+              "q": "Which services are available on this app?",
+              "a": "Presently, the Aadhaar app offers various services like - Mobile Number Update, Address Update, Biometric lock/unlock, Selective Sharing of Aadhaar Verifiable Credential, check Authentication History, download e-Aadhaar, share Contact Card, Track my request, etc."
+            }
+          ]
+        }
+      }
     },
     {
       "route": "/hi/understand-your-aadhaar",

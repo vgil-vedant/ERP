@@ -1,0 +1,93 @@
+<%
+/* Services of the My Aadhaar page. Everything shown comes from page.myAadhaar (captured from the original page);
+   a card is a link only where this demonstration has a page for that service. */
+var _ma = page.myAadhaar;
+var _card = function (c) {
+  var out = '';
+  return out;
+};
+%>
+<div class="shell">
+  <div class="ma">
+    <div class="ma__main">
+      <% _ma.sections.forEach(function (s) { %>
+        <section class="ma__sec" id="<%= s.id %>" aria-labelledby="<%= s.id %>-h">
+          <h2 class="ma__h" id="<%= s.id %>-h"><%= s.title %></h2>
+          <div class="panel-box panel-box--<%= s.tone %>">
+            <ul class="svc-cards">
+              <% s.cards.forEach(function (c) { %>
+                <li class="svc">
+                  <% if (c.route) { %><a class="svc__link" href="<%= c.route %>"><% } else { %><div class="svc__box is-off" title="No page for this service in the demonstration"><% } %>
+                    <span class="svc__icon"><%- include('svg', {n:c.icon, cls:''}) %></span>
+                    <h3 class="svc__title"><%= c.title %></h3>
+                    <p class="svc__text"><%= c.text %></p>
+                    <% if (c.otp) { %><p class="svc__otp">Mobile OTP is required</p><% } %>
+                    <span class="svc__foot"><span class="svc__go"><%- include('svg', {n:'arrow', cls:''}) %></span><% if (c.fee) { %><span class="svc__fee"><%= c.fee %></span><% } %></span>
+                  <% if (c.route) { %></a><% } else { %></div><% } %>
+                </li>
+              <% }); %>
+            </ul>
+            <% if (s.status) { %>
+              <div class="svc-row">
+                <a class="svc-status" href="<%= s.status.route %>"><span><small><%= s.status.label %></small><strong><%= s.status.title %></strong></span><%- include('svg', {n:'arrow', cls:''}) %></a>
+                <a class="svc-more" href="<%= s.more %>"><%- include('svg', {n:'grid', cls:''}) %>More</a>
+              </div>
+            <% } %>
+            <% if (s.promo) { %>
+              <div class="promo-row">
+                <p><%= s.promo.text %></p>
+                <a class="btn-pill" href="<%= s.promo.route %>"><%= s.promo.label %><%- include('svg', {n:'arrow', cls:''}) %></a>
+              </div>
+            <% } %>
+          </div>
+        </section>
+      <% }); %>
+
+      <section class="ma__sec">
+        <h2 class="ma__h"><%= _ma.enrolmentUpdates.title %></h2>
+        <p class="ma__lead"><%= _ma.enrolmentUpdates.text %></p>
+        <p><a class="btn-pill" href="<%= _ma.enrolmentUpdates.route %>"><%= _ma.enrolmentUpdates.title %><%- include('svg', {n:'arrow', cls:''}) %></a></p>
+        <% _ma.enrolmentUpdates.docs.forEach(function (d) { %>
+          <div class="doc">
+            <div class="doc__main">
+              <svg class="doc__icon" viewBox="0 0 30 36" aria-hidden="true"><path d="M3 1h17l7 7v27H3z" fill="#fff" stroke="#C9C7D8"/><path d="M20 1v7h7" fill="#EEE" stroke="#C9C7D8"/><rect x="2" y="17" width="26" height="10" rx="1" fill="#C94B4B"/><text x="15" y="25" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">PDF</text></svg>
+              <div>
+                <h3 class="doc__title"><%= d.title %></h3>
+                <p class="doc__kind"><%= d.kind %></p>
+                <p class="doc__meta">Doc Type: <%= d.type %> &bull; Size: <%= d.size %> &bull; Uploaded On: <%= d.uploaded %></p>
+                <% if (d.others) { %><span class="doc__other"><%= d.others %></span><% } %>
+              </div>
+            </div>
+            <% if (d.file) { %>
+              <a class="btn-dl" href="<%= d.file %>" download aria-label="Download <%= d.title %> (<%= d.type %>, <%= d.size %>)">Download <%- include('svg', {n:'download', cls:''}) %></a>
+            <% } else { %>
+              <span class="btn-dl is-off" aria-disabled="true" title="This document is not included in the demonstration">Not included</span>
+            <% } %>
+          </div>
+        <% }); %>
+      </section>
+
+      <section class="ma__sec" id="understand">
+        <article class="und">
+          <div class="und__body">
+            <h3><%= _ma.understand.title %></h3>
+            <% _ma.understand.text.split('\n').forEach(function (line) { %><p><%= line %></p><% }); %>
+            <a href="<%= _ma.understand.route %>">Read More <%- include('svg', {n:'arrow', cls:''}) %></a>
+          </div>
+        </article>
+        <div class="cinfo">
+          <h3><%- include('svg', {n:'info', cls:''}) %>Content Information</h3>
+          <p><span>Published on: <%= _ma.contentInfo.published %></span><span>Last Updated: <%= _ma.contentInfo.updated %></span></p>
+        </div>
+      </section>
+    </div>
+
+    <aside class="faq" aria-labelledby="faq-h">
+      <h2 class="faq__title" id="faq-h"><%= _ma.faq.title %></h2>
+      <% _ma.faq.items.forEach(function (f) { %>
+        <details><summary><span><%= f.q %></span><%- include('svg', {n:'chev', cls:''}) %></summary><div><%= f.a %></div></details>
+      <% }); %>
+      <a class="faq__more" href="<%= _ma.faq.more %>">View more F.A.Qs <%- include('svg', {n:'arrow', cls:''}) %></a>
+    </aside>
+  </div>
+</div>

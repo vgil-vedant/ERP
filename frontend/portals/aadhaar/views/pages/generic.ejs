@@ -1,7 +1,8 @@
 <%- include('../partials/head') %>
 <%- include('../partials/header') %>
 <main id="main" class="<%= page.centred ? 'centred-stage' : '' %>">
-  <div class="<%= page.centred ? '' : 'shell' %>"><section class="<%= page.centred ? '' : 'section' %>">
+  <% if (page.myAadhaar) { %><%- include('../partials/my-aadhaar', { page: page }) %><% } %>
+  <div class="shell"><section class="<%= page.centred ? '' : 'section' %>">
 
   <% if (!pageTitle) { %><h1 class="section__title"><%= page.heading || title %></h1><% } %>
 
@@ -110,18 +111,36 @@
     </div>
   <% }); %>
 
-  <%# ---- what this page showed on the original ---- %>
-  <% if (page.outline && page.outline.length) { %>
-    <h2 class="section__title" style="font-size:18px">Page outline</h2>
-    <div class="prose">
-      <p class="field__hint">The original's heading structure, reproduced so the layout matches.
-      Its body text is not copied: this replica does not republish government prose.</p>
+  <%# ---- the page's own content groups, as captured ---- %>
+  <% if (page.outline && page.outline.length) {
+       var _skip = { 'Useful Links': 1, 'Follow Us': 1 };
+       var _groups = [], _cur = null;
+       page.outline.forEach(function (h) {
+         if (h.level === 1) return;
+         if (h.level === 2) { _cur = { title: h.text, items: [] }; if (!_skip[h.text]) _groups.push(_cur); else _cur = null; return; }
+         if (_cur) _cur.items.push(h.text);
+       });
+  %>
+    <% if (_groups.length && !page.myAadhaar) { %>
+      <div class="outline">
+        <% _groups.forEach(function (g) { %>
+          <section class="outline__group">
+            <h2 class="outline__title"><%= g.title %></h2>
+            <% if (g.items.length) { %><ul class="outline__list"><% g.items.forEach(function (t) { %><li><%= t %></li><% }); %></ul><% } %>
+          </section>
+        <% }); %>
+      </div>
+    <% } %>
+    <details class="outline-note">
+      <summary>Page outline as captured (<%= page.outline.length %> headings)</summary>
+      <p>The original's heading structure, kept here so nothing captured is lost. Its body text is not copied:
+      this replica does not republish government prose.</p>
       <ul>
         <% page.outline.forEach(function (h) { %>
-          <li style="margin-left:<%= (h.level - 1) * 16 %>px"><%= h.text %></li>
+          <li style="margin-left:<%= (h.level - 1) * 14 %>px"><%= h.text %></li>
         <% }); %>
       </ul>
-    </div>
+    </details>
   <% } %>
 
   <% if (page.noContentNote) { %>

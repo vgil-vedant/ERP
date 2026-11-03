@@ -1,38 +1,100 @@
+<%
+var _pg = (typeof page !== 'undefined' && page) ? page : null;
+var _cp = typeof currentPath === 'string' ? currentPath : '/';
+var _lang = /^\/hi(\/|$)/.test(_cp) ? 'hi' : 'en';
+// pages that exist in one language only
+var _NO_TWIN = ['/en/qr-code-reader', '/en/aadhaar-dashboard/ekyc', '/en/v2'];
+var _twin = null;
+if (/^\/(en|hi)(\/|$)/.test(_cp) && _NO_TWIN.indexOf(_cp) < 0) _twin = (_lang === 'en' ? '/hi' : '/en') + _cp.slice(3);
+var _NAV = [
+  ['Home', '/en', 'home'], ['My Aadhaar', '/en/my-aadhaar', 'idcard'], ['About UIDAI', '/en/about-uidai', 'building'],
+  ['Build with Us', '/en/developer-section', 'handshake'], ['Media', '/en/announcements', 'monitor'],
+  ['Documents', '/en/documents', 'document'], ['Help', '/en/help', 'help']
+];
+var _isHome = function (p) { return _cp === p || (p === '/en' && _cp === '/'); };
+var _clean = function (t) {
+  return String(t || '').replace(/\s*[-|]\s*Unique Identification Authority of India.*$/i, '').replace(/^myAadhaar\s*$/i, 'myAadhaar').trim();
+};
+var _h1 = '';
+if (_pg) {
+  var _lv1 = (_pg.outline || []).filter(function (o) { return o.level === 1; })[0];
+  _h1 = _clean(_pg.heading || title) || (_lv1 ? _lv1.text : title);
+  if (_lv1 && /^(Home|myAadhaar)?$/i.test(_h1)) _h1 = _lv1.text;
+}
+var _ma = _pg && _pg.myAadhaar;
+%>
 <header class="site-header">
-  <div class="shell site-header__inner">
-    <a class="brand" href="/">
-      <img src="/static/img/demo-mark.svg" alt="" width="124" height="34">
-      <span class="brand__text">
-        <%= site.name %>
-        <em class="brand__demo">local demo</em>
-      </span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-      <span class="nav-toggle__bar" aria-hidden="true"></span><span class="sr-only">Menu</span>
-    </button>
-    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-      <ul class="primary-nav__list">
-        <% nav.forEach(function (item) { %>
-          <li><a class="primary-nav__link" href="<%= item.href %>"
-                 <%= currentPath === item.href ? 'aria-current="page"' : '' %>><%= item.label %></a></li>
-        <% }); %>
-      </ul>
-    </nav>
+  <div class="topbar">
+    <div class="shell topbar__inner">
+      <a href="#main"><span>Skip to Main Content</span></a>
+      <div class="topbar__tools">
+        <a href="/en/website-help"><%- include('svg', {n:'reader', cls:''}) %><span class="label-hide">Screen Reader</span></a>
+        <% if (_twin) { %>
+          <details class="tb-item">
+            <summary aria-label="Select language, currently <%= _lang === 'en' ? 'English' : 'Hindi' %>"><%- include('svg', {n:'language', cls:''}) %><span><%= _lang === 'en' ? 'English' : 'हिन्दी' %></span><%- include('svg', {n:'chev', cls:'chev'}) %></summary>
+            <div class="tb-menu">
+              <a href="<%= _lang === 'en' ? _cp : _twin %>" lang="en" <%= _lang === 'en' ? 'aria-current="true"' : '' %>>English</a>
+              <a href="<%= _lang === 'hi' ? _cp : _twin %>" lang="hi" <%= _lang === 'hi' ? 'aria-current="true"' : '' %>>हिन्दी</a>
+            </div>
+          </details>
+        <% } else { %>
+          <span class="tb-item"><%- include('svg', {n:'language', cls:''}) %><span><%= _lang === 'en' ? 'English' : 'हिन्दी' %></span></span>
+        <% } %>
+        <details class="tb-item">
+          <summary aria-label="Accessibility options"><%- include('svg', {n:'access', cls:''}) %><span class="label-hide">More</span></summary>
+          <div class="tb-menu" role="group" aria-label="Text size">
+            <div class="tb-menu__label">Text size</div>
+            <button type="button" data-text-size="small" aria-pressed="false">Smaller</button>
+            <button type="button" data-text-size="normal" aria-pressed="true">Normal</button>
+            <button type="button" data-text-size="large" aria-pressed="false">Larger</button>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div class="brandbar">
+    <div class="shell brandbar__inner">
+      <a class="brandbar__logo" href="/en" aria-label="Unique Identification Authority of India: home">
+        <img src="/original-assets/icons/logoWithTitle.svg" alt="Aadhaar. Unique Identification Authority of India" width="525" height="64">
+      </a>
+    </div>
+  </div>
+
+  <div class="mainnav">
+    <div class="shell mainnav__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><%- include('svg', {n:'menu', cls:''}) %>Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <% _NAV.forEach(function (n) { %>
+            <li><a class="primary-nav__link" href="<%= n[1] %>" <%= _isHome(n[1]) ? 'aria-current="page"' : '' %>><%- include('svg', {n:n[2], cls:''}) %><span><%= n[0] %></span></a></li>
+          <% }); %>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
-<% if (typeof pageTitle !== 'undefined' && pageTitle) { %>
-  <div class="page-title-bar"><div class="page-title-bar__inner"><%= pageTitle %></div></div>
-<% } %>
 
-<% const _hv = (typeof page !== 'undefined' && page && page.visual) ? page.visual : null; %>
-<% if (_hv && _hv.heroBg && _hv.heroHeight >= 140) { %>
-  <section class="hero-band <%= _hv.onDark ? 'hero-band--dark' : 'hero-band--light' %>"
-           style="background: <%= _hv.heroBg %>; min-height: <%= _hv.heroHeight %>px">
-    <div class="hero-band__inner">
-      <p class="hero-band__lede"><%= (page.outline && page.outline[0]) ? page.outline[0].text : page.heading %></p>
-      <p class="hero-band__sub">The original shows an illustrated hero here. Its artwork is
-      government material and is not redistributed, so the replica reproduces the band and its
-      measured height only.</p>
+<% if (_pg && typeof pageTitle !== 'undefined' && pageTitle) { %>
+  <section class="pagehead">
+    <div class="shell">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/en">Home</a></li>
+          <li><span aria-current="page"><%= _h1 %></span></li>
+        </ol>
+      </nav>
+      <h1 class="pagehead__title<%= _ma ? '' : ' pagehead__title--plain' %>"><%= _h1 %></h1>
+      <% if (_ma) { %>
+        <p class="pagehead__lede"><%= _ma.intro %></p>
+        <div class="insec">
+          <h2 class="insec__title">In this section</h2>
+          <ul class="chips">
+            <% _ma.sections.forEach(function (s) { %><li><a href="#<%= s.id %>"><%= s.title %></a></li><% }); %>
+            <li><a href="#understand">Understand your Aadhaar</a></li>
+          </ul>
+        </div>
+      <% } %>
     </div>
   </section>
 <% } %>

@@ -1,72 +1,51 @@
 /* ---------------------------------------------------------------------------
    Design tokens for the uidai.gov.in local demonstration replica.
-
-   These values are MEASURED from the original's computed styles during the
-   crawl (see the colour and font tables in reference_pages/page_metadata/).
-   They are written here as tokens so the replica can be compared against the
-   reference screenshots, and so base.css stays site-agnostic.
-
-   The page background is the colour that covers the most AREA on the original,
-   not the one used by the most elements -- a full-bleed gradient is one element
-   and a nav bar may be thirty. Measured page background share here: 0.74.
-
-   The original's emblems and logos are NOT reproduced; a neutral placeholder
-   mark stands in.
+   Values are sampled from the captured reference of the official My Aadhaar
+   page (reference_pages/screenshots/en_my-aadhaar.desktop.png).
 --------------------------------------------------------------------------- */
+@font-face { font-family: "Noto Sans"; font-style: normal; font-weight: 100 900; font-stretch: 100%; font-display: swap;
+  src: url(/static/fonts/noto-sans-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Noto Serif"; font-style: normal; font-weight: 100 900; font-stretch: 100%; font-display: swap;
+  src: url(/static/fonts/noto-serif-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
-  --brand:      #2f2b69;
-  --accent:     #1c1b3a;
-  --title-bar:  #d6d6e8;
-  --link:       #2f2b69;
-  --footer-bg:  #020348;
-  --footer-text:#c7d0d4;
-  --mark-bg:    #2f2b69;
+  --topbar:      #1C1B3A;   /* utility strip                      */
+  --brand-bg:    #FCFBFE;   /* logo header                        */
+  --nav-bg:      #F2F0FC;   /* primary navigation bar             */
+  --heading:     #2F2B69;   /* headings, nav labels               */
+  --ink:         #191636;   /* card titles and text               */
+  --body-text:   #302F40;
+  --muted:       #7E7A87;
+  --chip:        #E7E6FA;
+  --border:      #E4E3F8;
+  --link:        #2F2B69;
+  --link-hover:  #231E59;
+  --panel-lilac: #F1EFF9;
+  --panel-mint:  linear-gradient(160deg, #F2F7F8 0%, #DFEFEC 100%);
+  --panel-peach: #FDECE4;
+  --info-bg:     #F6F6FC;
+  --bar-bg:      #EFEEF8;
+  --footer-h:    #47455E;
+  --footer-link: #47456D;
+  --office:      #7F220F;
+  --page-bg:     #FFFFFF;
+  --surface:     #FFFFFF;
+  --panel-bg:    #F6F6FC;
+  --brand:       #2F2B69;
+  --accent:      #2F2B69;
+  --rule:        #E4E3F8;
 
-  --tile-a:     #2f2b69;
-  --tile-b:     #1c1b3a;
-  --tile-c:     #111111;
+  --demo-amber:    #7A5200;
+  --demo-amber-bg: #FFF4D6;
+  --ok:            #1D6F42;
+  --ok-bg:         #E6F4EA;
+  --err:           #A3281F;
+  --err-bg:        #FDECEB;
 
-  --body-text:  #000000;
-  --muted:      #8d989d;
-  --rule:       #cccccc;
-  --page-bg:    #ffffff;
-  --header-bg:  #ffffff;
-  --header-fg:  #000000;
-  --panel-bg:   #f6f8fa;
-  --input-bg:   #ffffff;
-  --surface:    #ffffff;
-
-  --demo-amber:    #8a5a00;
-  --demo-amber-bg: #fff4d6;
-  --ok:            #1d6f42;
-  --ok-bg:         #e6f4ea;
-  --err:           #a3281f;
-  --err-bg:        #fdeceb;
-
-  --font:    "Noto Sans", "Noto Sans Fallback", "Noto Sans Devanagari", "Noto Sans Devanagari Fallback", "Noto Sans Gujarati", "Noto Sans Gujarati Fallback", "Noto Sans Bengali", "Noto Sans Bengali Fallback", "Noto Sans Tamil", "Noto Sans Tamil Fallback", "Noto Sans Telugu", "Noto Sans Telugu Fallback", "Noto Sans Kannada", "Noto Sans Kannada Fallback", "Noto Sans Malayalam", "Noto Sans Malayalam Fallback", "Noto Sans Gurmukhi", "Noto Sans Gurmukhi Fallback", "Noto Sans Oriya", "Noto Sans Oriya Fallback", notoNastaliqUrdu, "notoNastaliqUrdu Fallback", Arial, sans-serif;
-  --fs-base: 16px;
-  --lh-base: 19px;
-  --shell:   1206px;
-}
-
-/* The original has no dark theme. These keep the demo legible if the viewer's
-   OS is dark, without claiming to mirror anything upstream. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
-    --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
-    --link: #7fb6e4; --footer-text: #b4bfc4;
-    --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
-    --ok-bg: #14301f; --ok: #7fd8a0;
-    --err-bg: #3a1a17; --err: #f09a90;
-  }
-}
-:root[data-theme="dark"] {
-  --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
-  --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
-  --link: #7fb6e4; --footer-text: #b4bfc4;
-  --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
-  --ok-bg: #14301f; --ok: #7fd8a0;
-  --err-bg: #3a1a17; --err: #f09a90;
+  --font:  "Noto Sans", "Noto Sans Devanagari", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --serif: "Noto Serif", "Noto Serif Devanagari", Georgia, "Times New Roman", serif;
+  --fs-base: 15px;
+  --shell:   1128px;
 }
