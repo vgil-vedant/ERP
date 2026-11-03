@@ -1,5 +1,11 @@
 <%- include('_auth-top') %>
-  <div class="lg-center">
+  <div class="lg-portals-top">
+    <h2 class="lg-portals-title">All portals</h2>
+    <div class="portals" role="list">
+      <% portals.forEach(function (p) { %><span role="listitem"><%= p.name %></span><% }); %>
+    </div>
+  </div>
+  <div class="lg-center lg-center--hub">
     <h1>Welcome back</h1>
     <p class="lg-sub">Please sign in to the ERP Hub.</p>
 
@@ -14,6 +20,10 @@
       <% if (error) { %><p class="lg-server-err" role="alert"><%= error %></p><% } %>
 
       <div class="lg-actions">
+        <button class="lg-btn lg-btn-outline" type="reset">
+          <span class="lg-bic"><%- include('_auth-icon', {n:'reset'}) %></span>
+          <span class="lg-lbl">Reset</span>
+        </button>
         <button class="lg-btn lg-btn-primary" type="submit">
           <span class="lg-bic"><%- include('_auth-icon', {n:'login'}) %></span><span class="lg-spin" aria-hidden="true"></span>
           <span class="lg-lbl" data-busy="Signing in…">Login</span>

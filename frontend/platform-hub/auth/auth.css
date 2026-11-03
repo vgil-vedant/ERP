@@ -54,7 +54,7 @@ html[data-theme="dark"] .lg-body{
 
 /* ---------- form column ---------- */
 .lg-form{display:flex; flex-direction:column; padding:40px 52px 28px; overflow-y:auto; min-width:0; min-height:0; background:var(--lg-card)}
-.lg-toprow{display:flex; align-items:center; gap:12px; width:100%; max-width:520px; align-self:center; padding:18px 20px 0}   /* same column as the form block; extra room above the back link and the theme button */
+.lg-toprow{display:flex; align-items:center; gap:12px; width:100%; max-width:520px; align-self:center; padding:0 20px}   /* same column as the form block; extra room above the back link and the theme button */
 .lg-back{display:inline-flex; align-items:center; gap:7px; font-size:12.5px; color:var(--lg-muted); text-decoration:none; border-radius:6px; padding:4px 2px}
 .lg-back svg{width:15px;height:15px}
 .lg-back:hover{color:var(--lg-text)}
@@ -67,8 +67,13 @@ html[data-theme="dark"] .lg-ic-sun{display:grid} html[data-theme="dark"] .lg-ic-
 .lg-mobile-brand{display:none}
 
 .lg-center{margin:0; width:100%; max-width:520px; align-self:center; padding:48px 20px 20px}   /* top-aligned, so the heading sits at the same height on sign-in and register */
-.lg-center h1{margin:0; font-size:30px; line-height:1.15; font-weight:400; letter-spacing:-.02em}
-.lg-sub{margin:8px 0 34px; font-size:14px; color:var(--lg-muted)}
+.lg-center h1{margin:0; font-size:24px; line-height:1.15; font-weight:400; letter-spacing:-.02em}
+.lg-sub{margin:6px 0 30px; font-size:13px; color:var(--lg-muted)}
+.lg-center--hub .lg-sub{margin-bottom:48px}
+/* ERP Hub sign-in: the chips, heading and form sit as one group, centred vertically in the column */
+.lg-form--hub .lg-portals-top{margin-top:auto}
+.lg-form--hub .lg-center{margin-bottom:auto}
+.lg-form--hub .lg-foot{margin-top:0}   /* ERP Hub sign-in: more room between the heading and the fields */
 
 .lg-group{margin-bottom:14px}
 .lg-field{position:relative; height:54px; border:1.5px solid var(--lg-input-line); border-radius:8px; background:var(--lg-input);
@@ -123,26 +128,28 @@ html[data-theme="dark"] .lg-fatal{background:#2a1416; border-color:#7f1d1d; colo
 .lg-field input:focus-visible{outline:none}
 
 .lg-portals{margin-top:22px}
-.lg-portals-top{text-align:left; margin:18px 0 0; width:100%; max-width:520px; align-self:center; padding:0 20px}   /* same column as the form block below, so both start at the same left edge */
+.lg-portals-top{text-align:center; margin:18px 0 0; width:100%; max-width:520px; align-self:center; padding:0 20px}   /* same column as the form block below, so both start at the same left edge */
 .lg-portals-top .lg-hint{margin:0 0 8px}
 .lg-portals-top p.hint{display:none}              /* the shared partial's own long sentence */
-.lg-portals-top .portals{display:flex; gap:7px; flex-wrap:wrap; justify-content:flex-start; margin:0}
-.lg-portals-top .portals a{background:var(--lg-chip); color:var(--lg-chip-ink); border-radius:4px; padding:4px 11px; font-size:12px; text-decoration:none}
+.lg-portals-title{margin:0 0 12px; font-size:15px; font-weight:600; letter-spacing:.01em; color:var(--lg-text)}
+.lg-portals-top .portals{display:flex; gap:7px; flex-wrap:wrap; justify-content:center; margin:0}
+.lg-portals-top .portals a, .lg-portals-top .portals span{background:var(--lg-chip); color:var(--lg-chip-ink); border-radius:4px; padding:4px 11px; font-size:12px; text-decoration:none}
 /* when the chips no longer fit on one line (auth.js adds .is-wrapped), the lines are centred */
 .lg-portals-top.is-wrapped{text-align:center}
 .lg-portals-top.is-wrapped .portals{justify-content:center}
+.lg-portals-top .portals span{cursor:default}   /* on the hub sign-in page the names are labels, not links */
 .lg-portals-top .portals a.here{background:var(--lg-btn); color:var(--lg-btn-ink)}
 .lg-foot{margin:auto 0 0; padding-top:14px; text-align:center; font-size:11.5px; color:var(--lg-faint)}
 
 /* ---------- hero column ---------- */
-.lg-hero{order:-1; position:relative; overflow:hidden; background:var(--lg-hero); color:#111; min-height:0; display:flex; flex-direction:column}
-.lg-art{flex:1 1 0; min-height:0; width:100%; object-fit:contain; object-position:center; user-select:none; -webkit-user-drag:none; pointer-events:none}
+.lg-hero{order:-1; position:relative; overflow:hidden; background:var(--lg-hero); color:#111; min-height:0; display:flex; flex-direction:column; justify-content:center}
+.lg-art{position:static; flex:1 1 0; min-height:0; width:100%; max-width:800px; max-height:800px; margin:0 auto; object-fit:contain; object-position:center; user-select:none; -webkit-user-drag:none; pointer-events:none}   /* the whole picture, above the highlights */
 .lg-mark{width:46px;height:46px; border-radius:9px; background:linear-gradient(145deg,#0F1714,#21362D); color:#C7F3DC; display:grid; place-items:center; flex:none}
 .lg-mark svg{width:24px;height:24px}
 .lg-brand-name{font-size:20px}
 
 /* highlights under the artwork: black text on the cream panel */
-.lg-carousel{position:relative; flex:none; height:128px; margin:0 24px 18px; text-align:center; border-radius:12px; outline-offset:4px}
+.lg-carousel{position:relative; flex:none; width:100%; max-width:640px; height:128px; margin:0 auto 18px; padding:0 24px; text-align:center; border-radius:12px; outline-offset:4px}
 .lg-slide{position:absolute; inset:0 0 30px; display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
   opacity:0; visibility:hidden; transition:opacity .6s ease,visibility .6s}
 .lg-slide.is-active{opacity:1; visibility:visible}
@@ -158,12 +165,12 @@ html[data-theme="dark"] .lg-fatal{background:#2a1416; border-color:#7f1d1d; colo
 /* ---------- responsive ---------- */
 @media (min-width:1400px){
   .lg-form{padding:48px 72px 36px}
-  .lg-center, .lg-portals-top, .lg-toprow{max-width:600px} .lg-center h1{font-size:34px}
+  .lg-center, .lg-portals-top, .lg-toprow{max-width:600px} .lg-center h1{font-size:26px}
   .lg-slide h2{font-size:21px} .lg-slide p{font-size:14px}
 }
 @media (max-width:1024px){
   .lg-form{padding:28px}
-  .lg-center h1{font-size:26px} .lg-btn{font-size:13px}
+  .lg-center h1{font-size:22px} .lg-btn{font-size:13px}
 }
 @media (max-width:760px){
   .lg-shell{grid-template-columns:1fr}
@@ -184,7 +191,7 @@ html[data-theme="dark"] .lg-fatal{background:#2a1416; border-color:#7f1d1d; colo
 @media (max-height:640px){
   .lg-carousel{height:104px; margin-bottom:10px} .lg-slide p{font-size:12px}
   .lg-form{padding-top:16px; padding-bottom:12px}
-  .lg-sub{margin-bottom:18px} .lg-center{padding:24px 20px 8px}
+  .lg-sub{margin-bottom:18px} .lg-center--hub .lg-sub{margin-bottom:26px} .lg-center{padding:24px 20px 8px}
   .lg-actions{margin-top:16px} .lg-portals{margin-top:14px}
 }
 @media (prefers-reduced-motion:reduce){

@@ -19,6 +19,7 @@
 const crypto = require('crypto');
 const path = require('path');
 const express = require('express');
+const store = require('../db');
 const { parseCookies } = require('./identity');
 
 const COOKIE = 'hub_session';
@@ -105,7 +106,7 @@ const safeNext = (n) => (typeof n === 'string' && n.startsWith('/') && !n.starts
 const HUB_SITE = { name: 'ERP Hub', hostname: 'Maharashtra Prisons' };
 function renderLogin(res, status, locals) {
   res.status(status).render('platform/hub-login', Object.assign({
-    title: 'Sign in — ERP Hub', hubMode: true, site: HUB_SITE, portals: [], form: {}, error: '', next: null,
+    title: 'Sign in — ERP Hub', hubMode: true, site: HUB_SITE, portals: store.q.sites.all(), form: {}, error: '', next: null,
   }, locals));
 }
 

@@ -45,6 +45,21 @@
         if (p) p.textContent = msg || '';
       };
       form.addEventListener('input', function (e) { if (e.target.value) setErr(e.target, ''); });
+      // Reset: empty the fields and take away every message and any revealed password
+      form.addEventListener('reset', function () {
+        Array.prototype.forEach.call(form.querySelectorAll('input'), function (input) { setErr(input, ''); if (input.dataset.wasPassword) input.type = 'password'; });
+        Array.prototype.forEach.call(form.querySelectorAll('[data-toggle-pw]'), function (b) {
+          var input = document.getElementById(b.getAttribute('data-toggle-pw'));
+          if (input) input.type = 'password';
+          b.setAttribute('aria-pressed', 'false'); b.setAttribute('aria-label', 'Show password');
+        });
+        var se = form.querySelector('.lg-server-err'); if (se) se.remove();
+        // a reset restores the values the server wrote into the page (the user name after a failed attempt), so empty them too
+        setTimeout(function () {
+          Array.prototype.forEach.call(form.querySelectorAll('input'), function (input) { input.value = ''; });
+          var first = form.querySelector('input'); if (first) first.focus();
+        }, 0);
+      });
       form.addEventListener('submit', function (e) {
         var first = null;
         Array.prototype.forEach.call(form.querySelectorAll('input[data-required]'), function (input) {
@@ -104,7 +119,7 @@
     }
 
     // portal chips: centre them only when they wrap onto a second line
-    var pt = document.querySelector('.lg-portals-top'), chips = pt ? pt.querySelectorAll('.portals a') : [];
+    var pt = document.querySelector('.lg-portals-top'), chips = pt ? pt.querySelectorAll('.portals a, .portals span') : [];
     if (pt && chips.length > 1) {
       var checkWrap = function () {
         var top = chips[0].offsetTop, wrapped = false;

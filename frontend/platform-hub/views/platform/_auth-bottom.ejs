@@ -4,35 +4,15 @@
 <aside class="lg-hero" aria-label="About this demonstration"<%- _hub ? ' style="--lg-hero:#FDF9EE"' : '' %>>
   <img class="lg-art" src="<%- include(_hub ? '_auth-hero-data-hub' : '_auth-hero-data') %>" width="1100" height="<%= _hub ? 1184 : 1178 %>" draggable="false"
        alt="<%= _hub ? 'Illustration: five portals (ePrisons, CCTNS, e-Forensics, UIDAI / Aadhaar, eCourts) feeding one ERP Hub dashboard' : 'Illustration: a person working on a laptop beside a padlock shield, a sign-in card with a masked password, and a database' %>">
-
-
   <div class="lg-carousel" id="lgCarousel" tabindex="0" aria-roledescription="carousel" aria-label="Highlights">
     <% if (_hub) { %>
-    <div class="lg-slide is-active">
-      <h2>What the ERP received</h2>
-      <p>Records and citizens as the ERP holds them, read live from its own database.</p>
-    </div>
-    <div class="lg-slide">
-      <h2>How each write resolved</h2>
-      <p>Every write-through attempt from the portals, with its result and HTTP status.</p>
-    </div>
-    <div class="lg-slide">
-      <h2>Service health at a glance</h2>
-      <p>Whether the ERP, the databases and the five portal replicas are answering.</p>
-    </div>
+    <div class="lg-slide is-active"><h2>What the ERP received</h2><p>Records and citizens as the ERP holds them, read live from its own database.</p></div>
+    <div class="lg-slide"><h2>How each write resolved</h2><p>Every write-through attempt from the portals, with its result and HTTP status.</p></div>
+    <div class="lg-slide"><h2>Service health at a glance</h2><p>Whether the ERP, the databases and the five portal replicas are answering.</p></div>
     <% } else { %>
-    <div class="lg-slide is-active">
-      <h2>One account, every portal</h2>
-      <p>Register once and the same sign-in works on <%= portals.map(function (p) { return p.name; }).join(', ') %>.</p>
-    </div>
-    <div class="lg-slide">
-      <h2>Stored in two places, or neither</h2>
-      <p>Each registration and form is saved on the platform and in the ERP together. If the ERP refuses it, nothing is kept.</p>
-    </div>
-    <div class="lg-slide">
-      <h2>Every action stays on record</h2>
-      <p>The ERP audit trail is append-only, so what was received and when can always be checked.</p>
-    </div>
+    <div class="lg-slide is-active"><h2>One account, every portal</h2><p>Register once and the same sign-in works on <%= portals.map(function (p) { return p.name; }).join(', ') %>.</p></div>
+    <div class="lg-slide"><h2>Stored in two places, or neither</h2><p>Each registration and form is saved on the platform and in the ERP together. If the ERP refuses it, nothing is kept.</p></div>
+    <div class="lg-slide"><h2>Every action stays on record</h2><p>The ERP audit trail is append-only, so what was received and when can always be checked.</p></div>
     <% } %>
     <div class="lg-dots" role="tablist" aria-label="Choose a highlight">
       <button type="button" class="is-active" role="tab" aria-label="Highlight 1" aria-selected="true"></button>
