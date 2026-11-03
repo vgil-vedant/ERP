@@ -107,6 +107,8 @@ function makeChallenge() {
  * record into the ERP's own database and reports whether the ERP took it. A
  * false result means the handler must undo its local write, so the two
  * databases never disagree.
+ *
+ * `req` is passed along so the platform can tell who, if anyone, is signed in.
  */
 let mirror = async () => ({ ok: true, erpRef: null });
 function setMirror(fn) { mirror = fn; }
@@ -190,7 +192,7 @@ app.post('/public/MyVisitRegistration', async (req, res) => {
   const sync = await mirror({
     form: 'visit_registration', route: '/public/MyVisitRegistration',
     reference: registrationNo, subject: 'Visitor registration (NPIP)',
-    table: 'visit_request', rowId: info.lastInsertRowid, value,
+    table: 'visit_request', rowId: info.lastInsertRowid, value, req,
   });
   if (!sync.ok) {
     return res.status(503).render('pages/visit-registration', {
@@ -293,7 +295,7 @@ app.post('/public/grievance', async (req, res) => {
   const sync = await mirror({
     form: 'grievance', route: '/public/grievance',
     reference: referenceNo, subject: 'Grievance',
-    table: 'grievance', rowId: info.lastInsertRowid, value,
+    table: 'grievance', rowId: info.lastInsertRowid, value, req,
   });
   if (!sync.ok) {
     return res.status(503).render('pages/grievance', {
@@ -531,7 +533,7 @@ app.post('/CitiZenService/Visitor/Registration', async (req, res) => {
   const sync = await mirror({
     form: 'citizen_registration', route: '/CitiZenService/Visitor/Registration',
     reference: `CSV-${v.mobile_no}`, subject: 'Visitor registration (Citizen Services)',
-    table: 'citizen_account', rowId: createdId, value: v,
+    table: 'citizen_account', rowId: createdId, value: v, req,
   });
   if (!sync.ok) {
     errors.__form = sync.message;

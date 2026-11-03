@@ -53,13 +53,16 @@ function eprisonsRouter(site) {
         value: Array.isArray(v) ? v.join(', ') : String(v),
       }));
 
+    // Whoever is signed in (the shared session), or nobody: a signed-out visitor stays anonymous.
+    const signedIn = rec.req && rec.req.person ? rec.req.person : null;
+
     const sync = await erp.sendSubmission({
       sourceSystem: site.code,
       sourceForm: rec.form,
       sourceRoute: route,
       sourceReference: rec.reference,
       subject: rec.subject,
-      person: null,
+      person: signedIn ? store.personPublic(signedIn) : null,
       fields,
       payload: Object.fromEntries(fields.map((f) => [f.name, f.value])),
     });
@@ -89,7 +92,7 @@ function eprisonsRouter(site) {
     try {
       const reserved = store.reserveSubmission({
         siteCode: site.code, formId, prefix: rec.reference.split('-')[0] || 'EPR',
-        personId: null,
+        personId: signedIn ? signedIn.id : null,
         value: Object.fromEntries(fields.map((f) => [f.name, f.value])),
         fields,
       });
