@@ -103,9 +103,24 @@ function isAuthed(req) {
 const isLoopback = (req) => ['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(req.socket.remoteAddress);
 const safeNext = (n) => (typeof n === 'string' && n.startsWith('/') && !n.startsWith('//') ? n : '/');
 
+/**
+ * The sign-in page and everything behind it are never cached. Without this a
+ * browser answers the Back button from its own cache: the visitor signs in,
+ * reaches the dashboard, presses Back and is shown the sign-in form again even
+ * though the session is still valid. With no-store the Back button re-asks the
+ * server, which sends a signed-in visitor straight back to the page they were on.
+ */
+function noStore(res) {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+  res.setHeader('Vary', 'Cookie');
+}
+
 const HUB_SITE = { name: 'ERP Hub', hostname: 'Maharashtra Prisons' };
 function renderLogin(res, status, locals) {
-  res.status(status).render('platform/hub-login', Object.assign({
+  noStore(res);
+  require('./ui-engine').renderAuth(res, status, 'platform/hub-login', Object.assign({
     title: 'Sign in — ERP Hub', hubMode: true, site: HUB_SITE, portals: store.q.sites.all(), form: {}, error: '', next: null,
   }, locals));
 }
@@ -113,9 +128,12 @@ function renderLogin(res, status, locals) {
 /** Registers /login, /logout, the sign-in assets and the guard. Call it before the hub's other routes. */
 function install(app) {
   app.use('/account/ui', express.static(AUTH_UI_DIR, { maxAge: '5m', index: false }));
+  require('./ui-engine').mountAssets(app);
 
   app.get('/login', (req, res) => {
-    if (isAuthed(req)) return res.redirect(safeNext(req.query.next));
+    // Already signed in (the Back button, or a bookmark): there is nothing to
+    // ask for, so this is a redirect to the page wanted, not a second form.
+    if (isAuthed(req)) { noStore(res); return res.redirect(303, safeNext(req.query.next)); }
     renderLogin(res, 200, { next: typeof req.query.next === 'string' ? safeNext(req.query.next) : null });
   });
 
@@ -132,14 +150,19 @@ function install(app) {
         error: 'Incorrect username or password.' });
     }
     failures.delete(req.ip);
+    noStore(res);
     res.setHeader('Set-Cookie', `${COOKIE}=${newSession()}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${SESSION_HOURS * 3600}`);
-    res.redirect(next);
+    // 303: the Back button must never repeat the sign-in POST.
+    res.redirect(303, next);
   });
 
   app.post('/logout', (req, res) => {
     sessions.delete(parseCookies(req.headers.cookie)[COOKIE]);
+    noStore(res);
     res.setHeader('Set-Cookie', `${COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0`);
-    res.redirect('/login');
+    // 303 for the same reason, and the signed-out dashboard behind it must not
+    // be restored from the cache: the guard below answers it with a redirect.
+    res.redirect(303, '/login');
   });
 
   // Everything else needs a session (or Basic credentials), except the static files of the page itself
@@ -149,9 +172,12 @@ function install(app) {
     if (req.path === '/api/summary' && isLoopback(req)) return next();
     if (isAuthed(req)) return next();
     const wantsPage = req.method === 'GET' && (req.path === '/' || /text\/html/.test(req.headers.accept || ''));
-    if (wantsPage) return res.redirect('/login' + (req.path === '/' ? '' : `?next=${encodeURIComponent(req.originalUrl)}`));
+    if (wantsPage) {
+      noStore(res);
+      return res.redirect('/login' + (req.path === '/' ? '' : `?next=${encodeURIComponent(req.originalUrl)}`));
+    }
     return res.status(401).json({ error: 'sign in required' });
   });
 }
 
-module.exports = { install, verify, COOKIE };
+module.exports = { install, verify, noStore, COOKIE };

@@ -13,4 +13,6 @@ module.exports = {
     || path.join(ROOT, 'database', 'sqlite', 'erp', 'data', 'erp.sqlite'),
   ERP_SCHEMA: path.join(ROOT, 'database', 'sqlite', 'erp', 'schema.sql'),
   ERP_VIEWS: path.join(ROOT, 'frontend', 'erp-console', 'views'),
+  // The person-lookup page module, shared by the console and the hub.
+  LOOKUP_UI: path.join(ROOT, 'frontend', 'shared', 'person-lookup'),
 };

@@ -1,0 +1,136 @@
+# Task: Analyze Requirements and Design a Premium Horizontal Stepper Progress Card
+
+Act as a senior UI/UX designer and frontend engineer with 10+ years of experience building modern enterprise applications.
+
+## 1. Analyze Before Implementation
+
+Before writing any code, thoroughly inspect the existing application.
+
+Understand:
+- Existing application architecture and technology stack.
+- Current pages, forms, and user workflows.
+- Sequential operations that require multiple steps.
+- Existing design system, typography, colors, spacing, and components.
+- Backend workflow statuses and validation logic.
+- Appropriate locations where a stepper component would improve usability.
+
+Do not start implementation until you understand the actual requirements.
+
+## 2. Design a Horizontal Stepper Progress Card
+
+Create a modern, premium **Horizontal Multi-Step Progress Indicator (Linear Stepper)** using your own design judgment.
+
+The component should have the following visual structure:
+
+- A white rounded rectangular card.
+- A horizontal sequence of circular step nodes.
+- Thin connector lines connecting consecutive nodes.
+- Step titles positioned below their respective nodes.
+- Small step identifiers above or near the titles.
+- Compact status labels beneath each title.
+- Balanced spacing and consistent alignment.
+
+The overall appearance should be minimal, elegant, lightweight, and suitable for a professional enterprise application.
+
+## 3. Step Status Design
+
+Create three visually distinct states:
+
+**Completed State**
+- Green circular node.
+- White checkmark icon.
+- Green completed connector line.
+- Green or subtle status text.
+- Label: Completed.
+
+**Active State**
+- Blue circular node with a clearly visible inner indicator or highlighted ring.
+- Blue connector line for the active transition, where appropriate.
+- Dark, readable step title.
+- Label: In Progress.
+
+**Pending State**
+- Soft light-blue circular node.
+- Subtle connector line.
+- Muted step title.
+- Light gray or muted status text.
+- Label: Pending.
+
+## 4. Visual Styling
+
+Use a refined design system with:
+
+- Clean white background.
+- Soft shadows and subtle depth.
+- Smooth rounded card corners.
+- Compact circular indicators.
+- Thin connector lines.
+- Small and readable typography.
+- Consistent spacing and visual hierarchy.
+- Restrained green, blue, and neutral color palette.
+- Proper alignment between all elements.
+
+Avoid oversized nodes, heavy borders, unnecessary gradients, excessive decorations, and crowded layouts.
+
+## 5. Dynamic Functionality
+
+The stepper must reflect the actual application workflow.
+
+- Automatically identify the current active step.
+- Show completed steps using checkmarks.
+- Display future steps as pending.
+- Update the indicator when a workflow progresses.
+- Support dynamic step counts and titles.
+- Handle failed, blocked, and validation-pending states where necessary.
+- Integrate with existing backend statuses.
+- Never display artificial or hardcoded progress.
+
+## 6. Responsive Behavior
+
+- Desktop: Display the complete stepper horizontally.
+- Tablet: Adjust spacing and node sizes proportionally.
+- Mobile: Use a compact horizontal scrollable stepper or another appropriate responsive arrangement.
+
+Ensure labels never overlap and the active stage remains easy to identify.
+
+## 7. Reusable Component
+
+Create a reusable component named `HorizontalStepper` or `WorkflowProgressCard`.
+
+Support configurable:
+- Step titles.
+- Step descriptions.
+- Current active step.
+- Completed steps.
+- Pending steps.
+- Status labels.
+- Optional step icons.
+
+Follow the existing project's architecture and coding conventions.
+
+## 8. Implementation Restrictions
+
+- Do not require any reference image.
+- Do not search for or depend on external design references.
+- Generate the design using the written specifications and your own UI/UX expertise.
+- Do not blindly copy an existing component from a template.
+- Preserve the existing application's approved layout and visual identity.
+- Do not redesign unrelated pages.
+- Avoid unnecessary dependencies.
+- Maintain accessibility and keyboard navigation.
+
+## 9. Final Execution
+
+Follow this exact sequence:
+
+1. Analyze the existing application.
+2. Identify the relevant multi-step workflows.
+3. Understand the actual business logic and step statuses.
+4. Plan the component structure and visual hierarchy.
+5. Design the stepper card from scratch.
+6. Implement the reusable component.
+7. Integrate it into the appropriate workflow.
+8. Test all states, transitions, and responsive breakpoints.
+9. Verify that existing functionality remains intact.
+
+**Expected Result:** A polished, premium, responsive horizontal stepper card with circular status nodes, connected progress lines, step labels, and clear completed, active, and pending states. The design must be independently created from the written requirements without needing any reference image.

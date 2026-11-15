@@ -63,7 +63,7 @@ var heat = activity.heat, STEP = 16, LEFT = 28, TOP = 18;
     <article class="ac-site<%= p.current ? ' is-current' : '' %>">
       <div class="ac-site-top"><span class="ac-dot s<%= i + 1 %>"></span><span class="ac-site-name"><%= p.name %></span><% if (p.current) { %><span class="ac-here">this site</span><% } %></div>
       <div class="ac-site-n"><%= p.count %><small> submission<%= p.count === 1 ? '' : 's' %></small></div>
-      <% if (!p.current) { %><a class="ac-site-link" href="http://<%= typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost %>:<%= p.port %>/account">Open <%- include('_auth-icon', {n:'external'}) %></a>
+      <% if (!p.current) { %><a class="ac-site-link" href="<%= typeof portalOrigin === 'function' ? portalOrigin(p.port) : 'http://' + (typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost) + ':' + p.port %>/account">Open <%- include('_auth-icon', {n:'external'}) %></a>
       <% } else { %><a class="ac-site-link" href="#submissions" data-view="submissions" aria-label="Open my submissions on <%= p.name %>">Open <%- include('_auth-icon', {n:'external'}) %></a><% } %>
     </article>
   <% }); %>

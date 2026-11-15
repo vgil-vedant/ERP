@@ -1,0 +1,140 @@
+# ERP public edge: the ONLY part of the ERP stack reachable from outside.
+#
+#   http://<public IP>:<port>  ->  Caddy (this file, container ERP_edge)
+#                              ->  platform_api over the private Docker network ERP_net
+#
+# The application containers publish nothing to the internet. The ERP console
+# (erp_api :4200) has no sign-in and is deliberately NOT published here.
+#
+# Ports are not written here: deploy/edge/edge.sh picks free ones in 5011-5100,
+# saves them in deploy/edge/.state/ports.env and passes them in as environment
+# variables ({$NAME} is replaced when Caddy reads this file).
+#
+# Plain HTTP on the bare IP (no domain yet). To serve HTTPS later, see README.md.
+
+{
+	# No admin API: a config change recreates the container (edge.sh up).
+	admin off
+	# Bare IP, no domain: never try to obtain certificates, never bind 80/443.
+	auto_https off
+	# Visitors connect directly; nothing in front of Caddy is trusted, so a
+	# client-sent X-Forwarded-For is replaced, never passed on.
+	servers {
+		timeouts {
+			read_header 15s
+			read_body 60s
+			idle 2m
+		}
+	}
+	log {
+		output stdout
+		format console
+		level WARN
+	}
+}
+
+(common) {
+	# Optional allowlist (EDGE_ALLOW in .state/ports.env, CIDRs separated by spaces).
+	# The default lets everyone in; set it to your office ranges to lock the site down.
+	# 127.0.0.1 is the container's own health check.
+	@blocked not remote_ip 127.0.0.1/32 {$EDGE_ALLOW:0.0.0.0/0 ::/0}
+	respond @blocked "Forbidden" 403
+
+	# Internal diagnostics (process id, database path): never from outside.
+	@internal path /__platform /__platform/*
+	respond @internal "Not found" 404
+
+	encode zstd gzip
+
+	request_body {
+		max_size 10MB
+	}
+
+	# Same response headers as the HRMS site (deploy/caddy/hrms.Caddyfile there),
+	# minus HSTS, which needs HTTPS. None of them changes how a page looks.
+	header {
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "same-origin"
+		Permissions-Policy "camera=(), geolocation=(), microphone=(), payment=(), usb=()"
+		-Server
+		-X-Powered-By
+	}
+
+	# Build chunks carry a content hash in their name (client-CNhEBK2M.js), so a
+	# new build always gets a new URL: cache them for a year, as HRMS does for /assets.
+	# Unhashed files (hub.js, auth.css ...) keep the app's 5-minute cache.
+	@hashed path_regexp hashed ^/account/ui/app/chunks/[A-Za-z0-9_.-]+-[A-Za-z0-9_-]{8}\.(js|css)$
+	# ">" applies it after the app has answered, replacing its own Cache-Control.
+	header @hashed >Cache-Control "public, max-age=31536000, immutable"
+
+	log {
+		output stdout
+		format json
+	}
+
+	handle_errors 502 503 504 {
+		respond "This service is temporarily unavailable. Please try again in a minute." 503
+	}
+}
+
+(upstream) {
+	# The public port of every service, so links between them use ports that are
+	# open from outside (read by backend/platform-api/src/services/edge.js).
+	# Set by Caddy, so a visitor cannot inject their own value.
+	header_up X-ERP-Public-Ports "{$ERP_PUBLIC_PORT_MAP}"
+	transport http {
+		dial_timeout 5s
+		response_header_timeout 120s
+	}
+	# The original Host (public IP:port) is passed on unchanged, which the
+	# portals' same-origin sign-in checks rely on.
+}
+
+# ERP hub (sign-in required)
+http://:{$EDGE_PORT_HUB} {
+	import common
+	reverse_proxy platform_api:4100 {
+		import upstream
+	}
+}
+
+# UIDAI / Aadhaar
+http://:{$EDGE_PORT_AADHAAR} {
+	import common
+	reverse_proxy platform_api:4177 {
+		import upstream
+	}
+}
+
+# ePrisons
+http://:{$EDGE_PORT_EPRISONS} {
+	import common
+	reverse_proxy platform_api:4173 {
+		import upstream
+	}
+}
+
+# CCTNS Citizen Services
+http://:{$EDGE_PORT_CCTNS} {
+	import common
+	reverse_proxy platform_api:4175 {
+		import upstream
+	}
+}
+
+# e-Forensics
+http://:{$EDGE_PORT_EFORENSICS} {
+	import common
+	reverse_proxy platform_api:4176 {
+		import upstream
+	}
+}
+
+# eCourts
+http://:{$EDGE_PORT_ECOURTS} {
+	import common
+	reverse_proxy platform_api:4178 {
+		import upstream
+	}
+}

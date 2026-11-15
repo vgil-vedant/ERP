@@ -58,6 +58,9 @@ process that belongs to another project.
 - **One `Dockerfile`, two targets** (`erp-api`, `platform-api`). Dependencies come from
   `npm ci --omit=dev` against the root `package-lock.json`, so the image holds exactly
   the locked versions and no dev packages.
+- **The React pages are built inside the build** (stage `web`: `npm ci` and `npm run build` in `frontend/web`). Only the
+  finished bundles (`frontend/web/dist`, `dist-ssr`) reach the runtime images, so no build tool is in them. React is the
+  default; set `UI_ENGINE=ejs` on a service to draw its pages with the original EJS views instead.
 - **Data is not in the image.** Each SQLite database lives in a named volume
   (`/data/erp`, `/data/platform`). On the first start the entrypoint seeds an empty volume.
 - **The captured originals** (`original_assets`) are mounted read-only from
@@ -97,7 +100,8 @@ tests only; the test data is deleted at the end.
 ## Not for production as it stands
 
 The five portals are look-alikes of government sites. Do not publish them to the
-internet. For a real deployment put a TLS reverse proxy in front of the ERP only,
+internet. (The public edge in `deploy/edge` publishes the hub and portals on the public IP,
+with the ERP console kept internal. See `deploy/edge/README.md`.) For a real deployment put a TLS reverse proxy in front of the ERP only,
 and replace SQLite with PostgreSQL (see `database/postgres`).
 
 ## Where the data lives

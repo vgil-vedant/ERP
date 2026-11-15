@@ -867,6 +867,7 @@ table.tbl thead th, table.tbl tbody td { white-space: nowrap; }   /* columns siz
 /* ---- overlays --------------------------------------------------- */
 .modal { border: 1px solid var(--border); }
 </style>
+<%- locals.headExtra || '' %>
 </head>
 <body>
 
@@ -926,6 +927,10 @@ table.tbl thead th, table.tbl tbody td { white-space: nowrap; }   /* columns siz
           <a href="/intake" class="nav-item<%= currentPath === '/intake' ? ' is-active' : '' %>" data-label="Received Records">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13h4l2 3h4l2-3h4"/><path d="M5.5 5h13l1.5 8v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4Z"/></svg>
             <span class="nav-label">Received Records</span>
+          </a>
+          <a href="/lookup" class="nav-item<%= currentPath === '/lookup' ? ' is-active' : '' %>" data-label="Person Lookup">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16a3.4 3.4 0 0 1 6.4 0M14.5 10h4M14.5 13.5h3"/></svg>
+            <span class="nav-label">Person Lookup</span>
           </a>
           <a href="/citizens" class="nav-item<%= currentPath === '/citizens' ? ' is-active' : '' %>" data-label="Citizens">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M17 11a3 3 0 1 0 0-6"/><path d="M22 20v-1.5a4 4 0 0 0-3-3.8"/></svg>
@@ -1019,6 +1024,7 @@ table.tbl thead th, table.tbl tbody td { white-space: nowrap; }   /* columns siz
         <span class="now">
           <% if (currentPath === '/') { %>Dashboard
           <% } else if (currentPath === '/intake') { %>Received Records
+          <% } else if (currentPath === '/lookup') { %>Person Lookup
           <% } else if (currentPath === '/citizens') { %>Citizens
           <% } else if (currentPath === '/audit') { %>Audit Trail
           <% } else if (currentPath === '/portals') { %>Government Portals

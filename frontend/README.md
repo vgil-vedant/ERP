@@ -1,9 +1,12 @@
 # frontend
 
-Everything a browser is served.
+Everything a browser is served. The pages are drawn by the React build in `web/`; the EJS views below stay as the
+fallback (`UI_ENGINE=ejs`, or automatically when the build is missing), and each portal's CSS and plain scripts are
+still served from its `public/` folder.
 
 | Path | Holds |
 |---|---|
+| `web/` | the React + TypeScript + Tailwind source for every page (see `web/README.md`); `npm run build:web` builds it |
 | `portals/<portal>/{views,public}` | the five portals: `eprisons`, `cctns`, `eforensics`, `aadhaar`, `ecourts` |
 | `platform-hub/views/platform/` | hub, login, register and account pages shared by all five portals |
 | `erp-console/views/` | the ERP console pages |

@@ -888,6 +888,8 @@ table.tbl tbody tr.clickable{cursor:pointer;}
   .card{box-shadow:none;break-inside:avoid;}
 }
 </style>
+<link rel="stylesheet" href="/assets/lookup/workflow-progress.css" />
+<link rel="stylesheet" href="/assets/lookup/person-lookup.css" />
 </head>
 <body>
 <div class="app" id="app">
@@ -1203,10 +1205,6 @@ table.tbl tbody tr.clickable{cursor:pointer;}
               <span class="pill pill-mint">erp_sync</span>
             </div>
             <div class="table-host" data-table="syncMini"></div>
-            <div class="table-note">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
-              <span>The platform calls <code>POST /api/intake</code> and only commits once the ERP answers 201/200. On 400, 500 or timeout the portal rolls back and records the failure here — there is no queue or worker in between.</span>
-            </div>
           </div>
 
           <div class="card">
@@ -1217,15 +1215,6 @@ table.tbl tbody tr.clickable{cursor:pointer;}
               </div>
             </div>
             <div id="portalQuick" style="display:flex;flex-direction:column;gap:8px"></div>
-            <div class="table-note" style="margin-top:12px">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
-              <span>These open the replicas on the same address you used for this page. No government website is contacted.</span>
-            </div>
-            <div class="def-list" style="margin-top:8px">
-              <div class="def-row"><div class="def-key">Replicas</div><div class="def-val">5 · ports <code>4173</code>–<code>4178</code></div></div>
-              <div class="def-row"><div class="def-key">Shared backend</div><div class="def-val">One process · one SQLite file</div></div>
-              <div class="def-row"><div class="def-key">Outbound calls</div><div class="def-val">None — replicas never contact the real sites</div></div>
-            </div>
           </div>
         </div>
       </section>
@@ -1330,6 +1319,14 @@ table.tbl tbody tr.clickable{cursor:pointer;}
       <!-- ============================================================
            VIEW · CITIZENS
            ============================================================ -->
+      <!-- ============================================================
+           VIEW · PERSON LOOKUP (drawn by frontend/shared/person-lookup)
+           ============================================================ -->
+      <section class="view" id="view-lookup" data-title="Person Lookup" data-section="ERP Management"
+        data-desc="One identifier in, everything UIDAI, CCTNS, e-Forensics, eCourts and ePrisons hold about the person out.">
+        <div id="personLookup"></div>
+      </section>
+
       <section class="view" id="view-citizens" data-title="Citizens" data-section="ERP Management"
         data-desc="People the ERP knows about. A citizen is registered once on any portal and reused across all five.">
         <div class="page-head">
@@ -1836,6 +1833,8 @@ table.tbl thead th, table.tbl tbody td { white-space: nowrap; }   /* columns siz
 /* ---- overlays --------------------------------------------------- */
 .modal, .drawer { border: 1px solid var(--border); }
 </style>
+<script src="/assets/lookup/workflow-progress.js" defer></script>
+<script src="/assets/lookup/person-lookup.js" defer></script>
 <script src="/assets/erp-hub.js" defer></script>
 </body>
 </html>

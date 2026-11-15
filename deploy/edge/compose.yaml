@@ -1,0 +1,51 @@
+# The ERP public edge (Caddy). Run it through deploy/edge/edge.sh, which picks
+# free ports and writes .state/ports.env; do not `docker compose up` it by hand.
+#
+# A separate compose project from the ERP stack: starting, stopping or
+# rebuilding the edge never touches the application containers, and the other
+# way round. It joins the stack's existing network ERP_net to reach them.
+name: erp_edge
+
+services:
+  erp_edge:
+    image: caddy:2.10.2-alpine
+    container_name: ERP_edge
+    restart: unless-stopped
+    command: ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+    env_file: [.state/ports.env]
+    ports:
+      - "0.0.0.0:${EDGE_PORT_HUB:?}:${EDGE_PORT_HUB:?}"
+      - "0.0.0.0:${EDGE_PORT_AADHAAR:?}:${EDGE_PORT_AADHAAR:?}"
+      - "0.0.0.0:${EDGE_PORT_EPRISONS:?}:${EDGE_PORT_EPRISONS:?}"
+      - "0.0.0.0:${EDGE_PORT_CCTNS:?}:${EDGE_PORT_CCTNS:?}"
+      - "0.0.0.0:${EDGE_PORT_EFORENSICS:?}:${EDGE_PORT_EFORENSICS:?}"
+      - "0.0.0.0:${EDGE_PORT_ECOURTS:?}:${EDGE_PORT_ECOURTS:?}"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    # Hardening, as for the application containers.
+    user: "65534:65534"
+    read_only: true
+    tmpfs: [/data, /config, /tmp]
+    environment:
+      XDG_DATA_HOME: /data
+      XDG_CONFIG_HOME: /config
+    cap_drop: [ALL]
+    # The image's caddy binary carries this file capability; without it in the
+    # bounding set the kernel refuses to exec it. Ports here are > 1024 anyway.
+    cap_add: [NET_BIND_SERVICE]
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null -T 3 http://127.0.0.1:$${EDGE_PORT_HUB}/login || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+    networks: [ERP_net]
+
+networks:
+  ERP_net:
+    external: true
+    name: ERP_net

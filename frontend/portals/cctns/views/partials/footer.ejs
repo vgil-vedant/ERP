@@ -4,7 +4,7 @@
       <h2 class="site-footer__h">IN THIS DEMONSTRATION</h2>
       <ul class="footer-links">
         <% nav.slice(0, 8).forEach(function (item) { %>
-          <li><a href="<%= item.href %>"><%= item.label %></a></li>
+          <li><a href="<%= item.href %>"><%= item.href === '/' ? 'Home' : item.href === '/feedback.htm' ? 'Feedback' : item.href === '/login.htm' ? 'Citizen Login' : item.label %></a></li>
         <% }); %>
       </ul>
     </div>

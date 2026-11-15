@@ -22,6 +22,17 @@ COPY backend/tools/package.json backend/tools/
 RUN npm ci --omit=dev --ignore-scripts=false \
         --workspace backend/platform-api --workspace backend/erp-api
 
+# --- the web bundles: React pages (browser) and their server renderer -------
+# frontend/web is built here, in its own stage, so no build tool reaches the runtime images.
+# The ePrisons page scripts are bundled unchanged, so that folder is needed for the build.
+FROM ${NODE_IMAGE} AS web
+WORKDIR /build/frontend/web
+COPY frontend/web/package.json frontend/web/package-lock.json ./
+RUN npm ci
+COPY frontend/web ./
+COPY frontend/portals/eprisons/public/js /build/frontend/portals/eprisons/public/js
+RUN npm run build
+
 # --- shared runtime layer ---------------------------------------------------
 FROM ${NODE_IMAGE} AS runtime-base
 ENV NODE_ENV=production HOST=0.0.0.0
@@ -31,7 +42,13 @@ COPY package.json ./
 COPY backend/shared backend/shared
 COPY backend/gov_replica backend/gov_replica
 COPY backend/platform-api/src/config backend/platform-api/src/config
-COPY frontend frontend
+COPY frontend/platform-hub frontend/platform-hub
+COPY frontend/erp-console frontend/erp-console
+# the person-lookup page module, served by both the ERP console and the hub
+COPY frontend/shared frontend/shared
+COPY frontend/portals frontend/portals
+COPY --from=web /build/frontend/web/dist frontend/web/dist
+COPY --from=web /build/frontend/web/dist-ssr frontend/web/dist-ssr
 COPY database/sqlite/platform/schema.sql database/sqlite/platform/schema.sql
 COPY database/sqlite/erp/schema.sql database/sqlite/erp/schema.sql
 COPY docker/entrypoint.sh /usr/local/bin/erp-entrypoint

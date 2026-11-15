@@ -44,24 +44,7 @@
   --gutter: clamp(16px, 3vw, 48px);   /* side margin that scales with the window */
 }
 
-/* The original has no dark theme. These keep the demo legible if the viewer's
-   OS is dark, without claiming to mirror anything upstream. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --page-bg: #14181a;
-    --panel-bg: #1c2124;
-    --body-text: #e6e9ea;
-    --muted: #93a0a5;
-    --rule: #394246;
-    --brand-blue-text: #7fb6e4;
-    --demo-amber-bg: #3a2e10;
-    --demo-amber: #f0c868;
-    --ok-green-bg: #14301f;
-    --ok-green: #7fd8a0;
-    --err-red-bg: #3a1a17;
-    --err-red: #f09a90;
-  }
-}
+/* No automatic dark theme: the page looks the same whatever the viewer's OS setting. */
 :root[data-theme="dark"] {
   --page-bg: #14181a;
   --panel-bg: #1c2124;
@@ -717,3 +700,6 @@ table.data--dash tbody tr:nth-child(even) td { background: #e9e9e9; }
   .vr-grid { grid-template-columns: 1fr; }
   .vr-f--2, .vr-f--3, .vr-f--6 { grid-column: auto; }
 }
+
+/* --- "Office login": links to the department office sign-in (/office/login) (utility bar, top right) --- */
+.pill.office-login { font-family: inherit; text-decoration: none; }

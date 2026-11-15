@@ -43,6 +43,7 @@ var _quick = _navItems.filter(function (n) { return ['/ecourtindia_v6/v12', '/ec
           <button type="button" data-text-size="normal" aria-label="Normal text" aria-pressed="true">A</button>
           <button type="button" data-text-size="large" aria-label="Larger text">A+</button>
         </li>
+        <% if (typeof officeButton !== 'undefined' && officeButton) { %><li><% if (typeof officeButton !== 'undefined' && officeButton) { %><a class="btn btn--primary office-login" href="/office/login">Office login</a><% } %></li><% } %>
       </ul>
     </div>
   </div>

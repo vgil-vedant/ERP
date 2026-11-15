@@ -32,6 +32,8 @@ const PROJECT = path.resolve(__dirname, '..', '..');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(FRONTEND, 'views'));
+// React draws the converted views (server-side) unless UI_ENGINE=ejs; anything not converted stays on EJS.
+try { require(path.resolve(__dirname, '..', '..', '..', '..', '..', '..', 'backend', 'shared', 'portal-ui.js')).install(app, require('ejs'), express); } catch (e) { if (process.env.UI_ENGINE !== 'ejs') process.stderr.write('[portal-ui] React engine not installed: ' + e.message + '\n'); }
 app.use(express.urlencoded({ extended: false, limit: '256kb' }));
 app.use(express.json({ limit: '256kb' }));
 

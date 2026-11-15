@@ -9,6 +9,7 @@ const ICON = {
   dash:'<path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 8h6V4h-6z"/>',
   layers:'<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/>',
   inbox:'<path d="M4 13h4l2 3h4l2-3h4"/><path d="M5.5 5h13l1.5 8v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4Z"/>',
+  idcard:'<rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16a3.4 3.4 0 0 1 6.4 0M14.5 10h4M14.5 13.5h3"/>',
   users:'<path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7.5" r="3.5"/><path d="M17 11a3 3 0 1 0 0-6"/><path d="M22 20v-1.5a4 4 0 0 0-3-3.8"/>',
   shield:'<path d="M12 3 5 6v5c0 4.4 3 8.2 7 10 4-1.8 7-5.6 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/>',
   prison:'<path d="M4 21V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v15"/><path d="M8 8v13M12 8v13M16 8v13M3 21h18"/>',
@@ -254,6 +255,7 @@ function buildNav(){
   ]},
   { id:'g2', index:'02', label:'ERP Management', items:[
     { view:'intake',   label:'Received Records', icon:'inbox', badge:true },
+    { view:'lookup',   label:'Person Lookup', icon:'idcard' },
     { view:'citizens', label:'Citizens', icon:'users', badgeCitizens:true },
     { view:'audit',    label:'Audit Trail', icon:'shield' }
   ]},
@@ -374,7 +376,9 @@ function closeSearchBar(){
 navScrim.addEventListener('click', closeMobileNav);
 
 /* ------------------------------- routing ---------------------------------- */
-function goto(view){
+/* The view is part of the address, and every move is a history entry, so Back
+   and Forward walk through the hub's own pages instead of leaving it. */
+function goto(view, fromHistory){
   const target = document.getElementById('view-' + view);
   if (!target) return;
   state.view = view;
@@ -385,10 +389,22 @@ function goto(view){
   window.scrollTo({ top:0, behavior:'smooth' });
   hideRailTip();
   if (typeof closeSearchBar === 'function') closeSearchBar();
-  renderView(view);
-  try { history.replaceState(null, '', '#' + view); } catch(e){}
+  try {
+    // location.pathname, not '#' + view: a move drops the ?ref= / ?q= the person
+    // lookup writes while it has someone on screen, so arriving at a view starts it.
+    const url = location.pathname + '#' + view;
+    const same = url === location.pathname + location.search + location.hash;
+    if (fromHistory) { /* the address is already the one being shown */ }
+    else if (same) history.replaceState({ view: view }, '', url);
+    else history.pushState({ view: view }, '', url);
+  } catch(e){}
+  renderView(view, fromHistory);
 }
 document.querySelectorAll('[data-goto]').forEach(btn => btn.addEventListener('click', () => goto(btn.dataset.goto)));
+window.addEventListener('popstate', () => {
+  const v = (location.hash || '').replace('#','');
+  goto(document.getElementById('view-' + v) ? v : 'dashboard', true);
+});
 
 /* ------------------------------- toasts ----------------------------------- */
 const toasts = document.getElementById('toasts');
@@ -1120,7 +1136,7 @@ function renderOverview(){
     : '<tr><td colspan="3">No service information is available yet.</td></tr>';
 }
 
-function renderView(view){
+function renderView(view, fromHistory){
   if (view === 'dashboard') renderDashboard();
   else if (view === 'integration') renderIntegration();
   else if (view === 'overview') renderOverview();
@@ -1128,7 +1144,25 @@ function renderView(view){
   else if (view === 'health') renderHealthView();
   else if (view === 'database') renderDatabase();
   else if (view === 'docs') renderDocsView();
+  else if (view === 'lookup') mountLookup(fromHistory);
   else if (TABLES[view]) TABLES[view].refresh();
+}
+
+/* The person lookup is drawn by the shared module, mounted once. It keeps the person it is
+   showing in the address (?ref=, ?q=), so the back button steps out of a profile; opening the
+   view from the navigation is a fresh start, and the module returns to its idle panes. */
+let LOOKUP = null;
+function mountLookup(fromHistory){
+  const host = document.getElementById('personLookup');
+  if (LOOKUP || !host) {
+    if (LOOKUP) { if (!fromHistory) LOOKUP.applyUrl(); LOOKUP.focus(); }
+    return;
+  }
+  if (!window.PersonLookup || !window.WorkflowProgressCard){
+    host.innerHTML = '<div class="card"><div class="card-title">Person lookup unavailable</div><div class="card-sub">Its script did not load. Reload the page.</div></div>';
+    return;
+  }
+  LOOKUP = window.PersonLookup.mount(host, { api: '/api/lookup', urlState: true, loginUrl: '/login', revealAadhaar: true });
 }
 
 const DOCS = [
@@ -1197,7 +1231,9 @@ function fallbackCopy(text, done){
 function openPortal(code){
   const s = SYS_MAP[code];
   if (!s || !s.port){ toast('Portal unavailable', 'No port is known for this portal.', 'alert'); return; }
-  const url = location.protocol + '//' + location.hostname + ':' + s.port + '/';
+  // Through the public edge the internal port is closed: the server sends the public one.
+  const pub = DATA && DATA.publicPorts && DATA.publicPorts[String(s.port)];
+  const url = location.protocol + '//' + location.hostname + ':' + (pub || s.port) + '/';
   let opened = null;
   try { opened = window.open(url, '_blank', 'noopener'); } catch(e){}
   toast('Local replica: ' + s.name,
@@ -1530,7 +1566,7 @@ function renderStatus(){
 
 async function fetchDashboard(){
   const res = await fetch('/api/dashboard', { cache:'no-store' });
-  if (res.status === 401) { window.location.href = '/login'; throw new Error('signed out'); }   // the session ended
+  if (res.status === 401) { window.location.replace('/login'); throw new Error('signed out'); }   // the session ended: replace, so Back does not return to a page that cannot load
   if (!res.ok) throw new Error('the hub answered HTTP ' + res.status);
   return res.json();
 }
@@ -1570,11 +1606,15 @@ async function init(){
   renderAll();
 
   const initial = (location.hash || '').replace('#','');
-  const valid = ['dashboard','overview','intake','citizens','audit','portals','sync','integration','submissions','database','health','docs'];
-  goto(valid.includes(initial) ? initial : 'dashboard');
+  const valid = ['dashboard','overview','intake','lookup','citizens','audit','portals','sync','integration','submissions','database','health','docs'];
+  goto(valid.includes(initial) ? initial : 'dashboard', true);
+  try { history.replaceState({ view: state.view }, '', '#' + state.view); } catch(e){}
 
   setInterval(refresh, 30000);
   document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
+  // Restored from the browser's cache by Back or Forward: ask for the data
+  // again, so a session that has ended is noticed and this page goes to /login.
+  window.addEventListener('pageshow', (e) => { if (e.persisted) refresh(); });
 }
 document.addEventListener('DOMContentLoaded', init);
 if (document.readyState !== 'loading') init();

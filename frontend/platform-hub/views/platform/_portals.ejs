@@ -4,7 +4,7 @@
 </p>
 <div class="portals">
   <% portals.forEach(function (p) { %>
-    <a href="http://<%= typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost %>:<%= p.port %>/account"
+    <a href="<%= typeof portalOrigin === 'function' ? portalOrigin(p.port) : 'http://' + (typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost) + ':' + p.port %>/account"
        class="<%= p.code === site.code ? 'here' : '' %>"><%= p.name %></a>
   <% }); %>
 </div>

@@ -8,6 +8,10 @@
 **/*.sqlite-wal
 docker/.test-data
 
+# built inside the image (docker/Dockerfile, stage "web"), never copied from the host
+frontend/web/dist
+frontend/web/dist-ssr
+
 # not run by either service
 # npm only needs the tools manifest to resolve the workspaces
 backend/tools/*

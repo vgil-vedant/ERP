@@ -61,6 +61,8 @@ An ERP for Maharashtra Prisons, and local demonstration replicas of the governme
 - **One shared backend and database**: a citizen registers once and the account works on every portal.
 - **Write-through to the ERP**: every submission is stored in both databases, or rolled back from both.
 - **ERP intake console**: overview, received records, citizens and an audit trail.
+- **Person lookup**: one identifier (Aadhaar, mobile, CNR, FIR, prisoner number, name ...) shows what UIDAI, CCTNS, e-Forensics, eCourts and ePrisons hold about the person, with a case journey and a stepper per record. See [Person lookup](#person-lookup).
+- **Department offices**: each of the five portals has its own officer sign-in, dashboard, research-based forms and database at `/office`; every record saved there reaches the ERP within milliseconds through a signed, retried, idempotent integration bus. See [Department offices and the integration bus](#department-offices-and-the-integration-bus).
 - **Append-only audit trail**: database triggers reject every UPDATE and DELETE on `audit_log`.
 - **Idempotent intake**: a retried submission with the same `(sourceSystem, sourceReference)` never creates a duplicate.
 - **Hub page**: one page showing the whole arrangement, with JSON endpoints for summary, people, submissions, sync attempts and audit.
@@ -149,7 +151,7 @@ A drawn version (runtime topology, the write-through step by step, and an entity
 
 | Layer | Technology | Purpose | Why chosen |
 |---|---|---|---|
-| Frontend | EJS server-rendered views, static CSS and JS | Portal replicas, hub and ERP console | No build step; replica pages stay close to the captured markup |
+| Frontend | React 18 + TypeScript, built with Vite 5; Tailwind CSS 3 for the sign-in and account pages | Portal replicas, hub, ERP console, sign-in and account pages | Pages are drawn on the server (the replica suites read the HTML) and hydrated in the browser; each site keeps its own look. The EJS views remain as a fallback (`UI_ENGINE=ejs`) |
 | Backend | Node.js 18, Express 4 | ERP API and platform API | Small, well-known stack; one language end to end |
 | Database | SQLite (better-sqlite3) | `erp.sqlite` and `platform.sqlite` | Zero-administration, transactional, easy to copy and inspect |
 | Database (target) | PostgreSQL 16 | `demo_replica` migration target | Production-grade store for the migrated data |
@@ -188,9 +190,10 @@ A drawn version (runtime topology, the write-through step by step, and an entity
 │   ├── tools/            # Crawler and replica generator
 │   └── scripts/          # Helper scripts (start-all, image embedding)
 ├── frontend/
-│   ├── erp-console/      # ERP console views (EJS)
-│   ├── platform-hub/     # Hub and shared identity views (EJS)
-│   └── portals/          # Views and static files for the five portals
+│   ├── web/              # React + TypeScript + Tailwind source (Vite) and its tests; built into dist/ and dist-ssr/
+│   ├── erp-console/      # ERP console views (EJS, fallback)
+│   ├── platform-hub/     # Hub and shared identity views (EJS, fallback)
+│   └── portals/          # Views and static files for the five portals (EJS fallback, CSS and plain scripts)
 ├── database/
 │   ├── sqlite/           # erp/ and platform/: schema.sql and data/
 │   └── postgres/         # Migration scripts, SQL migration, load report
@@ -329,7 +332,10 @@ erDiagram
 | GET | `/api/intake?limit=50&system=uidai` | Recently received records |
 | GET | `/api/citizens` | Citizens known to the ERP |
 | GET | `/api/summary` | Counts for the console |
-| GET | `/`, `/intake`, `/citizens`, `/audit` | Console pages |
+| GET | `/`, `/intake`, `/citizens`, `/audit`, `/lookup` | Console pages |
+| GET | `/api/lookup?q=` | Person lookup by Aadhaar, EID, mobile, CNR, FIR, prisoner no., forensic case no., e-Mulakat reg. no. or name |
+| GET | `/api/lookup/person/:ref` | One person's profile across the five systems |
+| GET | `/api/lookup/samples`, `/api/lookup/sources` | Demonstration identities; connected systems |
 
 `POST /api/intake` request:
 
@@ -383,6 +389,70 @@ full_name=Rohan+Ingle&email=rohaningle705%40gmail.com&mobile=9876500123&password
 
 On success the portal redirects to `/account?registered=1` and sets an `HttpOnly` session cookie. Replace `YOUR_PASSWORD` with a password of at least 8 characters.
 
+## Person lookup
+
+Open **Person Lookup** in the ERP console (`:4200/lookup`) or in the hub (`:4100/#lookup`, after signing in) and enter any one identifier. The ERP asks all five department systems at once and shows, for that person:
+
+- an identity card (masked Aadhaar, verification, address) and how many records each system holds;
+- alerts that matter first (in custody, next hearing, a deficient forensic submission, a blocked verification);
+- a **case journey** for every FIR: police, forensic laboratory, court and prison, each stage read from that system's own status;
+- one section per system with every record and its **stepper** (`WorkflowProgressCard`), built from the status models in `info/docs/research_reports`;
+- a timeline of every dated event from every system.
+
+A system with nothing on the person shows a standard "no records" message; a system that does not answer shows "unavailable" with a retry, and the others still answer. Every search and every profile opened is written to the append-only audit log, with identifiers masked.
+
+| Piece | Where |
+|---|---|
+| Identifier rules (Aadhaar Verhoeff check, VID refusal, CNR, FIR, ...) | `backend/erp-api/src/lookup/identifiers.js` |
+| Status models and the FIR journey | `backend/erp-api/src/lookup/workflows.js` |
+| One connector per system | `backend/erp-api/src/lookup/connectors.js` |
+| Demonstration dataset (50 synthetic people) | `backend/erp-api/src/lookup/dataset.js`, `catalogue.js` |
+| Source-mirror tables | `lookup_subject`, `lookup_identifier`, `lookup_record` in `database/sqlite/erp/schema.sql` |
+| Page module and the stepper (shared by console and hub) | `frontend/shared/person-lookup/` |
+| Hub pass-through to the ERP | `backend/platform-api/src/services/hub-lookup.js`, `frontend/web/src/apps/hub/LookupView.tsx` |
+| Tests (44 checks, own temporary database) | `npm run test:lookup` |
+
+**Where the data comes from.** No department publishes an open API (see each research report, section 10), and the ERP never calls a portal. The departments push instead: every record saved in a department office reaches the ERP through the integration bus (next section), and the ERP files it under the right person. Each connector reads what has arrived; to connect a real department API, replace that connector's `fetch` and nothing else changes. `LOOKUP_DATASET=local` makes the ERP load the demonstration dataset itself (to run it without the portals); `LOOKUP_DATASET=off` leaves it empty. Aadhaar numbers are from the 9999 test series and are stored in the ERP only as keyed hashes and masks (`LOOKUP_PEPPER` sets the key). The **Demo identities** list on the page (`LOOKUP_DEMO_SAMPLES=off` hides it) offers people to try: convicts and undertrials in custody, people on bail, complainants, prison visitors, civil litigants, police-verification requests and Aadhaar-only people. `LOOKUP_UNAVAILABLE=ecourts` makes a system report itself down, to show that state.
+
+## Department offices and the integration bus
+
+Each of the five portals now has a **department office** at `/office` on its own port: its own officer sign-in, its own dashboard, its own forms and its own database. The citizen pages of the portals, and their shared citizen sign-in, are unchanged.
+
+| Office | Address | User | Forms |
+|---|---|---|---|
+| UIDAI Enrolment and Update Office | `:4177/office` | `uidai.officer` | New enrolment (Form 1), update request (Form 2); approval issues the Aadhaar number |
+| CCTNS Police Station Office | `:4175/office` | `cctns.officer` | Register an FIR; police verification request (antecedent, PCC, vehicle NOC) |
+| e-Forensics Laboratory Office | `:4176/office` | `eforensics.officer` | Forensic case submission (CESF) with exhibits, seal and custody chain |
+| eCourts Registry | `:4178/office` | `ecourts.officer` | Case filing; registration (CNR), hearings, disposal, appeal |
+| ePrisons Prison Office | `:4173/office` | `eprisons.officer` | Prisoner admission, e-Mulakat visit, grievance; conviction, bail, release |
+
+The demonstration password of every office is `Office@2026` (`OFFICE_PASSWORD`, or `OFFICE_PASSWORD_<CODE>` per office, replaces it on first start). Each office takes its portal's colours, type and logo, follows the field inventories of its research report, validates every field in the browser and again on the server, and moves records only along the statuses its report defines (the same steppers as the ERP).
+
+**How a record reaches the ERP.**
+
+```mermaid
+flowchart LR
+    O["Officer saves<br/>(department office)"] --> D[("department database<br/>record + outbox event,<br/>one transaction")]
+    D --> B["integration bus<br/>signed, ordered, batched,<br/>retried with back-off"]
+    B -- "POST /api/ingest/events" --> E["ERP ingest<br/>idempotent, person matched"]
+    E --> L["Person Lookup<br/>+ live stream to open pages"]
+```
+
+1. The record and its outbox event are written in **one transaction** in the department's own SQLite file (`<platform data>/departments/<code>.sqlite`), so a change is never saved without the ERP being told.
+2. The bus delivers **at once** (the save schedules the delivery), in order, in batches, each signed with HMAC-SHA256 (`INTEGRATION_SECRET`, shared by both services) and a timestamp. If the ERP is away, events wait and are retried (1 s, 2 s, 4 s ... 60 s); nothing is lost.
+3. The ERP applies each event **once** (`ingest_event`), finds the person by Aadhaar, enrolment ID, or mobile number and name (never by an FIR or case number, which name several people), files the record under every person it names, and pushes it **live** to every open Person Lookup page (`/api/lookup/stream`, Server-Sent Events).
+
+Typical time from *Save* in an office to the record being searchable in the ERP: **10 to 60 ms** on one machine. Each office shows its own delivery log (*Delivery to the ERP*), with every event, its delivery time and any error; officers' actions are kept in an append-only activity log.
+
+| Piece | Where |
+|---|---|
+| Department stores, forms and workflows | `backend/platform-api/src/departments/` (`forms/<code>.js` per department) |
+| Outbox and integration bus | `backend/platform-api/src/departments/{store,events,bus}.js` |
+| ERP ingest and live stream | `backend/erp-api/src/lookup/{ingest,live}.js` |
+| Officer workspace (shared by the five offices) | `frontend/shared/department-office/` |
+| Dataset, catalogue, status models (shared by both services) | `backend/shared/records/` |
+| Tests (39 checks: seeding, sign-in isolation, CSRF, validation, workflow rules, signatures, replay, ERP outage and recovery) | `npm run test:departments` |
+
 ## Installation and Setup
 
 **Prerequisites**
@@ -397,6 +467,7 @@ On success the portal redirects to `/account?registered=1` and sets an `HttpOnly
 git clone <your-repository-url> 4_ERP
 cd 4_ERP
 npm install                    # dependencies live once at the repository root
+npm run build:web              # builds the React pages (frontend/web); without it the EJS pages are used
 cp .env.example .env           # optional: only the PostgreSQL scripts need it
 npm run seed:erp && npm run start:erp            # :4200, start this first
 npm run seed:platform && npm run start:platform  # :4100 + the five portals
@@ -514,6 +585,7 @@ Both service containers run with a read-only root filesystem, a `/tmp` tmpfs, al
 **Strategy.** End-to-end tests talk to the running servers over HTTP and read both SQLite files directly, so a pass means the data is in both databases rather than merely reported as such. A rollback test proves the "or neither" half.
 
 ```bash
+npm run test:web                    # React component tests (frontend/web)
 node tests/e2e/run-e2e-tests.js    # 77 checks across both databases
 bash tests/e2e/test-rollback.sh     # stops the ERP, submits, checks nothing was kept
 ```

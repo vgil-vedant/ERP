@@ -25,6 +25,7 @@ const { eprisonsRouter } = require('./drivers/eprisons');
 
 const { PLATFORM_VIEWS } = require('./config/paths');
 const dashboard = require('./services/hub-dashboard');
+const edge = require('./services/edge');
 const HUB_STATIC = path.join(PLATFORM_VIEWS, '..', 'static');
 const HUB_PORT = Number(process.env.PLATFORM_PORT) || 4100;
 // 127.0.0.1 unless told otherwise; a container sets HOST=0.0.0.0 so its published ports work.
@@ -33,14 +34,22 @@ const HOST = process.env.HOST || '127.0.0.1';
 store.registerSites(SITES);
 
 /** Build the app for one portal. */
+// The landing page of each portal (UIDAI answers on / and on both language homes).
+const OFFICE_LANDING = { uidai: ['/', '/en', '/hi'] };
+const departments = require('./departments');
+
 function buildPortal(site) {
   const app = express();
+  // Behind the public edge (deploy/edge) req.ip is the visitor's, not the proxy's.
+  app.set('trust proxy', edge.trustProxy);
 
   app.set('view engine', 'ejs');
   // Its own views first, the shared identity views second. Express resolves a
   // view name against each directory in turn, so one set of identity pages
   // serves all five portals without being copied into any of them.
   app.set('views', [site.views, PLATFORM_VIEWS]);
+  // React draws the portals' converted views (server-side) unless UI_ENGINE=ejs; the shared identity views are handled by ui-engine.
+  require('../../shared/portal-ui').install(app, require('ejs'), express);
 
   app.use(express.urlencoded({ extended: false, limit: '256kb' }));
   app.use(express.json({ limit: '256kb' }));
@@ -49,6 +58,8 @@ function buildPortal(site) {
     // Links to the other portals reuse the address the visitor typed (the LAN
     // address or 127.0.0.1), so they resolve on the visitor's side, not the server's.
     res.locals.linkHost = req.hostname;
+    // ...and the port the visitor can reach (the public one when they came through the edge).
+    res.locals.portalOrigin = edge.originFor(req);
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Replica-Notice',
       'Unofficial local demonstration - not an official government service');
@@ -59,11 +70,18 @@ function buildPortal(site) {
       "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; " +
       "script-src 'self'; font-src 'self' data:; form-action 'self'; " +
       "connect-src 'self'; frame-ancestors 'none'; base-uri 'self'");
+    // "Office login" link to /office/login: on this portal's landing page only
+    const office = departments.DEPARTMENTS[site.code];
+    res.locals.officeButton = !!office && (OFFICE_LANDING[site.code] || ['/']).includes(req.path);
     next();
   });
 
   app.use('/static', express.static(site.publicDir, { maxAge: '1h' }));
   app.use('/original-assets', express.static(site.assets, { maxAge: '1h' }));
+
+  // The department's own office: officer sign-in, workspace and records, in its
+  // own database; every change reaches the ERP through the integration bus.
+  require('./departments').install(app, site);
 
   // One registration, on every portal.
   app.use(sessionMiddleware);
@@ -117,11 +135,16 @@ const SITE_LOGOS = {
 /** A small hub, so there is one page that shows the whole arrangement. */
 function buildHub() {
   const app = express();
+  app.set('trust proxy', edge.trustProxy);
   app.set('view engine', 'ejs');
   app.set('views', PLATFORM_VIEWS);
   app.use(express.urlencoded({ extended: false }));
-  // Same reason as in buildPortal: link back to the address the visitor used.
-  app.use((req, res, next) => { res.locals.linkHost = req.hostname; next(); });
+  // Same reason as in buildPortal: link back to the address (and port) the visitor used.
+  app.use((req, res, next) => {
+    res.locals.linkHost = req.hostname;
+    res.locals.portalOrigin = edge.originFor(req);
+    next();
+  });
 
   // One page, one navigation entry ("All portals"). It tells the shared shell
   // which entry is current; the /api/* JSON routes below feed the same figures.
@@ -138,21 +161,51 @@ function buildHub() {
     res.sendFile(path.join(site.assets, rel), (err) => { if (err && !res.headersSent) res.status(404).end(); });
   });
 
-  // The hub is one page; older links to /portals land on it.
-  app.get('/portals', (req, res) => res.redirect('/'));
+  /**
+   * The hub is one page, and every page of it has an address.
+   *
+   * The dashboard keeps the view it is showing in the URL (#citizens, #queue,
+   * #dept:cctns ...) and adds a history entry for each move, so Back and
+   * Forward walk through the views instead of leaving the hub. These routes are
+   * the other half of that: a plain path - /citizens, /queue, /dept/cctns, or
+   * the older /portals link - opens the hub on that view rather than 404ing.
+   * The list is the navigation of the dashboard (frontend/web/src/apps/hub).
+   */
+  const HUB_VIEWS = [
+    'dashboard', 'overview', 'intake', 'lookup', 'citizens', 'audit', 'portals', 'sync', 'integration',
+    'submissions', 'database', 'health', 'docs',
+    'records', 'depts', 'queue', 'failures', 'recon', 'officers', 'lookupaudit', 'activity',
+  ];
+  for (const view of HUB_VIEWS) {
+    app.get(`/${view}`, (req, res) => res.redirect(302, `/#${view}`));
+  }
+  // one department's office, as the hub shows it
+  app.get('/dept/:code', (req, res) => {
+    if (!SITES.some((x) => x.code === req.params.code)) return res.status(404).json({ error: 'not found' });
+    res.redirect(302, `/#dept:${req.params.code}`);
+  });
 
   // The dashboard: the reference markup and styles, with its script reading real
   // data from /api/dashboard. Nothing in it is generated in the browser.
+  // The person lookup: its page module here, its API (passed through to the ERP) below.
+  const hubLookup = require('./services/hub-lookup');
+  hubLookup.installAssets(app);
+  // The department offices as the admin sees them (read-only, plus "retry" of a department's waiting events).
+  require('./services/hub-offices').install(app);
   app.use('/assets', express.static(HUB_STATIC, { maxAge: '5m' }));
   app.get('/', (req, res) => {
     res.set('X-Replica-Notice', 'Unofficial local demonstration - not an official government service');
-    res.set('Cache-Control', 'no-cache');
+    // Never from the cache: after signing out, Back must ask the server again
+    // (which sends the visitor to /login) instead of redrawing the dashboard.
+    require('./services/hub-auth').noStore(res);
+    if (require('./services/ui-engine').sendHub(res)) return;
     res.sendFile(path.join(HUB_STATIC, 'erp-hub.html'));
   });
   app.get('/api/dashboard', async (req, res, next) => {
     try {
       res.set('Cache-Control', 'no-store');
-      res.json(await dashboard.build());
+      // publicPorts: the ports the browser must use for portal links (null on a direct visit).
+      res.json({ ...(await dashboard.build()), publicPorts: edge.publicPorts(req) });
     } catch (err) { next(err); }
   });
 
@@ -176,6 +229,8 @@ function buildHub() {
     submissions: store.allSubmissions(200),
   }));
 
+  hubLookup.installApi(app);
+
   app.use((req, res) => res.status(404).json({ error: 'not found' }));
   app.use((err, req, res, next) => {
     process.stderr.write(`[hub] ${err.stack || err}\n`);
@@ -191,6 +246,7 @@ function start() {
     servers.push(app.listen(site.port, HOST));
   }
   servers.push(buildHub().listen(HUB_PORT, HOST));
+  require('./departments').start();
 
   const s = store.summary();
   process.stdout.write(

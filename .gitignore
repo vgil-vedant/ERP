@@ -83,3 +83,10 @@ docker/.test-data/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# React front end build output (frontend/web)
+frontend/web/dist/
+frontend/web/dist-ssr/
+
+# public edge: generated port assignment (deploy/edge/edge.sh)
+deploy/edge/.state/

@@ -13,6 +13,10 @@
     "seed:platform": "npm --workspace backend/platform-api run seed",
     "start:erp": "npm --workspace backend/erp-api run start",
     "start:platform": "npm --workspace backend/platform-api run start",
-    "test:e2e": "node tests/e2e/run-e2e-tests.js"
+    "test:e2e": "node tests/e2e/run-e2e-tests.js",
+    "test:lookup": "node tests/lookup/run-lookup-tests.js",
+    "test:departments": "node tests/departments/run-department-tests.js",
+    "build:web": "npm --prefix frontend/web ci && npm --prefix frontend/web run build",
+    "test:web": "npm --prefix frontend/web test"
   }
 }

@@ -84,9 +84,13 @@ function validateRegistration(body) {
  * Every portal gets the same routes against the same table. `site` only
  * decides which portal is recorded as the one the citizen registered through.
  */
+const uiEngine = require('./ui-engine');
+const { renderAuth } = uiEngine;
+
 function identityRouter(site) {
   const r = express.Router();
   r.use('/account/ui', express.static(AUTH_UI_DIR, { maxAge: '5m', index: false }));
+  uiEngine.mountAssets(r);
 
   const common = (req) => ({
     site,
@@ -97,7 +101,7 @@ function identityRouter(site) {
   });
 
   r.get('/account/register', (req, res) => {
-    res.render('platform/register', {
+    renderAuth(res, 200, 'platform/register', {
       title: `Register — ${site.name}`, pageTitle: 'Register once, use every portal',
       ...common(req), form: {}, errors: {}, fatal: null,
     });
@@ -109,7 +113,7 @@ function identityRouter(site) {
       errors.email = 'That email is already registered. Sign in instead — one account covers every portal.';
     }
     if (Object.keys(errors).length) {
-      return res.status(400).render('platform/register', {
+      return renderAuth(res, 400, 'platform/register', {
         title: `Register — ${site.name}`, pageTitle: 'Register once, use every portal',
         ...common(req), form: req.body, errors, fatal: null,
       });
@@ -127,7 +131,7 @@ function identityRouter(site) {
       store.recordSyncAttempt('person', pub.personRef, 'failed', sync.status, null, sync.message);
       store.audit(site.code, 'person', person.id, 'ROLLBACK', 'portal:' + site.code, null,
         `registration ${pub.personRef} rolled back: the ERP did not accept it (${sync.message})`);
-      return res.status(503).render('platform/register', {
+      return renderAuth(res, 503, 'platform/register', {
         title: `Register — ${site.name}`, pageTitle: 'Register once, use every portal',
         ...common(req), form: req.body, errors: {},
         fatal: `Registration was not completed. The ERP backend did not accept it: ${sync.message}. ` +
@@ -145,7 +149,7 @@ function identityRouter(site) {
   });
 
   r.get('/account/login', (req, res) => {
-    res.render('platform/login', {
+    renderAuth(res, 200, 'platform/login', {
       title: `Sign in — ${site.name}`, pageTitle: 'Sign in',
       ...common(req), form: {}, errors: {},
     });
@@ -156,7 +160,7 @@ function identityRouter(site) {
     const password = String((req.body || {}).password || '');
     const person = store.findPersonByEmail(email);
     if (!person || !store.verifyPassword(person, password)) {
-      return res.status(401).render('platform/login', {
+      return renderAuth(res, 401, 'platform/login', {
         title: `Sign in — ${site.name}`, pageTitle: 'Sign in',
         ...common(req), form: { email },
         errors: { email: 'No account matches that email and password.' },
@@ -182,7 +186,7 @@ function identityRouter(site) {
     if (!req.person) return res.redirect('/account/login?next=/account');
     const ctx = common(req);
     const mine = store.submissionsForPerson(req.person.id);          // this person's, every portal (latest 100)
-    res.render('platform/account', {
+    uiEngine.renderAccount(res, {
       title: `My account — ${site.name}`, pageTitle: 'My account',
       ...ctx,
       person: store.personPublic(req.person),

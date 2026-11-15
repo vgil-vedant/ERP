@@ -1,0 +1,18 @@
+<%- include('layout-head', { headExtra:
+  '<link rel="stylesheet" href="/ui/lookup/workflow-progress.css">\n' +
+  '<link rel="stylesheet" href="/ui/lookup/person-lookup.css">' }) %>
+
+<!-- PERSON LOOKUP: the shared module draws the page into this element (frontend/shared/person-lookup) -->
+<div id="personLookup">
+  <noscript>
+    <div class="card" style="padding:18px 20px">The person lookup needs JavaScript. Enable it and reload the page.</div>
+  </noscript>
+</div>
+
+<script src="/ui/lookup/workflow-progress.js"></script>
+<script src="/ui/lookup/person-lookup.js"></script>
+<script>
+  window.PersonLookup.mount(document.getElementById('personLookup'), { api: '/api/lookup', urlState: true });
+</script>
+
+<%- include('layout-foot') %>

@@ -23,7 +23,10 @@ const HOST = process.env.HOST || '127.0.0.1';
 
 app.set('view engine', 'ejs');
 app.set('views', require('./config/paths').ERP_VIEWS);
-app.use(express.json({ limit: '1mb' }));
+const ui = require('./ui-react');
+ui.mountAssets(app);
+// rawBody is kept for the integration bus, whose deliveries are signed over the exact bytes sent
+app.use(express.json({ limit: '4mb', verify: (req, res, buf) => { req.rawBody = buf; } }));
 app.use(express.urlencoded({ extended: false, limit: '256kb' }));
 
 app.use((req, res, next) => {
@@ -95,6 +98,73 @@ app.get('/api/health', async (req, res) => {
   });
 });
 
+// --- the person lookup ----------------------------------------------------
+/**
+ * One identifier in, everything UIDAI, CCTNS, e-Forensics, eCourts and
+ * ePrisons hold about the person out. See backend/erp-api/src/lookup.
+ *
+ *   GET /api/lookup?q=          search by Aadhaar, EID, mobile, CNR, FIR, prisoner no., ... or name
+ *   GET /api/lookup/person/:ref one person's full profile
+ *   GET /api/lookup/samples     the synthetic demonstration identities
+ *   GET /api/lookup/sources     the connected systems and what the mirror holds
+ */
+const lookup = require('./lookup/service');
+require('./lookup/store').ensureLoaded();
+const { LOOKUP_UI } = require('./config/paths');
+// Who asked, for the audit log. The hub passes its signed-in user; the console has no sign-in yet.
+const actorOf = (req) => (String(req.get('X-ERP-Actor') || 'erp-console').replace(/[^\w:@.-]/g, '').slice(0, 60) || 'erp-console');
+const lookupFailed = (res, err) => {
+  process.stderr.write(`[erp] lookup failed: ${err.stack || err}\n`);
+  res.status(500).json({ error: 'The lookup could not be completed. The error has been logged; try again.' });
+};
+
+app.get('/api/lookup', async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json(await lookup.search(String(req.query.q || ''), actorOf(req))); } catch (err) { lookupFailed(res, err); }
+});
+// The integration bus: the departments push their record changes here (signed; see lookup/ingest.js).
+const ingest = require('./lookup/ingest');
+const live = require('./lookup/live');
+// Aadhaar-first identity: split any person an earlier rule left holding two different Aadhaar numbers.
+try {
+  const fixed = ingest.repair();
+  if (fixed.split || fixed.review.length) process.stdout.write(`[erp] identity repair: ${fixed.split} department share(s) moved to their own Aadhaar holder; ${fixed.review.length} left for review${fixed.review.length ? ` (${fixed.review.join(', ')})` : ''}\n`);
+} catch (err) { process.stderr.write(`[erp] identity repair failed (lookup still works): ${err.stack || err}\n`); }
+app.post('/api/ingest/events', (req, res) => {
+  try { ingest.receive(req, res); } catch (err) { lookupFailed(res, err); }
+});
+// Live: open lookup pages hear about every delivered record at once.
+app.get('/api/lookup/stream', (req, res) => live.stream(req, res));
+app.get('/api/lookup/recent', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json({ recent: ingest.recent(Math.min(50, Number(req.query.limit) || 12)) }); } catch (err) { lookupFailed(res, err); }
+});
+app.get('/api/lookup/samples', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json({ synthetic: true, samples: lookup.samples() }); } catch (err) { lookupFailed(res, err); }
+});
+app.get('/api/lookup/sources', (req, res) => {
+  try { res.json(lookup.sources()); } catch (err) { lookupFailed(res, err); }
+});
+app.get('/api/lookup/person/:ref', async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const p = await lookup.profile(req.params.ref, actorOf(req));
+    if (!p) return res.status(404).json({ error: 'No person has this reference.' });
+    res.json(p);
+  } catch (err) { lookupFailed(res, err); }
+});
+// The hub admin's "show full Aadhaar": audited here, the number itself is read from UIDAI by the hub.
+app.post('/api/lookup/person/:ref/aadhaar-reveal', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const r = lookup.aadhaarReveal(req.params.ref, actorOf(req));
+    if (!r) return res.status(404).json({ error: 'No person has this reference.' });
+    res.json(r);
+  } catch (err) { lookupFailed(res, err); }
+});
+app.use('/ui/lookup', express.static(LOOKUP_UI, { maxAge: '5m', index: false }));
+
 // --- the console ----------------------------------------------------------
 app.use((req, res, next) => {
   res.locals.systems = store.systems();
@@ -103,7 +173,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('dashboard', {
+  ui.render(res, 'dashboard', {
     title: 'ERP - Intake Console',
     summary: store.summary(),
     recent: store.recentIntake(15),
@@ -113,12 +183,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/citizens', (req, res) => {
-  res.render('citizens', { title: 'ERP - Citizens', rows: store.citizens(200) });
+  ui.render(res, 'citizens', { title: 'ERP - Citizens', rows: store.citizens(200) });
 });
 
 app.get('/intake', (req, res) => {
   const system = req.query.system || null;
-  res.render('intake', {
+  ui.render(res, 'intake', {
     title: 'ERP - Received records',
     system,
     rows: store.recentIntake(200, system),
@@ -126,7 +196,12 @@ app.get('/intake', (req, res) => {
 });
 
 app.get('/audit', (req, res) => {
-  res.render('audit', { title: 'ERP - Audit trail', rows: store.auditTail(200) });
+  ui.render(res, 'audit', { title: 'ERP - Audit trail', rows: store.auditTail(200) });
+});
+
+// Drawn by EJS in both UI modes: the page is the shared lookup module inside the console layout.
+app.get('/lookup', (req, res) => {
+  res.render('lookup', { title: 'ERP - Person Lookup' });
 });
 
 app.get('/portals', (req, res) => {
@@ -140,7 +215,7 @@ app.get('/portals', (req, res) => {
     uidai:      'Grievance / feedback',
     ecourts:    'Case status enquiry',
   };
-  res.render('portals', {
+  ui.render(res, 'portals', {
     title: 'ERP - Government Portals',
     filter,
     bySystem: sum.bySystem,
@@ -157,7 +232,7 @@ app.get('/sync', async (req, res) => {
       pg.syncSummary(),
     ]);
     const total = summary.reduce((a, b) => a + (b.total || 0), 0);
-    res.render('sync', {
+    ui.render(res, 'sync', {
       title: 'ERP - Sync Activity',
       rows,
       summary,
@@ -167,7 +242,7 @@ app.get('/sync', async (req, res) => {
     });
   } catch (err) {
     process.stderr.write(`[erp] /sync error: ${err.message}\n`);
-    res.render('sync', {
+    ui.render(res, 'sync', {
       title: 'ERP - Sync Activity',
       rows: [], summary: [], total: 0, siteFilter,
       pgAvailable: false,
@@ -182,7 +257,7 @@ app.get('/integration', async (req, res) => {
       pg.pgOnline(),
     ]);
     const erp = store.summary();
-    res.render('integration', {
+    ui.render(res, 'integration', {
       title: 'ERP - Integration Status',
       summary,
       pgUp,
@@ -190,7 +265,7 @@ app.get('/integration', async (req, res) => {
     });
   } catch (err) {
     process.stderr.write(`[erp] /integration error: ${err.message}\n`);
-    res.render('integration', {
+    ui.render(res, 'integration', {
       title: 'ERP - Integration Status',
       summary: [], pgUp: false,
       erpSummary: store.summary(),

@@ -1,57 +1,37 @@
 <%- include('../partials/head') %>
 <link rel="stylesheet" href="/static/css/custom.css">
 <%- include('../partials/header') %>
-<main id="main">
-  <section class="cc-banner">
-    <div class="cc-crest"><span>crest not reproduced</span></div>
-    <p class="cc-banner__title">CCTNS</p>
-    <p class="cc-banner__sub">Crime and Criminal Tracking Network &amp; Systems</p>
-    <p class="cc-banner__welcome">Welcome</p>
-  </section>
-
-  <section class="cc-infobar">
-    <div class="cc-infobar__inner">
-      <div class="cc-infobar__plates">
-        <span class="cc-plate">emblem not reproduced</span>
-        <span class="cc-plate">emblem not reproduced</span>
-      </div>
-      <div class="cc-infobar__links">
-        <a href="/feedback.htm">Feedback</a><a href="/">Contact Us</a>
-        <p>This is an unofficial local demonstration. The original states who manages its
-        content; that statement is not reproduced here.</p>
-      </div>
-      <div class="cc-infobar__addr">
-        <p style="margin:0">The original prints a postal address here.<br>
-        It is deliberately not copied: this replica is not a contact channel.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cc-loginstrip">
-    <div class="cc-loginstrip__inner">
-      <p class="cc-loginstrip__hint">Enter the characters in the textbox below</p>
-      <p class="cc-loginstrip__hint" style="margin-bottom:16px">Characters are case sensitive</p>
-
-      <% const ek = Object.keys(errors || {}); if (ek.length) { %>
-        <div class="notice notice--error" style="max-width:520px;margin:0 auto 14px" role="alert">
+<main id="main" class="cl"><div class="shell">
+  <% const ek = Object.keys(errors || {}); const f = (page.forms && page.forms[0]) ? page.forms[0] : null;
+     const LABEL = { username: 'Username', password: 'Password', firstname: 'First name', answercentercitizen: 'Answer' }; %>
+  <div class="cl-wrap">
+    <section class="cl-brand" aria-labelledby="cl-title">
+      <img class="cl-mark" src="/static/img/cctns-mark.svg" alt="Demonstration mark, not an official emblem" width="112" height="131">
+      <h1 id="cl-title">सीसीटीएनएस / CCTNS</h1>
+      <p class="cl-sub">अपराध एवं अपराधी ट्रैकिंग नेटवर्क एवं सिस्टम<br>Crime and Criminal Tracking Network &amp; Systems</p>
+      <h2>स्वागतम / Welcome</h2>
+      <p class="cl-lead">Citizen Services under the Crime and Criminal Tracking Network &amp; Systems.</p>
+      <p class="cl-lead">This is a local demonstration. Nothing entered here is sent to any government system.</p>
+    </section>
+    <section class="cl-panel" aria-labelledby="cl-login">
+      <h2 id="cl-login">नागरिक लॉगिन / Citizen Login</h2>
+      <p class="cl-panel__sub">Sign in with the demonstration account.</p>
+      <% if (ek.length) { %>
+        <div class="notice notice--error" role="alert">
           <strong>Please correct <%= ek.length %> field<%= ek.length === 1 ? '' : 's' %>.</strong>
           <ul><% ek.forEach(function (k) { %><li><%= errors[k] %></li><% }); %></ul>
         </div>
       <% } %>
       <% if (submitted) { %>
-        <div class="notice notice--ok" style="max-width:520px;margin:0 auto 14px" role="status">
-          <strong>Recorded locally.</strong> Reference <span class="ref-no"><%= submitted.reference %></span>.
-        </div>
+        <div class="notice notice--ok" role="status"><strong>Recorded locally.</strong> Reference <span class="ref-no"><%= submitted.reference %></span>.</div>
       <% } %>
-
-      <% const f = (page.forms && page.forms[0]) ? page.forms[0] : null; %>
       <% if (f) { %>
-        <form class="cc-form" method="post" action="<%= page.route %>" novalidate>
+        <form class="cl-form" method="post" action="<%= page.route %>" novalidate>
           <input type="hidden" name="__form" value="<%= f.id %>">
           <input type="hidden" name="challenge_expected" value="<%= challenge.expected %>">
           <% f.fields.forEach(function (x) { %>
             <div class="field">
-              <label for="<%= x.name %>"><%= x.label %></label>
+              <label for="<%= x.name %>"><%= LABEL[x.name] || x.label %></label>
               <input type="<%= x.inputType === 'password' ? 'password' : 'text' %>"
                      id="<%= x.name %>" name="<%= x.name %>"
                      <%= x.maxLength ? 'maxlength=' + x.maxLength : '' %>
@@ -60,40 +40,30 @@
               <% if (errors[x.name]) { %><span class="field__error"><%= errors[x.name] %></span><% } %>
             </div>
           <% }); %>
-          <div class="field">
-            <label for="challenge_answer"><%= challenge.question %></label>
+          <div class="cl-challenge"><div class="field">
+            <label for="challenge_answer">Verification: <%= challenge.question %></label>
             <input type="text" id="challenge_answer" name="challenge_answer" maxlength="6" autocomplete="off">
+          </div></div>
+          <div class="cl-actions">
+            <button type="submit" class="btn btn--primary">Login (local only)</button>
+            <a class="btn btn--secondary" href="/">View Proclaimed Offenders</a>
           </div>
-          <div class="cc-actions">
-            <button type="submit" class="cc-btn">Login (local only)</button>
-            <a class="cc-btn cc-btn--wide" href="/">View Proclaimed Offenders</a>
-          </div>
-          <p class="field__hint" style="margin-top:12px;text-align:center">
-            The original protects this form with a CAPTCHA. This demonstration asks an
-            arithmetic question instead; no CAPTCHA was reproduced, solved or bypassed.
-          </p>
+          <p class="cl-hint">The original protects this form with a CAPTCHA. This demonstration asks an arithmetic question instead; no CAPTCHA was reproduced, solved or bypassed.</p>
         </form>
       <% } %>
-    </div>
-  </section>
-
-  <section class="cc-contact"><h2>CONTACT US</h2></section>
-  <section class="cc-contact-body">
-    <div class="cc-contact-body__inner">
-      <p style="margin:0">Placeholder Organisation</p>
-      <p style="margin:0">Address, telephone, fax and email are <strong>not reproduced</strong>.</p>
-      <p style="margin:0;font-weight:400;font-size:13px;color:#555">
-        The original prints real contact details here. Copying them into a demonstration
-        would invite mail to an office that has nothing to do with this replica.
-      </p>
-    </div>
-  </section>
-
-  <section class="cc-notice">
-    <h3>NOTICE</h3>
-    <p>The original carries a public notice at this position, in Hindi and English, about the
-    services being free of charge. Its wording is not reproduced here; this block preserves the
-    page's structure only.</p>
-  </section>
-</main>
+    </section>
+  </div>
+  <div class="cl-notes">
+    <section class="cl-note" aria-labelledby="cl-notice">
+      <h3 id="cl-notice">सूचना / NOTICE</h3>
+      <p>This is an unofficial local demonstration of a citizen-services portal, built for development and testing. It is not operated by, or affiliated with, any government body.</p>
+      <p>Do not send payments, postal orders, documents or personal data to any address because of this page. Everything shown here is synthetic.</p>
+    </section>
+    <section class="cl-contact" aria-labelledby="cl-contact">
+      <h3 id="cl-contact">Feedback &amp; Contact</h3>
+      <p>Use the feedback form to send a note to this local demonstration. No office, postal address or telephone number is published here, because none is represented.</p>
+      <div class="cl-links"><a href="/feedback.htm">Feedback</a><a href="/">Contact Us</a></div>
+    </section>
+  </div>
+</div></main>
 <%- include('../partials/footer') %>

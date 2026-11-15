@@ -28,7 +28,7 @@
         <% portals.forEach(function (p, i) { %>
           <li role="none">
             <a role="menuitem" class="ac-sw-item<%= p.code === site.code ? ' is-current' : '' %>" data-port-link
-               href="http://<%= typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost %>:<%= p.port %>/account"<%= p.code === site.code ? ' aria-current="true"' : '' %>>
+               href="<%= typeof portalOrigin === 'function' ? portalOrigin(p.port) : 'http://' + (typeof linkHost === 'undefined' ? '127.0.0.1' : linkHost) + ':' + p.port %>/account"<%= p.code === site.code ? ' aria-current="true"' : '' %>>
               <span class="ac-dot s<%= i + 1 %>"></span>
               <span class="ac-sw-text"><span class="ac-sw-name"><%= p.name %></span><span class="ac-sw-host"><%= p.hostname %></span></span>
               <% if (p.code === site.code) { %><span class="ac-sw-check"><%- include('_auth-icon', {n:'check'}) %></span><% } %>

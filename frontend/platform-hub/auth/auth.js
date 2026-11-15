@@ -5,8 +5,8 @@
   var KEY = 'erp_auth_theme', root = document.documentElement;
   var saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) { /* storage blocked */ }
-  var dark = saved ? saved === 'dark'
-    : !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  // Light unless the visitor chose dark here; the OS setting is not followed.
+  var dark = saved === 'dark';
   root.setAttribute('data-theme', dark ? 'dark' : 'light');
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -77,11 +77,17 @@
           setTimeout(function () { btn.classList.add('is-busy'); btn.setAttribute('aria-disabled', 'true'); }, 0);
         }
       });
+      // the hub's own sign-in form (the portals post to /account/login)
+      var isHubLogin = (form.getAttribute('action') || '').indexOf('/login') === 0;
       window.addEventListener('pageshow', function (e) {   // back button: undo the busy state
         if (!e.persisted) return;
         var btn = form.querySelector('.lg-btn-primary'), lbl = btn && btn.querySelector('.lg-lbl');
         if (btn) { btn.classList.remove('is-busy'); btn.removeAttribute('aria-disabled'); }
         if (lbl && lbl.getAttribute('data-idle')) lbl.textContent = lbl.getAttribute('data-idle');
+        // Restored from the browser's cache: on the hub, Back can land here with
+        // a session still valid. Let the server decide - it sends a signed-in
+        // visitor on to the dashboard instead of asking again.
+        if (isHubLogin) window.location.reload();
       });
     }
 

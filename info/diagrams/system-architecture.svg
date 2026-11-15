@@ -1,0 +1,371 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1590" viewBox="0 0 2400 1590">
+<defs><marker id="h6D28D9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6D28D9"/></marker><marker id="hB45309" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker><marker id="hDC2626" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="h047857" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="h111827" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111827"/></marker><marker id="h6B7280" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker><marker id="h1D4ED8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1D4ED8"/></marker><linearGradient id="hdr" x1="0" x2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#1E3A8A"/></linearGradient><filter id="sh" x="-5%" y="-5%" width="110%" height="120%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0F172A" flood-opacity=".10"/></filter></defs>
+<rect width="2400" height="1590" fill="#F8FAFC"/>
+<rect x="0" y="0" width="2400" height="104" fill="url(#hdr)"/>
+<text x="40" y="50" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="32" font-weight="800" fill="#fff" text-anchor="start">4_ERP · System architecture and data flow</text>
+<text x="40" y="82" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15.5" font-weight="400" fill="#CBD5E1" text-anchor="start">ERP for Maharashtra Prisons, five government-portal replicas with their own department offices, and the integration bus that links them. Unofficial local demonstration; synthetic data only.</text>
+<rect x="1860" y="22" width="14" height="14" rx="3" fill="#EEF4FF" stroke="#1D4ED8" stroke-width="2"/>
+<text x="1882" y="34" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="start">FE  front end (what users see)</text>
+<rect x="1860" y="42" width="14" height="14" rx="3" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="1882" y="54" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="start">BE  back end (server logic)</text>
+<rect x="1860" y="62" width="14" height="14" rx="3" fill="#FFF7E8" stroke="#B45309" stroke-width="2"/>
+<text x="1882" y="74" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="start">DB  database</text>
+<rect x="1860" y="82" width="14" height="14" rx="3" fill="#F5F1FF" stroke="#6D28D9" stroke-width="2"/>
+<text x="1882" y="94" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="start">Integration bus</text>
+<text x="40" y="146" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="800" fill="#6B7280" text-anchor="start">PEOPLE</text>
+<g filter="url(#sh)"><rect x="40" y="170" width="250" height="136" rx="14" fill="#fff" stroke="#0EA5E9" stroke-width="1.6"/></g>
+<circle cx="72" cy="202" r="15" fill="#0EA5E9"/><circle cx="72" cy="197" r="5" fill="#fff"/><path d="M62,210 a10,7 0 0 1 20,0" fill="#fff"/>
+<text x="96" y="208" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">Citizen</text>
+<text x="56" y="240" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Uses the public portal pages:</text>
+<text x="56" y="259" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">one registration works on all</text>
+<text x="56" y="278" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">five portals; files forms,</text>
+<text x="56" y="297" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">visit requests, grievances.</text>
+<g filter="url(#sh)"><rect x="40" y="470" width="250" height="155" rx="14" fill="#fff" stroke="#7C3AED" stroke-width="1.6"/></g>
+<circle cx="72" cy="502" r="15" fill="#7C3AED"/><circle cx="72" cy="497" r="5" fill="#fff"/><path d="M62,510 a10,7 0 0 1 20,0" fill="#fff"/>
+<text x="96" y="508" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">Department officer</text>
+<text x="56" y="540" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Signs in to their own</text>
+<text x="56" y="559" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">department office (/office):</text>
+<text x="56" y="578" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">UIDAI, CCTNS, e-Forensics,</text>
+<text x="56" y="597" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">eCourts or ePrisons.</text>
+<text x="56" y="616" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Separate login per department.</text>
+<g filter="url(#sh)"><rect x="40" y="830" width="250" height="136" rx="14" fill="#fff" stroke="#DC2626" stroke-width="1.6"/></g>
+<circle cx="72" cy="862" r="15" fill="#DC2626"/><circle cx="72" cy="857" r="5" fill="#fff"/><path d="M62,870 a10,7 0 0 1 20,0" fill="#fff"/>
+<text x="96" y="868" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">ERP user / administrator</text>
+<text x="56" y="900" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Prison ERP staff and admins.</text>
+<text x="56" y="919" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Search one identifier in</text>
+<text x="56" y="938" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Person Lookup; watch records</text>
+<text x="56" y="957" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">arrive live; audit trail.</text>
+<rect x="330" y="140" width="1120" height="1130" rx="18" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="9 7"/>
+<text x="350" y="172" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="800" fill="#6B7280" text-anchor="start">PLATFORM SERVICE</text>
+<text x="520" y="172" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="500" fill="#6B7280" text-anchor="start">one Node.js + Express process · backend/platform-api · five portal ports + hub</text>
+<text x="370" y="206" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="800" fill="#1D4ED8" text-anchor="start">FRONT END</text>
+<text x="735" y="206" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="800" fill="#047857" text-anchor="start">BACK END</text>
+<text x="1080" y="206" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="800" fill="#B45309" text-anchor="start">DATABASE (one per department)</text>
+<rect x="346" y="222" width="6" height="150" rx="3" fill="#2F2B69"/>
+<rect x="364" y="222" width="340" height="150" rx="12" fill="#EEF4FF" stroke="#1D4ED8" stroke-width="1.6"/>
+<rect x="376" y="234" width="28.4" height="20" rx="10" fill="#1D4ED8"/>
+<text x="390.2" y="248.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">FE</text>
+<text x="414" y="249" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">UIDAI / Aadhaar  :4177</text>
+<text x="378" y="278" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Public replica pages (unchanged)</text>
+<text x="378" y="297" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Officer workspace  /office</text>
+<text x="378" y="316" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  login · dashboard · forms ·</text>
+<text x="378" y="335" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  record steppers · delivery log</text>
+<rect x="730" y="222" width="310" height="150" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6"/>
+<rect x="742" y="234" width="28.4" height="20" rx="10" fill="#047857"/>
+<text x="756.2" y="248.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">BE</text>
+<text x="780" y="249" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="start">Department module</text>
+<text x="744" y="278" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Enrolment &amp; update forms</text>
+<text x="744" y="297" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Approval issues Aadhaar no.</text>
+<text x="744" y="316" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Validation · workflow rules</text>
+<text x="744" y="335" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Writes record + outbox event</text>
+<path d="M1070,236 L1070,358 A180.0,12 0 0 0 1430,358 L1430,236" fill="#FFF7E8" stroke="#B45309" stroke-width="1.6"/>
+<ellipse cx="1250.0" cy="236" rx="180.0" ry="12" fill="#F5CF8F" stroke="#B45309" stroke-width="1.6"/>
+<rect x="1080" y="254" width="28.4" height="20" rx="10" fill="#B45309"/>
+<text x="1094.2" y="268.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">DB</text>
+<text x="1116" y="269" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#111827" text-anchor="start">uidai.sqlite</text>
+<text x="1082" y="290" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#B45309" text-anchor="start">own file, departments/</text>
+<text x="1082" y="310" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">residents, enrolments,</text>
+<text x="1082" y="327" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">update requests, outbox</text>
+<text x="1082" y="344" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">officers, activity log</text>
+<path d="M704,297.0 L728,297.0" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h1D4ED8)"/>
+<path d="M1040,297.0 L1068,297.0" fill="none" stroke="#047857" stroke-width="2" stroke-linejoin="round" marker-end="url(#h047857)"/>
+<rect x="346" y="386" width="6" height="150" rx="3" fill="#0062CC"/>
+<rect x="364" y="386" width="340" height="150" rx="12" fill="#EEF4FF" stroke="#1D4ED8" stroke-width="1.6"/>
+<rect x="376" y="398" width="28.4" height="20" rx="10" fill="#1D4ED8"/>
+<text x="390.2" y="412.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">FE</text>
+<text x="414" y="413" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">CCTNS  :4175</text>
+<text x="378" y="442" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Public replica pages (unchanged)</text>
+<text x="378" y="461" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Officer workspace  /office</text>
+<text x="378" y="480" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  login · dashboard · forms ·</text>
+<text x="378" y="499" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  record steppers · delivery log</text>
+<rect x="730" y="386" width="310" height="150" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6"/>
+<rect x="742" y="398" width="28.4" height="20" rx="10" fill="#047857"/>
+<text x="756.2" y="412.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">BE</text>
+<text x="780" y="413" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="start">Department module</text>
+<text x="744" y="442" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">FIR registration</text>
+<text x="744" y="461" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Police verification requests</text>
+<text x="744" y="480" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Validation · workflow rules</text>
+<text x="744" y="499" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Writes record + outbox event</text>
+<path d="M1070,400 L1070,522 A180.0,12 0 0 0 1430,522 L1430,400" fill="#FFF7E8" stroke="#B45309" stroke-width="1.6"/>
+<ellipse cx="1250.0" cy="400" rx="180.0" ry="12" fill="#F5CF8F" stroke="#B45309" stroke-width="1.6"/>
+<rect x="1080" y="418" width="28.4" height="20" rx="10" fill="#B45309"/>
+<text x="1094.2" y="432.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">DB</text>
+<text x="1116" y="433" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#111827" text-anchor="start">cctns.sqlite</text>
+<text x="1082" y="454" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#B45309" text-anchor="start">own file, departments/</text>
+<text x="1082" y="474" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">FIRs, verification</text>
+<text x="1082" y="491" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">requests, outbox</text>
+<text x="1082" y="508" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">officers, activity log</text>
+<path d="M704,461.0 L728,461.0" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h1D4ED8)"/>
+<path d="M1040,461.0 L1068,461.0" fill="none" stroke="#047857" stroke-width="2" stroke-linejoin="round" marker-end="url(#h047857)"/>
+<rect x="346" y="550" width="6" height="150" rx="3" fill="#6D3FE6"/>
+<rect x="364" y="550" width="340" height="150" rx="12" fill="#EEF4FF" stroke="#1D4ED8" stroke-width="1.6"/>
+<rect x="376" y="562" width="28.4" height="20" rx="10" fill="#1D4ED8"/>
+<text x="390.2" y="576.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">FE</text>
+<text x="414" y="577" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">e-Forensics  :4176</text>
+<text x="378" y="606" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Public replica pages (unchanged)</text>
+<text x="378" y="625" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Officer workspace  /office</text>
+<text x="378" y="644" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  login · dashboard · forms ·</text>
+<text x="378" y="663" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  record steppers · delivery log</text>
+<rect x="730" y="550" width="310" height="150" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6"/>
+<rect x="742" y="562" width="28.4" height="20" rx="10" fill="#047857"/>
+<text x="756.2" y="576.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">BE</text>
+<text x="780" y="577" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="start">Department module</text>
+<text x="744" y="606" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">CESF case submission</text>
+<text x="744" y="625" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Lab workflow, custody chain</text>
+<text x="744" y="644" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Validation · workflow rules</text>
+<text x="744" y="663" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Writes record + outbox event</text>
+<path d="M1070,564 L1070,686 A180.0,12 0 0 0 1430,686 L1430,564" fill="#FFF7E8" stroke="#B45309" stroke-width="1.6"/>
+<ellipse cx="1250.0" cy="564" rx="180.0" ry="12" fill="#F5CF8F" stroke="#B45309" stroke-width="1.6"/>
+<rect x="1080" y="582" width="28.4" height="20" rx="10" fill="#B45309"/>
+<text x="1094.2" y="596.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">DB</text>
+<text x="1116" y="597" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#111827" text-anchor="start">eforensics.sqlite</text>
+<text x="1082" y="618" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#B45309" text-anchor="start">own file, departments/</text>
+<text x="1082" y="638" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">forensic cases, exhibits,</text>
+<text x="1082" y="655" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">custody events, outbox</text>
+<text x="1082" y="672" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">officers, activity log</text>
+<path d="M704,625.0 L728,625.0" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h1D4ED8)"/>
+<path d="M1040,625.0 L1068,625.0" fill="none" stroke="#047857" stroke-width="2" stroke-linejoin="round" marker-end="url(#h047857)"/>
+<rect x="346" y="714" width="6" height="150" rx="3" fill="#105B59"/>
+<rect x="364" y="714" width="340" height="150" rx="12" fill="#EEF4FF" stroke="#1D4ED8" stroke-width="1.6"/>
+<rect x="376" y="726" width="28.4" height="20" rx="10" fill="#1D4ED8"/>
+<text x="390.2" y="740.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">FE</text>
+<text x="414" y="741" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">eCourts  :4178</text>
+<text x="378" y="770" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Public replica pages (unchanged)</text>
+<text x="378" y="789" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Officer workspace  /office</text>
+<text x="378" y="808" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  login · dashboard · forms ·</text>
+<text x="378" y="827" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  record steppers · delivery log</text>
+<rect x="730" y="714" width="310" height="150" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6"/>
+<rect x="742" y="726" width="28.4" height="20" rx="10" fill="#047857"/>
+<text x="756.2" y="740.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">BE</text>
+<text x="780" y="741" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="start">Department module</text>
+<text x="744" y="770" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Case filing, registration (CNR)</text>
+<text x="744" y="789" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Hearings, judgment, appeal</text>
+<text x="744" y="808" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Validation · workflow rules</text>
+<text x="744" y="827" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Writes record + outbox event</text>
+<path d="M1070,728 L1070,850 A180.0,12 0 0 0 1430,850 L1430,728" fill="#FFF7E8" stroke="#B45309" stroke-width="1.6"/>
+<ellipse cx="1250.0" cy="728" rx="180.0" ry="12" fill="#F5CF8F" stroke="#B45309" stroke-width="1.6"/>
+<rect x="1080" y="746" width="28.4" height="20" rx="10" fill="#B45309"/>
+<text x="1094.2" y="760.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">DB</text>
+<text x="1116" y="761" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#111827" text-anchor="start">ecourts.sqlite</text>
+<text x="1082" y="782" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#B45309" text-anchor="start">own file, departments/</text>
+<text x="1082" y="802" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">cases, hearings, orders,</text>
+<text x="1082" y="819" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">outbox</text>
+<text x="1082" y="836" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">officers, activity log</text>
+<path d="M704,789.0 L728,789.0" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h1D4ED8)"/>
+<path d="M1040,789.0 L1068,789.0" fill="none" stroke="#047857" stroke-width="2" stroke-linejoin="round" marker-end="url(#h047857)"/>
+<rect x="346" y="878" width="6" height="150" rx="3" fill="#0D4F86"/>
+<rect x="364" y="878" width="340" height="150" rx="12" fill="#EEF4FF" stroke="#1D4ED8" stroke-width="1.6"/>
+<rect x="376" y="890" width="28.4" height="20" rx="10" fill="#1D4ED8"/>
+<text x="390.2" y="904.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">FE</text>
+<text x="414" y="905" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">ePrisons  :4173</text>
+<text x="378" y="934" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Public replica pages (unchanged)</text>
+<text x="378" y="953" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Officer workspace  /office</text>
+<text x="378" y="972" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  login · dashboard · forms ·</text>
+<text x="378" y="991" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  record steppers · delivery log</text>
+<rect x="730" y="878" width="310" height="150" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6"/>
+<rect x="742" y="890" width="28.4" height="20" rx="10" fill="#047857"/>
+<text x="756.2" y="904.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">BE</text>
+<text x="780" y="905" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="start">Department module</text>
+<text x="744" y="934" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Admission, conviction, release</text>
+<text x="744" y="953" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">e-Mulakat visits, grievances</text>
+<text x="744" y="972" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Validation · workflow rules</text>
+<text x="744" y="991" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Writes record + outbox event</text>
+<path d="M1070,892 L1070,1014 A180.0,12 0 0 0 1430,1014 L1430,892" fill="#FFF7E8" stroke="#B45309" stroke-width="1.6"/>
+<ellipse cx="1250.0" cy="892" rx="180.0" ry="12" fill="#F5CF8F" stroke="#B45309" stroke-width="1.6"/>
+<rect x="1080" y="910" width="28.4" height="20" rx="10" fill="#B45309"/>
+<text x="1094.2" y="924.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">DB</text>
+<text x="1116" y="925" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#111827" text-anchor="start">eprisons.sqlite</text>
+<text x="1082" y="946" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#B45309" text-anchor="start">own file, departments/</text>
+<text x="1082" y="966" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">custody, visits,</text>
+<text x="1082" y="983" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">grievances, outbox</text>
+<text x="1082" y="1000" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">officers, activity log</text>
+<path d="M704,953.0 L728,953.0" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h1D4ED8)"/>
+<path d="M1040,953.0 L1068,953.0" fill="none" stroke="#047857" stroke-width="2" stroke-linejoin="round" marker-end="url(#h047857)"/>
+<line x1="346" y1="1038" x2="1434" y2="1038" stroke="#D1D5DB" stroke-width="1.4"/>
+<text x="350" y="1058" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="800" fill="#6B7280" text-anchor="start">SHARED BY THE FIVE PORTALS</text>
+<rect x="364" y="1068" width="340" height="140" rx="12" fill="#EEF4FF" stroke="#1D4ED8" stroke-width="1.6"/>
+<rect x="376" y="1080" width="28.4" height="20" rx="10" fill="#1D4ED8"/>
+<text x="390.2" y="1094.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">FE</text>
+<text x="414" y="1095" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">ERP Hub dashboard  :4100</text>
+<text x="378" y="1124" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">React app (admin sign-in)</text>
+<text x="378" y="1143" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Dashboard, records, citizens,</text>
+<text x="378" y="1162" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">audit, Person Lookup view</text>
+<text x="378" y="1181" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">(lookup data via ERP API)</text>
+<rect x="730" y="1068" width="310" height="140" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6"/>
+<rect x="742" y="1080" width="28.4" height="20" rx="10" fill="#047857"/>
+<text x="756.2" y="1094.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">BE</text>
+<text x="780" y="1095" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="start">Shared identity + hub</text>
+<text x="744" y="1124" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Citizen registration &amp; sign-in</text>
+<text x="744" y="1143" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Portal form submissions</text>
+<text x="744" y="1162" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Write-through to ERP intake</text>
+<text x="744" y="1181" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Hub API + lookup proxy</text>
+<path d="M1070,1082 L1070,1194 A180.0,12 0 0 0 1430,1194 L1430,1082" fill="#FFF7E8" stroke="#B45309" stroke-width="1.6"/>
+<ellipse cx="1250.0" cy="1082" rx="180.0" ry="12" fill="#F5CF8F" stroke="#B45309" stroke-width="1.6"/>
+<rect x="1080" y="1100" width="28.4" height="20" rx="10" fill="#B45309"/>
+<text x="1094.2" y="1114.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">DB</text>
+<text x="1116" y="1115" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#111827" text-anchor="start">platform.sqlite</text>
+<text x="1082" y="1136" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#B45309" text-anchor="start">citizen accounts &amp; forms</text>
+<text x="1082" y="1156" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">person, session, submission,</text>
+<text x="1082" y="1173" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">submission_field, erp_sync</text>
+<path d="M704,1138 L728,1138" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h1D4ED8)"/>
+<path d="M1040,1138 L1068,1138" fill="none" stroke="#047857" stroke-width="2" stroke-linejoin="round" marker-end="url(#h047857)"/>
+<g filter="url(#sh)"><rect x="1490" y="222" width="250" height="800" rx="16" fill="#F5F1FF" stroke="#6D28D9" stroke-width="2"/></g>
+<rect x="1504" y="236" width="94.0" height="20" rx="10" fill="#6D28D9"/>
+<text x="1551.0" y="250.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">MIDDLEWARE</text>
+<text x="1504" y="284" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="21" font-weight="800" fill="#6D28D9" text-anchor="start">Integration bus</text>
+<text x="1504" y="312" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">Transactional outbox:</text>
+<text x="1504" y="331" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">record and event saved in</text>
+<text x="1504" y="350" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">one step, nothing lost.</text>
+<rect x="1504" y="392" width="222" height="84" rx="10" fill="#fff" stroke="#CDBDF7" stroke-width="1.3"/>
+<text x="1518" y="418" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#6D28D9" text-anchor="start">Instant</text>
+<text x="1518" y="440" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">delivered as soon as it is</text>
+<text x="1518" y="458" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">saved (~10–60 ms)</text>
+<rect x="1504" y="490" width="222" height="84" rx="10" fill="#fff" stroke="#CDBDF7" stroke-width="1.3"/>
+<text x="1518" y="516" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#6D28D9" text-anchor="start">Signed</text>
+<text x="1518" y="538" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">HMAC-SHA256 + timestamp;</text>
+<text x="1518" y="556" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">forgeries refused</text>
+<rect x="1504" y="588" width="222" height="84" rx="10" fill="#fff" stroke="#CDBDF7" stroke-width="1.3"/>
+<text x="1518" y="614" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#6D28D9" text-anchor="start">Ordered</text>
+<text x="1518" y="636" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">oldest first, batches</text>
+<text x="1518" y="654" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">of up to 50</text>
+<rect x="1504" y="686" width="222" height="84" rx="10" fill="#fff" stroke="#CDBDF7" stroke-width="1.3"/>
+<text x="1518" y="712" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#6D28D9" text-anchor="start">Retried</text>
+<text x="1518" y="734" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">1 s → 2 s → … → 60 s</text>
+<text x="1518" y="752" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">while the ERP is away</text>
+<rect x="1504" y="784" width="222" height="84" rx="10" fill="#fff" stroke="#CDBDF7" stroke-width="1.3"/>
+<text x="1518" y="810" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#6D28D9" text-anchor="start">Exactly once</text>
+<text x="1518" y="832" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">ERP ignores an event id</text>
+<text x="1518" y="850" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">it has already applied</text>
+<rect x="1504" y="882" width="222" height="84" rx="10" fill="#fff" stroke="#CDBDF7" stroke-width="1.3"/>
+<text x="1518" y="908" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#6D28D9" text-anchor="start">Visible</text>
+<text x="1518" y="930" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">delivery log in every</text>
+<text x="1518" y="948" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">department office</text>
+<path d="M1430,297.0 L1488,297.0" fill="none" stroke="#6D28D9" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#h6D28D9)"/>
+<path d="M1430,461.0 L1488,461.0" fill="none" stroke="#6D28D9" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#h6D28D9)"/>
+<path d="M1430,625.0 L1488,625.0" fill="none" stroke="#6D28D9" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#h6D28D9)"/>
+<path d="M1430,789.0 L1488,789.0" fill="none" stroke="#6D28D9" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#h6D28D9)"/>
+<path d="M1430,953.0 L1488,953.0" fill="none" stroke="#6D28D9" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#h6D28D9)"/>
+<text x="1460.0" y="287.0" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#6D28D9" text-anchor="middle">outbox</text>
+<rect x="1780" y="140" width="580" height="1130" rx="18" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.6" stroke-dasharray="9 7"/>
+<text x="1800" y="172" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="800" fill="#DC2626" text-anchor="start">ERP SERVICE</text>
+<text x="1920" y="172" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="500" fill="#6B7280" text-anchor="start">separate Node.js process · backend/erp-api · :4200</text>
+<rect x="1804" y="196" width="532" height="220" rx="12" fill="#EEF4FF" stroke="#1D4ED8" stroke-width="1.6"/>
+<rect x="1818" y="210" width="28.4" height="20" rx="10" fill="#1D4ED8"/>
+<text x="1832.2" y="224.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">FE</text>
+<text x="1856" y="225" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="17" font-weight="800" fill="#111827" text-anchor="start">ERP console  :4200</text>
+<text x="1820" y="256.0" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Dashboard · Received Records · Citizens · Audit Trail</text>
+<text x="1820" y="275.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Person Lookup: one identifier (Aadhaar, mobile, CNR,</text>
+<text x="1820" y="295.0" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">  FIR, prisoner no., name) → everything five systems hold</text>
+<text x="1820" y="314.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Identity card · case journey stepper · per-system records</text>
+<text x="1820" y="334.0" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Timeline · live banner when a new record arrives</text>
+<text x="1820" y="353.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Same lookup module also runs inside the hub (:4100)</text>
+<rect x="1804" y="450" width="532" height="330" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6"/>
+<rect x="1818" y="464" width="28.4" height="20" rx="10" fill="#047857"/>
+<text x="1832.2" y="478.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">BE</text>
+<text x="1856" y="479" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="17" font-weight="800" fill="#111827" text-anchor="start">erp-api (Express)</text>
+<rect x="1820" y="512" width="500" height="62" rx="8" fill="#fff" stroke="#A7E3C9" stroke-width="1.2"/>
+<text x="1834" y="531" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13.5" font-weight="800" fill="#047857" text-anchor="start">POST /api/ingest/events</text>
+<text x="1834" y="550" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">verifies signature · applies each event once</text>
+<text x="1834" y="568" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">matches the person: Aadhaar → EID → mobile + name</text>
+<rect x="1820" y="584" width="500" height="44" rx="8" fill="#fff" stroke="#A7E3C9" stroke-width="1.2"/>
+<text x="1834" y="603" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13.5" font-weight="800" fill="#047857" text-anchor="start">POST /api/intake</text>
+<text x="1834" y="622" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">citizen form write-through (both DBs or neither)</text>
+<rect x="1820" y="638" width="500" height="62" rx="8" fill="#fff" stroke="#A7E3C9" stroke-width="1.2"/>
+<text x="1834" y="657" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13.5" font-weight="800" fill="#047857" text-anchor="start">GET /api/lookup · /person/:ref</text>
+<text x="1834" y="676" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">5 connectors in parallel, each with its own timeout;</text>
+<text x="1834" y="694" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">a system that is down never hides the others</text>
+<rect x="1820" y="710" width="500" height="44" rx="8" fill="#fff" stroke="#A7E3C9" stroke-width="1.2"/>
+<text x="1834" y="729" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="13.5" font-weight="800" fill="#047857" text-anchor="start">GET /api/lookup/stream</text>
+<text x="1834" y="748" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">live Server-Sent Events to open lookup pages</text>
+<path d="M1804,832 L1804,1058 A266.0,12 0 0 0 2336,1058 L2336,832" fill="#FFF7E8" stroke="#B45309" stroke-width="1.6"/>
+<ellipse cx="2070.0" cy="832" rx="266.0" ry="12" fill="#F5CF8F" stroke="#B45309" stroke-width="1.6"/>
+<rect x="1814" y="850" width="28.4" height="20" rx="10" fill="#B45309"/>
+<text x="1828.2" y="864.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">DB</text>
+<text x="1850" y="865" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#111827" text-anchor="start">erp.sqlite</text>
+<text x="1816" y="886" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#B45309" text-anchor="start">the ERP’s own database · never opened by a portal</text>
+<text x="1816" y="906" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">Intake:  source_system · citizen · intake · intake_field</text>
+<text x="1816" y="923" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">Audit:   audit_log (append-only: no UPDATE, no DELETE)</text>
+<text x="1816" y="940" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">Lookup:  lookup_subject (one row per real person)</text>
+<text x="1816" y="957" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">         lookup_identifier (hashed + masked numbers)</text>
+<text x="1816" y="974" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">         lookup_record (each record, per person)</text>
+<text x="1816" y="991" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#374151" text-anchor="start">Bus:     lookup_link · ingest_event (idempotency)</text>
+<rect x="1804" y="1100" width="532" height="140" rx="12" fill="#F1F5F9" stroke="#334155" stroke-width="1.6" stroke-dasharray="7 6"/>
+<rect x="1818" y="1114" width="28.4" height="20" rx="10" fill="#B45309"/>
+<text x="1832.2" y="1128.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle">DB</text>
+<text x="1856" y="1129" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">PostgreSQL  demo_replica</text>
+<text x="1820" y="1158" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Read-only migration and backup of both SQLite</text>
+<text x="1820" y="1177" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">databases (database/postgres); used by the console’s</text>
+<text x="1820" y="1196" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="400" fill="#374151" text-anchor="start">Sync Activity and Integration Status pages.</text>
+<path d="M2070.0,416 L2070.0,446" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h1D4ED8)"/>
+<path d="M2070.0,780 L2070.0,816" fill="none" stroke="#047857" stroke-width="2" stroke-linejoin="round" marker-end="url(#h047857)"/>
+<path d="M2290,1070 L2290,1096" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="8 6" marker-end="url(#h6B7280)"/>
+<path d="M1740,532 L1818,532" fill="none" stroke="#6D28D9" stroke-width="3" stroke-linejoin="round" marker-end="url(#h6D28D9)"/>
+<rect x="1715.8" y="501" width="126.4" height="22" rx="11" fill="#fff" stroke="#6D28D9" stroke-width="1.2"/>
+<text x="1779.0" y="517" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6D28D9" text-anchor="middle">signed HTTP push</text>
+<path d="M885,1208 L885,1246 L1615.0,1246 L1615.0,1246 L1762,1246 L1762,640 L1818,640" fill="none" stroke="#047857" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#h047857)"/>
+<rect x="1095.4" y="1225" width="554.2" height="22" rx="11" fill="#fff" stroke="#047857" stroke-width="1.2"/>
+<text x="1372.5" y="1241" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#047857" text-anchor="middle">HTTP only: POST /api/intake (write-through) · hub reads ERP API + lookup proxy</text>
+<path d="M2320,500 L2320,422" fill="none" stroke="#DC2626" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#hDC2626)"/>
+<text x="2312" y="440" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="800" fill="#DC2626" text-anchor="end">live (SSE)</text>
+<path d="M290,250 L364,282" fill="none" stroke="#0EA5E9" stroke-width="2" stroke-linejoin="round" marker-end="url(#h0EA5E9)"/>
+<path d="M290,560 L364,620" fill="none" stroke="#7C3AED" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#h7C3AED)"/>
+<path d="M290,905 L300,905 L300,1138 L364,1138" fill="none" stroke="#DC2626" stroke-width="2" stroke-linejoin="round" marker-end="url(#hDC2626)"/>
+<rect x="260.95" y="1099" width="78.1" height="22" rx="11" fill="#fff" stroke="#DC2626" stroke-width="1.2"/>
+<text x="300.0" y="1115" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#DC2626" text-anchor="middle">hub :4100</text>
+<path d="M165,980 L165,1320 L2380,1320 L2380,300 L2336,300" fill="none" stroke="#DC2626" stroke-width="2" stroke-linejoin="round" marker-end="url(#hDC2626)"/>
+<rect x="833.35" y="1305" width="133.3" height="22" rx="11" fill="#fff" stroke="#DC2626" stroke-width="1.2"/>
+<text x="900.0" y="1321" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#DC2626" text-anchor="middle">ERP console :4200</text>
+<circle cx="328" cy="620" r="15" fill="#7C3AED" stroke="#fff" stroke-width="3"/>
+<text x="328" y="625.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<circle cx="1054" cy="603.0" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="1054" y="608.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<circle cx="1460.0" cy="603.0" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="1460.0" y="608.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<circle cx="1788" cy="532" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="1788" y="537.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">4</text>
+<circle cx="2092.0" cy="798" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="2092.0" y="803.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">5</text>
+<circle cx="2320" cy="456" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="2320" y="461.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">6</text>
+<rect x="40" y="1350" width="2320" height="216" rx="16" fill="#fff" stroke="#D1D5DB" stroke-width="1.4"/>
+<text x="64" y="1386" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="800" fill="#6B7280" text-anchor="start">HOW ONE RECORD TRAVELS</text>
+<circle cx="80.0" cy="1426" r="15" fill="#7C3AED" stroke="#fff" stroke-width="3"/>
+<text x="80.0" y="1431.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="106.0" y="1432" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">Officer saves</text>
+<text x="68.0" y="1464" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">A department officer signs in to their own</text>
+<text x="68.0" y="1484" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">office (e.g. CCTNS) and registers an FIR.</text>
+<path d="M408.6666666666667,1426 L434.6666666666667,1426" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h94A3B8)"/>
+<circle cx="458.6666666666667" cy="1426" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="458.6666666666667" y="1431.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="484.6666666666667" y="1432" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">Department DB</text>
+<text x="446.6666666666667" y="1464" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">The record and an outbox event are written</text>
+<text x="446.6666666666667" y="1484" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">together, in that department’s own database.</text>
+<path d="M787.3333333333334,1426 L813.3333333333334,1426" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h94A3B8)"/>
+<circle cx="837.3333333333334" cy="1426" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="837.3333333333334" y="1431.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="863.3333333333334" y="1432" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">Integration bus</text>
+<text x="825.3333333333334" y="1464" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">The bus sends it at once to the ERP, signed;</text>
+<text x="825.3333333333334" y="1484" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">if the ERP is away it retries until</text>
+<text x="825.3333333333334" y="1504" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">delivered.</text>
+<path d="M1166.0,1426 L1192.0,1426" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h94A3B8)"/>
+<circle cx="1216.0" cy="1426" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="1216.0" y="1431.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">4</text>
+<text x="1242.0" y="1432" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">ERP ingest</text>
+<text x="1204.0" y="1464" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">The ERP checks the signature, applies the</text>
+<text x="1204.0" y="1484" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">event once and finds the person across</text>
+<text x="1204.0" y="1504" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">departments.</text>
+<path d="M1544.6666666666667,1426 L1570.6666666666667,1426" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h94A3B8)"/>
+<circle cx="1594.6666666666667" cy="1426" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="1594.6666666666667" y="1431.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">5</text>
+<text x="1620.6666666666667" y="1432" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">ERP database</text>
+<text x="1582.6666666666667" y="1464" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">The record is filed under every person it</text>
+<text x="1582.6666666666667" y="1484" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">names; its numbers become searchable.</text>
+<path d="M1923.3333333333335,1426 L1949.3333333333335,1426" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linejoin="round" marker-end="url(#h94A3B8)"/>
+<circle cx="1973.3333333333335" cy="1426" r="15" fill="#DC2626" stroke="#fff" stroke-width="3"/>
+<text x="1973.3333333333335" y="1431.5" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">6</text>
+<text x="1999.3333333333335" y="1432" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#111827" text-anchor="start">Live on screen</text>
+<text x="1961.3333333333335" y="1464" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">Open Person Lookup pages (ERP and hub) show</text>
+<text x="1961.3333333333335" y="1484" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#374151" text-anchor="start">it within a fraction of a second.</text>
+<line x1="64" y1="1536" x2="2336" y2="1536" stroke="#D1D5DB" stroke-width="1.2"/>
+<text x="64" y="1562" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6B7280" text-anchor="start">Rules that always hold: the ERP never calls a portal and never opens a portal database; no portal opens the ERP database; data moves only portal → ERP, over HTTP. Identity numbers are stored in the ERP only as keyed hashes and masks.</text>
+</svg>

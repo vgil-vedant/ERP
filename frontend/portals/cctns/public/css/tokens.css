@@ -50,18 +50,7 @@
   --shell:   1206px;
 }
 
-/* The original has no dark theme. These keep the demo legible if the viewer's
-   OS is dark, without claiming to mirror anything upstream. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
-    --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;
-    --link: #7fb6e4; --footer-text: #b4bfc4;
-    --demo-amber-bg: #3a2e10; --demo-amber: #f0c868;
-    --ok-bg: #14301f; --ok: #7fd8a0;
-    --err-bg: #3a1a17; --err: #f09a90;
-  }
-}
+/* No automatic dark theme: the page looks the same whatever the viewer's OS setting. */
 :root[data-theme="dark"] {
   --page-bg: #14181a; --panel-bg: #1c2124; --input-bg: #1c2124;
   --body-text: #e6e9ea; --muted: #93a0a5; --rule: #394246;

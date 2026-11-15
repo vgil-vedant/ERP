@@ -19,6 +19,7 @@
         <% }); %>
       </ul>
     </nav>
+    <% if (typeof officeButton !== 'undefined' && officeButton) { %><a class="btn btn--primary office-login" href="/office/login">Office login</a><% } %>
   </div>
 </header>
 <% if (typeof pageTitle !== 'undefined' && pageTitle) { %>

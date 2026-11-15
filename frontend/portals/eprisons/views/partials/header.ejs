@@ -5,6 +5,7 @@
         <span class="pill__icon" aria-hidden="true"></span><%= l.label %>
       </a>
     <% }); %>
+    <% if (typeof officeButton !== 'undefined' && officeButton) { %><a class="pill office-login" href="/office/login"><span class="pill__icon" aria-hidden="true"></span>Office login</a><% } %>
   </div>
 </div>
 
