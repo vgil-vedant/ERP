@@ -9,7 +9,7 @@
  * this department, so a visit can never be booked for someone who is not there.
  */
 
-const { LISTS, CRIMES, DISTRICT_LIST, sectionsFor, personFields, personInput, opt, pad, yearOf } = require('./common');
+const { LISTS, CRIMES, DISTRICT_LIST, sectionsFor, personFields, personInput, opt, pad, yearOf, editAction } = require('./common');
 
 const MODES = [opt('Physical'), opt('Video conference')];
 const prisonCode = (name) => {
@@ -50,12 +50,12 @@ module.exports = {
       subtitle: (r) => `${r.data.inmate.name} · ${r.data.prison}`,
     },
     visit_request: {
-      label: 'e-Mulakat visit', plural: 'Visits', closed: ['visited', 'rejected'],
+      label: 'e-Mulakat visit', plural: 'Visits', closed: ['visited', 'rejected'], awaiting: ['registered', 'approved'],
       title: (r) => `Visit ${r.data.registration_no}`,
       subtitle: (r) => `${r.data.visitor.name} to meet ${r.data.prisoner.name} · ${r.data.visit_date}`,
     },
     grievance: {
-      label: 'Grievance', plural: 'Grievances', closed: ['disposed'],
+      label: 'Grievance', plural: 'Grievances', closed: ['disposed'], awaiting: ['acknowledged', 'under_verification'],
       title: (r) => `Grievance ${r.ref}`,
       subtitle: (r) => `${r.data.category} · ${r.data.prisoner.name}`,
     },
@@ -247,6 +247,17 @@ module.exports = {
         fields: [{ name: 'date', label: 'Released on', type: 'date', required: true, notFuture: true }],
         apply: (r, v) => ({ data: { ...r.data, in_custody: false, category: 'Released (sentence completed)', released_on: v.date, release_reason: 'Sentence completed, with set-off and remission', expected_release: null }, at: v.date }),
       },
+      editAction({
+        from: ['undertrial', 'convict'],
+        description: 'Correct the warrant, the court and the CNR. The prisoner number changes only on conviction.',
+        fields: [
+          { name: 'warrant', label: 'Warrant', type: 'text', required: true, max: 160, width: 'full' },
+          { name: 'court', label: 'Court', type: 'text', max: 160, width: 'full' },
+          { name: 'cnr', label: 'CNR (if the case is registered)', type: 'text', max: 16, pattern: '^[A-Z]{4}\\d{12}$', patternMessage: 'A CNR has 16 characters, for example MHPU010012342026.', width: 'half' },
+        ],
+        prefill: (r) => ({ warrant: r.data.warrant, court: r.data.court, cnr: r.data.cnr }),
+        apply: (r, v) => ({ data: { ...r.data, warrant: v.warrant, court: v.court || null, cnr: v.cnr || null } }),
+      }),
     ],
     visit_request: [
       {
@@ -260,6 +271,24 @@ module.exports = {
         apply: (r, v, ctx) => syncVisit(r, ctx, 'rejected', { rejection_reason: v.reason }),
       },
       { key: 'visited', label: 'Mark visit completed', from: ['approved'], to: 'visited', apply: (r, v, ctx) => syncVisit(r, ctx, 'visited', {}) },
+      editAction({
+        from: ['registered'],
+        description: 'Change the date or mode of the visit before it is decided. The prisoner’s custody record shows the change too.',
+        fields: [
+          { name: 'visit_date', label: 'Visit date', type: 'date', required: true, width: 'third', help: 'A new date cannot be in the past.' },
+          { name: 'mode', label: 'Visit mode', type: 'select', required: true, options: MODES, width: 'third' },
+          { name: 'additional', label: 'Additional visitors', type: 'number', min: 0, max: 9, width: 'third' },
+          { name: 'additional_names', label: 'Names of additional visitors', type: 'text', max: 150, when: { field: 'additional', not: 0 }, width: 'full' },
+        ],
+        prefill: (r) => ({ visit_date: r.data.visit_date, mode: r.data.visit_mode, additional: r.data.additional_visitors || 0, additional_names: r.data.additional_names }),
+        apply(r, v, ctx) {
+          // a visit already registered for a date now past can still be corrected; a new date cannot be in the past
+          if (v.visit_date !== r.data.visit_date && v.visit_date < ctx.today()) ctx.fail('visit_date', 'Visit date cannot be in the past.');
+          const additional = v.additional || 0;
+          const data = { ...r.data, visit_date: v.visit_date, visit_mode: v.mode, additional_visitors: additional, additional_names: additional ? v.additional_names : null };
+          return { ...syncVisitDetails(r, ctx, { date: v.visit_date, mode: v.mode }), data };
+        },
+      }),
     ],
     grievance: [
       { key: 'verify', label: 'Start verification', from: ['acknowledged'], to: 'under_verification' },
@@ -268,6 +297,15 @@ module.exports = {
         fields: [{ name: 'action', label: 'Action taken', type: 'textarea', required: true, max: 300 }],
         apply: (r, v) => ({ data: { ...r.data, action: v.action }, note: v.action }),
       },
+      editAction({
+        from: ['acknowledged', 'under_verification'],
+        fields: [
+          { name: 'category', label: 'Category', type: 'select', required: true, options: LISTS.grievance, width: 'half' },
+          { name: 'message', label: 'Message', type: 'textarea', required: true, max: 250, rows: 3, width: 'full' },
+        ],
+        prefill: (r) => ({ category: r.data.category, message: r.data.message }),
+        apply: (r, v) => ({ data: { ...r.data, category: v.category, message: v.message } }),
+      }),
     ],
   },
 
@@ -281,6 +319,22 @@ module.exports = {
     ];
   },
 };
+
+/** A visit's new date and mode, mirrored on the prisoner's custody record. */
+function syncVisitDetails(r, ctx, changes) {
+  const touched = [];
+  const ref = r.data.prisoner && r.data.prisoner.ref;
+  const c = ref && ctx.store.db.prepare(
+    `SELECT r.id FROM record r JOIN record_party rp ON rp.record_id = r.id JOIN person p ON p.id = rp.person_id
+     WHERE r.record_type = 'custody' AND p.person_ref = ? ORDER BY r.id DESC`).get(ref);
+  if (c) {
+    const custody = ctx.store.record(c.id);
+    const visits = (custody.data.visits_received || []).map((x) => (x.reg_no === r.ref ? { ...x, ...changes } : x));
+    ctx.store.saveRecord({ ref: custody.ref, type: custody.type, status: custody.status, date: custody.date, data: { ...custody.data, visits_received: visits }, history: custody.history }, custody.createdBy);
+    touched.push(custody.id);
+  }
+  return { touched };
+}
 
 /** A visit's new status, mirrored on the prisoner's custody record. */
 function syncVisit(r, ctx, status, extra) {

@@ -9,9 +9,10 @@ describe('hub navigation', () => {
     D.SYSTEMS = [sys('eprisons', 'ePrisons'), sys('cctns', 'CCTNS')];
     D.OFFICES = null;
     const nav = buildNav();
-    expect(nav.map((g) => g.label)).toEqual(['Command centre', 'ERP · record of truth', 'Departments', 'Integration bus', 'Access & audit', 'System']);
-    expect(nav[2].items.map((i) => i.view)).toEqual(['dept:eprisons', 'dept:cctns', 'depts']);
-    expect(nav[3].items.map((i) => i.view)).toEqual(['queue', 'failures', 'sync', 'recon']);
+    expect(nav.map((g) => g.label)).toEqual(['Command centre', 'Workbench', 'ERP · record of truth', 'Departments', 'Integration bus', 'Access & audit', 'System']);
+    expect(nav[1].items.map((i) => i.view)).toEqual(['apply', 'approvals', 'work']);
+    expect(nav[3].items.map((i) => i.view)).toEqual(['dept:eprisons', 'dept:cctns']);
+    expect(nav[4].items.map((i) => i.view)).toEqual(['queue', 'failures', 'sync', 'recon']);
   });
   it('shows counts from the offices, and flags waiting or rejected events', () => {
     D.SYSTEMS = [sys('eprisons', 'ePrisons'), sys('cctns', 'CCTNS')];

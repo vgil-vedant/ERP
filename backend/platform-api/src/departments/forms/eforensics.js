@@ -12,7 +12,7 @@
  * laboratory's minimum rank.
  */
 
-const { LISTS, CRIMES, DISTRICT_LIST, RANK_NAME, sectionsFor, personFields, personInput, opt, pad, yearOf } = require('./common');
+const { LISTS, CRIMES, DISTRICT_LIST, RANK_NAME, sectionsFor, personFields, personInput, opt, pad, yearOf, editAction } = require('./common');
 
 const CATEGORIES = ['Accused', 'Suspect', 'Witness', 'Complainant', 'Complainant (injured)'].map((v) => opt(v));
 const SEALS = [opt('Metallic seal'), opt('Brass seal')];
@@ -36,6 +36,7 @@ module.exports = {
   types: {
     forensic_submission: {
       label: 'Forensic case', plural: 'Forensic cases', closed: ['closed'],
+      awaiting: ['dispatched', 'deposited', 'registered', 'reopened', 'under_examination', 'deficient', 'report_ready'],
       title: (r) => r.data.lab_case_no,
       subtitle: (r) => `${r.data.division} · ${r.data.case.police_station}, FIR ${r.data.case.fir_number}`,
     },
@@ -199,6 +200,32 @@ module.exports = {
         fields: [{ name: 'order', label: 'Court’s recommendation or order', type: 'text', required: true, max: 160 }],
         apply: (r, v) => ({ data: { ...r.data, reopened_on: v.order }, note: v.order }),
       },
+      editAction({
+        from: ['dispatched', 'deposited', 'registered', 'reopened', 'under_examination', 'deficient'],
+        description: 'Correct the forwarding particulars. The laboratory case number, the exhibits and the custody chain cannot be edited.',
+        fields: [
+          { name: 'memo_no', label: 'Forwarding letter (memo) no.', type: 'text', required: true, max: 40, width: 'half' },
+          { name: 'io_name', label: 'Investigating officer', type: 'text', required: true, max: 100, width: 'half' },
+          { name: 'io_rank', label: 'Rank', type: 'select', required: true, options: LISTS.ioRanks, width: 'half' },
+          { name: 'history', label: 'History of the case', type: 'textarea', max: 1500, rows: 3, width: 'full' },
+          { name: 'questions', label: 'Questions to be answered (one per line)', type: 'textarea', max: 1000, rows: 3, width: 'full' },
+        ],
+        prefill: (r) => ({
+          memo_no: r.data.memo_number, io_name: (r.data.investigating_officer || {}).name, io_rank: (r.data.investigating_officer || {}).rank,
+          history: (r.data.case || {}).history, questions: (r.data.questions || []).join('\n'),
+        }),
+        apply(r, v, ctx) {
+          const questions = String(v.questions || '').split(/\r?\n/).map((q) => q.trim()).filter(Boolean);
+          // a submission that had questions keeps at least one; older ones may have none on file
+          if (!questions.length && (r.data.questions || []).length) ctx.fail('questions', 'Give at least one question.');
+          if (!v.history && (r.data.case || {}).history) ctx.fail('history', 'The history of the case cannot be removed.');
+          return { data: {
+            ...r.data, memo_number: v.memo_no, questions,
+            case: { ...r.data.case, history: v.history || (r.data.case || {}).history || null },
+            investigating_officer: { name: v.io_name, rank: v.io_rank, rank_name: RANK_NAME[v.io_rank] },
+          } };
+        },
+      }),
     ],
   },
 

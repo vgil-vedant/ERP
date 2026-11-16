@@ -180,4 +180,4 @@ function install(app) {
   });
 }
 
-module.exports = { install, verify, noStore, COOKIE };
+module.exports = { install, verify, noStore, COOKIE, USER };

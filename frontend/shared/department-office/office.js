@@ -731,7 +731,7 @@
       err.hidden = true;
       if (form) { var local = form.check(); if (Object.keys(local).length) { form.showErrors(local); return; } }
       ok.disabled = true; ok.classList.add('is-busy');
-      api('/records/' + record.id + '/actions/' + encodeURIComponent(action.key), { method: 'POST', body: { values: form ? form.values() : {} } }).then(function (res) {
+      api('/records/' + record.id + '/actions/' + encodeURIComponent(action.key), { method: 'POST', body: { values: form ? form.values() : {}, version: record.version } }).then(function (res) {
         closeDialog();
         toast(action.label + ': done', 'The ERP is being updated now.', 'ok');
         drawRecord(res.record);

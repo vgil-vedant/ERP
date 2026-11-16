@@ -9,7 +9,7 @@
  * requested changes to it. Both reach the ERP at once through the outbox.
  */
 
-const { LISTS, DISTRICTS, opt, issueAadhaar, yearOf, pad } = require('./common');
+const { LISTS, DISTRICTS, opt, issueAadhaar, yearOf, pad, editAction } = require('./common');
 const { uidToken } = require('../../../../shared/records/dataset');
 
 const RESIDENT = [opt('Resident Indian'), opt('Non-Resident Indian (NRI)')];
@@ -42,6 +42,32 @@ const centreFor = (district) => {
   const d = Object.values(DISTRICTS).find((x) => x.name === district);
   return d ? d.asks : `Aadhaar Seva Kendra, ${district}`;
 };
+
+const DOCUMENT_OPTIONS = LISTS.poi.concat(LISTS.poa.filter((o) => !LISTS.poi.some((p) => p.value === o.value)));
+const REVIEWING = ['submitted', 'under_review', 'needs_info', 'verified', 'approved', 'rejected'];
+
+/** Correct the address on an enrolment before it is decided; approval copies it to the identity record. */
+const editEnrolment = editAction({
+  from: ['submitted', 'under_review', 'needs_info'],
+  description: 'Correct the address on the application. The Aadhaar identity is created from these details on approval.',
+  fields: addressFields('', true),
+  prefill: (r) => {
+    const a = r.data.address || {};
+    return { house: a.house, street: a.street, landmark: a.lm, locality: a.loc, vtc: a.vtc, po: a.po, pin: a.pc, subdist: a.subdist, district: a.dist, state: a.state };
+  },
+  apply: (r, v) => ({ data: { ...r.data, address: addressOf(v, '', (r.data.address || {}).co), centre: centreFor(v.district) } }),
+});
+
+/** Correct how an update request came in and the document presented; what is to be changed needs a new request. */
+const editUpdate = editAction({
+  from: ['submitted', 'under_review', 'needs_info'],
+  fields: [
+    { name: 'channel', label: 'Channel', type: 'select', required: true, options: CHANNEL, width: 'half' },
+    { name: 'document', label: 'Document presented', type: 'select', options: DOCUMENT_OPTIONS, width: 'half' },
+  ],
+  prefill: (r) => ({ channel: r.data.channel, document: (r.data.documents || [])[0] }),
+  apply: (r, v) => ({ data: { ...r.data, channel: v.channel, documents: v.document ? [v.document] : [] } }),
+});
 
 const reviewActions = [
   { key: 'start_review', label: 'Start document review', from: ['submitted'], to: 'under_review', description: 'Check the documents and cross-field rules against Schedule II.' },
@@ -84,12 +110,12 @@ module.exports = {
       statusLabel: (r) => r.data.aadhaar_status || 'Active',
     },
     aadhaar_enrolment: {
-      label: 'Enrolment', plural: 'Enrolments', closed: ['closed', 'rejected'],
+      label: 'Enrolment', plural: 'Enrolments', closed: ['closed', 'rejected'], awaiting: REVIEWING,
       title: (r) => `Enrolment ${r.ref}`,
       subtitle: (r) => r.data.applicant.name,
     },
     aadhaar_update: {
-      label: 'Update request', plural: 'Update requests', closed: ['closed', 'rejected'],
+      label: 'Update request', plural: 'Update requests', closed: ['closed', 'rejected'], awaiting: REVIEWING,
       title: (r) => `Update ${r.ref}`,
       subtitle: (r) => `${r.data.applicant_name || ''} · ${r.data.update_items.join(', ')}`,
     },
@@ -174,7 +200,7 @@ module.exports = {
           ...addressFields('new_', true).map((f) => ({ ...f, when: { field: 'items', includes: 'Address' } })),
         ] },
         { title: 'Supporting document', fields: [
-          { name: 'document', label: 'Document presented', type: 'select', options: LISTS.poi.concat(LISTS.poa.filter((o) => !LISTS.poi.some((p) => p.value === o.value))), width: 'half' },
+          { name: 'document', label: 'Document presented', type: 'select', options: DOCUMENT_OPTIONS, width: 'half' },
         ] },
       ],
       build(v, ctx) {
@@ -233,7 +259,7 @@ module.exports = {
         };
         return { data: { ...d, aadhaar_masked: identity.data.aadhaar_masked }, records: [identity], note: `Aadhaar ${identity.data.aadhaar_masked} issued` };
       },
-    }]),
+    }, editEnrolment]),
     aadhaar_update: reviewActions.concat([{
       key: 'approve', label: 'Approve and apply the update', from: ['verified'], to: 'approved',
       description: 'Applies the requested changes to the resident’s identity record.',
@@ -267,7 +293,7 @@ module.exports = {
         }
         return { touched, note: `${r.data.update_items.join(', ')} updated` };
       },
-    }]),
+    }, editUpdate]),
   },
 
   attention(store) {

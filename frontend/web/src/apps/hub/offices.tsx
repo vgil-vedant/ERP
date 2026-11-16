@@ -48,8 +48,8 @@ const Note = ({ children }: { children: ReactNode }) => <div className="table-no
 const Kpi = ({ icon, label, value, note, pill }: { icon: string; label: string; value: ReactNode; note: string; pill?: [string, string] }) => (
   <div className="card kpi">
     <div className="kpi-top"><span className="kpi-ic" aria-hidden="true"><Svg name={icon} /></span>{pill ? <span className={`pill ${pill[0]}`}>{pill[1]}</span> : null}</div>
-    <div className="kpi-label">{label}</div><div className="kpi-value">{value}</div>
-    <div className="kpi-foot"><div className="kpi-note"><span>{note}</span></div></div>
+    <div className="kpi-line"><div className="kpi-value">{value}</div><div className="kpi-label">{label}</div></div>
+    <div className="kpi-foot kpi-foot--rule"><div className="kpi-note"><span>{note}</span></div></div>
   </div>
 );
 const Kv = ({ k, v, m }: { k: string; v: ReactNode; m?: boolean }) => <div className="kv-row"><span className="kv-k">{k}</span><span className={`kv-v${m ? ' mono' : ''}`}>{v}</span></div>;
@@ -97,41 +97,8 @@ function RecordsView({ c }: { c: OfficeCtx }) {
     <>
       <Head title="Department records" desc="What the five offices hold, newest first: each record, its status in the office, and whether the ERP has received it." />
       <div className="card">
-        <div className="card-head"><div><div className="card-title">Records in the offices</div><div className="card-sub">{num(rows.length)} records · latest {num(Math.max(...depts().map((d) => d.records.length), 0))} shown per department</div></div><span className="pill pill-mint">GET /api/offices</span></div>
-        <div className="table-host"><DataTable<RecRow> cfg={cfg} onExport={c.onExport} /></div>
-        <Note>Each office keeps its own database; every record reaches the ERP through the integration bus. Open a row for its details.</Note>
-      </div>
-    </>
-  );
-}
-
-/* ------------------------------- Departments ------------------------------ */
-function DeptsView({ c }: { c: OfficeCtx }) {
-  const list = depts();
-  return (
-    <>
-      <Head title="All departments" desc="The five department offices side by side: what each holds, how much is still open, and whether its events are reaching the ERP." />
-      <div className="card">
-        <div className="card-head"><div><div className="card-title">Departments</div><div className="card-sub">One office per portal · its own sign-in, database and records</div></div></div>
-        <div className="tbl-wrap"><table className="tbl">
-          <thead><tr><th>Department</th><th className="col-right">Records</th><th className="col-right">Open</th><th className="col-right">People</th><th className="col-right">Delivered</th><th className="col-right">Waiting</th><th className="col-right">Rejected</th><th>Bus</th><th>Last delivered</th></tr></thead>
-          <tbody>
-            {list.map((d) => {
-              const open = d.summary.types.reduce((t: number, x: Dash) => t + (x.open || 0), 0);
-              const [cls, label] = health(d);
-              return (
-                <tr key={d.code} className="clickable" onClick={() => c.goto('dept:' + d.code)}>
-                  <td><div className="t-main"><DeptChip d={d} /></div><div className="t-sub">{d.title}</div></td>
-                  <td className="col-right t-main">{num(d.totalRecords)}</td><td className="col-right">{num(open)}</td><td className="col-right">{num(d.summary.people)}</td>
-                  <td className="col-right">{num(d.integration.delivered)}</td><td className="col-right">{num(d.integration.pending)}</td><td className="col-right">{num(d.integration.rejected)}</td>
-                  <td><span className={`pill ${cls}`}>{label}</span></td><td className="nowrap">{d.integration.lastDeliveredAt ? rel(new Date(d.integration.lastDeliveredAt)) : '—'}</td>
-                </tr>
-              );
-            })}
-            {!list.length && <tr><td colSpan={9}><div className="tbl-empty">The department data could not be read.</div></td></tr>}
-          </tbody>
-        </table></div>
-        <Note>"Open" counts records not yet in a final state (for example an FIR still under investigation). "Waiting" are events not yet accepted by the ERP. Click a row to open the department.</Note>
+        <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="layers" /></span>Records in the offices</div><div className="card-sub">{num(rows.length)} records · latest {num(Math.max(...depts().map((d) => d.records.length), 0))} shown per department</div></div></div>
+        <div className="table-host"><DataTable<RecRow> cfg={cfg} onExport={c.onExport} showExport={false} /></div>
       </div>
     </>
   );
@@ -159,7 +126,7 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
       </div>
       <div className="grid g-2" style={{ marginTop: 16 }}>
         <div className="card">
-          <div className="card-head"><div><div className="card-title">Record types</div><div className="card-sub">Counts by status, as the workflow defines them.</div></div></div>
+          <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="file" /></span>Record types</div><div className="card-sub">Counts by status, as the workflow defines them.</div></div></div>
           <div className="def-list">
             {s.types.map((t: Dash) => (
               <div className="def-row" key={t.type}>
@@ -173,7 +140,7 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
           </div>
         </div>
         <div className="card">
-          <div className="card-head"><div><div className="card-title">Needs attention</div><div className="card-sub">Counts the office's own workflow flags.</div></div></div>
+          <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="alert" /></span>Needs attention</div><div className="card-sub">Counts the office's own workflow flags.</div></div></div>
           <div className="def-list">
             {s.attention.map((a: Dash) => (
               <div className="def-row" key={a.status || a.label}><div className="def-key">{a.label}</div>
@@ -181,7 +148,7 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
             ))}
             {!s.attention.length && <div className="def-row"><div className="def-key">Nothing flagged</div><div className="def-val">The office has no items waiting for a decision.</div></div>}
           </div>
-          <div className="card-head" style={{ borderTop: '1px solid var(--border)' }}><div><div className="card-title" style={{ fontSize: '13.5px' }}>Integration bus</div></div>
+          <div className="card-head" style={{ borderTop: '1px solid var(--border)' }}><div><div className="card-title" style={{ fontSize: '13.5px' }}><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Integration bus</div></div>
             <button className="btn btn-sm" type="button" disabled={c.retrying === d.code || !(i.pending || i.rejected)} onClick={() => c.retry(d.code)}><Svg name="refresh" /> {c.retrying === d.code ? 'Sending…' : 'Retry now'}</button></div>
           <div className="def-list">
             <div className="def-row"><div className="def-key">Target</div><div className="def-val"><code style={mono}>{i.target}</code></div></div>
@@ -192,7 +159,7 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
         </div>
       </div>
       <div className="card" style={{ marginTop: 16 }}>
-        <div className="card-head"><div><div className="card-title">Recent records</div><div className="card-sub">Latest changes in this office.</div></div><button className="btn btn-sm" type="button" onClick={() => c.goto('records')}>All department records <Svg name="arrowRight" /></button></div>
+        <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="file" /></span>Recent records</div><div className="card-sub">Latest changes in this office.</div></div></div>
         <div className="tbl-wrap"><table className="tbl">
           <thead><tr><th>Record</th><th>Reference</th><th>Status</th><th className="col-right">In the ERP</th><th>Updated</th></tr></thead>
           <tbody>
@@ -203,19 +170,22 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
             {!s.recent.length && <tr><td colSpan={5}><div className="tbl-empty">No records yet.</div></td></tr>}
           </tbody>
         </table></div>
+        <div className="card-foot card-foot--end"><button className="btn btn-sm" type="button" onClick={() => c.goto('records')}>All department records <Svg name="arrowRight" /></button></div>
       </div>
       <div className="grid g-2" style={{ marginTop: 16 }}>
         <div className="card">
-          <div className="card-head"><div><div className="card-title">Officers</div><div className="card-sub">Who signs in to this office.</div></div><button className="btn btn-sm" type="button" onClick={() => c.goto('officers')}>All officers <Svg name="arrowRight" /></button></div>
+          <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="users" /></span>Officers</div><div className="card-sub">Who signs in to this office.</div></div></div>
           <div className="def-list">{d.officers.map((o: Dash) => (
             <div className="def-row" key={o.username}><div className="def-key"><code style={mono}>{o.username}</code></div><div className="def-val">{o.fullName}, {o.designation} · {o.office}<br /><span className="micro">last sign-in: {o.lastLoginAt ? whenUtc(o.lastLoginAt) : 'never'}</span></div></div>
           ))}</div>
+          <div className="card-foot card-foot--end"><button className="btn btn-sm" type="button" onClick={() => c.goto('officers')}>All officers <Svg name="arrowRight" /></button></div>
         </div>
         <div className="card">
-          <div className="card-head"><div><div className="card-title">Office activity</div><div className="card-sub">Append-only log of what officers did.</div></div><button className="btn btn-sm" type="button" onClick={() => c.goto('activity')}>Activity log <Svg name="arrowRight" /></button></div>
+          <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="pulse" /></span>Office activity</div><div className="card-sub">Append-only log of what officers did.</div></div></div>
           <div className="feed">{d.activity.slice(0, 6).map((a: Dash, k: number) => (
             <div className="feed-item" key={k}><span className="feed-dot"><Svg name="user" /></span><div className="feed-body"><div className="feed-line"><b>{a.action}</b>{a.ref ? <> · <code>{a.ref}</code></> : null}</div><div className="feed-meta"><span className="maker">{a.officer}</span><span className="sep" />{rel(parseUtc(a.at))}</div></div></div>
           ))}{!d.activity.length && <div className="tbl-empty">No activity yet.</div>}</div>
+          <div className="card-foot card-foot--end"><button className="btn btn-sm" type="button" onClick={() => c.goto('activity')}>Activity log <Svg name="arrowRight" /></button></div>
         </div>
       </div>
     </>
@@ -260,8 +230,8 @@ function QueueView({ c }: { c: OfficeCtx }) {
         <Kpi icon="alert" label="Rejected" value={num(tot.rej)} note="the ERP refused them" pill={['pill-danger', 'rejected']} />
       </div>
       <div className="card" style={{ marginTop: 16 }}>
-        <div className="card-head"><div><div className="card-title">Events</div><div className="card-sub">{num(ev.length)} shown · latest {num(Math.max(...depts().map((d) => d.events.length), 0))} per department</div></div></div>
-        <div className="table-host"><DataTable<EvRow> cfg={cfg} onExport={c.onExport} /></div>
+        <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Events</div><div className="card-sub">{num(ev.length)} shown · latest {num(Math.max(...depts().map((d) => d.events.length), 0))} per department</div></div></div>
+        <div className="table-host"><DataTable<EvRow> cfg={cfg} onExport={c.onExport} showExport={false} /></div>
         <Note>The bus is signed, retried with back-off and idempotent: sending an event twice never creates a second record in the ERP.</Note>
       </div>
     </>
@@ -296,8 +266,8 @@ function FailuresView({ c }: { c: OfficeCtx }) {
         })}
       </div>
       <div className="card" style={{ marginTop: 16 }}>
-        <div className="card-head"><div><div className="card-title">Not delivered</div><div className="card-sub">{num(bad.length)} event{bad.length === 1 ? '' : 's'}</div></div></div>
-        <div className="table-host"><DataTable<EvRow> cfg={cfg} onExport={c.onExport} /></div>
+        <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="alert" /></span>Not delivered</div><div className="card-sub">{num(bad.length)} event{bad.length === 1 ? '' : 's'}</div></div></div>
+        <div className="table-host"><DataTable<EvRow> cfg={cfg} onExport={c.onExport} showExport={false} /></div>
       </div>
     </>
   );
@@ -311,7 +281,7 @@ function ReconView({ c }: { c: OfficeCtx }) {
     <>
       <Head title="Reconciliation" desc="Office against ERP: what each office holds, what its bus has delivered, and what the ERP says it received." />
       <div className="card">
-        <div className="card-head"><div><div className="card-title">Office vs ERP</div><div className="card-sub">Per department</div></div></div>
+        <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="check" /></span>Office vs ERP</div><div className="card-sub">Per department</div></div></div>
         <div className="tbl-wrap"><table className="tbl">
           <thead><tr><th>Department</th><th className="col-right">Office records</th><th className="col-right">Events sent</th><th className="col-right">Delivered</th><th className="col-right">Not delivered</th><th className="col-right">ERP record entries</th><th>ERP last received</th><th>Result</th></tr></thead>
           <tbody>
@@ -335,7 +305,7 @@ function ReconView({ c }: { c: OfficeCtx }) {
         <Note>A record that names several people (an FIR with an accused and a complainant) is filed once per person in the ERP, so "ERP record entries" can exceed "Office records". It must never be lower once everything is delivered.</Note>
       </div>
       <div className="card" style={{ marginTop: 16 }}>
-        <div className="card-head"><div><div className="card-title">Latest events the ERP received</div><div className="card-sub">From the ERP's own delivery log.</div></div></div>
+        <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="inbox" /></span>Latest events the ERP received</div><div className="card-sub">From the ERP's own delivery log.</div></div></div>
         <div className="tbl-wrap"><table className="tbl">
           <thead><tr><th>Received</th><th>Department</th><th>Record type</th><th>Reference</th><th>Change</th><th>People</th></tr></thead>
           <tbody>
@@ -371,8 +341,8 @@ function OfficersView({ c }: { c: OfficeCtx }) {
     <>
       <Head title="Officer accounts" desc="Each department signs its own officers in, with its own accounts and session. Passwords are never shown; they are stored salted and hashed." />
       <div className="card">
-        <div className="card-head"><div><div className="card-title">Officers</div><div className="card-sub">One sign-in per department office</div></div></div>
-        <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} /></div>
+        <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="users" /></span>Officers</div><div className="card-sub">One sign-in per department office</div></div></div>
+        <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} showExport={false} /></div>
       </div>
     </>
   );
@@ -393,8 +363,8 @@ function LookupAuditView({ c }: { c: OfficeCtx }) {
   return (
     <>
       <Head title="Lookup audit" desc="Every person lookup, with who ran it. It is part of the ERP's append-only audit log." actions={<button className="btn" type="button" onClick={() => c.goto('lookup')}><Svg name="search" /> Person Lookup</button>} />
-      <div className="card"><div className="card-head"><div><div className="card-title">Lookups</div><div className="card-sub">{num(rows().length)} recorded</div></div><span className="pill pill-mint">ERP audit_log</span></div>
-        <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} /></div></div>
+      <div className="card"><div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="search" /></span>Lookups</div><div className="card-sub">{num(rows().length)} recorded</div></div><span className="pill pill-mint">ERP audit_log</span></div>
+        <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} showExport={false} /></div></div>
     </>
   );
 }
@@ -418,8 +388,8 @@ function ActivityView({ c }: { c: OfficeCtx }) {
   return (
     <>
       <Head title="Activity log" desc="What officers did in each office, newest first. Each office's log is append-only: the database refuses any change or deletion." />
-      <div className="card"><div className="card-head"><div><div className="card-title">Office activity</div><div className="card-sub">Latest {num(Math.max(...depts().map((d) => d.activity.length), 0))} per department</div></div></div>
-        <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} /></div></div>
+      <div className="card"><div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="pulse" /></span>Office activity</div><div className="card-sub">Latest {num(Math.max(...depts().map((d) => d.activity.length), 0))} per department</div></div></div>
+        <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} showExport={false} /></div></div>
     </>
   );
 }
@@ -440,17 +410,17 @@ export function officeMetrics() {
 export type OfficeMetrics = ReturnType<typeof officeMetrics>;
 
 /** Records created / events not delivered per day over the last `span` days, summed over the five offices. */
-export function officeDaily(span: number, code?: string): { d: Date; received: number; refused: number }[] {
+export function officeDaily(span: number, code?: string): { d: Date; received: number; refused: number; people: number }[] {
   const now = new Date();
   const start = new Date(now.getFullYear(), now.getMonth(), now.getDate() - (span - 1));
-  const out = Array.from({ length: span }, (_, i) => ({ d: new Date(start.getFullYear(), start.getMonth(), start.getDate() + i), received: 0, refused: 0 }));
-  const put = (rows: { d: string; n: number }[] | undefined, key: 'received' | 'refused') => (rows || []).forEach((r) => {
+  const out = Array.from({ length: span }, (_, i) => ({ d: new Date(start.getFullYear(), start.getMonth(), start.getDate() + i), received: 0, refused: 0, people: 0 }));
+  const put = (rows: { d: string; n: number }[] | undefined, key: 'received' | 'refused' | 'people') => (rows || []).forEach((r) => {
     const [y, m, dd] = String(r.d).split('-').map(Number);
     if (!y) return;
     const k = Math.round((new Date(y, m - 1, dd).getTime() - start.getTime()) / 86400000);
     if (k >= 0 && k < span) out[k][key] += r.n;
   });
-  depts().filter((d) => !code || d.code === code).forEach((d) => { put(d.daily && d.daily.records, 'received'); put(d.daily && d.daily.undelivered, 'refused'); });
+  depts().filter((d) => !code || d.code === code).forEach((d) => { put(d.daily && d.daily.records, 'received'); put(d.daily && d.daily.undelivered, 'refused'); put(d.daily && d.daily.people, 'people'); });
   return out;
 }
 
@@ -462,11 +432,17 @@ export function DeptKpis({ goto }: { goto: (v: string) => void }) {
     <>{m.per.map((x) => {
       const spark = officeDaily(14, x.code).map((b) => b.received);
       return (
-        <div className="card kpi kpi-dept" key={x.code} role="button" tabIndex={0} style={{ cursor: 'pointer' }} onClick={() => goto('dept:' + x.code)}
+        <div className="card kpi kpi-dept kpi-dept--detail" key={x.code} role="button" tabIndex={0} style={{ cursor: 'pointer' }} onClick={() => goto('dept:' + x.code)}
           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goto('dept:' + x.code); } }}>
-          <div className="kpi-top"><span className="kpi-ic sys-tint" style={{ ['--sys' as string]: color(x.code) }} aria-hidden="true"><Svg name={PORTAL_ICON[x.code] || 'grid'} /></span><span className="pill sys-pill" style={{ ['--sys' as string]: color(x.code) }} title={x.pending + x.rejected ? (x.rejected ? x.rejected + ' rejected' : x.pending + ' waiting') : 'all delivered'}>{x.d.short}</span></div>
-          <div className="kpi-body"><div className="kpi-value" style={{ fontSize: 24, display: 'flex', alignItems: 'baseline', gap: 6 }}>{num(x.records)}<span className="kpi-label" style={{ margin: 0 }}>Records</span></div></div>
-          <div className="kpi-foot"><div className="kpi-note" style={{ ['--sys' as string]: color(x.code) }}><Svg name="info" /><span>{num(x.open)} open · {num(x.people)} people</span></div><div className="kpi-spark"><Sparkline values={spark.some((v) => v) ? spark : [0]} color={color(x.code)} /></div></div>
+          <div className="dk-head">
+            <span className="kpi-ic sys-tint" style={{ ['--sys' as string]: color(x.code) }} aria-hidden="true"><Svg name={PORTAL_ICON[x.code] || 'grid'} /></span>
+            <div className="dk-name"><b>{x.d.short}</b><span title={x.d.title}>{x.d.title}</span></div>
+          </div>
+          <div className="kpi-value dk-count" style={{ fontSize: 22, display: 'flex', alignItems: 'baseline', gap: 6 }}>{num(x.records)}<span className="kpi-label" style={{ margin: 0 }}>Records</span></div>
+          <div className="kpi-foot kpi-foot--rule dk-foot">
+            <div className="dk-cap">{num(spark.reduce((t, v) => t + v, 0))} new in 14 days</div>
+            <div className="kpi-spark"><Sparkline values={spark.some((v) => v) ? spark : [0]} color={color(x.code)} /></div>
+          </div>
         </div>
       );
     })}</>
@@ -506,7 +482,7 @@ export function FlowDiagram() {
   ];
   return (
     <div className="card" style={{ marginBottom: 16 }}>
-      <div className="card-head"><div><div className="card-title">How the data flows</div><div className="card-sub">The side navigation follows these steps, left to right.</div></div></div>
+      <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="api" /></span>How the data flows</div><div className="card-sub">The side navigation follows these steps, left to right.</div></div></div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(190px,1fr))', gap: 12, padding: '0 20px 20px' }}>
         {steps.map(([ic, t, d], i) => (
           <div key={t} style={{ border: '1px solid var(--border)', borderRadius: 12, padding: 14, background: '#fff' }}>
@@ -570,17 +546,17 @@ export function OverviewBody({ hub, erp, ports }: { hub: string; erp: string; po
       <FlowDiagram />
       <div className="grid g-2">
         <div className="card">
-          <div className="card-head"><div><div className="card-title">Rules the system keeps</div><div className="card-sub">Taken from the code and the architecture notes.</div></div></div>
+          <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="shield" /></span>Rules the system keeps</div><div className="card-sub">Taken from the code and the architecture notes.</div></div></div>
           <div className="def-list">{rows.map(([k, v]) => <div className="def-row" key={k}><div className="def-key">{k}</div><div className="def-val">{v}</div></div>)}</div>
         </div>
         <div className="card">
-          <div className="card-head"><div><div className="card-title">Ports and entry points</div><div className="card-sub">Read live from the running hub and the registered portals.</div></div></div>
+          <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="api" /></span>Ports and entry points</div><div className="card-sub">Read live from the running hub and the registered portals.</div></div></div>
           <div className="tbl-wrap"><table className="tbl" style={{ minWidth: 0 }}><thead><tr><th>Port</th><th>Process</th><th>Scope</th></tr></thead><tbody>{ports}</tbody></table></div>
           <div className="table-note"><span>Each portal also answers at <code>/office</code>. Docker maps the same stack onto 7xxx ports; <code>PORT_OFFSET</code> shifts every portal port so a second instance can run alongside the first.</span></div>
         </div>
       </div>
       <div className="card" style={{ marginTop: 16 }}>
-        <div className="card-head"><div><div className="card-title">What lives where</div><div className="card-sub">The project folders and their job.</div></div></div>
+        <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="book" /></span>What lives where</div><div className="card-sub">The project folders and their job.</div></div></div>
         <div className="def-list">{where.map(([k, v]) => <div className="def-row" key={k}><div className="def-key"><code>{k}</code></div><div className="def-val">{v}</div></div>)}</div>
       </div>
     </>
@@ -593,7 +569,7 @@ export function DepartmentDatabases() {
   if (!list.length) return null;
   return (
     <div className="card" style={{ marginTop: 16 }}>
-      <div className="card-head"><div><div className="card-title">Department databases</div><div className="card-sub">One SQLite file per office, beside platform.sqlite.</div></div></div>
+      <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="database" /></span>Department databases</div><div className="card-sub">One SQLite file per office, beside platform.sqlite.</div></div></div>
       <div className="tbl-wrap"><table className="tbl" style={{ minWidth: 0 }}>
         <thead><tr><th>File</th><th>Department</th><th className="col-right">Records</th><th className="col-right">Events</th><th className="col-right">People</th></tr></thead>
         <tbody>{list.map((d) => (
@@ -605,7 +581,7 @@ export function DepartmentDatabases() {
 }
 
 /* --------------------------------- entry ---------------------------------- */
-export const OFFICE_VIEWS = ['records', 'depts', 'queue', 'failures', 'recon', 'officers', 'lookupaudit', 'activity'];
+export const OFFICE_VIEWS = ['records', 'queue', 'failures', 'recon', 'officers', 'lookupaudit', 'activity'];
 export const isOfficeView = (v: string) => OFFICE_VIEWS.includes(v) || v.startsWith('dept:');
 
 export function OfficeViews({ view, c }: { view: string; c: OfficeCtx }) {
@@ -613,7 +589,6 @@ export function OfficeViews({ view, c }: { view: string; c: OfficeCtx }) {
   const body = (() => {
     if (!offices) return <Empty text="The department offices could not be read. Reload the page, or check that the platform service is running." />;
     if (view === 'records') return <RecordsView c={c} />;
-    if (view === 'depts') return <DeptsView c={c} />;
     if (view.startsWith('dept:')) return <DeptView code={view.slice(5)} c={c} />;
     if (view === 'queue') return <QueueView c={c} />;
     if (view === 'failures') return <FailuresView c={c} />;

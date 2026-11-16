@@ -220,6 +220,34 @@ function personInput(values, prefix, district) {
   };
 }
 
+/**
+ * The "Edit details" action of a record type: correct particulars of a record
+ * without moving it along its workflow. Used by the department office and the
+ * ERP Hub alike (both go through service.act), so an edit made in one is seen in
+ * the other at once and reaches the ERP through the outbox like any change.
+ *
+ *   from      the statuses in which the record may still be corrected
+ *   fields    what can be corrected (validated like any form)
+ *   prefill   record -> { field: current value }, so the form opens filled in
+ *   apply     (record, values, ctx) -> { data, touched? }
+ *
+ * Numbers issued by the department (FIR no., CNR, prisoner no. ...) and the people
+ * on a record are never editable here: those change only through their own workflow.
+ */
+const sameValue = (a, b) => (a == null || a === '' ? '' : JSON.stringify(a)) === (b == null || b === '' ? '' : JSON.stringify(b));
+function editAction({ from, fields, prefill, apply, description }) {
+  return {
+    key: 'edit', kind: 'edit', label: 'Edit details', tone: 'neutral', from, fields, prefill,
+    description: description || 'Correct the details of this record. The change is saved in this department and sent to the ERP at once.',
+    apply(r, v, ctx) {
+      const before = prefill(r) || {};
+      const changed = fields.filter((f) => applies(f, v) && !sameValue(before[f.name], v[f.name])).map((f) => f.label);
+      const out = apply(r, v, ctx) || {};
+      return { ...out, note: changed.length ? `changed ${changed.join(', ')}` : out.note };
+    },
+  };
+}
+
 /** A synthetic Aadhaar number in the 9999 test series with a valid check digit. */
 function issueAadhaar(seq) {
   const body = `9999${pad(seq % 10000000, 7)}`;
@@ -228,6 +256,6 @@ function issueAadhaar(seq) {
 
 module.exports = {
   LISTS, CRIMES, DISTRICTS, DISTRICT_LIST, RANK_NAME, DOCUMENTS, PRESERVATIVE,
-  sectionsFor, validate, applies, publicForm, personFields, personInput, issueAadhaar,
+  sectionsFor, validate, applies, publicForm, personFields, personInput, issueAadhaar, editAction,
   pad, yearOf, stamp, today, opt,
 };

@@ -255,7 +255,8 @@ function install(app, site) {
     return { record: service.view(dept, store, r) };
   }));
   api.post('/records/:id/actions/:key', handle((req) => {
-    const r = service.act(dept, store, req.officer, Number(req.params.id), String(req.params.key), (req.body || {}).values || {});
+    const body = req.body || {};
+    const r = service.act(dept, store, req.officer, Number(req.params.id), String(req.params.key), body.values || {}, { expectedVersion: body.version });
     return { record: service.view(dept, store, r) };
   }));
   api.get('/integration', handle((req) => (req.query.events === '0'

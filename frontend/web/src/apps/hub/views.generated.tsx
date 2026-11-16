@@ -2,6 +2,7 @@
 // The twelve views of the ERP Hub, as JSX. Converted from the markup of erp-hub.html; places the old script used to fill in
 // are now {H.name} (content) and {...P.name} (props), supplied by Hub.tsx.
 import type { ReactNode } from 'react';
+import { Svg } from './lib';
 
 export interface ViewsProps {
   view: string;
@@ -26,24 +27,6 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             </p>
           </div>
           {' '}
-          <div className="page-actions">
-            
-            
-            <button className="btn" id="exportSummaryBtn" type="button" {...P.exportSummaryBtn}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 3v12m0 0 4-4m-4 4-4-4"></path>
-                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
-              </svg>
-              {' '}Export summary
-            </button>
-            {' '}
-            <button className="btn btn-primary" id="openRecordsBtn" type="button" {...P.openRecordsBtn}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 5h16M4 12h16M4 19h10"></path>
-              </svg>
-              {' '}Department records
-            </button>
-          </div>
         </div>
         {' '}
         <div className="notice" id="protoNotice" style={{"display":"none"}} {...P.protoNotice}>
@@ -68,18 +51,16 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         </div>
         {' '}
         {' '}
-        <div className="grid g-kpi" id="kpiGrid" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(190px,1fr))' }}>{H.kpiDepts}</div>
+        <div className="grid g-kpi kpi-dept-grid" id="kpiGrid">{H.kpiDepts}</div>
         
-<div className="grid g-a" style={{"marginTop":"16px"}}>
+<div className="grid g-2" style={{"marginTop":"16px"}}>
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Office activity
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="pulse" /></span>Office activity</div>
                 {' '}
                 <div className="card-sub">
-                  Records created per day across the five offices, and events the ERP has not accepted.
+                  Created vs not delivered.
                 </div>
               </div>
               {' '}
@@ -98,23 +79,13 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
                 <span className="lg-dot" style={{"background":"var(--warning)"}}></span>
                 Events not delivered
               </span>
-              {' '}
-              <span className="lg-item" style={{"color":"var(--text-3)","marginLeft":"auto"}}>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="9"></circle>
-                  <path d="M12 8h.01M11 12h1v4h1"></path>
-                </svg>
-                {' '}From each office's own database
-              </span>
             </div>
           </div>
           {' '}
           <div className="card">
             <div className="card-head card-head--rule">
               <div>
-                <div className="card-title">
-                  Records by department
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="grid" /></span>Records by department</div>
                 {' '}
                 <div className="card-sub">
                   Share of the records each office holds.
@@ -123,16 +94,14 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             </div>
             {' '}
             <div className="donut-wrap">
-              <div className="donut-svg" id="chartDonut">{H.chartDonut}</div>
-              {' '}
-              <div className="donut-legend" id="donutLegend">{H.donutLegend}</div>
+              <div className="donut-svg donut-svg--pro" id="chartDonut">{H.chartDonut}</div>
             </div>
             {' '}
             <div className="card-foot">
               <span className="micro" id="sourceCount">{H.sourceCount}</span>
               {' '}
-              <button className="btn btn-sm" onClick={() => goto("depts")} type="button">
-                Departments{' '}
+              <button className="btn btn-sm" onClick={() => goto("records")} type="button">
+                Department records{' '}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m9 18 6-6-6-6"></path>
                 </svg>
@@ -146,12 +115,10 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head tight">
               <div>
-                <div className="card-title">
-                  Events by department
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Events by department</div>
                 {' '}
                 <div className="card-sub">
-                  What each office sent to the ERP over the bus.
+                  What each office sent to the ERP over the bus, and when it last delivered.
                 </div>
               </div>
             </div>
@@ -166,42 +133,56 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               {' '}
               <span className="micro">
                 <span className="lg-dot" style={{"background":"#D8A64E"}}></span>
-                {' '}Waiting / rejected
+                {' '}Waiting
               </span>
               {' '}
-              <span className="micro" style={{"marginLeft":"auto"}}>
-                <code style={{"fontFamily":"var(--mono)"}}>
-                  GET /api/offices
-                </code>
+              <span className="micro">
+                <span className="lg-dot" style={{"background":"#D6584F"}}></span>
+                {' '}Rejected
               </span>
             </div>
           </div>
           {' '}
           <div className="card">
-            <div className="card-head tight">
+            <div className="card-head">
               <div>
-                <div className="card-title">
-                  Integration bus
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="grid" /></span>Portal replicas</div>
                 {' '}
                 <div className="card-sub">
-                  Where every event the offices sent has got to.
+                  Local demonstration environments only.
                 </div>
               </div>
             </div>
             {' '}
-            <div className="meter" id="healthMeter" aria-hidden="true">{H.healthMeter}</div>
-            {' '}
-            <div className="health-rows" id="healthRows">{H.healthRows}</div>
-            {' '}
-            <div className="card-foot">
-              <button className="card-link" onClick={() => goto("queue")} type="button">
-                Details{' '}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-                  <path d="m9 18 6-6-6-6"></path>
-                </svg>
-              </button>
+            <div id="portalQuick" style={{"display":"flex","flexDirection":"column","gap":"8px"}}>{H.portalQuick}</div>
+          </div>
+        </div>
+        {' '}
+        <div className="grid g-2" style={{"marginTop":"16px"}}>
+          <div className="card">
+            <div className="card-head tight">
+              <div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="clock" /></span>Open work by department</div>
+                {' '}
+                <div className="card-sub">Records not yet in a final state, out of everything each office holds.</div>
+              </div>
             </div>
+            {' '}
+            <div className="bars" id="chartOpen">{H.chartOpen}</div>
+          </div>
+          {' '}
+          <div className="card">
+            <div className="card-head tight">
+              <div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="users" /></span>People on file</div>
+                {' '}
+                <div className="card-sub">People named in each office's records.</div>
+              </div>
+              {' '}
+              <span className="count-ring" title="People on file">{H.peopleCount}</span>
+            </div>
+            {' '}
+            <div className="heat" id="chartPeople">{H.chartPeople}</div>
           </div>
         </div>
         {' '}
@@ -209,9 +190,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head tight">
               <div>
-                <div className="card-title">
-                  Recent office activity
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="pulse" /></span>Recent office activity</div>
                 {' '}
                 <div className="card-sub">
                   What officers did, newest first.
@@ -221,8 +200,8 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             {' '}
             <div className="feed" id="auditFeed">{H.auditFeed}</div>
             {' '}
-            <div className="card-foot">
-              <button className="card-link" onClick={() => goto("activity")} type="button">
+            <div className="card-foot card-foot--end">
+              <button className="btn btn-sm" onClick={() => goto("activity")} type="button">
                 Activity log{' '}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
                   <path d="m9 18 6-6-6-6"></path>
@@ -236,9 +215,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card" style={{"marginTop":"16px"}}>
           <div className="card-head">
             <div>
-              <div className="card-title">
-                Recent department records
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="file" /></span>Recent department records</div>
               {' '}
               <div className="card-sub">
                 Newest records across the five offices. Open a row for its details.
@@ -261,9 +238,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Latest bus events
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="inbox" /></span>Latest bus events</div>
                 {' '}
                 <div className="card-sub">
                   Each change an office made, and whether the ERP has it.
@@ -275,19 +250,28 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           </div>
           {' '}
           <div className="card">
-            <div className="card-head">
+            <div className="card-head tight">
               <div>
-                <div className="card-title">
-                  Portal replicas
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Integration bus</div>
                 {' '}
                 <div className="card-sub">
-                  Local demonstration environments only.
+                  Where every event the offices sent has got to.
                 </div>
               </div>
             </div>
             {' '}
-            <div id="portalQuick" style={{"display":"flex","flexDirection":"column","gap":"8px"}}>{H.portalQuick}</div>
+            <div className="meter" id="healthMeter" aria-hidden="true">{H.healthMeter}</div>
+            {' '}
+            <div className="health-rows" id="healthRows">{H.healthRows}</div>
+            {' '}
+            <div className="card-foot card-foot--end">
+              <button className="btn btn-sm" onClick={() => goto("queue")} type="button">
+                Details{' '}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -349,37 +333,12 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card">
           <div className="card-head">
             <div>
-              <div className="card-title">
-                Citizen submissions in the ERP
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="inbox" /></span>Citizen submissions in the ERP</div>
               <div className="card-sub" id="intakeCountSub">{H.intakeCountSub}</div>
             </div>
-            {' '}
-            <span className="pill pill-mint">
-              GET /api/intake
-            </span>
           </div>
           {' '}
           <div className="table-host" data-table="intake">{H.t_intake}</div>
-          {' '}
-          <div className="table-note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <circle cx="12" cy="12" r="9"></circle>
-              <path d="M12 8h.01M11 12h1v4h1"></path>
-            </svg>
-            {' '}
-            <span>
-              Only{' '}
-              <code>
-                grievance-feedback_en_form0
-              </code>
-              {' '}and the platform's{' '}
-              <code>
-                account-register
-              </code>
-              {' '}form are named in the project documentation; the other form identifiers are illustrative placeholders. Read live values from the intake API before wiring anything to production.
-            </span>
-          </div>
         </div>
       </section>
       <section className={"view" + (view === "citizens" ? " is-active" : "")} id="view-citizens" data-title="Citizens" data-section="ERP Management" data-desc="People the ERP knows about. A citizen is registered once on any portal and reused across all five.">
@@ -419,9 +378,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card">
           <div className="card-head">
             <div>
-              <div className="card-title">
-                Registered citizens
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="users" /></span>Registered citizens</div>
               <div className="card-sub" id="citizenCountSub">{H.citizenCountSub}</div>
             </div>
             {' '}
@@ -463,15 +420,9 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card">
           <div className="card-head">
             <div>
-              <div className="card-title">
-                Audit events
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="shield" /></span>Audit events</div>
               <div className="card-sub" id="auditCountSub">{H.auditCountSub}</div>
             </div>
-            {' '}
-            <span className="pill pill-mint">
-              GET /api/audit
-            </span>
           </div>
           {' '}
           <div className="table-host" data-table="audit">{H.t_audit}</div>
@@ -541,9 +492,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Platform hub
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="monitor" /></span>Platform hub</div>
                 <div className="card-sub">
                   The shared platform service that fronts all five replicas.
                 </div>
@@ -626,9 +575,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  How the pieces fit
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="layers" /></span>How the pieces fit</div>
                 <div className="card-sub">
                   Three surfaces, three jobs.
                 </div>
@@ -703,9 +650,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card">
           <div className="card-head">
             <div>
-              <div className="card-title">
-                Write-through attempts
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Write-through attempts</div>
               <div className="card-sub" id="syncCountSub">{H.syncCountSub}</div>
             </div>
             {' '}
@@ -770,9 +715,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Attempts by source system
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Attempts by source system</div>
                 <div className="card-sub">
                   Kept versus rolled back, per replica.
                 </div>
@@ -785,9 +728,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Outcome split
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="check" /></span>Outcome split</div>
                 <div className="card-sub">
                   Every ledger row, grouped by result.
                 </div>
@@ -809,9 +750,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Handshake contract
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="shield" /></span>Handshake contract</div>
                 <div className="card-sub">
                   What the platform expects from the ERP on every call.
                 </div>
@@ -880,9 +819,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Response time budget
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="clock" /></span>Response time budget</div>
                 <div className="card-sub">
                   Synchronous by design — every millisecond lands inside the citizen's request.
                 </div>
@@ -969,9 +906,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card">
           <div className="card-head">
             <div>
-              <div className="card-title">
-                Platform submissions
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="inbox" /></span>Platform submissions</div>
               <div className="card-sub" id="subCountSub">{H.subCountSub}</div>
             </div>
             {' '}
@@ -1015,9 +950,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  erp.sqlite
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="database" /></span>erp.sqlite</div>
                 <div className="card-sub">
                   The ERP service's own database.
                 </div>
@@ -1072,9 +1005,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  platform.sqlite
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="database" /></span>platform.sqlite</div>
                 <div className="card-sub">
                   Shared by the five replicas and the hub.
                 </div>
@@ -1105,9 +1036,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card" style={{"marginTop":"16px"}}>
           <div className="card-head">
             <div>
-              <div className="card-title">
-                PostgreSQL migration
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="database" /></span>PostgreSQL migration</div>
               <div className="card-sub">
                 A read-only copy of the SQLite data into{' '}
                 <code>
@@ -1169,9 +1098,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Services
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="heart" /></span>Services</div>
                 <div className="card-sub">
                   Probed from the hub process.
                 </div>
@@ -1199,9 +1126,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Runtime configuration
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="monitor" /></span>Runtime configuration</div>
                 <div className="card-sub">
                   Variables the services actually read.
                 </div>
@@ -1332,9 +1257,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card" style={{"marginTop":"16px"}}>
           <div className="card-head">
             <div>
-              <div className="card-title">
-                Console access
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="lock" /></span>Console access</div>
               <div className="card-sub">
                 What is implemented, and what is not.
               </div>
@@ -1405,9 +1328,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  Project documents
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="book" /></span>Project documents</div>
                 <div className="card-sub">
                   Click copy to put the path on your clipboard.
                 </div>
@@ -1420,9 +1341,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <div className="card">
             <div className="card-head">
               <div>
-                <div className="card-title">
-                  API surface used by this console
-                </div>
+                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="api" /></span>API surface used by this console</div>
                 <div className="card-sub">
                   All endpoints are implemented; none is invented here.
                 </div>
@@ -1436,9 +1355,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         <div className="card" style={{"marginTop":"16px"}}>
           <div className="card-head">
             <div>
-              <div className="card-title">
-                What this console deliberately does not do
-              </div>
+              <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="lock" /></span>What this console deliberately does not do</div>
               <div className="card-sub">
                 Scope discipline.
               </div>

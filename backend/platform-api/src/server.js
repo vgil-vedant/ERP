@@ -174,7 +174,7 @@ function buildHub() {
   const HUB_VIEWS = [
     'dashboard', 'overview', 'intake', 'lookup', 'citizens', 'audit', 'portals', 'sync', 'integration',
     'submissions', 'database', 'health', 'docs',
-    'records', 'depts', 'queue', 'failures', 'recon', 'officers', 'lookupaudit', 'activity',
+    'records', 'queue', 'failures', 'recon', 'officers', 'lookupaudit', 'activity',
   ];
   for (const view of HUB_VIEWS) {
     app.get(`/${view}`, (req, res) => res.redirect(302, `/#${view}`));
@@ -192,6 +192,8 @@ function buildHub() {
   hubLookup.installAssets(app);
   // The department offices as the admin sees them (read-only, plus "retry" of a department's waiting events).
   require('./services/hub-offices').install(app);
+  // apply, approve and correct records of every department from the hub (same department databases)
+  require('./services/hub-workbench').install(app);
   app.use('/assets', express.static(HUB_STATIC, { maxAge: '5m' }));
   app.get('/', (req, res) => {
     res.set('X-Replica-Notice', 'Unofficial local demonstration - not an official government service');

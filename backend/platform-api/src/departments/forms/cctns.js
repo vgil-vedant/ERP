@@ -10,7 +10,7 @@
  * person, the vehicle triple for a vehicle check, and the statuses of table 11.4.
  */
 
-const { LISTS, CRIMES, RANK_NAME, sectionsFor, personFields, personInput, opt, pad, yearOf } = require('./common');
+const { LISTS, CRIMES, RANK_NAME, sectionsFor, personFields, personInput, opt, pad, yearOf, editAction } = require('./common');
 
 const SERVICES = [opt('Antecedent verification'), opt('Police clearance certificate (state portal)'), opt('Generate vehicle NOC')];
 const PURPOSES = ['Employee verification', 'Tenant verification', 'Domestic help verification', 'Employment abroad', 'Passport', 'Pre-purchase vehicle verification', 'Other'].map((v) => opt(v));
@@ -42,6 +42,7 @@ module.exports = {
     },
     verification_request: {
       label: 'Verification request', plural: 'Verification requests', closed: ['closed'],
+      awaiting: ['submitted', 'blocked', 'in_progress', 'deferred', 'completed'],
       title: (r) => r.data.service,
       subtitle: (r, parties) => `${r.data.purpose} · ${parties.map((p) => p.name).join(', ')}`,
     },
@@ -153,6 +154,25 @@ module.exports = {
   ],
 
   actions: {
+    fir: [
+      editAction({
+        from: [null],
+        fields: [
+          { name: 'io_name', label: 'Investigating officer', type: 'text', required: true, max: 100, width: 'half' },
+          { name: 'io_rank', label: 'Rank', type: 'select', required: true, options: LISTS.ioRanks, width: 'half' },
+          { name: 'accused_arrested_on', label: 'Accused arrested on', type: 'date', notFuture: true, width: 'half' },
+        ],
+        prefill: (r) => ({
+          io_name: (r.data.investigating_officer || {}).name, io_rank: (r.data.investigating_officer || {}).rank,
+          accused_arrested_on: ((r.data.accused || [])[0] || {}).arrested_on,
+        }),
+        apply: (r, v) => ({ data: {
+          ...r.data,
+          investigating_officer: { name: v.io_name, rank: v.io_rank, rank_name: RANK_NAME[v.io_rank] },
+          accused: (r.data.accused || []).map((a, i) => (i === 0 ? { ...a, arrested_on: v.accused_arrested_on || null } : a)),
+        } }),
+      }),
+    ],
     verification_request: [
       { key: 'start', label: 'Start the official check', from: ['submitted'], to: 'in_progress' },
       {
@@ -190,6 +210,15 @@ module.exports = {
         },
       },
       { key: 'close', label: 'Close the request', tone: 'neutral', from: ['completed'], to: 'closed' },
+      editAction({
+        from: ['submitted', 'blocked', 'deferred'],
+        fields: [
+          { name: 'purpose', label: 'Purpose', type: 'select', required: true, options: PURPOSES, width: 'half' },
+          { name: 'lawful_basis', label: 'Lawful basis', type: 'text', required: true, max: 160, width: 'half' },
+        ],
+        prefill: (r) => ({ purpose: r.data.purpose, lawful_basis: r.data.lawful_basis }),
+        apply: (r, v) => ({ data: { ...r.data, purpose: v.purpose, lawful_basis: v.lawful_basis } }),
+      }),
     ],
   },
 

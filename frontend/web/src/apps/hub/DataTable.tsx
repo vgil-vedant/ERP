@@ -15,11 +15,11 @@ export interface TableCfg<T> {
   pageSize?: number; defaultSort?: string; defaultDir?: 'asc' | 'desc'; onRow?: (r: T) => void; exportName?: string; emptyText?: string;
   onCount?: (n: number) => void;
 }
-interface Props<T> { cfg: TableCfg<T>; onExport: (name: string, csv: string, count: number) => void }
+interface Props<T> { cfg: TableCfg<T>; onExport: (name: string, csv: string, count: number) => void; showExport?: boolean }
 
 const optionsOf = <T,>(f: Filter<T>) => (typeof f.options === 'function' ? f.options() : f.options);
 
-export function DataTable<T>({ cfg, onExport }: Props<T>) {
+export function DataTable<T>({ cfg, onExport, showExport = true }: Props<T>) {
   const filters = cfg.filters || [];
   const [q, setQ] = useState('');
   const [page, setPage] = useState(1);
@@ -96,7 +96,7 @@ export function DataTable<T>({ cfg, onExport }: Props<T>) {
             {opts[i].map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
           </select>
         ))}
-        <button className="btn btn-sm" type="button" onClick={exportCsv}><Svg name="download" /> Export</button>
+        {showExport && <button className="btn btn-sm" type="button" onClick={exportCsv}><Svg name="download" /> Export</button>}
       </div>
       <div className="tbl-wrap">
         <table className="tbl">

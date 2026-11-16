@@ -89,7 +89,7 @@ function create(dept, store, officer, formKey, input) {
     }
     for (const id of out.touched || []) events.publish(store, id);
     const main = store.record(mainId);
-    store.log(officer.username, 'CREATE', main.ref, `${form.title}: ${main.ref}`);
+    store.log(officer.username, 'CREATE', main.ref, `${form.title}: ${main.ref}${via(officer)}`);
   })();
   bus.schedule(store.code);
   return store.record(mainId);
@@ -100,12 +100,93 @@ function actionsFor(dept, record) {
   return (dept.actions[record.type] || []).filter((a) => a.from.includes(record.status));
 }
 
-/** Apply one action to a record. */
-function act(dept, store, officer, recordId, key, input) {
+/**
+ * Whether two versions of a record's data say the same thing: key order does not
+ * matter, and a key that is missing is the same as one that is null.
+ */
+function canonical(x) {
+  if (Array.isArray(x)) return x.map(canonical);
+  if (x && typeof x === 'object') {
+    const out = {};
+    for (const k of Object.keys(x).sort()) if (x[k] !== null && x[k] !== undefined) out[k] = canonical(x[k]);
+    return out;
+  }
+  return x;
+}
+const sameData = (a, b) => JSON.stringify(canonical(a)) === JSON.stringify(canonical(b));
+
+/** " (via ERP Hub)" when the change was made from the hub rather than in the office. */
+function via(officer) {
+  return officer && officer.channel === 'erp-hub' ? ' (via ERP Hub)' : '';
+}
+
+/**
+ * An action's fields as a form shows them. An action with `prefill(record)`
+ * (the "Edit details" actions) opens with the record's current values, so the
+ * person corrects what is there instead of typing everything again.
+ */
+function actionFields(action, record) {
+  const fields = action.fields || [];
+  if (typeof action.prefill !== 'function') return fields;
+  let values = {};
+  try { values = action.prefill(record) || {}; } catch { values = {}; }
+  return fields.map((f) => (values[f.name] === undefined || values[f.name] === null ? f : { ...f, default: values[f.name] }));
+}
+
+/**
+ * Whether a record is waiting for a decision: its type lists the statuses in
+ * which someone has to act (`awaiting`), and an action is open to it.
+ */
+function isAwaiting(dept, record) {
+  const t = dept.types[record.type];
+  if (!t || !Array.isArray(t.awaiting) || !t.awaiting.includes(record.status)) return false;
+  return actionsFor(dept, record).some((a) => a.kind !== 'edit');
+}
+
+/** Records waiting for a decision, oldest first (first come, first served). */
+function awaiting(dept, store, { type, limit = 200 } = {}) {
+  const pairs = [];
+  for (const [key, t] of Object.entries(dept.types)) {
+    if (type && key !== type) continue;
+    for (const s of t.awaiting || []) pairs.push([key, s]);
+  }
+  if (!pairs.length) return { total: 0, rows: [] };
+  const where = pairs.map(() => '(record_type = ? AND status = ?)').join(' OR ');
+  const args = pairs.flat();
+  const total = store.db.prepare(`SELECT COUNT(*) AS n FROM record WHERE ${where}`).get(...args).n;
+  const max = Math.min(500, Math.max(1, Number(limit) || 200));
+  const rows = store.db.prepare(`SELECT id FROM record WHERE ${where} ORDER BY updated_at ASC, id ASC LIMIT ?`).all(...args, max)
+    .map((r) => store.record(r.id))
+    .filter((r) => r && isAwaiting(dept, r))
+    .map((r) => {
+      const v = view(dept, store, r);
+      return {
+        id: v.id, ref: v.ref, type: v.type, typeLabel: v.typeLabel, title: v.title, subtitle: v.subtitle,
+        status: v.status, statusLabel: v.statusLabel, date: v.date, createdAt: v.createdAt, updatedAt: v.updatedAt,
+        createdBy: v.createdBy, version: v.version, erp: v.erp && v.erp.status,
+        actions: v.actions.filter((a) => a.kind !== 'edit'),
+      };
+    });
+  return { total, rows };
+}
+
+/**
+ * Apply one action to a record.
+ *
+ * `opts.expectedVersion` is the version of the record the person was looking at
+ * when they chose the action. When it is given and the record has moved on since
+ * (an officer and the ERP Hub acting on the same record), nothing is changed and
+ * the caller is told to reload, so no one overwrites a change they never saw.
+ */
+function act(dept, store, officer, recordId, key, input, opts = {}) {
   const record = store.record(recordId);
   if (!record) throw new ActionError('This record does not exist.', 404);
   const action = (dept.actions[record.type] || []).find((a) => a.key === key);
   if (!action) throw new ActionError('This action does not exist for this record.', 404);
+  const expected = opts.expectedVersion == null || opts.expectedVersion === '' ? null : Number(opts.expectedVersion);
+  if (expected != null && (!Number.isInteger(expected) || expected !== record.version)) {
+    throw new ActionError('This record was changed after you opened it. Reload to see its current state, then try again.');
+  }
   if (!action.from.includes(record.status)) {
     throw new ActionError(`This record is ${statusLabel(record)} now, so "${action.label}" is no longer possible. Reload to see its current state.`);
   }
@@ -119,6 +200,10 @@ function act(dept, store, officer, recordId, key, input) {
     if (fresh.version !== record.version) throw new ActionError('Someone else changed this record a moment ago. Reload to see its current state.');
     // most actions only move the record on; some also change its data or create records
     const out = (typeof action.apply === 'function' ? action.apply(fresh, v.values, ctx) : null) || {};
+    // an edit that changes nothing would only add a version and an event the ERP does not need
+    if (action.kind === 'edit' && sameData(out.data || fresh.data, fresh.data) && !(out.records || []).length) {
+      throw new ActionError('Nothing was changed, so nothing was saved.', 422);
+    }
     const status = out.status || action.to || fresh.status;
     const history = fresh.history.slice();
     if (action.to && action.to !== fresh.status) history.push({ status: action.to, at: out.at || today() });
@@ -126,7 +211,7 @@ function act(dept, store, officer, recordId, key, input) {
     events.publish(store, fresh.id);
     for (const r of out.records || []) { const id = store.saveRecord(r, officer.username); events.publish(store, id); }
     for (const id of out.touched || []) events.publish(store, id);
-    store.log(officer.username, 'ACTION', fresh.ref, `${action.label}${out.note ? `: ${out.note}` : ''}`);
+    store.log(officer.username, action.kind === 'edit' ? 'EDIT' : 'ACTION', fresh.ref, `${action.label}${out.note ? `: ${out.note}` : ''}${via(officer)}`);
   })();
   bus.schedule(store.code);
   return store.record(recordId);
@@ -154,7 +239,7 @@ function view(dept, store, record) {
     parties,
     progress: WORKFLOWS[record.type] ? progress(record.type, record.status, record.history) : null,
     statusLabel: WORKFLOWS[record.type] ? (progress(record.type, record.status, record.history) || {}).statusLabel : (type.statusLabel ? type.statusLabel(record) : 'Recorded'),
-    actions: actionsFor(dept, record).map((a) => ({ key: a.key, label: a.label, tone: a.tone || 'primary', description: a.description || '', fields: a.fields || [] })),
+    actions: actionsFor(dept, record).map((a) => ({ key: a.key, label: a.label, tone: a.tone || 'primary', description: a.description || '', fields: actionFields(a, record), kind: a.kind || 'workflow', to: a.to || null })),
     erp: delivery ? {
       status: delivery.status, attempts: delivery.attempts, error: delivery.last_error,
       latencyMs: delivery.delivered_ms ? delivery.delivered_ms - delivery.created_ms : null,
@@ -233,4 +318,4 @@ function summary(dept, store) {
 
 function cap(s) { s = String(s || '').replace(/_/g, ' '); return s.charAt(0).toUpperCase() + s.slice(1); }
 
-module.exports = { create, act, view, list, summary, formsOf, actionsFor, FormError, ActionError, applies, mask };
+module.exports = { create, act, view, list, summary, formsOf, actionsFor, awaiting, isAwaiting, FormError, ActionError, applies, mask };

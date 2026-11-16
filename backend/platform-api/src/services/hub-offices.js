@@ -63,10 +63,11 @@ function one(site) {
     officers: db.prepare('SELECT username, full_name AS fullName, designation, office, created_at AS createdAt, last_login_at AS lastLoginAt FROM officer ORDER BY id').all(),
     activity: db.prepare('SELECT at, officer, action, record_ref AS ref, details FROM activity ORDER BY id DESC LIMIT ?').all(ACTIVITY_LIMIT),
     records,
-    // per day, for the dashboard chart: records created, and events the ERP has not accepted
+    // per day, for the dashboard charts: records created, events the ERP has not accepted, and people added
     daily: {
       records: db.prepare('SELECT date(created_at) AS d, COUNT(*) AS n FROM record GROUP BY d ORDER BY d DESC LIMIT 400').all(),
       undelivered: db.prepare("SELECT date(created_ms / 1000, 'unixepoch') AS d, COUNT(*) AS n FROM outbox WHERE status != 'delivered' GROUP BY d ORDER BY d DESC LIMIT 400").all(),
+      people: db.prepare('SELECT date(created_at) AS d, COUNT(*) AS n FROM person GROUP BY d ORDER BY d DESC LIMIT 400').all(),
     },
     file: `${site.code}.sqlite`,
   };

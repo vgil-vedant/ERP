@@ -7,7 +7,7 @@
  * number recorded), pending with its hearings, disposed, in appeal, closed.
  */
 
-const { LISTS, CRIMES, DISTRICT_LIST, sectionsFor, personFields, personInput, opt, pad } = require('./common');
+const { LISTS, CRIMES, DISTRICT_LIST, sectionsFor, personFields, personInput, opt, pad, editAction } = require('./common');
 
 const CRIMINAL_TYPES = [
   ['Sessions Case', 'S.C.', true], ['Regular Criminal Case', 'R.C.C.', false], ['Special Case (NDPS)', 'NDPS Spl. Case', true],
@@ -19,6 +19,7 @@ const BENCHES = ['Additional Sessions Judge', 'Judicial Magistrate First Class',
 const MODES = [opt('Physical'), opt('Video conference')];
 const OUTCOMES = [opt('convicted', 'Convicted'), opt('acquitted', 'Acquitted'), opt('discharged', 'Discharged'), opt('compounded', 'Compounded'), opt('decreed', 'Decreed'), opt('dismissed', 'Dismissed')];
 const districtOf = (name) => DISTRICT_LIST.find((d) => d.name === name);
+const bareAdvocate = (s) => String(s || '').replace(/^Adv\.?\s*/i, '').replace(/,\s*Additional Public Prosecutor$/i, '').trim();
 
 module.exports = {
   code: 'ecourts',
@@ -29,7 +30,7 @@ module.exports = {
 
   types: {
     court_case: {
-      label: 'Case', plural: 'Cases', closed: ['disposed', 'closed'],
+      label: 'Case', plural: 'Cases', closed: ['disposed', 'closed'], awaiting: ['filed', 'objected', 'registered'],
       title: (r) => `${r.data.case_no || `Filing ${r.data.filing_no}`}`,
       subtitle: (r) => `${r.data.parties.petitioner} v. ${r.data.parties.respondent}`,
     },
@@ -194,6 +195,30 @@ module.exports = {
         apply: (r, v) => ({ data: { ...r.data, appeal: { court: v.court, number: v.number, filed_on: v.filed_on, status: 'Pending' } }, at: v.filed_on, note: v.number }),
       },
       { key: 'close', label: 'Close the file', tone: 'neutral', from: ['disposed'], to: 'closed' },
+      editAction({
+        from: ['filed', 'objected', 'registered', 'pending'],
+        description: 'Correct the advocates on the case. The case and filing numbers, the court and the parties change only through the registry.',
+        fields: [
+          { name: 'advocate', label: 'Defence advocate', type: 'text', max: 100, width: 'half' },
+          { name: 'bar', label: 'Bar registration (state/number/year)', type: 'text', max: 20, pattern: '^[A-Z]{2}/\\d{1,6}/\\d{4}$', patternMessage: 'Use the form MH/1234/2010.', width: 'half' },
+          { name: 'prosecutor', label: 'Public prosecutor (criminal cases)', type: 'text', max: 100, width: 'half' },
+        ],
+        prefill: (r) => ({
+          advocate: r.data.defence_advocate ? bareAdvocate(r.data.defence_advocate.name) : null,
+          bar: r.data.defence_advocate ? r.data.defence_advocate.bar || null : null,
+          prosecutor: r.data.prosecutor ? bareAdvocate(r.data.prosecutor) : null,
+        }),
+        apply(r, v, ctx) {
+          const criminal = !!r.data.fir_no;
+          if (!criminal && v.prosecutor) ctx.fail('prosecutor', 'A civil case has no public prosecutor.');
+          if (v.bar && !v.advocate) ctx.fail('advocate', 'Give the advocate’s name with the bar registration.');
+          return { data: {
+            ...r.data,
+            defence_advocate: v.advocate ? { name: `Adv. ${bareAdvocate(v.advocate)}`, bar: v.bar || '' } : null,
+            prosecutor: criminal && v.prosecutor ? `Adv. ${bareAdvocate(v.prosecutor)}, Additional Public Prosecutor` : null,
+          } };
+        },
+      }),
     ],
   },
 

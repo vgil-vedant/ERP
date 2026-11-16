@@ -27,6 +27,7 @@ export const D = {
   CITIZENS: [] as Citizen[], INTAKES: [] as Intake[], SYNC: [] as Sync[], AUDIT: [] as Audit[], SUBMISSIONS: [] as Submission[],
   TOTALS: { intake: 0, citizens: 0 }, DATA: null as Dash | null, EARLIEST: new Date(), LOAD_ERROR: null as string | null,
   OFFICES: null as Dash | null,   // GET /api/offices: the department offices (figures, records, bus events, officers, activity)
+  WORKBENCH: null as Dash | null, // GET /api/workbench: departments, their forms and how many records wait for a decision
 };
 
 export const sysName = (code: string) => (D.SYS_MAP[code] && D.SYS_MAP[code].name) || code || '—';
@@ -174,9 +175,15 @@ export function buildNav(): NavGroup[] {
   const byCode = new Map<string, Dash>(depts.map((x: Dash) => [x.code, x]));
   const pending = depts.reduce((t: number, x: Dash) => t + x.integration.pending, 0);
   const rejected = depts.reduce((t: number, x: Dash) => t + x.integration.rejected, 0);
+  const waiting = D.WORKBENCH ? (D.WORKBENCH.departments as Dash[]).reduce((t: number, x: Dash) => t + (x.awaiting || 0), 0) : null;
+  const workbench: NavGroup = { id: 'gw', index: '01b', label: 'Workbench', items: [
+    { view: 'apply', label: 'New application', icon: 'file' },
+    { view: 'approvals', label: 'Approvals', icon: 'check', count: waiting || null },
+    { view: 'work', label: 'All records', icon: 'grid' }] };
   return [
     { id: 'g1', index: '01', label: 'Command centre', items: [
-      { view: 'dashboard', label: 'Dashboard', icon: 'dash' }, { view: 'overview', label: 'System Overview', icon: 'layers' }] },
+      { view: 'dashboard', label: 'Dashboard', icon: 'dash' }] },
+    workbench,
     { id: 'g2', index: '02', label: 'ERP · record of truth', items: [
       { view: 'lookup', label: 'Person Lookup', icon: 'idcard' },
       { view: 'citizens', label: 'Citizens', icon: 'users', badgeCitizens: true },
@@ -186,7 +193,7 @@ export function buildNav(): NavGroup[] {
     { id: 'g3', index: '03', label: 'Departments', items: D.SYSTEMS.map((s) => ({
       view: 'dept:' + s.code, label: s.name, icon: PORTAL_ICON[s.code],
       count: byCode.has(s.code) ? byCode.get(s.code)!.totalRecords : null,
-    })).concat([{ view: 'depts', label: 'All departments', icon: 'grid', count: null as number | null }]) },
+    })) },
     { id: 'g4', index: '04', label: 'Integration bus', items: [
       { view: 'queue', label: 'Event Queue', icon: 'sync', count: depts.length && pending + rejected > 0 ? pending + rejected : null, warn: pending + rejected > 0 },
       { view: 'failures', label: 'Retries & Failures', icon: 'alert', count: depts.length && rejected ? rejected : null, warn: rejected > 0 },

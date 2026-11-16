@@ -1,8 +1,8 @@
 // Charts, drawn as SVG exactly as the old script drew them (ported from erp-hub.js).
 import { useId, useRef, useState } from 'react';
-import { MONTHS, esc, fmtDate, hideTip, num, pct, pctS, showTip } from './lib';
+import { MONTHS, Svg, esc, fmtDate, hideTip, num, pct, pctS, rel, showTip } from './lib';
 import type { Bucket, Metrics } from './model';
-import { D, DEPT_HUE } from './model';
+import { D, DEPT_HUE, PORTAL_ICON } from './model';
 
 const R2 = (v: number) => Math.round(v * 100) / 100;
 
@@ -158,7 +158,7 @@ export function Bars({ rows, labels = ['Kept', 'Rolled back', 'back', 'all kept'
         const hue = DEPT_HUE[r.code];
         return (
         <div className="bar-row" key={r.code}>
-          <div className="bar-name"><span className="sys-dot" style={{ background: hue || D.SYS_COLOR[r.code] }} /><span>{r.name}</span></div>
+          <div className="bar-name"><span className="bar-ic sys-tint" style={{ ['--sys' as string]: hue || D.SYS_COLOR[r.code] }} aria-hidden="true"><Svg name={PORTAL_ICON[r.code] || 'grid'} /></span><span>{r.name}</span></div>
           <div className="bar-track" style={hue ? { background: `color-mix(in srgb, ${hue} 10%, #fff)` } : undefined}
             onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)}</div>
         <div class="ct-row"><span class="ct-dot" style="background:${hue || '#3FC594'}"></span>${labels[0]}<b>${num(r.kept)}</b></div>
@@ -206,4 +206,228 @@ export function HealthRows({ m, compact, names = ['201 · new intake written', '
 export function Meter({ m }: { m: Pick<Metrics, 'kept' | 'dup' | 'rolled' | 'totalAttempts'> }) {
   const segs = [{ v: m.kept, c: 'var(--success)' }, { v: m.dup, c: '#4FB9A8' }, { v: m.rolled, c: '#D8A64E' }];
   return <>{segs.map((s, i) => <span key={i} style={{ width: `${pct(s.v, m.totalAttempts).toFixed(2)}%`, background: s.c }} />)}</>;
+}
+
+export interface StatusRow { code: string; name: string; delivered: number; pending: number; rejected: number; lastAt: string | null }
+/** Events by department: delivered / waiting / rejected as three parts of one bar, and when each office last delivered. */
+export function StatusBars({ rows }: { rows: StatusRow[] }) {
+  const max = Math.max(1, ...rows.map((r) => r.delivered + r.pending + r.rejected));
+  return (
+    <>
+      {rows.map((r) => {
+        const hue = DEPT_HUE[r.code] || D.SYS_COLOR[r.code];
+        const total = r.delivered + r.pending + r.rejected;
+        const w = (n: number) => `${(n / max) * 100}%`;
+        return (
+          <div className="bar-row bar-row--status" key={r.code}>
+            <div className="bar-name"><span className="bar-ic sys-tint" style={{ ['--sys' as string]: hue }} aria-hidden="true"><Svg name={PORTAL_ICON[r.code] || 'grid'} /></span><span>{r.name}</span></div>
+            <div className="bar-track" style={{ background: `color-mix(in srgb, ${hue} 10%, #fff)` }} onMouseLeave={hideTip}
+              onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)}</div>
+        <div class="ct-row"><span class="ct-dot" style="background:${hue}"></span>Delivered<b>${num(r.delivered)}</b></div>
+        <div class="ct-row"><span class="ct-dot" style="background:#D8A64E"></span>Waiting<b>${num(r.pending)}</b></div>
+        <div class="ct-row"><span class="ct-dot" style="background:#D6584F"></span>Rejected<b>${num(r.rejected)}</b></div>`, e.clientX, e.clientY)}>
+              <div className="bar-fill" style={{ width: w(r.delivered), background: `linear-gradient(90deg, ${hue}, color-mix(in srgb, ${hue} 72%, #fff))` }} />
+              <div className="bar-fill alt" style={{ width: w(r.pending) }} />
+              <div className="bar-fill bad" style={{ width: w(r.rejected) }} />
+            </div>
+            <div className="bar-val">{num(total)}<small>{r.lastAt ? rel(new Date(r.lastAt)) : 'none yet'}</small></div>
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
+export interface OpenRow { code: string; name: string; open: number; records: number }
+/** A round axis maximum and step (at most five steps) for a largest value. */
+function axisScale(max: number): { top: number; step: number; ticks: number[] } {
+  const steps = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000];
+  const step = steps.find((x) => max / x <= 5) || 1000;
+  const top = Math.max(step, Math.ceil(max / step) * step);
+  return { top, step, ticks: Array.from({ length: top / step + 1 }, (_, k) => k * step) };
+}
+/** Open work by department, as vertical columns on labelled axes. It fills the card: every position is a percentage of the plot area. */
+export function OpenBars({ rows }: { rows: OpenRow[] }) {
+  const sc = axisScale(Math.max(1, ...rows.map((r) => r.records)));
+  const pctOf = (v: number) => `${(v / sc.top) * 100}%`;
+  const cols = { gridTemplateColumns: `repeat(${Math.max(1, rows.length)}, minmax(0, 1fr))` };
+  return (
+    <div className="vchart" role="img" aria-label="Open records and all records for each department">
+      <div className="vchart-y" aria-hidden="true"><div className="vchart-inner">
+        {sc.ticks.map((t) => <span key={t} style={{ bottom: pctOf(t) }}>{num(t)}</span>)}
+      </div></div>
+      <div className="vchart-main">
+        <div className="vchart-grid" aria-hidden="true">
+          {sc.ticks.map((t) => <i key={t} className={t === 0 ? 'is-base' : ''} style={{ bottom: pctOf(t) }} />)}
+        </div>
+        <div className="vbars" style={cols}>
+          {rows.map((r) => {
+            const hue = DEPT_HUE[r.code] || D.SYS_COLOR[r.code];
+            return (
+              <div className="vbar-area" key={r.code}>
+                <div className="vbar-inner">
+                  <div className="vbar-col" style={{ height: pctOf(r.records), minHeight: 6, background: `color-mix(in srgb, ${hue} 14%, #fff)` }} onMouseLeave={hideTip}
+                    onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)}</div>
+        <div class="ct-row"><span class="ct-dot" style="background:${hue}"></span>Open<b>${num(r.open)}</b></div>
+        <div class="ct-row"><span class="ct-dot" style="background:#CFE0D8"></span>All records<b>${num(r.records)}</b></div>`, e.clientX, e.clientY)}>
+                    <div className="vbar-fill" style={{ height: `${r.records ? (r.open / r.records) * 100 : 0}%`, background: `linear-gradient(0deg, ${hue}, color-mix(in srgb, ${hue} 72%, #fff))` }} />
+                  </div>
+                  <div className="vbar-val" style={{ bottom: `calc(${pctOf(r.records)} + 6px)` }}>{num(r.open)}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div />
+      <div className="vnames" style={cols}>
+        {rows.map((r) => {
+          const hue = DEPT_HUE[r.code] || D.SYS_COLOR[r.code];
+          return <div className="vbar-name" key={r.code}><span className="bar-ic sys-tint" style={{ ['--sys' as string]: hue }} aria-hidden="true"><Svg name={PORTAL_ICON[r.code] || 'grid'} /></span><b>{r.name}</b></div>;
+        })}
+      </div>
+      <div className="vchart-legend">
+        <span><i className="lg-dot" style={{ background: 'var(--emerald)' }} />Open (filled part)</span>
+        <span><i className="lg-dot" style={{ background: '#CFE0D8' }} />All records the office holds (full column)</span>
+      </div>
+    </div>
+  );
+}
+
+export interface PeopleHeatRow { code: string; name: string; total: number; series: number[] }
+/** People on file by department: a heat map of how many people each office added on each of the last days. */
+export function PeopleHeat({ rows, dates }: { rows: PeopleHeatRow[]; dates: Date[] }) {
+  const grand = rows.reduce((t, r) => t + r.total, 0);
+  const max = Math.max(1, ...rows.flatMap((r) => r.series));
+  const tint = (hue: string, n: number) => (n ? `color-mix(in srgb, ${hue} ${Math.round(18 + 82 * Math.sqrt(n / max))}%, #fff)` : '#F1F6F3');
+  const n = dates.length;
+  const marks = [0, 7, 14, 21].filter((i) => i < n);
+  return (
+    <div className="pheat" role="img" aria-label="People added per day in each department over the last days">
+      <div className="pheat-row pheat-axis" aria-hidden="true">
+        <span />
+        <div className="pheat-cells">{marks.map((i) => <em key={i} style={{ gridColumn: `${i + 1} / span 7` }}>{fmtDate(dates[i]).replace(/ \d{4}$/, '')}</em>)}</div>
+        <span />
+      </div>
+      {rows.map((r) => {
+        const hue = DEPT_HUE[r.code] || D.SYS_COLOR[r.code] || '#87968F';
+        return (
+          <div className="pheat-row" key={r.code}>
+            <div className="bar-name"><span className="bar-ic sys-tint" style={{ ['--sys' as string]: hue }} aria-hidden="true"><Svg name={PORTAL_ICON[r.code] || 'grid'} /></span><span>{r.name}</span></div>
+            <div className="pheat-cells" style={{ gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))` }}>
+              {r.series.map((v, i) => (
+                <i key={i} className="pheat-cell" style={{ background: tint(hue, v) }} onMouseLeave={hideTip}
+                  onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)} · ${fmtDate(dates[i])}</div><div class="ct-row"><span class="ct-dot" style="background:${hue}"></span>People added<b>${num(v)}</b></div>`, e.clientX, e.clientY)} />
+              ))}
+            </div>
+            <div className="bar-val">{num(r.total)}<small>{pctS(r.total, grand)}</small></div>
+          </div>
+        );
+      })}
+      <div className="pheat-legend"><span>Fewer added</span><i style={{ background: '#F1F6F3' }} /><i style={{ background: 'color-mix(in srgb, var(--emerald) 30%, #fff)' }} /><i style={{ background: 'color-mix(in srgb, var(--emerald) 60%, #fff)' }} /><i style={{ background: 'var(--emerald)' }} /><span>More added</span></div>
+    </div>
+  );
+}
+
+export interface RadarAxis { key: string; label: string; created: number; refused: number }
+/** Office activity as a radar chart: one axis per department, one translucent polygon per metric. */
+export function RadarChart({ axes, labels, days }: { axes: RadarAxis[]; labels: [string, string]; days: number }) {
+  const W = 560, H = 440, cx = W / 2, cy = H / 2 + 4, R = 165;
+  const n = axes.length;
+  const sc = axisScale(Math.max(1, ...axes.flatMap((a) => [a.created, a.refused])));
+  const rings = sc.ticks.slice(1);
+  const ang = (i: number) => -Math.PI / 2 + (2 * Math.PI * i) / n;
+  const pt = (i: number, v: number): [number, number] => [R2(cx + Math.cos(ang(i)) * R * (v / sc.top)), R2(cy + Math.sin(ang(i)) * R * (v / sc.top))];
+  const poly = (vals: number[]) => 'M' + vals.map((v, i) => pt(i, v).join(' ')).join(' L') + ' Z';
+  const series: { name: string; color: string; vals: number[] }[] = [
+    { name: labels[0], color: '#0E9F6B', vals: axes.map((a) => a.created) },
+    { name: labels[1], color: '#D8A64E', vals: axes.map((a) => a.refused) },
+  ];
+  const tip = (e: React.MouseEvent, a: RadarAxis, s: { name: string; color: string }, v: number) =>
+    showTip(`<div class="ct-title">${esc(a.label)}</div><div class="ct-row"><span class="ct-dot" style="background:${s.color}"></span>${esc(s.name)}<b>${num(v)}</b></div><div class="ct-row" style="color:#A9C3B8;font-size:10.5px">last ${days} days</div>`, e.clientX, e.clientY);
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${labels[0]} and ${labels[1]} for each department over the last ${days} days`} onMouseLeave={hideTip}>
+      {rings.map((v) => (
+        <polygon key={v} points={axes.map((_, i) => pt(i, v).join(',')).join(' ')} fill={v === sc.top ? '#FBFDFC' : 'none'} stroke="#DDE7E2" strokeWidth="1" />
+      ))}
+      {axes.map((a, i) => <line key={a.key} x1={cx} y1={cy} x2={pt(i, sc.top)[0]} y2={pt(i, sc.top)[1]} stroke="#E6EEEA" strokeWidth="1" />)}
+      {rings.map((v) => <text key={'t' + v} x={cx + 5} y={R2(cy - R * (v / sc.top)) - 3} fontSize="9.5" fontWeight="600" fill="#8A9B93">{num(v)}</text>)}
+      {series.map((s) => (
+        <g key={s.name}>
+          <path d={poly(s.vals)} fill={s.color} fillOpacity=".2" stroke={s.color} strokeWidth="2" strokeLinejoin="round" />
+          {s.vals.map((v, i) => { const [x, y] = pt(i, v); return <circle key={axes[i].key} cx={x} cy={y} r="5" fill={s.color} stroke="#fff" strokeWidth="2" />; })}
+        </g>
+      ))}
+      {axes.map((a, i) => {
+        const x = cx + Math.cos(ang(i)) * (R + 18), y = cy + Math.sin(ang(i)) * (R + 18), c = Math.cos(ang(i)), sn = Math.sin(ang(i));
+        return <text key={'l' + a.key} x={R2(x)} y={R2(y + (sn < -0.9 ? -4 : sn > 0.5 ? 12 : 4))} textAnchor={c > 0.25 ? 'start' : c < -0.25 ? 'end' : 'middle'} fontSize="12" fontWeight="700" fill="#33423B">{a.label}</text>;
+      })}
+      {series.map((s) => axes.map((a, i) => { const [x, y] = pt(i, s.vals[i]); return <circle key={s.name + a.key} cx={x} cy={y} r="13" fill="transparent" style={{ cursor: 'crosshair' }} onMouseMove={(e) => tip(e, a, s, s.vals[i])} />; }))}
+    </svg>
+  );
+}
+
+/** A doughnut with the share inside each segment, and a bordered label for each category outside it, joined by a leader line. */
+export function DonutPro({ items, centerLabel, hover, setHover, unit = 'records' }: { items: DonutItem[]; centerLabel?: string; hover: number | null; setHover: (i: number | null) => void; unit?: string }) {
+  const total = items.reduce((a, b) => a + b.value, 0) || 1;
+  const W = 620, H = 420, cx = W / 2, cy = H / 2, R = 128, r = 78, GAP = items.length > 1 ? 0.022 : 0;
+  const pt = (rad: number, a: number): [number, number] => [R2(cx + Math.cos(a) * rad), R2(cy + Math.sin(a) * rad)];
+  let acc = -Math.PI / 2;
+  const segs = items.map((it, i) => {
+    const frac = it.value / total, a0 = acc, a1 = acc + frac * 2 * Math.PI;
+    acc = a1;
+    return { it, i, frac, a0, a1, mid: (a0 + a1) / 2 };
+  });
+  const LH = 28, BOXH = 22;
+  // outside labels: one column per side, sorted by height and pushed apart so they never overlap
+  const place = (side: 1 | -1) => {
+    const list = segs.filter((s) => (Math.cos(s.mid) >= 0 ? 1 : -1) === side).map((s) => ({ s, y: cy + Math.sin(s.mid) * (R + 18) })).sort((a, b) => a.y - b.y);
+    for (let k = 0; k < list.length; k++) list[k].y = Math.max(list[k].y, k ? list[k - 1].y + LH : 16);
+    const over = list.length ? list[list.length - 1].y - (H - 16) : 0;
+    if (over > 0) list.forEach((l) => { l.y -= over; });
+    for (let k = list.length - 2; k >= 0; k--) list[k].y = Math.min(list[k].y, list[k + 1].y - LH);
+    return list;
+  };
+  const labels = [...place(1), ...place(-1)];
+  const short = (t: string) => (t.length > 11 ? t.slice(0, 10) + '…' : t);
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Share of ${unit} by department`} onMouseLeave={() => { setHover(null); hideTip(); }}>
+      {segs.map(({ it, i, frac, a0, a1, mid }) => {
+        const on = hover === i, RO = on ? R + 5 : R;
+        const s0 = a0 + GAP / 2, s1 = a1 - GAP / 2;
+        const o = (a: number): [number, number] => [R2(cx + Math.cos(a) * RO), R2(cy + Math.sin(a) * RO)];
+        const n = (a: number): [number, number] => [R2(cx + Math.cos(a) * r), R2(cy + Math.sin(a) * r)];
+        const large = s1 - s0 > Math.PI ? 1 : 0;
+        const d = frac >= 0.9999
+          ? `M${cx - RO} ${cy} A${RO} ${RO} 0 1 1 ${cx + RO} ${cy} A${RO} ${RO} 0 1 1 ${cx - RO} ${cy} Z M${cx - r} ${cy} A${r} ${r} 0 1 0 ${cx + r} ${cy} A${r} ${r} 0 1 0 ${cx - r} ${cy} Z`
+          : `M${o(s0)[0]} ${o(s0)[1]} A${RO} ${RO} 0 ${large} 1 ${o(s1)[0]} ${o(s1)[1]} L${n(s1)[0]} ${n(s1)[1]} A${r} ${r} 0 ${large} 0 ${n(s0)[0]} ${n(s0)[1]} Z`;
+        const [tx, ty] = pt((R + r) / 2, mid);
+        return (
+          <g key={it.name} style={{ opacity: hover === null || on ? 1 : 0.55, transition: 'opacity .16s ease' }}>
+            <path d={d} fill={it.color} fillRule="evenodd" style={{ cursor: 'default' }}
+              onMouseMove={(e) => { setHover(i); showTip(`<div class="ct-title">${esc(it.name)}</div><div class="ct-row"><span class="ct-dot" style="background:${it.color}"></span>${unit}<b>${num(it.value)}</b></div><div class="ct-row" style="color:#A9C3B8;font-size:10.5px">${pctS(it.value, total)} of ${num(total)}</div>`, e.clientX, e.clientY); }} />
+            {frac >= 0.05 && <text x={tx} y={ty + 4} textAnchor="middle" fontSize="12" fontWeight="800" fill="#fff" style={{ pointerEvents: 'none' }}>{Math.round(frac * 100)}%</text>}
+          </g>
+        );
+      })}
+      <text x={cx} y={cy - 2} textAnchor="middle" className="donut-center">{num(total)}</text>
+      <text x={cx} y={cy + 15} textAnchor="middle" className="donut-center-sub">{(centerLabel || 'TOTAL').toUpperCase()}</text>
+      {labels.map(({ s, y }) => {
+        const side = Math.cos(s.mid) >= 0 ? 1 : -1;
+        const label = short(s.it.name), count = ' · ' + num(s.it.value), bw = Math.max(60, (label.length + count.length) * 6.9 + 18);
+        const edge = cx + side * (R + 48);
+        const [x0, y0] = pt(R + 3, s.mid), [x1, y1] = pt(R + 14, s.mid);
+        const bx = side === 1 ? edge : edge - bw;
+        return (
+          <g key={'l' + s.it.name} className="dp-label" style={{ opacity: hover === null || hover === s.i ? 1 : 0.55 }}
+            onMouseMove={(e) => { setHover(s.i); showTip(`<div class="ct-title">${esc(s.it.name)}</div><div class="ct-row"><span class="ct-dot" style="background:${s.it.color}"></span>${unit}<b>${num(s.it.value)}</b></div><div class="ct-row" style="color:#A9C3B8;font-size:10.5px">${pctS(s.it.value, total)} of ${num(total)}</div>`, e.clientX, e.clientY); }}>
+            <polyline points={`${x0},${y0} ${x1},${y1} ${edge},${R2(y)}`} fill="none" stroke={s.it.color} strokeWidth="1.1" />
+            <circle cx={x0} cy={y0} r="2" fill={s.it.color} />
+            <rect x={R2(bx)} y={R2(y - BOXH / 2)} width={R2(bw)} height={BOXH} rx="6" fill="#fff" stroke={s.it.color} strokeWidth="1.2" />
+            <text x={R2(bx + bw / 2)} y={R2(y + 4)} textAnchor="middle" fontSize="11.5" fontWeight="700" fill="#33423B">{label}<tspan fontWeight="800" fill={s.it.color}>{count}</tspan></text>
+          </g>
+        );
+      })}
+    </svg>
+  );
 }

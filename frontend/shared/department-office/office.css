@@ -166,10 +166,12 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .of-dot--rejected { background: #D64545; }
 
 /* attention list */
-.of-attn { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.of-attn { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .of-attn a { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; border-radius: var(--o-radius); background: var(--o-surface-2); border: 1px solid var(--o-line); text-decoration: none; color: var(--o-text); font-size: 13px; }
+.of-attn a { min-height: 46px; padding-block: 10px; }
+.of-attn a > span { flex: 1 1 auto; min-width: 0; line-height: 1.35; }
 .of-attn a:hover { border-color: var(--o-primary); }
-.of-attn b { font-size: 15px; color: var(--o-ink); font-variant-numeric: tabular-nums; }
+.of-attn b { flex: 0 0 auto; min-width: 36px; padding: 2px 10px; border-radius: 999px; text-align: center; font-size: 14px; line-height: 22px; color: var(--o-ink); background: color-mix(in srgb, currentColor 9%, #fff); font-variant-numeric: tabular-nums; }
 .of-attn .is-warn b { color: var(--o-warn); }
 
 /* tables */

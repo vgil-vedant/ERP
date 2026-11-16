@@ -4,17 +4,18 @@ import type { ReactNode } from 'react';
 import { Svg, clock, fmtDate, fmtDateTime, fmtTime, hideTip, num, rel } from './lib';
 import { D, DEPT_HUE, PORTAL_ICON, applyData, buildNav, dailySeries, hostPort, metrics, portalOrigin, sysName, sysPort } from './model';
 import type { Audit, Citizen, Days, Intake, Sync } from './model';
-import { AreaChart, Bars, Donut, DonutLegend, HealthRows, Meter, Sparkline } from './charts';
+import { AreaChart, Bars, DonutPro, RadarChart, HealthRows, Meter, OpenBars, PeopleHeat, Sparkline, StatusBars } from './charts';
 import { DataTable } from './DataTable';
 import { HttpPill, ResultPill, defineTables } from './tables';
 import { Views } from './views.generated';
 import { LookupView, syncLookup } from './LookupView';
 import { OverviewBody, DeptKpis, DepartmentDatabases, FlowDiagram, OfficeFeed, OfficeViews, isOfficeView, officeDaily, officeMetrics, recentEventsCfg, recentRecordsCfg } from './offices';
 import type { OfficeCtx } from './offices';
+import { WorkbenchViews, isWorkbenchView, loadWorkbench, workbenchMeta } from './workbench';
 
 // Views in the navigation, plus three older pages kept reachable by link ('portals', 'integration', 'submissions').
-const VALID = ['dashboard', 'overview', 'intake', 'lookup', 'citizens', 'audit', 'portals', 'sync', 'integration', 'submissions', 'database', 'health', 'docs'];
-const isValid = (v: string) => VALID.includes(v) || isOfficeView(v);
+const VALID = ['dashboard', 'intake', 'lookup', 'citizens', 'audit', 'portals', 'sync', 'integration', 'submissions', 'database', 'health', 'docs'];
+const isValid = (v: string) => VALID.includes(v) || isOfficeView(v) || isWorkbenchView(v);
 // The view is part of the address (#citizens, #dept:cctns ...), so a page of the
 // hub can be linked to, reloaded, and reached again with the Back button.
 const viewFromUrl = () => {
@@ -33,7 +34,18 @@ const ERP_TABLE_ROLE: Record<string, string> = {
   intake_field: 'Field-level values per record', audit_log: 'Append-only audit events',
 };
 // where a breadcrumb section leads: the first page of that section
-const SECTION_HOME: Record<string, string> = { 'Command centre': 'dashboard', ERP: 'lookup', Departments: 'depts', 'Integration bus': 'queue', 'Access & audit': 'officers', System: 'health' };
+// the icon tile of each sidebar group has its own colour (departments keep theirs)
+const GROUP_HUE: Record<string, string> = { g1: '#0E9F6B', gw: '#4F46E5', g2: '#2563EB', g4: '#D97706', g5: '#BE185D', g6: '#475569' };
+// ...and each item its own colour, chosen by what it does
+const VIEW_HUE: Record<string, string> = {
+  dashboard: '#0E9F6B',
+  apply: '#4F46E5', approvals: '#16A34A', work: '#0D9488',
+  lookup: '#7C3AED', citizens: '#2563EB', records: '#0891B2', intake: '#0284C7', audit: '#DC2626',
+  queue: '#D97706', failures: '#E11D48', sync: '#0EA5E9', recon: '#65A30D',
+  officers: '#6366F1', lookupaudit: '#9333EA', activity: '#EA580C',
+  health: '#DB2777', database: '#92400E', docs: '#475569',
+};
+const SECTION_HOME: Record<string, string> = { Workbench: 'approvals', 'Command centre': 'dashboard', ERP: 'lookup', Departments: 'dept:eprisons', 'Integration bus': 'queue', 'Access & audit': 'officers', System: 'health' };
 const DOCS = [
   { name: 'Project README', path: 'README.md', note: 'Architecture, API, schema, ports, testing' },
   { name: 'Architecture notes', path: 'info/docs/architecture/ARCHITECTURE.md', note: 'Runtime topology and write-through in text' },
@@ -46,6 +58,10 @@ const DOCS = [
   { name: 'Replica notes', path: 'backend/gov_replica/README.md', note: 'Field-level fidelity, replica notice' },
 ];
 const API_ROWS = [
+  { m: 'GET', p: '/api/workbench', n: 'Hub workbench. The five departments, their application forms and record types, and how many records wait for a decision.' },
+  { m: 'GET', p: '/api/workbench/inbox', n: 'Hub workbench. Every record waiting for a decision in the five departments, oldest first.' },
+  { m: 'POST', p: '/api/workbench/:code/records', n: 'Hub workbench. Apply to a department: saved in its own database, seen in its office, sent to the ERP. 201, or 422 field by field.' },
+  { m: 'POST', p: '/api/workbench/:code/records/:id/actions/:key', n: 'Hub workbench. Approve, reject, move on or edit a record, with its version: 409 if it changed since it was opened.' },
   { m: 'GET', p: '/api/offices', n: 'Hub. The five department offices: figures, records, integration-bus events, officers and activity, plus what the ERP says it received.' },
   { m: 'POST', p: '/api/offices/:code/retry', n: 'Hub. Asks one department\'s bus to send its waiting and rejected events to the ERP again.' },
   { m: 'GET', p: '/api/dashboard', n: 'Hub. One document with everything this dashboard shows: ERP records over HTTP, the platform ledger, health.' },
@@ -124,7 +140,7 @@ export function Hub() {
   const refresh = useCallback(async () => {
     if (refreshing.current) return;
     refreshing.current = true;
-    try { const [dash] = await Promise.all([fetchDashboard(), fetchOffices()]); applyData(dash); D.LOAD_ERROR = null; }
+    try { const [dash] = await Promise.all([fetchDashboard(), fetchOffices(), loadWorkbench()]); applyData(dash); D.LOAD_ERROR = null; }
     catch (err) { D.LOAD_ERROR = (err as Error).message || String(err); }   /* the last good data stays on screen, flagged */
     refreshing.current = false;
     setNoticeOff(false);
@@ -133,7 +149,7 @@ export function Hub() {
 
   useEffect(() => {
     (async () => {
-      try { const [dash] = await Promise.all([fetchDashboard(), fetchOffices()]); applyData(dash); } catch (err) { D.LOAD_ERROR = (err as Error).message || String(err); }
+      try { const [dash] = await Promise.all([fetchDashboard(), fetchOffices(), loadWorkbench()]); applyData(dash); } catch (err) { D.LOAD_ERROR = (err as Error).message || String(err); }
       setCollapsed(window.innerWidth < 1180 && window.innerWidth > 900);
       const first = viewFromUrl();
       setView(first);
@@ -224,7 +240,7 @@ export function Hub() {
       <div className="drawer-sec"><h4>Write-through attempts (erp_sync)</h4><div className="kv">
         {attempts.length ? attempts.map((a) => kv(`${fmtTime(a.at)} · ${rel(a.at)}`, <><HttpPill code={a.http} /> <ResultPill r={a.result} /></>)) : kv('—', 'No ledger row')}
       </div></div></>),
-    foot: <>{src('GET /api/intake')}{copyBtn(r.intakeRef)}{closeBtn}</> });
+    foot: <><span style={{ flex: 1 }} />{copyBtn(r.intakeRef)}{closeBtn}</> });
   }, [closeDrawer, copyText]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const openCitizen = useCallback((c: Citizen) => {
@@ -272,7 +288,7 @@ export function Hub() {
       </div></div>
       <div className="drawer-sec"><h4>Details</h4>
         <div style={{ fontSize: '12.5px', color: 'var(--text-2)', lineHeight: 1.6, overflowWrap: 'anywhere' }}>{a.details || 'No details were recorded for this event.'}</div></div></>),
-    foot: <>{src('GET /api/audit')}{copyBtn('#' + a.id)}{closeBtn}</> });
+    foot: <><span style={{ flex: 1 }} />{copyBtn('#' + a.id)}{closeBtn}</> });
   }, [closeDrawer, copyText]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { if (drawer && drawerRef.current) drawerRef.current.focus({ preventScroll: true }); }, [drawer]);
@@ -365,9 +381,11 @@ export function Hub() {
     return +d === +new Date(b.d.getFullYear(), b.d.getMonth(), b.d.getDate());
   }).length);
   const om = officeMetrics();
+  const heatDays = 28;
+  const heatDates = officeDaily(heatDays).map((b) => b.d);
+  const heatRows = om.per.map((x) => ({ code: x.code, name: x.name, total: x.people, series: officeDaily(heatDays, x.code).map((b) => b.people) }));
   const donutItems = om.per.filter((x) => x.records > 0).map((x) => ({ name: x.name, value: x.records, color: DEPT_HUE[x.code] || D.SYS_COLOR[x.code] || '#87968F' })).sort((a, b) => b.value - a.value);
   const busM = { kept: om.delivered, dup: om.pending, rolled: om.rejected, totalAttempts: om.events };
-  const deptBars = om.per.map((x) => ({ code: x.code, name: x.name, records: x.records, kept: x.delivered, rolled: x.pending + x.rejected, attempts: x.delivered + x.pending + x.rejected }));
   const mAll = metrics('all');
   const data = D.DATA;
 
@@ -384,7 +402,7 @@ export function Hub() {
     audit: (n) => setCounts((c) => (c.audit === n ? c : { ...c, audit: n })), sync: (n) => setCounts((c) => (c.sync === n ? c : { ...c, sync: n })),
     submissions: (n) => setCounts((c) => (c.submissions === n ? c : { ...c, submissions: n })),
   });
-  const tbl = <T,>(cfg: Parameters<typeof DataTable<T>>[0]['cfg']) => <DataTable<T> cfg={cfg} onExport={onExport} />;
+  const tbl = <T,>(cfg: Parameters<typeof DataTable<T>>[0]['cfg']) => <DataTable<T> cfg={cfg} onExport={onExport} showExport={false} />;
   const cnt = (k: string, tail: string) => (counts[k] === null ? '—' : num(counts[k] as number) + tail);
 
   const hubPort = data && data.hub && data.hub.port;
@@ -435,15 +453,20 @@ export function Hub() {
     kpiSuccess: num(m.success), kpiSuccessNote: num(m.success) + ' of ' + num(m.totalAttempts) + ' attempts',
     kpiRollback: num(m.rolled), kpiAudit: num(m.audit), kpiDupes: num(m.dup),
     activityRange: <select className="field" aria-label="Chart period" value={String(activityDays)} onChange={(e) => setActivityDays(Number(e.target.value))}>{[[7, 'Last 7 days'], [30, 'Last 30 days'], [90, 'Last 90 days'], [120, 'All']].map(([d, l]) => <option key={d} value={String(d)}>{l}</option>)}</select>,
-    chartActivity: <AreaChart buckets={officeDaily(activityDays)} labels={['Records created', 'Events not delivered']} minMax={400} />,
-    chartDonut: donutItems.length ? <Donut items={donutItems} centerLabel="total records" of="of office records" hover={donutHover} setHover={setDonutHover} /> : <div className="tbl-empty">The offices hold no records yet.</div>,
-    donutLegend: <DonutLegend items={donutItems} hover={donutHover} />,
+    chartActivity: om.per.length >= 3
+      ? <RadarChart days={activityDays} labels={['Records created', 'Events not delivered']} axes={om.per.map((x) => { const d = officeDaily(activityDays, x.code); return { key: x.code, label: x.name, created: d.reduce((t, b) => t + b.received, 0), refused: d.reduce((t, b) => t + b.refused, 0) }; })} />
+      : <AreaChart buckets={officeDaily(activityDays)} labels={['Records created', 'Events not delivered']} minMax={400} />,
+    chartDonut: donutItems.length ? <DonutPro items={donutItems} centerLabel="total records" unit="records" hover={donutHover} setHover={setDonutHover} /> : <div className="tbl-empty">The offices hold no records yet.</div>,
     sourceCount: num(om.per.length) + ' department office' + (om.per.length === 1 ? '' : 's'),
-    chartBars: <Bars rows={deptBars} labels={['Delivered', 'Waiting / rejected', 'open', 'all delivered']} />, healthMeter: <Meter m={busM} />,
+    chartBars: <StatusBars rows={om.per.map((x) => ({ code: x.code, name: x.name, delivered: x.delivered, pending: x.pending, rejected: x.rejected, lastAt: x.d.integration.lastDeliveredAt || null }))} />,
+    chartOpen: <OpenBars rows={om.per.map((x) => ({ code: x.code, name: x.name, open: x.open, records: x.records }))} />,
+    peopleCount: num(heatRows.reduce((t, r) => t + r.total, 0)),
+    chartPeople: heatRows.some((r) => r.total) ? <PeopleHeat rows={heatRows} dates={heatDates} /> : <div className="tbl-empty">No people are on file yet.</div>,
+    healthMeter: <Meter m={busM} />,
     healthRows: <HealthRows m={busM} names={['Delivered to the ERP', 'Waiting · being retried', 'Rejected by the ERP', 'Delivery rate']} rateOf={om.delivered} />,
     kpiDepts: <DeptKpis goto={goto} />,
     auditFeed: <OfficeFeed />,
-    t_recent: <DataTable cfg={recentRecordsCfg(officeCtx0)} onExport={onExport} />, t_syncMini: <DataTable cfg={recentEventsCfg(officeCtx0)} onExport={onExport} />, t_intake: tbl(tables.intake), t_citizens: tbl(tables.citizens), t_audit: tbl(tables.audit), t_sync: tbl(tables.sync), t_submissions: tbl(tables.submissions),
+    t_recent: <DataTable cfg={recentRecordsCfg(officeCtx0)} onExport={onExport} showExport={false} />, t_syncMini: <DataTable cfg={recentEventsCfg(officeCtx0)} onExport={onExport} showExport={false} />, t_intake: tbl(tables.intake), t_citizens: tbl(tables.citizens), t_audit: tbl(tables.audit), t_sync: tbl(tables.sync), t_submissions: tbl(tables.submissions),
     portalQuick: <>{m.perSystem.map((s) => (
       <button className="port-open pr-row" type="button" key={s.code} onClick={() => openPortal(s.code)}>
         <span className="pc-logo sys-tint" style={{ ['--sys' as string]: D.SYS_COLOR[s.code] }}><Svg name={PORTAL_ICON[s.code] || 'grid'} /></span>
@@ -452,7 +475,7 @@ export function Hub() {
       </button>))}</>,
     ovHubPort: hubPort ? ':' + hubPort : '', ovErpAddr: target ? String(target).replace(/^https?:\/\//, '') : '',
     ovPorts: ovPortsEl,
-    intakeCountSub: cnt('intake', ' rows · newest first · GET /api/intake?limit=5000'), citizenCountSub: cnt('citizens', ' citizens · one registration works on all five portals'),
+    intakeCountSub: cnt('intake', ' rows · newest first'), citizenCountSub: cnt('citizens', ' citizens · one registration works on all five portals'),
     auditCountSub: cnt('audit', ' events · append-only (INSERT only)'), syncCountSub: cnt('sync', ' attempts · erp_sync ledger · synchronous write-through'),
     subCountSub: cnt('submissions', ' submissions · hub-owned data, shown read-only'),
     portalGrid: <>{D.SYSTEMS.map((s) => {
@@ -500,6 +523,20 @@ export function Hub() {
     exportSummaryBtn: { onClick: exportSummary }, openRecordsBtn: { onClick: () => goto('records') },
   };
 
+  /* the fixed footer bar is exactly as tall as the sidebar's sign-out block, so their top rules line up */
+  useEffect(() => {
+    const sync = () => {
+      const el = document.querySelector('.sidebar-foot') as HTMLElement | null;
+      if (el) document.documentElement.style.setProperty('--foot-h', el.offsetHeight + 'px');
+    };
+    sync();
+    const el = document.querySelector('.sidebar-foot');
+    const ro = el && typeof ResizeObserver !== 'undefined' ? new ResizeObserver(sync) : null;
+    if (ro && el) ro.observe(el);
+    window.addEventListener('resize', sync);
+    return () => { if (ro) ro.disconnect(); window.removeEventListener('resize', sync); };
+  }, [ready, collapsed]);
+
   /* ------------------------------- rail tip --------------------------- */
   const showRailTip = (el: HTMLElement) => { if (!collapsed) return; const r = el.getBoundingClientRect(); setTip({ text: el.dataset.tip || '', left: r.right + 10, top: r.top + r.height / 2 - 15 }); };
 
@@ -507,13 +544,14 @@ export function Hub() {
   const viewMeta: Record<string, [string, string]> = {
     dashboard: ['Dashboard', 'Command centre'], overview: ['System Overview', 'Command centre'], lookup: ['Person Lookup', 'ERP'], citizens: ['Citizens', 'ERP'],
     records: ['Department Records', 'ERP'], intake: ['Citizen Submissions', 'ERP'], audit: ['Audit Trail', 'ERP'],
-    depts: ['All departments', 'Departments'], queue: ['Event Queue', 'Integration bus'], failures: ['Retries & Failures', 'Integration bus'],
+    queue: ['Event Queue', 'Integration bus'], failures: ['Retries & Failures', 'Integration bus'],
     sync: ['Write-through Ledger', 'Integration bus'], recon: ['Reconciliation', 'Integration bus'],
     officers: ['Officer Accounts', 'Access & audit'], lookupaudit: ['Lookup Audit', 'Access & audit'], activity: ['Activity Log', 'Access & audit'],
     health: ['Service Health', 'System'], database: ['Databases', 'System'], docs: ['Documentation', 'System'],
     // older pages, reached by link from the pages above
     portals: ['All portals', 'Departments'], integration: ['Integration Status', 'Integration bus'], submissions: ['Platform Submissions', 'ERP'],
   };
+  if (isWorkbenchView(view)) viewMeta[view] = workbenchMeta(view);
   if (view.startsWith('dept:')) { const dd = ((D.OFFICES && D.OFFICES.departments) || []).find((x: { code: string }) => x.code === view.slice(5)); viewMeta[view] = [dd ? dd.short : view.slice(5), 'Departments']; }
 
   return (
@@ -543,7 +581,7 @@ export function Hub() {
                       data-tip={`${it.label}${it.port ? ' · :' + it.port : ''}`}
                       onClick={() => { goto(it.view); if (window.innerWidth <= 900) closeMobileNav(); }}
                       onMouseEnter={(e) => showRailTip(e.currentTarget)} onMouseLeave={() => setTip(null)} onFocus={(e) => showRailTip(e.currentTarget)} onBlur={() => setTip(null)}>
-                      {it.view.startsWith('dept:') ? <span className="dept-ic sys-tint" style={{ ['--sys' as string]: D.SYS_COLOR[it.view.slice(5)] }}><Svg name={it.icon} cls="ic" /></span> : <Svg name={it.icon} cls="ic" />}
+                      <span className="dept-ic sys-tint" style={{ ['--sys' as string]: it.view.startsWith('dept:') ? D.SYS_COLOR[it.view.slice(5)] : (VIEW_HUE[it.view] || GROUP_HUE[g.id] || '#0E9F6B') }}><Svg name={it.icon} cls="ic" /></span>
                       <span className="nav-label">{it.label}</span>
                       {it.badge && <span className="nav-badge" data-badge="intake">{num(D.TOTALS.intake)}</span>}
                       {it.badgeCitizens && <span className="nav-badge" data-badge="citizens">{num(D.TOTALS.citizens)}</span>}
@@ -617,6 +655,7 @@ export function Hub() {
             <Views view={view} H={H} P={P} goto={goto} openHub={() => toast('Platform hub', 'You are already on the hub dashboard.', 'info')} />
             <LookupView active={view === 'lookup'} />
             <OfficeViews view={view} c={officeCtx0} />
+            <WorkbenchViews view={view} goto={goto} toast={toast} onChanged={refresh} />
             {view === 'database' && <DepartmentDatabases />}
           </main>
 

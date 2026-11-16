@@ -16,6 +16,7 @@
     "test:e2e": "node tests/e2e/run-e2e-tests.js",
     "test:lookup": "node tests/lookup/run-lookup-tests.js",
     "test:departments": "node tests/departments/run-department-tests.js",
+    "test:workbench": "node tests/workbench/run-workbench-tests.js",
     "build:web": "npm --prefix frontend/web ci && npm --prefix frontend/web run build",
     "test:web": "npm --prefix frontend/web test"
   }

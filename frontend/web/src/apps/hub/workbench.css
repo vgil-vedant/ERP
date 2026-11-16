@@ -1,0 +1,266 @@
+/* ERP Hub workbench: New application, Approvals, All records, Record.
+   Built on the hub's own tokens (hub.css :root), prefixed wb- so nothing here changes another view. */
+
+.wb .wb-muted{color:var(--text-3);}
+.wb .wb-mono{font-family:var(--mono);font-size:.94em;}
+.wb .wb-nowrap{white-space:nowrap;}
+.wb .wb-right{text-align:right;}
+.wb .wb-grow{flex:1;}
+.wb .wb-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.wb .wb-row--end{justify-content:flex-end;}
+.wb .wb-sub{font-size:11.5px;color:var(--text-3);margin-top:2px;line-height:1.4;}
+.wb .wb-kicker{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+
+/* buttons the hub does not have */
+.wb-btn-danger{background:var(--danger);border-color:var(--danger);color:#fff;}
+.wb-btn-danger:hover{background:#a8433d;border-color:#a8433d;color:#fff;}
+.wb-btn-danger-soft{background:var(--danger-bg);border-color:#efc9c4;color:#9B3A34;}
+.wb-btn-danger-soft:hover{background:#f4d5d1;border-color:#e6b3ad;}
+.wb-btn-warn-soft{background:var(--warning-bg);border-color:#f0dcb4;color:#8A5C13;}
+.wb-btn-warn-soft:hover{background:#f6e4c2;border-color:#e8cd96;}
+.wb .btn[disabled]{opacity:.5;cursor:not-allowed;}
+
+/* states */
+.wb-loading{display:flex;align-items:center;gap:10px;padding:28px 4px;color:var(--text-3);font-size:13px;}
+.wb-spinner{width:16px;height:16px;border-radius:50%;border:2px solid var(--mint-200);border-top-color:var(--emerald);animation:wb-spin .8s linear infinite;display:inline-block;flex:none;}
+.wb-spinner--sm{width:12px;height:12px;margin-right:6px;border-color:rgba(255,255,255,.4);border-top-color:#fff;}
+@keyframes wb-spin{to{transform:rotate(360deg);}}
+@media (prefers-reduced-motion:reduce){.wb-spinner{animation-duration:2.4s;}}
+.wb-alert{border-radius:var(--r-sm);padding:11px 14px;font-size:13px;line-height:1.5;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border:1px solid transparent;}
+.wb-alert--danger{background:var(--danger-bg);color:#7E2E29;border-color:#efc9c4;}
+.wb-alert--warn{background:var(--warning-bg);color:#6E4A0F;border-color:#f0dcb4;}
+.wb-alert--info{background:var(--info-bg);color:#24566A;border-color:#cfe2e9;}
+.wb-alert--ok{background:var(--success-bg);color:var(--emerald-ink);border-color:var(--mint-200);}
+.wb-empty{display:flex;flex-direction:column;align-items:center;gap:6px;padding:40px 16px;text-align:center;color:var(--text-2);}
+.wb-empty svg{width:28px;height:28px;color:var(--emerald);}
+.wb-empty span{font-size:12.5px;color:var(--text-3);}
+.wb-note{font-size:12.5px;padding:9px 12px;border-radius:var(--r-xs);background:var(--surface-3);color:var(--text-2);}
+.wb-note--warn{background:var(--warning-bg);color:#6E4A0F;}
+
+/* steps of New application */
+.wb-steps{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;}
+.wb-steps li{font-size:12px;font-weight:700;color:var(--text-4);}
+.wb-steps li button,.wb-steps li span{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:var(--r-pill);border:1px solid var(--border);background:var(--surface);color:inherit;font:inherit;cursor:pointer;}
+.wb-steps li span{cursor:default;}
+.wb-steps li.is-done{color:var(--emerald-deep);}
+.wb-steps li.is-done button{border-color:var(--mint-300);background:var(--mint-50);}
+.wb-steps li.is-current{color:var(--ink);}
+.wb-steps li.is-current button,.wb-steps li.is-current span{border-color:var(--ink);background:var(--ink);color:#fff;}
+
+/* department and form cards */
+.wb-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;}
+.wb-card{--sys:var(--emerald);display:flex;flex-direction:column;gap:10px;text-align:left;padding:18px;border-radius:var(--r-lg);border:1px solid var(--border);background:var(--surface);box-shadow:var(--sh-xs);cursor:pointer;font:inherit;color:var(--text);transition:border-color .15s,box-shadow .15s,transform .15s;}
+.wb-card:hover{border-color:var(--sys);box-shadow:var(--sh-md);transform:translateY(-1px);}
+.wb-card:focus-visible{outline:3px solid var(--mint-300);outline-offset:2px;}
+.wb-card-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--sys) 12%,#fff);color:var(--sys);}
+.wb-card-ic svg{width:20px;height:20px;}
+.wb-card-main{display:flex;flex-direction:column;gap:4px;}
+.wb-card-main b{font-size:15px;letter-spacing:-.01em;}
+.wb-card-main span{font-size:12.5px;color:var(--text-2);line-height:1.45;}
+.wb-card-foot{font-size:11.5px;color:var(--text-3);margin-top:auto;}
+
+/* department badge */
+.wb-dept{--sys:var(--emerald);display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--sys);white-space:nowrap;text-transform:none;letter-spacing:0;}
+.wb-dept svg{width:15px;height:15px;}
+
+/* forms */
+.wb-form{padding:22px;}
+.wb-section{border:0;margin:0 0 18px;padding:0;min-width:0;}
+.wb-section-title{font-size:13px;font-weight:800;letter-spacing:-.01em;margin-bottom:10px;padding:0;color:var(--ink);}
+.wb-fields{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px 14px;}
+.wb-field{grid-column:span 12;display:flex;flex-direction:column;gap:5px;min-width:0;}
+.wb-w-half{grid-column:span 6;}
+.wb-w-third{grid-column:span 4;}
+.wb-w-quarter{grid-column:span 3;}
+@media (max-width:900px){.wb-w-third,.wb-w-quarter{grid-column:span 6;}}
+@media (max-width:640px){.wb-w-half,.wb-w-third,.wb-w-quarter{grid-column:span 12;}}
+.wb-label{font-size:12px;font-weight:700;color:var(--text-2);}
+.wb-req{color:var(--danger);}
+.wb-input{width:100%;min-height:38px;padding:8px 11px;border:1px solid var(--border-strong);border-radius:var(--r-xs);background:#fff;font:inherit;font-size:13px;color:var(--text);}
+textarea.wb-input{resize:vertical;line-height:1.5;}
+.wb-input:focus{outline:none;border-color:var(--mint-400);box-shadow:0 0 0 3px rgba(174,226,200,.35);}
+.wb-input[disabled]{background:var(--surface-2);color:var(--text-3);}
+.wb-field.has-error .wb-input,.wb-field.has-error .wb-checks{border-color:var(--danger);box-shadow:0 0 0 3px rgba(193,81,74,.12);}
+.wb-help{font-size:11.5px;color:var(--text-3);line-height:1.4;}
+.wb-error{font-size:11.5px;color:#9B3A34;font-weight:600;}
+.wb-check{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.45;cursor:pointer;}
+.wb-check input{margin-top:3px;width:15px;height:15px;accent-color:var(--emerald);flex:none;}
+.wb-checks{display:flex;flex-wrap:wrap;gap:8px 18px;padding:8px 10px;border:1px solid var(--border);border-radius:var(--r-xs);}
+.wb-group{display:flex;flex-direction:column;gap:10px;margin-bottom:8px;}
+.wb-group-item{border:1px solid var(--border);border-radius:var(--r-sm);padding:12px;background:var(--surface-2);}
+.wb-group-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;margin-bottom:8px;}
+.wb-form-foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end;border-top:1px solid var(--border);padding-top:16px;margin-top:6px;}
+.wb-form-foot .wb-muted{flex:1;min-width:220px;font-size:12px;}
+
+/* submitted */
+.wb-done{display:flex;gap:18px;align-items:flex-start;padding:24px;}
+.wb-done-ic{width:46px;height:46px;border-radius:50%;background:var(--success-bg);color:var(--emerald);display:grid;place-items:center;flex:none;}
+.wb-done-ic svg{width:24px;height:24px;}
+.wb-done-main{display:flex;flex-direction:column;gap:8px;min-width:0;}
+.wb-done-title{font-size:22px;font-weight:800;letter-spacing:-.02em;}
+
+/* toolbar and tables */
+.wb-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px;}
+.wb-toolbar .seg{flex-wrap:wrap;}
+.wb-search{max-width:340px;flex:1;min-width:200px;}
+.wb-table-card{padding:0;}
+.wb-table-card .tbl-wrap{overflow-x:auto;}
+.wb-table th:last-child,.wb-table td:last-child{padding-right:16px;}
+.wb-decide{display:flex;flex-direction:column;align-items:flex-end;gap:5px;min-width:150px;}
+.wb-decide .btn{max-width:220px;white-space:normal;height:auto;min-height:26px;padding-top:4px;padding-bottom:4px;line-height:1.25;text-align:center;}
+.wb-table-card .table-note{padding:10px 16px;font-size:11.5px;color:var(--text-3);border-top:1px solid var(--border);}
+.wb-table-card .pager{padding:10px 16px;border-top:1px solid var(--border);}
+.wb-table td{vertical-align:middle;}
+.wb-click{cursor:pointer;}
+.wb-click:hover td{background:var(--mint-50);}
+.wb-link{background:none;border:0;padding:0;font:inherit;font-weight:700;color:var(--ink);cursor:pointer;text-align:left;}
+.wb-link:hover{color:var(--emerald-deep);text-decoration:underline;}
+.wb-link:focus-visible{outline:2px solid var(--mint-400);outline-offset:2px;border-radius:4px;}
+
+/* record page */
+.wb-back-row{display:flex;align-items:center;gap:4px;margin-bottom:10px;}
+.wb-rec-head{--sys:var(--emerald);border-top:4px solid var(--sys);margin-bottom:16px;}
+.wb-rec-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.wb-rec-title{font-size:24px;font-weight:800;letter-spacing:-.03em;margin:6px 0 2px;}
+.wb-rec-chips{display:flex;gap:6px;align-items:flex-start;flex-wrap:wrap;}
+.wb-rec-meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;color:var(--text-3);margin-top:12px;}
+.wb-rec-meta b{color:var(--text-2);}
+.wb-progress{list-style:none;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:8px;margin:18px 0 4px;padding:0;}
+@media (max-width:760px){.wb-progress{grid-auto-flow:row;}}
+.wb-progress li{display:flex;flex-direction:column;gap:3px;padding-top:12px;border-top:3px solid var(--border);position:relative;min-width:0;}
+.wb-progress-dot{position:absolute;top:-8px;left:0;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--border-strong);}
+.wb-progress-title{font-size:12px;font-weight:800;}
+.wb-progress-label{font-size:11px;color:var(--text-3);}
+.wb-progress li.is-completed{border-top-color:var(--emerald);}
+.wb-progress li.is-completed .wb-progress-dot{background:var(--emerald);border-color:var(--emerald);}
+.wb-progress li.is-active{border-top-color:var(--mint-400);}
+.wb-progress li.is-active .wb-progress-dot{border-color:var(--emerald);}
+.wb-progress li.is-blocked,.wb-progress li.is-failed{border-top-color:var(--warning);}
+.wb-progress li.is-blocked .wb-progress-dot{border-color:var(--warning);}
+.wb-progress li.is-failed .wb-progress-dot{background:var(--danger);border-color:var(--danger);}
+.wb-progress li.is-skipped{opacity:.55;}
+.wb-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--border);}
+.wb-actions-label{font-size:12px;font-weight:700;color:var(--text-3);margin-right:4px;}
+.wb-rec-grid{margin-bottom:16px;}
+.wb-parties{display:flex;flex-direction:column;gap:10px;}
+.wb-party{display:flex;flex-direction:column;gap:2px;font-size:12.5px;padding:10px 12px;border:1px solid var(--border);border-radius:var(--r-sm);}
+.wb-party b{font-size:13.5px;}
+.wb-timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;max-height:360px;overflow:auto;}
+.wb-timeline li{display:grid;grid-template-columns:110px 1fr;gap:10px;font-size:12.5px;line-height:1.45;padding-left:10px;border-left:3px solid var(--border);}
+.wb-timeline li.is-hub{border-left-color:var(--emerald);}
+.wb-timeline time{color:var(--text-3);font-size:11.5px;}
+.wb-details{margin-bottom:16px;}
+.wb-kv{display:grid;grid-template-columns:minmax(140px,220px) 1fr;margin:0;font-size:12.5px;}
+.wb-kv-row{display:contents;}
+.wb-kv dt{color:var(--text-3);padding:6px 10px 6px 0;border-bottom:1px solid var(--border);font-weight:600;}
+.wb-kv dd{margin:0;padding:6px 0;border-bottom:1px solid var(--border);min-width:0;overflow-wrap:anywhere;}
+.wb-kv--nested{grid-template-columns:minmax(110px,170px) 1fr;background:var(--surface-2);border-radius:var(--r-xs);padding:2px 10px;}
+.wb-kv--nested dt,.wb-kv--nested dd{border-bottom-color:var(--surface-3);}
+@media (max-width:640px){.wb-kv,.wb-kv--nested{grid-template-columns:1fr;}.wb-kv dt{border-bottom:0;padding-bottom:0;}}
+.wb-tree-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;}
+
+/* dialog */
+.wb-dialog-back{position:fixed;inset:0;background:rgba(10,24,18,.42);display:grid;place-items:center;padding:16px;z-index:200;}
+.wb-dialog{background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-lg);width:min(640px,100%);max-height:calc(100vh - 32px);display:flex;flex-direction:column;overflow:hidden;}
+.wb-dialog form{display:flex;flex-direction:column;min-height:0;}
+.wb-dialog-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:18px 22px 12px;border-bottom:1px solid var(--border);}
+.wb-dialog-head h2{font-size:18px;font-weight:800;letter-spacing:-.02em;margin-top:4px;}
+.wb-dialog-body{padding:16px 22px;overflow:auto;}
+.wb-dialog-desc{font-size:13px;color:var(--text-2);margin:0 0 14px;line-height:1.5;}
+.wb-dialog-foot{display:flex;justify-content:flex-end;gap:8px;padding:14px 22px;border-top:1px solid var(--border);background:var(--surface-2);}
+
+/* progress of a new application, in the style of the workflow stepper: nodes joined by lines, step id, title, status */
+.wb-stepper-band{margin-bottom:16px;}
+.wb-stepper-card.card{padding:18px 20px 20px;width:100%;}
+.wb-stepper-card .wb-stepper{padding-top:6px;}
+.wb-stepper{--wb-green:#17A05D;--wb-blue:#2563EB;--wb-pending:#EAF1FD;--wb-pending-line:#D3DFF5;--wb-pending-ink:#7C8BA6;--node-w:44px;--node-h:34px;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));}
+.wb-st{position:relative;display:flex;justify-content:center;min-width:0;}
+.wb-st + .wb-st::before{content:'';position:absolute;z-index:0;top:calc(var(--node-h) / 2 - 1px);right:calc(50% + var(--node-w) / 2 + 4px);width:calc(100% - var(--node-w) - 8px);height:2px;border-radius:2px;background:var(--wb-pending-line);}
+.wb-st.seg-done::before{background:var(--wb-green);}
+.wb-st.seg-active::before{background:linear-gradient(90deg,var(--wb-green),var(--wb-blue));}
+.wb-st-body{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px;border:0;background:none;font:inherit;color:inherit;min-width:0;border-radius:12px;}
+button.wb-st-body{cursor:pointer;}
+button.wb-st-body:focus-visible{outline:2px solid var(--wb-blue);outline-offset:2px;}
+
+.wb-st-node{position:relative;z-index:1;width:var(--node-w);height:var(--node-h);border-radius:8px;display:grid;place-items:center;font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;background:var(--wb-pending);color:var(--wb-pending-ink);border:1.5px solid var(--wb-pending-line);}
+.wb-st-node svg{width:17px;height:17px;}
+.wb-st-tick{position:absolute;right:-6px;bottom:-6px;width:16px;height:16px;border-radius:50%;background:#fff;color:var(--wb-green);border:1.5px solid var(--wb-green);display:grid;place-items:center;}
+.wb-st-tick svg{width:9px;height:9px;}
+.wb-st.is-done .wb-st-node{background:var(--wb-green);border-color:var(--wb-green);color:#fff;}
+.wb-st.is-current .wb-st-node{background:var(--wb-blue);border-color:var(--wb-blue);color:#fff;box-shadow:0 0 0 5px rgba(37,99,235,.16);}
+.wb-st-id{margin-top:10px;font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--text-4);}
+.wb-st-title{margin-top:2px;font-size:12.5px;font-weight:700;line-height:1.3;color:var(--ink);}
+.wb-st.is-pending .wb-st-title{color:var(--text-3);font-weight:600;}
+.wb-st-status{margin-top:3px;font-size:11px;font-weight:700;color:var(--wb-pending-ink);}
+.wb-st.is-done .wb-st-status{color:#127A47;}
+.wb-st.is-current .wb-st-status{color:#1D4ED8;}
+
+/* the department choice as a table: icon, name, sub-label, counts, arrow */
+.wb-pick tbody tr{cursor:pointer;}
+.wb-pick tbody tr:hover{background:color-mix(in srgb,var(--sys,var(--emerald)) 6%,#fff);}
+.wb-pick tbody tr:focus-visible{outline:2px solid var(--sys,var(--emerald));outline-offset:-2px;}
+.wb-pickcell{display:flex;align-items:center;gap:12px;min-width:200px;}
+.wb-pickcell b{font-size:14px;letter-spacing:-.01em;}
+.wb-pick .wb-card-ic{flex:0 0 40px;}
+.wb-chev{width:44px;text-align:right;color:var(--text-3);}
+.wb-chev svg{width:18px;height:18px;transition:transform .15s ease;}
+.wb-pick tbody tr:hover .wb-chev{color:var(--sys,var(--emerald));}
+.wb-pick tbody tr:hover .wb-chev svg{transform:translateX(3px);}
+.wb-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* taller department rows, counts centred in their columns; the stepper card on a soft tint instead of plain white */
+.wb .wb-center,.wb-pick .wb-center{text-align:center;}
+.wb-pick th.wb-center{text-align:center;}
+.wb-pick tbody td{padding-top:20px;padding-bottom:20px;}
+.wb-pick tbody td.wb-center{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink);}
+.wb-pick .wb-pickcell{gap:12px;}
+.wb-pick .wb-card-ic{width:34px;height:34px;flex:0 0 34px;border-radius:10px;}
+.wb-pick .wb-card-ic svg{width:17px;height:17px;}
+.wb-pick .wb-pickcell b{font-size:13.5px;}
+.wb-pick .wb-pickcell .wb-sub{font-size:11px;}
+.wb-pick .pill{font-size:10.5px;}
+.wb-pick th{font-size:10.5px;}
+
+/* the line into the current step is solid blue, as in the reference; pending lines are light blue */
+.wb-st.seg-active::before{background:var(--wb-blue);}
+.wb-st-status{letter-spacing:.005em;}
+/* small screens: the same stepper, stacked, with a vertical line from node to node */
+@media (max-width:560px){
+  .wb-stepper{grid-template-columns:1fr;}
+  .wb-st{justify-content:flex-start;padding-bottom:18px;}
+  .wb-st:last-child{padding-bottom:0;}
+  .wb-st + .wb-st::before{display:none;}
+  .wb-st-body{display:grid;grid-template-columns:var(--node-w) minmax(0,1fr);column-gap:14px;row-gap:1px;align-items:center;text-align:left;padding:0;width:100%;}
+  .wb-st-node{grid-column:1;grid-row:1 / span 3;align-self:start;}
+  .wb-st-id,.wb-st-title,.wb-st-status{grid-column:2;margin-top:0;}
+  .wb-st:not(:last-child)::after{content:'';position:absolute;left:calc(var(--node-w) / 2 - 1px);top:calc(var(--node-h) + 4px);bottom:4px;width:2px;border-radius:2px;background:var(--wb-pending-line);}
+  .wb-st.nxt-done::after{background:var(--wb-green);}
+  .wb-st.nxt-active::after{background:var(--wb-blue);}
+}
+
+/* department icons: bigger, each in its own department colour on a tinted tile, like the dashboard cards */
+.wb-pick .wb-card-ic,.wb-cards .wb-card-ic{width:46px;height:46px;flex:0 0 46px;border-radius:13px;background:color-mix(in srgb,var(--sys) 13%,#fff);border:1px solid color-mix(in srgb,var(--sys) 24%,#fff);color:var(--sys);}
+.wb-pick .wb-card-ic svg,.wb-cards .wb-card-ic svg{width:23px;height:23px;}
+
+/* every step has its own colour, like the department icons on the dashboard; the state shows in how filled the box is */
+.wb-stepper{--node-w:54px;--node-h:44px;}
+.wb-st{--h:#7C3AED;--hn:#7C3AED;}
+.wb-st-node{border-radius:11px;border:1.5px solid color-mix(in srgb,var(--h) 40%,#fff);background:color-mix(in srgb,var(--h) 14%,#fff);color:var(--h);box-shadow:none;}
+.wb-st-node svg{width:22px;height:22px;}
+.wb-st.is-pending .wb-st-node{background:color-mix(in srgb,var(--h) 7%,#fff);border-color:color-mix(in srgb,var(--h) 22%,#fff);color:color-mix(in srgb,var(--h) 52%,#9AA3AF);}
+.wb-st.is-done .wb-st-node{background:color-mix(in srgb,var(--h) 14%,#fff);border-color:var(--h);color:var(--h);}
+.wb-st.is-current .wb-st-node{background:var(--h);border-color:var(--h);color:#fff;box-shadow:0 0 0 5px color-mix(in srgb,var(--h) 20%,transparent);}
+.wb-st-tick{color:var(--h);border-color:var(--h);}
+.wb-st.seg-done::before,.wb-st.seg-active::before{background:var(--h);}
+.wb-st.is-done .wb-st-status,.wb-st.is-current .wb-st-status{color:var(--h);}
+@media (max-width:560px){.wb-st.nxt-done::after,.wb-st.nxt-active::after{background:var(--hn);}}
+.wb-st-node .wb-st-tick svg{width:9px;height:9px;}
+
+/* lighter department counts; stepper icon boxes without a solid border */
+.wb-pick tbody td.wb-center{font-weight:400;}
+.wb-st-node,.wb-st.is-pending .wb-st-node,.wb-st.is-done .wb-st-node,.wb-st.is-current .wb-st-node{border-color:transparent;}
+
+/* round step icons (a circle again, not a rectangle) */
+.wb-stepper{--node-w:46px;--node-h:46px;}
+.wb-st-node{border-radius:50%;}
+.wb-st-tick{right:-3px;bottom:-3px;}

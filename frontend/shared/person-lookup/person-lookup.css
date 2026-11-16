@@ -156,8 +156,13 @@
 .pl-state-text { margin: 6px auto 0; max-width: 560px; font-size: 13px; line-height: 1.6; color: var(--pl-text-2); }
 .pl-state-actions { margin-top: 16px; display: flex; justify-content: center; gap: 8px; }
 
-.pl-idle-head { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
-.pl-idle-head > .pl-ic { width: 20px; height: 20px; margin-top: 2px; color: var(--pl-accent-ink); }
+/* the idle cards are "headed": a gray rule under the heading, edge to edge, and a 38px icon tile like the hub's cards */
+.pl-card.pl-idle { padding: 0; overflow: hidden; }
+.pl-idle-head { display: flex; gap: 12px; align-items: center; margin: 0; padding: 14px 20px; border-bottom: 1px solid var(--pl-border); }
+.pl-idle-head > .pl-ic { box-sizing: content-box; flex: 0 0 20px; width: 20px; height: 20px; padding: 9px; border-radius: 11px; background: var(--pl-accent-soft); border: 1px solid color-mix(in srgb, var(--pl-accent-ink) 14%, #fff); color: var(--pl-accent-ink); }
+.pl-idle-head + * { margin-top: 14px; }
+.pl-idle > :not(.pl-idle-head) { margin-left: 20px; margin-right: 20px; }
+.pl-idle > :last-child { margin-bottom: 16px; }
 .pl-idle-head h2 { font-size: 15px; font-weight: 800; color: var(--pl-ink); letter-spacing: -.015em; }
 .pl-idle-head p { font-size: 12.5px; color: var(--pl-text-2); margin-top: 2px; }
 /* five systems: five across when the card is wide enough, otherwise one compact row each (never a lone tile) */
@@ -312,7 +317,7 @@
 /* ---- sections ---- */
 .pl-section { scroll-margin-top: 96px; min-width: 0; }
 .pl-section-head { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
-.pl-section-head > .pl-ic { box-sizing: content-box; flex: 0 0 18px; width: 18px; height: 18px; padding: 8px; margin-top: 0; border-radius: 10px; background: var(--pl-accent-soft); color: var(--pl-accent-ink); }
+.pl-section-head > .pl-ic { box-sizing: content-box; flex: 0 0 18px; width: 18px; height: 18px; padding: 10px; margin-top: 0; border-radius: 11px; background: var(--pl-accent-soft); color: var(--pl-accent-ink); }
 .pl-section-head h3 { font-size: 15px; font-weight: 800; letter-spacing: -.015em; color: var(--pl-ink); }
 .pl-section-head p { font-size: 12px; color: var(--pl-text-3); margin-top: 1px; }
 .pl-journeys { display: grid; gap: 12px; }
