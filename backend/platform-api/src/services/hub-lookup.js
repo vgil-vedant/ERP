@@ -14,6 +14,7 @@
  *   GET /api/lookup/samples       ->  ERP GET /api/lookup/samples
  *   GET /api/lookup/sources       ->  ERP GET /api/lookup/sources
  *   GET /api/lookup/recent        ->  ERP GET /api/lookup/recent
+ *   GET /api/lookup/people        ->  ERP GET /api/lookup/people
  *   GET /api/lookup/stream        ->  ERP GET /api/lookup/stream   (live; streamed through)
  *   POST /api/lookup/person/:ref/aadhaar   the admin's "show full Aadhaar": the ERP audits the request and names
  *                                 the UIDAI person; the number is read from the UIDAI office store in this process
@@ -114,7 +115,7 @@ function stream(req, res, actor) {
 
 /** Static module files: mount before the hub's own /assets. */
 function installAssets(app) {
-  app.use('/assets/lookup', express.static(MODULE_DIR, { maxAge: '5m', index: false }));
+  app.use('/assets/lookup', express.static(MODULE_DIR, { maxAge: 0, etag: true, index: false }));
 }
 
 /** API routes: mount after the sign-in guard, so only a signed-in user reaches them. */
@@ -127,6 +128,11 @@ function installApi(app) {
   });
   app.get('/api/lookup/samples', (req, res) => { noStore(res); forward('/api/lookup/samples', actor, res); });
   app.get('/api/lookup/sources', (req, res) => { noStore(res); forward('/api/lookup/sources', actor, res); });
+  app.get('/api/lookup/people', (req, res) => {
+    noStore(res);
+    const n = (v, d, max) => Math.max(0, Math.min(max, Number(v) || d));
+    forward(`/api/lookup/people?limit=${n(req.query.limit, 50, 500)}&offset=${n(req.query.offset, 0, 100000)}&q=${encodeURIComponent(String(req.query.q || '').slice(0, 80))}`, actor, res);
+  });
   app.get('/api/lookup/recent', (req, res) => { noStore(res); forward('/api/lookup/recent', actor, res); });
   app.get('/api/lookup/stream', (req, res) => stream(req, res, actor));
   app.post('/api/lookup/person/:ref/aadhaar', async (req, res) => {

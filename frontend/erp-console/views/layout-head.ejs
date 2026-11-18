@@ -301,6 +301,8 @@ a { color: inherit; text-decoration: none; }
 
 .crumbs { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-3); }
 .crumbs .root { font-weight: 700; color: var(--text-2); }
+.crumbs a.root { text-decoration: none; }
+.crumbs a.root:hover { color: var(--emerald-deep, #0B7A52); text-decoration: underline; text-underline-offset: 3px; }
 .crumbs .sep { color: var(--border-strong); }
 .crumbs .now { font-weight: 600; color: var(--text); }
 
@@ -1019,7 +1021,7 @@ table.tbl thead th, table.tbl tbody td { white-space: nowrap; }   /* columns siz
       </button>
 
       <nav class="crumbs" aria-label="Breadcrumb">
-        <span class="root">ERP Hub</span>
+        <a class="root" href="/">ERP Hub</a>
         <span class="sep">/</span>
         <span class="now">
           <% if (currentPath === '/') { %>Dashboard

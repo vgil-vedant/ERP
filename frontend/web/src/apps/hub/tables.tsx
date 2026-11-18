@@ -60,7 +60,7 @@ export function defineTables(h: Handlers, counts: Record<string, (n: number) => 
       searchPlaceholder: 'Search intake ref, citizen or source ref…',
       searchKeys: (r) => [r.intakeRef, r.citizen.fullName, r.citizen.ref, r.sourceReference, r.form, sysName(r.system)],
       filters: [{ key: 'system', label: 'All source systems', options: sysOptions, match: (r, v) => r.system === v }],
-      pageSize: 6, defaultSort: 'received', defaultDir: 'desc', onRow: h.openRecord, exportName: 'erp-recent-records', emptyText: 'No records in this date range.',
+      pageSize: 6, defaultSort: 'received', defaultDir: 'desc', onRow: h.openRecord, exportName: 'erp-recent-records', group: { key: (r) => r.citizen.ref, noun: 'record' }, emptyText: 'No records in this date range.',
     },
     intake: {
       columns: intakeColumns, rows: () => D.INTAKES.slice().reverse(), searchPlaceholder: 'Search intake ref, citizen, source form or reference…',
@@ -69,7 +69,7 @@ export function defineTables(h: Handlers, counts: Record<string, (n: number) => 
         { key: 'system', label: 'All source systems', options: sysOptions, match: (r, v) => r.system === v },
         { key: 'form', label: 'All forms', options: distinctForms, match: (r, v) => r.form === v },
       ],
-      pageSize: 8, defaultSort: 'received', defaultDir: 'desc', onRow: h.openRecord, exportName: 'erp-received-records',
+      pageSize: 8, defaultSort: 'received', defaultDir: 'desc', onRow: h.openRecord, exportName: 'erp-received-records', group: { key: (r) => r.citizen.ref, noun: 'record' },
       onCount: (n) => counts.intake(n),
     },
     citizens: {
@@ -105,7 +105,7 @@ export function defineTables(h: Handlers, counts: Record<string, (n: number) => 
         { key: 'action', label: 'All actions', options: () => distinctOptions(D.AUDIT as unknown as Record<string, unknown>[], 'action'), match: (r, v) => r.action === v },
         { key: 'maker', label: 'All makers', options: () => distinctOptions(D.AUDIT as unknown as Record<string, unknown>[], 'maker'), match: (r, v) => r.maker === v },
       ],
-      pageSize: 15, defaultSort: 'at', defaultDir: 'desc', onRow: h.openAudit, exportName: 'erp-audit-trail', onCount: (n) => counts.audit(n),
+      pageSize: 15, defaultSort: 'at', defaultDir: 'desc', onRow: h.openAudit, exportName: 'erp-audit-trail', group: { key: (r) => (r.entityId ? r.entity + ':' + r.entityId : '#' + r.id), noun: 'event' }, onCount: (n) => counts.audit(n),
     },
     sync: {
       columns: syncColumns, rows: () => D.SYNC, searchPlaceholder: 'Search submission ref, intake ref or system…',

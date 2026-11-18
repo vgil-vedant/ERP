@@ -119,7 +119,7 @@
         + (opts.subtitle ? '<div class="wpc-sub">' + esc(opts.subtitle) + '</div>' : '')
         + '</div><div class="wpc-head-side">'
         + (opts.statusLabel ? '<span class="wpc-badge wpc-badge--' + tone + '">' + esc(opts.statusLabel) + '</span>' : '')
-        + (opts.hideCount ? '' : '<span class="wpc-count">' + done + ' of ' + counted + ' complete</span>')
+        + (opts.hideCount ? '' : '<span class="wpc-count">' + done + ' of ' + counted + ' complete' + (steps[focusIdx] && steps[focusIdx].state !== 'completed' ? ' · now: ' + esc(steps[focusIdx].title) : '') + '</span>')
         + '</div></div>';
     } else {
       head = '<h3 class="wpc-title" id="' + id + '-t" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Progress</h3>';
@@ -138,6 +138,7 @@
         + '<span class="wpc-step-title" aria-hidden="true">' + esc(s.title) + '</span>'
         + '<span class="wpc-status" aria-hidden="true">' + esc(s.label) + '</span>'
         + (s.date ? '<span class="wpc-date" aria-hidden="true">' + esc(fmtDate(s.date)) + '</span>' : '')
+        + (i === focusIdx && (s.state === 'active' || s.state === 'blocked' || s.state === 'failed') ? '<span class="wpc-now" aria-hidden="true">' + (s.state === 'active' ? 'Current step' : s.state === 'blocked' ? 'Stuck here' : 'Stopped here') + '</span>' : '')
         + '</li>';
     }).join('');
 

@@ -1,3 +1,4 @@
+@font-face{font-family:'Sen';font-style:normal;font-weight:400 800;font-display:swap;src:url(../../assets/fonts/Sen-Variable.woff2) format('woff2');}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,7 +27,7 @@ html[data-theme="dark"] .lg-body{
 
 /* Tailwind's reset is switched off in the config (preflight) so the page matches the old stylesheet exactly. */
 .lg-body{margin:0; height:100vh; height:100dvh; display:flex; flex-direction:column; overflow:hidden;
-  font:400 14px/1.5 'Nunito',-apple-system,'Segoe UI',Roboto,Arial,system-ui,sans-serif; color:var(--lg-text);
+  font:400 14px/1.5 'Sen','Nunito',-apple-system,'Segoe UI',Roboto,Arial,system-ui,sans-serif; color:var(--lg-text);
   background:var(--lg-card); transition:background .35s ease,color .35s ease}
 .lg-body *{box-sizing:border-box; scrollbar-width:thin; scrollbar-color:var(--sb-thumb) var(--sb-track)}
 @supports selector(::-webkit-scrollbar){

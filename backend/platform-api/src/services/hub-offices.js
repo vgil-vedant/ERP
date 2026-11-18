@@ -61,7 +61,7 @@ function one(site) {
     integration: bus.stats(site.code),
     events: bus.events(site.code, EVENT_LIMIT),
     officers: db.prepare('SELECT username, full_name AS fullName, designation, office, created_at AS createdAt, last_login_at AS lastLoginAt FROM officer ORDER BY id').all(),
-    activity: db.prepare('SELECT at, officer, action, record_ref AS ref, details FROM activity ORDER BY id DESC LIMIT ?').all(ACTIVITY_LIMIT),
+    activity: db.prepare('SELECT id, at, officer, action, record_ref AS ref, details FROM activity ORDER BY id DESC LIMIT ?').all(ACTIVITY_LIMIT),
     records,
     // per day, for the dashboard charts: records created, events the ERP has not accepted, and people added
     daily: {

@@ -1,11 +1,15 @@
 // The department offices in the hub: the views behind Departments, Integration bus, Access & audit and Department Records.
 // Data: GET /api/offices (D.OFFICES). Nothing here is invented; an empty list says so.
+import { PageArt } from './illustrations';
+import type { ArtKind } from './illustrations';
 import type { ReactNode } from 'react';
 import { Svg, fmtDateTime, fmtTime, num, rel } from './lib';
 import { D, DEPT_HUE, PORTAL_ICON, hostPort, parseUtc, portalOrigin, sysName } from './model';
 import { Sparkline } from './charts';
 import type { Dash } from './model';
 import { DataTable } from './DataTable';
+import { AuditTimeline } from './timeline';
+import type { TlRow } from './timeline';
 import type { Column, TableCfg } from './DataTable';
 
 export interface OfficeCtx {
@@ -40,8 +44,8 @@ function health(d: Dash): [string, string] {
   if (i.pending) return ['pill-warn', 'events waiting'];
   return ['pill-ok', 'all delivered'];
 }
-const Head = ({ title, desc, actions }: { title: string; desc: ReactNode; actions?: ReactNode }) => (
-  <div className="page-head"><div><h1 className="page-title">{title}</h1><p className="page-desc">{desc}</p></div>{actions ? <div className="page-actions">{actions}</div> : null}</div>
+const Head = ({ title, desc, actions, art }: { title: string; desc: ReactNode; actions?: ReactNode; art?: ArtKind }) => (
+  <div className={`page-head${art ? ' has-art' : ''}`}><div><h1 className="page-title">{title}</h1><p className="page-desc">{desc}</p></div>{actions ? <div className="page-actions">{actions}</div> : null}{art ? <PageArt kind={art} /> : null}</div>
 );
 const Empty = ({ text }: { text: string }) => <div className="card"><div className="tbl-empty"><Svg name="info" /><div>{text}</div></div></div>;
 const Note = ({ children }: { children: ReactNode }) => <div className="table-note"><Svg name="info" /><span>{children}</span></div>;
@@ -95,7 +99,7 @@ function RecordsView({ c }: { c: OfficeCtx }) {
   };
   return (
     <>
-      <Head title="Department records" desc="What the five offices hold, newest first: each record, its status in the office, and whether the ERP has received it." />
+      <Head art="departments" title="Department records" desc="What the five offices hold, newest first: each record, its status in the office, and whether the ERP has received it." />
       <div className="card">
         <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="layers" /></span>Records in the offices</div><div className="card-sub">{num(rows.length)} records · latest {num(Math.max(...depts().map((d) => d.records.length), 0))} shown per department</div></div></div>
         <div className="table-host"><DataTable<RecRow> cfg={cfg} onExport={c.onExport} showExport={false} /></div>
@@ -113,7 +117,7 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
   const open = s.types.reduce((t: number, x: Dash) => t + (x.open || 0), 0);
   return (
     <>
-      <Head title={d.title} desc={<>{d.tagline} · portal <b>{d.name}</b> on <code style={mono}>{hostPort(d.code)}</code> · database <code style={mono}>{d.file}</code></>}
+      <Head art="dept" title={d.title} desc={<>{d.tagline} · portal <b>{d.name}</b> on <code style={mono}>{hostPort(d.code)}</code> · database <code style={mono}>{d.file}</code></>}
         actions={<>
           <a className="btn" href={portalUrl(d.port)} target="_blank" rel="noopener"><Svg name="external" /> Citizen portal</a>
           <a className="btn btn-primary" href={officeUrl(d.port)} target="_blank" rel="noopener"><Svg name="external" /> Open the office</a>
@@ -139,6 +143,7 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
             ))}
           </div>
         </div>
+        <div style={{ display: 'grid', gap: 16, alignContent: 'start', minWidth: 0 }}>
         <div className="card">
           <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="alert" /></span>Needs attention</div><div className="card-sub">Counts the office's own workflow flags.</div></div></div>
           <div className="def-list">
@@ -148,7 +153,9 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
             ))}
             {!s.attention.length && <div className="def-row"><div className="def-key">Nothing flagged</div><div className="def-val">The office has no items waiting for a decision.</div></div>}
           </div>
-          <div className="card-head" style={{ borderTop: '1px solid var(--border)' }}><div><div className="card-title" style={{ fontSize: '13.5px' }}><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Integration bus</div></div>
+        </div>
+        <div className="card">
+          <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Integration bus</div></div>
             <button className="btn btn-sm" type="button" disabled={c.retrying === d.code || !(i.pending || i.rejected)} onClick={() => c.retry(d.code)}><Svg name="refresh" /> {c.retrying === d.code ? 'Sending…' : 'Retry now'}</button></div>
           <div className="def-list">
             <div className="def-row"><div className="def-key">Target</div><div className="def-val"><code style={mono}>{i.target}</code></div></div>
@@ -156,6 +163,7 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
             <div className="def-row"><div className="def-key">Median delivery time</div><div className="def-val">{i.medianLatencyMs == null ? '—' : `${num(i.medianLatencyMs)} ms`}</div></div>
             <div className="def-row"><div className="def-key">Last error</div><div className="def-val">{i.lastError || 'none'}</div></div>
           </div>
+        </div>
         </div>
       </div>
       <div className="card" style={{ marginTop: 16 }}>
@@ -223,7 +231,7 @@ function QueueView({ c }: { c: OfficeCtx }) {
   const tot = depts().reduce((t, d) => ({ del: t.del + d.integration.delivered, pen: t.pen + d.integration.pending, rej: t.rej + d.integration.rejected }), { del: 0, pen: 0, rej: 0 });
   return (
     <>
-      <Head title="Event queue" desc="Every change an office makes becomes one event, written in the same transaction as the record, then sent to the ERP. This is that queue, newest first." />
+      <Head art="queue" title="Event queue" desc="Every change an office makes becomes one event, written in the same transaction as the record, then sent to the ERP. This is that queue, newest first." />
       <div className="grid g-kpi">
         <Kpi icon="check" label="Delivered" value={num(tot.del)} note="accepted by the ERP" pill={['pill-ok', 'delivered']} />
         <Kpi icon="refresh" label="Waiting" value={num(tot.pen)} note="queued or being retried" pill={['pill-warn', 'waiting']} />
@@ -245,7 +253,7 @@ function FailuresView({ c }: { c: OfficeCtx }) {
     filters: [deptFilter(), statusFilter], pageSize: 8, defaultSort: 'at', defaultDir: 'desc', exportName: 'bus-failures', emptyText: 'Nothing is waiting or rejected.' };
   return (
     <>
-      <Head title="Retries & failures" desc="Events that have not reached the ERP yet. A waiting event is retried automatically with back-off; Retry now sends a department's waiting and rejected events again at once." />
+      <Head art="failures" title="Retries & failures" desc="Events that have not reached the ERP yet. A waiting event is retried automatically with back-off; Retry now sends a department's waiting and rejected events again at once." />
       <div className="grid g-2">
         {list.map((d) => {
           const i = d.integration; const [cls, label] = health(d);
@@ -279,7 +287,7 @@ function ReconView({ c }: { c: OfficeCtx }) {
   const srcs: Dash[] = (D.OFFICES && D.OFFICES.erp && D.OFFICES.erp.sources && D.OFFICES.erp.sources.sources) || [];
   return (
     <>
-      <Head title="Reconciliation" desc="Office against ERP: what each office holds, what its bus has delivered, and what the ERP says it received." />
+      <Head art="recon" title="Reconciliation" desc="Office against ERP: what each office holds, what its bus has delivered, and what the ERP says it received." />
       <div className="card">
         <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="check" /></span>Office vs ERP</div><div className="card-sub">Per department</div></div></div>
         <div className="tbl-wrap"><table className="tbl">
@@ -339,7 +347,7 @@ function OfficersView({ c }: { c: OfficeCtx }) {
   };
   return (
     <>
-      <Head title="Officer accounts" desc="Each department signs its own officers in, with its own accounts and session. Passwords are never shown; they are stored salted and hashed." />
+      <Head art="officers" title="Officer accounts" desc="Each department signs its own officers in, with its own accounts and session. Passwords are never shown; they are stored salted and hashed." />
       <div className="card">
         <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="users" /></span>Officers</div><div className="card-sub">One sign-in per department office</div></div></div>
         <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} showExport={false} /></div>
@@ -349,47 +357,34 @@ function OfficersView({ c }: { c: OfficeCtx }) {
 }
 
 function LookupAuditView({ c }: { c: OfficeCtx }) {
-  interface Row { at: Date; action: string; maker: string; details: string }
-  const rows = (): Row[] => D.AUDIT.filter((a) => a.entity === 'lookup').map((a) => ({ at: a.at, action: a.action, maker: a.maker, details: a.details }));
-  const cfg: TableCfg<Row> = {
-    columns: [
-      { key: 'at', label: 'When', sortable: true, nowrap: true, render: (r) => <><div className="t-main" style={{ fontWeight: 600 }}>{fmtDateTime(r.at).split(' · ')[0]}</div><div className="t-sub">{fmtTime(r.at)} · {rel(r.at)}</div></>, sortValue: (r) => r.at.getTime(), csv: (r) => fmtDateTime(r.at) },
-      { key: 'action', label: 'Action', sortable: true, render: (r) => <span className="pill pill-mint">{r.action}</span>, sortValue: (r) => r.action, csv: (r) => r.action },
-      { key: 'maker', label: 'Who', sortable: true, render: (r) => <span className="maker">{r.maker}</span>, sortValue: (r) => r.maker, csv: (r) => r.maker },
-      { key: 'details', label: 'What was looked up', render: (r) => r.details || '—', csv: (r) => r.details },
-    ],
-    rows, searchPlaceholder: 'Search who or what…', searchKeys: (r) => [r.action, r.maker, r.details], pageSize: 12, defaultSort: 'at', defaultDir: 'desc', exportName: 'lookup-audit', emptyText: 'No person lookup has been recorded yet.',
-  };
+  // events about the same person (PSN-…) are folded under one row; searches and the like stand alone
+  const rows: TlRow[] = D.AUDIT.filter((a) => a.entity === 'lookup').map((a) => {
+    const person = /PSN-\d+/.exec(a.details || '');
+    return { id: 'a' + a.id, seq: a.id, at: a.at, module: a.entity, sub: 'ERP audit log', action: a.action, detail: a.details, who: a.maker, entity: a.entityId, group: person ? 'p:' + person[0] : 'e:' + a.id };
+  });
+  const actions = Array.from(new Set(rows.map((r) => r.action))).sort().map((x) => ({ value: x, label: x }));
   return (
     <>
-      <Head title="Lookup audit" desc="Every person lookup, with who ran it. It is part of the ERP's append-only audit log." actions={<button className="btn" type="button" onClick={() => c.goto('lookup')}><Svg name="search" /> Person Lookup</button>} />
-      <div className="card"><div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="search" /></span>Lookups</div><div className="card-sub">{num(rows().length)} recorded</div></div><span className="pill pill-mint">ERP audit_log</span></div>
-        <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} showExport={false} /></div></div>
+      <Head art="lookupaudit" title="Lookup audit" desc="Every person lookup, with who ran it. It is part of the ERP's append-only audit log." actions={<button className="btn" type="button" onClick={() => c.goto('lookup')}><Svg name="search" /> Person Lookup</button>} />
+      <div className="card"><div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="search" /></span>Lookups</div><div className="card-sub">{num(rows.length)} recorded</div></div><span className="pill pill-mint">ERP audit_log</span></div>
+        <div className="table-host"><AuditTimeline rows={rows} noun="lookup" searchPlaceholder="Search who, person or what was looked up…" filter={{ label: 'All actions', options: actions, pick: (r) => r.action }} pageSize={10} emptyText="No person lookup has been recorded yet." /></div></div>
     </>
   );
 }
 
-function ActivityView({ c }: { c: OfficeCtx }) {
-  interface Row { d: Dash; at: string; officer: string; action: string; ref: string | null; details: string | null }
-  const rows = (): Row[] => depts().flatMap((d) => d.activity.map((a: Dash) => ({ ...a, d })));
-  const cfg: TableCfg<Row> = {
-    columns: [
-      { key: 'at', label: 'When', sortable: true, nowrap: true, render: (r) => <><div className="t-main" style={{ fontWeight: 600 }}>{whenUtc(r.at).split(' · ')[0]}</div><div className="t-sub">{rel(parseUtc(r.at))}</div></>, sortValue: (r) => parseUtc(r.at).getTime(), csv: (r) => whenUtc(r.at) },
-      { key: 'dept', label: 'Department', sortable: true, render: (r) => <DeptChip d={r.d} />, sortValue: (r) => r.d.short, csv: (r) => r.d.title },
-      { key: 'officer', label: 'Officer', sortable: true, render: (r) => <span className="maker">{r.officer}</span>, sortValue: (r) => r.officer, csv: (r) => r.officer },
-      { key: 'action', label: 'Action', sortable: true, render: (r) => <span className="pill pill-mint">{r.action}</span>, sortValue: (r) => r.action, csv: (r) => r.action },
-      { key: 'ref', label: 'Record', render: (r) => (r.ref ? <span className="mono">{r.ref}</span> : '—'), csv: (r) => r.ref || '' },
-      { key: 'details', label: 'Details', render: (r) => r.details || '—', csv: (r) => r.details || '' },
-    ],
-    rows, searchPlaceholder: 'Search officer, action or record…', searchKeys: (r) => [r.officer, r.action, r.ref, r.details, r.d.title],
-    filters: [{ key: 'd', label: 'All departments', options: depts().map((d) => ({ value: d.code, label: d.short })), match: (r, v) => r.d.code === v }],
-    pageSize: 12, defaultSort: 'at', defaultDir: 'desc', exportName: 'office-activity',
-  };
+function ActivityView({ c: _c }: { c: OfficeCtx }) {
+  void _c;
+  // the actions on one record are folded under one row for that record
+  const rows: TlRow[] = depts().flatMap((d) => (d.activity as Dash[]).map((a, i) => ({
+    id: d.code + ':' + (a.id != null ? a.id : i + ':' + a.at), seq: a.id != null ? Number(a.id) : null, at: parseUtc(a.at), module: d.short as string, sub: 'office log',
+    action: String(a.action), detail: a.details || '', who: a.officer as string, entity: (a.ref as string) || '',
+    group: a.ref ? d.code + ':' + a.ref : 'e:' + d.code + ':' + (a.id != null ? a.id : i),
+  })));
   return (
     <>
-      <Head title="Activity log" desc="What officers did in each office, newest first. Each office's log is append-only: the database refuses any change or deletion." />
+      <Head art="activity" title="Activity log" desc="What officers did in each office, newest first. Each office's log is append-only: the database refuses any change or deletion." />
       <div className="card"><div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="pulse" /></span>Office activity</div><div className="card-sub">Latest {num(Math.max(...depts().map((d) => d.activity.length), 0))} per department</div></div></div>
-        <div className="table-host"><DataTable<Row> cfg={cfg} onExport={c.onExport} showExport={false} /></div></div>
+        <div className="table-host"><AuditTimeline rows={rows} noun="action" searchPlaceholder="Search officer, action, record or department…" filter={{ label: 'All departments', options: depts().map((d) => ({ value: d.short as string, label: d.short as string })), pick: (r) => r.module }} pageSize={10} emptyText="No office activity yet." /></div></div>
     </>
   );
 }

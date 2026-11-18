@@ -92,3 +92,15 @@ describe('a whole form', () => {
     expect(out).toEqual({ category: 'Criminal', fir_no: '1/2026', count: 3, exhibits: [{ description: 'knife', quantity: 2 }] });
   });
 });
+
+import { workbenchTrail } from './workbench';
+import { D } from './model';
+describe('workbench breadcrumb trail', () => {
+  it('shows every level, each earlier one as a link back', () => {
+    D.WORKBENCH = { departments: [{ code: 'eprisons', short: 'ePrisons', forms: [{ key: 'admission', title: 'Prisoner admission' }] }] } as never;
+    expect(workbenchTrail('apply')).toEqual([{ label: 'New application' }]);
+    expect(workbenchTrail('apply:eprisons')).toEqual([{ label: 'New application', go: 'apply' }, { label: 'ePrisons' }]);
+    expect(workbenchTrail('apply:eprisons:admission')).toEqual([{ label: 'New application', go: 'apply' }, { label: 'ePrisons', go: 'apply:eprisons' }, { label: 'Prisoner admission' }]);
+    expect(workbenchTrail('rec:eprisons:7')).toEqual([{ label: 'All records', go: 'work' }, { label: 'ePrisons', go: 'work:eprisons' }, { label: 'Record 7' }]);
+  });
+});

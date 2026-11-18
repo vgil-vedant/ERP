@@ -191,3 +191,24 @@
   .wpc-track { min-width: 0; grid-template-columns: repeat(var(--wpc-n, 4), minmax(0, 1fr)); }
   .wpc-step.is-active .wpc-node { animation: none; }
 }
+
+/* ---- which step is the current one ---- */
+.wpc-now {
+  margin-top: 8px; display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px;
+  font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: #fff; background: var(--wpc-blue); box-shadow: 0 2px 6px -2px rgba(37, 99, 235, .55);
+}
+.wpc-now::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #fff; }
+.wpc-step.is-blocked .wpc-now { background: var(--wpc-amber); box-shadow: 0 2px 6px -2px rgba(201, 121, 15, .55); }
+.wpc-step.is-failed .wpc-now { background: var(--wpc-red); box-shadow: 0 2px 6px -2px rgba(208, 69, 61, .5); }
+.wpc-step.is-active, .wpc-step.is-blocked, .wpc-step.is-failed { padding: 10px 6px 12px; margin-top: -10px; }
+.wpc-step.is-active { background: linear-gradient(180deg, rgba(37, 99, 235, .09), rgba(37, 99, 235, .02)); box-shadow: inset 0 0 0 1px rgba(37, 99, 235, .22); }
+.wpc-step.is-blocked { background: linear-gradient(180deg, rgba(201, 121, 15, .1), rgba(201, 121, 15, .02)); box-shadow: inset 0 0 0 1px rgba(201, 121, 15, .26); }
+.wpc-step.is-failed { background: linear-gradient(180deg, rgba(208, 69, 61, .09), rgba(208, 69, 61, .02)); box-shadow: inset 0 0 0 1px rgba(208, 69, 61, .24); }
+.wpc-step.is-active .wpc-step-title { color: #1D4ED8; }
+.wpc-step.is-pending .wpc-node, .wpc-step.is-pending .wpc-id, .wpc-step.is-pending .wpc-status { opacity: .7; }
+@media (max-width: 560px) { .wpc-step.is-active, .wpc-step.is-blocked, .wpc-step.is-failed { margin-top: 0; padding: 8px 8px 10px; } }
+.wpc-step.is-active + .wpc-step::before, .wpc-step.is-active::before, .wpc-step.is-blocked::before, .wpc-step.is-failed::before { top: calc(var(--wpc-node) / 2 - var(--wpc-line) / 2 + 10px); }
+.wpc-step.is-active + .wpc-step::before { top: calc(var(--wpc-node) / 2 - var(--wpc-line) / 2); }
+@media (max-width: 560px) { .wpc-step.is-active::before, .wpc-step.is-blocked::before, .wpc-step.is-failed::before { top: auto; } }
+.wpc-scroll { padding-top: 10px; margin-top: -10px; }

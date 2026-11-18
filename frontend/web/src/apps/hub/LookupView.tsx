@@ -7,6 +7,7 @@
 // and then to the idle panes. Opening the view from the navigation or the
 // breadcrumb is a fresh start instead: the hub clears those parameters and calls
 // syncLookup(), and the pane goes back to "Live from the departments".
+import { artUri } from './illustrations';
 import { useEffect, useRef, useState } from 'react';
 
 interface LookupApi { focus: () => void; reset: () => void; applyUrl: () => void }
@@ -67,7 +68,7 @@ export function LookupView({ active }: { active: boolean }) {
   }, [active]);
 
   return (
-    <section className={'view' + (active ? ' is-active' : '')} id="view-lookup" data-title="Person Lookup" data-section="ERP Management"
+    <section className={'view' + (active ? ' is-active' : '')} id="view-lookup" data-title="Person Lookup" data-section="ERP Management" style={{ ['--page-art' as string]: artUri('lookup') }}
       data-desc="One identifier in, everything UIDAI, CCTNS, e-Forensics, eCourts and ePrisons hold about the person out.">
       {failed
         ? <div className="card"><div className="card-title">Person lookup unavailable</div><div className="card-sub">Its script did not load. Reload the page.</div></div>

@@ -1,3 +1,4 @@
+@font-face{font-family:'Sen';font-style:normal;font-weight:400 800;font-display:swap;src:url(../../assets/fonts/Sen-Variable.woff2) format('woff2');}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,7 +17,7 @@
   --h0:#EFF6F2; --h1:#CFEFDE; --h2:#7FD3AE; --h3:#0E9F6B; --h4:#064D36;
   --sb-thumb:#C3DBCE; --sb-thumb-hover:#8FBFA8; --sb-track:transparent;
   margin:0; height:100vh; height:100dvh; display:flex; flex-direction:column; overflow:hidden;
-  font:400 14px/1.5 'Nunito',-apple-system,'Segoe UI',Roboto,Arial,system-ui,sans-serif; color:var(--ac-text); background:var(--ac-bg);
+  font:400 14px/1.5 'Sen','Nunito',-apple-system,'Segoe UI',Roboto,Arial,system-ui,sans-serif; color:var(--ac-text); background:var(--ac-bg);
   transition:background .35s ease,color .35s ease;
 }
 html[data-theme="dark"] .ac-body{

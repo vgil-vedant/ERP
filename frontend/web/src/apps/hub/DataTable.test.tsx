@@ -37,4 +37,24 @@ describe('DataTable', () => {
     fireEvent.click(screen.getByText('Export'));
     expect(onExport).toHaveBeenCalledWith('x.csv', '"Name","Number"\n"\'=SUM(A1)","1"', 1);
   });
+  it('folds rows of one subject under one row that opens to show the rest', () => {
+    interface P { who: string; what: string; t: number }
+    const data: P[] = [{ who: 'Asha', what: 'created', t: 1 }, { who: 'Ravi', what: 'created', t: 2 }, { who: 'Asha', what: 'verified', t: 3 }, { who: 'Asha', what: 'approved', t: 4 }];
+    const gcfg: TableCfg<P> = {
+      columns: [{ key: 'who', label: 'Person', render: (r) => r.who, sortValue: (r) => r.who, csv: (r) => r.who }, { key: 'what', label: 'Change', render: (r) => r.what, csv: (r) => r.what }, { key: 't', label: 'T', sortable: true, render: (r) => r.t, sortValue: (r) => r.t, csv: (r) => r.t }],
+      rows: () => data, searchKeys: (r) => [r.who], pageSize: 10, defaultSort: 't', defaultDir: 'desc', group: { key: (r) => r.who, noun: 'change' },
+    };
+    render(<DataTable cfg={gcfg} onExport={() => {}} />);
+    // two people, not four rows; Asha shows her newest change first
+    expect(screen.getByText(/Showing/)).toHaveTextContent('Showing 1–2 of 2');
+    expect(screen.getByText(/Showing/)).toHaveTextContent('4 changes in all');
+    expect(screen.getAllByRole('row')).toHaveLength(3);
+    expect(screen.getAllByRole('row')[1]).toHaveTextContent('approved');
+    expect(screen.queryByText('created', { selector: 'td' })).toBeInTheDocument(); // Ravi's only row
+    fireEvent.click(screen.getByRole('button', { name: 'Show all 3 changes' }));
+    expect(screen.getAllByRole('row')).toHaveLength(5);
+    expect(screen.getByText('verified')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Hide all 3 changes' }));
+    expect(screen.getAllByRole('row')).toHaveLength(3);
+  });
 });

@@ -16,7 +16,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import './workbench.css';
+import { DatePicker, DateTimePicker, Select } from './controls';
 import { Svg, fmtDateTime, num, rel } from './lib';
+import { PageArt } from './illustrations';
+import type { ArtKind } from './illustrations';
 import { D, DEPT_HUE, PORTAL_ICON, parseUtc, portalOrigin } from './model';
 
 /* ================================================================ types */
@@ -102,6 +105,26 @@ export async function loadWorkbench() {
 export const isWorkbenchView = (v: string) =>
   v === 'apply' || /^apply:[a-z]+(:[a-z_]+)?$/.test(v) || v === 'approvals' || v === 'work' || /^work:[a-z]+$/.test(v) || /^rec:[a-z]+:\d+$/.test(v);
 
+/** The breadcrumb after the section: every level of the page the user is on, each earlier level a link back to it. */
+export interface Crumb { label: string; go?: string }
+export function workbenchTrail(v: string): Crumb[] {
+  type TD = { code: string; short: string; forms: { key: string; title: string }[] };
+  const depts: TD[] = (D.WORKBENCH && (D.WORKBENCH.departments as TD[])) || [];
+  const [kind, code, rest] = v.split(':');
+  const d = depts.find((x) => x.code === code);
+  const dn = d ? d.short : code;
+  if (kind === 'apply') {
+    const t: Crumb[] = [{ label: 'New application', go: code ? 'apply' : undefined }];
+    if (code) t.push({ label: dn, go: rest ? `apply:${code}` : undefined });
+    if (rest) t.push({ label: (d && d.forms.find((f) => f.key === rest)?.title) || rest.replace(/_/g, ' ') });
+    return t;
+  }
+  if (kind === 'work') return code ? [{ label: 'All records', go: 'work' }, { label: dn }] : [{ label: 'All records' }];
+  if (kind === 'rec') return [{ label: 'All records', go: 'work' }, { label: dn, go: `work:${code}` }, { label: `Record ${rest}` }];
+  if (kind === 'approvals') return [{ label: 'Approvals' }];
+  return [{ label: workbenchMeta(v)[0] }];
+}
+
 /** [page title, section] for the breadcrumb. */
 export function workbenchMeta(v: string): [string, string] {
   if (v.startsWith('apply')) return ['New application', 'Workbench'];
@@ -113,7 +136,6 @@ export function workbenchMeta(v: string): [string, string] {
 
 const officeLink = (port: number, id?: number) => `${portalOrigin(port)}/office${id ? '#/record/' + id : ''}`;
 /** One colour for all the step icons of the new-application progress. */
-const STEP_HUE = '#0E9F6B';
 const deptColor = (code: string, fallback?: string) => DEPT_HUE[code] || fallback || '#0E9F6B';
 
 /* ================================================================ form engine (mirrors departments/forms/common.js) */
@@ -242,7 +264,31 @@ export function collect(sections: Section[], values: Values): Values {
 
 const fieldId = (scope: string, name: string) => `wb-${scope}-${name.replace(/[^a-zA-Z0-9_-]/g, '-')}`;
 
-function Control({ f, value, onChange, error, scope, disabled }: { f: Field; value: unknown; onChange: (v: unknown) => void; error?: string; scope: string; disabled?: boolean }) {
+/** Column spans (of 12) for the fields of one block, so every row is filled edge to edge: a row that the
+ *  form definition leaves short (two thirds, a half and a third, a lone half…) is stretched to the full width. */
+const WIDTH_SPAN: Record<string, number> = { full: 12, half: 6, third: 4, quarter: 3 };
+export function fieldSpans(fields: Field[]): Record<string, number> {
+  const out: Record<string, number> = {};
+  const base = (f: Field) => (f.type === 'group' || f.type === 'checkbox' ? 12 : (WIDTH_SPAN[f.width || 'full'] || 12));
+  const flush = (row: Field[]) => {
+    if (!row.length) return;
+    const raw = row.map(base), sum = raw.reduce((a, b) => a + b, 0);
+    const exact = raw.map((n) => (n * 12) / sum), sp = exact.map(Math.floor);
+    let left = 12 - sp.reduce((a, b) => a + b, 0);
+    exact.map((x, i) => [x - sp[i], i] as const).sort((a, b) => b[0] - a[0]).forEach(([, i]) => { if (left > 0) { sp[i]++; left--; } });
+    row.forEach((f, i) => { out[f.name] = sp[i]; });
+  };
+  let row: Field[] = [], used = 0;
+  for (const f of fields) {
+    const n = base(f);
+    if (used + n > 12) { flush(row); row = []; used = 0; }
+    row.push(f); used += n;
+  }
+  flush(row);
+  return out;
+}
+
+function Control({ f, value, onChange, error, scope, disabled, span }: { f: Field; value: unknown; onChange: (v: unknown) => void; error?: string; scope: string; disabled?: boolean; span?: number }) {
   const id = fieldId(scope, f.name);
   const describedBy = [error ? id + '-e' : '', f.help ? id + '-h' : ''].filter(Boolean).join(' ') || undefined;
   const common = { id, disabled, 'aria-invalid': error ? true : undefined, 'aria-describedby': describedBy, 'aria-required': f.required && f.type !== 'checkbox' ? true : undefined };
@@ -255,10 +301,7 @@ function Control({ f, value, onChange, error, scope, disabled }: { f: Field; val
     case 'select': {
       const list = opts(f);
       control = list.length
-        ? <select className="wb-input" value={str} onChange={(e) => onChange(e.target.value)} {...common}>
-            <option value="">{f.required ? 'Choose…' : '— none —'}</option>
-            {list.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-          </select>
+        ? <Select variant="form" id={id} disabled={disabled} invalid={!!error} describedBy={describedBy} required={f.required} ariaLabel={f.label} value={str} onChange={(v) => onChange(v)} options={list} placeholder={f.required ? 'Choose…' : '— none —'} clearable={!f.required} />
         : <div className="wb-note wb-note--warn" id={id}>{f.empty || 'There is nothing to choose from.'}</div>;
       break;
     }
@@ -287,10 +330,10 @@ function Control({ f, value, onChange, error, scope, disabled }: { f: Field; val
       control = <input className="wb-input" type="number" inputMode="numeric" min={f.min} max={f.max} step={f.integer === false ? 'any' : 1} value={str} onChange={(e) => onChange(e.target.value)} {...common} />;
       break;
     case 'date':
-      control = <input className="wb-input" type="date" max={f.notFuture ? todayIso() : undefined} min={f.notPast ? todayIso() : undefined} value={str} onChange={(e) => onChange(e.target.value)} {...common} />;
+      control = <DatePicker id={id} disabled={disabled} invalid={!!error} describedBy={describedBy} required={f.required} ariaLabel={f.label} value={str} onChange={(v) => onChange(v)} max={f.notFuture ? todayIso() : undefined} min={f.notPast ? todayIso() : undefined} clearable={!f.required} />;
       break;
     case 'datetime':
-      control = <input className="wb-input" type="datetime-local" value={str} onChange={(e) => onChange(e.target.value)} {...common} />;
+      control = <DateTimePicker id={id} disabled={disabled} invalid={!!error} describedBy={describedBy} required={f.required} ariaLabel={f.label} value={str} onChange={(v) => onChange(v)} />;
       break;
     case 'aadhaar': case 'mobile': case 'pin':
       control = <input className="wb-input wb-mono" type="text" inputMode="numeric" autoComplete="off" maxLength={f.type === 'aadhaar' ? 14 : f.type === 'mobile' ? 14 : 6} value={str} onChange={(e) => onChange(e.target.value)} {...common} />;
@@ -302,7 +345,7 @@ function Control({ f, value, onChange, error, scope, disabled }: { f: Field; val
       control = <input className="wb-input" type="text" maxLength={(f.max || 120) + 20} value={str} onChange={(e) => onChange(e.target.value)} {...common} />;
   }
   return (
-    <div className={`wb-field wb-w-${f.width || 'full'}${error ? ' has-error' : ''}`} data-field={f.name}>
+    <div className={`wb-field ${span ? 'wb-s-' + span : 'wb-w-' + (f.width || 'full')}${error ? ' has-error' : ''}`} data-field={f.name}>
       <label className="wb-label" htmlFor={id} id={id + '-l'}>{f.label}{f.required ? <span className="wb-req" aria-hidden="true"> *</span> : null}</label>
       {control}
       {f.help ? <div className="wb-help" id={id + '-h'}>{f.help}</div> : null}
@@ -326,10 +369,10 @@ function GroupField({ f, rows, setRows, errors, scope, disabled }: { f: Field; r
               {rows.length > min ? <button className="btn btn-xs btn-ghost" type="button" disabled={disabled} onClick={() => setRows(rows.filter((_, j) => j !== i))} aria-label={`Remove ${item} ${i + 1}`}>Remove</button> : null}
             </div>
             <div className="wb-fields">
-              {(f.fields || []).filter((sub) => applies(sub.when, row)).map((sub) => (
-                <Control key={sub.name} f={sub} scope={`${scope}-${f.name}-${i}`} disabled={disabled} value={row[sub.name]} error={errors[`${f.name}.${i}.${sub.name}`]}
+              {(() => { const vis = (f.fields || []).filter((sub) => applies(sub.when, row)); const sp = fieldSpans(vis); return vis.map((sub) => (
+                <Control key={sub.name} span={sp[sub.name]} f={sub} scope={`${scope}-${f.name}-${i}`} disabled={disabled} value={row[sub.name]} error={errors[`${f.name}.${i}.${sub.name}`]}
                   onChange={(v) => setRows(rows.map((r, j) => (j === i ? { ...r, [sub.name]: v } : r)))} />
-              ))}
+              )); })()}
             </div>
           </div>
         ))}
@@ -346,13 +389,14 @@ export function FormFields({ sections, values, setValues, errors, scope, disable
       {sections.filter((s) => applies(s.when, values)).map((s, si) => {
         const fields = s.fields.filter((f) => applies(f.when, values));
         if (!fields.length) return null;
+        const sp = fieldSpans(fields);
         return (
           <fieldset className="wb-section" key={si}>
             {s.title ? <legend className="wb-section-title">{s.title}</legend> : null}
             <div className="wb-fields">
               {fields.map((f) => (f.type === 'group'
                 ? <GroupField key={f.name} f={f} scope={scope} disabled={disabled} errors={errors} rows={Array.isArray(values[f.name]) ? (values[f.name] as Values[]) : []} setRows={(r) => setValues({ ...values, [f.name]: r })} />
-                : <Control key={f.name} f={f} scope={scope} disabled={disabled} value={values[f.name]} error={errors[f.name]} onChange={(v) => setValues({ ...values, [f.name]: v })} />))}
+                : <Control key={f.name} span={sp[f.name]} f={f} scope={scope} disabled={disabled} value={values[f.name]} error={errors[f.name]} onChange={(v) => setValues({ ...values, [f.name]: v })} />))}
             </div>
           </fieldset>
         );
@@ -397,8 +441,8 @@ function DeptBadge({ code, short, color }: { code: string; short: string; color?
 const Alert = ({ tone = 'danger', children }: { tone?: 'danger' | 'warn' | 'info' | 'ok'; children: ReactNode }) =>
   <div className={`wb-alert wb-alert--${tone}`} role={tone === 'danger' ? 'alert' : 'status'}>{children}</div>;
 
-function PageHead({ title, desc, actions }: { title: string; desc: ReactNode; actions?: ReactNode }) {
-  return <div className="page-head"><div><h1 className="page-title">{title}</h1><p className="page-desc">{desc}</p></div>{actions ? <div className="page-actions">{actions}</div> : null}</div>;
+function PageHead({ title, desc, actions, art }: { title: string; desc: ReactNode; actions?: ReactNode; art?: ArtKind }) {
+  return <div className={`page-head${art ? ' has-art' : ''}`}><div><h1 className="page-title">{title}</h1><p className="page-desc">{desc}</p></div>{actions ? <div className="page-actions">{actions}</div> : null}{art ? <PageArt kind={art} /> : null}</div>;
 }
 
 function Loading({ text = 'Loading…' }: { text?: string }) { return <div className="wb-loading" role="status"><span className="wb-spinner" aria-hidden="true" />{text}</div>; }
@@ -514,6 +558,67 @@ function ActionDialog({ code, record, action, onClose, onDone, toast }: {
 }
 
 /* ================================================================ #apply */
+/* ============================================================ #apply: choose the department */
+const DEPT_TONE: Record<string, [string, string]> = {
+  eprisons: ['#9560E8', '#F2E8FF'], cctns: ['#2674F5', '#E5F0FF'], eforensics: ['#9050E8', '#F1E7FF'], uidai: ['#E76C27', '#FFF0E3'], ecourts: ['#138C98', '#E2F4F3'],
+};
+const deptTone = (code: string, fallback?: string): [string, string] => DEPT_TONE[code] || [deptColor(code, fallback), '#EAF7F1'];
+
+export function DepartmentPicker({ departments, goto }: { departments: WbDept[]; goto: (v: string) => void }) {
+  // nothing is selected until the user picks a department; the pick is shown for the moment before the page moves on
+  const [selected, setSelected] = useState('');
+  const forms = departments.reduce((t, d) => t + d.forms.length, 0);
+  const open = (code: string) => { setSelected(code); goto(`apply:${code}`); };
+  return (
+    <div className="wbd">
+      <header className="wbd-hero">
+        <div className="wbd-hero-text">
+          <span className="wbd-accent" aria-hidden="true" />
+          <h1>New Application</h1>
+          <p>Choose a department to submit your application. It is saved in that department’s own office and reaches the ERP at once.</p>
+        </div>
+        <PageArt kind="apply" />
+      </header>
+
+      <section className="wbd-panel" aria-label="Departments">
+        <div className="wbd-head">
+          <span className="wbd-head-ic" aria-hidden="true"><Svg name="grid" /></span>
+          <div className="wbd-head-text"><h2>Departments</h2><p>Select the office responsible for processing your application.</p></div>
+          <div className="wbd-sums">
+            <div className="wbd-sum"><span className="wbd-sum-ic" aria-hidden="true"><Svg name="layers" /></span><span className="wbd-sum-bar" aria-hidden="true" /><b>{num(departments.length)}</b><span>{departments.length === 1 ? 'Available office' : 'Available offices'}</span></div>
+            <div className="wbd-sum"><span className="wbd-sum-ic" aria-hidden="true"><Svg name="file" /></span><span className="wbd-sum-bar" aria-hidden="true" /><b>{num(forms)}</b><span>{forms === 1 ? 'Total form' : 'Total forms'}</span></div>
+          </div>
+        </div>
+        <div className="wbd-rows">
+          {departments.map((d) => {
+            const [fg, bg] = deptTone(d.code, d.color);
+            const on = selected === d.code;
+            return (
+              <div key={d.code} className={`wbd-row${on ? ' is-selected' : ''}`} role="link" tabIndex={0} aria-current={on ? 'true' : undefined} aria-label={`${d.short}: apply to ${d.title}`}
+                style={{ ['--fg' as string]: fg, ['--bg' as string]: bg }} onClick={() => open(d.code)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(d.code); } }}>
+                <div className="wbd-id">
+                  <span className="wbd-ic" aria-hidden="true"><Svg name={PORTAL_ICON[d.code] || 'layers'} /></span>
+                  <div className="wbd-id-text"><b>{d.short}</b><span>{d.title}</span></div>
+                </div>
+                <div className="wbd-metrics">
+                  <div className="wbd-m"><Svg name="file" /><div><b>{num(d.forms.length)}</b><span>{d.forms.length === 1 ? 'Form' : 'Forms'}</span></div></div>
+                  <div className="wbd-m"><Svg name="database" /><div><b>{num(d.totalRecords)}</b><span>{d.totalRecords === 1 ? 'Record' : 'Records'}</span></div></div>
+                  <div className="wbd-m"><Svg name="clock" /><div><b>{d.awaiting ? num(d.awaiting) : '—'}</b><span>Awaiting</span></div></div>
+                </div>
+                <div className="wbd-go" aria-hidden="true">
+                  {on ? <span className="wbd-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg></span> : null}
+                  <svg className="wbd-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    </div>
+  );
+}
+
 function ApplyView({ view, goto, toast, onChanged }: WbProps) {
   const [, code, formKey] = view.split(':');
   const { ov, err, reload } = useOverview(true);
@@ -523,81 +628,15 @@ function ApplyView({ view, goto, toast, onChanged }: WbProps) {
   if (!ov) return <Loading />;
   if (code && !dept) return <><PageHead title="New application" desc="Apply to any department from one place." /><Alert>There is no department “{code}”. <button className="btn btn-xs" type="button" onClick={() => goto('apply')}>Choose a department</button></Alert></>;
 
-  type StepState = 'done' | 'current' | 'pending';
-  const formTitle = dept && formKey ? (dept.forms.find((f) => f.key === formKey) || { title: '' }).title : '';
-  const stepList: { n: number; title: string; icon: string; hue: string; state: StepState; detail: string; go?: () => void }[] = [
-    { n: 1, title: 'Department', icon: 'grid', hue: STEP_HUE, state: !code ? 'current' : 'done', detail: dept ? dept.short : 'Choose where it goes', go: code ? () => goto('apply') : undefined },
-    { n: 2, title: 'Form', icon: 'file', hue: STEP_HUE, state: formKey ? 'done' : code ? 'current' : 'pending', detail: formTitle || (code ? 'Choose the form' : 'After the department'), go: code && formKey ? () => goto(`apply:${code}`) : undefined },
-    { n: 3, title: 'Details and submit', icon: 'inbox', hue: STEP_HUE, state: formKey ? 'current' : 'pending', detail: formKey ? 'Fill in and submit' : 'Last step' },
-  ];
-  const statusText: Record<StepState, string> = { done: 'Completed', current: 'In Progress', pending: 'Pending' };
-  const steps = (
-    <div className="wb-stepper-band">
-      <div className="card wb-stepper-card">
-        <div className="card-head tight"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="layers" /></span>Application progress</div><div className="card-sub">Choose the department, then the form, then fill in the details and submit.</div></div></div>
-        <ol className="wb-stepper" aria-label="Progress" style={{ ['--n' as string]: stepList.length }}>
-          {stepList.map((st, i) => {
-            const inner = (
-              <>
-                <span className="wb-st-node" aria-hidden="true"><Svg name={st.icon} />{st.state === 'done' ? <i className="wb-st-tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg></i> : null}</span>
-                <span className="wb-st-id">Step {st.n}</span>
-                <span className="wb-st-title">{st.title}</span>
-                <span className="wb-st-status">{statusText[st.state]}</span>
-              </>
-            );
-            const seg = (x: StepState) => (x === 'done' ? 'done' : x === 'current' ? 'active' : 'pending');
-            const next = stepList[i + 1];
-            return (
-              <li key={st.n} style={{ ['--h' as string]: st.hue, ['--hn' as string]: next ? next.hue : st.hue }} className={`wb-st is-${st.state}${i ? ' seg-' + seg(st.state) : ''}${next ? ' nxt-' + seg(next.state) : ''}`} aria-current={st.state === 'current' ? 'step' : undefined}>
-                {st.go ? <button type="button" className="wb-st-body" onClick={st.go} aria-label={`Step ${st.n}: ${st.title}, ${statusText[st.state]}. Go back to this step`}>{inner}</button> : <div className="wb-st-body">{inner}</div>}
-              </li>
-            );
-          })}
-        </ol>
-      </div>
-    </div>
-  );
-
-  if (!dept) {
-    return (
-      <>
-        <PageHead title="New application" desc="One place for every department: choose where the application goes. It is saved in that department’s own office and reaches the ERP at once." />
-        {steps}
-        <div className="card wb-table-card">
-          <div className="tbl-wrap"><table className="tbl wb-table wb-pick">
-            <thead><tr><th>Department</th><th className="wb-center">Forms</th><th className="wb-center">Records</th><th className="wb-center">Awaiting</th><th><span className="wb-sr">Open</span></th></tr></thead>
-            <tbody>
-              {ov.departments.map((d) => (
-                <tr key={d.code} className="clickable" tabIndex={0} role="link" aria-label={`${d.short}: apply to ${d.title}`} onClick={() => goto(`apply:${d.code}`)}
-                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goto(`apply:${d.code}`); } }}
-                  style={{ ['--sys' as string]: deptColor(d.code, d.color) }}>
-                  <td>
-                    <div className="wb-pickcell">
-                      <span className="wb-card-ic"><Svg name={PORTAL_ICON[d.code] || 'layers'} /></span>
-                      <div><b>{d.short}</b><div className="wb-sub">{d.title}</div></div>
-                    </div>
-                  </td>
-                  <td className="wb-center">{d.forms.length}</td>
-                  <td className="wb-center">{num(d.totalRecords)}</td>
-                  <td className="wb-center">{d.awaiting ? <span className="pill pill-warn">{num(d.awaiting)} awaiting</span> : <span className="wb-sub">—</span>}</td>
-                  <td className="wb-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg></td>
-                </tr>
-              ))}
-            </tbody>
-          </table></div>
-        </div>
-      </>
-    );
-  }
+  if (!dept) return <DepartmentPicker departments={ov.departments} goto={goto} />;
 
   if (!formKey) {
     return (
       <>
         <PageHead title={`New application · ${dept.short}`} desc={dept.title} actions={<a className="btn btn-sm" href={officeLink(dept.port)} target="_blank" rel="noopener noreferrer"><Svg name="external" /> Department office</a>} />
-        {steps}
         <div className="card wb-table-card">
+          <div className="card-head tight"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="file" /></span>Forms</div><div className="card-sub">{`Choose the form for ${dept.title}.`}</div></div></div>
           <div className="tbl-wrap"><table className="tbl wb-table wb-pick">
-            <thead><tr><th>Form</th><th className="wb-center">Creates</th><th><span className="wb-sr">Open</span></th></tr></thead>
             <tbody>
               {dept.forms.map((f) => {
                 const typeLabel = (dept.types.find((t) => t.key === f.recordType) || { label: f.recordType }).label;
@@ -623,10 +662,51 @@ function ApplyView({ view, goto, toast, onChanged }: WbProps) {
     );
   }
 
-  return <ApplyForm key={`${dept.code}:${formKey}`} dept={dept} formKey={formKey} steps={steps} goto={goto} toast={toast} onChanged={() => { onChanged(); reload(); }} />;
+  return <ApplyForm key={`${dept.code}:${formKey}`} dept={dept} formKey={formKey} goto={goto} toast={toast} onChanged={() => { onChanged(); reload(); }} />;
 }
 
-function ApplyForm({ dept, formKey, steps, goto, toast, onChanged }: { dept: WbDept; formKey: string; steps: ReactNode; goto: (v: string) => void; toast: Toast; onChanged: () => void }) {
+/* ============================================================ the receipt shown after an application is submitted */
+/** Each department keeps its own colour theme on its receipt. */
+const THEME: Record<string, string> = { eprisons: 'purple', cctns: 'blue', eforensics: 'lavender', uidai: 'orange', ecourts: 'teal' };
+export function SubmissionTicket({ rec, dept, form }: { rec: RecordView; dept: WbDept; form: FormDef }) {
+  const people = rec.parties.map((p) => p.name).filter(Boolean);
+  const erp = rec.erp;
+  const erpText = !erp ? 'Saved in the department office'
+    : erp.status === 'delivered' ? `Delivered to the ERP${erp.latencyMs != null ? ` in ${erp.latencyMs} ms` : ''}`
+    : erp.status === 'pending' ? `Waiting to reach the ERP${erp.error ? `: ${erp.error}` : ''}` : `The ERP refused it${erp.error ? `: ${erp.error}` : ''}`;
+  const fields: [string, ReactNode][] = [
+    ['Department', <><b>{dept.short}</b><small>{dept.title}</small></>],
+    ['Form', <b>{form.title}</b>],
+    ['Record type', <b>{rec.typeLabel}</b>],
+    ['Submitted', <b>{(() => { const d = parseUtc(rec.createdAt); return isNaN(d.getTime()) ? rec.createdAt : fmtDateTime(d).replace(' · ', ', '); })()}</b>],
+    ['Submitted by', <b>{rec.createdBy}</b>],
+    ...(people.length ? [['People named', <b>{people.slice(0, 3).join(', ')}{people.length > 3 ? ` +${people.length - 3}` : ''}</b>] as [string, ReactNode]] : []),
+  ];
+  return (
+    <section className={`tk${THEME[dept.code] ? ' tk--' + THEME[dept.code] : ''}`} aria-label={`Application receipt, reference ${rec.ref}`} style={{ ['--sys' as string]: deptColor(dept.code, dept.color) }}>
+      <div className="tk-main">
+        <header className="tk-head">
+          <span className="tk-head-ic" aria-hidden="true"><Svg name={PORTAL_ICON[dept.code] || 'layers'} /></span>
+          <div className="tk-head-text"><span>Application submitted</span><b>{dept.short} · {rec.typeLabel}</b></div>
+          <span className="tk-head-ref">Ref <b>{rec.ref}</b></span>
+        </header>
+        <div className="tk-body">
+          <div className="tk-title"><h2>{rec.title}</h2>{rec.subtitle ? <p>{rec.subtitle}</p> : null}</div>
+          <dl className="tk-grid">
+            {fields.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
+          </dl>
+        </div>
+        <footer className="tk-foot">
+          <span className="tk-foot-tag"><Svg name="check" /> {erp && erp.status !== 'delivered' ? 'Saved' : 'Sent'}</span>
+          <span className="tk-foot-text">{erpText}</span>
+          <span className="tk-foot-meta">Version {rec.version}</span>
+        </footer>
+      </div>
+    </section>
+  );
+}
+
+function ApplyForm({ dept, formKey, goto, toast, onChanged }: { dept: WbDept; formKey: string; goto: (v: string) => void; toast: Toast; onChanged: () => void }) {
   const [form, setForm] = useState<FormDef | null>(null);
   const [loadErr, setLoadErr] = useState<string | null>(null);
   const [values, setValues] = useState<Values>({});
@@ -678,28 +758,20 @@ function ApplyForm({ dept, formKey, steps, goto, toast, onChanged }: { dept: WbD
 
   const again = () => { requestId.current = newRequestId(); setDone(null); load(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
 
-  if (loadErr) return <><PageHead title="New application" desc={dept.title} />{steps}<Alert>{loadErr} <button className="btn btn-xs" type="button" onClick={load}>Try again</button> <button className="btn btn-xs" type="button" onClick={() => goto(`apply:${dept.code}`)}>Choose another form</button></Alert></>;
+  if (loadErr) return <><PageHead title="New application" desc={dept.title} /><Alert>{loadErr} <button className="btn btn-xs" type="button" onClick={load}>Try again</button> <button className="btn btn-xs" type="button" onClick={() => goto(`apply:${dept.code}`)}>Choose another form</button></Alert></>;
   if (!form) return <Loading text="Loading the form…" />;
 
   if (done) {
     return (
       <>
         <PageHead title="Application submitted" desc={`${form.title} · ${dept.title}`} />
-        <section className="card wb-done">
-          <div className="wb-done-ic" aria-hidden="true"><Svg name="check" /></div>
-          <div className="wb-done-main">
-            <div className="wb-kicker">{done.typeLabel} · {dept.short}</div>
-            <h2 className="wb-done-title">{done.title}</h2>
-            <p className="wb-muted">Reference <b className="wb-mono">{done.ref}</b> · <StatusPill status={done.status} label={done.statusLabel} /></p>
-            <p className="wb-muted">Saved in the {dept.short} department office, where its officers see it now, and sent to the ERP.</p>
-            <div className="wb-row">
-              <button className="btn btn-primary" type="button" onClick={() => goto(`rec:${dept.code}:${done.id}`)}>Open the record</button>
-              <a className="btn" href={officeLink(dept.port, done.id)} target="_blank" rel="noopener noreferrer"><Svg name="external" /> Open in the {dept.short} office</a>
-              <button className="btn" type="button" onClick={again}>Submit another {form.title.toLowerCase()}</button>
-              <button className="btn btn-ghost" type="button" onClick={() => goto('apply')}>Another department</button>
-            </div>
-          </div>
-        </section>
+        <SubmissionTicket rec={done} dept={dept} form={form} />
+        <div className="wb-row tk-actions">
+          <button className="btn btn-primary" type="button" onClick={() => goto(`rec:${dept.code}:${done.id}`)}>Open the record</button>
+          <a className="btn" href={officeLink(dept.port, done.id)} target="_blank" rel="noopener noreferrer"><Svg name="external" /> Open in the {dept.short} office</a>
+          <button className="btn" type="button" onClick={again}>Submit another {form.title.toLowerCase()}</button>
+          <button className="btn btn-ghost" type="button" onClick={() => goto('apply')}>Another department</button>
+        </div>
       </>
     );
   }
@@ -707,7 +779,6 @@ function ApplyForm({ dept, formKey, steps, goto, toast, onChanged }: { dept: WbD
   return (
     <>
       <PageHead title={form.title} desc={<>{form.description} <span className="wb-muted">· {dept.title}</span></>} />
-      {steps}
       <form className="card wb-form" ref={host} onSubmit={submit} noValidate>
         {message ? <Alert>{message}</Alert> : null}
         <FormFields sections={form.sections} values={values} setValues={(v) => { setValues(v); setDirty(true); }} errors={errors} scope={`apply-${dept.code}-${form.key}`} disabled={busy} />
@@ -729,13 +800,12 @@ function ApprovalsView({ goto, toast, onChanged }: WbProps) {
   const [code, setCode] = useState('');
   const [q, setQ] = useState('');
   const [dialog, setDialog] = useState<{ row: InboxRow; action: Action } | null>(null);
-  const [updatedAt, setUpdatedAt] = useState<Date | null>(null);
   const { ov } = useOverview(true);
 
   const load = useCallback(async () => {
     try {
       const r = await api<{ total: number; rows: InboxRow[] }>(`/inbox?limit=500${code ? '&code=' + encodeURIComponent(code) : ''}`);
-      setRows(r.rows); setTotal(r.total); setErr(null); setUpdatedAt(new Date());
+      setRows(r.rows); setTotal(r.total); setErr(null);
     } catch (e) { setErr((e as Error).message); }
   }, [code]);
   useEffect(() => { setRows(null); load(); }, [load]);
@@ -749,14 +819,13 @@ function ApprovalsView({ goto, toast, onChanged }: WbProps) {
   const depts = ov ? ov.departments : [];
   return (
     <>
-      <PageHead title="Approvals" desc="Everything waiting for a decision in the five departments, oldest first. A decision here is the same as one made in the department office: it is saved there and sent to the ERP at once."
-        actions={<><span className="wb-muted">{updatedAt ? `Updated ${rel(updatedAt)}` : ''}</span><button className="btn btn-sm" type="button" onClick={load}><Svg name="refresh" /> Refresh</button></>} />
+      <PageHead art="approvals" title="Approvals" desc="Everything waiting for a decision in the five departments, oldest first. A decision here is the same as one made in the department office: it is saved there and sent to the ERP at once." />
       <div className="wb-toolbar">
         <div className="seg" role="tablist" aria-label="Department">
           <button type="button" role="tab" aria-selected={!code} className={!code ? 'is-active' : ''} onClick={() => setCode('')}>All{rows && !code ? ` · ${num(total)}` : ''}</button>
           {depts.map((d) => <button key={d.code} type="button" role="tab" aria-selected={code === d.code} className={code === d.code ? 'is-active' : ''} onClick={() => setCode(d.code)}>{d.short}{d.awaiting ? ` · ${num(d.awaiting)}` : ''}</button>)}
         </div>
-        <input className="wb-input wb-search" type="search" placeholder="Filter by reference, name, type or status" aria-label="Filter the approvals" value={q} onChange={(e) => setQ(e.target.value)} />
+        <span className="wb-search"><Svg name="filter" /><input className="wb-input" type="search" placeholder="Filter by reference, name, type or status" aria-label="Filter the approvals" value={q} onChange={(e) => setQ(e.target.value)} /></span>
       </div>
       {err ? <Alert>{err} <button className="btn btn-xs" type="button" onClick={load}>Try again</button></Alert> : null}
       {!rows ? <Loading /> : !shown.length
@@ -832,17 +901,14 @@ function RecordsView({ view, goto }: WbProps) {
 
   return (
     <>
-      <PageHead title="All records" desc="Every record of a department, newest change first, read live from its own database. Open one to decide on it or correct its details."
+      <PageHead art="records" title="All records" desc="Every record of a department, newest change first, read live from its own database. Open one to decide on it or correct its details."
         actions={<><button className="btn btn-sm" type="button" onClick={() => goto(`apply:${dept.code}`)}>+ New {dept.short} application</button><a className="btn btn-sm" href={officeLink(dept.port)} target="_blank" rel="noopener noreferrer"><Svg name="external" /> {dept.short} office</a></>} />
       <div className="wb-toolbar">
         <div className="seg" role="tablist" aria-label="Department">
           {ov.departments.map((d) => <button key={d.code} type="button" role="tab" aria-selected={d.code === dept.code} className={d.code === dept.code ? 'is-active' : ''} onClick={() => goto(`work:${d.code}`)}>{d.short}</button>)}
         </div>
-        <select className="field" aria-label="Record type" value={type} onChange={(e) => { setType(e.target.value); setPage(1); }}>
-          <option value="">All types</option>
-          {dept.types.map((t) => <option key={t.key} value={t.key}>{t.plural}</option>)}
-        </select>
-        <input className="wb-input wb-search" type="search" placeholder="Reference, name, Aadhaar or mobile" aria-label="Search the records" value={q} onChange={(e) => setQ(e.target.value)} />
+        <Select ariaLabel="Record type" placeholder="All types" clearable value={type} onChange={(v) => { setType(v); setPage(1); }} options={dept.types.map((t) => ({ value: t.key, label: t.plural }))} />
+        <span className="wb-search"><Svg name="search" /><input className="wb-input" type="search" placeholder="Reference, name, Aadhaar or mobile" aria-label="Search the records" value={q} onChange={(e) => setQ(e.target.value)} /></span>
       </div>
       {err ? <Alert>{err} <button className="btn btn-xs" type="button" onClick={() => load()}>Try again</button></Alert> : null}
       {!data ? <Loading /> : !data.rows.length
@@ -895,6 +961,56 @@ function DataTree({ value, depth = 0 }: { value: unknown; depth?: number }): JSX
   );
 }
 
+/* ============================================================ the record's progress tracker */
+const STEP_WORDS: Record<string, string> = { completed: 'Done', active: 'Current step', pending: 'Not started', blocked: 'Needs attention', failed: 'Stopped', skipped: 'Not needed' };
+export function ProgressTracker({ progress }: { progress: { title: string; statusLabel: string; steps: Step[] } }) {
+  const steps = progress.steps;
+  const counted = steps.filter((x) => x.state !== 'skipped').length;
+  const done = steps.filter((x) => x.state === 'completed').length;
+  const now = steps.findIndex((x) => x.state === 'active' || x.state === 'blocked' || x.state === 'failed');
+  const cur = now >= 0 ? steps[now] : null;
+  const finished = !cur && done === counted && counted > 0;
+  const tone = cur ? (cur.state === 'failed' ? 'failed' : cur.state === 'blocked' ? 'blocked' : 'active') : finished ? 'done' : 'idle';
+  return (
+    <section className={`wbp wbp--${tone}`} aria-label={progress.title}>
+      <div className="wbp-head">
+        <div className="wbp-head-text"><span className="wbp-kicker">Progress</span><b>{progress.title}</b></div>
+      </div>
+
+      <ol className="wbp-steps">
+        {steps.map((st, i) => {
+          const here = i === now;
+          return (
+            <li key={st.key} className={`wbp-step is-${st.state}${here ? ' is-here' : ''}`} aria-current={here ? 'step' : undefined}>
+              <span className="wbp-node" aria-hidden="true">
+                {st.state === 'completed' ? <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="m3.5 8.4 2.9 2.9 6.1-6.3" /></svg>
+                  : st.state === 'failed' ? <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><path d="m4.5 4.5 7 7m0-7-7 7" /></svg>
+                  : st.state === 'blocked' ? <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"><path d="M8 4v5M8 11.8v.2" /></svg>
+                  : <span>{i + 1}</span>}
+              </span>
+              <div className="wbp-body">
+                <span className="wbp-no">Step {i + 1}</span>
+                <b className="wbp-title">{st.title}</b>
+                <span className={`wbp-state wbp-state--${st.state}`}>{st.label && st.label !== STEP_WORDS[st.state] ? st.label : STEP_WORDS[st.state] || st.state}</span>
+                {here ? <span className="wbp-here">You are here</span> : null}
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+
+      <div className="wbp-foot">
+        <div className="wbp-legend" aria-hidden="true">
+          <span><i className="wbp-lg wbp-lg--done" />Done</span><span><i className="wbp-lg wbp-lg--now" />Current step</span><span><i className="wbp-lg wbp-lg--todo" />Not started yet</span>
+        </div>
+        <p className="wbp-now">
+          {cur ? <><b>Now:</b> {cur.title}{cur.label ? ` — ${cur.label}` : ''}.</> : finished ? <><b>All steps are done.</b> Nothing more is needed on this record.</> : <><b>{progress.statusLabel}.</b></>}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function RecordPage({ view, goto, toast, onChanged }: WbProps) {
   const [, code, idStr] = view.split(':');
   const id = Number(idStr);
@@ -902,6 +1018,7 @@ function RecordPage({ view, goto, toast, onChanged }: WbProps) {
   const [err, setErr] = useState<ApiError | null>(null);
   const [dialog, setDialog] = useState<Action | null>(null);
   const [changedElsewhere, setChangedElsewhere] = useState(false);
+  const [allActivity, setAllActivity] = useState(false);
   const shownVersion = useRef<number | null>(null);
 
   const load = useCallback(async (quiet = false) => {
@@ -945,17 +1062,7 @@ function RecordPage({ view, goto, toast, onChanged }: WbProps) {
           <span>Last change {short(rec.updatedAt)}</span>
           {rec.erp ? <span>{rec.erp.status === 'delivered' ? `Delivered to the ERP${rec.erp.latencyMs != null ? ` in ${rec.erp.latencyMs} ms` : ''}` : rec.erp.status === 'pending' ? `Waiting to reach the ERP${rec.erp.error ? `: ${rec.erp.error}` : ''}` : `The ERP refused it: ${rec.erp.error || ''}`}</span> : null}
         </div>
-        {rec.progress ? (
-          <ol className="wb-progress" aria-label={rec.progress.title}>
-            {rec.progress.steps.map((s) => (
-              <li key={s.key} className={`is-${s.state}`} title={s.description}>
-                <span className="wb-progress-dot" aria-hidden="true" />
-                <span className="wb-progress-title">{s.title}</span>
-                <span className="wb-progress-label">{s.label}{s.date ? ` · ${s.date}` : ''}</span>
-              </li>
-            ))}
-          </ol>
-        ) : null}
+        {rec.progress ? <ProgressTracker progress={rec.progress} /> : null}
         <div className="wb-actions">
           {workflow.length ? <span className="wb-actions-label">Next step</span> : <span className="wb-actions-label">{rec.progress ? 'No decision is open in this status.' : 'This record has no workflow.'}</span>}
           {workflow.map((a) => (
@@ -986,14 +1093,18 @@ function RecordPage({ view, goto, toast, onChanged }: WbProps) {
         <section className="card">
           <div className="card-head"><div><div className="card-title">Activity</div><div className="card-sub">Officers in the department and the ERP Hub, newest first.</div></div></div>
           {rec.activity.length ? (
+            <>
+            <p className="wb-muted wb-one">One record · {rec.activity.length} {rec.activity.length === 1 ? 'change' : 'changes'} by officers; the latest is first.</p>
             <ol className="wb-timeline">
-              {rec.activity.map((a, i) => (
+              {(allActivity ? rec.activity : rec.activity.slice(0, 3)).map((a, i) => (
                 <li key={i} className={a.officer.startsWith('erp-hub:') ? 'is-hub' : ''}>
                   <time>{short(a.at)}</time>
                   <span><b>{human(a.action.toLowerCase())}</b> by {a.officer.startsWith('erp-hub:') ? 'the ERP Hub' : a.officer}{a.details ? `: ${a.details.replace(/ \(via ERP Hub\)$/, '')}` : ''}</span>
                 </li>
               ))}
             </ol>
+            {rec.activity.length > 3 ? <button className="btn btn-sm btn-ghost wb-more" type="button" aria-expanded={allActivity} onClick={() => setAllActivity(!allActivity)}>{allActivity ? 'Show only the latest 3' : `Show all ${rec.activity.length} changes`}</button> : null}
+            </>
           ) : <p className="wb-muted">Nobody has acted on this record yet.</p>}
         </section>
       </div>
@@ -1006,7 +1117,11 @@ function RecordPage({ view, goto, toast, onChanged }: WbProps) {
       {rec.history.length ? (
         <section className="card">
           <div className="card-head"><div><div className="card-title">Status history</div></div></div>
-          <ol className="wb-timeline">{rec.history.slice().reverse().map((h, i) => <li key={i}><time>{h.at}</time><span>{human(h.status)}</span></li>)}</ol>
+          <ol className="wb-timeline wb-hist">{rec.history.slice().reverse().map((h, i) => {
+            // the sentence that explains this status is the description of the workflow step with the same name
+            const note = rec.progress ? (rec.progress.steps.find((x) => x.key === h.status) || {} as Partial<Step>).description : undefined;
+            return <li key={i}><time>{h.at}</time><span><b>{human(h.status)}</b>{note ? <em className="wb-hist-note">{note}</em> : null}</span></li>;
+          })}</ol>
         </section>
       ) : null}
 

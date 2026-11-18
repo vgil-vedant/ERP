@@ -167,6 +167,12 @@ export function dailySeries(days: Days): Bucket[] {
   return buckets;
 }
 
+/** Records a department holds in its own office (what the nav and dashboard show); `fallback` when the offices have not loaded. */
+export function officeRecords(code: string, fallback = 0): number {
+  const d = ((D.OFFICES && D.OFFICES.departments) || []).find((x: Dash) => x.code === code);
+  return d ? d.totalRecords : fallback;
+}
+
 export interface NavItem { view: string; label: string; icon: string; badge?: boolean; badgeCitizens?: boolean; count?: number | null; warn?: boolean; port?: number | null; ext?: boolean; portal?: boolean }
 export interface NavGroup { id: string; index: string; label: string; items: NavItem[] }
 /** The side navigation, in the order the data flows: citizen portal -> department office -> integration bus -> ERP. */
@@ -181,7 +187,7 @@ export function buildNav(): NavGroup[] {
     { view: 'approvals', label: 'Approvals', icon: 'check', count: waiting || null },
     { view: 'work', label: 'All records', icon: 'grid' }] };
   return [
-    { id: 'g1', index: '01', label: 'Command centre', items: [
+    { id: 'g1', index: '01', label: 'Overview', items: [
       { view: 'dashboard', label: 'Dashboard', icon: 'dash' }] },
     workbench,
     { id: 'g2', index: '02', label: 'ERP · record of truth', items: [

@@ -1,8 +1,9 @@
 // The ERP Hub dashboard (ported from erp-hub.js + the shell of erp-hub.html). All data comes from GET /api/dashboard.
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Svg, clock, fmtDate, fmtDateTime, fmtTime, hideTip, num, rel } from './lib';
-import { D, DEPT_HUE, PORTAL_ICON, applyData, buildNav, dailySeries, hostPort, metrics, portalOrigin, sysName, sysPort } from './model';
+import { Select } from './controls';
+import { D, DEPT_HUE, PORTAL_ICON, applyData, buildNav, dailySeries, officeRecords, hostPort, metrics, portalOrigin, sysName, sysPort } from './model';
 import type { Audit, Citizen, Days, Intake, Sync } from './model';
 import { AreaChart, Bars, DonutPro, RadarChart, HealthRows, Meter, OpenBars, PeopleHeat, Sparkline, StatusBars } from './charts';
 import { DataTable } from './DataTable';
@@ -11,7 +12,8 @@ import { Views } from './views.generated';
 import { LookupView, syncLookup } from './LookupView';
 import { OverviewBody, DeptKpis, DepartmentDatabases, FlowDiagram, OfficeFeed, OfficeViews, isOfficeView, officeDaily, officeMetrics, recentEventsCfg, recentRecordsCfg } from './offices';
 import type { OfficeCtx } from './offices';
-import { WorkbenchViews, isWorkbenchView, loadWorkbench, workbenchMeta } from './workbench';
+import type { Crumb } from './workbench';
+import { WorkbenchViews, isWorkbenchView, loadWorkbench, workbenchMeta, workbenchTrail } from './workbench';
 
 // Views in the navigation, plus three older pages kept reachable by link ('portals', 'integration', 'submissions').
 const VALID = ['dashboard', 'intake', 'lookup', 'citizens', 'audit', 'portals', 'sync', 'integration', 'submissions', 'database', 'health', 'docs'];
@@ -45,7 +47,7 @@ const VIEW_HUE: Record<string, string> = {
   officers: '#6366F1', lookupaudit: '#9333EA', activity: '#EA580C',
   health: '#DB2777', database: '#92400E', docs: '#475569',
 };
-const SECTION_HOME: Record<string, string> = { Workbench: 'approvals', 'Command centre': 'dashboard', ERP: 'lookup', Departments: 'dept:eprisons', 'Integration bus': 'queue', 'Access & audit': 'officers', System: 'health' };
+const SECTION_HOME: Record<string, string> = { Workbench: 'approvals', 'Overview': 'dashboard', ERP: 'lookup', Departments: 'dept:eprisons', 'Integration bus': 'queue', 'Access & audit': 'officers', System: 'health' };
 const DOCS = [
   { name: 'Project README', path: 'README.md', note: 'Architecture, API, schema, ports, testing' },
   { name: 'Architecture notes', path: 'info/docs/architecture/ARCHITECTURE.md', note: 'Runtime topology and write-through in text' },
@@ -134,6 +136,11 @@ export function Hub() {
       setToasts((t) => t.map((x) => (x.id === id ? { ...x, out: true } : x)));
       window.setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), 220);
     }, 4400);
+  }, []);
+
+  const dismissToast = useCallback((id: number) => {
+    setToasts((t) => t.map((x) => (x.id === id ? { ...x, out: true } : x)));
+    window.setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), 220);
   }, []);
 
   /* ------------------------------ data ------------------------------- */
@@ -452,7 +459,7 @@ export function Hub() {
     kpiCitizens: num(D.TOTALS.citizens), sparkCitizens: <Sparkline values={cSeries.length ? cSeries : [0]} color="#4FB9A8" />,
     kpiSuccess: num(m.success), kpiSuccessNote: num(m.success) + ' of ' + num(m.totalAttempts) + ' attempts',
     kpiRollback: num(m.rolled), kpiAudit: num(m.audit), kpiDupes: num(m.dup),
-    activityRange: <select className="field" aria-label="Chart period" value={String(activityDays)} onChange={(e) => setActivityDays(Number(e.target.value))}>{[[7, 'Last 7 days'], [30, 'Last 30 days'], [90, 'Last 90 days'], [120, 'All']].map(([d, l]) => <option key={d} value={String(d)}>{l}</option>)}</select>,
+    activityRange: <Select ariaLabel="Chart period" value={String(activityDays)} onChange={(v) => setActivityDays(Number(v))} options={[[7, 'Last 7 days'], [30, 'Last 30 days'], [90, 'Last 90 days'], [120, 'All']].map(([d, l]) => ({ value: String(d), label: String(l) }))} />,
     chartActivity: om.per.length >= 3
       ? <RadarChart days={activityDays} labels={['Records created', 'Events not delivered']} axes={om.per.map((x) => { const d = officeDaily(activityDays, x.code); return { key: x.code, label: x.name, created: d.reduce((t, b) => t + b.received, 0), refused: d.reduce((t, b) => t + b.refused, 0) }; })} />
       : <AreaChart buckets={officeDaily(activityDays)} labels={['Records created', 'Events not delivered']} minMax={400} />,
@@ -470,7 +477,7 @@ export function Hub() {
     portalQuick: <>{m.perSystem.map((s) => (
       <button className="port-open pr-row" type="button" key={s.code} onClick={() => openPortal(s.code)}>
         <span className="pc-logo sys-tint" style={{ ['--sys' as string]: D.SYS_COLOR[s.code] }}><Svg name={PORTAL_ICON[s.code] || 'grid'} /></span>
-        <span className="po-main"><span className="po-name">{s.name}</span><span className="po-sub">{hostPort(s.code)} · {num(s.records)} records</span></span>
+        <span className="po-main"><span className="po-name">{s.name}</span><span className="po-sub">{hostPort(s.code)} · {num(officeRecords(s.code, s.records))} records</span></span>
         <Svg name="external" />
       </button>))}</>,
     ovHubPort: hubPort ? ':' + hubPort : '', ovErpAddr: target ? String(target).replace(/^https?:\/\//, '') : '',
@@ -487,7 +494,7 @@ export function Hub() {
             <div style={{ flex: 1, minWidth: 0 }}><div className="pc-name">{s.name}</div><div className="pc-cat">{s.hostname}</div></div>
             <span className="pc-port">:{s.port || '—'}</span>
           </div>
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}><span className="pill pill-neutral">{num(s.forms)} forms</span><span className="pill pill-mint">{num(stat.records)} records</span></div>
+          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}><span className="pill pill-neutral">{num(s.forms)} forms</span><span className="pill pill-mint">{num(officeRecords(s.code, stat.records))} records</span></div>
           <div className="pc-foot"><span className="micro" style={{ fontFamily: 'var(--mono)', fontSize: 10 }}>{hostPort(s.code)}</span>{portalBtn('pc-open', s.code, <>Open replica <Svg name="external" /></>)}</div>
         </div>);
     })}</>,
@@ -542,7 +549,7 @@ export function Hub() {
 
   if (!ready) return null;
   const viewMeta: Record<string, [string, string]> = {
-    dashboard: ['Dashboard', 'Command centre'], overview: ['System Overview', 'Command centre'], lookup: ['Person Lookup', 'ERP'], citizens: ['Citizens', 'ERP'],
+    dashboard: ['Dashboard', 'Overview'], overview: ['System Overview', 'Overview'], lookup: ['Person Lookup', 'ERP'], citizens: ['Citizens', 'ERP'],
     records: ['Department Records', 'ERP'], intake: ['Citizen Submissions', 'ERP'], audit: ['Audit Trail', 'ERP'],
     queue: ['Event Queue', 'Integration bus'], failures: ['Retries & Failures', 'Integration bus'],
     sync: ['Write-through Ledger', 'Integration bus'], recon: ['Reconciliation', 'Integration bus'],
@@ -619,8 +626,13 @@ export function Hub() {
             </button>
             <nav className="crumbs" aria-label="Breadcrumb">
               <button className="crumb-link root" type="button" onClick={() => goto('dashboard')}>ERP Hub</button><span className="sep">/</span>
-              <button className="crumb-link" id="crumbSection" type="button" style={{ whiteSpace: 'nowrap' }} onClick={() => goto(SECTION_HOME[viewMeta[view][1]] || 'dashboard')}>{viewMeta[view][1]}</button><span className="sep">/</span>
-              <span className="now" id="crumbNow">{viewMeta[view][0]}</span>
+              {view !== 'dashboard' ? <><button className="crumb-link" id="crumbSection" type="button" style={{ whiteSpace: 'nowrap' }} onClick={() => goto(SECTION_HOME[viewMeta[view][1]] || 'dashboard')}>{viewMeta[view][1]}</button><span className="sep">/</span></> : null}
+              {(isWorkbenchView(view) ? workbenchTrail(view) : [{ label: viewMeta[view][0] } as Crumb]).map((c, i, all) => (
+                <Fragment key={i}>
+                  {c.go ? <button className="crumb-link" type="button" style={{ whiteSpace: 'nowrap' }} onClick={() => goto(c.go!)}>{c.label}</button> : <span className="now" id={i === all.length - 1 ? 'crumbNow' : undefined}>{c.label}</span>}
+                  {i < all.length - 1 ? <span className="sep">/</span> : null}
+                </Fragment>
+              ))}
             </nav>
             <button className="icon-btn search-toggle" id="searchToggle" type="button" aria-label="Search records" aria-expanded={searchOpen}
               onClick={() => { const open = !searchOpen; setSearchOpen(open); if (open) window.setTimeout(() => searchRef.current?.focus(), 30); }}>
@@ -685,6 +697,7 @@ export function Hub() {
           <div className={`toast${t.out ? ' out' : ''}`} key={t.id}>
             <span className="t-ic"><Svg name={t.icon} /></span>
             <div className="t-body"><b>{t.title}</b>{t.body ? <><br />{t.body}</> : null}</div>
+            <button className="t-x" type="button" aria-label="Dismiss notification" onClick={() => dismissToast(t.id)}><Svg name="close" /></button>
           </div>
         ))}
       </div>

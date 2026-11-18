@@ -510,7 +510,6 @@
     var REVEAL_MS = 30000;
     var revealTimer = null;
     var inflight = null;
-    var samples = null;
     var current = null;   // { kind:'q'|'ref', value }
 
     container.innerHTML = ''
@@ -529,9 +528,6 @@
       + '<p class="pl-err" id="pl-err" role="alert" hidden></p>'
       + '<p class="pl-hint" id="pl-hint">Accepted: Aadhaar number · enrolment ID · mobile number · CNR · FIR number/year · prisoner number · forensic case number · e-Mulakat registration · name</p>'
       + '</form>'
-      // the "Browse all" control lives at the bottom of the idle "Live from the departments" card; renderIdle() moves it there
-      + '<div class="pl-demo" hidden><button type="button" class="pl-link pl-demo-all" aria-expanded="false" aria-controls="pl-browse">Browse all</button>'
-      + '<div class="pl-browse" id="pl-browse" hidden></div></div>'
       + '</section>'
       + '<p class="pl-sr" role="status" aria-live="polite"></p>'
       + '<div class="pl-result" aria-busy="false"></div>'
@@ -540,7 +536,6 @@
     var $ = function (s) { return container.querySelector(s); };
     var form = $('.pl-form'), input = $('#pl-q'), detect = $('.pl-detect'), clearBtn = $('.pl-clear');
     var err = $('#pl-err'), go = $('.pl-go'), result = $('.pl-result'), printBtn = $('.pl-print');
-    var demo = $('.pl-demo'), browse = $('.pl-browse'), browseBtn = $('.pl-demo-all');
     var live = $('.pl-sr[role="status"]');
     /** One short sentence for screen readers; the result area itself is not live. */
     function announce(text) { live.textContent = ''; setTimeout(function () { live.textContent = text; }, 30); }
@@ -737,23 +732,41 @@
         });
       } catch (x) { liveSource = null; }
     }
-    function liveItem(ev, i, fresh) {
-      var who = (ev.subjects || []).map(function (p) { return p.ref ? '<button type="button" class="pl-link" data-open-ref="' + esc(p.ref) + '">' + esc(p.name) + '</button>' : esc(p.name); }).join(', ');
+    // The changes of one person as a vertical stepper, oldest first: finished steps are ticked and joined by a green line,
+    // the newest is the current step.
+    function liveStep(ev, i, total) {
+      var now = i === total - 1;
       var when = ev.receivedAt ? fmtLocal(ev.receivedAt) : '';
-      return '<li' + (fresh && i === 0 ? ' class="is-new"' : '') + '><span class="pl-sys-ic pl-sys--' + esc(ev.source) + '">' + svg(ev.source) + '</span><div><b>' + esc((SYSTEMS[ev.source] || {}).short || ev.source) + '</b> ' + (ev.change === 'updated' ? 'updated ' : 'recorded ')
-        + esc(TYPE_LABEL[ev.type] || ev.type) + (ev.status ? ' <span class="pl-muted">(' + esc(cap(ev.status)) + ')</span>' : '') + (who ? ' for ' + who : '')
-        + '<span class="pl-muted pl-mono">' + esc(ev.ref) + '</span></div><time class="pl-muted">' + esc(when) + '</time></li>';
+      return '<li class="pl-step ' + (now ? 'is-now' : 'is-done') + '"' + (now ? ' aria-current="step"' : '') + '>'
+        + '<span class="pl-step-node" aria-hidden="true">' + (now ? '' : '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 8.4 2.9 2.9 6.1-6.3"/></svg>') + '</span>'
+        + '<div class="pl-step-body"><b>' + (ev.change === 'updated' ? 'Updated ' : 'Recorded ') + esc(TYPE_LABEL[ev.type] || ev.type) + '</b>'
+        + (ev.status ? ' <span class="pl-muted">(' + esc(cap(ev.status)) + ')</span>' : '') + '<span class="pl-muted pl-mono">' + esc(ev.ref) + '</span></div>'
+        + '<span class="pl-step-meta"><time class="pl-muted">' + esc(when) + '</time>' + (now ? '<span class="pl-step-tag">Latest</span>' : '') + '</span></li>';
     }
-    function drawLive(fresh) {
-      var box = result.querySelector('[data-live]');
-      if (!box) return;
-      box.innerHTML = liveFeed.length ? '<ol class="pl-live">' + liveFeed.map(function (ev, i) { return liveItem(ev, i, fresh); }).join('') + '</ol>'
-        : '<p class="pl-muted pl-pad">Nothing has arrived yet. Records saved in any department office appear here as they arrive.</p>';
+    // The changes are told apart by the website they came from: one section per department, each in its own colour with its own icon.
+    function liveDepts(events) {
+      var by = {};
+      events.forEach(function (ev) { (by[ev.source] = by[ev.source] || []).push(ev); });
+      var codes = ORDER.filter(function (c) { return by[c]; }).concat(Object.keys(by).filter(function (c) { return ORDER.indexOf(c) < 0; }));
+      return codes.map(function (c) {
+        var list = by[c].slice().reverse();
+        var sys = SYSTEMS[c] || { name: c, short: c };
+        return '<section class="pl-dept pl-sys--' + esc(c) + '" aria-label="' + esc(sys.name + ', ' + plural(list.length, 'change')) + '">'
+          + '<header class="pl-dept-head"><span class="pl-sys-ic pl-sys-ic--lg pl-sys--' + esc(c) + '" aria-hidden="true">' + svg(c) + '</span>'
+          + '<div><b>' + esc(sys.name) + '</b><span class="pl-muted">' + esc(plural(list.length, 'change')) + ' · latest ' + esc(list[list.length - 1].receivedAt ? fmtLocal(list[list.length - 1].receivedAt) : '') + '</span></div></header>'
+          + '<ol class="pl-steps">' + list.map(function (ev, i) { return liveStep(ev, i, list.length); }).join('') + '</ol></section>';
+      }).join('');
     }
+    // One row per person: a person with several changes is still one person, so their changes are folded under one row
+    // that opens to show each of them.
+    var liveOpen = {};
+    // the live changes live inside the people list now (one card, not two)
+    function drawLive(fresh) { drawPeople(fresh); }
     function onLive(ev) {
       liveFeed.unshift(ev);
-      liveFeed = liveFeed.slice(0, 10);
+      liveFeed = liveFeed.slice(0, 200);
       drawLive(true);
+      if (result.querySelector('[data-people]') && !peopleState.all) loadPeople();
       // the person on screen has a new or changed record
       if (current && current.kind === 'ref' && (ev.subjects || []).some(function (p) { return p.ref === current.value; })) {
         var prof = result.querySelector('.pl-profile');
@@ -767,34 +780,83 @@
       }
     }
 
+    // ---------------- the people the ERP holds: a real count, the first 50 shown, the rest loaded on request
+    var PEOPLE_FIRST = 50;
+    var peopleState = { list: [], total: 0, all: false };
+    function eventsOf(ref) { return liveFeed.filter(function (ev) { return (ev.subjects || []).some(function (p) { return p.ref === ref; }); }); }
+    function drawPeople(fresh) {
+      var box = result.querySelector('[data-people]');
+      if (!box) return;
+      var badge = result.querySelector('[data-people-n]');
+      if (badge) badge.textContent = peopleState.total;
+      if (!peopleState.list.length) { box.innerHTML = '<p class="pl-muted pl-pad">No person is on file yet. People appear here as the departments send their records.</p>'; return; }
+      var newest = liveFeed.length ? ((liveFeed[0].subjects || [])[0] || {}).ref : null;
+      var rows = peopleState.list.map(function (p) {
+        var ev = eventsOf(p.ref), open = !!liveOpen[p.ref] && ev.length > 0;
+        var chips = (p.systems || []).map(function (c) { return '<span class="pl-sys-ic pl-sys--' + esc(c) + '" title="' + esc((SYSTEMS[c] || {}).name || c) + '">' + svg(c) + '</span>'; }).join('');
+        var meta = [p.district, plural(p.records, 'record')].filter(Boolean).map(esc).join(' · ') + (ev.length ? ' · ' + esc(plural(ev.length, 'recent change')) : '');
+        return '<li class="pl-lg' + (open ? ' is-open' : '') + (fresh && p.ref === newest ? ' is-new' : '') + '">'
+          + '<div class="pl-lg-head"><span class="pl-avatar pl-avatar--sm" aria-hidden="true">' + esc(initials(p.name)) + '</span>'
+          + '<div><button type="button" class="pl-link" data-open-ref="' + esc(p.ref) + '">' + esc(p.name) + '</button><span class="pl-muted">' + meta + '</span></div>'
+          + '<span class="pl-person-sys">' + chips + '</span>'
+          + (ev.length ? '<button type="button" class="pl-lg-toggle" data-live-toggle="' + esc(p.ref) + '" aria-expanded="' + open + '" aria-label="' + (open ? 'Hide' : 'Show') + ' the recent changes for ' + esc(p.name) + '">' + svg('arrow', 'pl-ic pl-lg-chev') + '</button>' : '<span></span>')
+          + '</div>'
+          + (open ? '<div class="pl-lg-items">' + liveDepts(ev) + '</div>' : '') + '</li>';
+      }).join('');
+      var rest = peopleState.total - peopleState.list.length;
+      box.innerHTML = '<ol class="pl-live pl-people">' + rows + '</ol>'
+        + (rest > 0 ? '<div class="pl-people-more"><span class="pl-muted">Showing ' + peopleState.list.length + ' of ' + peopleState.total + ' people</span><button type="button" class="btn btn-sm" data-people-more>Show all ' + peopleState.total + ' people</button></div>' : '');
+    }
+    function loadPeople() {
+      request('/people?limit=' + PEOPLE_FIRST + '&offset=0', true).then(function (b) {
+        peopleState.list = b.people || []; peopleState.total = Number(b.total) || 0; peopleState.all = false;
+        drawPeople();
+      }, function () { var box = result.querySelector('[data-people]'); if (box) box.innerHTML = '<p class="pl-muted pl-pad">The list of people could not be loaded. Searching still works.</p>'; });
+    }
+    function loadMorePeople() {
+      var btn = result.querySelector('[data-people-more]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Loading…'; }
+      (function next() {
+        if (peopleState.list.length >= peopleState.total) { peopleState.all = true; drawPeople(); return; }
+        request('/people?limit=500&offset=' + peopleState.list.length, true).then(function (b) {
+          var more = b.people || [];
+          if (!more.length) { peopleState.total = peopleState.list.length; drawPeople(); return; }
+          peopleState.list = peopleState.list.concat(more); peopleState.total = Number(b.total) || peopleState.total;
+          next();
+        }, function () { drawPeople(); });
+      })();
+    }
+
     function renderIdle() {
       printBtn.hidden = true;
-      result.innerHTML = '<div class="pl-card pl-idle"><div class="pl-idle-head">' + svg('clock') + '<div><h2>Live from the departments</h2>'
-        + '<p>Records saved in the UIDAI, CCTNS, e-Forensics, eCourts and ePrisons offices arrive here through the integration bus within moments.</p></div></div>'
-        + '<div data-live></div></div>'
+      result.innerHTML = '<div class="pl-card pl-idle"><div class="pl-idle-head">' + svg('users') + '<div><h2>People in the ERP <span class="pl-more-n" data-people-n>…</span></h2>'
+        + '<p>People the departments have sent records for. Open one to see their changes.</p></div></div>'
+        + '<div data-people><p class="pl-muted pl-pad">Loading…</p></div></div>'
         + '<div class="pl-card pl-idle"><div class="pl-idle-head">' + svg('plug') + '<div><h2>Connected systems</h2>'
-        + '<p>A search asks all five at once. A system that does not answer is shown as unavailable; the others still answer.</p></div></div>'
+        + '<p>A search asks all five at once; one that does not answer is shown as unavailable.</p></div></div>'
         + '<div class="pl-sources" data-sources>' + ORDER.map(function (c) {
-          return '<div class="pl-source"><span class="pl-sys-ic pl-sys--' + c + '">' + svg(c) + '</span><div><b>' + esc(SYSTEMS[c].name) + '</b><span class="pl-muted">…</span></div></div>';
+          return '<div class="pl-source"><div class="pl-source-top"><span class="pl-sys-ic pl-sys-ic--lg pl-sys--' + c + '">' + svg(c) + '</span><div class="pl-source-txt"><b>' + esc(SYSTEMS[c].name) + '</b><p class="pl-source-holds pl-muted">…</p></div></div></div>';
         }).join('') + '</div></div>';
-      var liveCard = result.querySelector('[data-live]');
-      if (liveCard) liveCard.parentNode.appendChild(demo);
+      loadPeople();
       request('/sources', true).then(function (b) {
         var box = result.querySelector('[data-sources]');
         if (!box) return;
         box.innerHTML = b.sources.map(function (s) {
-          return '<div class="pl-source"><span class="pl-sys-ic pl-sys--' + esc(s.code) + '">' + svg(s.code) + '</span><div><b>' + esc(s.name) + '</b>'
-            + '<span>' + esc(s.holds) + '</span><span class="pl-muted pl-host" title="' + esc(s.hostname) + '">' + esc(s.hostname) + '</span>'
-            + '<span class="pl-src-count">' + plural(s.records, 'record') + ' in the ERP' + (s.lastReceivedAt ? ' · last received ' + esc(fmtLocal(s.lastReceivedAt)) : '') + '</span></div></div>';
+          var n = Number(s.records) || 0;
+          return '<div class="pl-source"><div class="pl-source-top"><span class="pl-sys-ic pl-sys-ic--lg pl-sys--' + esc(s.code) + '">' + svg(s.code) + '</span>'
+            + '<div class="pl-source-txt"><b>' + esc(s.name) + '</b><p class="pl-source-holds">' + esc(s.holds) + '</p>'
+            + '<span class="pl-muted pl-host" title="' + esc(s.hostname) + '">' + esc(s.hostname) + '</span></div></div>'
+            + '<div class="pl-source-foot"><span class="pl-src-count' + (n ? '' : ' is-zero') + '"><b>' + n + '</b> ERP ' + (n === 1 ? 'record' : 'records') + (n && s.people != null ? '<small>for ' + plural(Number(s.people), 'person', 'people') + '</small>' : '') + '</span>'
+            + '<span class="pl-src-last"><span>Last received</span><b>' + (s.lastReceivedAt ? esc(fmtLocal(s.lastReceivedAt)) : 'Nothing yet') + '</b></span></div></div>';
         }).join('');
       }, function () {
         var box = result.querySelector('[data-sources]');
         if (box) box.insertAdjacentHTML('afterend', '<p class="pl-muted pl-pad">The list of connected systems could not be loaded. Searching still works.</p>');
       });
       if (!liveFeed.length) {
-        request('/recent', true).then(function (b) {
+        request('/recent?limit=50', true).then(function (b) {
           if (liveFeed.length) return;
-          liveFeed = (b.recent || []).slice(0, 10).map(function (x) { return { source: x.source, type: x.type, ref: x.ref, receivedAt: x.receivedAt, subjects: x.subjects, change: x.change }; });
+          liveFeed = (b.recent || []).slice(0, 50).map(function (x) { return { source: x.source, type: x.type, ref: x.ref, receivedAt: x.receivedAt, subjects: x.subjects, change: x.change }; });
           drawLive();
         }, function () { drawLive(); });
       } else drawLive();
@@ -976,36 +1038,6 @@
         + '</section>';
     }
 
-    // ---------------- demo identities
-    function loadSamples() {
-      request('/samples', true).then(function (b) {
-        samples = b.samples || [];
-        if (!samples.length) return;
-        browseBtn.textContent = 'Browse all ' + samples.length;
-        demo.hidden = false;
-      }, function () { /* the demo list is a convenience; searching works without it */ });
-    }
-
-    function renderBrowse(filter) {
-      var f = String(filter || '').toLowerCase();
-      var rows = samples.filter(function (s) {
-        return !f || (s.name + ' ' + s.scenario + ' ' + s.district + ' ' + s.ref).toLowerCase().indexOf(f) >= 0;
-      }).map(function (s) {
-        var cell = function (v, lab) { return v ? '<button type="button" class="pl-link pl-mono" data-sample="' + esc(v) + '" title="Search by ' + lab + '">' + esc(v) + '</button>' : '<span class="pl-muted">—</span>'; };
-        return '<tr><td><b>' + esc(s.name) + '</b><br><span class="pl-muted pl-mono">' + esc(s.ref) + '</span></td><td>' + esc(s.scenario) + '<br><span class="pl-muted">' + esc(s.district) + '</span></td>'
-          + '<td>' + cell(s.aadhaar, 'Aadhaar') + '</td><td>' + cell(s.mobile, 'mobile') + '</td><td>' + cell(s.fir, 'FIR') + '</td><td>' + cell(s.cnr, 'CNR') + '</td><td>' + cell(s.prisoner, 'prisoner number') + '</td></tr>';
-      }).join('');
-      var tbody = browse.querySelector('tbody');
-      if (tbody) {
-        tbody.innerHTML = rows || '<tr><td colspan="7" class="pl-muted pl-center">No demo identity matches the filter.</td></tr>';
-        return;
-      }
-      browse.innerHTML = '<div class="pl-browse-head"><p class="pl-muted">Synthetic test identities. Aadhaar numbers are from the 9999 test series. Select any value to search by it.</p>'
-        + '<input type="search" class="pl-input pl-browse-filter" placeholder="Filter by name, scenario or district" aria-label="Filter the demo identities"></div>'
-        + '<div class="pl-table-wrap pl-browse-wrap"><table class="pl-table"><thead><tr><th scope="col">Person</th><th scope="col">Scenario</th><th scope="col">Aadhaar</th><th scope="col">Mobile</th><th scope="col">FIR</th><th scope="col">CNR</th><th scope="col">Prisoner no.</th></tr></thead><tbody>'
-        + (rows || '<tr><td colspan="7" class="pl-muted pl-center">No demo identity matches the filter.</td></tr>') + '</tbody></table></div>';
-    }
-
     // ---------------- events
     form.addEventListener('submit', function (e) { e.preventDefault(); runSearch(input.value); });
     input.addEventListener('input', function () {
@@ -1025,18 +1057,6 @@
     clearBtn.addEventListener('click', function () {
       input.value = ''; input.dispatchEvent(new Event('input')); input.focus();
     });
-    browseBtn.addEventListener('click', function () {
-      var open = browse.hidden;
-      browse.hidden = !open;
-      browseBtn.setAttribute('aria-expanded', String(open));
-      if (open) {
-        if (!browse.firstChild) renderBrowse('');
-        var f = browse.querySelector('.pl-browse-filter');
-        if (f) f.focus();
-      }
-    });
-    browse.addEventListener('input', function (e) { if (e.target.classList.contains('pl-browse-filter')) renderBrowse(e.target.value); });
-
     container.addEventListener('click', function (e) {
       var t = e.target.closest ? e.target : null;
       if (!t) return;
@@ -1047,6 +1067,9 @@
         runSearch(input.value);
         return;
       }
+      if (t.closest('[data-people-more]')) { loadMorePeople(); return; }
+      var tog = t.closest('[data-live-toggle]');
+      if (tog) { var gk = tog.getAttribute('data-live-toggle'); liveOpen[gk] = !liveOpen[gk]; drawLive(false); return; }
       var open = t.closest('[data-open-ref]');
       if (open) { openRef(open.getAttribute('data-open-ref')); return; }
       var reveal = t.closest('[data-reveal-aadhaar]');
@@ -1123,7 +1146,6 @@
     if (urlState) root.addEventListener('popstate', applyUrl);
 
     // ---------------- start
-    loadSamples();
     startLive();
     applyUrl();
 

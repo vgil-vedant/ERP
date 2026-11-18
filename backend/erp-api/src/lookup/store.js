@@ -138,7 +138,28 @@ function countsOf(sid) {
 function stats() {
   return {
     dataset: (db.prepare('SELECT dataset, MIN(loaded_at) AS loaded_at, COUNT(*) AS n FROM lookup_subject GROUP BY dataset').get()) || null,
-    records: db.prepare('SELECT source_system AS system, COUNT(*) AS n FROM lookup_record GROUP BY source_system').all(),
+    records: db.prepare('SELECT source_system AS system, COUNT(*) AS n, COUNT(DISTINCT subject_id) AS people FROM lookup_record GROUP BY source_system').all(),
+  };
+}
+
+/**
+ * The people the ERP actually holds, newest activity first, with how many records each has and from which systems.
+ * `total` is the real count (it matches `q` when one is given), so the page never shows a made-up number.
+ */
+function people({ limit = 50, offset = 0, q = '' } = {}) {
+  const like = '%' + String(q || '').trim().replace(/[%_\\]/g, (c) => '\\' + c) + '%';
+  const where = q ? "WHERE s.full_name LIKE ? ESCAPE '\\'" : '';
+  const args = q ? [like] : [];
+  const total = db.prepare(`SELECT COUNT(*) AS n FROM lookup_subject s ${where}`).get(...args).n;
+  const rows = db.prepare(
+    `SELECT s.subject_ref AS ref, s.full_name AS name, s.gender, s.birth_year AS birthYear, s.district,
+            COUNT(r.id) AS records, group_concat(DISTINCT r.source_system) AS systems, MAX(r.observed_at) AS last
+       FROM lookup_subject s LEFT JOIN lookup_record r ON r.subject_id = s.id ${where}
+      GROUP BY s.id ORDER BY (MAX(r.observed_at) IS NULL), MAX(r.observed_at) DESC, s.id DESC LIMIT ? OFFSET ?`)
+    .all(...args, Math.max(1, Math.min(500, limit | 0)), Math.max(0, offset | 0));
+  return {
+    total,
+    people: rows.map((r) => ({ ref: r.ref, name: r.name, gender: r.gender, birthYear: r.birthYear, district: r.district, records: r.records, systems: String(r.systems || '').split(',').filter(Boolean), lastReceivedAt: r.last || null })),
   };
 }
 
@@ -150,5 +171,5 @@ function audit(action, maker, details) {
 
 module.exports = {
   mode, ensureLoaded, refFor, linksOf, matchesOf, findByIdentifier, findByName, subjectByRef, identifiersOf, maskedAadhaar,
-  recordsOf, countsOf, stats, audit,
+  recordsOf, countsOf, stats, people, audit,
 };

@@ -106,6 +106,7 @@ app.get('/api/health', async (req, res) => {
  *   GET /api/lookup?q=          search by Aadhaar, EID, mobile, CNR, FIR, prisoner no., ... or name
  *   GET /api/lookup/person/:ref one person's full profile
  *   GET /api/lookup/samples     the synthetic demonstration identities
+ *   GET /api/lookup/people      the people the ERP actually holds (paged; `total` is the real count)
  *   GET /api/lookup/sources     the connected systems and what the mirror holds
  */
 const lookup = require('./lookup/service');
@@ -143,6 +144,10 @@ app.get('/api/lookup/samples', (req, res) => {
   res.set('Cache-Control', 'no-store');
   try { res.json({ synthetic: true, samples: lookup.samples() }); } catch (err) { lookupFailed(res, err); }
 });
+app.get('/api/lookup/people', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try { res.json(lookup.people({ limit: Number(req.query.limit) || 50, offset: Number(req.query.offset) || 0, q: String(req.query.q || '').slice(0, 80) })); } catch (err) { lookupFailed(res, err); }
+});
 app.get('/api/lookup/sources', (req, res) => {
   try { res.json(lookup.sources()); } catch (err) { lookupFailed(res, err); }
 });
@@ -163,7 +168,7 @@ app.post('/api/lookup/person/:ref/aadhaar-reveal', (req, res) => {
     res.json(r);
   } catch (err) { lookupFailed(res, err); }
 });
-app.use('/ui/lookup', express.static(LOOKUP_UI, { maxAge: '5m', index: false }));
+app.use('/ui/lookup', express.static(LOOKUP_UI, { maxAge: 0, etag: true, index: false }));
 
 // --- the console ----------------------------------------------------------
 app.use((req, res, next) => {

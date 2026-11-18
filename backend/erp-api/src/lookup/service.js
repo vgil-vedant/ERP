@@ -275,12 +275,13 @@ function samples() {
 function sources() {
   const st = store.stats();
   const count = (code) => (st.records.find((r) => r.system === code) || {}).n || 0;
+  const people = (code) => (st.records.find((r) => r.system === code) || {}).people || 0;
   const delivered = require('./ingest').deliveries();
   return {
     dataset: st.dataset,
     mode: store.mode(),
     sources: CONNECTORS.map((c) => ({
-      code: c.code, name: c.name, department: c.department, hostname: c.hostname, holds: c.holds, records: count(c.code),
+      code: c.code, name: c.name, department: c.department, hostname: c.hostname, holds: c.holds, records: count(c.code), people: people(c.code),
       mode: store.mode() === 'local' ? 'mirror' : 'bus',
       lastReceivedAt: (delivered[c.code] || {}).lastReceivedAt || null,
       events: (delivered[c.code] || {}).events || 0,
@@ -302,4 +303,7 @@ function aadhaarReveal(ref, actor) {
   return { ref: s.subject_ref, name: s.full_name, masked, uidaiRefs };
 }
 
-module.exports = { search, profile, samples, sources, aadhaarReveal };
+/** The people held in the ERP, a page at a time; `total` is the true count. */
+function people(opts) { return store.people(opts); }
+
+module.exports = { search, profile, samples, people, sources, aadhaarReveal };

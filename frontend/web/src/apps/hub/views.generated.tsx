@@ -3,6 +3,8 @@
 // are now {H.name} (content) and {...P.name} (props), supplied by Hub.tsx.
 import type { ReactNode } from 'react';
 import { Svg } from './lib';
+import { Select } from './controls';
+import { PageArt } from './illustrations';
 
 export interface ViewsProps {
   view: string;
@@ -16,7 +18,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
   return (
     <>
       <section className={"view" + (view === "dashboard" ? " is-active" : "")} id="view-dashboard" data-title="Dashboard" data-section="Overview" data-desc="The five department offices — the records each holds, and whether their events are reaching the ERP.">
-        <div className="page-head">
+        <div className="page-head has-art">
           <div>
             <h1 className="page-title">
               Dashboard
@@ -27,6 +29,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             </p>
           </div>
           {' '}
+          <PageArt kind="dashboard" />
         </div>
         {' '}
         <div className="notice" id="protoNotice" style={{"display":"none"}} {...P.protoNotice}>
@@ -118,7 +121,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
                 <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Events by department</div>
                 {' '}
                 <div className="card-sub">
-                  What each office sent to the ERP over the bus, and when it last delivered.
+                  Events sent to the ERP, and the last delivery.
                 </div>
               </div>
             </div>
@@ -300,7 +303,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         {H.overviewBody}
       </section>
       <section className={"view" + (view === "intake" ? " is-active" : "")} id="view-intake" data-title="Received Records" data-section="ERP Management" data-desc="Every row the ERP accepted through POST /api/intake, with the source system, form and reference it arrived with.">
-        <div className="page-head">
+        <div className="page-head has-art">
           <div>
             <h1 className="page-title">
               Citizen submissions
@@ -328,6 +331,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               {' '}Sync ledger
             </button>
           </div>
+          <PageArt kind="intake" />
         </div>
         {' '}
         <div className="card">
@@ -342,7 +346,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         </div>
       </section>
       <section className={"view" + (view === "citizens" ? " is-active" : "")} id="view-citizens" data-title="Citizens" data-section="ERP Management" data-desc="People the ERP knows about. A citizen is registered once on any portal and reused across all five.">
-        <div className="page-head">
+        <div className="page-head has-art">
           <div>
             <h1 className="page-title">
               Citizens
@@ -373,6 +377,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               {' '}Citizen submissions
             </button>
           </div>
+          <PageArt kind="citizens" />
         </div>
         {' '}
         <div className="card">
@@ -391,7 +396,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         </div>
       </section>
       <section className={"view" + (view === "audit" ? " is-active" : "")} id="view-audit" data-title="Audit Trail" data-section="ERP Management" data-desc="An append-only record of what entered the ERP. No UPDATE, no DELETE, no editing in this console.">
-        <div className="page-head">
+        <div className="page-head has-art">
           <div>
             <h1 className="page-title">
               Audit trail
@@ -415,6 +420,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               {' '}read-only · append-only
             </span>
           </div>
+          <PageArt kind="audit" />
         </div>
         {' '}
         <div className="card">
@@ -626,7 +632,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         </div>
       </section>
       <section className={"view" + (view === "sync" ? " is-active" : "")} id="view-sync" data-title="Sync Activity" data-section="Integration Monitoring" data-desc="The erp_sync write-through ledger: every attempt to mirror a platform submission into the ERP, successful or not.">
-        <div className="page-head">
+        <div className="page-head has-art">
           <div>
             <h1 className="page-title">
               Write-through ledger
@@ -645,6 +651,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               {' '}Integration status
             </button>
           </div>
+          <PageArt kind="ledger" />
         </div>
         {' '}
         <div className="card">
@@ -694,20 +701,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           </div>
           {' '}
           <div className="page-actions">
-            <select className="field" id="periodSelectIntegration" aria-label="Date range" {...P.periodSelectIntegration}>
-              <option value="7">
-                Last 7 days
-              </option>
-              <option value="30">
-                Last 30 days
-              </option>
-              <option value="90">
-                Last 90 days
-              </option>
-              <option value="all">
-                All recorded activity
-              </option>
-            </select>
+            <Select id="periodSelectIntegration" ariaLabel="Date range" value={(P.periodSelectIntegration as { value: string }).value} onChange={(v) => (P.periodSelectIntegration as { onChange: (e: unknown) => void }).onChange({ target: { value: v } })} options={[{ value: "7", label: "Last 7 days" }, { value: "30", label: "Last 30 days" }, { value: "90", label: "Last 90 days" }, { value: "all", label: "All recorded activity" }]} />
           </div>
         </div>
         {' '}
@@ -934,7 +928,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         </div>
       </section>
       <section className={"view" + (view === "database" ? " is-active" : "")} id="view-database" data-title="Database Overview" data-section="System" data-desc="Two SQLite files and the read-only PostgreSQL migration target. No schema changes are proposed here.">
-        <div className="page-head">
+        <div className="page-head has-art">
           <div>
             <h1 className="page-title">
               Databases
@@ -944,6 +938,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               The ERP holds what it received; the platform holds what the portals collected. They are never joined at runtime.
             </p>
           </div>
+          <PageArt kind="databases" />
         </div>
         {' '}
         <div className="grid g-2">
@@ -1076,7 +1071,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         </div>
       </section>
       <section className={"view" + (view === "health" ? " is-active" : "")} id="view-health" data-title="System Health" data-section="System" data-desc="Service reachability and the documented configuration this console depends on.">
-        <div className="page-head">
+        <div className="page-head has-art">
           <div>
             <h1 className="page-title">
               Service health
@@ -1092,6 +1087,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               live probes
             </span>
           </div>
+          <PageArt kind="health" />
         </div>
         {' '}
         <div className="grid g-2">
@@ -1312,7 +1308,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         </div>
       </section>
       <section className={"view" + (view === "docs" ? " is-active" : "")} id="view-docs" data-title="Documentation" data-section="System" data-desc="Project documents that define this console's behaviour.">
-        <div className="page-head">
+        <div className="page-head has-art">
           <div>
             <h1 className="page-title">
               Documentation
@@ -1322,6 +1318,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               Documents that define this console's behaviour. Paths are repository-relative; copy one to open it locally.
             </p>
           </div>
+          <PageArt kind="docs" />
         </div>
         {' '}
         <div className="grid g-2">

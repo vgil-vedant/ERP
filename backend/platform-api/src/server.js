@@ -203,6 +203,11 @@ function buildHub() {
     if (require('./services/ui-engine').sendHub(res)) return;
     res.sendFile(path.join(HUB_STATIC, 'erp-hub.html'));
   });
+  // Who is signed in, for the profile card of the sidebar. The hub has one administrator account.
+  app.get('/api/me', (req, res) => {
+    res.set('Cache-Control', 'no-store');
+    res.json({ name: require('./services/hub-auth').USER, role: 'Hub administrator' });
+  });
   app.get('/api/dashboard', async (req, res, next) => {
     try {
       res.set('Cache-Control', 'no-store');
