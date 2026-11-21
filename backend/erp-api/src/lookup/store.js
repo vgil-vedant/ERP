@@ -43,8 +43,6 @@ const q = {
 /** Say so, once, when a production process runs with the demonstration defaults. */
 function warnDefaults() {
   if (process.env.NODE_ENV !== 'production') return;
-  if (!process.env.LOOKUP_PEPPER) process.stderr.write('[erp] WARNING: LOOKUP_PEPPER is not set; identifier hashes use the public demonstration key.\n');
-  if (!process.env.INTEGRATION_SECRET) process.stderr.write('[erp] WARNING: INTEGRATION_SECRET is not set; department deliveries are checked against the public demonstration key.\n');
   if (process.env.LOOKUP_DEMO_SAMPLES !== 'off') process.stderr.write('[erp] WARNING: the demo identities list is on (/api/lookup/samples); set LOOKUP_DEMO_SAMPLES=off outside a demonstration.\n');
 }
 
@@ -153,14 +151,31 @@ function people({ limit = 50, offset = 0, q = '' } = {}) {
   const total = db.prepare(`SELECT COUNT(*) AS n FROM lookup_subject s ${where}`).get(...args).n;
   const rows = db.prepare(
     `SELECT s.subject_ref AS ref, s.full_name AS name, s.gender, s.birth_year AS birthYear, s.district,
-            COUNT(r.id) AS records, group_concat(DISTINCT r.source_system) AS systems, MAX(r.observed_at) AS last
+            COUNT(r.id) AS records, group_concat(DISTINCT r.source_system) AS systems, MAX(r.observed_at) AS last,
+            (SELECT COUNT(*) FROM ingest_event e WHERE EXISTS (SELECT 1 FROM lookup_record x WHERE x.subject_id = s.id AND x.source_system = e.source_system AND x.record_type = e.record_type AND x.record_ref = e.record_ref)) AS changes
        FROM lookup_subject s LEFT JOIN lookup_record r ON r.subject_id = s.id ${where}
       GROUP BY s.id ORDER BY (MAX(r.observed_at) IS NULL), MAX(r.observed_at) DESC, s.id DESC LIMIT ? OFFSET ?`)
     .all(...args, Math.max(1, Math.min(500, limit | 0)), Math.max(0, offset | 0));
   return {
     total,
-    people: rows.map((r) => ({ ref: r.ref, name: r.name, gender: r.gender, birthYear: r.birthYear, district: r.district, records: r.records, systems: String(r.systems || '').split(',').filter(Boolean), lastReceivedAt: r.last || null })),
+    people: rows.map((r) => ({ ref: r.ref, name: r.name, gender: r.gender, birthYear: r.birthYear, district: r.district, records: r.records, changes: r.changes, systems: String(r.systems || '').split(',').filter(Boolean), lastReceivedAt: r.last || null })),
   };
+}
+
+/**
+ * Every change the departments have sent about one person's records, newest first, so a page can show the
+ * whole history (not only the latest arrivals). Reading it is not a lookup, so it is not written to the audit log.
+ */
+function changesOf(subjectRef, limit = 300) {
+  return db.prepare(
+    `SELECT e.source_system AS source, e.record_type AS type, e.record_ref AS ref, e.received_at AS receivedAt,
+            (SELECT COUNT(*) FROM ingest_event p WHERE p.source_system = e.source_system AND p.record_type = e.record_type
+               AND p.record_ref = e.record_ref AND p.received_at < e.received_at) AS earlier
+       FROM ingest_event e
+      WHERE EXISTS (SELECT 1 FROM lookup_record r JOIN lookup_subject s ON s.id = r.subject_id
+                     WHERE s.subject_ref = ? AND r.source_system = e.source_system AND r.record_type = e.record_type AND r.record_ref = e.record_ref)
+      ORDER BY e.received_at DESC LIMIT ?`).all(String(subjectRef), Math.max(1, Math.min(1000, limit | 0)))
+    .map((r) => ({ source: r.source, type: r.type, ref: r.ref, receivedAt: r.receivedAt, change: r.earlier ? 'updated' : 'new' }));
 }
 
 function audit(action, maker, details) {
@@ -171,5 +186,5 @@ function audit(action, maker, details) {
 
 module.exports = {
   mode, ensureLoaded, refFor, linksOf, matchesOf, findByIdentifier, findByName, subjectByRef, identifiersOf, maskedAadhaar,
-  recordsOf, countsOf, stats, people, audit,
+  recordsOf, countsOf, stats, people, changesOf, audit,
 };

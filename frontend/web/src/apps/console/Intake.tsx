@@ -13,9 +13,7 @@ export function Intake({ ctx, system, rows, systems }) {
 <span style={{"fontWeight":"500","color":"var(--text-3)","fontSize":"18px"}}>—{' '}
 {system}</span></>) : null}</h1>
 {' '}
-<p className="page-desc">Every row the ERP accepted through{' '}
-<code style={{"fontFamily":"var(--mono)","fontSize":"12px","background":"var(--surface-3)","padding":"1px 5px","borderRadius":"5px"}}>POST /api/intake</code>
-, newest first. Idempotent: a retry with the same{' '}
+<p className="page-desc">Every row the ERP accepted, newest first. Idempotent: a retry with the same{' '}
 <code style={{"fontFamily":"var(--mono)","fontSize":"12px"}}>source_system + source_reference</code>
 {' '}returns 200 and adds no row.</p></div>
 {' '}
@@ -30,7 +28,7 @@ export function Intake({ ctx, system, rows, systems }) {
 {(system) ? (<>{' '}from{' '}
 <strong>{system}</strong></>) : null}</div></div>
 {' '}
-<span className="pill pill-mint">GET /api/intake</span></div>
+</div>
 <div className="tbl-toolbar"><div className="filter-chips"><a href="/intake" className={`filter-chip${!system ? ' is-active' : ''}`}>All</a>
 {(systems).map(function (s, __k) { return (<Fragment key={__k}><a href={`/intake?system=${s.code}`} className={`filter-chip${system === s.code ? ' is-active' : ''}`}>{s.code}</a></Fragment>); })}</div>
 {' '}

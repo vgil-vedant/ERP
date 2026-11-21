@@ -89,7 +89,7 @@ export function AuditTimeline({ rows, noun, searchPlaceholder, filter, pageSize 
 
       <div className="tl-box">
         <div className="tl-head tl-grid" aria-hidden="true">
-          <div className="tl-c tl-c-lead">Activity</div><div className="tl-c tl-c-when">When</div><div className="tl-c tl-c-mod">Module</div>
+          <div className="tl-c tl-c-lead">Activity</div><div className="tl-c tl-c-when">Date</div><div className="tl-c tl-c-mod">Module</div>
           <div className="tl-c tl-c-act">Action</div><div className="tl-c tl-c-det">Details</div><div className="tl-c tl-c-ent">Entity</div>
         </div>
 

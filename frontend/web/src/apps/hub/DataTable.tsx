@@ -5,7 +5,7 @@ import { Select } from './controls';
 import { Svg, esc, num } from './lib';
 
 export interface Column<T> {
-  key: string; label: string; sortable?: boolean; align?: 'right'; nowrap?: boolean;
+  key: string; label: string; sortable?: boolean; align?: 'right'; nowrap?: boolean; wrap?: boolean;
   render: (r: T) => ReactNode; sortValue?: (r: T) => string | number; csv: (r: T) => string | number;
 }
 export interface Filter<T> {
@@ -140,7 +140,7 @@ export function DataTable<T>({ cfg, onExport, showExport = true }: Props<T>) {
                 <tr key={key} className={`${cfg.onRow ? 'clickable' : ''}${child ? ' grp-child' : ''}${head && many ? ' grp-head' : ''}${head && open ? ' is-open' : ''}`}
                   onClick={cfg.onRow ? (e) => { if ((e.target as HTMLElement).closest('[data-stop]')) return; cfg.onRow!(r); } : undefined}>
                   {cfg.columns.map((c, ci) => (
-                    <td key={c.key} className={`${c.align === 'right' ? 'col-right' : ''} ${c.nowrap ? 'nowrap' : ''}`}>
+                    <td key={c.key} className={`${c.align === 'right' ? 'col-right' : ''} ${c.nowrap ? 'nowrap' : ''} ${c.wrap ? 'wrap' : ''}`}>
                       {ci === 0 && head && many ? (
                         <div className="grp-cell">
                           <button className="grp-toggle" type="button" data-stop aria-expanded={open}

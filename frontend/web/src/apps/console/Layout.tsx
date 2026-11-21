@@ -18,9 +18,9 @@ export function Layout({ currentPath, locals, children }) {
 {' '}
 <path d="M14 17.5h7M17.5 14v7"></path></svg></div>
 {' '}
-<div className="brand-text"><div className="brand-name">ERP Hub</div>
+<div className="brand-text"><div className="brand-name">EkSetu</div>
 {' '}
-<div className="brand-sub">Maharashtra Prisons</div></div>
+<div className="brand-sub">Unified Records</div></div>
 {' '}
 <button className="brand-close" id="navClose" type="button" aria-label="Close navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></button></div>
 {' '}
@@ -133,7 +133,7 @@ export function Layout({ currentPath, locals, children }) {
 <div className="scrim" id="navScrim" hidden></div>
 <div className="shell"><header className="topbar"><button className="menu-btn" id="menuBtn" type="button" aria-label="Open navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
 {' '}
-<nav className="crumbs" aria-label="Breadcrumb"><a className="root" href="/">ERP Hub</a>
+<nav className="crumbs" aria-label="Breadcrumb"><a className="root" href="/">EkSetu</a>
 {' '}
 <span className="sep">/</span>
 {' '}
@@ -160,7 +160,7 @@ export function Layout({ currentPath, locals, children }) {
 <main className="main">{children}
 {' '}</main>
 {' '}
-<footer className="app-foot"><b>ERP Hub · Maharashtra Prisons</b>
+<footer className="app-foot"><b>EkSetu · Unified Records</b>
 {' '}— Unofficial Local Demonstration · Not an Official Government Service · Read-only console for{' '}
 <code style={{"fontFamily":"var(--mono)","fontSize":"10.5px"}}>erp.sqlite</code></footer></div></div>
     </>

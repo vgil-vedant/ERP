@@ -94,6 +94,8 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
                   Share of the records each office holds.
                 </div>
               </div>
+              {' '}
+              <div id="recordsRange">{H.recordsRange}</div>
             </div>
             {' '}
             <div className="donut-wrap">
@@ -182,7 +184,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
                 <div className="card-sub">People named in each office's records.</div>
               </div>
               {' '}
-              <span className="count-ring" title="People on file">{H.peopleCount}</span>
+              <div id="peopleRange">{H.peopleRange}</div>
             </div>
             {' '}
             <div className="heat" id="chartPeople">{H.chartPeople}</div>
@@ -302,7 +304,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
         {' '}
         {H.overviewBody}
       </section>
-      <section className={"view" + (view === "intake" ? " is-active" : "")} id="view-intake" data-title="Received Records" data-section="ERP Management" data-desc="Every row the ERP accepted through POST /api/intake, with the source system, form and reference it arrived with.">
+      <section className={"view" + (view === "intake" ? " is-active" : "")} id="view-intake" data-title="Received Records" data-section="ERP Management" data-desc="Every row the ERP accepted, with the source system, form and reference it arrived with.">
         <div className="page-head has-art">
           <div>
             <h1 className="page-title">
@@ -322,15 +324,6 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             </p>
           </div>
           {' '}
-          <div className="page-actions">
-            <button className="btn" type="button" onClick={() => goto("sync")}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <path d="M4 4v6h6M20 20v-6h-6"></path>
-                <path d="M20 9A8 8 0 0 0 6 6L4 10m16 4-2 4a8 8 0 0 1-14-3"></path>
-              </svg>
-              {' '}Sync ledger
-            </button>
-          </div>
           <PageArt kind="intake" />
         </div>
         {' '}
@@ -340,6 +333,14 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="inbox" /></span>Citizen submissions in the ERP</div>
               <div className="card-sub" id="intakeCountSub">{H.intakeCountSub}</div>
             </div>
+            {' '}
+            <button className="btn btn-sm" type="button" onClick={() => goto("sync")}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M4 4v6h6M20 20v-6h-6"></path>
+                <path d="M20 9A8 8 0 0 0 6 6L4 10m16 4-2 4a8 8 0 0 1-14-3"></path>
+              </svg>
+              {' '}Sync ledger
+            </button>
           </div>
           {' '}
           <div className="table-host" data-table="intake">{H.t_intake}</div>
@@ -369,14 +370,6 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             </p>
           </div>
           {' '}
-          <div className="page-actions">
-            <button className="btn" type="button" onClick={() => goto("intake")}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <path d="M4 5h16M4 12h16M4 19h10"></path>
-              </svg>
-              {' '}Citizen submissions
-            </button>
-          </div>
           <PageArt kind="citizens" />
         </div>
         {' '}
@@ -387,9 +380,12 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               <div className="card-sub" id="citizenCountSub">{H.citizenCountSub}</div>
             </div>
             {' '}
-            <span className="pill pill-mint">
-              GET /api/citizens
-            </span>
+            <button className="btn btn-sm" type="button" onClick={() => goto("intake")}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M4 5h16M4 12h16M4 19h10"></path>
+              </svg>
+              {' '}Citizen submissions
+            </button>
           </div>
           {' '}
           <div className="table-host" data-table="citizens">{H.t_citizens}</div>
@@ -409,16 +405,6 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               </code>
               , so this console offers no editing controls at all.
             </p>
-          </div>
-          {' '}
-          <div className="page-actions">
-            <span className="pill pill-neutral" style={{"height":"32px","padding":"0 12px","fontSize":"11px"}}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <rect x="4" y="10" width="16" height="10" rx="2"></rect>
-                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
-              </svg>
-              {' '}read-only · append-only
-            </span>
           </div>
           <PageArt kind="audit" />
         </div>
@@ -517,41 +503,6 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               {' '}
               <div className="def-row">
                 <div className="def-key">
-                  JSON endpoints
-                </div>
-                <div className="def-val">
-                  <code>
-                    /api/dashboard
-                  </code>
-                  {' '}·{' '}
-                  <code>
-                    /api/summary
-                  </code>
-                  {' '}·{' '}
-                  <code>
-                    /api/people
-                  </code>
-                  {' '}·{' '}
-                  <code>
-                    /api/submissions
-                  </code>
-                  {' '}·{' '}
-                  <code>
-                    /api/sync
-                  </code>
-                  {' '}·{' '}
-                  <code>
-                    /api/audit
-                  </code>
-                  {' '}·{' '}
-                  <code>
-                    /api/health
-                  </code>
-                </div>
-              </div>
-              {' '}
-              <div className="def-row">
-                <div className="def-key">
                   Shared identity
                 </div>
                 <div className="def-val">
@@ -643,14 +594,6 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             </p>
           </div>
           {' '}
-          <div className="page-actions">
-            <button className="btn" type="button" onClick={() => goto("integration")}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <path d="M3 12h4l3 8 4-16 3 8h4"></path>
-              </svg>
-              {' '}Integration status
-            </button>
-          </div>
           <PageArt kind="ledger" />
         </div>
         {' '}
@@ -661,9 +604,12 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               <div className="card-sub" id="syncCountSub">{H.syncCountSub}</div>
             </div>
             {' '}
-            <span className="pill pill-mint">
-              hub /api/sync
-            </span>
+            <button className="btn btn-sm" type="button" onClick={() => goto("integration")}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M3 12h4l3 8 4-16 3 8h4"></path>
+              </svg>
+              {' '}Integration status
+            </button>
           </div>
           {' '}
           <div className="table-host" data-table="sync">{H.t_sync}</div>
@@ -903,10 +849,6 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
               <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="inbox" /></span>Platform submissions</div>
               <div className="card-sub" id="subCountSub">{H.subCountSub}</div>
             </div>
-            {' '}
-            <span className="pill pill-mint">
-              hub /api/submissions
-            </span>
           </div>
           {' '}
           <div className="table-host" data-table="submissions">{H.t_submissions}</div>
@@ -1080,12 +1022,6 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             <p className="page-desc">
               Each row is probed when the page loads and every 30 seconds. A service is only shown as healthy when it answered; anything that cannot be checked from here says so.
             </p>
-          </div>
-          {' '}
-          <div className="page-actions">
-            <span className="pill pill-ok" style={{"height":"30px","padding":"0 11px","fontSize":"10.5px"}}>
-              live probes
-            </span>
           </div>
           <PageArt kind="health" />
         </div>
@@ -1321,7 +1257,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
           <PageArt kind="docs" />
         </div>
         {' '}
-        <div className="grid g-2">
+        <div className="grid" style={{"gridTemplateColumns":"minmax(0,1fr)"}}>
           <div className="card">
             <div className="card-head">
               <div>
@@ -1335,19 +1271,7 @@ export function Views({ view, H, P, goto, openHub }: ViewsProps) {
             <div className="stack" id="docList" style={{"gap":"9px"}}>{H.docList}</div>
           </div>
           {' '}
-          <div className="card">
-            <div className="card-head">
-              <div>
-                <div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="api" /></span>API surface used by this console</div>
-                <div className="card-sub">
-                  All endpoints are implemented; none is invented here.
-                </div>
-              </div>
-            </div>
-            {' '}
-            <div id="docApi">{H.docApi}</div>
-          </div>
-        </div>
+                  </div>
         {' '}
         <div className="card" style={{"marginTop":"16px"}}>
           <div className="card-head">

@@ -42,7 +42,9 @@ const { db } = require('../db');
 const ids = require('./identifiers');
 const live = require('./live');
 
-const SECRET = process.env.INTEGRATION_SECRET || 'erp-integration-demo-secret-v1';
+const sec = require('../../../shared/security');
+// the key the departments sign their deliveries with; never a built-in value (shared/security.js)
+const SECRET = sec.requireOrExit(() => sec.secret('INTEGRATION_SECRET'));
 const SKEW_MS = 5 * 60 * 1000;
 const SOURCES = ['uidai', 'cctns', 'eforensics', 'ecourts', 'eprisons'];
 const PERSON_IDS = ['aadhaar', 'eid', 'mobile'];

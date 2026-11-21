@@ -99,7 +99,7 @@ export function Sync({ ctx, rows, summary, total, siteFilter, pgAvailable }) {
 {' '}sync log</>) : (<>Write-through attempts</>)}</div>
 {' '}
 <div className="card-sub">{(total) ? (<>{total}
-{' '}attempts · erp_sync ledger · synchronous write-through · hub /api/sync</>) : (<>No sync data yet</>)}</div></div>
+{' '}attempts · erp_sync ledger · synchronous write-through</>) : (<>No sync data yet</>)}</div></div>
 {' '}
 <button className="btn btn-sm" onClick={() => ctx.exportTableCSV('erp-sync.csv')}>Export CSV</button></div>
 {(!rows || !rows.length) ? (<><div className="empty-state"><div className="empty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M4 4v6h6M20 20v-6h-6"></path>

@@ -17,7 +17,24 @@ export interface Submission { ref: string; system: string; person: string; erpRe
 export type Dash = any;
 
 // one hue per department, the same as on the Person Lookup page
-export const DEPT_HUE: Record<string, string> = { uidai: '#C2410C', cctns: '#1D4ED8', eforensics: '#7C3AED', ecourts: '#0F766E', eprisons: '#475569' };
+const BASE_HUE: Record<string, string> = { uidai: '#C2410C', cctns: '#1D4ED8', eforensics: '#7C3AED', ecourts: '#0F766E', eprisons: '#475569' };
+/** On the dark theme a department colour is lifted to a lightness that shows on the dark surface (the hue is kept). */
+export function liftForDark(hex: string): string {
+  const m3 = /^#([0-9a-f]{6})$/i.exec(hex); if (!m3) return hex;
+  const n = parseInt(m3[1], 16); const r = (n >> 16) / 255, g = ((n >> 8) & 255) / 255, b = (n & 255) / 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b); const l = (mx + mn) / 2;
+  if (l >= 0.62) return hex;
+  const d = mx - mn; let h = 0, s = 0;
+  if (d) { s = d / (1 - Math.abs(2 * l - 1)); h = mx === r ? ((g - b) / d + (g < b ? 6 : 0)) : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; h /= 6; }
+  const L = 0.64, S = Math.min(1, s * 0.95), q = L < 0.5 ? L * (1 + S) : L + S - L * S, p = 2 * L - q;
+  const f = (t: number) => { t = (t + 1) % 1; return t < 1 / 6 ? p + (q - p) * 6 * t : t < 1 / 2 ? q : t < 2 / 3 ? p + (q - p) * (2 / 3 - t) * 6 : p; };
+  const x = (v: number) => Math.round(v * 255).toString(16).padStart(2, '0');
+  return '#' + x(f(h + 1 / 3)) + x(f(h)) + x(f(h - 1 / 3));
+}
+const darkNow = () => typeof document !== 'undefined' && document.documentElement.getAttribute('data-theme') === 'dark';
+/** A lookup of colours by code that answers with the dark-theme variant while the dark theme is on. */
+const themed = (o: Record<string, string>): Record<string, string> => new Proxy(o, { get: (t, k) => { const v = typeof k === 'string' ? t[k] : undefined; return v && darkNow() ? liftForDark(v) : v; } });
+export const DEPT_HUE: Record<string, string> = themed(BASE_HUE);
 export const PALETTE = ['#0E9F6B', '#2BAFA0', '#7FD3AE', '#0A7C54', '#2B4A42', '#4FB9A8', '#7A9E92'];
 export const PORTAL_ICON: Record<string, string> = { eprisons: 'prison', cctns: 'police', eforensics: 'flask', uidai: 'fingerprint', ecourts: 'court' };
 
@@ -71,7 +88,7 @@ export function applyData(d: Dash) {
     if (!D.SYSTEMS.some((x) => x.code === s.code)) D.SYSTEMS.push({ code: s.code, name: s.name || s.code, short: s.name || s.code, port: null, hostname: '', forms: 0 });
   });
   D.SYS_MAP = Object.fromEntries(D.SYSTEMS.map((s) => [s.code, s]));
-  D.SYS_COLOR = Object.fromEntries(D.SYSTEMS.map((s, i) => [s.code, DEPT_HUE[s.code] || PALETTE[i % PALETTE.length]]));
+  D.SYS_COLOR = themed(Object.fromEntries(D.SYSTEMS.map((s, i) => [s.code, BASE_HUE[s.code] || PALETTE[i % PALETTE.length]])));
   D.TOTALS = { intake: d.erp.summary ? d.erp.summary.intake : 0, citizens: d.erp.summary ? d.erp.summary.citizens : 0 };
 
   const byId = new Map<number, Citizen>();

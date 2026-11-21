@@ -4,6 +4,7 @@
  * They are static, trusted strings: nothing here comes from data.
  */
 export type ArtKind = 'apply' | 'dashboard' | 'approvals' | 'records' | 'lookup' | 'citizens'
+  | 'dept-uidai' | 'dept-cctns' | 'dept-eforensics' | 'dept-ecourts' | 'dept-eprisons'
   | 'departments' | 'intake' | 'audit' | 'dept' | 'queue' | 'failures' | 'ledger' | 'recon' | 'officers' | 'lookupaudit' | 'activity' | 'health' | 'databases' | 'docs';
 
 const G = '#159D78', MINT = '#CFE9DD', MINT2 = '#BFE5D3', SOFT = '#EAF7F1', EDGE = '#DCEBE4', LINE = '#E6F0EC', NAVY = '#24374D';
@@ -16,7 +17,7 @@ const AMBER = '#E9A23B';
 const cyl = (cx: number, top: number, rx: number, h: number, fill = '#fff') => `<path d="M${cx - rx} ${top}v${h}a${rx} ${rx / 3} 0 0 0 ${rx * 2} 0v${-h}" fill="${fill}" stroke="${EDGE}" stroke-width="2"/><path d="M${cx - rx} ${top + h / 2}a${rx} ${rx / 3} 0 0 0 ${rx * 2} 0" fill="none" stroke="${MINT2}" stroke-width="2"/><ellipse cx="${cx}" cy="${top}" rx="${rx}" ry="${rx / 3}" fill="${MINT}" stroke="${EDGE}" stroke-width="2"/>`;
 const person = (cx: number, cy: number, r: number, fill = MINT) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}"/><path d="M${cx - r * 1.6} ${cy + r * 2.5}a${r * 1.6} ${r * 1.4} 0 0 1 ${r * 3.2} 0Z" fill="${fill}"/>`;
 
-const BODY: Record<ArtKind, string> = {
+const BODY: Partial<Record<ArtKind, string>> = {
   // a new document being created
   apply: `${base}${leaf('M40 92c-14-4-22-18-18-34 14 2 24 10 28 24-2 5-5 8-10 10Z')}${leaf('M182 44c10 4 16 14 14 26-11-1-18-7-21-17 1-4 3-7 7-9Z', '#CBEADC')}${leaf('M186 104c12-2 20 4 24 14-10 4-19 2-26-6 0-4 1-6 2-8Z')}`
     + `${card(62, 14, 98, 116, 14)}${bar(78, 34, 52, 7, MINT)}${bar(78, 52, 66)}${bar(78, 66, 60)}${bar(78, 80, 40)}`
@@ -94,7 +95,41 @@ const BODY: Record<ArtKind, string> = {
     + `<path d="M126 44c10-5 26-5 40 0v62c-14-5-30-5-40 0Z" fill="#fff" stroke="${EDGE}" stroke-width="2" stroke-linejoin="round"/><path d="M166 44c8-4 18-4 26 0v62c-8-4-18-4-26 0Z" fill="#F6FBF9" stroke="${EDGE}" stroke-width="2" stroke-linejoin="round"/><path d="M180 44v24l6-5 6 5V44" fill="${G}"/>${bar(134, 58, 24, 4, MINT)}${bar(134, 70, 20, 4)}${bar(134, 82, 26, 4)}`,
 };
 
-const svgFor = (kind: ArtKind) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" fill="none">${BODY[kind]}</svg>`;
+
+/* the five department pages: each built around its own website's icon, tinted in that department's colour */
+const mixw = (hex: string, p: number) => {
+  const n = parseInt(hex.slice(1), 16), c = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => Math.round(v * p + 255 * (1 - p)));
+  return '#' + c.map((v) => v.toString(16).padStart(2, '0')).join('');
+};
+const deptBase = (h: string) => `<circle cx="112" cy="68" r="60" fill="${mixw(h, 0.09)}"/><ellipse cx="112" cy="137" rx="82" ry="7" fill="${mixw(h, 0.2)}" opacity=".6"/>`;
+const DEPT_ART: Record<string, (h: string) => string> = {
+  // an identity card with a fingerprint
+  'dept-uidai': (h) => `${deptBase(h)}${card(30, 34, 118, 80)}<circle cx="58" cy="64" r="12" fill="${mixw(h, 0.3)}"/><path d="M38 108a20 17 0 0 1 40 0Z" fill="${mixw(h, 0.3)}"/>${bar(88, 52, 44, 6, NAVY)}${bar(88, 66, 34, 6, mixw(h, 0.25))}${bar(88, 80, 40, 6, mixw(h, 0.25))}`
+    + `<circle cx="152" cy="84" r="34" fill="#fff" stroke="${mixw(h, 0.35)}" stroke-width="2"/>`
+    + [8, 14, 20, 26].map((r, i) => `<path d="M${152 - r} ${96 - (i % 2) * 2}v-${4 + i * 3}a${r} ${r} 0 0 1 ${r * 2} 0v${4 + i * 3}" fill="none" stroke="${h}" stroke-width="3.4" stroke-linecap="round" opacity="${1 - i * 0.12}"/>`).join('')
+    + `${tick(176, 46, 11, 3)}`,
+  // a police station: a shield badge beside a filed report
+  'dept-cctns': (h) => `${deptBase(h)}${card(28, 40, 86, 80)}${bar(42, 56, 40, 6, NAVY)}${[72, 86, 100].map((y) => bar(42, y, 58 - (y % 3) * 6, 5, mixw(h, 0.22))).join('')}`
+    + `<path d="M150 26 188 40v32c0 26-16 44-38 54-22-10-38-28-38-54V40Z" fill="${mixw(h, 0.3)}" stroke="${h}" stroke-width="4" stroke-linejoin="round"/><path d="M150 38l28 10v24c0 18-11 32-28 40-17-8-28-22-28-40V48Z" fill="#fff" opacity=".7"/>`
+    + `<path d="m137 78 9 9 18-20" stroke="${h}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>${tick(44, 30, 11, 3)}`,
+  // a laboratory flask with a magnifier and a report
+  'dept-eforensics': (h) => `${deptBase(h)}${card(26, 52, 64, 72)}${bar(38, 66, 30, 6, NAVY)}${bar(38, 80, 38, 5, mixw(h, 0.22))}${bar(38, 92, 30, 5, mixw(h, 0.22))}${bar(38, 104, 34, 5, mixw(h, 0.22))}`
+    + `<path d="M98 28h30M106 28v28L84 100a9 9 0 0 0 8 13h44a9 9 0 0 0 8-13l-22-44V28" fill="#fff" stroke="${h}" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M92 92h52l6 12a6 6 0 0 1-5 9H91a6 6 0 0 1-5-9Z" fill="${mixw(h, 0.4)}"/><circle cx="112" cy="84" r="3.4" fill="${h}"/><circle cx="124" cy="74" r="2.4" fill="${mixw(h, 0.6)}"/><circle cx="118" cy="62" r="2" fill="${mixw(h, 0.5)}"/>`
+    + `<circle cx="168" cy="92" r="19" fill="#fff" fill-opacity=".85" stroke="${h}" stroke-width="5.5"/><path d="m181 106 15 15" stroke="${h}" stroke-width="7" stroke-linecap="round"/>${tick(176, 40, 11, 3)}`,
+  // the scales of justice
+  'dept-ecourts': (h) => `${deptBase(h)}<rect x="106" y="40" width="8" height="70" rx="3" fill="${mixw(h, 0.45)}"/><rect x="82" y="108" width="56" height="11" rx="5" fill="${h}"/><rect x="50" y="38" width="120" height="7" rx="3.5" fill="${h}"/><circle cx="110" cy="34" r="8" fill="${h}"/><circle cx="110" cy="34" r="3" fill="#fff"/>`
+    + `<path d="M60 45 42 80M60 45 78 80M160 45l-18 35M160 45l18 35" stroke="${h}" stroke-width="2.6" stroke-linecap="round"/>`
+    + `<path d="M38 80h44a22 13 0 0 1-44 0Z" fill="${mixw(h, 0.35)}" stroke="${h}" stroke-width="3" stroke-linejoin="round"/><path d="M138 80h44a22 13 0 0 1-44 0Z" fill="${mixw(h, 0.35)}" stroke="${h}" stroke-width="3" stroke-linejoin="round"/>`
+    + `${card(166, 14, 36, 22, 7)}${bar(173, 21, 22, 4, NAVY)}${bar(173, 28, 14, 4, mixw(h, 0.25))}${tick(34, 34, 11, 3)}`,
+  // a prison block with barred windows and a padlock
+  'dept-eprisons': (h) => `${deptBase(h)}<rect x="36" y="30" width="108" height="12" rx="4" fill="${h}"/>${card(42, 42, 96, 76, 8)}`
+    + [54, 90].map((x) => `<rect x="${x}" y="56" width="30" height="36" rx="5" fill="${mixw(h, 0.14)}" stroke="${EDGE}" stroke-width="2"/>${[0, 1, 2, 3].map((i) => `<path d="M${x + 6 + i * 6} 58v32" stroke="${h}" stroke-width="2.4" stroke-linecap="round"/>`).join('')}`).join('')
+    + `<rect x="78" y="98" width="24" height="20" rx="4" fill="${mixw(h, 0.4)}"/>`
+    + `<path d="M158 94v-9a14 14 0 0 1 28 0v9" fill="none" stroke="${h}" stroke-width="5" stroke-linecap="round"/><rect x="150" y="92" width="44" height="32" rx="9" fill="${h}"/><circle cx="172" cy="106" r="4.4" fill="#fff"/><path d="M172 109v8" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>`,
+};
+const DEPT_HUE_ART: Record<string, string> = { 'dept-uidai': '#C2410C', 'dept-cctns': '#1D4ED8', 'dept-eforensics': '#7C3AED', 'dept-ecourts': '#0F766E', 'dept-eprisons': '#475569' };
+
+const svgFor = (kind: ArtKind) => DEPT_ART[kind] ? `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" fill="none">${DEPT_ART[kind](DEPT_HUE_ART[kind])}</svg>` : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" fill="none">${BODY[kind] || ''}</svg>`;
 
 /** For headings that other code renders (Person Lookup): the same art as a CSS background. */
 export const artUri = (kind: ArtKind) => `url("data:image/svg+xml;utf8,${encodeURIComponent(svgFor(kind))}")`;

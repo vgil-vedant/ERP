@@ -17,6 +17,7 @@
     "test:lookup": "node tests/lookup/run-lookup-tests.js",
     "test:departments": "node tests/departments/run-department-tests.js",
     "test:workbench": "node tests/workbench/run-workbench-tests.js",
+    "test:security": "node tests/security/run-security-tests.js",
     "build:web": "npm --prefix frontend/web ci && npm --prefix frontend/web run build",
     "test:web": "npm --prefix frontend/web test"
   }

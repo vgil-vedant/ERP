@@ -189,19 +189,29 @@ function verifyPassword(person, password) {
   return given.length === held.length && crypto.timingSafeEqual(given, held);
 }
 
+// Only a SHA-256 of the session token is stored, so a copy of the database holds no usable session.
+// Sessions made before this change were stored as the plain 48-character token; they still work until they expire.
+const sessionKey = (token) => crypto.createHash('sha256').update(String(token)).digest('hex');
+const isLegacyToken = (token) => /^[0-9a-f]{48}$/.test(String(token));
+
 function createSession(personId, siteCode, hours = 12) {
-  const token = crypto.randomBytes(24).toString('hex');
+  const token = crypto.randomBytes(32).toString('hex');
   const expires = new Date(Date.now() + hours * 3600_000).toISOString().replace('T', ' ').slice(0, 19);
-  q.insertSession.run(token, personId, siteCode, expires);
+  db.prepare("DELETE FROM session WHERE expires_at <= datetime('now')").run();
+  q.insertSession.run(sessionKey(token), personId, siteCode, expires);
   return token;
 }
 
 function personForToken(token) {
-  if (!token) return null;
-  return q.sessionPerson.get(token) || null;
+  if (!token || typeof token !== 'string' || token.length > 128) return null;
+  return q.sessionPerson.get(sessionKey(token)) || (isLegacyToken(token) ? q.sessionPerson.get(token) : null) || null;
 }
 
-function endSession(token) { if (token) q.deleteSession.run(token); }
+function endSession(token) {
+  if (!token || typeof token !== 'string' || token.length > 128) return;
+  q.deleteSession.run(sessionKey(token));
+  if (isLegacyToken(token)) q.deleteSession.run(token);
+}
 
 // --- reference data --------------------------------------------------------
 function referenceList(siteCode, list) {

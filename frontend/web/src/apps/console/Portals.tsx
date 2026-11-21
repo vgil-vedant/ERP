@@ -43,9 +43,7 @@ export function Portals({ ctx, filter, bySystem, recent, systems, FORM_LABEL }) 
 {' '}
 <p className="page-desc">{(activePortal) ? (<>Local demonstration replica —{' '}
 <strong>{activePortal.category}</strong>
-. Records below were received by the ERP through{' '}
-<code style={{"fontFamily":"var(--mono)","fontSize":"12px","background":"var(--surface-3)","padding":"1px 6px","borderRadius":"5px"}}>POST /api/intake</code>
-.</>) : (<>Five local replica portals push records into the ERP through a single write-through API. Each card shows the portal's source-system code, documented form type and live record count.</>)}</p></div>
+. Records below were received by the ERP.</>) : (<>Five local replica portals push records into the ERP through a single write-through API. Each card shows the portal's source-system code, documented form type and live record count.</>)}</p></div>
 {' '}
 <div className="page-actions">{(filter) ? (<><a href="/portals" className="btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="m15 18-6-6 6-6"></path></svg>
 {' '}All portals</a>
@@ -88,9 +86,7 @@ export function Portals({ ctx, filter, bySystem, recent, systems, FORM_LABEL }) 
 <div className="card"><div className="card-head"><div><div className="card-title">Recent records —{' '}
 {activePortal.name}</div>
 {' '}
-<div className="card-sub">Last 25 records received from this portal via{' '}
-<code style={{"fontFamily":"var(--mono)","fontSize":"11px"}}>POST /api/intake</code>
-. Click a row for field details.</div></div>
+<div className="card-sub">Last 25 records received from this portal. Click a row for field details.</div></div>
 {' '}
 <a href={`/intake?system=${activePortal.code}`} className="btn btn-sm">View all →</a></div>
 {(!recent || !recent.length) ? (<><div className="empty-state"><div className="empty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M4 13h4l2 3h4l2-3h4"></path>

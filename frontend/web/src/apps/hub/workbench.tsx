@@ -21,6 +21,7 @@ import { Svg, fmtDateTime, num, rel } from './lib';
 import { PageArt } from './illustrations';
 import type { ArtKind } from './illustrations';
 import { D, DEPT_HUE, PORTAL_ICON, parseUtc, portalOrigin } from './model';
+import { SuggestField, aadhaarFirst, isAutoAadhaar, triggerOf } from './suggest';
 
 /* ================================================================ types */
 type Values = Record<string, unknown>;
@@ -288,10 +289,10 @@ export function fieldSpans(fields: Field[]): Record<string, number> {
   return out;
 }
 
-function Control({ f, value, onChange, error, scope, disabled, span }: { f: Field; value: unknown; onChange: (v: unknown) => void; error?: string; scope: string; disabled?: boolean; span?: number }) {
+function Control({ f, value, onChange, error, scope, disabled, span, aria, after }: { f: Field; value: unknown; onChange: (v: unknown) => void; error?: string; scope: string; disabled?: boolean; span?: number; aria?: Record<string, unknown>; after?: ReactNode }) {
   const id = fieldId(scope, f.name);
   const describedBy = [error ? id + '-e' : '', f.help ? id + '-h' : ''].filter(Boolean).join(' ') || undefined;
-  const common = { id, disabled, 'aria-invalid': error ? true : undefined, 'aria-describedby': describedBy, 'aria-required': f.required && f.type !== 'checkbox' ? true : undefined };
+  const common = { ...aria, id, disabled, 'aria-invalid': error ? true : undefined, 'aria-describedby': describedBy, 'aria-required': f.required && f.type !== 'checkbox' ? true : undefined };
   const str = value == null ? '' : String(value);
   let control: ReactNode;
   switch (f.type) {
@@ -350,6 +351,7 @@ function Control({ f, value, onChange, error, scope, disabled, span }: { f: Fiel
       {control}
       {f.help ? <div className="wb-help" id={id + '-h'}>{f.help}</div> : null}
       {error ? <div className="wb-error" id={id + '-e'} role="alert">{error}</div> : null}
+      {after}
     </div>
   );
 }
@@ -383,11 +385,26 @@ function GroupField({ f, rows, setRows, errors, scope, disabled }: { f: Field; r
   );
 }
 
-export function FormFields({ sections, values, setValues, errors, scope, disabled }: { sections: Section[]; values: Values; setValues: (v: Values) => void; errors: Errors; scope: string; disabled?: boolean }) {
+export function FormFields({ sections, values, setValues, errors, scope, disabled, suggest }: { sections: Section[]; values: Values; setValues: (v: Values) => void; errors: Errors; scope: string; disabled?: boolean; suggest?: boolean }) {
+  // suggestions from the department records (suggest.tsx), on the application form only
+  const dismissed = useRef(new Set<string>());
+  const names = useMemo(() => new Set(sections.flatMap((s) => s.fields.map((x) => x.name))), [sections]);
+  const control = (f: Field, sp: number | undefined) => {
+    const base = { span: sp, f, scope, disabled, value: values[f.name], error: errors[f.name], onChange: (v: unknown) => setValues({ ...values, [f.name]: v }) };
+    const trigger = suggest ? triggerOf(f, names) : null;
+    if (!trigger) return <Control key={f.name} {...base} />;
+    // the Aadhaar number of a person is asked first, and says what typing it does
+    if (isAutoAadhaar(trigger, f)) base.f = { ...f, help: undefined };
+    return (
+      <SuggestField key={f.name} trigger={trigger} field={f} sections={sections} values={values} setValues={setValues} dismissed={dismissed.current} disabled={disabled}
+        render={(aria, after) => <Control {...base} aria={aria} after={after} />} />
+    );
+  };
   return (
     <>
       {sections.filter((s) => applies(s.when, values)).map((s, si) => {
-        const fields = s.fields.filter((f) => applies(f.when, values));
+        const shown = s.fields.filter((f) => applies(f.when, values));
+        const fields = suggest ? aadhaarFirst(shown, names) : shown;
         if (!fields.length) return null;
         const sp = fieldSpans(fields);
         return (
@@ -396,7 +413,7 @@ export function FormFields({ sections, values, setValues, errors, scope, disable
             <div className="wb-fields">
               {fields.map((f) => (f.type === 'group'
                 ? <GroupField key={f.name} f={f} scope={scope} disabled={disabled} errors={errors} rows={Array.isArray(values[f.name]) ? (values[f.name] as Values[]) : []} setRows={(r) => setValues({ ...values, [f.name]: r })} />
-                : <Control key={f.name} span={sp[f.name]} f={f} scope={scope} disabled={disabled} value={values[f.name]} error={errors[f.name]} onChange={(v) => setValues({ ...values, [f.name]: v })} />))}
+                : control(f, sp[f.name])))}
             </div>
           </fieldset>
         );
@@ -441,8 +458,8 @@ function DeptBadge({ code, short, color }: { code: string; short: string; color?
 const Alert = ({ tone = 'danger', children }: { tone?: 'danger' | 'warn' | 'info' | 'ok'; children: ReactNode }) =>
   <div className={`wb-alert wb-alert--${tone}`} role={tone === 'danger' ? 'alert' : 'status'}>{children}</div>;
 
-function PageHead({ title, desc, actions, art }: { title: string; desc: ReactNode; actions?: ReactNode; art?: ArtKind }) {
-  return <div className={`page-head${art ? ' has-art' : ''}`}><div><h1 className="page-title">{title}</h1><p className="page-desc">{desc}</p></div>{actions ? <div className="page-actions">{actions}</div> : null}{art ? <PageArt kind={art} /> : null}</div>;
+export function PageHead({ title, desc, actions, art, actionsLeft }: { title: string; desc: ReactNode; actions?: ReactNode; art?: ArtKind; actionsLeft?: boolean }) {
+  return <div className={`page-head${art ? ' has-art' : ''}${actionsLeft ? ' page-head--left' : ''}`}><div><h1 className="page-title">{title}</h1><p className="page-desc">{desc}</p></div>{actions ? <div className="page-actions">{actions}</div> : null}{art ? <PageArt kind={art} /> : null}</div>;
 }
 
 function Loading({ text = 'Loading…' }: { text?: string }) { return <div className="wb-loading" role="status"><span className="wb-spinner" aria-hidden="true" />{text}</div>; }
@@ -633,9 +650,9 @@ function ApplyView({ view, goto, toast, onChanged }: WbProps) {
   if (!formKey) {
     return (
       <>
-        <PageHead title={`New application · ${dept.short}`} desc={dept.title} actions={<a className="btn btn-sm" href={officeLink(dept.port)} target="_blank" rel="noopener noreferrer"><Svg name="external" /> Department office</a>} />
+        <PageHead title={`New application · ${dept.short}`} desc={dept.title} />
         <div className="card wb-table-card">
-          <div className="card-head tight"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="file" /></span>Forms</div><div className="card-sub">{`Choose the form for ${dept.title}.`}</div></div></div>
+          <div className="card-head tight"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="file" /></span>Forms</div><div className="card-sub">{`Choose the form for ${dept.title}.`}</div></div><a className="btn btn-sm" href={officeLink(dept.port)} target="_blank" rel="noopener noreferrer"><Svg name="external" /> Department office</a></div>
           <div className="tbl-wrap"><table className="tbl wb-table wb-pick">
             <tbody>
               {dept.forms.map((f) => {
@@ -781,7 +798,7 @@ function ApplyForm({ dept, formKey, goto, toast, onChanged }: { dept: WbDept; fo
       <PageHead title={form.title} desc={<>{form.description} <span className="wb-muted">· {dept.title}</span></>} />
       <form className="card wb-form" ref={host} onSubmit={submit} noValidate>
         {message ? <Alert>{message}</Alert> : null}
-        <FormFields sections={form.sections} values={values} setValues={(v) => { setValues(v); setDirty(true); }} errors={errors} scope={`apply-${dept.code}-${form.key}`} disabled={busy} />
+        <FormFields sections={form.sections} values={values} setValues={(v) => { setValues(v); setDirty(true); }} errors={errors} scope={`apply-${dept.code}-${form.key}`} disabled={busy} suggest />
         <div className="wb-form-foot">
           <span className="wb-muted">Fields marked * are required. The department checks everything again when it receives the application.</span>
           <button className="btn" type="button" disabled={busy} onClick={() => { if (!dirty || window.confirm('Discard what you have typed?')) goto(`apply:${dept.code}`); }}>Cancel</button>
@@ -901,8 +918,8 @@ function RecordsView({ view, goto }: WbProps) {
 
   return (
     <>
-      <PageHead art="records" title="All records" desc="Every record of a department, newest change first, read live from its own database. Open one to decide on it or correct its details."
-        actions={<><button className="btn btn-sm" type="button" onClick={() => goto(`apply:${dept.code}`)}>+ New {dept.short} application</button><a className="btn btn-sm" href={officeLink(dept.port)} target="_blank" rel="noopener noreferrer"><Svg name="external" /> {dept.short} office</a></>} />
+      <PageHead art="records" actionsLeft title="All records" desc="Every record of a department, newest change first, read live from its own database. Open one to decide on it or correct its details."
+        actions={<><button className="btn btn-sm" type="button" onClick={() => goto(`apply:${dept.code}`)}><Svg name="plus" /> New {dept.short} application</button><a className="btn btn-sm" href={officeLink(dept.port)} target="_blank" rel="noopener noreferrer"><Svg name="external" /> {dept.short} office</a></>} />
       <div className="wb-toolbar">
         <div className="seg" role="tablist" aria-label="Department">
           {ov.departments.map((d) => <button key={d.code} type="button" role="tab" aria-selected={d.code === dept.code} className={d.code === dept.code ? 'is-active' : ''} onClick={() => goto(`work:${d.code}`)}>{d.short}</button>)}
@@ -1091,7 +1108,7 @@ function RecordPage({ view, goto, toast, onChanged }: WbProps) {
           ) : <p className="wb-muted">No person is linked.</p>}
         </section>
         <section className="card">
-          <div className="card-head"><div><div className="card-title">Activity</div><div className="card-sub">Officers in the department and the ERP Hub, newest first.</div></div></div>
+          <div className="card-head"><div><div className="card-title">Activity</div><div className="card-sub">Officers in the department and EkSetu, newest first.</div></div></div>
           {rec.activity.length ? (
             <>
             <p className="wb-muted wb-one">One record · {rec.activity.length} {rec.activity.length === 1 ? 'change' : 'changes'} by officers; the latest is first.</p>
@@ -1099,7 +1116,7 @@ function RecordPage({ view, goto, toast, onChanged }: WbProps) {
               {(allActivity ? rec.activity : rec.activity.slice(0, 3)).map((a, i) => (
                 <li key={i} className={a.officer.startsWith('erp-hub:') ? 'is-hub' : ''}>
                   <time>{short(a.at)}</time>
-                  <span><b>{human(a.action.toLowerCase())}</b> by {a.officer.startsWith('erp-hub:') ? 'the ERP Hub' : a.officer}{a.details ? `: ${a.details.replace(/ \(via ERP Hub\)$/, '')}` : ''}</span>
+                  <span><b>{human(a.action.toLowerCase())}</b> by {a.officer.startsWith('erp-hub:') ? 'EkSetu' : a.officer}{a.details ? `: ${a.details.replace(/ \(via ERP Hub\)$/, '')}` : ''}</span>
                 </li>
               ))}
             </ol>

@@ -1,14 +1,62 @@
 // The seven table definitions of the hub (ported from defineTables in erp-hub.js).
+import { useMemo } from 'react';
 import type { CSSProperties } from 'react';
 import { Svg, fmtDate, fmtDateTime, fmtTime, num, rel } from './lib';
 import type { Column, TableCfg } from './DataTable';
 import { D, distinctForms, distinctOptions, inScope, sysName, sysOptions } from './model';
 import type { Audit, Citizen, Days, Intake, Submission, Sync } from './model';
+import { ActionBadge } from './timeline';
+import { GroupTable } from './grouptable';
+import type { GFilter, GRow } from './grouptable';
 
 const mono: CSSProperties = {};
 export function SysChip({ code }: { code: string }) {
   const s = D.SYS_MAP[code];
   return <span className="sys-cell"><span className="sys-dot" style={{ background: D.SYS_COLOR[code] || '#87968F' }} />{s ? s.short : code}</span>;
+}
+const ENTITY_HUE: Record<string, string> = { ingest: '#0F766E', lookup: '#7C3AED', citizen: '#2563EB', intake: '#0284C7', submission: '#0891B2', officer: '#4F46E5' };
+const ENTITY_ICON: Record<string, string> = { ingest: 'sync', lookup: 'search', citizen: 'users', intake: 'inbox', submission: 'inbox', officer: 'user' };
+/** What an audit event is about, as a coloured label with an icon (the same look as a department badge). */
+export function EntityBadge({ entity }: { entity: string }) {
+  return <span className="wb-dept au-ent" style={{ ['--sys' as string]: ENTITY_HUE[entity] || '#475569' }}><Svg name={ENTITY_ICON[entity] || 'shield'} /><span>{entity}</span></span>;
+}
+/** A person in a log: their name (or reference) in a violet label with an ID-card icon. */
+export function PersonBadge({ name, refText }: { name?: string | null; refText?: string | null }) {
+  return (
+    <><span className="wb-dept au-ent" style={{ ['--sys' as string]: '#7C3AED' }}><Svg name="idcard" /><span>{name || refText}</span></span>{name && refText ? <div className="t-sub">{refText}</div> : null}</>
+  );
+}
+/** Audit events as one expandable row per person, record or entity. */
+export function AuditGroupTable({ rows, onOpen, onCount }: { rows: Audit[]; onOpen: (a: Audit) => void; onCount?: (n: number) => void }) {
+  const names = useMemo(() => {
+    const m = new Map<string, string>();
+    rows.forEach((a) => { const x = /(PSN-\d+) \(([^)]+)\)/.exec(a.details || ''); if (x) m.set(x[1], x[2]); });
+    return m;
+  }, [rows]);
+  const feed: GRow[] = useMemo(() => rows.map((a) => {
+    const psn = a.entity === 'lookup' ? (/PSN-\d+/.exec(a.details || '') || [])[0] : undefined;
+    const search = a.entity === 'lookup' && !psn;
+    return {
+      id: 'a' + a.id, seq: a.id, at: a.at,
+      group: psn ? 'person:' + psn : search ? 'lookup:search' : a.entityId ? a.entity + ':' + a.entityId : '#' + a.id,
+      subject: psn ? <PersonBadge name={names.get(psn)} refText={psn} />
+        : search ? <span className="wb-dept au-ent" style={{ ['--sys' as string]: '#64748B' }}><Svg name="search" /><span>searches</span></span>
+        : <><EntityBadge entity={a.entity} />{a.entityId ? <div className="t-sub">{a.entityId}</div> : null}</>,
+      subjectText: psn ? (names.get(psn) || psn) : search ? 'searches' : a.entity + ' ' + a.entityId,
+      action: a.action, detail: a.details, who: a.maker, extra: a.approver ? 'approved by ' + a.approver : undefined,
+      meta: { entity: a.entity, action: a.action, maker: a.maker },
+      search: [String(a.id), a.entity, a.entityId, a.action, a.maker, a.approver, a.details, a.ref, psn ? names.get(psn) : ''].join(' '), open: () => onOpen(a),
+    };
+  }), [rows, names, onOpen]);
+  const asRec = rows as unknown as Record<string, unknown>[];
+  const filters: GFilter[] = [
+    { label: 'Any time', options: [{ value: 'today', label: 'Today' }, { value: '7', label: 'Last 7 days' }, { value: '30', label: 'Last 30 days' }],
+      match: (r, v) => (v === 'today' ? r.at.toDateString() === new Date().toDateString() : Date.now() - r.at.getTime() <= Number(v) * 86400000) },
+    { label: 'All entities', options: distinctOptions(asRec, 'entity'), match: (r, v) => r.meta?.entity === v },
+    { label: 'All actions', options: distinctOptions(asRec, 'action'), match: (r, v) => r.meta?.action === v },
+    { label: 'All makers', options: distinctOptions(asRec, 'maker'), match: (r, v) => r.meta?.maker === v },
+  ];
+  return <GroupTable rows={feed} filters={filters} subjectLabel="Person / entity" noun="event" searchPlaceholder="Search event #, entity, person, action, maker, details or reference…" onCount={onCount} emptyText="No audit event matches these filters." />;
 }
 export function ResultPill({ r }: { r: string }) {
   if (r === 'pending') return <span className="pill pill-neutral"><Svg name="refresh" />pending</span>;
@@ -87,14 +135,18 @@ export function defineTables(h: Handlers, counts: Record<string, (n: number) => 
     },
     audit: {
       columns: [
-        { key: 'id', label: 'Event #', sortable: true, nowrap: true, render: (r) => <span className="mono" style={{ color: 'var(--text-2)' }}>#{r.id}</span>, sortValue: (r) => r.id, csv: (r) => r.id },
-        { ...(atCol('Occurred at', timeSub) as Column<Audit>) },
-        { key: 'entity', label: 'Entity', sortable: true, render: (r) => <><div className="t-main mono" style={{ color: 'var(--ink)' }}>{r.entity}</div><div className="t-sub mono">{r.entityId}</div></>, sortValue: (r) => r.entity, csv: (r) => r.entity + ' ' + r.entityId },
-        { key: 'action', label: 'Action', sortable: true, render: (r) => <span className="pill pill-mint">{r.action}</span>, sortValue: (r) => r.action, csv: (r) => r.action },
-        { key: 'maker', label: 'Maker', sortable: true, render: (r) => <span className="maker">{r.maker}</span>, sortValue: (r) => r.maker, csv: (r) => r.maker },
-        { key: 'approver', label: 'Approver', sortable: true, render: (r) => (r.approver ? <span className="maker">{r.approver}</span> : dash('—')), sortValue: (r) => r.approver || '', csv: (r) => r.approver || '' },
-        { key: 'details', label: 'Details', render: (r) => (r.details ? <span title={r.details} style={{ display: 'inline-block', maxWidth: 280, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', verticalAlign: 'bottom' }}>{r.details}</span> : dash('—')), csv: (r) => r.details },
-        { key: 'ref', label: 'Reference', render: (r) => <span className="mono">{r.ref}</span>, csv: (r) => r.ref },
+        { key: 'id', label: 'Event', sortable: true, nowrap: true, render: (r) => <span className="au-no">#{r.id}</span>, sortValue: (r) => r.id, csv: (r) => r.id },
+        { ...(atCol('Date', timeSub) as Column<Audit>) },
+        { key: 'entity', label: 'Entity', sortable: true, render: (r) => <EntityBadge entity={r.entity} />, sortValue: (r) => r.entity, csv: (r) => r.entity + (r.entityId ? ' / ' + r.entityId : '') },
+        { key: 'action', label: 'Action', sortable: true, render: (r) => <ActionBadge action={r.action} />, sortValue: (r) => r.action, csv: (r) => r.action },
+        { key: 'details', label: 'Description', wrap: true, render: (r) => (
+          <><div className="t-main au-detail">{r.details || 'No details were recorded for this event.'}</div>
+            <div className="t-sub">{[r.entityId, r.ref && r.ref !== r.entityId ? r.ref : ''].filter(Boolean).join(' · ') || ' '}</div></>
+        ), csv: (r) => r.details },
+        { key: 'maker', label: 'Who', sortable: true, render: (r) => (
+          <><span className="au-who">{r.maker}</span>{r.approver ? <div className="t-sub">approved by {r.approver}</div> : null}</>
+        ), sortValue: (r) => r.maker, csv: (r) => r.maker + (r.approver ? ' / ' + r.approver : '') },
+        { key: 'open', label: '', align: 'right', render: () => <button className="btn btn-xs btn-ghost" type="button">Open<Svg name="arrowRight" /></button>, csv: () => '' },
       ],
       rows: () => D.AUDIT, searchPlaceholder: 'Search event #, entity, action, maker, approver, details or reference…',
       searchKeys: (r) => [String(r.id), r.entity, r.entityId, r.action, r.maker, r.approver, r.details, r.ref],
@@ -105,7 +157,7 @@ export function defineTables(h: Handlers, counts: Record<string, (n: number) => 
         { key: 'action', label: 'All actions', options: () => distinctOptions(D.AUDIT as unknown as Record<string, unknown>[], 'action'), match: (r, v) => r.action === v },
         { key: 'maker', label: 'All makers', options: () => distinctOptions(D.AUDIT as unknown as Record<string, unknown>[], 'maker'), match: (r, v) => r.maker === v },
       ],
-      pageSize: 15, defaultSort: 'at', defaultDir: 'desc', onRow: h.openAudit, exportName: 'erp-audit-trail', group: { key: (r) => (r.entityId ? r.entity + ':' + r.entityId : '#' + r.id), noun: 'event' }, onCount: (n) => counts.audit(n),
+      pageSize: 15, defaultSort: 'at', defaultDir: 'desc', onRow: h.openAudit, exportName: 'erp-audit-trail', onCount: (n) => counts.audit(n),
     },
     sync: {
       columns: syncColumns, rows: () => D.SYNC, searchPlaceholder: 'Search submission ref, intake ref or system…',
@@ -118,7 +170,7 @@ export function defineTables(h: Handlers, counts: Record<string, (n: number) => 
     },
     syncMini: {
       columns: [
-        { key: 'at', label: 'When', sortable: true, nowrap: true, render: (r) => <><div className="t-main" style={{ fontWeight: 600 }}>{rel(r.at)}</div><div className="t-sub">{fmtTime(r.at)}</div></>, sortValue: (r) => r.at.getTime(), csv: (r) => fmtDateTime(r.at) },
+        { key: 'at', label: 'Date', sortable: true, nowrap: true, render: (r) => <><div className="t-main" style={{ fontWeight: 600 }}>{rel(r.at)}</div><div className="t-sub">{fmtTime(r.at)}</div></>, sortValue: (r) => r.at.getTime(), csv: (r) => fmtDateTime(r.at) },
         { key: 'system', label: 'Source', render: (r) => <SysChip code={r.system} />, csv: (r) => sysName(r.system) },
         { key: 'sub', label: 'Submission', render: (r) => <span className="mono">{r.submission}</span>, csv: (r) => r.submission },
         { key: 'erp', label: 'ERP intake', render: (r) => (r.erpRef ? <span className="mono">{r.erpRef}</span> : dash('—')), csv: (r) => r.erpRef || '' },

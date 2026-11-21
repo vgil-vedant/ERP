@@ -55,7 +55,7 @@ export function Donut({ items, centerLabel, hover, setHover, unit = 'records', o
   let offset = 0;
   return (
     <svg viewBox={`0 0 ${size} ${size}`} role="img" aria-label="Distribution of received records by source system" onMouseLeave={hideTip}>
-      <circle cx={cx} cy={cy} r={R} fill="none" stroke="#F1F7F3" strokeWidth={SW} />
+      <circle cx={cx} cy={cy} r={R} fill="none" stroke="var(--surface-3)" strokeWidth={SW} />
       {items.map((it, i) => {
         const len = (it.value / total) * C;
         const gap = items.length > 1 ? 2.5 : 0;
@@ -134,17 +134,17 @@ export function AreaChart({ buckets, labels = ['Received', 'Refused'], minMax = 
       <defs><linearGradient id="gradOk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#0E9F6B" stopOpacity=".22" /><stop offset="100%" stopColor="#0E9F6B" stopOpacity="0" /></linearGradient></defs>
       {gridVals.map((v) => (
         <g key={v}>
-          <line x1={L} y1={yOf(v)} x2={W - R} y2={yOf(v)} stroke="#EDF4F0" strokeWidth="1" />
-          <text x={L - 9} y={yOf(v) + 3.5} textAnchor="end" fontSize="10" fill="#66766F" fontWeight="600">{num(Math.round(v))}</text>
+          <line x1={L} y1={yOf(v)} x2={W - R} y2={yOf(v)} stroke="var(--border)" strokeWidth="1" />
+          <text x={L - 9} y={yOf(v) + 3.5} textAnchor="end" fontSize="10" fill="var(--text-3)" fontWeight="600">{num(Math.round(v))}</text>
         </g>
       ))}
-      {ticks.map((t) => <text key={t.i + t.lbl} x={xOf(t.i)} y={H - 10} textAnchor="middle" fontSize="10" fill="#66766F" fontWeight="600">{t.lbl}</text>)}
+      {ticks.map((t) => <text key={t.i + t.lbl} x={xOf(t.i)} y={H - 10} textAnchor="middle" fontSize="10" fill="var(--text-3)" fontWeight="600">{t.lbl}</text>)}
       <path d={okArea} fill="url(#gradOk)" />
       <path d={okLine} fill="none" stroke="#0E9F6B" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
       <path d={badLine} fill="none" stroke="#D8A64E" strokeWidth="1.7" strokeDasharray="4 4" strokeLinecap="round" />
       <line id="focusLine" x1={at === null ? 0 : xOf(at)} y1={T} x2={at === null ? 0 : xOf(at)} y2={T + innerH} stroke="#9FD8BC" strokeWidth="1" strokeDasharray="3 3" opacity={at === null ? 0 : 1} />
-      <circle id="focusOk" r="4.5" fill="#fff" stroke="#0E9F6B" strokeWidth="2.4" cx={at === null ? undefined : xOf(at)} cy={b ? yOf(b.received) : undefined} opacity={at === null ? 0 : 1} />
-      <circle id="focusBad" r="3.5" fill="#fff" stroke="#D8A64E" strokeWidth="2" cx={at === null ? undefined : xOf(at)} cy={b ? yOf(b.refused) : undefined} opacity={b && b.refused ? 1 : 0} />
+      <circle id="focusOk" r="4.5" fill="var(--surface)" stroke="#0E9F6B" strokeWidth="2.4" cx={at === null ? undefined : xOf(at)} cy={b ? yOf(b.received) : undefined} opacity={at === null ? 0 : 1} />
+      <circle id="focusBad" r="3.5" fill="var(--surface)" stroke="#D8A64E" strokeWidth="2" cx={at === null ? undefined : xOf(at)} cy={b ? yOf(b.refused) : undefined} opacity={b && b.refused ? 1 : 0} />
       <rect id="hit" x={L} y={T} width={innerW} height={innerH} fill="transparent" style={{ cursor: 'crosshair' }} onMouseMove={move} onMouseLeave={() => { setAt(null); hideTip(); }} />
     </svg>
   );
@@ -159,12 +159,12 @@ export function Bars({ rows, labels = ['Kept', 'Rolled back', 'back', 'all kept'
         return (
         <div className="bar-row" key={r.code}>
           <div className="bar-name"><span className="bar-ic sys-tint" style={{ ['--sys' as string]: hue || D.SYS_COLOR[r.code] }} aria-hidden="true"><Svg name={PORTAL_ICON[r.code] || 'grid'} /></span><span>{r.name}</span></div>
-          <div className="bar-track" style={hue ? { background: `color-mix(in srgb, ${hue} 10%, #fff)` } : undefined}
+          <div className="bar-track" style={hue ? { background: `color-mix(in srgb, ${hue} 10%, var(--surface))` } : undefined}
             onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)}</div>
         <div class="ct-row"><span class="ct-dot" style="background:${hue || '#3FC594'}"></span>${labels[0]}<b>${num(r.kept)}</b></div>
         <div class="ct-row"><span class="ct-dot" style="background:#D8A64E"></span>${labels[1]}<b>${num(r.rolled)}</b></div>`, e.clientX, e.clientY)}
             onMouseLeave={hideTip}>
-            <div className="bar-fill" style={{ width: `${(r.kept / max) * 100}%`, ...(hue ? { background: `linear-gradient(90deg, ${hue}, color-mix(in srgb, ${hue} 72%, #fff))` } : {}) }} />
+            <div className="bar-fill" style={{ width: `${(r.kept / max) * 100}%`, ...(hue ? { background: `linear-gradient(90deg, ${hue}, color-mix(in srgb, ${hue} 72%, var(--surface)))` } : {}) }} />
             <div className="bar-fill alt" style={{ width: `${(r.rolled / max) * 100}%` }} />
           </div>
           <div className="bar-val">{num(r.kept + r.rolled)}<small style={hue && !r.rolled ? { color: hue } : undefined}>{r.rolled ? r.rolled + ' ' + labels[2] : labels[3]}</small></div>
@@ -221,12 +221,12 @@ export function StatusBars({ rows }: { rows: StatusRow[] }) {
         return (
           <div className="bar-row bar-row--status" key={r.code}>
             <div className="bar-name"><span className="bar-ic sys-tint" style={{ ['--sys' as string]: hue }} aria-hidden="true"><Svg name={PORTAL_ICON[r.code] || 'grid'} /></span><span>{r.name}</span></div>
-            <div className="bar-track" style={{ background: `color-mix(in srgb, ${hue} 10%, #fff)` }} onMouseLeave={hideTip}
+            <div className="bar-track" style={{ background: `color-mix(in srgb, ${hue} 10%, var(--surface))` }} onMouseLeave={hideTip}
               onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)}</div>
         <div class="ct-row"><span class="ct-dot" style="background:${hue}"></span>Delivered<b>${num(r.delivered)}</b></div>
         <div class="ct-row"><span class="ct-dot" style="background:#D8A64E"></span>Waiting<b>${num(r.pending)}</b></div>
         <div class="ct-row"><span class="ct-dot" style="background:#D6584F"></span>Rejected<b>${num(r.rejected)}</b></div>`, e.clientX, e.clientY)}>
-              <div className="bar-fill" style={{ width: w(r.delivered), background: `linear-gradient(90deg, ${hue}, color-mix(in srgb, ${hue} 72%, #fff))` }} />
+              <div className="bar-fill" style={{ width: w(r.delivered), background: `linear-gradient(90deg, ${hue}, color-mix(in srgb, ${hue} 72%, var(--surface)))` }} />
               <div className="bar-fill alt" style={{ width: w(r.pending) }} />
               <div className="bar-fill bad" style={{ width: w(r.rejected) }} />
             </div>
@@ -266,11 +266,11 @@ export function OpenBars({ rows }: { rows: OpenRow[] }) {
             return (
               <div className="vbar-area" key={r.code}>
                 <div className="vbar-inner">
-                  <div className="vbar-col" style={{ height: pctOf(r.records), minHeight: 6, background: `color-mix(in srgb, ${hue} 14%, #fff)` }} onMouseLeave={hideTip}
+                  <div className="vbar-col" style={{ height: pctOf(r.records), minHeight: 6, background: `color-mix(in srgb, ${hue} 14%, var(--surface))` }} onMouseLeave={hideTip}
                     onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)}</div>
         <div class="ct-row"><span class="ct-dot" style="background:${hue}"></span>Open<b>${num(r.open)}</b></div>
         <div class="ct-row"><span class="ct-dot" style="background:#CFE0D8"></span>All records<b>${num(r.records)}</b></div>`, e.clientX, e.clientY)}>
-                    <div className="vbar-fill" style={{ height: `${r.records ? (r.open / r.records) * 100 : 0}%`, background: `linear-gradient(0deg, ${hue}, color-mix(in srgb, ${hue} 72%, #fff))` }} />
+                    <div className="vbar-fill" style={{ height: `${r.records ? (r.open / r.records) * 100 : 0}%`, background: `linear-gradient(0deg, ${hue}, color-mix(in srgb, ${hue} 72%, var(--surface)))` }} />
                   </div>
                   <div className="vbar-val" style={{ bottom: `calc(${pctOf(r.records)} + 6px)` }}>{num(r.open)}</div>
                 </div>
@@ -288,7 +288,7 @@ export function OpenBars({ rows }: { rows: OpenRow[] }) {
       </div>
       <div className="vchart-legend">
         <span><i className="lg-dot" style={{ background: 'var(--emerald)' }} />Open (filled part)</span>
-        <span><i className="lg-dot" style={{ background: '#CFE0D8' }} />All records the office holds (full column)</span>
+        <span><i className="lg-dot" style={{ background: 'var(--border-strong)' }} />All records the office holds (full column)</span>
       </div>
     </div>
   );
@@ -296,17 +296,18 @@ export function OpenBars({ rows }: { rows: OpenRow[] }) {
 
 export interface PeopleHeatRow { code: string; name: string; total: number; series: number[] }
 /** People on file by department: a heat map of how many people each office added on each of the last days. */
-export function PeopleHeat({ rows, dates }: { rows: PeopleHeatRow[]; dates: Date[] }) {
+export function PeopleHeat({ rows, dates, weekly, totalNote }: { rows: PeopleHeatRow[]; dates: Date[]; weekly?: boolean; totalNote?: string }) {
   const grand = rows.reduce((t, r) => t + r.total, 0);
   const max = Math.max(1, ...rows.flatMap((r) => r.series));
-  const tint = (hue: string, n: number) => (n ? `color-mix(in srgb, ${hue} ${Math.round(18 + 82 * Math.sqrt(n / max))}%, #fff)` : '#F1F6F3');
+  const tint = (hue: string, n: number) => (n ? `color-mix(in srgb, ${hue} ${Math.round(18 + 82 * Math.sqrt(n / max))}%, var(--surface))` : 'var(--surface-3)');
   const n = dates.length;
-  const marks = [0, 7, 14, 21].filter((i) => i < n);
+  const gap = Math.max(1, Math.ceil(n / 4));
+  const marks = [0, 1, 2, 3].map((k) => k * gap).filter((i) => i < n);
   return (
     <div className="pheat" role="img" aria-label="People added per day in each department over the last days">
       <div className="pheat-row pheat-axis" aria-hidden="true">
         <span />
-        <div className="pheat-cells">{marks.map((i) => <em key={i} style={{ gridColumn: `${i + 1} / span 7` }}>{fmtDate(dates[i]).replace(/ \d{4}$/, '')}</em>)}</div>
+        <div className="pheat-cells" style={{ gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))` }}>{marks.map((i) => <em key={i} style={{ gridColumn: `${i + 1} / span ${Math.min(gap, n - i)}` }}>{fmtDate(dates[i]).replace(/ \d{4}$/, '')}</em>)}</div>
         <span />
       </div>
       {rows.map((r) => {
@@ -317,21 +318,22 @@ export function PeopleHeat({ rows, dates }: { rows: PeopleHeatRow[]; dates: Date
             <div className="pheat-cells" style={{ gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))` }}>
               {r.series.map((v, i) => (
                 <i key={i} className="pheat-cell" style={{ background: tint(hue, v) }} onMouseLeave={hideTip}
-                  onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)} · ${fmtDate(dates[i])}</div><div class="ct-row"><span class="ct-dot" style="background:${hue}"></span>People added<b>${num(v)}</b></div>`, e.clientX, e.clientY)} />
+                  onMouseMove={(e) => showTip(`<div class="ct-title">${esc(r.name)} · ${weekly ? 'week of ' : ''}${fmtDate(dates[i])}</div><div class="ct-row"><span class="ct-dot" style="background:${hue}"></span>People added<b>${num(v)}</b></div>`, e.clientX, e.clientY)} />
               ))}
             </div>
             <div className="bar-val">{num(r.total)}<small>{pctS(r.total, grand)}</small></div>
           </div>
         );
       })}
-      <div className="pheat-legend"><span>Fewer added</span><i style={{ background: '#F1F6F3' }} /><i style={{ background: 'color-mix(in srgb, var(--emerald) 30%, #fff)' }} /><i style={{ background: 'color-mix(in srgb, var(--emerald) 60%, #fff)' }} /><i style={{ background: 'var(--emerald)' }} /><span>More added</span></div>
+      <div className="pheat-legend"><span>Fewer added</span><i style={{ background: 'var(--surface-3)' }} /><i style={{ background: 'color-mix(in srgb, var(--emerald) 30%, var(--surface))' }} /><i style={{ background: 'color-mix(in srgb, var(--emerald) 60%, var(--surface))' }} /><i style={{ background: 'var(--emerald)' }} /><span>More added</span><span className="pheat-total" title="People on file"><Svg name="users" /><b>{num(grand)}</b>{totalNote || 'on file'}</span></div>
     </div>
   );
 }
 
 export interface RadarAxis { key: string; label: string; created: number; refused: number }
 /** Office activity as a radar chart: one axis per department, one translucent polygon per metric. */
-export function RadarChart({ axes, labels, days }: { axes: RadarAxis[]; labels: [string, string]; days: number }) {
+export function RadarChart({ axes, labels, days, periodText }: { axes: RadarAxis[]; labels: [string, string]; days: number; periodText?: string }) {
+  const when = periodText || `last ${days} days`;
   const W = 560, H = 440, cx = W / 2, cy = H / 2 + 4, R = 165;
   const n = axes.length;
   const sc = axisScale(Math.max(1, ...axes.flatMap((a) => [a.created, a.refused])));
@@ -344,14 +346,14 @@ export function RadarChart({ axes, labels, days }: { axes: RadarAxis[]; labels: 
     { name: labels[1], color: '#D8A64E', vals: axes.map((a) => a.refused) },
   ];
   const tip = (e: React.MouseEvent, a: RadarAxis, s: { name: string; color: string }, v: number) =>
-    showTip(`<div class="ct-title">${esc(a.label)}</div><div class="ct-row"><span class="ct-dot" style="background:${s.color}"></span>${esc(s.name)}<b>${num(v)}</b></div><div class="ct-row" style="color:#A9C3B8;font-size:10.5px">last ${days} days</div>`, e.clientX, e.clientY);
+    showTip(`<div class="ct-title">${esc(a.label)}</div><div class="ct-row"><span class="ct-dot" style="background:${s.color}"></span>${esc(s.name)}<b>${num(v)}</b></div><div class="ct-row" style="color:#A9C3B8;font-size:10.5px">${esc(when)}</div>`, e.clientX, e.clientY);
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${labels[0]} and ${labels[1]} for each department over the last ${days} days`} onMouseLeave={hideTip}>
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${labels[0]} and ${labels[1]} for each department, ${when}`} onMouseLeave={hideTip}>
       {rings.map((v) => (
-        <polygon key={v} points={axes.map((_, i) => pt(i, v).join(',')).join(' ')} fill={v === sc.top ? '#FBFDFC' : 'none'} stroke="#DDE7E2" strokeWidth="1" />
+        <polygon key={v} points={axes.map((_, i) => pt(i, v).join(',')).join(' ')} fill={v === sc.top ? 'var(--surface-2)' : 'none'} stroke="var(--border-strong)" strokeWidth="1" />
       ))}
-      {axes.map((a, i) => <line key={a.key} x1={cx} y1={cy} x2={pt(i, sc.top)[0]} y2={pt(i, sc.top)[1]} stroke="#E6EEEA" strokeWidth="1" />)}
-      {rings.map((v) => <text key={'t' + v} x={cx + 5} y={R2(cy - R * (v / sc.top)) - 3} fontSize="9.5" fontWeight="600" fill="#8A9B93">{num(v)}</text>)}
+      {axes.map((a, i) => <line key={a.key} x1={cx} y1={cy} x2={pt(i, sc.top)[0]} y2={pt(i, sc.top)[1]} stroke="var(--border)" strokeWidth="1" />)}
+      {rings.map((v) => <text key={'t' + v} x={cx + 5} y={R2(cy - R * (v / sc.top)) - 3} fontSize="9.5" fontWeight="600" fill="var(--text-3)">{num(v)}</text>)}
       {series.map((s) => (
         <g key={s.name}>
           <path d={poly(s.vals)} fill={s.color} fillOpacity=".2" stroke={s.color} strokeWidth="2" strokeLinejoin="round" />
@@ -360,7 +362,7 @@ export function RadarChart({ axes, labels, days }: { axes: RadarAxis[]; labels: 
       ))}
       {axes.map((a, i) => {
         const x = cx + Math.cos(ang(i)) * (R + 18), y = cy + Math.sin(ang(i)) * (R + 18), c = Math.cos(ang(i)), sn = Math.sin(ang(i));
-        return <text key={'l' + a.key} x={R2(x)} y={R2(y + (sn < -0.9 ? -4 : sn > 0.5 ? 12 : 4))} textAnchor={c > 0.25 ? 'start' : c < -0.25 ? 'end' : 'middle'} fontSize="12" fontWeight="700" fill="#33423B">{a.label}</text>;
+        return <text key={'l' + a.key} x={R2(x)} y={R2(y + (sn < -0.9 ? -4 : sn > 0.5 ? 12 : 4))} textAnchor={c > 0.25 ? 'start' : c < -0.25 ? 'end' : 'middle'} fontSize="12" fontWeight="700" fill="var(--chart-label)">{a.label}</text>;
       })}
       {series.map((s) => axes.map((a, i) => { const [x, y] = pt(i, s.vals[i]); return <circle key={s.name + a.key} cx={x} cy={y} r="13" fill="transparent" style={{ cursor: 'crosshair' }} onMouseMove={(e) => tip(e, a, s, s.vals[i])} />; }))}
     </svg>
@@ -406,7 +408,7 @@ export function DonutPro({ items, centerLabel, hover, setHover, unit = 'records'
           <g key={it.name} style={{ opacity: hover === null || on ? 1 : 0.55, transition: 'opacity .16s ease' }}>
             <path d={d} fill={it.color} fillRule="evenodd" style={{ cursor: 'default' }}
               onMouseMove={(e) => { setHover(i); showTip(`<div class="ct-title">${esc(it.name)}</div><div class="ct-row"><span class="ct-dot" style="background:${it.color}"></span>${unit}<b>${num(it.value)}</b></div><div class="ct-row" style="color:#A9C3B8;font-size:10.5px">${pctS(it.value, total)} of ${num(total)}</div>`, e.clientX, e.clientY); }} />
-            {frac >= 0.05 && <text x={tx} y={ty + 4} textAnchor="middle" fontSize="12" fontWeight="800" fill="#fff" style={{ pointerEvents: 'none' }}>{Math.round(frac * 100)}%</text>}
+            {frac >= 0.05 && <text x={tx} y={ty + 4} textAnchor="middle" fontSize="12" fontWeight="800" fill="var(--surface)" style={{ pointerEvents: 'none' }}>{Math.round(frac * 100)}%</text>}
           </g>
         );
       })}
@@ -423,8 +425,8 @@ export function DonutPro({ items, centerLabel, hover, setHover, unit = 'records'
             onMouseMove={(e) => { setHover(s.i); showTip(`<div class="ct-title">${esc(s.it.name)}</div><div class="ct-row"><span class="ct-dot" style="background:${s.it.color}"></span>${unit}<b>${num(s.it.value)}</b></div><div class="ct-row" style="color:#A9C3B8;font-size:10.5px">${pctS(s.it.value, total)} of ${num(total)}</div>`, e.clientX, e.clientY); }}>
             <polyline points={`${x0},${y0} ${x1},${y1} ${edge},${R2(y)}`} fill="none" stroke={s.it.color} strokeWidth="1.1" />
             <circle cx={x0} cy={y0} r="2" fill={s.it.color} />
-            <rect x={R2(bx)} y={R2(y - BOXH / 2)} width={R2(bw)} height={BOXH} rx="6" fill="#fff" stroke={s.it.color} strokeWidth="1.2" />
-            <text x={R2(bx + bw / 2)} y={R2(y + 4)} textAnchor="middle" fontSize="11.5" fontWeight="700" fill="#33423B">{label}<tspan fontWeight="800" fill={s.it.color}>{count}</tspan></text>
+            <rect x={R2(bx)} y={R2(y - BOXH / 2)} width={R2(bw)} height={BOXH} rx="6" fill="var(--surface)" stroke={s.it.color} strokeWidth="1.2" />
+            <text x={R2(bx + bw / 2)} y={R2(y + 4)} textAnchor="middle" fontSize="11.5" fontWeight="700" fill="var(--chart-label)">{label}<tspan fontWeight="800" fill={s.it.color}>{count}</tspan></text>
           </g>
         );
       })}

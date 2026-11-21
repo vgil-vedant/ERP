@@ -306,4 +306,7 @@ function aadhaarReveal(ref, actor) {
 /** The people held in the ERP, a page at a time; `total` is the true count. */
 function people(opts) { return store.people(opts); }
 
-module.exports = { search, profile, samples, people, sources, aadhaarReveal };
+/** All the changes sent about one person's records (not a lookup, so not audited). */
+function changes(ref) { return { changes: store.changesOf(ref) }; }
+
+module.exports = { search, profile, samples, people, changes, sources, aadhaarReveal };

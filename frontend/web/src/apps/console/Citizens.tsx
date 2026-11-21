@@ -31,7 +31,7 @@ export function Citizens({ ctx, rows }) {
 {rows.length === 1 ? '' : 's'}
 {' '}in erp.sqlite</div></div>
 {' '}
-<span className="pill pill-mint">GET /api/citizens</span></div>
+</div>
 <div className="tbl-toolbar"><div className="tbl-search-wrap" style={{"maxWidth":"300px","width":"100%"}}><div className="tbl-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7"></circle>
 <path d="m20 20-3.2-3.2"></path></svg>
 {' '}

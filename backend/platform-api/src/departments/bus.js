@@ -27,7 +27,9 @@ const http = require('http');
 const crypto = require('crypto');
 const erp = require('../services/erp-client');
 
-const SECRET = process.env.INTEGRATION_SECRET || 'erp-integration-demo-secret-v1';
+const sec = require('../../../shared/security');
+// the key the deliveries are signed with; never a built-in value (shared/security.js)
+const SECRET = sec.requireOrExit(() => sec.secret('INTEGRATION_SECRET'));
 const BATCH = 50;
 const TIMEOUT_MS = Number(process.env.INTEGRATION_TIMEOUT_MS) || 8000;
 const SWEEP_MS = 2000;

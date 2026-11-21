@@ -18,8 +18,10 @@
 
 const crypto = require('crypto');
 
-// The key for the identifier hashes. Replace it in any shared deployment.
-const PEPPER = process.env.LOOKUP_PEPPER || 'erp-lookup-demo-pepper-v1';
+// The key for the identifier hashes: set LOOKUP_PEPPER (or LOOKUP_PEPPER_FILE). There is no built-in value.
+// Changing it later makes every stored hash unmatchable, so keep it with the database it belongs to.
+const sec = require('../../../shared/security');
+const PEPPER = sec.requireOrExit(() => sec.secret('LOOKUP_PEPPER'));
 
 // --- Verhoeff, the check-digit scheme of the Aadhaar number ----------------
 const { verhoeffValid, verhoeffDigit } = require('../../../shared/records/verhoeff');

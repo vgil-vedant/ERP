@@ -22,6 +22,11 @@ const { SITES } = require('./config/sites');
 const { identityRouter, sessionMiddleware } = require('./services/identity');
 const { genericRouter } = require('./drivers/generic');
 const { eprisonsRouter } = require('./drivers/eprisons');
+const sec = require('../../shared/security');
+
+// Public form posts per address: generous for a person, a wall for a script filling both databases.
+const postBudget = sec.limiter({ max: 120, windowMs: 10 * 60 * 1000 });
+const isLoopback = (req) => ['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(req.socket.remoteAddress);
 
 const { PLATFORM_VIEWS } = require('./config/paths');
 const dashboard = require('./services/hub-dashboard');
@@ -51,6 +56,16 @@ function buildPortal(site) {
   // React draws the portals' converted views (server-side) unless UI_ENGINE=ejs; the shared identity views are handled by ui-engine.
   require('../../shared/portal-ui').install(app, require('ejs'), express);
 
+  app.disable('x-powered-by');
+  app.use(sec.headers());
+  // a form on another site cannot post here (Origin / Sec-Fetch-Site), and one address cannot flood the portal
+  app.use(sec.sameOriginOnly);
+  app.use((req, res, next) => {
+    if (req.method !== 'POST' || req.path.startsWith('/office/')) return next();
+    if (postBudget.hit(req.ip)) return next();
+    res.set('Retry-After', '600');
+    return res.status(429).type('text/plain').send('Too many requests from this address. Please wait a few minutes and try again.');
+  });
   app.use(express.urlencoded({ extended: false, limit: '256kb' }));
   app.use(express.json({ limit: '256kb' }));
 
@@ -60,7 +75,6 @@ function buildPortal(site) {
     res.locals.linkHost = req.hostname;
     // ...and the port the visitor can reach (the public one when they came through the edge).
     res.locals.portalOrigin = edge.originFor(req);
-    res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Replica-Notice',
       'Unofficial local demonstration - not an official government service');
     res.setHeader('X-Replica-Backend', 'shared');
@@ -90,6 +104,8 @@ function buildPortal(site) {
   // Where this portal's data went, for anyone who wants to check rather than
   // take it on trust.
   app.get('/__platform', (req, res) => {
+    // process id and database path: for the machine's own operator only (the edge hides it as well)
+    if (!isLoopback(req)) return res.status(404).type('text/plain').send('Not found');
     const s = store.summary();
     res.json({
       portal: site.code,
@@ -113,8 +129,10 @@ function buildPortal(site) {
 
   app.use((err, req, res, next) => {
     process.stderr.write(`[${site.code}] ${err.stack || err}\n`);
-    res.status(500).render('pages/error',
-      { title: 'Something went wrong', pageTitle: null, message: err.message });
+    if (res.headersSent) return next(err);
+    // a bad request (malformed or oversized body) says so; anything else is logged and answered plainly
+    res.status(sec.statusOf(err)).render('pages/error',
+      { title: 'Something went wrong', pageTitle: null, message: sec.publicMessage(err) });
   });
 
   return app;
@@ -138,7 +156,13 @@ function buildHub() {
   app.set('trust proxy', edge.trustProxy);
   app.set('view engine', 'ejs');
   app.set('views', PLATFORM_VIEWS);
-  app.use(express.urlencoded({ extended: false }));
+  app.disable('x-powered-by');
+  // The hub loads only its own scripts, styles, fonts and images, and talks only to itself (nothing is fetched from a CDN).
+  app.use(sec.headers({ frame: 'SAMEORIGIN', csp:
+    "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; " +
+    "font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'" }));
+  app.use(sec.sameOriginOnly);
+  app.use(express.urlencoded({ extended: false, limit: '64kb' }));
   // Same reason as in buildPortal: link back to the address (and port) the visitor used.
   app.use((req, res, next) => {
     res.locals.linkHost = req.hostname;
@@ -206,7 +230,7 @@ function buildHub() {
   // Who is signed in, for the profile card of the sidebar. The hub has one administrator account.
   app.get('/api/me', (req, res) => {
     res.set('Cache-Control', 'no-store');
-    res.json({ name: require('./services/hub-auth').USER, role: 'Hub administrator' });
+    res.json({ name: require('./services/hub-auth').USER, role: 'Administrator' });
   });
   app.get('/api/dashboard', async (req, res, next) => {
     try {
@@ -241,7 +265,8 @@ function buildHub() {
   app.use((req, res) => res.status(404).json({ error: 'not found' }));
   app.use((err, req, res, next) => {
     process.stderr.write(`[hub] ${err.stack || err}\n`);
-    res.status(500).json({ error: err.message });
+    if (res.headersSent) return next(err);
+    res.status(sec.statusOf(err)).json({ error: sec.publicMessage(err) });
   });
   return app;
 }

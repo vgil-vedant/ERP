@@ -1,0 +1,90 @@
+/* The account menu in the header (accountmenu.tsx). Colours come from the hub's own tokens, so it follows the theme. */
+:root{--chart-label:#33423B;}
+.acm{position:relative;}
+.acm-trigger{display:flex;align-items:center;gap:9px;height:46px;padding:0 12px 0 6px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--text-2);cursor:pointer;font:inherit;transition:background .16s,border-color .16s,color .16s;}
+.acm-trigger:hover,.acm-trigger.is-open{background:var(--mint-50);border-color:var(--mint-300);color:var(--emerald);}
+.acm-trigger:focus-visible,.acm-item:focus-visible{outline:3px solid var(--mint-300);outline-offset:2px;}
+.acm-id{display:flex;flex-direction:column;align-items:flex-start;min-width:0;max-width:170px;text-align:left;line-height:1.2;}
+.acm-id b{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;}
+.acm-id span{font-size:11px;font-weight:500;color:var(--text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;margin-top:1px;}
+.acm-trigger:hover .acm-id b,.acm-trigger.is-open .acm-id b{color:var(--emerald-ink);}
+.acm-chev{display:grid;place-items:center;transition:transform .18s ease;}
+.acm-chev svg{width:15px;height:15px;}
+.acm-trigger.is-open .acm-chev{transform:rotate(180deg);}
+.acm-av{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:var(--emerald);color:#fff;font-size:12px;font-weight:700;letter-spacing:.02em;}
+.acm-av--lg{flex-basis:38px;width:38px;height:38px;font-size:13px;}
+.acm-pop{position:absolute;right:0;top:calc(100% + 8px);z-index:80;width:250px;max-width:calc(100vw - 24px);padding:6px;border:1px solid var(--border);border-radius:14px;background:var(--surface);box-shadow:0 18px 40px -18px rgba(11,35,26,.45),0 2px 6px rgba(11,35,26,.08);
+  opacity:0;visibility:hidden;transform:translateY(-6px) scale(.98);transform-origin:top right;transition:opacity .14s ease,transform .14s ease,visibility 0s linear .14s;}
+.acm-pop.is-open{opacity:1;visibility:visible;transform:none;transition-delay:0s;}
+.acm-head{display:flex;align-items:center;gap:12px;padding:8px 8px 10px;}
+.acm-who{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:2px;}
+.acm-who b{font-size:14px;font-weight:600;line-height:1.25;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.acm-who span{font-size:11.5px;font-weight:500;line-height:1.25;color:var(--text-3);}
+.acm-sep{height:1px;margin:4px 2px;background:var(--border);}
+.acm-item{display:flex;align-items:center;gap:11px;width:100%;height:38px;padding:0 10px;border:0;border-radius:9px;background:transparent;color:var(--text);font:inherit;font-size:13px;font-weight:600;text-align:left;cursor:pointer;transition:background .14s,color .14s;}
+.acm-item svg{width:17px;height:17px;flex:0 0 17px;color:var(--text-3);}
+.acm-item:hover,.acm-item:focus-visible{background:var(--mint-50);color:var(--emerald-ink);}
+.acm-item:hover svg,.acm-item:focus-visible svg{color:var(--emerald);}
+.acm-item span:not(.acm-switch){flex:1;}
+.acm-switch{flex:0 0 32px;width:32px;height:18px;border-radius:999px;background:var(--border-strong);position:relative;transition:background .16s;}
+.acm-switch i{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--surface);box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .16s;}
+.acm-item[aria-checked="true"] .acm-switch{background:var(--emerald);}
+.acm-item[aria-checked="true"] .acm-switch i{transform:translateX(14px);background:#fff;}
+.acm-out{color:var(--text-2);}
+.acm-out,.acm-out svg{transition:background .18s ease,color .18s ease;}
+.acm-out:hover,.acm-out:focus-visible{background:#FEF2F2;color:#DC2626;}
+.acm-out:hover svg,.acm-out:focus-visible svg{color:#DC2626;}
+.acm-out:focus-visible{outline-color:#FCA5A5;}
+html[data-theme="dark"] .acm-out:hover,html[data-theme="dark"] .acm-out:focus-visible{background:rgba(248,113,113,.14);color:#FCA5A5;}
+html[data-theme="dark"] .acm-out:hover svg,html[data-theme="dark"] .acm-out:focus-visible svg{color:#FCA5A5;}
+html[data-theme="dark"] .acm-out:focus-visible{outline-color:rgba(248,113,113,.5);}
+@media (max-width:640px){.acm-id{display:none;}.acm-trigger{height:42px;gap:7px;padding:0 9px 0 5px;}}
+@media (max-width:520px){.acm-pop{position:fixed;right:12px;top:calc(var(--topbar-h) - 6px);}}
+@media (prefers-reduced-motion:reduce){.acm-pop,.acm-chev{transition:none;}}
+
+/* ---------------------------------------------------------------- dark theme for the hub
+   One place for the dark palette: the tokens below are redefined on <html data-theme="dark">, and dark.css maps the few
+   colours the stylesheets fix in light values and styles the shared components. Layers, darkest to lightest:
+   page #0D1513, sidebar / topbar #111C19, card #182521, elevated #202F29, hover #24372F. */
+html[data-theme="dark"]{color-scheme:dark;}
+html[data-theme="dark"] body,html[data-theme="dark"]{background:#0D1513;color:#F1F5F2;}
+html[data-theme="dark"]{
+  --ink:#F5F7F5;--ink-hover:#DCE5DF;--ink-soft:#202F29;
+  --mint-50:#24372F;--mint-100:#1D4032;--mint-200:#2B4A3D;--mint-300:#3C6A55;--mint-400:#55D6A0;
+  --emerald:#39B982;--emerald-ink:#7BE0B6;--emerald-deep:#4BCB94;--brand:#39B982;--brand-soft:#55D6A0;
+  --action:#39B982;--action-hover:#4BCB94;--action-active:#2DA875;--action-ink:#55D6A0;--action-soft:#1B382D;
+  --success:#39B982;--success-bg:#16362A;--warning:#E3B259;--warning-bg:#382E14;--danger:#E58A83;--danger-bg:#3F2422;--info:#7CC0D4;--info-bg:#18343F;
+  --canvas:#0D1513;--surface:#182521;--surface-2:#202F29;--surface-3:#24372F;
+  --border:#30423A;--border-strong:#40554A;--divider:#263831;
+  --text:#F1F5F2;--text-2:#B0BEB6;--text-3:#84958C;--text-4:#65756D;--chart-label:#DCE7E1;
+  --sh-xs:0 1px 2px rgba(0,0,0,.3);--sh-sm:0 1px 2px rgba(0,0,0,.3),0 8px 20px -16px rgba(0,0,0,.6);--sh-md:0 1px 2px rgba(0,0,0,.28),0 16px 34px -24px rgba(0,0,0,.7);
+}
+html[data-theme="dark"] .sidebar{background:#111C19;}
+html[data-theme="dark"] .sidebar::after{background:radial-gradient(180px 140px at 12% 0%,rgba(57,185,130,.10),rgba(57,185,130,0) 72%);}
+html[data-theme="dark"] .topbar{background:rgba(17,28,25,.92);}
+html[data-theme="dark"] *::-webkit-scrollbar-thumb{background:#40554A;background-clip:content-box;}
+html[data-theme="dark"] *::-webkit-scrollbar-thumb:hover{background:#566E60;background-clip:content-box;}
+html[data-theme="dark"] .acm-pop{background:#202F29;border-color:#40554A;box-shadow:0 18px 40px -16px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.02);}
+html[data-theme="dark"] .acm-item:not(.acm-out):hover,html[data-theme="dark"] .acm-item:not(.acm-out):focus-visible{background:#24372F;color:#F1F5F2;}
+html[data-theme="dark"] .acm-switch{background:#40554A;}
+html[data-theme="dark"] .acm-item[aria-checked="true"] .acm-switch{background:#39B982;}
+html[data-theme="dark"] .acm-av{color:#0D1513;}
+html[data-theme="dark"] .acm-trigger:focus-visible,html[data-theme="dark"] .acm-item:focus-visible{outline-color:#55D6A0;}
+
+/* Phones and tablets: the profile sits in the navigation panel where Settings was; Settings moves into its menu,
+   and the menu button goes to the right end of the top bar. Wider screens keep the profile in the top bar. */
+.sf-profile{display:none;}
+.acm-only-small{display:none;}
+@media (max-width:900px){
+  .sf-row{display:none;}
+  .sf-profile{display:block;}
+  .acm-only-small{display:flex;}
+  .acm-sep.acm-only-small{display:block;}
+  .topbar-right{display:none;}
+  .topbar > .menu-btn{order:9;margin-left:auto;}
+  .acm--side{width:100%;}
+  .acm--side .acm-trigger{width:100%;justify-content:flex-start;height:auto;min-height:48px;padding:7px 10px;gap:10px;}
+  .acm--side .acm-id{display:flex;max-width:none;flex:1;min-width:0;}
+  .acm--side .acm-chev{margin-left:auto;transform:rotate(180deg);}
+  .acm--side .acm-pop{position:absolute;left:0;right:0;top:auto;bottom:calc(100% + 8px);width:auto;max-width:none;transform-origin:bottom center;}
+}

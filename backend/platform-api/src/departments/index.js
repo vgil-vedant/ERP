@@ -19,7 +19,8 @@ const express = require('express');
 const { open } = require('./store');
 const bus = require('./bus');
 const service = require('./service');
-const { seedOfficer, seedRecords, passwordFor, DEFAULT_PASSWORD } = require('./seed');
+const { seedOfficer, seedRecords, retireDemoPasswords } = require('./seed');
+const sec = require('../../../shared/security');
 const { publicForm } = require('./forms/common');
 const { THEMES, cssVars } = require('./themes');
 const skins = require('./skins');
@@ -39,13 +40,9 @@ const SESSION_HOURS = 10;
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 // --- sign-in -------------------------------------------------------------------
-function verifyPassword(stored, password) {
-  const [scheme, saltHex, hashHex] = String(stored).split('$');
-  if (scheme !== 'scrypt' || !saltHex || !hashHex) return false;
-  const want = Buffer.from(hashHex, 'hex');
-  const got = crypto.scryptSync(String(password || ''), Buffer.from(saltHex, 'hex'), want.length);
-  return crypto.timingSafeEqual(got, want);
-}
+const verifyPassword = sec.verifyPassword;
+// a real hash to compare against when the user name is unknown, so the time taken does not reveal which names exist
+const DUMMY_HASH = sec.hashPassword(crypto.randomBytes(12).toString('hex'));
 const tokenHash = (t) => crypto.createHash('sha256').update(String(t)).digest('hex');
 const failures = new Map();
 function tooMany(key) {
@@ -63,7 +60,11 @@ function cookies(req) {
   const out = {};
   for (const part of String(req.headers.cookie || '').split(';')) {
     const i = part.indexOf('=');
-    if (i > 0) out[part.slice(0, i).trim()] = decodeURIComponent(part.slice(i + 1).trim());
+    if (i > 0) {
+      let v = part.slice(i + 1).trim();
+      try { v = decodeURIComponent(v); } catch { /* malformed escape: keep as sent, it will not match a session */ }
+      out[part.slice(0, i).trim()] = v;
+    }
   }
   return out;
 }
@@ -145,15 +146,15 @@ function install(app, site) {
   if (!dept) return;
   installed.push({ site, dept });
   const store = open(site.code);
-  seedOfficer(store, dept);
+  sec.requireOrExit(() => {
+    seedOfficer(store, dept);
+    const n = retireDemoPasswords(store, dept);
+    if (n) process.stdout.write(`  ${site.code.padEnd(11)} department office: ${n} account(s) moved off the published demonstration password\n`);
+  });
   const seeded = seedRecords(store, dept);
   bus.register(store);
   bus.schedule(site.code);
   if (seeded) process.stdout.write(`  ${site.code.padEnd(11)} department office: ${seeded} records seeded, queued for the ERP\n`);
-  if (process.env.NODE_ENV === 'production' && passwordFor(site.code) === DEFAULT_PASSWORD) {
-    process.stderr.write(`[office:${site.code}] WARNING: the demonstration password is in use; set OFFICE_PASSWORD.\n`);
-  }
-
   const COOKIE = `office_${site.code}`;
   const router = express.Router();
   router.use('/assets/stepper', express.static(STEPPER_UI, { maxAge: '5m', index: false }));
@@ -176,7 +177,9 @@ function install(app, site) {
   });
   router.post('/login', express.urlencoded({ extended: false, limit: '8kb' }), (req, res) => {
     const origin = req.get('origin');
-    if (origin && new URL(origin).host !== req.get('host')) return res.status(403).type('html').send(loginPage(dept, site, { error: 'This sign-in did not come from this page. Reload and try again.' }));
+    let originHost = null;
+    try { originHost = origin ? new URL(origin).host : null; } catch { originHost = 'invalid'; }
+    if (origin && originHost !== req.get('host')) return res.status(403).type('html').send(loginPage(dept, site, { error: 'This sign-in did not come from this page. Reload and try again.' }));
     const username = String((req.body || {}).username || '').trim().slice(0, 80);
     const password = String((req.body || {}).password || '');
     const key = `${req.ip}|${site.code}`;
@@ -184,7 +187,7 @@ function install(app, site) {
     if (!username || !password) return res.status(400).type('html').send(loginPage(dept, site, { username, error: 'Enter your user name and password.' }));
     const o = store.db.prepare('SELECT * FROM officer WHERE username = ?').get(username);
     // compare a hash even for an unknown user, so timing does not reveal which user names exist
-    const ok = verifyPassword(o ? o.password_hash : 'scrypt$00$00', password) && !!o;
+    const ok = verifyPassword(o ? o.password_hash : DUMMY_HASH, password.slice(0, 200)) && !!o;
     if (!ok) {
       noteFailure(key);
       return res.status(401).type('html').send(loginPage(dept, site, { username, error: 'The user name or password is not correct.' }));
@@ -277,9 +280,6 @@ function install(app, site) {
 /** Start delivering every department's outbox; call once the portals are installed. */
 function start() {
   bus.start();
-  if (process.env.NODE_ENV === 'production' && !process.env.INTEGRATION_SECRET) {
-    process.stderr.write('[bus] WARNING: INTEGRATION_SECRET is not set; deliveries are signed with the public demonstration key.\n');
-  }
   if (!installed.length) return;
   process.stdout.write('  department offices (each with its own sign-in and database)\n'
     + installed.map(({ site, dept }) => `    ${dept.title.padEnd(36)} http://127.0.0.1:${site.port}/office   user ${dept.officer.username}`).join('\n')

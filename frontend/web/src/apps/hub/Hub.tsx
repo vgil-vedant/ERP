@@ -1,8 +1,14 @@
 // The ERP Hub dashboard (ported from erp-hub.js + the shell of erp-hub.html). All data comes from GET /api/dashboard.
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { AuditGroupTable } from './tables';
+import vgLogo from '../../assets/icon/virtual-galaxy-logo.png';
+import erpLogo from '../../assets/icon/erp-logo.png';
+import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
+import { AccountMenu } from './accountmenu';
+import { SettingsView, readNavPref } from './settings';
+import { RangeToggle, daysIn, rangeText, startOfDay } from './rangepicker';
+import type { DateRange } from './rangepicker';
 import { Svg, clock, fmtDate, fmtDateTime, fmtTime, hideTip, num, rel } from './lib';
-import { Select } from './controls';
 import { D, DEPT_HUE, PORTAL_ICON, applyData, buildNav, dailySeries, officeRecords, hostPort, metrics, portalOrigin, sysName, sysPort } from './model';
 import type { Audit, Citizen, Days, Intake, Sync } from './model';
 import { AreaChart, Bars, DonutPro, RadarChart, HealthRows, Meter, OpenBars, PeopleHeat, Sparkline, StatusBars } from './charts';
@@ -10,13 +16,13 @@ import { DataTable } from './DataTable';
 import { HttpPill, ResultPill, defineTables } from './tables';
 import { Views } from './views.generated';
 import { LookupView, syncLookup } from './LookupView';
-import { OverviewBody, DeptKpis, DepartmentDatabases, FlowDiagram, OfficeFeed, OfficeViews, isOfficeView, officeDaily, officeMetrics, recentEventsCfg, recentRecordsCfg } from './offices';
+import { OverviewBody, DeptKpis, DepartmentDatabases, FlowDiagram, OfficeFeed, OfficeViews, isOfficeView, officeDailyBetween, officeFirstDay, officeMetrics, recentEventsCfg, recentRecordsCfg } from './offices';
 import type { OfficeCtx } from './offices';
 import type { Crumb } from './workbench';
 import { WorkbenchViews, isWorkbenchView, loadWorkbench, workbenchMeta, workbenchTrail } from './workbench';
 
 // Views in the navigation, plus three older pages kept reachable by link ('portals', 'integration', 'submissions').
-const VALID = ['dashboard', 'intake', 'lookup', 'citizens', 'audit', 'portals', 'sync', 'integration', 'submissions', 'database', 'health', 'docs'];
+const VALID = ['dashboard', 'intake', 'lookup', 'citizens', 'audit', 'portals', 'sync', 'integration', 'submissions', 'database', 'health', 'docs', 'settings'];
 const isValid = (v: string) => VALID.includes(v) || isOfficeView(v) || isWorkbenchView(v);
 // The view is part of the address (#citizens, #dept:cctns ...), so a page of the
 // hub can be linked to, reloaded, and reached again with the Back button.
@@ -47,7 +53,7 @@ const VIEW_HUE: Record<string, string> = {
   officers: '#6366F1', lookupaudit: '#9333EA', activity: '#EA580C',
   health: '#DB2777', database: '#92400E', docs: '#475569',
 };
-const SECTION_HOME: Record<string, string> = { Workbench: 'approvals', 'Overview': 'dashboard', ERP: 'lookup', Departments: 'dept:eprisons', 'Integration bus': 'queue', 'Access & audit': 'officers', System: 'health' };
+const SECTION_HOME: Record<string, string> = { Workbench: 'approvals', 'Overview': 'dashboard', ERP: 'lookup', Departments: 'dept:eprisons', 'Integration bus': 'queue', Account: 'settings', 'Access & audit': 'officers', System: 'health' };
 const DOCS = [
   { name: 'Project README', path: 'README.md', note: 'Architecture, API, schema, ports, testing' },
   { name: 'Architecture notes', path: 'info/docs/architecture/ARCHITECTURE.md', note: 'Runtime topology and write-through in text' },
@@ -59,32 +65,11 @@ const DOCS = [
   { name: 'End-to-end tests', path: 'tests/e2e/run-e2e-tests.js', note: '77 checks across both databases' },
   { name: 'Replica notes', path: 'backend/gov_replica/README.md', note: 'Field-level fidelity, replica notice' },
 ];
-const API_ROWS = [
-  { m: 'GET', p: '/api/workbench', n: 'Hub workbench. The five departments, their application forms and record types, and how many records wait for a decision.' },
-  { m: 'GET', p: '/api/workbench/inbox', n: 'Hub workbench. Every record waiting for a decision in the five departments, oldest first.' },
-  { m: 'POST', p: '/api/workbench/:code/records', n: 'Hub workbench. Apply to a department: saved in its own database, seen in its office, sent to the ERP. 201, or 422 field by field.' },
-  { m: 'POST', p: '/api/workbench/:code/records/:id/actions/:key', n: 'Hub workbench. Approve, reject, move on or edit a record, with its version: 409 if it changed since it was opened.' },
-  { m: 'GET', p: '/api/offices', n: 'Hub. The five department offices: figures, records, integration-bus events, officers and activity, plus what the ERP says it received.' },
-  { m: 'POST', p: '/api/offices/:code/retry', n: 'Hub. Asks one department\'s bus to send its waiting and rejected events to the ERP again.' },
-  { m: 'GET', p: '/api/dashboard', n: 'Hub. One document with everything this dashboard shows: ERP records over HTTP, the platform ledger, health.' },
-  { m: 'POST', p: 'ERP /api/intake', n: 'The platform hands over one record. 201 created, 200 duplicate, 400/500 roll the portal back.' },
-  { m: 'GET', p: 'ERP /api/intake?limit=5000&system=uidai', n: 'Received records with their field values.' },
-  { m: 'GET', p: 'ERP /api/citizens?limit=5000', n: 'Citizens with their record counts.' },
-  { m: 'GET', p: 'ERP /api/audit?limit=5000', n: 'The append-only audit log, read only.' },
-  { m: 'GET', p: 'ERP /api/summary', n: 'Counts for the console.' },
-  { m: 'GET', p: 'ERP /api/database', n: 'Tables and row counts of erp.sqlite.' },
-  { m: 'GET', p: 'ERP /api/health', n: 'ERP database and PostgreSQL reachability.' },
-  { m: 'GET', p: '/api/sync', n: 'The erp_sync write-through ledger.' },
-  { m: 'GET', p: '/api/submissions', n: 'Platform submissions.' },
-  { m: 'GET', p: '/api/audit', n: 'Platform-side audit events.' },
-  { m: 'GET', p: '/api/health', n: 'Platform database, ERP and portal listener checks.' },
-];
 const mono11: React.CSSProperties = { fontFamily: 'var(--mono)', fontSize: 11 };
 const codeMono: React.CSSProperties = { fontFamily: 'var(--mono)' };
 
 interface Toast { id: number; title: string; body?: ReactNode; icon: string; out?: boolean }
 interface Drawer { kicker: string; title: string; body: ReactNode; foot: ReactNode }
-interface SearchHit { type: 'record' | 'citizen'; row: Intake | Citizen; title: string; sub: string }
 
 /** The department offices (GET /api/offices). A failure keeps the last good data; the views say so when there is none. */
 async function fetchOffices() {
@@ -105,12 +90,14 @@ export function Hub() {
   const [ready, setReady] = useState(false);
   const [, setRev] = useState(0);                       // bumped when data or a size changes, to redraw
   const [days, setDays] = useState<Days>(30);
-  const [activityDays, setActivityDays] = useState(30);
+  // the period of three dashboard graphs: null is overall, otherwise the days picked in the calendar
+  const [actRange, setActRange] = useState<DateRange | null>(null);
+  const [recRange, setRecRange] = useState<DateRange | null>(null);
+  const [peopleRange, setPeopleRange] = useState<DateRange | null>(null);
   const [view, setView] = useState('dashboard');
   const [collapsed, setCollapsed] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   const [scrimShown, setScrimShown] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [closedGroups, setClosedGroups] = useState<Record<string, boolean>>({});
   const [noticeOff, setNoticeOff] = useState(false);
   const [drawer, setDrawer] = useState<Drawer | null>(null);
@@ -119,14 +106,11 @@ export function Hub() {
   const [donutHover, setDonutHover] = useState<number | null>(null);
   const [counts, setCounts] = useState<Record<string, number | null>>({ intake: null, citizens: null, audit: null, sync: null, submissions: null });
   const [retrying, setRetrying] = useState<string | null>(null);
-  const [q, setQ] = useState('');
-  const [popOpen, setPopOpen] = useState(false);
-  const [cursor, setCursor] = useState(-1);
-  const searchRef = useRef<HTMLInputElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
   const refreshing = useRef(false);
   const toastId = useRef(0);
   const redraw = useCallback(() => setRev((n) => n + 1), []);
+  useEffect(() => { const on = () => setRev((n) => n + 1); window.addEventListener('erp-theme', on); return () => window.removeEventListener('erp-theme', on); }, []);
 
   /* ------------------------------ toasts ------------------------------ */
   const toast = useCallback((title: string, body?: ReactNode, icon?: string) => {
@@ -157,7 +141,8 @@ export function Hub() {
   useEffect(() => {
     (async () => {
       try { const [dash] = await Promise.all([fetchDashboard(), fetchOffices(), loadWorkbench()]); applyData(dash); } catch (err) { D.LOAD_ERROR = (err as Error).message || String(err); }
-      setCollapsed(window.innerWidth < 1180 && window.innerWidth > 900);
+      const pref = readNavPref();   // the choice made in Settings, if any
+      setCollapsed(pref === 'collapsed' ? true : pref === 'expanded' ? false : window.innerWidth < 1180 && window.innerWidth > 900);
       const first = viewFromUrl();
       setView(first);
       try { history.replaceState({ view: first }, '', '#' + first); } catch { /* ignore */ }   // the old page wrote the view into the URL at load too
@@ -182,7 +167,7 @@ export function Hub() {
   useEffect(() => {
     const onPop = () => {
       setView(viewFromUrl());
-      setTip(null); setSearchOpen(false); setPopOpen(false); setDrawer(null);
+      setTip(null); setDrawer(null);
       setNavOpen(false); setScrimShown(false);
       window.scrollTo({ top: 0, behavior: 'auto' });
     };
@@ -196,7 +181,7 @@ export function Hub() {
     setView(v);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setTip(null);
-    setSearchOpen(false); setPopOpen(false);
+   
     // One history entry per move, so Back returns to the previous view of the
     // hub. Arriving on the view already shown only rewrites the address.
     try {
@@ -230,7 +215,6 @@ export function Hub() {
   const kv = (k: ReactNode, v: ReactNode, kCls = '', vCls = '') => <div className="kv-row"><span className={`kv-k ${kCls}`.trim()}>{k}</span><span className={`kv-v ${vCls}`.trim()}>{v}</span></div>;
   const closeBtn = <button className="btn btn-sm btn-primary" type="button" onClick={closeDrawer}>Close</button>;
   const copyBtn = (t: string) => <button className="btn btn-sm" type="button" onClick={() => copyText(t)}><Svg name="copy" /> Copy ref</button>;
-  const src = (t: string) => <span className="micro" style={{ flex: 1 }}>Source: <code style={codeMono}>{t}</code></span>;
 
   const openRecord = useCallback((r: Intake) => {
     const attempts = D.SYNC.filter((s) => s.submission === r.sourceReference);
@@ -261,7 +245,7 @@ export function Hub() {
         {records.slice(0, 8).map((r) => kv(r.intakeRef, <>{sysName(r.system)}<span style={{ color: 'var(--text-3)', fontWeight: 500 }}> · {fmtDate(r.receivedAt)}</span></>, 'mono'))}
         {!records.length && kv('—', 'No records')}
       </div></div></>),
-    foot: <>{src('GET /api/citizens')}{copyBtn(c.ref)}{closeBtn}</> });
+    foot: <><span style={{ flex: 1 }} />{copyBtn(c.ref)}{closeBtn}</> });
   }, [closeDrawer, copyText]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const openSync = useCallback((s: Sync) => {
@@ -279,7 +263,7 @@ export function Hub() {
               ? <>The same <code style={codeMono}>sourceSystem + sourceReference</code> arrived twice. The ERP answered 200 with <code style={codeMono}>duplicate: true</code>, so no second intake row was created.</>
               : 'The ERP wrote the intake row and answered 201. The platform then committed its own row — both databases or neither.'}
         </div></div></>),
-    foot: <>{src('GET :4100/api/sync')}{closeBtn}</> });
+    foot: <><span style={{ flex: 1 }} />{closeBtn}</> });
   }, [closeDrawer]);
 
   const openAudit = useCallback((a: Audit) => {
@@ -324,7 +308,7 @@ export function Hub() {
   const exportSummary = () => {
     const o = officeMetrics();
     const lines: (string | number)[][] = [
-      ['ERP Hub — summary'], ['Generated', fmtDateTime(clock.now)], [],
+      ['EkSetu — summary'], ['Generated', fmtDateTime(clock.now)], [],
       ['Metric', 'Value'], ['Department records', o.records], ['Events delivered to the ERP', o.delivered], ['Events waiting', o.pending], ['Events rejected', o.rejected], [],
       ['Department', 'Records', 'Open', 'People', 'Delivered', 'Waiting', 'Rejected'],
       ...o.per.map((x) => [x.d.title, x.records, x.open, x.people, x.delivered, x.pending, x.rejected]),
@@ -340,44 +324,20 @@ export function Hub() {
     toast('Date range applied', 'Showing ' + (next === 'all' ? 'all recorded activity' : 'the last ' + next + ' days') + ' of recorded activity.', 'filter');
   };
 
-  /* ------------------------------- search ----------------------------- */
-  const hits: SearchHit[] = useMemo(() => {
-    const query = q.trim().toLowerCase();
-    if (!query) return [];
-    const recs = D.INTAKES.filter((r) => r.intakeRef.toLowerCase().includes(query) || r.sourceReference.toLowerCase().includes(query) || r.citizen.fullName.toLowerCase().includes(query) || r.citizen.ref.toLowerCase().includes(query))
-      .slice(0, 5).map((r): SearchHit => ({ type: 'record', row: r, title: r.intakeRef, sub: sysName(r.system) + ' · ' + r.citizen.fullName + ' · ' + rel(r.receivedAt) }));
-    const ppl = D.CITIZENS.filter((c) => c.fullName.toLowerCase().includes(query) || c.ref.toLowerCase().includes(query) || c.email.toLowerCase().includes(query))
-      .slice(0, 3).map((c): SearchHit => ({ type: 'citizen', row: c, title: c.fullName, sub: c.ref + ' · first seen in ' + sysName(c.firstSeenIn) }));
-    return recs.concat(ppl);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [q, ready, days, (D.DATA && D.DATA.generatedAt) || 0]);
-  const pickHit = (h: SearchHit) => { if (h.type === 'record') openRecord(h.row as Intake); else openCitizen(h.row as Citizen); setPopOpen(false); };
-  const onSearchKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Escape') { setPopOpen(false); (e.target as HTMLInputElement).blur(); }
-    if (e.key === 'Enter' && hits.length) { const h = hits[Math.max(0, cursor)]; if (h) pickHit(h); }
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      if (!hits.length) return;
-      e.preventDefault();
-      setCursor(e.key === 'ArrowDown' ? Math.min(hits.length - 1, cursor + 1) : Math.max(0, cursor - 1));
-    }
-  };
-
   /* ------------------------- keyboard, resize, scroll ----------------- */
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        if (drawer) closeDrawer(); else if (navOpen) closeMobileNav(); else if (searchOpen) { setSearchOpen(false); setPopOpen(false); }
+        if (drawer) closeDrawer(); else if (navOpen) closeMobileNav();
         hideTip();
       }
-      if (e.key === '/' && !/^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement as HTMLElement).tagName)) { e.preventDefault(); searchRef.current?.focus(); }
     };
-    const click = (e: MouseEvent) => { if (!(e.target as HTMLElement).closest('.topbar-search')) setPopOpen(false); };
     let timer: number;
     const resize = () => { window.clearTimeout(timer); timer = window.setTimeout(() => { if (window.innerWidth > 900 && navOpen) closeMobileNav(); setTip(null); redraw(); }, 220); };
-    document.addEventListener('keydown', key); document.addEventListener('click', click);
+    document.addEventListener('keydown', key);
     window.addEventListener('resize', resize); window.addEventListener('scroll', hideTip, { passive: true });
-    return () => { document.removeEventListener('keydown', key); document.removeEventListener('click', click); window.removeEventListener('resize', resize); window.removeEventListener('scroll', hideTip); window.clearTimeout(timer); };
-  }, [drawer, navOpen, searchOpen, closeDrawer, closeMobileNav, redraw]);
+    return () => { document.removeEventListener('keydown', key); window.removeEventListener('resize', resize); window.removeEventListener('scroll', hideTip); window.clearTimeout(timer); };
+  }, [drawer, navOpen, closeDrawer, closeMobileNav, redraw]);
 
   /* ------------------------------ derived ----------------------------- */
   const nav = buildNav();
@@ -388,10 +348,18 @@ export function Hub() {
     return +d === +new Date(b.d.getFullYear(), b.d.getMonth(), b.d.getDate());
   }).length);
   const om = officeMetrics();
-  const heatDays = 28;
-  const heatDates = officeDaily(heatDays).map((b) => b.d);
-  const heatRows = om.per.map((x) => ({ code: x.code, name: x.name, total: x.people, series: officeDaily(heatDays, x.code).map((b) => b.people) }));
-  const donutItems = om.per.filter((x) => x.records > 0).map((x) => ({ name: x.name, value: x.records, color: DEPT_HUE[x.code] || D.SYS_COLOR[x.code] || '#87968F' })).sort((a, b) => b.value - a.value);
+  const dayOne = officeFirstDay(), dayNow = startOfDay(new Date());
+  const whole: DateRange = { from: dayOne, to: dayNow };
+  const actSpan = actRange || whole;
+  const heatSpan = peopleRange || whole;
+  // a long period is shown a week to a cell, so that the heat map stays readable
+  const heatWeekly = daysIn(heatSpan) > 60;
+  const heatDaily = officeDailyBetween(heatSpan.from, heatSpan.to);
+  const heatBin = (series: number[]) => (heatWeekly ? Array.from({ length: Math.ceil(series.length / 7) }, (_, k) => series.slice(k * 7, k * 7 + 7).reduce((t, v) => t + v, 0)) : series);
+  const heatDates = (heatWeekly ? heatDaily.filter((_, i) => i % 7 === 0) : heatDaily).map((b) => b.d);
+  const heatRows = om.per.map((x) => { const series = heatBin(officeDailyBetween(heatSpan.from, heatSpan.to, x.code).map((b) => b.people)); return { code: x.code, name: x.name, total: peopleRange ? series.reduce((t, v) => t + v, 0) : x.people, series }; });
+  const recOf = (x: (typeof om.per)[number]) => (recRange ? officeDailyBetween(recRange.from, recRange.to, x.code).reduce((t, b) => t + b.received, 0) : x.records);
+  const donutItems = om.per.map((x) => ({ x, n: recOf(x) })).filter((r) => r.n > 0).map(({ x, n }) => ({ name: x.name, value: n, color: DEPT_HUE[x.code] || D.SYS_COLOR[x.code] || '#87968F' })).sort((a, b) => b.value - a.value);
   const busM = { kept: om.delivered, dup: om.pending, rolled: om.rejected, totalAttempts: om.events };
   const mAll = metrics('all');
   const data = D.DATA;
@@ -424,11 +392,6 @@ export function Hub() {
   const services: { key?: string; name: string; sub?: string; status: string; ms?: number; detail?: string }[] = (data && data.services) || [];
   const meta = (s: { status: string; ms?: number }) => (s.status === 'ok' ? (s.ms ? s.ms + ' ms' : 'ok') : s.status === 'down' ? 'not answering' : s.status === 'unavailable' ? 'unavailable' : 'unknown');
   const pg = services.find((s) => s.key === 'postgres');
-  const apiRows = (
-    <>{API_ROWS.map((r) => (
-      <div className="api-row" key={r.p}><div><span className={`api-method ${r.m === 'POST' ? 'm-post' : 'm-get'}`}>{r.m}</span></div><div><div className="api-path">{r.p}</div><div className="api-note">{r.n}</div></div></div>
-    ))}</>
-  );
   const portalBtn = (cls: string, code: string, children: ReactNode) => <button className={cls} type="button" onClick={() => openPortal(code)}>{children}</button>;
 
   /* what the department views may do: move around, show a detail panel, export, and ask a bus to send again */
@@ -459,21 +422,23 @@ export function Hub() {
     kpiCitizens: num(D.TOTALS.citizens), sparkCitizens: <Sparkline values={cSeries.length ? cSeries : [0]} color="#4FB9A8" />,
     kpiSuccess: num(m.success), kpiSuccessNote: num(m.success) + ' of ' + num(m.totalAttempts) + ' attempts',
     kpiRollback: num(m.rolled), kpiAudit: num(m.audit), kpiDupes: num(m.dup),
-    activityRange: <Select ariaLabel="Chart period" value={String(activityDays)} onChange={(v) => setActivityDays(Number(v))} options={[[7, 'Last 7 days'], [30, 'Last 30 days'], [90, 'Last 90 days'], [120, 'All']].map(([d, l]) => ({ value: String(d), label: String(l) }))} />,
+    activityRange: <RangeToggle label="Office activity period" value={actRange} onChange={setActRange} min={dayOne} />,
     chartActivity: om.per.length >= 3
-      ? <RadarChart days={activityDays} labels={['Records created', 'Events not delivered']} axes={om.per.map((x) => { const d = officeDaily(activityDays, x.code); return { key: x.code, label: x.name, created: d.reduce((t, b) => t + b.received, 0), refused: d.reduce((t, b) => t + b.refused, 0) }; })} />
-      : <AreaChart buckets={officeDaily(activityDays)} labels={['Records created', 'Events not delivered']} minMax={400} />,
-    chartDonut: donutItems.length ? <DonutPro items={donutItems} centerLabel="total records" unit="records" hover={donutHover} setHover={setDonutHover} /> : <div className="tbl-empty">The offices hold no records yet.</div>,
+      ? <RadarChart days={daysIn(actSpan)} periodText={actRange ? rangeText(actRange) : 'overall'} labels={['Records created', 'Events not delivered']} axes={om.per.map((x) => { const d = officeDailyBetween(actSpan.from, actSpan.to, x.code); return { key: x.code, label: x.name, created: d.reduce((t, b) => t + b.received, 0), refused: d.reduce((t, b) => t + b.refused, 0) }; })} />
+      : <AreaChart buckets={officeDailyBetween(actSpan.from, actSpan.to)} labels={['Records created', 'Events not delivered']} minMax={400} />,
+    recordsRange: <RangeToggle label="Records period" value={recRange} onChange={setRecRange} min={dayOne} />,
+    peopleRange: <RangeToggle label="People period" value={peopleRange} onChange={setPeopleRange} min={dayOne} />,
+    chartDonut: donutItems.length ? <DonutPro items={donutItems} centerLabel={recRange ? 'records created' : 'total records'} unit="records" hover={donutHover} setHover={setDonutHover} /> : <div className="tbl-empty">{recRange ? 'No records were created in this period.' : 'The offices hold no records yet.'}</div>,
     sourceCount: num(om.per.length) + ' department office' + (om.per.length === 1 ? '' : 's'),
     chartBars: <StatusBars rows={om.per.map((x) => ({ code: x.code, name: x.name, delivered: x.delivered, pending: x.pending, rejected: x.rejected, lastAt: x.d.integration.lastDeliveredAt || null }))} />,
     chartOpen: <OpenBars rows={om.per.map((x) => ({ code: x.code, name: x.name, open: x.open, records: x.records }))} />,
     peopleCount: num(heatRows.reduce((t, r) => t + r.total, 0)),
-    chartPeople: heatRows.some((r) => r.total) ? <PeopleHeat rows={heatRows} dates={heatDates} /> : <div className="tbl-empty">No people are on file yet.</div>,
+    chartPeople: heatRows.some((r) => r.total) ? <PeopleHeat rows={heatRows} dates={heatDates} weekly={heatWeekly} totalNote={peopleRange ? 'added in this period' : 'people on file'} /> : <div className="tbl-empty">{peopleRange ? 'No people were added in this period.' : 'No people are on file yet.'}</div>,
     healthMeter: <Meter m={busM} />,
     healthRows: <HealthRows m={busM} names={['Delivered to the ERP', 'Waiting · being retried', 'Rejected by the ERP', 'Delivery rate']} rateOf={om.delivered} />,
     kpiDepts: <DeptKpis goto={goto} />,
     auditFeed: <OfficeFeed />,
-    t_recent: <DataTable cfg={recentRecordsCfg(officeCtx0)} onExport={onExport} showExport={false} />, t_syncMini: <DataTable cfg={recentEventsCfg(officeCtx0)} onExport={onExport} showExport={false} />, t_intake: tbl(tables.intake), t_citizens: tbl(tables.citizens), t_audit: tbl(tables.audit), t_sync: tbl(tables.sync), t_submissions: tbl(tables.submissions),
+    t_recent: <DataTable cfg={recentRecordsCfg(officeCtx0)} onExport={onExport} showExport={false} />, t_syncMini: <DataTable cfg={recentEventsCfg(officeCtx0)} onExport={onExport} showExport={false} />, t_intake: tbl(tables.intake), t_citizens: tbl(tables.citizens), t_audit: <AuditGroupTable rows={D.AUDIT} onOpen={openAudit} onCount={(n) => setCounts((c) => (c.audit === n ? c : { ...c, audit: n }))} />, t_sync: tbl(tables.sync), t_submissions: tbl(tables.submissions),
     portalQuick: <>{m.perSystem.map((s) => (
       <button className="port-open pr-row" type="button" key={s.code} onClick={() => openPortal(s.code)}>
         <span className="pc-logo sys-tint" style={{ ['--sys' as string]: D.SYS_COLOR[s.code] }}><Svg name={PORTAL_ICON[s.code] || 'grid'} /></span>
@@ -518,7 +483,6 @@ export function Hub() {
         <span className="doc-main"><span className="doc-name">{d.name}</span><span className="doc-path">{d.path}</span><span className="doc-note">{d.note}</span></span>
         <button className="btn btn-xs" type="button" onClick={() => copyText(d.path)}><Svg name="copy" /> Copy path</button>
       </div>))}</>,
-    docApi: apiRows,
     flowDiagram: <FlowDiagram />,
     overviewBody: <OverviewBody hub={hubPort ? ':' + hubPort : 'the hub'} erp={target ? String(target).replace(/^https?:\/\//, '') : 'the ERP'} ports={ovPortsEl} />,
   };
@@ -556,7 +520,7 @@ export function Hub() {
     officers: ['Officer Accounts', 'Access & audit'], lookupaudit: ['Lookup Audit', 'Access & audit'], activity: ['Activity Log', 'Access & audit'],
     health: ['Service Health', 'System'], database: ['Databases', 'System'], docs: ['Documentation', 'System'],
     // older pages, reached by link from the pages above
-    portals: ['All portals', 'Departments'], integration: ['Integration Status', 'Integration bus'], submissions: ['Platform Submissions', 'ERP'],
+    settings: ['Settings', 'Account'], portals: ['All portals', 'Departments'], integration: ['Integration Status', 'Integration bus'], submissions: ['Platform Submissions', 'ERP'],
   };
   if (isWorkbenchView(view)) viewMeta[view] = workbenchMeta(view);
   if (view.startsWith('dept:')) { const dd = ((D.OFFICES && D.OFFICES.departments) || []).find((x: { code: string }) => x.code === view.slice(5)); viewMeta[view] = [dd ? dd.short : view.slice(5), 'Departments']; }
@@ -566,10 +530,19 @@ export function Hub() {
       <div className={`app${collapsed ? ' is-collapsed' : ''}${navOpen ? ' nav-open' : ''}`} id="app">
         <aside className="sidebar" id="sidebar" aria-label="ERP workspace navigation">
           <div className="brand">
-            <div className="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4" /></svg>
-            </div>
-            <div className="brand-text"><div className="brand-name">ERP Hub</div><div className="brand-sub">Maharashtra Prisons</div></div>
+            {collapsed ? (
+              <button className="brand-mark brand-mark--logo brand-mark--btn" type="button" aria-label="Expand navigation" title="Expand navigation" onClick={() => { setCollapsed(false); setTip(null); }}>
+                <img className="brand-glow" src={erpLogo} alt="" aria-hidden="true" draggable={false} /><img src={erpLogo} alt="" draggable={false} />
+              </button>
+            ) : (
+              <div className="brand-mark brand-mark--logo" aria-hidden="true">
+                <img className="brand-glow" src={erpLogo} alt="" aria-hidden="true" draggable={false} /><img src={erpLogo} alt="" draggable={false} />
+              </div>
+            )}
+            <div className="brand-text"><div className="brand-name">EkSetu</div><div className="brand-sub">Unified Records</div></div>
+            <button className="collapse-btn" id="collapseBtn" type="button" aria-label="Collapse navigation" aria-expanded={!collapsed} onClick={() => { setCollapsed(true); setTip(null); }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+            </button>
             <button className="brand-close" id="navClose" type="button" aria-label="Close navigation" onClick={closeMobileNav}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12" /></svg>
             </button>
@@ -604,28 +577,30 @@ export function Hub() {
 
           <div className="sidebar-foot">
             <div className="sf-row">
-              <form className="sf-signout-form" method="post" action="/logout">
-                <button className="sf-signout" type="submit" title="Sign out of the ERP Hub" aria-label="Sign out">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><path d="m16 17 5-5-5-5" /><path d="M21 12H9" /></svg>
-                  <span>Sign out</span>
-                </button>
-              </form>
-              <button className="collapse-btn" id="collapseBtn" type="button" aria-label={collapsed ? 'Expand navigation' : 'Collapse navigation'} aria-expanded={!collapsed} onClick={() => { setCollapsed(!collapsed); setTip(null); }}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+              <button className={`nav-item sf-settings${view === 'settings' ? ' is-active' : ''}`} type="button" data-view="settings" data-tip="Settings" title="Settings" aria-label="Settings" aria-current={view === 'settings' ? 'page' : undefined}
+                onClick={() => { goto('settings'); if (window.innerWidth <= 900) closeMobileNav(); }}
+                onMouseEnter={(e) => showRailTip(e.currentTarget)} onMouseLeave={() => setTip(null)} onFocus={(e) => showRailTip(e.currentTarget)} onBlur={() => setTip(null)}>
+                <span className="dept-ic sys-tint" style={{ ['--sys' as string]: '#64748B' }}><Svg name="settings" cls="ic" /></span>
+                <span className="nav-label">Settings</span>
               </button>
             </div>
+            <div className="sf-profile"><AccountMenu side onSettings={() => { goto('settings'); closeMobileNav(); }} /></div>
           </div>
         </aside>
 
         <div className={`scrim${scrimShown && navOpen ? ' show' : ''}`} id="navScrim" hidden={!scrimShown} onClick={closeMobileNav} />
 
         <div className="shell">
-          <header className={`topbar${searchOpen ? ' search-open' : ''}`}>
+          <header className="topbar">
             <button className="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open navigation" onClick={openMobileNav}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
+            <button className="topbar-brand" type="button" aria-label="EkSetu, Unified Records — go to dashboard" onClick={() => goto('dashboard')}>
+              <span className="brand-mark brand-mark--logo" aria-hidden="true"><img className="brand-glow" src={erpLogo} alt="" draggable={false} /><img src={erpLogo} alt="" draggable={false} /></span>
+              <span className="brand-text"><span className="brand-name">EkSetu</span><span className="brand-sub">Unified Records</span></span>
+            </button>
             <nav className="crumbs" aria-label="Breadcrumb">
-              <button className="crumb-link root" type="button" onClick={() => goto('dashboard')}>ERP Hub</button><span className="sep">/</span>
+              <button className="crumb-link root" type="button" onClick={() => goto('dashboard')}>EkSetu</button><span className="sep">/</span>
               {view !== 'dashboard' ? <><button className="crumb-link" id="crumbSection" type="button" style={{ whiteSpace: 'nowrap' }} onClick={() => goto(SECTION_HOME[viewMeta[view][1]] || 'dashboard')}>{viewMeta[view][1]}</button><span className="sep">/</span></> : null}
               {(isWorkbenchView(view) ? workbenchTrail(view) : [{ label: viewMeta[view][0] } as Crumb]).map((c, i, all) => (
                 <Fragment key={i}>
@@ -634,33 +609,7 @@ export function Hub() {
                 </Fragment>
               ))}
             </nav>
-            <button className="icon-btn search-toggle" id="searchToggle" type="button" aria-label="Search records" aria-expanded={searchOpen}
-              onClick={() => { const open = !searchOpen; setSearchOpen(open); if (open) window.setTimeout(() => searchRef.current?.focus(), 30); }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.2-3.2" /></svg>
-            </button>
-            <div className="topbar-search">
-              <div className="search-field">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.2-3.2" /></svg>
-                <input id="globalSearch" ref={searchRef} type="search" placeholder="Search intake refs, citizens…" autoComplete="off" aria-label="Search received records and citizens"
-                  value={q} onChange={(e) => { setQ(e.target.value); setCursor(-1); setPopOpen(!!e.target.value.trim()); }} onFocus={() => { if (q.trim()) setPopOpen(true); }} onKeyDown={onSearchKey} />
-                <span className="kbd">/</span>
-              </div>
-              <div className={`search-pop${popOpen ? ' open' : ''}`} id="searchPop" role="listbox" aria-label="Search results">
-                {q.trim() && (hits.length ? (() => {
-                  const recs = hits.filter((h) => h.type === 'record'), ppl = hits.filter((h) => h.type === 'citizen');
-                  const item = (h: SearchHit, i: number) => (
-                    <div className={`sp-item${i === cursor ? ' hl' : ''}`} key={i} role="option" onClick={() => pickHit(h)}>
-                      <div className="sp-main"><div className="sp-title">{h.title}</div><div className="sp-sub">{h.sub}</div></div><Svg name="arrowRight" />
-                    </div>);
-                  return (<>
-                    <div className="sp-head">Received records</div>{recs.map((h, i) => item(h, i))}
-                    {ppl.length ? <div className="sp-head">Citizens</div> : null}{ppl.map((h, i) => item(h, recs.length + i))}
-                    <div className="sp-head" style={{ borderTop: '1px solid var(--border)' }}>Live data · /api/intake · /api/citizens</div>
-                  </>);
-                })() : <div className="sp-empty">No intake records or citizens match “{q}”.</div>)}
-              </div>
-            </div>
-            <div className="topbar-right" />
+            <div className="topbar-right"><AccountMenu onSettings={() => goto('settings')} /></div>
           </header>
 
           <main className="main" id="main">
@@ -668,14 +617,13 @@ export function Hub() {
             <LookupView active={view === 'lookup'} />
             <OfficeViews view={view} c={officeCtx0} />
             <WorkbenchViews view={view} goto={goto} toast={toast} onChanged={refresh} />
+            <SettingsView active={view === 'settings'} collapsed={collapsed} setCollapsed={setCollapsed} />
             {view === 'database' && <DepartmentDatabases />}
           </main>
 
           <footer className="app-foot">
-            <span><b>ERP Hub</b> · intake console</span><span className="dotsep" />
-            <span>Unofficial local demonstration — not an official government service</span><span className="dotsep" />
-            <span>Live data from the ERP and platform databases</span>
-            <span style={{ marginLeft: 'auto' }} id="genAt">{data ? 'Updated ' + fmtTime(clock.now) : '—'}</span>
+            <img className="app-foot-logo" src={vgLogo} alt="Virtual Galaxy Infotech" />
+            <span>© 2026 Virtual Galaxy Infotech Ltd. All rights reserved.</span>
           </footer>
         </div>
       </div>

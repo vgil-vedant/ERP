@@ -8,8 +8,10 @@ import { D, DEPT_HUE, PORTAL_ICON, hostPort, parseUtc, portalOrigin, sysName } f
 import { Sparkline } from './charts';
 import type { Dash } from './model';
 import { DataTable } from './DataTable';
-import { AuditTimeline } from './timeline';
-import type { TlRow } from './timeline';
+import { ActionBadge } from './timeline';
+import { GroupTable } from './grouptable';
+import type { GFilter, GRow } from './grouptable';
+import { PersonBadge } from './tables';
 import type { Column, TableCfg } from './DataTable';
 
 export interface OfficeCtx {
@@ -22,6 +24,17 @@ export interface OfficeCtx {
 
 const mono = { fontFamily: 'var(--mono)' } as const;
 const iso = (s?: string | null) => (s ? new Date(s) : null);
+/** A length of time in the largest sensible units: 450 ms, 3.2 s, 4 min 10 s, 22 h 40 min, 3 d 4 h. */
+const duration = (ms: number) => {
+  if (ms < 1000) return `${num(Math.round(ms))} ms`;
+  const s = ms / 1000;
+  if (s < 60) return `${(Math.round(s * 10) / 10).toString()} s`;
+  const m = Math.floor(s / 60);
+  if (m < 60) return `${m} min ${Math.round(s - m * 60)} s`;
+  const h = Math.floor(m / 60);
+  if (h < 48) return `${h} h ${m - h * 60} min`;
+  return `${Math.floor(h / 24)} d ${h % 24} h`;
+};
 const when = (s?: string | null) => (s ? fmtDateTime(new Date(s)) : '—');
 const whenUtc = (s?: string | null) => (s ? fmtDateTime(parseUtc(s)) : '—');
 const color = (code: string) => DEPT_HUE[code] || D.SYS_COLOR[code] || '#87968F';
@@ -31,6 +44,15 @@ export const portalUrl = (port: number) => `${portalOrigin(port)}/`;
 
 export function DeptChip({ d }: { d: Dash }) {
   return <span className="sys-cell">{d.short}</span>;
+}
+/** A department as its website's icon tile and name, in the colour the dashboard uses for it. */
+function DeptTag({ d }: { d: Dash }) {
+  return (
+    <span className="au-dept" style={{ ['--sys' as string]: DEPT_HUE[d.code] || D.SYS_COLOR[d.code] || '#475569' }}>
+      <span className="au-dept-ic" aria-hidden="true"><Svg name={PORTAL_ICON[d.code] || 'layers'} /></span>
+      <span className="au-dept-name">{d.short}</span>
+    </span>
+  );
 }
 function BusPill({ s }: { s: string }) {
   if (s === 'delivered') return <span className="pill pill-ok"><Svg name="check" />delivered</span>;
@@ -73,7 +95,7 @@ const openRec = (c: OfficeCtx) => (r: RecRow) => c.showDrawer('Department record
     </>));
 function recColumns(): Column<RecRow>[] {
   return [
-    { key: 'dept', label: 'Department', sortable: true, render: (r) => <DeptChip d={r.d} />, sortValue: (r) => r.d.short, csv: (r) => r.d.title },
+    { key: 'dept', label: 'Department', sortable: true, render: (r) => <DeptTag d={r.d} />, sortValue: (r) => r.d.short, csv: (r) => r.d.title },
     { key: 'ref', label: 'Reference', sortable: true, render: (r) => <><div className="mono" style={{ color: 'var(--ink)', fontWeight: 600 }}>{r.ref}</div><div className="t-sub">{r.typeLabel}</div></>, sortValue: (r) => r.ref, csv: (r) => `${r.ref} (${r.typeLabel})` },
     { key: 'rec', label: 'Record', render: (r) => <><div className="t-main">{r.title}</div><div className="t-sub">{r.subtitle}</div></>, csv: (r) => r.title + ' — ' + r.subtitle },
     { key: 'status', label: 'Status', sortable: true, render: (r) => <span className="pill pill-mint">{r.statusLabel || r.status || '—'}</span>, sortValue: (r) => r.statusLabel || '', csv: (r) => r.statusLabel || r.status || '' },
@@ -116,8 +138,8 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
   const [cls, label] = health(d);
   const open = s.types.reduce((t: number, x: Dash) => t + (x.open || 0), 0);
   return (
-    <>
-      <Head art="dept" title={d.title} desc={<>{d.tagline} · portal <b>{d.name}</b> on <code style={mono}>{hostPort(d.code)}</code> · database <code style={mono}>{d.file}</code></>}
+    <div className="dept-page" style={{ ['--sys' as string]: DEPT_HUE[d.code] || D.SYS_COLOR[d.code] || '#0E9F6B' }}>
+      <Head art={`dept-${d.code}` as ArtKind} title={d.title} desc={<>{d.tagline} · portal <b>{d.name}</b> on <code style={mono}>{hostPort(d.code)}</code> · database <code style={mono}>{d.file}</code></>}
         actions={<>
           <a className="btn" href={portalUrl(d.port)} target="_blank" rel="noopener"><Svg name="external" /> Citizen portal</a>
           <a className="btn btn-primary" href={officeUrl(d.port)} target="_blank" rel="noopener"><Svg name="external" /> Open the office</a>
@@ -131,13 +153,17 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
       <div className="grid g-2" style={{ marginTop: 16 }}>
         <div className="card">
           <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="file" /></span>Record types</div><div className="card-sub">Counts by status, as the workflow defines them.</div></div></div>
-          <div className="def-list">
+          <div className="ty-list">
             {s.types.map((t: Dash) => (
-              <div className="def-row" key={t.type}>
-                <div className="def-key">{t.plural || t.label}<br /><span className="micro">{num(t.total)}{t.open != null ? ` · ${num(t.open)} open` : ''}</span></div>
-                <div className="def-val" style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                  {t.byStatus.map((b: Dash) => <span className="pill pill-neutral" key={String(b.status)}>{b.label} · {num(b.n)}</span>)}
-                  {!t.byStatus.length && <span style={{ color: 'var(--text-3)' }}>No records yet</span>}
+              <div className="ty-item" key={t.type}>
+                <div className="ty-top">
+                  <b className="ty-name">{t.plural || t.label}</b>
+                  <span className="ty-total">{num(t.total)}</span>
+                  {t.open != null ? <span className={`pill ${t.open ? 'pill-warn' : 'pill-neutral'}`}>{num(t.open)} open</span> : null}
+                </div>
+                <div className="ty-chips">
+                  {t.byStatus.map((b: Dash) => <span className="ty-chip" key={String(b.status)}>{b.label}<b>{num(b.n)}</b></span>)}
+                  {!t.byStatus.length && <span className="ty-none">No records yet</span>}
                 </div>
               </div>
             ))}
@@ -148,7 +174,7 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
           <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="alert" /></span>Needs attention</div><div className="card-sub">Counts the office's own workflow flags.</div></div></div>
           <div className="def-list">
             {s.attention.map((a: Dash) => (
-              <div className="def-row" key={a.status || a.label}><div className="def-key">{a.label}</div>
+              <div className="def-row def-row--count" key={a.status || a.label}><div className="def-key">{a.label}</div>
                 <div className="def-val"><span className={`pill ${a.n ? (a.tone === 'warning' ? 'pill-warn' : 'pill-mint') : 'pill-neutral'}`}>{num(a.n)}</span></div></div>
             ))}
             {!s.attention.length && <div className="def-row"><div className="def-key">Nothing flagged</div><div className="def-val">The office has no items waiting for a decision.</div></div>}
@@ -158,10 +184,10 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
           <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="sync" /></span>Integration bus</div></div>
             <button className="btn btn-sm" type="button" disabled={c.retrying === d.code || !(i.pending || i.rejected)} onClick={() => c.retry(d.code)}><Svg name="refresh" /> {c.retrying === d.code ? 'Sending…' : 'Retry now'}</button></div>
           <div className="def-list">
-            <div className="def-row"><div className="def-key">Target</div><div className="def-val"><code style={mono}>{i.target}</code></div></div>
+            <div className="def-row"><div className="def-key">Target</div><div className="def-val def-val--url"><code style={mono}>{i.target}</code></div></div>
             <div className="def-row"><div className="def-key">Last delivered</div><div className="def-val">{when(i.lastDeliveredAt)}</div></div>
-            <div className="def-row"><div className="def-key">Median delivery time</div><div className="def-val">{i.medianLatencyMs == null ? '—' : `${num(i.medianLatencyMs)} ms`}</div></div>
-            <div className="def-row"><div className="def-key">Last error</div><div className="def-val">{i.lastError || 'none'}</div></div>
+            <div className="def-row"><div className="def-key">Median delivery time</div><div className="def-val" title={i.medianLatencyMs == null ? undefined : `${num(i.medianLatencyMs)} ms`}>{i.medianLatencyMs == null ? '—' : duration(i.medianLatencyMs)}</div></div>
+            <div className="def-row"><div className="def-key">Last error</div><div className={`def-val${i.lastError ? ' def-val--bad' : ' def-val--none'}`}>{i.lastError || 'None'}</div></div>
           </div>
         </div>
         </div>
@@ -190,13 +216,11 @@ function DeptView({ code, c }: { code: string; c: OfficeCtx }) {
         </div>
         <div className="card">
           <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="pulse" /></span>Office activity</div><div className="card-sub">Append-only log of what officers did.</div></div></div>
-          <div className="feed">{d.activity.slice(0, 6).map((a: Dash, k: number) => (
-            <div className="feed-item" key={k}><span className="feed-dot"><Svg name="user" /></span><div className="feed-body"><div className="feed-line"><b>{a.action}</b>{a.ref ? <> · <code>{a.ref}</code></> : null}</div><div className="feed-meta"><span className="maker">{a.officer}</span><span className="sep" />{rel(parseUtc(a.at))}</div></div></div>
-          ))}{!d.activity.length && <div className="tbl-empty">No activity yet.</div>}</div>
+          <div className="feed fa-list">{d.activity.slice(0, 6).map((a: Dash, k: number) => <ActivityItem key={k} a={a} d={d} showDept={false} />)}{!d.activity.length && <div className="tbl-empty">No activity yet.</div>}</div>
           <div className="card-foot card-foot--end"><button className="btn btn-sm" type="button" onClick={() => c.goto('activity')}>Activity log <Svg name="arrowRight" /></button></div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -263,7 +287,7 @@ function FailuresView({ c }: { c: OfficeCtx }) {
               <div className="def-list">
                 <div className="def-row"><div className="def-key">Waiting / rejected</div><div className="def-val">{num(i.pending)} / {num(i.rejected)}</div></div>
                 <div className="def-row"><div className="def-key">Oldest waiting</div><div className="def-val">{i.oldestPendingAt ? `${rel(new Date(i.oldestPendingAt))} (${when(i.oldestPendingAt)})` : '—'}</div></div>
-                <div className="def-row"><div className="def-key">Last error</div><div className="def-val">{i.lastError || 'none'}</div></div>
+                <div className="def-row"><div className="def-key">Last error</div><div className={`def-val${i.lastError ? ' def-val--bad' : ' def-val--none'}`}>{i.lastError || 'None'}</div></div>
               </div>
               <div style={{ padding: '4px 20px 16px', display: 'flex', gap: 8 }}>
                 <button className="btn btn-sm btn-primary" type="button" disabled={c.retrying === d.code || !(i.pending || i.rejected)} onClick={() => c.retry(d.code)}><Svg name="refresh" /> {c.retrying === d.code ? 'Sending…' : 'Retry now'}</button>
@@ -334,7 +358,7 @@ function OfficersView({ c }: { c: OfficeCtx }) {
   const rows = (): Row[] => depts().flatMap((d) => d.officers.map((o: Dash) => ({ ...o, d })));
   const cfg: TableCfg<Row> = {
     columns: [
-      { key: 'dept', label: 'Department', sortable: true, render: (r) => <DeptChip d={r.d} />, sortValue: (r) => r.d.short, csv: (r) => r.d.title },
+      { key: 'dept', label: 'Department', sortable: true, render: (r) => <DeptTag d={r.d} />, sortValue: (r) => r.d.short, csv: (r) => r.d.title },
       { key: 'user', label: 'User name', sortable: true, render: (r) => <span className="mono" style={{ color: 'var(--ink)', fontWeight: 600 }}>{r.username}</span>, sortValue: (r) => r.username, csv: (r) => r.username },
       { key: 'name', label: 'Officer', sortable: true, render: (r) => <><div className="t-main">{r.fullName}</div><div className="t-sub">{r.designation}</div></>, sortValue: (r) => r.fullName, csv: (r) => `${r.fullName} (${r.designation})` },
       { key: 'office', label: 'Office', render: (r) => r.office, csv: (r) => r.office },
@@ -357,34 +381,54 @@ function OfficersView({ c }: { c: OfficeCtx }) {
 }
 
 function LookupAuditView({ c }: { c: OfficeCtx }) {
-  // events about the same person (PSN-…) are folded under one row; searches and the like stand alone
-  const rows: TlRow[] = D.AUDIT.filter((a) => a.entity === 'lookup').map((a) => {
-    const person = /PSN-\d+/.exec(a.details || '');
-    return { id: 'a' + a.id, seq: a.id, at: a.at, module: a.entity, sub: 'ERP audit log', action: a.action, detail: a.details, who: a.maker, entity: a.entityId, group: person ? 'p:' + person[0] : 'e:' + a.id };
+  const events = D.AUDIT.filter((a) => a.entity === 'lookup');
+  // a person's name, when any event mentions it: "full Aadhaar of PSN-000002 (Shubham Tayde) shown"
+  const names = new Map<string, string>();
+  events.forEach((a) => { const m = /(PSN-\d+) \(([^)]+)\)/.exec(a.details || ''); if (m) names.set(m[1], m[2]); });
+  // the lookups of one person fold under that person; searches that name nobody fold under "searches"
+  const rows: GRow[] = events.map((a) => {
+    const ref = (/PSN-\d+/.exec(a.details || '') || [])[0];
+    const name = ref ? names.get(ref) : undefined;
+    return {
+      id: 'a' + a.id, seq: a.id, at: a.at, group: ref ? 'p:' + ref : 's:search',
+      subject: ref ? <PersonBadge name={name} refText={ref} /> : <span className="wb-dept au-ent" style={{ ['--sys' as string]: '#64748B' }}><Svg name="search" /><span>no one person</span></span>,
+      subjectText: ref ? (name || ref) : 'searches', action: a.action, detail: a.details, who: a.maker,
+      meta: { action: a.action }, search: [String(a.id), a.action, a.maker, a.details, name || ''].join(' '),
+    };
   });
-  const actions = Array.from(new Set(rows.map((r) => r.action))).sort().map((x) => ({ value: x, label: x }));
+  const filters: GFilter[] = [
+    { label: 'Any time', options: [{ value: 'today', label: 'Today' }, { value: '7', label: 'Last 7 days' }, { value: '30', label: 'Last 30 days' }],
+      match: (r, v) => (v === 'today' ? r.at.toDateString() === new Date().toDateString() : Date.now() - r.at.getTime() <= Number(v) * 86400000) },
+    { label: 'All actions', options: Array.from(new Set(rows.map((r) => r.action))).sort().map((x) => ({ value: x, label: x })), match: (r, v) => r.action === v },
+  ];
   return (
     <>
-      <Head art="lookupaudit" title="Lookup audit" desc="Every person lookup, with who ran it. It is part of the ERP's append-only audit log." actions={<button className="btn" type="button" onClick={() => c.goto('lookup')}><Svg name="search" /> Person Lookup</button>} />
-      <div className="card"><div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="search" /></span>Lookups</div><div className="card-sub">{num(rows.length)} recorded</div></div><span className="pill pill-mint">ERP audit_log</span></div>
-        <div className="table-host"><AuditTimeline rows={rows} noun="lookup" searchPlaceholder="Search who, person or what was looked up…" filter={{ label: 'All actions', options: actions, pick: (r) => r.action }} pageSize={10} emptyText="No person lookup has been recorded yet." /></div></div>
+      <Head art="lookupaudit" title="Lookup audit" desc="Every person lookup, with who ran it. It is part of the ERP's append-only audit log." />
+      <div className="card"><div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="search" /></span>Lookups</div><div className="card-sub">{num(rows.length)} recorded</div></div><div className="card-head-actions"><span className="pill pill-mint">ERP audit_log</span><button className="btn btn-sm" type="button" onClick={() => c.goto('lookup')}><Svg name="search" /> Person Lookup</button></div></div>
+        <div className="table-host"><GroupTable rows={rows} filters={filters} subjectLabel="Person looked up" noun="lookup" searchPlaceholder="Search who, person or what was looked up…" emptyText="No person lookup has been recorded yet." /></div></div>
     </>
   );
 }
 
 function ActivityView({ c: _c }: { c: OfficeCtx }) {
   void _c;
-  // the actions on one record are folded under one row for that record
-  const rows: TlRow[] = depts().flatMap((d) => (d.activity as Dash[]).map((a, i) => ({
-    id: d.code + ':' + (a.id != null ? a.id : i + ':' + a.at), seq: a.id != null ? Number(a.id) : null, at: parseUtc(a.at), module: d.short as string, sub: 'office log',
-    action: String(a.action), detail: a.details || '', who: a.officer as string, entity: (a.ref as string) || '',
+  // the actions on one record fold under that record, with its department's icon
+  const rows: GRow[] = depts().flatMap((d) => (d.activity as Dash[]).map((a, i) => ({
+    id: d.code + ':' + (a.id != null ? a.id : i + ':' + a.at), seq: a.id != null ? Number(a.id) : null, at: parseUtc(a.at),
     group: a.ref ? d.code + ':' + a.ref : 'e:' + d.code + ':' + (a.id != null ? a.id : i),
+    subject: <><DeptTag d={d} />{a.ref ? <div className="t-sub">{a.ref}</div> : <div className="t-sub">no record</div>}</>,
+    subjectText: `${d.short} ${a.ref || ''}`, action: String(a.action), detail: a.details || '', who: a.officer as string,
+    meta: { dept: d.short as string, action: String(a.action) }, search: [a.id, a.officer, a.action, a.ref, a.details, d.title, d.short].join(' '),
   })));
+  const filters: GFilter[] = [
+    { label: 'All departments', options: depts().map((d) => ({ value: d.short as string, label: d.short as string })), match: (r, v) => r.meta?.dept === v },
+    { label: 'All actions', options: Array.from(new Set(rows.map((r) => r.action))).sort().map((x) => ({ value: x, label: x })), match: (r, v) => r.action === v },
+  ];
   return (
     <>
       <Head art="activity" title="Activity log" desc="What officers did in each office, newest first. Each office's log is append-only: the database refuses any change or deletion." />
       <div className="card"><div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="pulse" /></span>Office activity</div><div className="card-sub">Latest {num(Math.max(...depts().map((d) => d.activity.length), 0))} per department</div></div></div>
-        <div className="table-host"><AuditTimeline rows={rows} noun="action" searchPlaceholder="Search officer, action, record or department…" filter={{ label: 'All departments', options: depts().map((d) => ({ value: d.short as string, label: d.short as string })), pick: (r) => r.module }} pageSize={10} emptyText="No office activity yet." /></div></div>
+        <div className="table-host"><GroupTable rows={rows} filters={filters} subjectLabel="Department · record" noun="action" searchPlaceholder="Search officer, action, record or department…" emptyText="No office activity yet." /></div></div>
     </>
   );
 }
@@ -404,10 +448,11 @@ export function officeMetrics() {
 }
 export type OfficeMetrics = ReturnType<typeof officeMetrics>;
 
-/** Records created / events not delivered per day over the last `span` days, summed over the five offices. */
-export function officeDaily(span: number, code?: string): { d: Date; received: number; refused: number; people: number }[] {
-  const now = new Date();
-  const start = new Date(now.getFullYear(), now.getMonth(), now.getDate() - (span - 1));
+/** Records created / events not delivered / people added per day from `from` to `to` (both days included), summed over the offices
+ *  (or for one office). One entry per day. */
+export function officeDailyBetween(from: Date, to: Date, code?: string): { d: Date; received: number; refused: number; people: number }[] {
+  const start = new Date(from.getFullYear(), from.getMonth(), from.getDate());
+  const span = Math.max(1, Math.round((new Date(to.getFullYear(), to.getMonth(), to.getDate()).getTime() - start.getTime()) / 86400000) + 1);
   const out = Array.from({ length: span }, (_, i) => ({ d: new Date(start.getFullYear(), start.getMonth(), start.getDate() + i), received: 0, refused: 0, people: 0 }));
   const put = (rows: { d: string; n: number }[] | undefined, key: 'received' | 'refused' | 'people') => (rows || []).forEach((r) => {
     const [y, m, dd] = String(r.d).split('-').map(Number);
@@ -417,6 +462,21 @@ export function officeDaily(span: number, code?: string): { d: Date; received: n
   });
   depts().filter((d) => !code || d.code === code).forEach((d) => { put(d.daily && d.daily.records, 'received'); put(d.daily && d.daily.undelivered, 'refused'); put(d.daily && d.daily.people, 'people'); });
   return out;
+}
+/** The same for the last `span` days. */
+export function officeDaily(span: number, code?: string) {
+  const now = new Date();
+  return officeDailyBetween(new Date(now.getFullYear(), now.getMonth(), now.getDate() - (span - 1)), now, code);
+}
+/** The earliest day any office has a per-day figure for (today when there are none): where "overall" starts. */
+export function officeFirstDay(): Date {
+  const now = new Date();
+  let first = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  depts().forEach((d) => ['records', 'undelivered', 'people'].forEach((k) => ((d.daily && d.daily[k]) || []).forEach((r: { d: string }) => {
+    const [y, m, dd] = String(r.d).split('-').map(Number);
+    if (y) { const x = new Date(y, m - 1, dd); if (x < first) first = x; }
+  })));
+  return first;
 }
 
 /** Dashboard: one card per department, in the same card design as the other KPIs. */
@@ -444,14 +504,51 @@ export function DeptKpis({ goto }: { goto: (v: string) => void }) {
   );
 }
 
-/** Dashboard feed: the latest things officers did, across the five offices. */
+/** One thing an officer did: the department's icon, what was done, to which record, by whom and when. */
+function ActivityItem({ a, d, showDept = true }: { a: Dash; d: Dash; showDept?: boolean }) {
+  const at = parseUtc(a.at);
+  const hue = DEPT_HUE[d.code] || D.SYS_COLOR[d.code] || '#475569';
+  return (
+    <div className="fa" style={{ ['--sys' as string]: hue }}>
+      <span className="fa-ic" aria-hidden="true"><Svg name={PORTAL_ICON[d.code] || 'layers'} /></span>
+      <div className="fa-body">
+        <div className="fa-top">
+          <ActionBadge action={String(a.action)} />
+          {a.ref ? <b className="fa-ref">{a.ref}</b> : null}
+          {showDept ? <span className="fa-dept">{d.short}</span> : null}
+        </div>
+        {a.details ? <div className="fa-text" title={a.details}>{a.details}</div> : null}
+        <div className="fa-meta"><span className="au-who">{a.officer}</span><span className="sep" /><time title={fmtDateTime(at)}>{rel(at)}</time></div>
+      </div>
+    </div>
+  );
+}
+
+/** Dashboard: the latest things officers did, across the five offices, as a small table. */
 export function OfficeFeed({ limit = 5 }: { limit?: number }) {
   const rows = depts().flatMap((d) => d.activity.map((a: Dash) => ({ ...a, d }))).sort((a, b) => parseUtc(b.at).getTime() - parseUtc(a.at).getTime()).slice(0, limit);
   if (!rows.length) return <div className="tbl-empty">No office activity yet.</div>;
   return (
-    <>{rows.map((a, i) => (
-      <div className="feed-item" key={i}><span className="feed-dot"><Svg name="user" /></span><div className="feed-body"><div className="feed-line"><b>{a.action}</b>{a.ref ? <> · <code>{a.ref}</code></> : null} · {a.d.short}</div><div className="feed-meta"><span className="maker">{a.officer}</span><span className="sep" />{rel(parseUtc(a.at))}</div></div></div>
-    ))}</>
+    <div className="tbl-wrap oa-wrap">
+      <table className="tbl oa-tbl">
+        <thead><tr><th>Department</th><th>Action</th><th>Record</th><th>Description</th><th>Officer</th><th>Date</th></tr></thead>
+        <tbody>
+          {rows.map((a, i) => {
+            const at = parseUtc(a.at);
+            return (
+              <tr key={i}>
+                <td><DeptTag d={a.d} /></td>
+                <td><ActionBadge action={String(a.action)} /></td>
+                <td>{a.ref ? <b className="au-detail">{a.ref}</b> : <span className="t-sub">no record</span>}</td>
+                <td className="wrap" title={a.details || ''}><div className="t-main au-detail">{a.details || 'No details were recorded.'}</div></td>
+                <td><span className="au-who">{a.officer}</span></td>
+                <td className="nowrap"><div className="t-main" style={{ fontWeight: 600 }}>{fmtDateTime(at).split(' · ')[0]}</div><div className="t-sub">{fmtTime(at)} · {rel(at)}</div></td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
@@ -510,7 +607,7 @@ export function OverviewBody({ hub, erp, ports }: { hub: string; erp: string; po
     ['frontend/platform-hub · erp-console', 'Hub and console shells, styles and the EJS fallback views.'],
     ['frontend/shared', 'Person-lookup page and the department office UI, used by the hub, the console and the offices.'],
     ['backend/platform-api', 'Hub, five portal servers, shared sign-in, department offices (/office) and the integration bus. One process, one platform.sqlite plus one SQLite per office.'],
-    ['backend/erp-api', 'ERP intake (/api/intake), event ingest (/api/ingest/events), person lookup (/api/lookup), console and the audit log.'],
+    ['backend/erp-api', 'ERP intake, event ingest, person lookup, the console and the audit log.'],
     ['backend/shared', 'Portal rendering engine and the record catalogue, workflows and datasets shared by both services.'],
     ['database', 'SQLite schemas for the ERP and the platform, and the read-only PostgreSQL migration.'],
     ['docker · compose.yaml', 'Hardened stack: ERP_erp_api and ERP_platform_api, host ports 7xxx.'],
@@ -528,12 +625,12 @@ export function OverviewBody({ hub, erp, ports }: { hub: string; erp: string; po
           <Node icon="database" db title="Databases" sub="platform.sqlite · one SQLite per office (record · outbox · activity)" />
         </div>
         <div className="arch-link">
-          <span>POST /api/ingest/events</span><div className="arrow" /><span>ack · retry</span>
+          <span>signed events</span><div className="arrow" /><span>ack · retry</span>
         </div>
         <div className="arch-col">
           <div className="arch-col-head">ERP service · record of truth</div>
           <Node icon="database" title="ERP API + console" sub={erp} />
-          <Node icon="idcard" title="Person lookup" sub="/api/lookup · one identifier, all five departments" />
+          <Node icon="idcard" title="Person lookup" sub="one identifier, all five departments" />
           <Node icon="database" db title="erp.sqlite" sub="source_system · citizen · intake · intake_field · lookup_record · audit_log" />
           <Node icon="database" db title="PostgreSQL" sub="read-only migration target" />
         </div>
@@ -566,9 +663,9 @@ export function DepartmentDatabases() {
     <div className="card" style={{ marginTop: 16 }}>
       <div className="card-head"><div><div className="card-title"><span className="card-ic" aria-hidden="true"><Svg name="database" /></span>Department databases</div><div className="card-sub">One SQLite file per office, beside platform.sqlite.</div></div></div>
       <div className="tbl-wrap"><table className="tbl" style={{ minWidth: 0 }}>
-        <thead><tr><th>File</th><th>Department</th><th className="col-right">Records</th><th className="col-right">Events</th><th className="col-right">People</th></tr></thead>
+        <thead><tr><th>File</th><th>Department</th><th className="col-center">Records</th><th className="col-center">Events</th><th className="col-center">People</th></tr></thead>
         <tbody>{list.map((d) => (
-          <tr key={d.code}><td className="mono" style={{ color: 'var(--ink)', fontWeight: 600 }}>{d.file}</td><td>{d.title}</td><td className="col-right t-main">{num(d.totalRecords)}</td><td className="col-right">{num(d.integration.delivered + d.integration.pending + d.integration.rejected)}</td><td className="col-right">{num(d.summary.people)}</td></tr>
+          <tr key={d.code}><td className="mono" style={{ color: 'var(--ink)', fontWeight: 600 }}>{d.file}</td><td>{d.title}</td><td className="col-center t-main">{num(d.totalRecords)}</td><td className="col-center">{num(d.integration.delivered + d.integration.pending + d.integration.rejected)}</td><td className="col-center">{num(d.summary.people)}</td></tr>
         ))}</tbody>
       </table></div>
     </div>

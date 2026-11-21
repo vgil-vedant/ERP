@@ -32,9 +32,16 @@ services:
     container_name: ERP_erp_api
     depends_on:
       postgres: { condition: service_healthy }
-    secrets: [ERP_pg_password]
+    secrets: [ERP_pg_password, ERP_integration_secret, ERP_api_token, ERP_lookup_pepper, ERP_uidai_token_key, ERP_hub_admin_hash]
     environment:
       HOST: 0.0.0.0
+      # No secret has a built-in value: each is read from its Docker secret file (docker/make-secrets.sh makes them)
+      INTEGRATION_SECRET_FILE: /run/secrets/ERP_integration_secret
+      ERP_API_TOKEN_FILE: /run/secrets/ERP_api_token
+      LOOKUP_PEPPER_FILE: /run/secrets/ERP_lookup_pepper
+      UIDAI_TOKEN_KEY_FILE: /run/secrets/ERP_uidai_token_key
+      HUB_ADMIN_PASSWORD_HASH_FILE: /run/secrets/ERP_hub_admin_hash
+      HUB_ADMIN_USER: ${HUB_ADMIN_USER:-admin}
       # PostgreSQL — talk to the postgres service by Docker service name
       PGHOST:     postgres
       PGPORT:     "5432"
@@ -64,10 +71,17 @@ services:
     container_name: ERP_platform_api
     depends_on:
       erp_api: { condition: service_healthy }
+    secrets: [ERP_integration_secret, ERP_api_token, ERP_uidai_token_key, ERP_office_password, ERP_hub_admin_hash]
     environment:
       HOST: 0.0.0.0
       ERP_HOST: erp_api
       ERP_PORT: "4200"
+      INTEGRATION_SECRET_FILE: /run/secrets/ERP_integration_secret
+      ERP_API_TOKEN_FILE: /run/secrets/ERP_api_token
+      UIDAI_TOKEN_KEY_FILE: /run/secrets/ERP_uidai_token_key
+      OFFICE_PASSWORD_FILE: /run/secrets/ERP_office_password
+      HUB_ADMIN_PASSWORD_HASH_FILE: /run/secrets/ERP_hub_admin_hash
+      HUB_ADMIN_USER: ${HUB_ADMIN_USER:-admin}
     ports:
       - "${ERP_BIND_ADDR:-127.0.0.1}:${ERP_HOST_PORT_HUB:-7100}:4100"
       - "${ERP_BIND_ADDR:-127.0.0.1}:${ERP_HOST_PORT_EPRISONS:-7173}:4173"
@@ -113,6 +127,18 @@ secrets:
   ERP_pg_password:
     # created from PGPASSWORD in the root .env by docker/make-secrets.sh (gitignored)
     file: ./docker/.secrets/pg_password
+  ERP_integration_secret:
+    file: ./docker/.secrets/integration_secret
+  ERP_api_token:
+    file: ./docker/.secrets/erp_api_token
+  ERP_lookup_pepper:
+    file: ./docker/.secrets/lookup_pepper
+  ERP_uidai_token_key:
+    file: ./docker/.secrets/uidai_token_key
+  ERP_office_password:
+    file: ./docker/.secrets/office_password
+  ERP_hub_admin_hash:
+    file: ./docker/.secrets/hub_admin_hash
 
 networks:
   ERP_net:
